@@ -18,7 +18,7 @@
     font-family: 'Epic Fusion Regular';
     font-style: normal;
     font-weight: normal;
-    src: local('Epic Fusion Regular'), url('EpicFusion.woff') format('woff');
+    src: local('Epic Fusion Regular'), url('fonts/EpicFusion.woff') format('woff');
     }
     
     
@@ -26,7 +26,7 @@
     font-family: 'Epic Fusion Italic';
     font-style: normal;
     font-weight: normal;
-    src: local('Epic Fusion Italic'), url('EpicFusion Italic.woff') format('woff');
+    src: local('Epic Fusion Italic'), url('fonts/EpicFusion Italic.woff') format('woff');
 }
 html{
     font-family:var(--body-font);
