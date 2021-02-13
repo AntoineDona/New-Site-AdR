@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-font: 'Source Sans Pro', sans-serif;
+    --secondary-font: 'Herr Von Muellerhoff', cursive;
+    --body-font: 'Cabin', sans-serif;
+    --main-font-color-dark: #252525;
+    --secondary-font-color: #c59d5f;
+    --body-font-color: #515151;
+}
+
+@font-face {
+    font-family: 'Epic Fusion Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Epic Fusion Regular'), url('EpicFusion.woff') format('woff');
+    }
+    
+    
+@font-face {
+    font-family: 'Epic Fusion Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Epic Fusion Italic'), url('EpicFusion Italic.woff') format('woff');
+}
+html{
+    font-family:var(--body-font);
+    font-size:10px;
+    color:var(--body-font-color);
+    scroll-behavior:smooth;
+}
+section{
+    padding:3.9rem 0;
+}
+
+img{
+    width: 100%;
+    max-width:100%;
+}
+
+
+
+p{
+    font-size:1.6rem;
+}
+
+header{
+    width:100%;
+    position: fixed;
+    top:0;
+    left:0;
+    height: 80px;
+    z-index:10000;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.692),transparent);
+    transition: 0.4s;
+}
+header.sticky{
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: ease-in-out  0.4s;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1000;
+    height:100%;
+}
+nav a:hover{
+    color: red;
+}
+
+.logo{
+    color:rgb(202, 202, 202);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    margin-left:10px;
+    margin-top: 10px;
+    z-index: 1000;
+}
+
+.logo img{
+    height: 50px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    min-width: 500px;
+    width: 70%;
+    margin-left: max(100px,50%);
+    margin: auto;
+    color: white;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color:rgb(202, 202, 202);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+.burger{
+    display: none;
+    position: absolute;
+    right: 20px;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.burger div{
+    /* display: none; */
+
+    width: 25px;
+    height: 3px;
+    background-color:white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1200px){
+    .nav-links{
+        min-width: 500px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:950px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 100vh;
+        min-width: 50px;
+        width: 250px;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.hero{
+    widows: 100%;
+    height:100vh;
+    background-image:url(images/fond-accueil.png);
+    background-position: center center;
+    background-size:cover;
+    max-height: 999px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    z-index: 0;
+}
+
+.container{
+    width: 100%;
+    max-width:122.5rem;
+    margin:0 auto;
+    padding: 0 2.4rem;
+}
+.sub-headline{
+    font-size:8.5rem;
+    font-family:'Epic Fusion Regular',sans-serif;
+    color:red;
+    font-weight: 100;
+    line-height:.4;
+    letter-spacing: 2px;
+}
+
+.first-letter{
+    text-transform:uppercase;
+    font-size:10.3rem;
+}
+
+.headline{
+    color:#fff;
+    font-size:3.7rem;
+    font-family:'Epic Fusion Regular',sans-serif;
+    font-weight: 900;
+    letter-spacing:.5rem;
+    margin-right: -.5rem;
+    display:inline;
+}
+
+.separator{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.line{
+    width:100%;
+    max-width:8.4rem;
+    height:.25rem;
+    background-color: red;
+    position:relative;
+}
+
+.line-right::before,
+.line-left::before{
+    content:'';
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    border:.6rem solid transparent;
+}
+
+.line-right::before{
+    border-right-color:red;
+    right:0;
+}
+
+.line-left::before{
+    border-left-color:red;
+    left:0;
+}
+
+.headline-description h5{
+    color:#fff;
+    font-size: 1.4rem;
+    font-weight:100;
+    text-transform: uppercase;  
+    margin-bottom:1.2rem;
+    letter-spacing:3px;
+    margin-right:-3px;
+}
+
+.imgt{
+    width: 20rem;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#d{
+    color:rgba(73,147,202);
+}
+
+#A{
+    color:red;
+}
+
+#R{
+    color:red;
+}
+
+.heart{
+    color:red;
+    font-size:1.6rem;
+    margin: 0 1.6rem;
+}
+
+.btn{
+    display:inline-block;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-right: -2px;
+}
+
+.cta-btn{
+    font-size:1.1rem;
+    background-color:#fff;
+    padding:.9rem 1.8rem;
+    color:red;
+    border-radius:.4rem;
+}
+
+.cta-btn:hover{
+    color:#fff;
+    background-color:red;
+}
+/*  Section soirée accueil */
+.global-headline{
+    text-align:center;
+    margin-top:3.9rem;
+}
+
+.evenements .global-headline{
+    margin-top:3rem;
+}
+
+.titre{
+    margin-bottom:3rem;
+    font-size:5rem;
+}
+
+.global-headline .heart{
+    margin:2.4rem 0;
+}
+
+.sub-headline{
+    letter-spacing:-1px;
+    line-height:.42;
+}
+
+.evenement-description{
+    margin-bottom:3rem;
+}
+
+.evenements-description{
+    text-align:center;
+}
+
+.evenements-description p{
+    line-height:1.4;
+    margin-bottom:2.4rem;
+    margin-top:1rem;
+}
+
+.body-btn{
+    font-size:1.5rem;
+    color:red;
+    position:relative;
+    transition: color .5s;
+    margin-bottom:2rem;
+}
+
+.body-btn::before{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-3px;
+    width:100%;
+    height:2px;
+    transition: background-color .5s;
+}
+
+.body-btn:hover,
+.body-btn:focus{
+    color:black;
+}
+
+.famille{
+    background:url("images/famille.jpg") center no-repeat;
+    background-size:cover;
+}
+
+.between{
+    min-height:65vh;
+    display:flex;
+    align-items:center;
+}
+
+#titre-famille{
+    color:white;
+}
+
+#logo{
+    text-align:left;
+}
+
+.loader-wrapper{
+    height:100%;
+    width:100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-color: black;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader img{
+    height: 200px;
+    width: 200px;
+    margin-right: 50px;
+}
+
+.loader h1{
+    font-size: 150px;
+    color: white;
+    font-family: Hallington;
+
+}
