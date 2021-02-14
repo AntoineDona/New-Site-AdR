@@ -34,6 +34,16 @@ html{
     color:var(--body-font-color);
     scroll-behavior:smooth;
 }
+@media screen and (max-width:950px){
+    html{
+        font-size: 8px;
+    }
+}
+
+body{
+    overflow-x: hidden;
+}
+    
 section{
     padding:3.9rem 0;
 }
@@ -43,27 +53,28 @@ img{
     max-width:100%;
 }
 
-
-
 p{
     font-size:1.6rem;
 }
+
+/* Header -------------------------------------------------------------------------------------------------- */
 
 header{
     width:100%;
     position: fixed;
     top:0;
     left:0;
-    height: 80px;
+    height: 8vh;
+    min-height: 8rem;
     z-index:10000;
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.692),transparent);
     transition: 0.4s;
 }
 header.sticky{
     background-image: none;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 1);
     transition: ease-in-out  0.4s;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
 }
 
 nav{
@@ -75,6 +86,7 @@ nav{
 }
 nav a:hover{
     color: red;
+    transition: color .6s ease;
 }
 
 .logo{
@@ -131,6 +143,10 @@ nav a:hover{
     margin: 5px;
     transition: all 0.3s ease;
 }
+.burger:hover div{
+    background-color: red;
+    transition: background-color .6s ease;
+}
 
 @media screen and (max-width:1200px){
     .nav-links{
@@ -145,26 +161,29 @@ nav a:hover{
     }
     .nav-links{
         position: absolute;
-        top: 0px;
+        top:0;
         right: 0px;
         height: 100vh;
         min-width: 50px;
         width: 250px;
+        padding-top: max(8rem, 8vh);
         z-index: 1000;
         background-color: rgba(0, 0, 0, 0.7);
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 50px;
         transform: translateX(100%);
         transition: transform 0.4s ease-in;
+        margin: auto;
     }
+    
     .nav-links li{
         opacity: 0;
     }
     .burger{
         display: block;
     }
+    
 }
 
 .nav-active{
@@ -182,22 +201,26 @@ nav a:hover{
     }
 }
 
+/* transform burger menu into cross */
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px,6px);
 }
-
 .toggle .line2{
     opacity: 0;
 }
-
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }
 
+/* Accueil ------------------------------------------------------------------------------------------------------------ */
+
 .hero{
+    background-image:url(images/fond-accueil.png);
+}
+
+.hero, .adr2k21, .partenariats{
     widows: 100%;
     height:100vh;
-    background-image:url(images/fond-accueil.png);
     background-position: center center;
     background-size:cover;
     max-height: 999px;
@@ -210,12 +233,16 @@ nav a:hover{
     text-align:center;
     z-index: 0;
 }
+.hero{
+    background-image:url(images/fond-accueil.png);
+}
 
 .container{
     width: 100%;
     max-width:122.5rem;
     margin:0 auto;
     padding: 0 2.4rem;
+    text-align: center;
 }
 .sub-headline{
     font-size:8.5rem;
@@ -328,6 +355,7 @@ nav a:hover{
     color:#fff;
     background-color:red;
 }
+
 /*  Section soirée accueil */
 .global-headline{
     text-align:center;
@@ -408,7 +436,43 @@ nav a:hover{
     text-align:left;
 }
 
-.loader-wrapper{
+/* L'equipe ------------------------------------------------------------------------------------------ */
+
+.adr2k21{
+    background-image:url(img_poles/AdR_2k21.jpg);
+}
+
+.poles{
+    padding:2rem 0;
+    align-items: center;
+}
+
+.poles h1{
+    font-size: 3rem;
+    margin-bottom: 1em;
+}
+.poles h2{
+    font-size: 2rem;
+    margin: 1em 0;
+}
+
+#equipe{
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#equipe .separator{
+    width:50%;
+    height:2px;
+    background-color: rgb(161, 161, 161);
+    margin-bottom: 2rem;
+}
+
+#equipe img{
+    margin: 2rem 0;
+}
+/* .loader-wrapper{
     height:100%;
     width:100%;
     position: absolute;
@@ -438,4 +502,92 @@ nav a:hover{
     color: white;
     font-family: Hallington;
 
+} */
+
+
+
+.partenariats{
+    background-image:url(images/partenariats.jpg);
+    background-size: cover;
+
+}
+
+/* footer ---------------------------------------------------------------- */
+
+footer{
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0px -2px 2px rgba(0, 0, 0, 1);
+    height: auto;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 2rem;
+    color: white;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    line-height: 4rem;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin:10px auto;
+    line-height: 28px;
+    font-size:14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0 2.5rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: white;
+}
+.socials a i{
+    font-size: 2.5rem;
+    transition: color .6s ease;
+}
+.socials a:hover i{
+    color: red;
+}
+
+.footer-content .separator{
+    width:25rem;
+    height:1px;
+    border-radius: 1rem;
+    background: white;
+}
+
+.footer-bottom{
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 1.4rem;
+    word-spacing: 0.2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    font-weight: 200;
 }

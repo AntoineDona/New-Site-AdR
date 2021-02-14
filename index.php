@@ -75,6 +75,7 @@
             </div>
         </div>
     </section>
+    <?php include "included/footer.php" ?>
     <script src="app.js"></script>
 </body>
 </html>

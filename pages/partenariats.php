@@ -20,7 +20,18 @@
 </head>
 <body>
     <?php include "../included/header.php" ?>
-
+    <section class="partenariats" id="partenariats"> 
+        <div class="container">
+            <h1 class="headline"> Nos Partenaires</h1>
+            <div class="headline-description">
+                <div class="separator">
+                    <div class="line line-left"></div>
+                    <div class="heart"><i class="fas fa-heart"></i></div>
+                    <div class="line line-right"></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="partenaires">
         <h1 class="partenaires"> Voici les partenaires de l'Association des Résidents </h1>
         
@@ -47,7 +58,7 @@
         </article>
                 
     </section>
-
+    <?php include "included/footer.php" ?>
     
 <script src="/app.js"></script>
 </body>

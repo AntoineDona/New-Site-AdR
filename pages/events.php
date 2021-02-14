@@ -21,6 +21,7 @@
 <body>
     <?php include "../included/header.php" ?>
     
+    <?php include "included/footer.php" ?>
     <script src="/app.js"></script>
 </body>
 </html>

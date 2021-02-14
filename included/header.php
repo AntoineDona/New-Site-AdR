@@ -20,7 +20,7 @@
                 <a href="#" class="nav-link">Infos Rez</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">Partenaires</a>
+                <a href="/pages/partenariats.php" class="nav-link">Partenaires</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">Contact</a>
