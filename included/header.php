@@ -14,7 +14,7 @@
                 <a href="/pages/events.php" class="nav-link">Evènements</a>
             </li>
             <li class="nav-item">
-                <a href="/Menu/" class="nav-link">Le Musée</a>
+                <a href="/Menu/" class="nav-link" target="_blank">Le Musée</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">Infos Rez</a>
