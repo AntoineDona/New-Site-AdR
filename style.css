@@ -511,6 +511,49 @@ nav a:hover{
     background-size: cover;
 
 }
+/* Vieux ----------------------------------------------------------------- */
+
+.tabContainer{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+.tabContainer .buttonContainer{
+    display:flex;
+    justify-content:center;
+    height:5rem;
+}
+.tabContainer .buttonContainer button{
+    width: 10rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 1rem;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 1.8rem;
+    background-color: #eee;
+
+}
+.tabContainer .buttonContainer button:hover{
+    background-color: #d7d4d4;
+}
+.tabContainer .tabPanel{
+    color: black;
+    text-align: center;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 22px;
+    display:none;
+    padding-top: 5rem;
+}
+.tabPanel h1{
+    margin-bottom: 5rem;
+}
+.tabPanel img{
+    width:40%;
+}
 
 /* footer ---------------------------------------------------------------- */
 

@@ -23,4 +23,22 @@ navSlide();
 window.addEventListener("scroll",function(){
     var header = document.querySelector("header");
     header.classList.toggle("sticky",window.scrollY>100);
-})
+});
+
+var tabButtons=document.querySelectorAll(".tabContainer .buttonContainer button")
+var tabPanels=document.querySelectorAll(".tabContainer .tabPanel")
+
+function showPanel(panelIndex){
+    tabButtons.forEach(function(node){
+        node.style.backgroundColor="";
+        node.style.color="";
+    });
+    tabButtons[panelIndex].style.backgroundColor='black';
+    tabButtons[panelIndex].style.color="white";
+    tabPanels.forEach(function(node){
+        node.style.display="none";
+    });
+    tabPanels[panelIndex].style.display="block";
+}
+
+showPanel(1);

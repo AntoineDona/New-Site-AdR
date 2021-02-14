@@ -1,3 +1,18 @@
+<?php
+    function display_buttons($nbr_annees)
+    {
+        $id = 0;
+        $annee = 2020;
+        while ($id<$nbr_annees)
+        {
+            echo "<button onclick='showPanel(" . $id . ")'>" . $annee . "</button> \n";
+            $id++;
+            $annee=$annee-1;
+        };
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,7 +171,7 @@
             
         </div>
     </section>
-    <section class="vieux">
+    <!-- <section class="vieux">
         <div class="container">
             <div class="btn-annees">
                 <button>2020</button>
@@ -171,7 +186,33 @@
             <div class="vieux-2k18"></div>
             <div class="vieux-2k17"></div>
         </div>
-    </section>
+    </section> -->
+    <div class="tabContainer">
+        <div class="buttonContainer">
+            <?php
+                display_buttons(5)
+            ?>
+            <!-- <button onclick="showPanel(0)">2020</button>
+            <button onclick="showPanel(1)">2019</button>
+            <button onclick="showPanel(2)">2018</button>
+            <button onclick="showPanel(3)">2016</button> -->
+        </div>
+        <div class="tabPanel">2020</div>
+        <div class="tabPanel" id="2019">
+            <h1>AdR 2019</h1>
+            <img src="Vieux/2019/Buro.jpeg" >
+            <img src="Vieux/2019/Ptit dej.jpeg" >
+            <img src="Vieux/2019/Bar.jpeg" >
+            <img src="Vieux/2019/CQ.jpeg" >
+            <img src="Vieux/2019/Khoôpé.jpeg" >
+            <img src="Vieux/2019/Soirée.jpeg" >
+            <img src="Vieux/2019/Qom.jpeg" >
+            <img src="Vieux/2019/Khâfet.jpeg" >
+            <img src="Vieux/2019/Rez.jpeg" >
+        </div>
+        <div class="tabPanel">2018</div>
+        <div class="tabPanel">2017</div>
+    </div>
     <?php include "../included/footer.php" ?>
     <script src="/app.js"></script>
 </body>
