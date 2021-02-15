@@ -26,7 +26,7 @@ section{
 }
 
 .accueil_commande h1{
-	font-size:3.8rem;
+	font-size:6rem;
 	font-weight:700;
 	letter-spacing:.3rem;
 	text-shadow:.1rem .1rem .8rem black;
@@ -34,8 +34,8 @@ section{
 
 .accueil_commande{
     width: 100%;
-    margin:0 auto;
     padding: 0 2.4rem;
+    padding-top: 6rem;
     text-align: center;
     height:100vh;
     position:relative;
@@ -47,8 +47,8 @@ section{
 	background-size:cover;
 }
 #logo{
-	width:15rem;
-	margin-bottom:2rem;
+	width:30em;
+    margin-top:2rem;
 }
 
 .container{
@@ -59,11 +59,21 @@ section{
     text-align: center;
 }
 
+/* Carte --------------------------------------------------------------------------- */
+
 .carte{
-    background-color: white;
+    background-color: beige;
     padding: 1rem 2rem;
-    max-width: 60%;
+    max-width: min(600px,90vw);
     min-width: 30rem;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.carte h1{
+
+    margin: 1rem 0;
+    font-size: 4rem;
 }
 
 .contenu{
@@ -73,15 +83,24 @@ section{
 }
 
 .categorie{
-    border:black solid;
+    background-color: white;
+    /* border:black solid; */
+    border-radius: 0.5rem;
     border-width: 1px;
     padding: 1rem;
-    margin: 1rem 0;
-    width:18rem;
+    margin: 1rem 1rem;
+    width:25rem;
+    height: auto;
+}
+
+.categorie h3{
+    margin-bottom: 1rem;
 }
 
 .categorie li{
     display: flex;
+    margin-bottom: 1rem;
+    text-align: left;
 }
 
 .categorie li .price{
