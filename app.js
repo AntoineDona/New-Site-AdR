@@ -42,3 +42,6 @@ function showPanel(panelIndex){
 }
 
 showPanel(1);
+
+//transition de pages
+const swup = new Swup();
