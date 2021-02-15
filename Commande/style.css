@@ -1,0 +1,89 @@
+main{
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    margin-bottom: 1rem;
+
+}
+/* Accueil ----------------------- */
+
+section{
+    widows: 100%;
+    height:100vh;
+    background-position: center center;
+    background-size:cover;
+    max-height: 999px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    z-index: 0;
+}
+
+.accueil_commande h1{
+	font-size:3.8rem;
+	font-weight:700;
+	letter-spacing:.3rem;
+	text-shadow:.1rem .1rem .8rem black;
+  }
+
+.accueil_commande{
+    width: 100%;
+    margin:0 auto;
+    padding: 0 2.4rem;
+    text-align: center;
+    height:100vh;
+    position:relative;
+    z-index:1;
+    color:white;
+    text-transform:uppercase;
+    background:url('img/background.jpg'), #222;
+    background-attachment:fixed;
+	background-size:cover;
+}
+#logo{
+	width:15rem;
+	margin-bottom:2rem;
+}
+
+.container{
+    width: 100%;
+    max-width:122.5rem;
+    margin:0 auto;
+    padding: 0 2.4rem;
+    text-align: center;
+}
+
+.carte{
+    background-color: white;
+    padding: 1rem 2rem;
+    max-width: 60%;
+    min-width: 30rem;
+}
+
+.contenu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.categorie{
+    border:black solid;
+    border-width: 1px;
+    padding: 1rem;
+    margin: 1rem 0;
+    width:18rem;
+}
+
+.categorie li{
+    display: flex;
+}
+
+.categorie li .price{
+    margin-left: auto;
+}

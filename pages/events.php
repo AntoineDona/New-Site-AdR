@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <!--Scroll reveal CDN-->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

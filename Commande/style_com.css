@@ -1,0 +1,123 @@
+*{
+	margin:0;
+	padding:0;
+	font-weight:normal;
+	font-family:'Lato',sans-serif;
+}
+
+	::-webkit-scrollbar { 
+		display: none; 
+	}
+
+html{
+	overflow-x: hidden;
+}
+
+body{
+	left:0;
+	right:0;
+	background:url('img/background.jpg'), #222;
+	background-attachment:fixed;
+	background-size:cover;
+	color:#585962;
+	position:absolute;
+	font-family:'Lato',sans-serif;
+	width:100%;
+	overflow-x: hidden;
+}
+
+#logo{
+	width:15rem;
+	margin-bottom:2rem;
+}
+
+.caption h1{
+	font-size:3.8rem;
+	font-weight:700;
+	letter-spacing:.3rem;
+	text-shadow:.1rem .1rem .8rem black;
+  }
+
+.caption{
+  width:100%;
+  max-width:100%;
+  position:relative;
+  top:38%;
+  z-index:1;
+  color:white;
+  text-transform:uppercase;
+  margin-top:5rem;
+}
+
+.jumbotron{
+	margin-bottom:0;
+	padding:2rem 0 3.5rem;
+  }
+
+hr.socket{
+  width:100%;
+  border-top:.2rem solid black;
+}  
+
+footer{
+	color:white
+}
+
+.heading-underline{
+	width:3rem;
+	height:.2rem;
+	background-color: grey;
+	margin:0 auto 2rem;
+  }
+
+#reponse{
+	padding-top:0rem;
+	padding-bottom:1rem;
+}
+
+@media only screen and (max-width:880px) {
+	#carnabang{
+		width:18rem!important;
+	}
+	#presentation{
+		font-size: 3rem;
+	}
+	html{
+		overflow-x: hidden;
+	}
+}
+
+.form{
+	margin-bottom:1rem;
+}
+
+.form textarea{
+	max-width: 80%;
+}
+
+label{
+	margin-bottom:0rem;
+}
+
+#texte-com{
+	width:30rem;
+	text-align:left;
+	justify-content: baseline;
+}
+
+.btn-top{
+	margin-top:2rem;
+}
+
+.list{
+	margin-top:2rem;
+	background-color: rgba(255,255,255);
+}
+
+.menu_semaine{
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom: 2rem;
+	max-width: 100%;
+	width:25rem
+}

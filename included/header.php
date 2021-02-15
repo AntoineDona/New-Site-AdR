@@ -17,13 +17,13 @@
                 <a href="/Menu/" class="nav-link" target="_blank">Le Musée</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">Infos Rez</a>
+                <a href="/pages/equipe.php" class="nav-link">Infos Rez</a>
             </li>
             <li class="nav-item">
                 <a href="/pages/partenariats.php" class="nav-link">Partenaires</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">Contact</a>
+                <a href="/commande/" class="nav-link">Commander</a>
             </li>
         </ul>
         <div class="burger">

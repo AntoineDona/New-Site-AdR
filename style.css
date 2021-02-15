@@ -634,3 +634,20 @@ footer{
 .footer-bottom span{
     font-weight: 200;
 }
+
+/* page transition -------------------- */
+.transition-fade{
+    opacity: 1;
+    transition: 300ms;
+}
+
+html.is-animating .transition-fade{
+    opacity: 1;
+    transform: translateX(100%);
+}
+
+html.is-leaving .transition-fade{
+    opacity: 1;
+    transform: translateX(0);
+    transition: 100ms;
+}
