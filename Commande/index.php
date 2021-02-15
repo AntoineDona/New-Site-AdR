@@ -41,7 +41,7 @@
                     <div class="heading-underline"></div>
         </article>
         <div class="carte">
-            <h1>Ceci est la carte</h1>
+            <h1>Carte du jour</h1>
             <div class="contenu">
                 <?php
                 // On récupère tout le contenu de la table menu
