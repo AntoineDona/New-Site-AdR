@@ -1,5 +1,5 @@
 main{
-    overflow: auto;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
@@ -62,9 +62,10 @@ section{
 /* Carte --------------------------------------------------------------------------- */
 
 .carte{
+    position: relative;
     background-color: beige;
     padding: 1rem 2rem;
-    max-width: min(600px,90vw);
+    max-width: min(700px,90vw);
     min-width: 30rem;
     text-align: center;
     margin: 3rem 0;
@@ -75,26 +76,42 @@ section{
     margin: 1rem 0;
     font-size: 4rem;
 }
+.carte .separator{
+    position:absolute;
+    width: 2px;
+    background-color: rgb(224, 224, 192);
+    
+    height: 90%;
+    top: 10rem;
+}
 
 .contenu{
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around; */
+    columns: 2;
+    column-gap: 0;
+    padding: 1rem;
 }
 
 .categorie{
-    background-color: white;
+    display: inline-block;
+    background-color: rgb(224, 224, 192);
     /* border:black solid; */
     border-radius: 0.5rem;
     border-width: 1px;
     padding: 1rem;
     margin: 1rem 1rem;
-    width:25rem;
+    width:28rem;
     height: auto;
+}
+.categorie>div {
+    margin: 10px;
 }
 
 .categorie h3{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
 .categorie li{
@@ -103,6 +120,31 @@ section{
     text-align: left;
 }
 
+.ingredients{
+    font-size: 0.9rem;
+    color: rgb(126, 126, 126);
+}
+
 .categorie li .price{
     margin-left: auto;
+}
+
+.soldout{
+    color:red;
+}
+
+@media screen and (max-width:570px){
+    .contenu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+    .carte .separator{
+        display: none;
+    }
+}
+
+@media screen and (min-width:60rem){
+    
 }
