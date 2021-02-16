@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <?php include "included/meta.php" ?>
+    <title>AdR CentraleSupélec</title>
 </head>
 <body>
     <?php include "included/header.php" ?>

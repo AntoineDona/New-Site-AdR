@@ -42,6 +42,7 @@
         </article>
         <div class="carte">
             <h1>Carte du jour</h1>
+            <div class="separator"></div>
             <div class="contenu">
                 <?php
                 // On récupère tout le contenu de la table menu
@@ -75,7 +76,10 @@
                                 ?>
                                     <li>
                                         <div class="article">
-                                            <?php echo $article['article']; ?>
+                                            <?php echo $article['article']; ?><br>
+                                            <span class="ingredients">
+                                                <?php echo $article['infos']; ?>
+                                            </span>
                                         </div>
                                         <div class="price">
                                             <?php
@@ -97,7 +101,7 @@
                 }
                     ?>
 
-                    <div class="categorie">
+                    <!-- <div class="categorie">
                         <h3>test</h3>
                         <ul>
                             <li>
@@ -109,7 +113,7 @@
                                 <div class="price">5.00€</div>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
             </div>
         </div>
     </main>
