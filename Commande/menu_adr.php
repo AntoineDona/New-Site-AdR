@@ -17,7 +17,7 @@
 </head>
 
 <body>
-
+	<main>
 
 	<div class="header" style="margin-bottom:2rem;">
 		<a href="traite.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-top:0.5rem;">Commandes traitées</a>
@@ -104,6 +104,7 @@ On parcourt les articles du menu de cette catégorie: SELECT * FROm menu WHERE t
 			</form>
 		</div>
 	</div>
+	</main>
 
 	<div id="contact" class="offset">
 

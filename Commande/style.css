@@ -1,3 +1,31 @@
+@font-face {
+    font-family: 'Garland';
+    font-style: normal;
+    font-weight: normal;
+    src: url(/fonts/Garland.ttf) format('ttf');
+    }
+
+@font-face {
+    font-family: 'Abecedary_Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url(/fonts/Abecedary_Italic.ttf) format('truetype');
+    }
+@font-face {
+    font-family: 'Abecedary_Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(/fonts/Abecedary_Regular.ttf) format('truetype');
+    }
+
+@font-face {
+    font-family:'Gloss_And_Bloom';
+    font-style:normal;
+    font-weight:normal;
+    /* src: local('Gloss_And_Bloom'), url('fonts/Gloss_And_Bloom.ttf') format('ttf'); */
+    src: url(/fonts/Gloss_And_Bloom.ttf) format('truetype');
+}
+
 main{
     overflow: hidden;
     display: flex;
@@ -18,14 +46,13 @@ section{
     overflow: hidden;
     position: relative;
     width: 100%;
-    min-height: 100vh;
     display:flex;
     align-items:center;
     text-align:center;
     z-index: 0;
 }
 
-.accueil_commande h1{
+.accueil_commande h1, .espace_adr h1{
 	font-size:6rem;
 	font-weight:700;
 	letter-spacing:.3rem;
@@ -46,6 +73,22 @@ section{
     background-attachment:fixed;
 	background-size:cover;
 }
+
+.espace_adr{
+    width: 100%;
+    padding: 0 2.4rem;
+    padding-top: 2rem;
+    text-align: center;
+    height:20rem;
+    position:relative;
+    z-index:1;
+    color:white;
+    text-transform:uppercase;
+    background:url('img/background.jpg'), #222;
+    background-attachment:fixed;
+	background-size:cover;
+}
+
 #logo{
 	width:30em;
     margin-top:2rem;
@@ -63,18 +106,21 @@ section{
 
 .carte{
     position: relative;
-    background-color: beige;
-    padding: 1rem 2rem;
-    max-width: min(700px,90vw);
+    color:white;
+    background-color: rgb(41, 41, 41);
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    max-width: min(80rem,90vw);
     min-width: 30rem;
     text-align: center;
     margin: 3rem 0;
+    font-family: 'Gloss_And_Bloom', 'Garland', sans-serif;
 }
 
 .carte h1{
 
     margin: 1rem 0;
-    font-size: 4rem;
+    font-size: 6rem;
 }
 .carte .separator{
     position:absolute;
@@ -90,19 +136,18 @@ section{
     flex-wrap: wrap;
     justify-content: space-around; */
     columns: 2;
-    column-gap: 0;
     padding: 1rem;
 }
 
 .categorie{
     display: inline-block;
-    background-color: rgb(224, 224, 192);
+    background-color: rgba(103, 103, 103, 0.377);
     /* border:black solid; */
     border-radius: 0.5rem;
     border-width: 1px;
     padding: 1rem;
     margin: 1rem 1rem;
-    width:28rem;
+    width:35rem;
     height: auto;
 }
 .categorie>div {
@@ -110,38 +155,100 @@ section{
 }
 
 .categorie h3{
-    margin-bottom: 2rem;
-    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-size:3rem;
 }
 
 .categorie li{
     display: flex;
-    margin-bottom: 1rem;
     text-align: left;
+    width: 100%;
+    margin-top:1rem;
+}
+
+.categorie li, .reset{
+    /* margin-bottom: 1rem; */
+    font-family:'Abecedary_Regular';
+    letter-spacing: 1px;
+    font-size: 1.5rem;
 }
 
 .ingredients{
-    font-size: 0.9rem;
+    display: block;
+    font-size: 1rem;
     color: rgb(126, 126, 126);
+    font-family: 'Abecedary_Italic';
+    width: 100%;
+    padding-right: 4.5rem;
+    text-align: left;
+    margin-top: 0.8rem;
 }
 
-.categorie li .price{
+.categorie li .price, .soldout_select{
     margin-left: auto;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+}
+.soldout_select{
+    min-width: 8rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+.soldout_select label{
+    margin-right: 0.4rem;
 }
 
 .soldout{
     color:red;
 }
 
-@media screen and (max-width:570px){
+.ligne{
+    height:0.1rem;
+    font-size: 0.1rem;
+    flex-grow: 1;
+    margin-top: 1.5rem;
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: rgba(255, 255, 255, 0.198);
+}
+
+input[type="checkbox"]:checked,input[type="checkbox"]:not(:checked){
+    width: 0.6em;
+    height: 0.6em;
+}
+
+
+input[type="checkbox"]:checked + label {
+    color: red;
+    transition: 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:not(:checked) + label {
+color: white;
+transition: 0.2s ease-in-out;
+}
+
+#submit {
+    color: #fff;
+    font-size: 4rem;
+    width: 20rem;
+    height: 7rem;
+    border-radius: 1rem;
+    margin: 0;
+    padding: 0;
+    background: rgb(63, 160, 63) url(image) 0 0 no-repeat; 
+    background-color: rgba(103, 103, 103, 0.377);
+
+}
+
+@media screen and (max-width:710px){
     .contenu{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         padding: 1rem;
-    }
-    .carte .separator{
-        display: none;
     }
 }
 

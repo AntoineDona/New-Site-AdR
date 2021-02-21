@@ -1,0 +1,269 @@
+	*{
+		margin:0;
+		padding:0;
+		font-weight:normal;
+		font-family:Ananda, sans-serif;
+	}
+	
+	body{
+		left:0;
+		right:0;
+		min-height:100vh;
+		background:url('img/background.jpg') no-repeat, #333;
+		background-size:cover;
+		background-attachment: fixed;
+		background-position: center;
+		color:white;
+		position:absolute;
+	}
+	
+	#body{
+		display:grid;
+		grid-template-areas: "t t" "a b" "c b" "d b";
+		grid-template-columns:500px 500px;
+		min-height:95vh;
+		width:1000px;
+		left:0;
+		right:0;
+		margin:auto;
+		margin-top:2vh;
+		margin-bottom:2vh;
+		border-radius:4px;
+		padding-bottom:160px;
+	}
+	::-webkit-scrollbar { 
+		display: none; 
+	}
+	
+	.top img{
+		width:440px;
+		margin:30px;
+	}
+	
+	.subcontent{
+		user-select:none;
+		display:grid;
+		grid-template-columns:1fr max-content;
+	}
+	
+	.subcontent div{
+		align-self:center;
+		font-family:Ananda;
+		margin-left:5px;
+		margin-right:5px;
+		line-height:200%;
+	}
+	
+	.compo{
+		color:#000;
+		margin:-10px;
+		padding:5px;
+		border-radius:4px;
+		background:#eee;
+		position:absolute;
+		margin:auto;
+		font-size:70%;
+		z-index:-1;
+		opacity:0;
+	}
+	
+	.subcontent div:hover .compo{
+		z-index:1;
+		opacity:1;
+	}
+	.subcontent div:active .compo{
+		z-index:1;
+		opacity:1;
+	}
+	
+	.content{
+		margin:10px;
+		padding:10px;
+		border-radius:4px;
+		background:rgba(42, 42, 42, 0.8);
+		align-self:start;
+	}
+	
+	.legend{
+		padding:10px;
+		border-radius:4px;
+		background:#252525;
+		position:fixed;
+		left:0;
+		right:0;
+		bottom:10px;
+		width:1000px;
+		margin:auto;
+	}
+	
+	.events{
+		user-select:none;
+		width:600px;
+		padding:10px;
+		border-radius:4px;
+		background:#222;
+		position:fixed;
+		left:-620px;
+		top:0;
+		bottom:0;
+		z-index:2;
+		transition:left 0.6s;
+		overflow-y:scroll;
+		overflow-x:visible;
+	}
+	
+	.events .event{
+		height:250px;
+		margin:10px;
+		overflow:hidden;
+	}
+	.events .event p{
+		background:rgba(50, 50, 50, 0.5);
+		padding:10px;
+		width:560px;
+	}
+	
+	#calendar_parent{
+		width:100vw;
+		border-radius:4px;
+		background:#222;
+		position:fixed;
+		right:-100vw;
+		top:0;
+		bottom:0;
+		z-index:2;
+		transition:right 0.6s;
+		overflow-y:scroll;
+		overflow-x:visible;
+	}
+	.calendar{
+		display:grid;
+		grid-template-columns:16vw 16vw 16vw 16vw 16vw;
+		user-select:none;
+		padding-left:10vw;
+		padding-right:10vw;
+		padding-top:5vw;
+		padding-bottom:5vw;
+	}
+	
+	.calendar div{
+		height:9vw;
+		overflow:hidden;
+		border:rgba(150, 150, 150, 0.1) 1px solid;
+	}
+	.calendar div:hover{
+		border:white 1px solid;
+	}
+	.calendar div:active{
+		margin:10px;
+		height:80px;
+	}
+	.calendar .date{
+		font-family:sans-serif;
+		margin-left:5px;
+		background:black;
+	}
+	
+	#button_back{
+		font-size:80%;
+		padding:4px;
+		padding-left:10px; padding-right:10px;
+		border-radius:4px;
+		background:#000;
+		position:fixed;
+		left:10px;
+		top:10px;
+		cursor:pointer;
+		user-select:none;
+	}
+	#button_back:hover{
+		background:#222;
+	}
+	#button_back:active{
+		border:1px solid #fff;
+	}
+	
+	h1{
+		font-size:350%;
+		text-align:center;
+		font-family:DefyingGravityBounce;
+		font-weight:bold;
+	}
+	
+	h2{
+		font-family:Gloss_And_Bloom;
+		text-align:center;
+		font-size:150%;
+		font-variant:small-caps;
+	}
+	
+	h3{
+		border-top:solid 2px #777;
+		border-bottom:solid 2px #777;
+		font-size:100%;
+		margin:10px;
+		padding:6px;
+	}
+	
+	div{
+		text-align:left;
+		font-size:18pt;
+	}
+	
+	strong{
+		color:#ed2024;
+	}
+	small{
+		font-size:70%;
+	}
+	
+	a{
+		text-decoration:none;
+		color:#4891c7;
+		cursor:pointer;
+	}
+	a:hover, a:active{
+		text-decoration:underline;
+		color:#4891c7;
+	}
+	
+	@media screen and (orientation:portrait), screen and (max-width:1080px) {
+		#body{
+			grid-template-areas: "t" "a" "c" "b" "d";
+			grid-template-columns:600px;
+			width:600px;
+		}
+		.legend{
+			width:600px;
+		}
+		.top img{
+			width:540px;
+			margin:30px;
+		}
+	}
+	
+	@font-face {
+		font-family:'CaviarDreams';
+		src:url('CaviarDreams.ttf') format('truetype');
+		font-weight:normal;
+		font-style:normal;
+	}
+	@font-face {
+		font-family:'DefyingGravityBounce';
+		src:url('DefyingGravityBounce.ttf') format('truetype');
+		font-weight:normal;
+		font-style:normal;
+	}
+	@font-face {
+		font-family:'Ananda';
+		src:url('Ananda.ttf') format('truetype');
+		font-weight:normal;
+		font-style:normal;
+	}
+	
+	@font-face {
+		font-family:'Gloss_And_Bloom';
+		src:url('Gloss_And_Bloom.ttf') format('truetype');
+		font-weight:normal;
+		font-style:normal;
+	}
