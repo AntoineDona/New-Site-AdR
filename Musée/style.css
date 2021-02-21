@@ -1,0 +1,355 @@
+/* Reset page style */
+
+*, html, body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+/* Preload */
+
+div#preload{
+    display: none;
+}
+
+/* Header ------------------------------------------------------------------------------------------ */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 6rem;
+    min-height: 6rem;
+    z-index: 10000;
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.493);
+    transition: all 0.2s ease-in;
+}
+
+/* header.sticky{
+    background-image: none;
+    background-color: white;
+    transition: ease-in-out  0.4s;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.7);
+} */
+
+nav {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    z-index: 1000;
+    height: 100%;
+}
+
+nav a:hover {
+    color: black;
+    text-decoration: underline;
+    transition: all 0.2s ease-in;
+    /* text-decoration: underline; */
+}
+
+.logo {
+    margin-left: 1rem;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 6rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    min-width: 500px;
+    width: 60%;
+    /* margin: auto; */
+}
+
+.nav-links li {
+    list-style: none;
+    /* flex-grow: 1; */
+}
+
+.nav-links a {
+    color: rgb(117, 117, 117);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 0.2s;
+}
+
+.nav-links .current{
+    color:black;
+}
+
+.nav-links li:nth-of-type(1) {
+    margin-left: auto;
+}
+
+.nav-link {
+    padding: 0 3rem;
+}
+
+.espace_adr {
+    margin-left: auto;
+}
+
+.burger {
+    display: none;
+    position: absolute;
+    right: 20px;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(117, 117, 117);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.burger:hover div {
+    background-color: black;
+    transition: background-color .6s ease;
+}
+
+/* 
+@media screen and (max-width:1200px){
+    .nav-links{
+        min-width: 500px;
+        width: 90%;
+    }
+} */
+
+@media screen and (max-width:760px) {
+    html{
+        font-size: 8px;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    header {
+        /* box-shadow: none; */
+        height:8rem
+    }
+    .logo {
+        height:100%;
+        margin: unset;
+    }
+    .logo img {
+        margin: unset;
+        height:95%;
+        /* margin-top: 0.3rem; */
+        margin-left: 1rem;
+    }
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0px;
+        height: 100vh;
+        min-width: 50px;
+        width: 250px;
+        padding-top: max(6.4rem, 6.4vh);
+        z-index: 1000;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        transform: translateX(110%);
+        transition: transform 0.4s ease-in, border 0.4s ease;
+        margin: none;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.253);
+    }
+    .espace_adr {
+        margin-top: 30vh;
+        margin-bottom: 4rem;
+    }
+    .nav-links li:nth-of-type(1) {
+        margin-left: unset;
+        margin-top: 4rem;
+    }
+    
+    .nav-links li {
+        opacity: 0;
+        margin-left: unset;
+    }
+    .nav-item{
+        /* padding:10rem 0; */
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+@media screen and (max-height:500px) and (max-width:760px){
+    .espace_adr {
+        margin-top: 10vh;
+        margin-bottom: 4rem;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.253);
+}
+
+/* .header-active {
+    box-shadow: none;
+} */
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* transform burger menu into cross */
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Accueil -------------------------------------------------------------------------------------------------------- */
+
+.hero{
+    background-image:url(/Musée/img/bgimage1.jpg);
+    widows: 100%;
+    height:100vh;
+    background-position: center center;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1{
+    margin: auto;
+    font-family: fantasy;
+    color: white;
+    text-shadow: 0.1rem 0.1rem black;
+    font-size: 10rem;
+
+}
+
+/* A propos short */
+
+.apropos{
+    width:100%;
+    height:90vh;
+    display:flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.apropos .cadre{
+    margin:auto;
+    width:50%;
+    min-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a_propos{
+    margin:auto;
+    margin-top:4rem;
+    margin-bottom:4rem;
+    width:50%;
+    min-width: 50rem;
+    display:flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: fantasy;
+}
+
+.a_propos h1{
+    width:100%;
+    text-align: left;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.a_propos p{
+    width:43rem;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+.a_propos button{
+    padding:1rem 1rem;
+    font-size: 2rem;
+    background-color: white;
+    border-radius: 0.4rem;
+    border: 1px solid black;
+    width: 16rem;
+    transition: all 0.3s ease;
+}
+.a_propos button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    /* transition: all 0.3s; */
+}
+
+.illustration_container{
+    margin:auto;
+    width:50%;
+    min-width: 60rem;
+    max-height: 70vw;
+    height:100%;
+    background-image: url(/Musée/img/apropos.jpg);
+    background-position: center center;
+    background-size:cover;
+}
+
+/* Commander -------------------------------------------------------------------------------------------------------- */
+
+.hero_commander{
+    background-image:url(/Musée/img/apropos.jpg);
+    widows: 100%;
+    height:100vh;
+    background-position: center center;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_commander h1{
+    margin: auto;
+    font-family: fantasy;
+    color: white;
+    text-shadow: 0.1rem 0.1rem black;
+    font-size: 10rem;
+
+}
+
+
+/* A propos du Musée ----------------------------------------------------------------------------------------------- */
+

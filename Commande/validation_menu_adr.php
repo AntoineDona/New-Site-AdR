@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="style_com.css">
   <link rel="stylesheet" type="text/css" title="mobile" href="../mobile.css" />
   <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
-  <meta http-equiv="refresh" content="1.5;url=menu_adr.php" /> <!--on redirige au bout de 3 secondes vers le menu-->
+  <meta http-equiv="refresh" content="1.5;url=new_menu.php" /> <!--on redirige au bout de 3 secondes vers le menu-->
 </head>
 
 <body>

@@ -42,7 +42,6 @@
         </article>
         <div class="carte">
             <h1>Carte du jour</h1>
-            <div class="separator"></div>
             <div class="contenu">
                 <?php
                 // On récupère tout le contenu de la table menu
@@ -77,10 +76,8 @@
                                     <li>
                                         <div class="article">
                                             <?php echo $article['article']; ?><br>
-                                            <span class="ingredients">
-                                                <?php echo $article['infos']; ?>
-                                            </span>
                                         </div>
+                                        <div class="ligne"></div>
                                         <div class="price">
                                             <?php
                                             if ($article['soldout'] == "oui") {
@@ -91,6 +88,9 @@
                                             ?>
                                         </div>
                                     </li>
+                                    <span class="ingredients">
+                                                <?php echo $article['infos']; ?>
+                                    </span>
                                 <?php
                             }
                                 ?>
