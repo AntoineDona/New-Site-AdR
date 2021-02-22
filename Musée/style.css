@@ -12,7 +12,7 @@ html {
 
 /* Preload */
 
-div#preload{
+div#preload {
     display: none;
 }
 
@@ -22,28 +22,60 @@ div#preload{
     font-family: 'Champagne';
     font-style: normal;
     font-weight: normal;
-    src:url('/fonts/Champagne & Limousines.ttf') format('TrueType');
+    src: url('/fonts/Champagne & Limousines.ttf') format('TrueType');
 }
+
 @font-face {
     font-family: 'Champagne';
     font-style: normal;
     font-weight: bold;
-    src:url('/fonts/Champagne & Limousines Bold.ttf') format('TrueType');
+    src: url('/fonts/Champagne & Limousines Bold.ttf') format('TrueType');
 }
+
 @font-face {
     font-family: 'Champagne';
     font-style: italic;
     font-weight: normal;
-    src:url('/fonts/Champagne & Limousines Italic.ttf') format('TrueType');
+    src: url('/fonts/Champagne & Limousines Italic.ttf') format('TrueType');
 }
+
 @font-face {
     font-family: 'Champagne';
     font-style: italic;
     font-weight: bold;
-    src:url('/fonts/Champagne & Limousines Bold Italic.ttf') format('TrueType');
+    src: url('/fonts/Champagne & Limousines Bold Italic.ttf') format('TrueType');
 }
 
-h1,h2,h3,h4,h5,h6{
+@font-face {
+    font-family: 'Garland';
+    font-style: normal;
+    font-weight: normal;
+    src: url(/fonts/Garland.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'Abecedary_Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url(/fonts/Abecedary_Italic.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Abecedary_Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(/fonts/Abecedary_Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Gloss_And_Bloom';
+    font-style: normal;
+    font-weight: normal;
+    /* src: local('Gloss_And_Bloom'), url('fonts/Gloss_And_Bloom.ttf') format('ttf'); */
+    src: url(/fonts/Gloss_And_Bloom.ttf) format('truetype');
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Champagne', sans-serif;
 }
 
@@ -77,7 +109,7 @@ nav {
     height: 100%;
 }
 
-nav h1{
+nav h1 {
     display: none;
 }
 
@@ -125,23 +157,22 @@ nav a:hover {
     transition: 0.2s;
 }
 
-.nav-links .current{
-    color:black;
+.nav-links .current {
+    color: black;
     font-size: 2rem;
 }
-
 
 .nav-link {
     padding: 0 3rem;
 }
 
 .espace_adr {
-    position:absolute;
-    right:0;
-    top:0;
+    position: absolute;
+    right: 0;
+    top: 0;
     bottom: 0;
-    height:4rem;
-    margin-bottom:auto;
+    height: 4rem;
+    margin-bottom: auto;
     margin-top: auto;
 }
 
@@ -175,7 +206,7 @@ nav a:hover {
 } */
 
 @media screen and (max-width:800px) {
-    html{
+    html {
         font-size: 8px;
     }
     body {
@@ -183,15 +214,15 @@ nav a:hover {
     }
     header {
         /* box-shadow: none; */
-        height:8rem
+        height: 8rem
     }
     .logo {
-        height:100%;
+        height: 100%;
         margin: unset;
     }
     .logo img {
         margin: unset;
-        height:95%;
+        height: 95%;
         /* margin-top: 0.3rem; */
         margin-left: 1rem;
     }
@@ -216,7 +247,7 @@ nav a:hover {
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.253);
     }
     .espace_adr {
-        position:unset;
+        position: unset;
         margin-top: 30vh;
         margin-bottom: 4rem;
     }
@@ -224,42 +255,36 @@ nav a:hover {
         margin-left: unset;
         margin-top: 4rem;
     }
-    
     .nav-links li {
         opacity: 0;
         margin-left: unset;
     }
-    .nav-item{
+    .nav-item {
         /* padding:10rem 0; */
     }
-
     .nav-links a {
         font-size: 2rem;
     }
-
     nav a:hover {
         font-size: 2.5rem;
         transition: all 0.2s ease-in;
     }
-
-    .nav-links .current{
+    .nav-links .current {
         font-size: 2.5rem;
     }
-
-    nav h1{
+    nav h1 {
         display: block;
         flex-grow: 1;
-        margin-right:8rem;
+        margin-right: 8rem;
         text-align: center;
         font-size: 3rem;
     }
-
     .burger {
         display: block;
     }
 }
 
-@media screen and (max-height:500px) and (max-width:800px){
+@media screen and (max-height:500px) and (max-width:800px) {
     .espace_adr {
         margin-top: 10vh;
         margin-bottom: 4rem;
@@ -299,53 +324,52 @@ nav a:hover {
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+
 /* General -------------------------------------------------------------------------------------------------------- */
 
-.hero{
+.hero {
     width: 100%;
-    height:100vh;
+    height: 100vh;
     background-position: center center;
-    background-size:cover;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hero h1{
+.hero h1 {
     margin: auto;
     font-weight: bold;
     color: white;
     text-shadow: 0.1rem 0.1rem 1rem black;
     font-size: 14rem;
-    margin-left:10rem;
-    margin-right:10rem;
-
+    margin-left: 16rem;
+    margin-right: 16rem;
 }
 
 /* Accueil -------------------------------------------------------------------------------------------------------- */
 
-.hero.accueil{
-    background-image:url(/Musée/img/bgimage1.jpg);
+.hero.accueil {
+    background-image: url(/Musée/img/bgimage1.jpg);
 }
-
 
 /* A propos short */
 
-.apropos{
-    width:100%;
-    height:50vw;
+.smallapropos {
+    width: 100%;
+    height: 50vw;
     max-width: 100vw;
-    max-height: min(50rem,40vw);
-    display:flex;
+    max-height: min(50rem, 40vw);
+    display: flex;
     flex-shrink: 0;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     overflow-x: hidden;
 }
 
-.apropos .cadre{
+.smallapropos .cadre {
     /* margin:auto; */
-    padding:0 8rem 0 6rem;
-    width:50%;
+    padding: 0 8rem 0 6rem;
+    width: 50%;
     min-width: 300px;
     /* min-width: 500px; */
     display: flex;
@@ -368,29 +392,37 @@ nav a:hover {
     font-family: fantasy;
 } */
 
-.cadre h1{
+.cadre h1 {
     margin-top: auto;
-    width:30rem;
+    width: 30rem;
     text-align: left;
     font-size: 3rem;
     /* margin-bottom: 1rem; */
 }
 
-.cadre p{
-    width:auto;
+.cadre h2 {
+    margin-top: auto;
+    width: 30rem;
+    text-align: left;
+    font-size: 2rem;
+    /* margin-bottom: 1rem; */
+}
+
+.cadre p {
+    width: 100%;
     margin: auto;
     font-size: 1.5rem;
     /* margin-bottom: 1rem; */
 }
 
-.cadre a{
+.cadre a {
     /* margin-top: auto; */
     margin-bottom: auto;
 }
 
-.cadre button{
+.cadre button {
     margin: auto;
-    padding:0.8rem 0.8rem;
+    padding: 0.8rem 0.8rem;
     font-size: 1.8rem;
     background-color: white;
     border-radius: 0.4rem;
@@ -398,67 +430,337 @@ nav a:hover {
     width: 15rem;
     transition: all 0.3s ease;
 }
-.cadre button:hover{
+
+.cadre button:hover {
     background-color: black;
     color: white;
     cursor: pointer;
     /* transition: all 0.3s; */
 }
 
-.illustration_container{
-    margin:auto;
-    width:50%;
+.illustration_container {
+    margin: auto;
+    width: 50%;
     max-width: 50vw;
     min-width: 300px;
     /* min-width: 60rem; */
     /* max-height: 40vw; */
-    height:100%;
-    background-image: url(/Musée/img/apropos.jpg);
+    height: 100%;
     background-position: center center;
-    background-size:cover;
+    background-size: cover;
 }
 
-@media screen and (max-width:600px){
-    .illustration_container{
+.musee .illustration_container {
+    background-image: url(/Musée/img/apropos.jpg);
+}
+
+@media screen and (max-width:700px) {
+    .illustration_container {
         max-width: none;
-        width:100%;
+        margin: unset;
+        width: 100%;
         height: 60vw;
     }
-    .apropos .cadre{
+    .smallapropos .cadre {
         margin: auto;
         padding: 0 1rem;
         width: 70vw;
         height: 60vw;
     }
-    .apropos{
-        height:100vh;
+    .smallapropos {
+        height: auto;
         max-height: none;
     }
 }
 
 /* A propos du Menu */
 
-.apropos.menu{
+.smallapropos.menu {
     flex-direction: row-reverse;
 }
 
 /* Commander -------------------------------------------------------------------------------------------------------- */
 
-.hero.commander{
-    background-image:url(/Musée/img/apropos.jpg);
+.hero.commander {
+    background-image: url(/Musée/img/apropos.jpg);
     widows: 100%;
-    height:100vh;
+    height: 100vh;
     background-position: center center;
-    background-size:cover;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hero.commander h1{
-    font-size: 11rem;
+.hero.commander h1 {
+    font-size: 8rem;
+}
+
+.ptitdej .illustration_container {
+    background-image: url(/Musée/img/brunch.jpg);
+}
+
+@media screen and (max-width:700px) {
+    .hero.commander h1{
+        font-size: 8rem;
+    }
+
 }
 
 
+/* Carte  */
+
+.carte {
+    margin: auto;
+    color: white;
+    background-color: rgb(41, 41, 41);
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    max-width: min(80rem, 90vw);
+    min-width: 30rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-family: 'Gloss_And_Bloom', 'Garland', sans-serif;
+}
+
+.carte h1 {
+    font-family: 'Gloss_And_Bloom';
+    margin: 1rem 0;
+    font-size: 6rem;
+}
+
+.carte .separator {
+    position: absolute;
+    width: 2px;
+    background-color: rgb(224, 224, 192);
+    height: 90%;
+    top: 10rem;
+}
+
+.contenu {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+    columns: 2;
+    padding: 1rem;
+}
+
+.categorie {
+    display: inline-block;
+    background-color: rgba(103, 103, 103, 0.377);
+    /* border:black solid; */
+    border-radius: 0.5rem;
+    border-width: 1px;
+    padding: 1rem;
+    margin: 1rem 1rem;
+    width: 33rem;
+    height: auto;
+}
+
+.categorie>div {
+    margin: 10px;
+}
+
+.categorie h3 {
+    font-family: 'Gloss_And_Bloom';
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.categorie li {
+    display: flex;
+    text-align: left;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.categorie li, .reset {
+    /* margin-bottom: 1rem; */
+    font-family: 'Abecedary_Regular';
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
+
+.ingredients {
+    display: block;
+    font-size: 1rem;
+    color: rgb(126, 126, 126);
+    font-family: 'Abecedary_Italic';
+    width: 100%;
+    padding-right: 4.5rem;
+    text-align: left;
+    margin-top: 0.8rem;
+}
+
+.categorie li .price, .soldout_select {
+    margin-left: auto;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+}
+
+.soldout_select {
+    min-width: 8rem;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+}
+
+.soldout_select label {
+    margin-right: 0.4rem;
+}
+
+.soldout {
+    color: red;
+}
+
+.ligne {
+    height: 0.1rem;
+    font-size: 0.1rem;
+    flex-grow: 1;
+    margin-top: 1.5rem;
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: rgba(255, 255, 255, 0.198);
+}
+
+input[type="checkbox"]:checked, input[type="checkbox"]:not(:checked) {
+    width: 0.6em;
+    height: 0.6em;
+}
+
+input[type="checkbox"]:checked+label {
+    color: red;
+    transition: 0.2s ease-in-out;
+}
+
+input[type="checkbox"]:not(:checked)+label {
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+#submit {
+    color: #fff;
+    font-size: 4rem;
+    width: 20rem;
+    height: 7rem;
+    border-radius: 1rem;
+    margin: 0;
+    padding: 0;
+    background: rgb(63, 160, 63) url(image) 0 0 no-repeat;
+    background-color: rgba(103, 103, 103, 0.377);
+}
+
+@media screen and (max-width:720px) {
+    .contenu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+}
+
 /* A propos du Musée ----------------------------------------------------------------------------------------------- */
 
+.hero.apropos {
+    background-image: url(/Musée/img/apropos_bg.jpg);
+    widows: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:700px) {
+    .hero.apropos h1{
+        font-size: 8rem;
+        margin-left:1rem;
+        margin-right:1rem;
+    }
+
+}
+
+/* Footer ---------------------------------------------------------------------------------------------------- */
+
+footer {
+    overflow-x: hidden;
+    background-color: transparent;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 1);
+    height: auto;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 2rem;
+    color: black;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    line-height: 4rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0 2.5rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: rgb(117, 117, 117);
+}
+
+.socials a i {
+    font-size: 2.5rem;
+    transition: color .6s ease;
+}
+
+.socials a:hover i {
+    color: black;
+}
+
+.footer-content .separator {
+    width: 25rem;
+    height: 1px;
+    border-radius: 1rem;
+    background: rgb(117, 117, 117);
+}
+
+.footer-bottom {
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 1.4rem;
+    word-spacing: 0.2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    font-weight: 200;
+}

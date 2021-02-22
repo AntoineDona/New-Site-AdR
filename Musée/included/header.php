@@ -1,8 +1,3 @@
-<div id="preload">
-    <img src="/Musée/img/bgimage1.jpg" />
-    <img src="/Musée/img/bgimage2.jpg" />
-    <img src="/Musée/img/apropos.jpg" />
-</div>
 <header>
     <nav>
         <div class="logo">

@@ -16,7 +16,7 @@
         <section class="hero accueil">
             <h1>Le Musée</h1>
         </section>
-        <section class="apropos musee">
+        <section class="smallapropos musee">
             <div class="cadre">
                 <h1>A propos</h1>
                 <div class="separateur"></div>
@@ -28,7 +28,7 @@
             </div>
             <div class="illustration_container"></div>
         </section>
-        <section class="apropos menu">
+        <section class="smallapropos menu">
             <div class="cadre">
                 <h1>Le Menu</h1>
                 <div class="separateur"></div>
@@ -40,7 +40,7 @@
             </div>
             <div class="illustration_container"></div>
         </section>
-        <section class="apropos commande">
+        <section class="smallapropos commande">
             <div class="cadre">
                 <h1>Commander</h1>
                 <div class="separateur"></div>
@@ -53,8 +53,7 @@
             <div class="illustration_container"></div>
         </section>
     </main>
-    <footer>
-    </footer>
+    <?php include "included/footer.php" ?>
 </body>
 
 </html>
