@@ -266,6 +266,7 @@ nav a:hover {
     background-image: url(images/fond-accueil.png);
 }
 
+
 .sub-headline {
     font-size: 8.5rem;
     font-family: 'Epic Fusion Regular', sans-serif;
@@ -280,7 +281,7 @@ nav a:hover {
     font-size: 10.3rem;
 }
 
-.headline {
+.hero.accueil h1 {
     color: #fff;
     font-size: 3.7rem;
     font-family: 'Epic Fusion Regular', sans-serif;
