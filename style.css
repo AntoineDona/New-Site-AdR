@@ -451,7 +451,7 @@ nav a:hover {
 /* L'equipe ------------------------------------------------------------------------------------------ */
 
 .adr2k21 {
-    background-image: url(img_poles/AdR_2k21.jpg);
+    background-image: url(/Equipe/img_poles/AdR_2k21.jpg);
 }
 
 .poles {
@@ -485,43 +485,6 @@ nav a:hover {
 
 #equipe img {
     margin: 2rem 0;
-}
-
-/* .loader-wrapper{
-    height:100%;
-    width:100%;
-    position: absolute;
-    top:0px;
-    left:0px;
-    background-color: black;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.loader{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.loader img{
-    height: 200px;
-    width: 200px;
-    margin-right: 50px;
-}
-
-.loader h1{
-    font-size: 150px;
-    color: white;
-    font-family: Hallington;
-
-} */
-
-.partenariats {
-    background-image: url(images/partenariats.jpg);
-    background-size: cover;
 }
 
 /* Vieux  */
@@ -614,7 +577,14 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* footer ---------------------------------------------------------------- */
+/* Partenariats --------------------------------------------------------------------------------------------- */
+
+.partenariats {
+    background-image: url(images/partenariats.jpg);
+    background-size: cover;
+}
+
+/* Footer ---------------------------------------------------------------------------------------------------- */
 
 footer {
     background-color: rgba(0, 0, 0, 1);
@@ -713,3 +683,36 @@ html.is-leaving .transition-fade {
     transform: translateX(0);
     transition: 100ms;
 }
+
+
+/* .loader-wrapper{
+    height:100%;
+    width:100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-color: black;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader img{
+    height: 200px;
+    width: 200px;
+    margin-right: 50px;
+}
+
+.loader h1{
+    font-size: 150px;
+    color: white;
+    font-family: Hallington;
+
+} */
