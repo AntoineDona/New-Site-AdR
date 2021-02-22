@@ -36,7 +36,7 @@
                     Il a ouvert pour la première fois en 2018 lors de la fusion des écoles Centrale Paris et Supéle. <br>
                     Il est aujourd'hui tenu par les membres du bureau de l'Association des Résidents de CentraleSupélec (AdR) qui y servent matin, midi et soirs des mets allant du Wrap à la pizza, sans oublier la bière!
                 </p>
-                <a href="apropos.php"><button>En savoir plus</button></a>
+                <a href="apropos.php"><button>Découvre le Menu</button></a>
             </div>
             <div class="illustration_container"></div>
         </section>
@@ -48,7 +48,7 @@
                     Il a ouvert pour la première fois en 2018 lors de la fusion des écoles Centrale Paris et Supéle. <br>
                     Il est aujourd'hui tenu par les membres du bureau de l'Association des Résidents de CentraleSupélec (AdR) qui y servent matin, midi et soirs des mets allant du Wrap à la pizza, sans oublier la bière!
                 </p>
-                <a href="apropos.php"><button>En savoir plus</button></a>
+                <a href="apropos.php"><button>Commander</button></a>
             </div>
             <div class="illustration_container"></div>
         </section>

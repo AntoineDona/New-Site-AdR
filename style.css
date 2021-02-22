@@ -93,12 +93,6 @@ nav {
     height: 100%;
 }
 
-nav a:hover {
-    color: rgb(255, 0, 0);
-    /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
-    /* transition: color .4s ease;
-    transition: text-shadow .6s ease; */
-}
 
 .logo {
     color: rgb(202, 202, 202);
@@ -117,11 +111,13 @@ nav a:hover {
 .nav-links {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     min-width: 500px;
     width: 70%;
     margin-left: max(100px, 50%);
     margin: auto;
     color: white;
+    transition: color .2s ease;
 }
 
 .nav-links li {
@@ -133,9 +129,23 @@ nav a:hover {
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 1.5rem;
+    transition: all .2s ease;
 }
 
+.nav-links .current{
+    color:red;
+    font-size: 2rem;
+}
+
+
+.nav-links a:hover {
+    color: rgb(255, 0, 0);
+    font-size: 2rem;
+    /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
+    transition: all .4s ease;
+    /*transition: text-shadow .6s ease; */
+}
 .burger {
     display: none;
     position: absolute;
@@ -150,12 +160,12 @@ nav a:hover {
     height: 3px;
     background-color: white;
     margin: 5px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .burger:hover div {
     background-color: red;
-    transition: background-color .6s ease;
+    transition: background-color .4s ease;
 }
 
 @media screen and (max-width:1200px) {
@@ -484,7 +494,16 @@ nav a:hover {
 }
 
 .hero_events a{
-    margin:auto;
+    margin: auto;
+    margin-top:60vh;
+}
+
+#lien_resa:hover{
+    width:32vw;
+    transition: all 0.3s;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0rem 0rem 2rem 2rem rgba(255, 255, 255, 0.2);
+    border-radius: 2rem;
 }
 
 #lien_resa{
@@ -492,12 +511,9 @@ nav a:hover {
     min-width: 20rem;
     max-width: 35rem;
     margin: auto;
-    margin-top: 60vh;
+    transition: all 0.3s;
 }
 
-#lien_resa:hover{
-    cursor: pointer;
-}
 
 /* La REZ ------------------------------------------------------------------------------------------ */
 
