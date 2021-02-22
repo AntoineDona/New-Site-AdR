@@ -1,3 +1,4 @@
+<?php $page = 'Partenaires' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

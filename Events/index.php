@@ -1,3 +1,4 @@
+<?php $page="Events"?>
 <!DOCTYPE html>
 <html lang="en">
 
