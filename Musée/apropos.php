@@ -13,10 +13,11 @@
 <body>
     <?php include "included/header.php" ?>
     <main>
-        <section class='hero_apropos'>
-            <h1>A propos du Musée</h1>
+        <section class='hero apropos'>
+            <h1>A propos</h1>
         </section>
     </main>
+    <?php include "included/footer.php" ?>
 </body>
 
 </html>
