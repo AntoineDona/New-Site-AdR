@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php include "included/header.php" ?>
-    <main id="swup" class="transition-fade">
+    <main>
         <section class="hero accueil" id="hero">
             <div class="container">
                 <div class="imgt">
