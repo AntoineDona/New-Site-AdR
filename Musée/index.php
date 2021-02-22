@@ -6,8 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Musée/style.css">
-    <script defer src="/Musée/app.js"></script>
+    <?php include "included/meta.php"?>
     <title>Le Musée</title>
 </head>
 

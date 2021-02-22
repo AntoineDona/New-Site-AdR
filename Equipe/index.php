@@ -22,7 +22,7 @@
 <body>
     <?php include "../included/header.php" ?>
     <main id="swup" class="transition-fade">
-        <section class="adr2k21" id="adr2k21"> 
+        <section class="hero adr2k21" id="adr2k21"> 
             <div class="container">
                 <h1 class="headline"> Notre équipe </h1>
                 <div class="headline-description">

@@ -8,7 +8,7 @@
 <body>
     <?php include "included/header.php" ?>
     <main id="swup" class="transition-fade">
-        <section class="hero" id="hero">
+        <section class="hero accueil" id="hero">
             <div class="container">
                 <div class="imgt">
                     <img src="images/adr_anim.svg">

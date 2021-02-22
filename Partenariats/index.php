@@ -8,7 +8,7 @@
 <body>
     <?php include "../included/header.php" ?>
     <main id="swup" class="transition-fade">
-        <section class="partenariats" id="partenariats"> 
+        <section class="hero partenariats" id="partenariats"> 
             <div class="container">
                 <h1 class="headline"> Nos Partenaires</h1>
                 <div class="headline-description">
