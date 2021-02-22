@@ -9,6 +9,7 @@
 <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
 <script defer src="/app.js"></script>
 <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/master.css">
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
