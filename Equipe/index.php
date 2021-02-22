@@ -11,7 +11,7 @@
         };
     }
 ?>
-
+<?php $page = 'Equipe' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +50,7 @@
                         Que ce soit au niveau des résidences, des lieux de vie ou encore des différentes évènements et activités proposées par l’AdRCS prochainement, nous avons pour objectif de faire ce pourquoi cette association a été créer c’est à dire représenter et faire plaisirs aux résidents de campus ! ❤❤
                     </p>
                 </article>
-                <img class="prez" src="/img_poles/Table.jpg" width="100%" height="auto">
+                <img class="prez" src="img_poles/Table.jpg" width="100%" height="auto">
 
                 <div class="separator"></div>
                 
@@ -61,7 +61,7 @@
                     <!--Cette équipe de choc 100% féminine n'est pas fragile pour autant.---> 
                     Sur le pied de guerre tous les matins à 7:30, que tu sois en gueule de bois ou un des courageux qui se lèvent aux aurores, nous sommes prêtes à t'accueillir au musée, avec musique, café, bonne humeur, et une petite macarena si la chance te sourit!
                 </p></article>
-                <img class="prez" src="/img_poles/Ptit Dej.jpg" width="100%" height="auto">
+                <img class="prez" src="img_poles/Ptit Dej.jpg" width="100%" height="auto">
                 <br><br><br><br>
         
                 <div class="separator"></div>
@@ -75,7 +75,7 @@
             Si tu veux déguster les meilleurs pizzas de l'AdR (coucou les Bar) viens nous voir au musée de 11h45 à 13h45! En prime on a 3 nouvelles pizzas à venir découvrir dès demain : kebab, chèvre miel et bœuf!
             La bise de la Khâfet
                 </p></article>
-                <img class="prez" src="/img_poles/Khafet.jpg" width="100%" height="auto">
+                <img class="prez" src="img_poles/Khafet.jpg" width="100%" height="auto">
         
                 <div class="separator"></div>
                 
@@ -87,7 +87,7 @@
             Finalement la khoôpé c'est le bar en mieux: couchés plus tôt levés plus tôt.
             N'oubliez pas d'être présents à toutes nos khoôpés à thème.
                 </p></article>
-                <img class="prez" src="/img_poles/Kopé.jpg" width="100%" height="auto">
+                <img class="prez" src="img_poles/Kopé.jpg" width="100%" height="auto">
 
                 <div class="separator"></div>
                 
@@ -96,7 +96,7 @@
                 <p>
                     Vous servir bière au musée et alcool en soirée (quand y’en aura), toujours être chaud(e) pour un BP (qu’on va gagner), nous et Bertrand le gérant du musée seront vos VPs bar cette année et telle est notre mission. Pour nous trouver, rien de bien compliqué, il suffit de passer au Musée à partir de 20h30, et venir nous défier si vous l’osez.
                 </p></article>
-                <img class="prez" src="/img_poles/Bar.jpg" width="100%" height="auto">
+                <img class="prez" src="img_poles/Bar.jpg" width="100%" height="auto">
 
                 <div class="separator"></div>
                 
@@ -106,7 +106,7 @@
                     Coucou bande de nouilles ! Nous, serons VP Soirées de l’AdR pour cette année. Pour toujours plus de jeux de mots douteux mais inspirant sur les noms de soirée ou de goodies décalés, on va travailler, parce que (n’écoutez pas les bars) des soirées, vous en aurez. 
                     <br>Comme le veux la tradition, la principale tâche du vp cq restera de ramener l'autre vp cq en cqrité chez lui. Comme le veut moins la tradition, cette année ça sera deux GDPA supelecs qui occuperont ce poste, ce qui confirme l'intelligence de ce pôle.
                 </p></article>
-                <img class="prez" src="/img_poles/CQ Soirée.jpg" width="100%" height="auto">
+                <img class="prez" src="img_poles/CQ Soirée.jpg" width="100%" height="auto">
 
                 <div class="separator"></div>
                 
@@ -124,7 +124,7 @@
                     Le pôle eventos est un mélange entre les douceurs culinaires espagnol et le savoir-vivre français pour des apéros toujours plus quali et des événements encore plus hardcore. Tout au long de l’année il te permettra d’assister à des afterwork endiablés au musée, a des cafés débats (si tu te sens pousser des ailes de philosophes), à la création d’un coin chill au musée et bien d’autres choses encore. 
             Le pôle apéro pour des ienclis satisfaits.
                 </p></article>
-                <img class="prez" src="/img_poles/Eventos.jpg" width="100%" height="auto">
+                <img class="prez" src="img_poles/Eventos.jpg" width="100%" height="auto">
 
                 <div class="separator"></div>
                 
@@ -141,7 +141,7 @@
                     Vous avez déjà reçu notre mail de présentation la semaine dernière (et oui, on est des années lumières devant les autres pôles). 
                     Ce qu’il faut surtout retenir, c’est que Léonard Corre, le Prez Rez, et les trois VP Rez Alexandre Couret, Guillaume Raysseguier et Clément Franey sont là pour représenter les résidents devant CESAL, et ramener la Poly à la maison. (RIP)
                 </p></article>
-                <img class="prez" src="/img_poles/Rez.jpg" width="100%" height="auto">
+                <img class="prez" src="img_poles/Rez.jpg" width="100%" height="auto">
 
                 <div class="separator"></div>
                 
@@ -152,7 +152,7 @@
             On fait aussi dans l'import-export de tentures (et la peinture qui va aveQ), que l'on vous fournira à un prix Qordial ;) 
             Nous sommes désolés pour l'othographe, on a quelques problèmes de Q à régler
                 </p></article>
-                <img class="prez" src="/img_poles/Qom.jpg" width="100%" height="auto">
+                <img class="prez" src="img_poles/Qom.jpg" width="100%" height="auto">
 
                 <div class="separator"></div>
                 

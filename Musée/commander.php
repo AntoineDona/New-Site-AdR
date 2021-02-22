@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php include "included/header.php"?>
-    <section class='hero_commander'>
+    <section class='hero commander'>
         <h1>Commander</h1>
     </section>
 </body>

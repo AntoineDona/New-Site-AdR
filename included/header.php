@@ -5,28 +5,42 @@
         </div>
         <ul class="nav-links">
             <li class="nav-item">
-                <a href="/index.php" class="nav-link">Accueil</a>
+                <a href="/index.php" class="nav-link <?php if ($page == 'Home') {
+                                                                echo "current";
+                                                            } ?>">Accueil</a>
             </li>
             <li class="nav-item">
-                <a href="/pages/events.php" class="nav-link">Evènements</a>
+                <a href="/Events/" class="nav-link <?php if ($page == 'Events') {
+                                                                echo "current";
+                                                            } ?>">Evènements</a>
             </li>
             <li class="nav-item">
                 <a href="/Musée/" class="nav-link" >Le Musée</a>
             </li>
             <li class="nav-item">
-                <a href="/pages/equipe.php" class="nav-link">Infos Rez</a>
+                <a href="/Rez/" class="nav-link <?php if ($page == 'Rez') {
+                                                                echo "current";
+                                                            } ?>">Infos Rez</a>
             </li>
             <li class="nav-item">
-                <a href="/pages/equipe.php" class="nav-link">L'équipe</a>
+                <a href="/Equipe/" class="nav-link <?php if ($page == 'Equipe') {
+                                                                echo "current";
+                                                            } ?>">L'équipe</a>
             </li>
             <li class="nav-item">
-                <a href="/pages/partenariats.php" class="nav-link">Partenaires</a>
+                <a href="/Partenariats/" class="nav-link <?php if ($page == 'Partenaires') {
+                                                                echo "current";
+                                                            } ?>">Partenaires</a>
             </li>
             <!-- <li class="nav-item">
-                <a href="/commande/" class="nav-link">Commander</a>
+                <a href="/commande/" class="nav-link <?php if ($page == 'Commander') {
+                                                                echo "current";
+                                                            } ?>">Commander</a>
             </li> -->
             <li class="nav-item">
-                <a href="/ladr.php" class="nav-link">A propos</a>
+                <a href="/Apropos/" class="nav-link <?php if ($page == 'Apropos') {
+                                                                echo "current";
+                                                            } ?>">A propos</a>
             </li>
         </ul>
         <div class="burger">

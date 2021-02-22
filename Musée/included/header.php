@@ -8,6 +8,7 @@
         <div class="logo">
             <a href="/Musée/index.php"><img src="/Musée/img/logo_musee_b.png" alt=""></a>
         </div>
+        <h1>Le Musée</h1>
         <ul class="nav-links">
             <li class="nav-item">
                 <a href="/Musée/index.php" class="nav-link <?php if ($page == 'home') {
