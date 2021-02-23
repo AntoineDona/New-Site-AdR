@@ -1,5 +1,5 @@
 <?php $page = 'commander' ?>
-<?php include("../included/database.php"); ?>
+<?php include("included/database.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
