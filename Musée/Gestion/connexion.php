@@ -31,7 +31,7 @@ session_start();
                         <i class="fas fa-lock"></i>
                         <input type="password" name="password" placeholder="Mot de passe">
                     </div>
-                    <?php if ($_SESSION['incorrect']) {
+                    <?php if (isset($_SESSION['incorrect']) and $_SESSION['incorrect']) {
                         echo '<div class="incorrect">Nom d\'utilisateur ou mot de passe incorrect</div>';
                     }
                     ?>
