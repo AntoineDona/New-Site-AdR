@@ -8,6 +8,7 @@
 
 html {
     font-size: 10px;
+    background-image: url(/Musée/img/dark-background-4.jpg);
 }
 
 /* Preload */
@@ -89,7 +90,7 @@ header {
     height: 6rem;
     min-height: 6rem;
     z-index: 10000;
-    background-color: white;
+    background-color: rgba(249, 252, 255, 0.9);
     box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.493);
     transition: all 0.2s ease-in;
 }
@@ -235,7 +236,7 @@ nav a:hover {
         width: 250px;
         padding-top: max(6.4rem, 6.4vh);
         z-index: 1000;
-        background-color: rgb(255, 255, 255);
+        background-color: rgba(249, 252, 255, 0.9);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -259,9 +260,9 @@ nav a:hover {
         opacity: 0;
         margin-left: unset;
     }
-    .nav-item {
-        /* padding:10rem 0; */
-    }
+    /* .nav-item {
+        /* padding:10rem 0;
+    } */
     .nav-links a {
         font-size: 2rem;
     }
@@ -364,6 +365,7 @@ nav a:hover {
     flex-shrink: 0;
     flex-wrap: wrap;
     overflow-x: hidden;
+    background-color: rgba(249, 252, 255, 1);
 }
 
 .smallapropos .cadre {
@@ -420,7 +422,7 @@ nav a:hover {
     margin-bottom: auto;
 }
 
-.cadre button {
+.cadre button, .commande .btn {
     margin: auto;
     padding: 0.8rem 0.8rem;
     font-size: 1.8rem;
@@ -431,11 +433,15 @@ nav a:hover {
     transition: all 0.3s ease;
 }
 
-.cadre button:hover {
-    background-color: black;
+.cadre button:hover, .commande .btn:hover {
+    background-color: rgb(78, 78, 78);
     color: white;
     cursor: pointer;
     /* transition: all 0.3s; */
+}
+
+.commande .btn {
+    margin-top: 4rem;
 }
 
 .illustration_container {
@@ -501,31 +507,31 @@ nav a:hover {
 }
 
 @media screen and (max-width:700px) {
-    .hero.commander h1{
+    .hero.commander h1 {
         font-size: 8rem;
     }
-
 }
-
 
 /* Carte  */
 
 .carte {
     margin: auto;
-    color: white;
-    background-color: rgb(41, 41, 41);
-    border-radius: 1rem;
+    color: rgb(78, 78, 78);
+    background-color: rgba(249, 252, 255, 0.9);
+    /* border-radius: 1rem; */
     padding: 2rem 2rem;
     max-width: min(80rem, 90vw);
     min-width: 30rem;
     text-align: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    font-family: 'Gloss_And_Bloom', 'Garland', sans-serif;
+    font-family: 'Abecedary_Regular', 'Garland', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.253) 0 0 10px 2px;
+    border-radius: 10px;
 }
 
 .carte h1 {
-    font-family: 'Gloss_And_Bloom';
+    font-family: 'Abecedary_Regular';
     margin: 1rem 0;
     font-size: 6rem;
 }
@@ -533,7 +539,7 @@ nav a:hover {
 .carte .separator {
     position: absolute;
     width: 2px;
-    background-color: rgb(224, 224, 192);
+    background-color: rgb(78, 78, 78);
     height: 90%;
     top: 10rem;
 }
@@ -548,7 +554,7 @@ nav a:hover {
 
 .categorie {
     display: inline-block;
-    background-color: rgba(103, 103, 103, 0.377);
+    /* background-color: rgba(255, 255, 255, 0.377); */
     /* border:black solid; */
     border-radius: 0.5rem;
     border-width: 1px;
@@ -563,7 +569,7 @@ nav a:hover {
 }
 
 .categorie h3 {
-    font-family: 'Gloss_And_Bloom';
+    font-family: 'Abecedary_Regular';
     margin-bottom: 1rem;
     font-size: 3rem;
 }
@@ -621,7 +627,7 @@ nav a:hover {
     margin-top: 1.5rem;
     margin-left: 8px;
     margin-right: 8px;
-    background-color: rgba(255, 255, 255, 0.198);
+    background-color: rgba(0, 0, 0, 0.198);
 }
 
 input[type="checkbox"]:checked, input[type="checkbox"]:not(:checked) {
@@ -635,11 +641,11 @@ input[type="checkbox"]:checked+label {
 }
 
 input[type="checkbox"]:not(:checked)+label {
-    color: white;
+    color: rgb(78, 78, 78);
     transition: 0.2s ease-in-out;
 }
 
-#submit {
+.carte #submit {
     color: #fff;
     font-size: 4rem;
     width: 20rem;
@@ -660,6 +666,149 @@ input[type="checkbox"]:not(:checked)+label {
     }
 }
 
+@media screen and (max-width:650px) {
+    .categorie {
+        width: 80%;
+    }
+    .carte h1 {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .carte .contenu {
+        padding: 0px;
+    }
+    .categorie {
+        margin: 0px;
+        width: 90vw;
+    }
+}
+
+/*Formulaire Commande */
+
+.commande {
+    margin: auto;
+    color: rgb(78, 78, 78);
+    background-color: rgba(249, 252, 255, 0.9);
+    /* border-radius: 1rem; */
+    padding: 2rem 2rem;
+    max-width: min(80rem, 90vw);
+    min-width: 30rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-family: sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.253) 0 0 10px 2px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+.commande h1 {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    font-size: 4rem;
+}
+
+.form {
+    display: flex;
+    margin: 10px 0;
+}
+
+.form_commande {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.left, .right {
+    display: flex;
+    width: 50%;
+}
+
+.left {
+    justify-content: right;
+    align-items: center;
+}
+
+.left label {
+    margin-left: auto;
+}
+
+.right {
+    justify-content: left;
+    align-items: center;
+}
+
+form label {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.boite_form {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.103) 0 0 10px 2px;
+    border-radius: 0.5rem;
+    width: min(100%, 20rem);
+    height: 2.4rem;
+    overflow: hidden;
+}
+
+.boite_form:hover {
+    box-shadow: rgb(135, 207, 235) 0 0 2px 2px;
+}
+
+span.icon {
+    background-color: rgb(78, 78, 78);
+    width: 2.4rem;
+    height: 2.4rem;
+    color: white;
+    overflow: hidden;
+    padding-top: 5px;
+    flex-shrink: 0;
+}
+
+.input {
+    border: none;
+    background: none;
+    padding-left: 5px;
+    height: 2.4rem;
+    width: auto;
+    flex: 1;
+}
+
+input[type="radio"] {
+    margin-left: 5px;
+    background: none;
+    margin-right: 5px;
+}
+
+#texte-com {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.103) 0 0 10px 2px;
+    width: 20rem;
+    height: 10rem;
+    border-radius: 0.5rem;
+    flex: 0;
+    margin-top: 1.5rem;
+    width: 70%;
+}
+
+@media screen and (max-width:430px) {
+    .form_commande {
+        flex-direction: column;
+    }
+    .commande {
+        font-size: 1rem;
+    }
+}
+
 /* A propos du Musée ----------------------------------------------------------------------------------------------- */
 
 .hero.apropos {
@@ -674,12 +823,11 @@ input[type="checkbox"]:not(:checked)+label {
 }
 
 @media screen and (max-width:700px) {
-    .hero.apropos h1{
+    .hero.apropos h1 {
         font-size: 8rem;
-        margin-left:1rem;
-        margin-right:1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
-
 }
 
 /* Connexion ----------------------------------------------------------------------------------------------- */
@@ -699,6 +847,7 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 2rem;
     color: black;
+    background-color: white;
 }
 
 .footer-content {

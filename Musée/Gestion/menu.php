@@ -18,7 +18,7 @@
 
      -->
         <div class="carte">
-            <form method="POST" action="validation_menu_adr.php" class="form_menu">
+            <form method="POST" action="validation_menu.php" class="form_menu">
                 <h1>Carte du jour</h1>
                 <div class="reset">
                     <?php
@@ -27,7 +27,7 @@
                     ?>
                         <input value="checked" type="checkbox" class="reset_button" name=31 id="reset_button" <?php if ($article['stock'] == 'oui') {
                                                                                                                     echo "checked=\"checked\"";
-                                                                                                                } ?>>
+                                                                                                                } ?>onclick="deselectAll()">
                         <label for="reset_button"> Décocher tout (Aucun article en vente) </label>
                 </div>
                 <div class="contenu">
@@ -121,7 +121,7 @@
                 <input id="submit" class="btn_valider" type="submit" value="Valider">
             </form>
         </div>
-        <script src="app.js"></script>
+        <script src="script.js"></script>
 
     </main>
 </body>
