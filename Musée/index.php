@@ -1,4 +1,5 @@
 <?php $page = 'home' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +41,7 @@
             </div>
             <div class="illustration_container"></div>
         </section>
-        <section class="smallapropos commande">
+        <section class="smallapropos commander">
             <div class="cadre">
                 <h1>Commander</h1>
                 <div class="separateur"></div>

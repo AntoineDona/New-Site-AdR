@@ -22,9 +22,9 @@
                 <h2>Le Petit Dej livré chez toi!</h2>
                 <div class="separateur"></div>
                 <p>Cette semaine, le pôle Ptit Dej t'as préparé un petit déjeuné de folie!! <br>
-            Au menu: Jus d'orange, vienoiserie, Salade de fruite et boisson chaude! <br>
-            Et en plus de celà tu est livré directement chez toi par HumaCS ! <br> 
-            Tu peux dès à présent le réserver</p>
+                    Au menu: Jus d'orange, vienoiserie, Salade de fruite et boisson chaude! <br>
+                    Et en plus de celà tu est livré directement chez toi par HumaCS ! <br>
+                    Tu peux dès à présent le réserver</p>
                 <a href="apropos.php"><button>Réserver</button></a>
             </div>
             <div class="illustration_container ptitdej"></div>
@@ -78,7 +78,7 @@
                                         </div>
                                     </li>
                                     <span class="ingredients">
-                                                <?php echo $article['infos']; ?>
+                                        <?php echo $article['infos']; ?>
                                     </span>
                                 <?php
                             }
@@ -90,6 +90,78 @@
                 }
                     ?>
             </div>
+        </section>
+        <section class="commande">
+            <h1>Formulaire de commande</h1>
+            <form method="POST" action="reponse.php">
+                <!--onsubmit="this.submit(); this.reset(); return false;"-->
+                <article class="form">
+                    <div class="left">
+                        <label for="pseudo">Ton nom :</label>
+                    </div>
+                    <div class="right">
+                        <div class="boite_form">
+                            <span class="icon"><i class="fas fa-user"></i></span>
+                            <input class="input" type="text" name="nom" id="nom" required />
+                        </div>
+                    </div>
+                </article>
+
+                <article class="form">
+                    <div class="left">
+                        <label for="numero"> Ton numéro de téléphone :</label>
+                    </div>
+                    <div class="right">
+                        <div class="boite_form">
+                            <span class="icon"><i class="fas fa-phone"></i></span>
+                            <input class="input" placeholder="+33" type="text" name="numero" required />
+                        </div>
+                    </div>
+                </article>
+
+                <article class="form">
+                    <div class="left">
+                        <label for="adresse"> Souhaites-tu être livré ? <br> (seulement de 18h à 21h!)</label>
+                    </div>
+                    <div class="right">
+                        <input type="radio" name="question" value="oui" id="oui" /> <label for="oui">OUI</label>
+                        <input type="radio" name="question" value="non" id="non" /> <label for="non">NON</label>
+                    </div>
+                </article>
+
+                <article class="form">
+                    <div class="left">
+                        <label for="adresse"> Ton adresse <br> (Si tu ne veux être livré):</label><br>
+                    </div>
+                    <div class="right">
+                        <div class="boite_form">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <input class="input" type="text" name="adresse" />
+                        </div>
+                    </div>
+                </article>
+
+                <article class="form">
+                    <div class="left">
+                        <label for="horaire"> Horaire de collecte / livraison</label>
+                    </div>
+                    <div class="right">
+                        <div class="boite_form" style=" padding-left:0px;">
+                            <span class="icon" style="margin-right: auto;"><i class="fas fa-clock"></i></span>
+                            <input class="input" type="time" name="horaire_livraison" required />
+                        </div>
+                    </div>
+                </article>
+                <article class="form_commande">
+                    <label for="commande"> Ta commande :</label><br>
+                    <textarea id="texte-com" class="input" name="commande" rows="5"></textarea>
+                </article>
+
+                <article class="envoyer">
+                    <input id="submit" class="btn" type="submit" name="Envoyer">
+                    <!-- <input style="background-color:grey" class="btn btn-secondary" type="button" name="Valider" onclick="submit_form();"> -->
+                </article>
+            </form>
         </section>
     </main>
     <?php include "included/footer.php" ?>
