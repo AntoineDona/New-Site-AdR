@@ -1,5 +1,5 @@
 <?php include "secure.php" ?>
-<?php include("database.php"); ?>
+<?php include("../included/database.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
