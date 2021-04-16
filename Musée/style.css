@@ -422,7 +422,7 @@ nav a:hover {
     margin-bottom: auto;
 }
 
-.cadre button, .commande .btn {
+.cadre button{
     margin: auto;
     padding: 0.8rem 0.8rem;
     font-size: 1.8rem;
@@ -433,16 +433,13 @@ nav a:hover {
     transition: all 0.3s ease;
 }
 
-.cadre button:hover, .commande .btn:hover {
+.cadre button:hover {
     background-color: rgb(78, 78, 78);
     color: white;
     cursor: pointer;
     /* transition: all 0.3s; */
 }
 
-.commande .btn {
-    margin-top: 4rem;
-}
 
 .illustration_container {
     margin: auto;
@@ -657,6 +654,8 @@ input[type="checkbox"]:not(:checked)+label {
     background-color: rgba(103, 103, 103, 0.377);
 }
 
+
+
 @media screen and (max-width:720px) {
     .contenu {
         display: flex;
@@ -798,6 +797,27 @@ input[type="radio"] {
     flex: 0;
     margin-top: 1.5rem;
     width: 70%;
+}
+
+.commande .btn {
+    margin: auto;
+    padding: 0.8rem 0.8rem;
+    font-size: 1.8rem;
+    background-color: white;
+    border-radius: 0.4rem;
+    border: 1px solid black;
+    width: 15rem;
+    transition: all 0.3s ease;
+    margin-top: 4rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.103) 0 0 10px 2px;
+}
+
+.commande .btn:hover {
+    background-color: rgb(78, 78, 78);
+    color: white;
+    cursor: pointer;
+    /* transition: all 0.3s; */
 }
 
 @media screen and (max-width:430px) {
