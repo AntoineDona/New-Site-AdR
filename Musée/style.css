@@ -351,7 +351,7 @@ nav a:hover {
 /* Accueil -------------------------------------------------------------------------------------------------------- */
 
 .hero.accueil {
-    background-image: url(/Musée/img/bgimage1.jpg);
+    background-image: url(/Musée/img/Musée_nuit1.jpg);
 }
 
 /* A propos short */
@@ -485,7 +485,7 @@ nav a:hover {
 /* Commander -------------------------------------------------------------------------------------------------------- */
 
 .hero.commander {
-    background-image: url(/Musée/img/apropos.jpg);
+    background-image: url(/Musée/img/Comptoir_jour.jpg);
     widows: 100%;
     height: 100vh;
     background-position: center center;
@@ -832,7 +832,7 @@ input[type="radio"] {
 /* A propos du Musée ----------------------------------------------------------------------------------------------- */
 
 .hero.apropos {
-    background-image: url(/Musée/img/apropos_bg.jpg);
+    background-image: url(/Musée/img/Annexe1.jpg);
     widows: 100%;
     height: 100vh;
     background-position: center center;
