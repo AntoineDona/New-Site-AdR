@@ -5,7 +5,7 @@ session_start();
 
 if (isset($_POST["username"]) and isset($_POST['password'])) //si on a bien submit, cad on vient de la page de connexion
 {
-    if (($_POST["username"] == "test" and $_POST['password'] == "test") or ($_POST["username"] == "do" and $_POST['password'] == "raven")) {
+    if ($_POST["username"] == "do" and $_POST['password'] == "raven") {
         $_SESSION['is_connected'] = True;
         $_SESSION['incorrect'] = False;
 ?>
