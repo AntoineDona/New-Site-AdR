@@ -31,7 +31,7 @@ if (isset($_SESSION['is_connected']) and $_SESSION['is_connected']) {
     <main>
         <section class="hero connexion">
             <div class="login-box">
-                <form action="gestion/index.php" method="post">
+                <form action="Gestion/index.php" method="post">
                     <h3>Connexion</h3>
                     <p>Espace réservé aux gestionnaires</p>
                     <div class="textbox" style="z-index: 100;">
