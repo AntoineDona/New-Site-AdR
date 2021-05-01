@@ -11,7 +11,7 @@
                                                             } ?>">Accueil</a>
             </li>
             <li class="nav-item">
-                <a href="/musee/Menu" class="nav-link <?php if ($page == 'menu') {
+                <a href="/musee/menu" class="nav-link <?php if ($page == 'menu') {
                                                             echo "current";
                                                         } ?>" target="_blank">Menu</a>
             </li>
