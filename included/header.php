@@ -16,20 +16,20 @@
                                                             } ?>">Accueil</a>
             </li>
             <li class="nav-item">
-                <a href="/Events/" class="nav-link <?php if ($page == 'Events') {
+                <a href="/events/" class="nav-link <?php if ($page == 'Events') {
                                                                 echo "current";
                                                             } ?>">Evènements</a>
             </li>
             <li class="nav-item">
-                <a href="/Musée/" class="nav-link" >Le Musée</a>
+                <a href="/musee/" class="nav-link" >Le Musée</a>
             </li>
             <li class="nav-item">
-                <a href="/Rez/" class="nav-link <?php if ($page == 'Rez') {
+                <a href="/rez/" class="nav-link <?php if ($page == 'Rez') {
                                                                 echo "current";
                                                             } ?>">Infos Rez</a>
             </li>
             <li class="nav-item">
-                <a href="/Equipe/" class="nav-link <?php if ($page == 'Equipe') {
+                <a href="/equipe/" class="nav-link <?php if ($page == 'Equipe') {
                                                                 echo "current";
                                                             } ?>">L'équipe</a>
             </li>
@@ -39,7 +39,7 @@
                                                             } ?>">Commander</a>
             </li> -->
             <li class="nav-item">
-                <a href="/Apropos/" class="nav-link <?php if ($page == 'Apropos') {
+                <a href="/about/" class="nav-link <?php if ($page == 'Apropos') {
                                                                 echo "current";
                                                             } ?>">A propos</a>
             </li>
