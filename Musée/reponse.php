@@ -8,7 +8,7 @@
 
 	<title>Confirmation de commande</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="style_com.css">
+	<link rel="stylesheet" href="gestion/style_com.css">
     <link rel="stylesheet" type="text/css" title="mobile" href="../mobile.css" />
     <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
     <link rel="stylesheet" href="gestion/style_nav.css">
