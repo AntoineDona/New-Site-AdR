@@ -17,7 +17,7 @@
         <section class='hero commander'>
             <h1>Commander</h1>
         </section>
-        <section class="smallapropos  ptitdej">
+        <!-- <section class="smallapropos  ptitdej">
             <div class="cadre">
                 <h2>Le Petit Dej livré chez toi!</h2>
                 <div class="separateur"></div>
@@ -28,6 +28,23 @@
                 <a href="apropos.php"><button>Réserver</button></a>
             </div>
             <div class="illustration_container ptitdej"></div>
+        </section> -->
+        <section class="carte infos">
+            <h1 class="reservation">L'AdR pense à toi!</h1>
+			<h3>Pour toi qui est confiné, tu as la possibilité de commander des articles au musée et venir chercher ta commande au musée!</h3>
+			<h3 style="color:darkred;">Nous proposons même une livraison chez toi tous les midi de 12h à 13h30 et le soir de 18h à 21h pour 1€ par tranche de 7€! </br> Donc si tu souhaites te faire livrer, coche la case "oui" tout en bas!</h6>
+			<br>
+
+			<!-- <h3 style="color:darkred;">BURGER SOLDOUT!!!</h3>
+			<img src="burger.jpeg" style="width:90%;">
+		 -->
+			<h2 style="color:darkred;">MENU DE LA SEMAINE</h2><br>
+			<a href="img/Menu semaine du 19 avril.jpeg"><img class="menu_semaine" src="img/Menu semaine du 19 avril.jpeg"></a>
+			<br>
+			<!-- <h3>Le Menu de la semaine est disponible <a href="img/menu_semaine_07-02.jpeg">ici</a></h3>
+			<br> -->
+			<h2>🍳☕ Shotgun ton p'tit déj de mardi matin <a href=" https://docs.google.com/forms/d/e/1FAIpQLScAwu92nsIXaPTUU5YhJBDNuzcUGarUL48FuFLhKbv-G0btQg/viewform">ici</a></h2>
+			<br>
         </section>
         <section class="carte">
             <h1>Carte du jour</h1>

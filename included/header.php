@@ -33,11 +33,6 @@
                                                                 echo "current";
                                                             } ?>">L'équipe</a>
             </li>
-            <li class="nav-item">
-                <a href="/Partenariats/" class="nav-link <?php if ($page == 'Partenaires') {
-                                                                echo "current";
-                                                            } ?>">Partenaires</a>
-            </li>
             <!-- <li class="nav-item">
                 <a href="/commande/" class="nav-link <?php if ($page == 'Commander') {
                                                                 echo "current";

@@ -20,42 +20,42 @@
 
 <body>
 
-    <?php
-    $reponse = $bdd->query('SELECT * FROM menu');
+    <?php 
+    // $reponse = $bdd->query('SELECT * FROM menu');
 
-    while ($donnees = $reponse->fetch()) {
-        if (isset($_POST['soldout' . $donnees["id"]])) { /* on parcoure les cases cochées du soldout */
-            $req = $bdd->prepare('UPDATE menu SET soldout=\'oui\' WHERE id=:id');
-            $req->execute(array(
-                'id' => $donnees['id'],
-            ));
-        } else {
-            $req = $bdd->prepare('UPDATE menu SET soldout=\'non\' WHERE id=:id');
-            $req->execute(array(
-                'id' => $donnees['id'],
-            ));
-        }
+    // while ($donnees = $reponse->fetch()) {
+    //     if (isset($_POST['soldout' . $donnees["id"]])) { /* on parcoure les cases cochées du soldout */
+    //         $req = $bdd->prepare('UPDATE menu SET soldout=\'oui\' WHERE id=:id');
+    //         $req->execute(array(
+    //             'id' => $donnees['id'],
+    //         ));
+    //     } else {
+    //         $req = $bdd->prepare('UPDATE menu SET soldout=\'non\' WHERE id=:id');
+    //         $req->execute(array(
+    //             'id' => $donnees['id'],
+    //         ));
+    //     }
 
-        if (isset($_POST[$donnees["id"]])) { /* on parcoure les cases cochées */
-            $req = $bdd->prepare('UPDATE menu SET stock=\'oui\' WHERE id=:id');
-            $req->execute(array(
-                'id' => $donnees['id'],
-            ));
-        } else { /* reste les cases pas cochées, on dit que stock='non' et soldout='non' Quand on affiche la page de commande, il ne seront pas affiché */
-            $req = $bdd->prepare('UPDATE menu SET stock=\'non\' WHERE id=:id');
-            $req->execute(array(
-                'id' => $donnees['id'],
-            ));
-        }
-        // Si on est sur dessert du jour et qu'on l'a modifié, ie on a cliqué sur le bouton
-        if (($donnees["article"] == "Dessert du jour") and isset($_POST['modif_dessert'])) {
-            $req = $bdd->prepare('UPDATE menu SET infos=:infos WHERE id=:id');
-            $req->execute(array(
-                'id' => $donnees['id'],
-                'infos' => $_POST['dessert'],
-            ));
-        }
-    }
+    //     if (isset($_POST[$donnees["id"]])) { /* on parcoure les cases cochées */
+    //         $req = $bdd->prepare('UPDATE menu SET stock=\'oui\' WHERE id=:id');
+    //         $req->execute(array(
+    //             'id' => $donnees['id'],
+    //         ));
+    //     } else { /* reste les cases pas cochées, on dit que stock='non' et soldout='non' Quand on affiche la page de commande, il ne seront pas affiché */
+    //         $req = $bdd->prepare('UPDATE menu SET stock=\'non\' WHERE id=:id');
+    //         $req->execute(array(
+    //             'id' => $donnees['id'],
+    //         ));
+    //     }
+    //     // Si on est sur dessert du jour et qu'on l'a modifié, ie on a cliqué sur le bouton
+    //     if (($donnees["article"] == "Dessert du jour") and isset($_POST['modif_dessert'])) {
+    //         $req = $bdd->prepare('UPDATE menu SET infos=:infos WHERE id=:id');
+    //         $req->execute(array(
+    //             'id' => $donnees['id'],
+    //             'infos' => $_POST['dessert'],
+    //         ));
+    //     }
+    // }
     ?>
 
 
