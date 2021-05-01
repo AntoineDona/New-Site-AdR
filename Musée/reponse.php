@@ -1,5 +1,20 @@
 <?php include("included/database.php"); ?>
-<?php
+
+	<!DOCTYPE html>
+	<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<?php include "included/meta.php" ?>
+		<title>Confirmation de commande</title>
+
+		<meta http-equiv="refresh" content="5;url=commander.php" /> <!-- on redirige au bout de 3 secondes -->
+
+	</head>
+	<body>
+
+	<?php
 if (isset($_POST['nom']) && isset($_POST['numero']) && isset($_POST['commande'])) {
 	$nom = htmlspecialchars($_POST['nom']);
 	$numero = htmlspecialchars($_POST['numero']);
@@ -25,28 +40,35 @@ if (isset($_POST['nom']) && isset($_POST['numero']) && isset($_POST['commande'])
 
 ?>
 
-	<!DOCTYPE html>
-	<html>
-
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<?php include "included/meta.php" ?>
-		<title>Confirmation de commande</title>
-
-		<meta http-equiv="refresh" content="5;url=commander.php" /> <!-- on redirige au bout de 3 secondes -->
-
-	</head>
-
-	<body>
 		<?php include "included/header.php" ?>
 		<div class="carte" style="margin-top:10rem;">
 			<i style="color:#2FAF2C;" class="fas fa-check-circle fa-6x"></i>
 			<h4 style="color:#2FAF2C"> <br>Salut <?php echo $nom; ?>, 
 			<br>Ta commande a bien été passée. Huma va te livrer à l'horaire que tu as choisi, tu pourras payer à ce moment par Lydia!
-			<br><h4>Tu seras redirigé vers la page de commande dans 5 secondes</h4>
+			<br><h4>Tu seras redirigé vers la page de commande dans <span id="countdown">5</span> secondes</h4>
 
 		</div>
+		<script type="text/javascript">
+    
+    // Total seconds to wait
+    var seconds = 5;
+    
+    function countdown() {
+        seconds = seconds - 1;
+        if (seconds < 0) {
+            // Chnage your redirection link here
+            window.location = "commander.php";
+        } else {
+            // Update remaining seconds
+            document.getElementById("countdown").innerHTML = seconds;
+            // Count down using javascript
+            window.setTimeout("countdown()", 1000);
+        }
+    }
+	// Run countdown function
+    countdown();
+    
+</script>
 	<?php
 
 } else {
