@@ -1087,6 +1087,7 @@ footer {
     font-size: 1.4rem;
     word-spacing: 0.2px;
     text-transform: capitalize;
+    margin-top: 1rem;
 }
 
 .footer-bottom a{
