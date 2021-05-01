@@ -1,1 +1,1 @@
-<meta http-equiv="Refresh" content="0;url=../Mus%C3%A9e/gestion/non_traite.php" />
+<meta http-equiv="Refresh" content="0;url=../Mus%C3%A9e/Gestion/non_traite.php" />
