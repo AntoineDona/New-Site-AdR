@@ -25,16 +25,6 @@
         <section class="hero adr2k21" id="adr2k21"> 
             <div class="container">
                 <h1 class="headline"> Notre équipe </h1>
-                <div class="headline-description">
-                    <div class="separator">
-                        <div class="line line-left"></div>
-                        <div class="heart"><i class="fas fa-heart"></i></div>
-                        <div class="line line-right"></div>
-                    </div>
-                    <div class="single-animation">
-                        <h5>Toujours là pour vous faire kiffer</h5>
-                    </div>
-                </div>
             </div>
         </section>
         <section class="poles">
@@ -184,7 +174,7 @@
                 <button onclick="showPanel(2)">2018</button>
                 <button onclick="showPanel(3)">2016</button> -->
             </div>
-            <div class="tabPanel">2020</div>
+            <!-- <div class="tabPanel">2020</div>
             <div class="tabPanel" id="2019">
                 <h1>AdR 2019</h1>
                 <img src="Vieux/2019/Buro.jpeg" >
@@ -198,7 +188,7 @@
                 <img src="Vieux/2019/Rez.jpeg" >
             </div>
             <div class="tabPanel">2018</div>
-            <div class="tabPanel">2017</div>
+            <div class="tabPanel">2017</div> -->
         </div>
     </main>
     <?php include "../included/footer.php" ?>
