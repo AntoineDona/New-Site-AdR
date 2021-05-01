@@ -1,1 +1,1 @@
-<meta http-equiv="Refresh" content="0;url=../Mus%C3%A9e/commander.php" />
+<meta http-equiv="Refresh" content="0;url=../musee/commander.php" />
