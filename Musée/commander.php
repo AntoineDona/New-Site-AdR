@@ -99,16 +99,17 @@
                                     </span>
                                 <?php
                             }
-                        }
-                        else{
-                            ?>
-                            <h3>Il n'y a aucun article disponible pour l'instant</h3>
-                            <?php
-                        }
+                            
                                 ?>
                                 </ul>
                             </div>
                     <?php
+                        }
+                    else{
+                        ?>
+                        <div class="none"> Aucun article n'est disponible pour l'instant</div>
+                        <?php
+                    }
                     }
                 }
                     ?>
