@@ -107,7 +107,7 @@
                         }
                     else{
                         ?>
-                        <div class="none"> Aucun article n'est disponible pour l'instant</div>
+                        <div class="none"> Aucun article n'est disponible pour l'instant...</div>
                         <?php
                     }
                     }
