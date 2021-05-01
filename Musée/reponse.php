@@ -1,79 +1,79 @@
 <?php include("included/database.php"); ?>
 
-	<!DOCTYPE html>
-	<html>
+<!DOCTYPE html>
+<html>
 
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<?php include "included/meta.php" ?>
-		<title>Confirmation de commande</title>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<?php include "included/meta.php" ?>
+	<title>Confirmation de commande</title>
 
-		<meta http-equiv="refresh" content="5;url=commander.php" /> <!-- on redirige au bout de 3 secondes -->
+	<meta http-equiv="refresh" content="5;url=commander.php" /> <!-- on redirige au bout de 3 secondes -->
 
-	</head>
-	<body>
+</head>
+
+<body>
 
 	<?php
-if (isset($_POST['nom']) && isset($_POST['numero']) && isset($_POST['commande'])) {
-	$nom = htmlspecialchars($_POST['nom']);
-	$numero = htmlspecialchars($_POST['numero']);
-	$commande = htmlspecialchars($_POST['commande']);
-	$Datetime = date("Y-m-d H:i:s");
-	$livre = 'non';
-	$adresse = htmlspecialchars($_POST['adresse']);
-	$horaire = $_POST['horaire_livraison'] . ':00';
-	$livraison = $_POST['question'];
+	if (isset($_POST['nom']) && isset($_POST['numero']) && isset($_POST['commande'])) {
+		$nom = htmlspecialchars($_POST['nom']);
+		$numero = htmlspecialchars($_POST['numero']);
+		$commande = htmlspecialchars($_POST['commande']);
+		$Datetime = date("Y-m-d H:i:s");
+		$livre = 'non';
+		$adresse = htmlspecialchars($_POST['adresse']);
+		$horaire = $_POST['horaire_livraison'] . ':00';
+		$livraison = $_POST['question'];
 
-	$req = $bdd->prepare('INSERT INTO commande(nom, numero, livre, commande,Datetime,adresse,horaire,livraison) VALUES(:nom, :numero, :livre, :commande,:Datetime,:adresse,:horaire,:livraison)');
-	$req->execute(array(
-		'nom' => $nom,
-		'numero' => $numero,
-		'livre' => $livre,
-		'commande' => $commande,
-		'Datetime' => $Datetime,
-		'adresse' => $adresse,
-		'horaire' => $horaire,
-		'livraison' => $livraison
-	));
+		$req = $bdd->prepare('INSERT INTO commande(nom, numero, livre, commande,Datetime,adresse,horaire,livraison) VALUES(:nom, :numero, :livre, :commande,:Datetime,:adresse,:horaire,:livraison)');
+		$req->execute(array(
+			'nom' => $nom,
+			'numero' => $numero,
+			'livre' => $livre,
+			'commande' => $commande,
+			'Datetime' => $Datetime,
+			'adresse' => $adresse,
+			'horaire' => $horaire,
+			'livraison' => $livraison
+		));
 
 
-?>
+	?>
 
 		<?php include "included/header.php" ?>
 		<div class="carte" style="margin-top:10rem;">
 			<i style="color:#2FAF2C;" class="fas fa-check-circle fa-6x"></i>
-			<h4 style="color:#2FAF2C"> <br>Salut <?php echo $nom; ?>, 
-			<br>Ta commande a bien été passée. Huma va te livrer à l'horaire que tu as choisi, tu pourras payer à ce moment par Lydia!
-			<br><h4>Tu seras redirigé vers la page de commande dans <span id="countdown">5</span> secondes</h4>
+			<h4 style="color:#2FAF2C"> <br>Salut <?php echo $nom; ?>,
+				<br>Ta commande a bien été passée. Huma va te livrer à l'horaire que tu as choisi, tu pourras payer à ce moment par Lydia!
+				<br>
+				<h4>Tu seras redirigé vers la page de commande dans <span id="countdown">5</span> secondes</h4>
 
 		</div>
 		<script type="text/javascript">
-    
-    // Total seconds to wait
-    var seconds = 5;
-    
-    function countdown() {
-        seconds = seconds - 1;
-        if (seconds < 0) {
-            // Chnage your redirection link here
-            window.location = "commander.php";
-        } else {
-            // Update remaining seconds
-            document.getElementById("countdown").innerHTML = seconds;
-            // Count down using javascript
-            window.setTimeout("countdown()", 1000);
-        }
-    }
-	// Run countdown function
-    countdown();
-    
-</script>
+			// Total seconds to wait
+			var seconds = 5;
+
+			function countdown() {
+				seconds = seconds - 1;
+				if (seconds < 0) {
+					// Chnage your redirection link here
+					window.location = "commander.php";
+				} else {
+					// Update remaining seconds
+					document.getElementById("countdown").innerHTML = seconds;
+					// Count down using javascript
+					window.setTimeout("countdown()", 1000);
+				}
+			}
+			// Run countdown function
+			countdown();
+		</script>
 	<?php
 
-} else {
-	echo '<p>ERREUR: Il y a eu un problème au moment du saisi de ta commande. Tu peux réessayer. Si le problème persiste, contacte nous directement sur Facebook ou au 0607764074 (VP Geek)</p>';
-}
+	} else {
+		echo '<p>ERREUR: Il y a eu un problème au moment du saisi de ta commande. Tu peux réessayer. Si le problème persiste, contacte nous directement sur Facebook ou au 0607764074 (VP Geek)</p>';
+	}
 	?>
 
 	<?php /*
@@ -150,6 +150,6 @@ if (!$mail->Send()){
 		//   window.history.replaceState( null, null, window.location.href );
 		// }
 	</script>
-	</body>
+</body>
 
-	</html>
+</html>
