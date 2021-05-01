@@ -34,14 +34,14 @@ if (isset($_POST['nom']) && isset($_POST['numero']) && isset($_POST['commande'])
 		<?php include "included/meta.php" ?>
 		<title>Confirmation de commande</title>
 
-		<meta http-equiv="refresh" content="3;url=commander.php" /> <!-- on redirige au bout de 3 secondes -->
+		<meta http-equiv="refresh" content="5;url=commander.php" /> <!-- on redirige au bout de 3 secondes -->
 
 	</head>
 
 	<body>
 		<?php include "included/header.php" ?>
 		<div class="carte" style="margin-top:10rem;">
-			<i style="color:#2FAF2C;margin-bottome:10rem;" class="fas fa-check-circle fa-6x"></i>
+			<i style="color:#2FAF2C;" class="fas fa-check-circle fa-6x"></i>
 			<h4 style="color:#2FAF2C"> <br>Salut <?php echo $nom; ?>, 
 			<br>Ta commande a bien été passée. Huma va te livrer à l'horaire que tu as choisi, tu pourras payer à ce moment par Lydia!
 			<br><h4>Tu seras redirigé vers la page de commande dans 5 secondes</h4>
