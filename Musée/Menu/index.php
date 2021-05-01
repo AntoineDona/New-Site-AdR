@@ -8,18 +8,16 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-<script type="text/javascript" src="js/format-google-calendar.js"></script>
 
 <body onload="onLoad()">
 <img src="img/adr_anim.svg" style="width:80px;margin:10px;position:fixed;right:0;bottom:0;"/>
 <img src="img/logo_musee.png" style="width:80px;margin:10px;position:fixed;left:0;bottom:0;"/>
 
 <div id="body">
-	<!-- <div id="button_back" onClick="redirect('https://adr.cs-campus.fr/')">
+	<div id="button_back" onClick="redirect('https://adr.cs-campus.fr/')">
 		Retour au site
-	</div> -->
+	</div>
 	
-<?php include("../calendar/calendar.php"); ?>
 	
 	<div class="legend">
 		<div class="subcontent" style="grid-template-columns:max-content 1fr;">
@@ -35,8 +33,8 @@
 		<img src="img/logo_musee.png"/>
 		<h2 style="color:#ed2024;">Viens te régaler au Musée tous les jours de la semaine !</h2>
 		<div style="font-family:CaviarDreams;line-height:140%;">Que ce soit pour une petite pause gustative ou pour un repas complet, le Musée t'accueille du lundi au vendredi:<br><br>
-		<strong>7h30-9h</strong>: pour un petit déjeuner équilibré à 1,90€ seulement !!<br><br>
-		<strong>11h30-14h</strong>: pour un déjeuner complet, formules à 4,5€, pizzas à 5€, de quoi se nourrir à petits prix<br><br>
+		<strong>7h30-9h</strong>: pour un p'tit dej équilibré à 2€ seulement !!<br><br>
+		<strong>11h30-14h</strong>: pour un déjeuner complet, formules à 5€, pizzas à 5€, de quoi se nourrir à petits prix<br><br>
 		<strong>17h-00h30</strong>: pour retrouver tes potes autour d'une petite pinte, un snack, ou certainement les deux (fermé le vendredi)</div><br>
 	</div>
 	<div class="content" id="les_menus" style="grid-area: c;">
@@ -50,7 +48,7 @@
 			• 1 soft ou 1 bière <strong style="color:#ee0;">•</strong><br>
 			</div>
 			<div>
-			4<small>,80</small> €
+			5<small>,00</small> €
 			</div>
 		</div><br>
 		<h2>&#8764; Menu pizza &#8765;</h2>
@@ -60,7 +58,7 @@
 			• 1 soft ou 1 bière <strong style="color:#ee0;">•</strong><br>
 			</div>
 			<div>
-			5<small>,50</small> €
+			5<small>,70</small> €
 			</div>
 		</div><br>
 		<h2>&#8764; Menu p'tit dej &#8765;</h2>
@@ -71,20 +69,9 @@
 			• 1 verre de jus<br>
 			</div>
 			<div>
-			1<small>,90</small> €
+			2<small>,00</small> €
 			</div>
 		</div><br>
-		<h2>&#8764; Menu Jorge &#8765;</h2>
-		<div class="subcontent">
-			<div>
-			• 1 sandwich poulet et un café<br>
-			ou<br>
-			• 1 aller simple pour le RU<br>
-			</div>
-			<div>
-			3<small>,25</small> €
-			</div>
-		</div>
 	</div>
 	<div class="content" id="les_plats" style="grid-area: b;">
 		<h1>[LES|PLATS]</h1>
@@ -99,10 +86,10 @@
 				<div>5<small>,00</small> €</div>
 			<div onClick="">Kebab <strong style="color:#ee0;">•</strong><div class="compo">Composition : Sauce tomate, mozza, kebab, salade, sauce blanche, origan</div></div>
 				<div>5<small>,00</small> €</div>
-			<div onClick="">Végétarienne &#127811;<strong style="color:#ee0;">•</strong><div class="compo">Composition : Sauce tomate, mozza, artichauts, poivrons, tomates, salade, olives, origan</div></div>
-				<div>5<small>,00</small> €</div>
-			<div onClick="">Margherita &#127811;<strong style="color:#ee0;">•</strong><div class="compo">Composition : Sauce tomate, mozza, tomates, olives, origan</div></div>
-				<div>5<small>,00</small> €</div>
+			<div onClick="">Végétarienne &#127811;<div class="compo">Composition : Sauce tomate, mozza, artichauts, poivrons, tomates, salade, olives, origan</div></div>
+				<div>4<small>,50</small> €</div>
+			<div onClick="">Margherita &#127811;<div class="compo">Composition : Sauce tomate, mozza, tomates, olives, origan</div></div>
+				<div>4<small>,50</small> €</div>
 			<div onClick="">3 fromages &#127811;<div class="compo">Composition : Sauce tomate, mozza, chèvre, bleu, origan</div></div>
 				<div>6<small>,00</small> €</div>
 			<div onClick="">Orientale<div class="compo">Composition : Sauce tomate, mozza, merguez, poivrons, oeuf, olives, origan</div></div>
@@ -116,7 +103,7 @@
 			<div onClick="">Tartiflette<div class="compo">Composition : Crème fraiche, mozza, reblochon, pommes de terre, lardons, origan</div></div>
 				<div>6<small>,00</small> €</div>
 			<div onClick="">Chèvre-Miel &#127811;<div class="compo">Composition : Sauce tomate, mozza, chèvre, miel, olives, origan</div></div>
-				<div>5<small>,50</small> €</div>
+				<div>6<small>,00</small> €</div>
 		</div><br>
 		<h2>&#8764; Sandwichs &#8765;</h2>
 		<div class="subcontent">

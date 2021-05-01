@@ -15,6 +15,11 @@
         <section class="hero rez">
             <h1>La REZ</h1>
         </section>
+        <section class="maintenance">
+            <div class="container">
+                En cours de construction
+            </div>
+        </section>
     </main>
     <?php include "../included/footer.php"?>
     <script src="/app.js"></script>
