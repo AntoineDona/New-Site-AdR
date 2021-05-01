@@ -21,9 +21,9 @@
             <div class="cadre">
                 <h1>A propos</h1>
                 <div class="separateur"></div>
-                <p>Le Musée est le bar de l'école CentraleSupélec. <br>
-                    Il a ouvert pour la première fois en 2018 lors de la fusion des écoles Centrale Paris et Supélec. <br>
-                    Il est aujourd'hui tenu par les membres du bureau de l'Association des Résidents de CentraleSupélec (AdR) qui y servent matin, midi et soirs des mets allant du Wrap à la pizza, sans oublier la bière!
+                <p>Le Musée est le bar-cafétaria de l'école CentraleSupélec. <br>
+                    Il a ouvert en 2018 lors de la fusion des écoles Centrale Paris et Supélec. <br>
+                    Il est aujourd'hui tenu par les membres de l'Association des Résidents de CentraleSupélec (AdR) <br> qui y servent matin, midi et soirs des mets allant du Wrap à la Pizza, sans oublier la Bière!
                 </p>
                 <a href="apropos.php"><button>En savoir plus</button></a>
             </div>

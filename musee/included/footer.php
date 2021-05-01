@@ -9,7 +9,21 @@
         <div class="separator"></div>
     </div>
     <div class="footer-bottom">
-        <p>&copy;2020 disigned with ❤️🖤 by <span> AdR CentraleSupélec</span></p>
+        <nav>
+            <ul>
+                <li>
+                <a href="/index.php"><p>AdR CentraleSupélec</p></a>
+                </li>
+                <li>
+                <a href="/index.php"><p>Mentions légales</p></a>
+                </li>
+                <li>
+                <a href="/index.php"><p>Ressources</p></a>
+                </li>
+            </ul>
+        </nav>
+        
+        <p style="margin-left: 3rem;">&copy;2020 disigned with ❤️🖤 by <span> AdR CentraleSupélec</span></p>
     </div>
 </footer>
 <div id="preload">
