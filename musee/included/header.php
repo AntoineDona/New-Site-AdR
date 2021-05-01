@@ -13,7 +13,7 @@
             <li class="nav-item">
                 <a href="/musee/menu" class="nav-link <?php if ($page == 'menu') {
                                                             echo "current";
-                                                        } ?>" target="_blank">Menu</a>
+                                                        } ?>" >Menu</a>
             </li>
             <li class="nav-item">
                 <a href="/musee/commander.php" class="nav-link <?php if ($page == 'commander') {

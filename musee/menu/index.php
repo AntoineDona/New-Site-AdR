@@ -14,7 +14,7 @@
 <img src="img/logo_musee.png" style="width:80px;margin:10px;position:fixed;left:0;bottom:0;"/>
 
 <div id="body">
-	<div id="button_back" onClick="redirect('https://adr.cs-campus.fr/')">
+	<div id="button_back" onClick="redirect('https://adr.cs-campus.fr/musee')">
 		Retour au site
 	</div>
 	
