@@ -75,7 +75,7 @@
                                 <h3><?php echo $categorie["categorie"]; ?></h3>
                                 <ul>
                                 <?php
-                            }
+                            
                             // On affiche chaque article coché de la catégorie
                             while ($article = $articles->fetch()) {
                                 ?>
@@ -99,6 +99,12 @@
                                     </span>
                                 <?php
                             }
+                        }
+                        else{
+                            ?>
+                            <h3>Il n'y a aucun article disponible pour l'instant</h3>
+                            <?php
+                        }
                                 ?>
                                 </ul>
                             </div>
