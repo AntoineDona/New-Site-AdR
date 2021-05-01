@@ -210,6 +210,8 @@ nav {
     .burger {
         display: block;
     }
+
+    
 }
 
 .nav-active {
@@ -276,6 +278,16 @@ nav {
     margin: 0 auto;
     padding: 0 2.4rem;
     text-align: center;
+}
+@media screen and (max-width:950px){
+    .hero h1{
+        display: block;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 9rem;
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px 5px black;
+    }
 }
 
 /* Accueil ------------------------------------------------------------------------------------------------------------ */

@@ -29,7 +29,7 @@
             </div>
             <div class="illustration_container"></div>
         </section>
-        <section class="smallapropos menu">
+        <!-- <section class="smallapropos menu">
             <div class="cadre">
                 <h1>Le Menu</h1>
                 <div class="separateur"></div>
@@ -52,7 +52,7 @@
                 <a href="apropos.php"><button>Commander</button></a>
             </div>
             <div class="illustration_container"></div>
-        </section>
+        </section> -->
     </main>
     <?php include "included/footer.php" ?>
 </body>
