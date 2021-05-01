@@ -26,7 +26,7 @@
                                                                 } ?>">A propos</a>
             </li>
             <li class="espace_adr">
-                <a href="/Musée/Gestion/connexion.php" class="nav-link <?php if ($page == 'connexion') {
+                <a href="/Musée/connexion.php" class="nav-link <?php if ($page == 'connexion') {
                                                                     echo "current";
                                                                 } ?>">Connexion</a>
             </li>

@@ -4,10 +4,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<?php include "../included/meta.php" ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Menu</title>
 </head>
 <body>
@@ -17,6 +18,7 @@
         on affiche tout le menu à chaque fois, mais avec les cases en plus! attention à gérer les priorités
 
      -->
+
         <div class="carte">
             <form method="POST" action="validation_menu.php" class="form_menu">
                 <h1>Carte du jour</h1>
@@ -124,6 +126,11 @@
         <script src="script.js"></script>
 
     </main>
+    <div id="contact" class="offset">
+
+		<?php include("../included/footer.php"); ?>
+
+	</div>
 </body>
 
 </html>

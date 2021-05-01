@@ -21,7 +21,7 @@
                         <div class="line line-right"></div>
                     </div>
                     <div class="single-animation">
-                        <h5>Toujours là pour vous faire kiffer</h5>
+                        <!-- <h5>Toujours là pour vous faire kiffer</h5> -->
                         <a href="#" class="btn cta-btn">Nous découvrir</a>
                     </div>
                 </div>
