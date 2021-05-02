@@ -39,7 +39,7 @@
 			<img src="burger.jpeg" style="width:90%;">
 		 -->
 			<h2 style="color:darkred;">MENU DE LA SEMAINE</h2><br>
-			<a href="img/Menu semaine du 19 avril.jpeg"><img class="menu_semaine" src="img/Menu semaine du 19 avril.jpeg"></a>
+			<a href="img/Menu semaine du 3 mai.jpg"><img class="menu_semaine" src="img/Menu semaine du 3 mai.jpg"></a>
 			<br>
 			<!-- <h3>Le Menu de la semaine est disponible <a href="img/menu_semaine_07-02.jpeg">ici</a></h3>
 			<br> -->
