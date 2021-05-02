@@ -37,7 +37,7 @@
                     <h2 id="buro">⚙ Le Buro ⚙ </h2>
                     <p>
                         Fraîchement élu, prêt à tout changer !! 
-                        Que ce soit au niveau des résidences, des lieux de vie ou encore des différentes évènements et activités proposées par l’AdRCS prochainement, nous avons pour objectif de faire ce pourquoi cette association a été créer c’est à dire représenter et faire plaisirs aux résidents de campus ! ❤❤
+                        Que ce soit au niveau des résidences, des lieux de vie ou encore des différents évènements et activités proposés par l’AdRCS prochainement, nous avons pour objectif de faire ce pourquoi cette association a été créée, c’est à dire représenter et faire plaisir aux résidents du campus ! ❤❤
                     </p>
                 </article>
                 <img class="prez" src="img_poles/Table.jpg" width="100%" height="auto">
@@ -48,8 +48,7 @@
                 <h2 id="ptitdej">🥐 VP Ptit Dej 🥐</strong></h2>
                 <p>
                     Parce que le monde appartient à ceux qui se lèvent tôt, l'AdR appartient au pôle P'tit déj. Aussi connu sous le nom du "Vrai Bureau," ce pôle est essentiel au fonctionnement de l'association. 
-                    <!--Cette équipe de choc 100% féminine n'est pas fragile pour autant.---> 
-                    Sur le pied de guerre tous les matins à 7:30, que tu sois en gueule de bois ou un des courageux qui se lèvent aux aurores, nous sommes prêtes à t'accueillir au musée, avec musique, café, bonne humeur, et une petite macarena si la chance te sourit!
+                    Sur le pied de guerre tous les matins à 7:30, que tu sois en gueule de bois ou un des courageux qui se lèvent aux aurores, nous sommes prêts à t'accueillir au musée, avec musique, café, bonne humeur, et une petite macarena si la chance te sourit!
                 </p></article>
                 <img class="prez" src="img_poles/Ptit Dej.jpg" width="100%" height="auto">
                 <br><br><br><br>
@@ -84,7 +83,8 @@
                 <article class="pole">
                 <h2 id="bar">🍺 VP Bar 🍺</strong></h2>
                 <p>
-                    Vous servir bière au musée et alcool en soirée (quand y’en aura), toujours être chaud(e) pour un BP (qu’on va gagner), nous et Bertrand le gérant du musée seront vos VPs bar cette année et telle est notre mission. Pour nous trouver, rien de bien compliqué, il suffit de passer au Musée à partir de 20h30, et venir nous défier si vous l’osez.
+                    Vous servir bière au musée et alcool en soirée (quand y’en aura), toujours être chaud(e) pour un BP (qu’on va gagner), nous et Bertrand le gérant du musée seront vos VPs bar cette année et telle est notre mission. 
+                    Pour nous trouver, rien de bien compliqué, il suffit de passer au Musée à partir de 20h30, et venir nous défier si vous l’osez.
                 </p></article>
                 <img class="prez" src="img_poles/Bar.jpg" width="100%" height="auto">
 
@@ -111,7 +111,7 @@
                 <article class="pole">
                 <h2 id="eventos">🍣 VP Eventos 🍣</strong></h2>
                 <p>
-                    Le pôle eventos est un mélange entre les douceurs culinaires espagnol et le savoir-vivre français pour des apéros toujours plus quali et des événements encore plus hardcore. Tout au long de l’année il te permettra d’assister à des afterwork endiablés au musée, a des cafés débats (si tu te sens pousser des ailes de philosophes), à la création d’un coin chill au musée et bien d’autres choses encore. 
+                    Le pôle eventos est un mélange entre les douceurs culinaires espagnoles et le savoir-vivre français pour des apéros toujours plus qualis et des événements encore plus hardcore. Tout au long de l’année il te permettra d’assister à des afterwork endiablés au musée, à des cafés débats (si tu te sens pousser des ailes de philosophes), à la création d’un coin chill au musée et bien d’autres choses encore. 
             Le pôle apéro pour des ienclis satisfaits.
                 </p></article>
                 <img class="prez" src="img_poles/Eventos.jpg" width="100%" height="auto">
