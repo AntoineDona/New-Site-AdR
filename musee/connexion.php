@@ -54,7 +54,7 @@ if (isset($_SESSION['is_connected']) and $_SESSION['is_connected']) {
             </div>
         </section>
     </main>
-    <?php include "../included/footer.php" ?>
+    <?php include "included/footer.php" ?>
 </body>
 
 </html>
