@@ -39,11 +39,11 @@
 			<img src="burger.jpeg" style="width:90%;">
 		 -->
 			<h2 style="color:darkred;">MENU DE LA SEMAINE</h2><br>
-			<a href="img/Menu semaine du 3 mai correct.jpeg"><img class="menu_semaine" src="img/Menu semaine du 3 mai correct.jpeg"></a>
+			<a href="img/Menu semaine du 10 mai.jpg"><img class="menu_semaine" src="img/Menu semaine du 10 mai.jpg"></a>
 			<br>
 			<!-- <h3>Le Menu de la semaine est disponible <a href="img/menu_semaine_07-02.jpeg">ici</a></h3>
 			<br> -->
-			<h2>🇪🇸 Réserve ton p'tit dej spé ESPAGNOL pour mercredi <a href=" https://docs.google.com/forms/d/e/1FAIpQLSeIBjurGEcZAEhf4NAJO4Y949ErQ5-vel60otuiBIWJDnJL3g/viewform?usp=sf_link">ici</a> ! 🇪🇸 
+			<h2>Réserve ton p'tit dej spé pour mardi 🍳🥑 <a href=" https://docs.google.com/forms/d/e/1FAIpQLSdHfQHfEO-HeR4kXwFsZz5YFnXZUVxgYq-yCr-pynV9veIiXQ/viewform">ici</a> !
             <br> Au menu: Churros, Pan Tumaca, Jambon espagnol, et boisson chaude et jus 
             </h2>
 			<br>
