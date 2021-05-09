@@ -44,7 +44,7 @@
 			<!-- <h3>Le Menu de la semaine est disponible <a href="img/menu_semaine_07-02.jpeg">ici</a></h3>
 			<br> -->
 			<h2>Réserve ton p'tit dej spé pour mardi 🍳🥑 <a href=" https://docs.google.com/forms/d/e/1FAIpQLSdHfQHfEO-HeR4kXwFsZz5YFnXZUVxgYq-yCr-pynV9veIiXQ/viewform">ici</a> !
-            <br> Au menu: Churros, Pan Tumaca, Jambon espagnol, et boisson chaude et jus 
+            <br> Au menu: toast avocat œuf et bananes au chocolat🍌🍫
             </h2>
 			<br>
         </section>
