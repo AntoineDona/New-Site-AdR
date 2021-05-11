@@ -150,8 +150,8 @@
                         <label for="adresse"> Souhaites-tu être livré ? <br> (seulement de 18h à 21h!)</label>
                     </div>
                     <div class="right">
-                        <input type="radio" name="question" value="oui" id="oui" /> <label for="oui">OUI</label>
-                        <input type="radio" name="question" value="non" id="non" /> <label for="non">NON</label>
+                        <input type="radio" name="question" value="oui" id="oui" required/> <label for="oui">OUI</label>
+                        <input type="radio" name="question" value="non" id="non" required/> <label for="non">NON</label>
                     </div>
                 </article>
 
