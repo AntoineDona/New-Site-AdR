@@ -33,17 +33,14 @@
 		while ($donnees = $reponse->fetch()) {
 		?>
 			<div class="jumbotron text-center" style="margin-top:2rem;background-color:white;font-size:2rem;width:60%;margin-left:auto;margin-right:auto;">
-				<p><?php echo $donnees['nom']; ?> - <?php echo $donnees['numero']; ?> - <?php $date = new Datetime($donnees['Datetime']);
+			<p><?php echo $donnees['nom']; ?> - <?php echo $donnees['numero']; ?> - <?php $date = new Datetime($donnees['Datetime']);
 																						echo $date->format('H:i:s d/m/Y');
 																						?></p>
 				<p style="border: 2px solid black; border-radius:0.5rem; width:50%; margin:auto; padding:1rem 1rem; margin-bottom:1rem;"><span style="margin-bottom: 1rem; display:inline-block">Commande:</span><br><?php echo $donnees['commande']; ?></p>
-				<p style="color:darkred;"> A livrer? <?php echo $donnees['livraison']; ?> - Pour <?php $horaire = new Datetime($donnees['horaire']);
+				<p style="color:darkred;"> Type: <?php echo $donnees['type_commande']; if($donnees['type_commande']=='En terrasse'){echo ' - Table n°' . $donnees['num_table'];} else{ ?> - Pour <?php $horaire = new Datetime($donnees['horaire']);
 																									echo $horaire->format('H\hi');
-																									?> - Adresse: <?php echo $donnees['adresse']; ?></p>
-				<?php
-				$id = $donnees['id'];
-				?>
-				<a href=<?php echo "validation_non_livre.php?id=" . $id; ?> style="background-color:red" class="btn btn-danger btn-lg">Commande non-traitée</a>
+																									if($donnees['type_commande']=='A livrer'){?> - Adresse: <?php echo $donnees['adresse']; }}?></p>
+				<a href=<?php echo "validation_non_livre.php?id=" . $donnees['id']; ?> style="background-color:red" class="btn btn-danger btn-lg">Commande non-traitée</a>
 
 			</div>
 		<?php
