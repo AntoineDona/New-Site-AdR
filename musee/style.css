@@ -852,6 +852,10 @@ input[type="radio"] {
     align-items: center;
 }
 
+/* #adresse, #horaire, #telephone{
+    display: none;
+} */
+
 @media screen and (max-width:430px) {
     .form_commande {
         flex-direction: column;
