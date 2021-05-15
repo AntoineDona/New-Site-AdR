@@ -55,10 +55,10 @@ include("database.php"); ?>
 		<a href="non_traite.php" role="button" class="btn btn-danger btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Commandes non-traitées</a>
 		<a href="menu_adr.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-top:0.5rem;">Mise à jour menu</a>
 	</div>
-	<div class="defileParent">
-		<!-- le contenu défilant -->
+	<!-- <div class="defileParent">
+		le contenu défilant
 		<span class="defile" data-text="Nik la kafet ----- Pour passer une annonce, envoyer 1€ en Lydia au 06 07 76 40 74 ----- "> Nik la kafet ----- Pour passer une annonce, envoyer 1€ en Lydia au 06 07 76 40 74  ----- </div>
-	</div>
+	</div> -->
 	<div class="tri" style="margin-top: 4rem;">
 		<h2>Trier par:</h2>
 		<a href="?order_nt=id&&sort_nt=<?php echo $_SESSION['sort_nt']; ?>">
@@ -85,7 +85,7 @@ include("database.php"); ?>
 	<main style="margin-bottom: 500px;">
 		<?php
 		// On récupère tout le contenu de la table jeux_video
-		$reponse = $bdd->query("SELECT * FROM commande WHERE livre='non' order by {$_SESSION['order_nt']} {$_SESSION['sort_nt']}");
+		$reponse = $bdd->query("SELECT * FROM commande WHERE traite='non' order by {$_SESSION['order_nt']} {$_SESSION['sort_nt']}");
 
 		// On affiche chaque entrée une à une
 		while ($donnees = $reponse->fetch()) {
@@ -95,9 +95,9 @@ include("database.php"); ?>
 																						echo $date->format('H:i:s d/m/Y');
 																						?></p>
 				<p style="border: 2px solid black; border-radius:0.5rem; width:50%; margin:auto; padding:1rem 1rem; margin-bottom:1rem;"><span style="margin-bottom: 1rem; display:inline-block">Commande:</span><br><?php echo $donnees['commande']; ?></p>
-				<p style="color:darkred;"> A livrer? <?php echo $donnees['livraison']; ?> - Pour <?php $horaire = new Datetime($donnees['horaire']);
+				<p style="color:darkred;"> Type: <?php echo $donnees['type_commande']; if($donnees['type_commande']=='En terrasse'){echo ' - Table n°' . $donnees['num_table'];} else{ ?> - Pour <?php $horaire = new Datetime($donnees['horaire']);
 																									echo $horaire->format('H\hi');
-																									?> - Adresse: <?php echo $donnees['adresse']; ?></p>
+																									if($donnees['type_commande']=='A livrer'){?> - Adresse: <?php echo $donnees['adresse']; }}?></p>
 				<a href=<?php echo "validation_livre.php?id=" . $donnees['id']; ?> style="background-color:green" class="btn btn-success btn-lg">Commande traitée</a>
 
 			</div>
