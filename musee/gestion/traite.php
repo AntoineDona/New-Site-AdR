@@ -27,7 +27,7 @@
 	<main style="margin-bottom: 300px;">
 		<?php
 		// On récupère tout le contenu de la table jeux_video
-		$reponse = $bdd->query('SELECT * FROM commande WHERE livre="oui" ORDER BY id DESC LIMIT 50'); //normalement ça marche tout le time
+		$reponse = $bdd->query('SELECT * FROM commande WHERE traite="oui" ORDER BY id DESC LIMIT 50'); //normalement ça marche tout le time
 
 		// On affiche chaque entrée une à une
 		while ($donnees = $reponse->fetch()) {
