@@ -164,9 +164,17 @@
                         <label for="adresse"> Type de commande : </label>
                     </div>
                     <div class="right">
-                        <input type="radio" name="question" value="A emporter" id="emporter" required/> <label for="oui">A emporter</label>
-                        <input type="radio" name="question" value="En terrasse" id="terrasse" required/> <label for="non">En terrasse</label>
-                        <input type="radio" name="question" value="A livrer" id="livraison" required/> <label for="non">Livraison</label>
+                        <div class="type_commande">
+                            <div class="choix">
+                                <input type="radio" name="question" value="A emporter" id="emporter" required/> <label for="oui">A emporter</label>
+                            </div>
+                            <div class="choix">
+                                <input type="radio" name="question" value="En terrasse" id="terrasse" required/> <label for="non">En terrasse</label>
+                            </div>
+                            <div class="choix">
+                                <input type="radio" name="question" value="A livrer" id="livraison" required/> <label for="non">Livraison</label>
+                            </div>
+                        </div>
                     </div>
                 </article>
                 <article class="form">
