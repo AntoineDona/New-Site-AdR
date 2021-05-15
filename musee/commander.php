@@ -165,13 +165,13 @@
                     </div>
                     <div class="right">
                         <input type="radio" name="question" value="A emporter" id="emporter" required/> <label for="oui">A emporter</label>
-                        <input type="radio" name="question" value="En terasse" id="terasse" required/> <label for="non">En terasse</label>
+                        <input type="radio" name="question" value="En terrasse" id="terrasse" required/> <label for="non">En terrasse</label>
                         <input type="radio" name="question" value="A livrer" id="livraison" required/> <label for="non">Livraison</label>
                     </div>
                 </article>
                 <article class="form">
                     <div class="left">
-                        <label for="adresse"> Numéro de table</label>
+                        <label for="adresse"> Numéro de table <br> (Si en terrasse)</label>
                     </div>
                     <div class="right">
                         <div class="boite_form">
@@ -182,7 +182,7 @@
                 </article>
                 <article class="form">
                     <div class="left">
-                        <label for="adresse"> Ton adresse <br> (Si tu veux être livré):</label><br>
+                        <label for="adresse"> Ton adresse : <br> (Si tu veux être livré)</label><br>
                     </div>
                     <div class="right">
                         <div class="boite_form">
