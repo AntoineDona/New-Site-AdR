@@ -220,7 +220,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="form" style="margin-top: 4rem;">
+                <article class="form" style="margin-top: 3rem;">
                     <div class="left">
                         <label for="pseudo">Ton nom :</label>
                     </div>

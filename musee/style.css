@@ -850,6 +850,7 @@ input[type="radio"] {
 .choix{
     display: flex;
     align-items: center;
+    justify-content: left;
 }
 
 /* #adresse, #horaire, #telephone{
@@ -873,6 +874,7 @@ input[type="radio"] {
     }
     .choix{
         margin: 0.2rem 0 ;
+
     }
 }
 
