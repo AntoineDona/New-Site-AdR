@@ -28,7 +28,7 @@
 <?php
     $id=$_GET["id"];
 
-    $req = $bdd->prepare('UPDATE commande SET livre=\'oui\' WHERE id = :id');
+    $req = $bdd->prepare('UPDATE commande SET traite=\'oui\' WHERE id = :id');
     $req->execute(array(
         'id' => $id
     ));

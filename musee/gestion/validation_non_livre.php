@@ -30,7 +30,7 @@
 <?php
     $id=$_GET["id"];
 
-    $req = $bdd->prepare('UPDATE commande SET livre=\'non\' WHERE id = :id');
+    $req = $bdd->prepare('UPDATE commande SET traite=\'non\' WHERE id = :id');
     $req->execute(array(
         'id' => $id
     ));
