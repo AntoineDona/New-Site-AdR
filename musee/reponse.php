@@ -14,9 +14,10 @@
 </head>
 
 <body>
+<?php include "included/header.php" ?>
 
 	<?php
-	if (isset($_POST['nom']) && isset($_POST['numero']) && isset($_POST['commande'])) {
+	if (isset($_POST['nom']) && isset($_POST['commande'])) {
 		$nom = htmlspecialchars($_POST['nom']);
 		$numero = htmlspecialchars($_POST['numero']);
 		$commande = htmlspecialchars($_POST['commande']);
@@ -49,11 +50,7 @@
 			'type_commande' => $type_commande,
 			'num_table' => $table,
 		));
-
-
 	?>
-
-		<?php include "included/header.php" ?>
 		<div class="carte" style="margin-top:10rem;">
 			<i style="color:#2FAF2C;" class="fas fa-check-circle fa-6x"></i>
 			<h4 style="color:#2FAF2C"> <br>Salut <?php echo $nom; ?>,
