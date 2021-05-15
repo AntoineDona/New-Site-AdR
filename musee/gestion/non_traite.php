@@ -104,7 +104,7 @@ include("database.php"); ?>
 														echo $horaire->format('H\hi');
 														if ($donnees['type_commande'] == 'A livrer') { ?> - Adresse: <?php echo $donnees['adresse'];
 															}
-														} ?></p>																												} ?></p>
+														} ?></p>
 				<a href=<?php echo "validation_livre.php?id=" . $donnees['id']; ?> style="background-color:green" class="btn btn-success btn-lg">Commande traitée</a>
 
 			</div>
