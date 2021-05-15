@@ -23,7 +23,12 @@
 		$Datetime = date("Y-m-d H:i:s");
 		$traite = 'non';
 		$adresse = htmlspecialchars($_POST['adresse']);
-		$horaire = $_POST['horaire_livraison'] . ':00';
+		if(isset($_POST['horaire_livraison'])){
+			$horaire = $_POST['horaire_livraison'] . ':00';
+		}
+		else{
+			$horaire = date("H:i:s");
+		}
 		$type_commande = $_POST['question'];
 		if (isset($_POST['num_table'])) {
 			$table = $_POST['num_table'];
