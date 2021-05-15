@@ -9,7 +9,7 @@
 	<?php include "included/meta.php" ?>
 	<title>Confirmation de commande</title>
 
-	<meta http-equiv="refresh" content="5;url=commander.php" /> <!-- on redirige au bout de 3 secondes -->
+	<meta http-equiv="refresh" content="10;url=commander.php" /> <!-- on redirige au bout de 3 secondes -->
 
 </head>
 
@@ -21,21 +21,28 @@
 		$numero = htmlspecialchars($_POST['numero']);
 		$commande = htmlspecialchars($_POST['commande']);
 		$Datetime = date("Y-m-d H:i:s");
-		$livre = 'non';
+		$traite = 'non';
 		$adresse = htmlspecialchars($_POST['adresse']);
 		$horaire = $_POST['horaire_livraison'] . ':00';
-		$livraison = $_POST['question'];
+		$type_commande = $_POST['question'];
+		if (isset($_POST['num_table'])) {
+			$table = $_POST['num_table'];
+		}
+		else{
+			$table = 'aucune';
+		}
 
-		$req = $bdd->prepare('INSERT INTO commande(nom, numero, livre, commande,Datetime,adresse,horaire,livraison) VALUES(:nom, :numero, :livre, :commande,:Datetime,:adresse,:horaire,:livraison)');
+		$req = $bdd->prepare('INSERT INTO commande(nom, numero, traite, commande,Datetime,adresse,horaire,type_commande,num_table) VALUES(:nom, :numero, :traite, :commande,:Datetime,:adresse,:horaire,:type_commande,:num_table)');
 		$req->execute(array(
 			'nom' => $nom,
 			'numero' => $numero,
-			'livre' => $livre,
+			'traite' => $traite,
 			'commande' => $commande,
 			'Datetime' => $Datetime,
 			'adresse' => $adresse,
 			'horaire' => $horaire,
-			'livraison' => $livraison
+			'type_commande' => $type_commande,
+			'num_table' => $table,
 		));
 
 
@@ -45,14 +52,17 @@
 		<div class="carte" style="margin-top:10rem;">
 			<i style="color:#2FAF2C;" class="fas fa-check-circle fa-6x"></i>
 			<h4 style="color:#2FAF2C"> <br>Salut <?php echo $nom; ?>,
-				<br>Ta commande a bien été passée. Huma va te livrer à l'horaire que tu as choisi, tu pourras payer à ce moment par Lydia!
+				<br>Ta commande a bien été passée. 
+				<?php if($type_commande=='sur place')
+				?>
+				Huma va te livrer à l'horaire que tu as choisi, tu pourras payer à ce moment par Lydia!
 				<br>
 				<h4>Tu seras redirigé vers la page de commande dans <span id="countdown">5</span> secondes</h4>
 
 		</div>
 		<script type="text/javascript">
 			// Total seconds to wait
-			var seconds = 5;
+			var seconds = 10;
 
 			function countdown() {
 				seconds = seconds - 1;

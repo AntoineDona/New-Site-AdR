@@ -29,6 +29,20 @@
             </div>
             <div class="illustration_container ptitdej"></div>
         </section> -->
+        <section class="carte infos covid">
+            <h1 style="font-size: 3rem;">⚠️Réouverture de la terasse du Musée⚠️</h1>
+            <p>
+            <h3>Le Musée va pourvoir réouvrir sa terrasse à partir du 19 Mai! 😍 
+            <br>Cependant pour que cela soit possible, un protocole sanitaire stricte devra être respecté 😷
+            <br>Vous trouverez bientot dans cette section le détail des règles à respecter pour que le Musée puisse garder ses portes ouvertes.
+            </h3></p>
+            <p style="margin-top: 2rem;">
+            <h3>
+            Nous avons très hâte de vous retrouver le 19!
+            <br>L'Association ❤️🖤
+            </h3>
+            </p>
+        </section>
         <section class="carte infos">
             <h1 class="reservation">L'AdR pense à toi!</h1>
 			<h3>Pour toi qui est confiné, tu as la possibilité de commander des articles au musée et venir chercher ta commande au musée!</h3>
@@ -147,17 +161,28 @@
 
                 <article class="form">
                     <div class="left">
-                        <label for="adresse"> Souhaites-tu être livré ? <br> (seulement de 18h à 21h!)</label>
+                        <label for="adresse"> Type de commande : </label>
                     </div>
                     <div class="right">
-                        <input type="radio" name="question" value="oui" id="oui" required/> <label for="oui">OUI</label>
-                        <input type="radio" name="question" value="non" id="non" required/> <label for="non">NON</label>
+                        <input type="radio" name="question" value="A emporter" id="emporter" required/> <label for="oui">A emporter</label>
+                        <input type="radio" name="question" value="En terasse" id="terasse" required/> <label for="non">En terasse</label>
+                        <input type="radio" name="question" value="A livrer" id="livraison" required/> <label for="non">Livraison</label>
                     </div>
                 </article>
-
                 <article class="form">
                     <div class="left">
-                        <label for="adresse"> Ton adresse <br> (Si tu ne veux être livré):</label><br>
+                        <label for="adresse"> Numéro de table</label>
+                    </div>
+                    <div class="right">
+                        <div class="boite_form">
+                            <span class="icon"><i class="fas fa-utensils"></i></i></span>
+                            <input class="input" placeholder="n°" type="text" name="num_table" required />
+                        </div>
+                    </div>
+                </article>
+                <article class="form">
+                    <div class="left">
+                        <label for="adresse"> Ton adresse <br> (Si tu veux être livré):</label><br>
                     </div>
                     <div class="right">
                         <div class="boite_form">
