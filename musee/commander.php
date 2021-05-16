@@ -63,13 +63,11 @@
             $button_id = radiobutton.id;
             if (button_id == "terrasse") {
                 diplay_input(0)
-            }
-            else{
-                if(button_id == "emporter"){
+            } else {
+                if (button_id == "emporter") {
                     diplay_input(1)
                     console.log("zbeubzbeub")
-                }
-                else{
+                } else {
                     diplay_input(2)
                 }
             }
@@ -156,15 +154,11 @@
                         {
                 ?>
                             <div class="categorie">
-                                <h3><?php echo $categorie["categorie"]; ?></h3>
+                                <h3><?php echo $categorie["categorie"]; ?></h3> <?php
+                                if ($categorie["id"] == 15) { ?><span class="price">25cl | 50cl</span> 
+                                <?php } ?>
                                 <ul>
                                     <?php
-                                    if($categorie["id"]==15){ ?>
-                                        <div class="price" style="margin-left:auto">
-                                            25cl | 50cl
-                                        </div>
-                                    <?php
-                                    } //Pour les pressions
                                     // On affiche chaque article coché de la catégorie
                                     while ($article = $articles->fetch()) {
                                     ?>
