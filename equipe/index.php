@@ -50,7 +50,7 @@
                     Parce que le monde appartient à ceux qui se lèvent tôt, l'AdR appartient au pôle P'tit déj. Aussi connu sous le nom du "Vrai Bureau," ce pôle est essentiel au fonctionnement de l'association. 
                     Sur le pied de guerre tous les matins à 7:30, que tu sois en gueule de bois ou un des courageux qui se lèvent aux aurores, nous sommes prêts à t'accueillir au musée, avec musique, café, bonne humeur, et une petite macarena si la chance te sourit!
                 </p></article>
-                <img class="prez" src="img_poles/Ptit Dej.jpg" width="100%" height="auto">
+                <img class="prez" src="img_poles/ptit-dej.jpg" width="100%" height="auto">
                 <br><br><br><br>
         
                 <div class="separator"></div>
@@ -96,7 +96,7 @@
                     Coucou bande de nouilles ! Nous, serons VP Soirées de l’AdR pour cette année. Pour toujours plus de jeux de mots douteux mais inspirant sur les noms de soirée ou de goodies décalés, on va travailler, parce que (n’écoutez pas les bars) des soirées, vous en aurez. 
                     <br>Comme le veux la tradition, la principale tâche du vp cq restera de ramener l'autre vp cq en cqrité chez lui. Comme le veut moins la tradition, cette année ça sera deux GDPA supelecs qui occuperont ce poste, ce qui confirme l'intelligence de ce pôle.
                 </p></article>
-                <img class="prez" src="img_poles/CQ Soirée.jpg" width="100%" height="auto">
+                <img class="prez" src="img_poles/CQ-Soirée.jpg" width="100%" height="auto">
 
                 <div class="separator"></div>
                 
