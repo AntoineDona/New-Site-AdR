@@ -49,7 +49,7 @@
 																													}
 																												} ?></p>
 				<a href=<?php echo "validation_en_cours.php?id=" . $donnees['id']; ?> style="background-color:orange" class="btn btn-success btn-lg">En cours de traitement</a>
-				<a href=<?php echo "validation_non_livre.php?id=" . $donnees['id']; ?> style="background-color:red" class="btn btn-danger btn-lg">Commande non-traitée</a>
+				<a href=<?php echo "validation_non_traite.php?id=" . $donnees['id']; ?> style="background-color:red" class="btn btn-danger btn-lg">Commande non-traitée</a>
 
 			</div>
 		<?php
