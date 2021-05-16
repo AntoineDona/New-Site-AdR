@@ -150,7 +150,7 @@
                     {
                     } else //si au moins un article de la catégorie
                     {
-                        $articles = $bdd->prepare('SELECT * FROM menu WHERE type_id=? AND stock="oui"');
+                        $articles = $bdd->prepare('SELECT * FROM menu WHERE type_id=? AND stock="oui" order by article');
                         $articles->execute(array($categorie["id"]));
                         if ($categorie['id'] != 1) //si id!=1 il y a des articles, on affiche la catégorie
                         {
