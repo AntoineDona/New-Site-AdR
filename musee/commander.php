@@ -183,6 +183,19 @@
                                         </span>
                                     <?php
                                     }
+                                    if ($categorie["id"] == 15) {
+                                        ?>
+                                        <li>
+                                            <div class="article">
+                                                Consigne<br>
+                                            </div>
+                                            <div class="ligne"></div>
+                                            <div class="price">
+                                                1€
+                                            </div>
+                                        </li>
+                                    <?php
+                                    }
 
                                     ?>
                                 </ul>
