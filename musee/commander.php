@@ -159,7 +159,12 @@
                                 <h3><?php echo $categorie["categorie"]; ?></h3>
                                 <ul>
                                     <?php
-
+                                    if($categorie["id"]==14){ ?>
+                                        <div class="price">
+                                            25cl | 50cl
+                                        </div>
+                                    <?php
+                                    } //Pour les pressions
                                     // On affiche chaque article coché de la catégorie
                                     while ($article = $articles->fetch()) {
                                     ?>
