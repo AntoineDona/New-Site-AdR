@@ -53,7 +53,7 @@
 	?>
 		<div class="carte" style="margin-top:10rem;">
 			<i style="color:#2FAF2C;" class="fas fa-check-circle fa-6x"></i>
-			<h4 style="color:#2FAF2C"> <br>Salut <?php echo $nom; ?>,
+			<h3 style="color:#2FAF2C"> <br>Salut <?php echo $nom; ?>,
 				<br>Ta commande a bien été passée. 
 				<?php if($type_commande=='A livrer'){
 					echo "Huma va te livrer à l'horaire que tu as choisi, tu pourras payer à ce moment par Lydia!";
@@ -68,7 +68,7 @@
 				}
 				?>
 				<br>
-				<h4>Redirection vers la page de commande dans <span id="countdown">10</span> secondes</h4>
+				<h3>Redirection vers la page de commande dans <span id="countdown">10</span> secondes</h3>
 
 		</div>
 		<script type="text/javascript">
