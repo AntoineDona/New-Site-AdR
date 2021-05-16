@@ -59,7 +59,7 @@
 					echo "Huma va te livrer à l'horaire que tu as choisi, tu pourras payer à ce moment par Lydia!";
 				}
 				else{
-					if($type_commande=='sur place'){
+					if($type_commande=='A emporter'){
 						echo "Tu pourras passer récupérer ta commande à l'horaire choisi";
 					}
 					else{
