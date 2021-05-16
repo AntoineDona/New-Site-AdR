@@ -19,9 +19,10 @@
 
 <body>
 	<div class="onglets" style="display:flex;width:60%; margin:auto;">
-		<a href="traite.php" role="button" class="btn btn-danger btn-lg btn-block" style="margin-top:0.5rem;">Commandes traitées</a>
+		<a href="traite.php" role="button" class="btn btn-danger btn-lg btn-block" style=" margin-top: .5rem;margin-left:1rem;margin-right:1rem;">Commandes traitées</a>
+		<a href="en_cours.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Commandes en cours</a>
 		<a href="non_traite.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Commandes non-traitées</a>
-		<a href="menu_adr.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-top:0.5rem;">Mise à jour menu</a>
+		<a href="menu_adr.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Mise à jour menu</a>
 	</div>
 
 	<main style="margin-bottom: 300px;">
@@ -43,10 +44,11 @@
 													if ($donnees['type_commande'] == 'En terrasse') {
 														echo ' - Table n°' . $donnees['num_table'];
 													} else { ?> - Pour <?php $horaire = new Datetime($donnees['horaire']);
-														echo $horaire->format('H\hi');
-														if ($donnees['type_commande'] == 'A livrer') { ?> - Adresse: <?php echo $donnees['adresse'];
-															}
-														} ?></p>
+																		echo $horaire->format('H\hi');
+																		if ($donnees['type_commande'] == 'A livrer') { ?> - Adresse: <?php echo $donnees['adresse'];
+																													}
+																												} ?></p>
+				<a href=<?php echo "validation_en_cours.php?id=" . $donnees['id']; ?> style="background-color:orange" class="btn btn-success btn-lg">En cours de traitement</a>
 				<a href=<?php echo "validation_non_livre.php?id=" . $donnees['id']; ?> style="background-color:red" class="btn btn-danger btn-lg">Commande non-traitée</a>
 
 			</div>
