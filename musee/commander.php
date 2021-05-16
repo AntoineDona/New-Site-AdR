@@ -159,8 +159,8 @@
                                 <h3><?php echo $categorie["categorie"]; ?></h3>
                                 <ul>
                                     <?php
-                                    if($categorie["id"]==14){ ?>
-                                        <div class="price">
+                                    if($categorie["id"]==15){ ?>
+                                        <div class="price" style="margin-left:auto">
                                             25cl | 50cl
                                         </div>
                                     <?php
