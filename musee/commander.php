@@ -154,9 +154,9 @@
                         {
                 ?>
                             <div class="categorie">
-                                <h3><?php echo $categorie["categorie"]; ?></h3> <?php
+                                <h3><?php echo $categorie["categorie"];
                                 if ($categorie["id"] == 15) { ?><span class="price">25cl | 50cl</span> 
-                                <?php } ?>
+                                <?php } ?></h3>
                                 <ul>
                                     <?php
                                     // On affiche chaque article coché de la catégorie
