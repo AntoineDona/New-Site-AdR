@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" title="mobile" href="../mobile.css" /> -->
     <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
     <link rel="stylesheet" href="style_nav.css">
-    <meta http-equiv="refresh" content="1.5;url=en_cours.php" />
+    <meta http-equiv="refresh" content="1.5;url=non_traite.php" />
     <!--on redirige au bout de 3 secondes vers les commandes non traitées -->
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="style3.css">
