@@ -36,7 +36,7 @@ include("database.php"); ?>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Commandes non traitées</title>
+	<title>Commandes en cours de traitement</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="style_com.css">
 	<link rel="stylesheet" type="text/css" title="mobile" href="../mobile.css" />
@@ -52,10 +52,10 @@ include("database.php"); ?>
 
 	<div class="onglets" style="display:flex;width:60%; margin:auto;">
 		<a href="traite.php" role="button" class="btn btn-light btn-lg btn-block" style=" margin-top: .5rem;margin-left:1rem;margin-right:1rem;">Commandes traitées</a>
-		<a href="en_cours.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Commandes en cours</a>
-		<a href="non_traite.php" role="button" class="btn btn-danger btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Commandes non-traitées</a>
+		<a href="en_cours.php" role="button" class="btn btn-danger btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Commandes en cours</a>
+		<a href="non_traite.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Commandes non-traitées</a>
 		<a href="menu_adr.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Mise à jour menu</a>
-		</div>
+	</div>
 	<!-- <div class="defileParent">
 		le contenu défilant
 		<span class="defile" data-text="Nik la kafet ----- Pour passer une annonce, envoyer 1€ en Lydia au 06 07 76 40 74 ----- "> Nik la kafet ----- Pour passer une annonce, envoyer 1€ en Lydia au 06 07 76 40 74  ----- </div>
@@ -86,7 +86,7 @@ include("database.php"); ?>
 	<main style="margin-bottom: 500px;">
 		<?php
 		// On récupère tout le contenu de la table jeux_video
-		$reponse = $bdd->query("SELECT * FROM commande WHERE traite='non' order by {$_SESSION['order_nt']} {$_SESSION['sort_nt']}");
+		$reponse = $bdd->query("SELECT * FROM commande WHERE traite='en cours' order by {$_SESSION['order_nt']} {$_SESSION['sort_nt']}");
 
 		// On affiche chaque entrée une à une
 		while ($donnees = $reponse->fetch()) {
@@ -106,7 +106,7 @@ include("database.php"); ?>
 														if ($donnees['type_commande'] == 'A livrer') { ?> - Adresse: <?php echo $donnees['adresse'];
 															}
 														} ?></p>
-				<a href=<?php echo "validation_en_cours.php?id=" . $donnees['id']; ?> style="background-color:orange" class="btn btn-success btn-lg">En cours de traitement</a>
+				<a href=<?php echo "validation_livre.php?id=" . $donnees['id']; ?> style="background-color:green" class="btn btn-success btn-lg">Commande traitée</a>
 
 			</div>
 		<?php

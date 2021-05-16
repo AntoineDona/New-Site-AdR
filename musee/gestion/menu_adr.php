@@ -23,9 +23,10 @@
 
 
 	<div class="onglets" style="display:flex;width:60%; margin:auto;margin-bottom:1rem;">
-		<a href="traite.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-top:0.5rem;">Commandes traitées</a>
+		<a href="traite.php" role="button" class="btn btn-light btn-lg btn-block" style=" margin-top: .5rem;margin-left:1rem;margin-right:1rem;">Commandes traitées</a>
+		<a href="en_cours.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Commandes en cours</a>
 		<a href="non_traite.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Commandes non-traitées</a>
-		<a href="menu_adr.php" role="button" class="btn btn-danger btn-lg btn-block" style="margin-top:0.5rem;">Mise à jour menu</a>
+		<a href="menu_adr.php" role="button" class="btn btn-danger btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Mise à jour menu</a>
 	</div>
 	<main style="margin-bottom: 200px;">
 		<div style="background:transparent;" class="jumbotron text-center">
@@ -57,7 +58,7 @@
 							$categories = $bdd->query('SELECT * FROM categories_menu ORDER BY ordre');
 							while ($categorie = $categories->fetch()) {
 								//Au moins un article de la catégorie: c'est toujours le cas ici!! On selectionne les articles de la catégorie :
-								$articles = $bdd->prepare('SELECT * FROM menu WHERE type_id=? order by article' );
+								$articles = $bdd->prepare('SELECT * FROM menu WHERE type_id=? order by article');
 								$articles->execute(array($categorie["id"]));
 								if ($categorie['id'] != 1) //On saute le aucun, servira de boutton reset en haut. Si coché, modifier la page comande.php
 								{
@@ -117,7 +118,7 @@
 														<?php // si dessert du jour, on affiche une case modifiable
 														if ($article["article"] == "Dessert du jour") {
 														?>
-															<input class="quadra" type="text" name="dessert" style="width:50%; vertical-align:center;"/>
+															<input class="quadra" type="text" name="dessert" style="width:50%; vertical-align:center;" />
 															<input id="submit" class="btn_dessert" style="width:40%; height: 3rem; font-size:2rem; vertical-align:middle;" type="submit" name="modif_dessert" value="Modifier">
 														<?php
 														}
@@ -153,12 +154,12 @@
                         </ul>
                     </div> -->
 						</div>
-						<input id="submit" class="btn_valider" type="submit" name ="modifier_menu" value="Modifier">
+						<input id="submit" class="btn_valider" type="submit" name="modifier_menu" value="Modifier">
 
 					</form>
 				</div>
 
-<!-- <form method="POST" action="validation_menu_adr.php" class="form_menu">
+				<!-- <form method="POST" action="validation_menu_adr.php" class="form_menu">
 
     <?php
 

@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Validation de commande traitée</title>
+    <title>Validation commande en cours de traitement</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="style_com.css">
     <link rel="stylesheet" type="text/css" title="mobile" href="../mobile.css" /> -->
@@ -31,7 +31,7 @@
     <?php
     $id = $_GET["id"];
 
-    $req = $bdd->prepare('UPDATE commande SET traite=\'oui\' WHERE id = :id');
+    $req = $bdd->prepare('UPDATE commande SET traite=\'en cours\' WHERE id = :id');
     $req->execute(array(
         'id' => $id
     ));
@@ -43,7 +43,7 @@
     <div class="jumbotron text-center" style="margin-top:2rem;background-color:white;font-size:2rem;width:90%;margin-left:auto;margin-right:auto;">
         <i style="color:#2FAF2C;position:relative;top:1rem;margin-bottom:1rem;" class="fas fa-check-circle fa-3x"></i>
         <p>
-            La commande a bien été placée dans la catégorie "Commande traitée".
+            La commande a bien été placée dans la catégorie "Commande en cours".
         </p>
     </div>
 

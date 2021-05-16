@@ -20,7 +20,7 @@
 
 <body>
 
-    <?php 
+    <?php
     // $reponse = $bdd->query('SELECT * FROM menu');
 
     // while ($donnees = $reponse->fetch()) {
@@ -60,9 +60,10 @@
 
 
     <div class="header" style="margin-bottom:2rem;">
-        <a href="traite.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-top:0.5rem;">Commandes traitées</a>
-        <a href="non_traite.php" role="button" class="btn btn-light btn-lg btn-block">Commandes non-traitées</a>
-        <a href="menu.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-top:0.5rem;">Mise à jour menu</a>
+        <a href="traite.php" role="button" class="btn btn-light btn-lg btn-block" style=" margin-top: .5rem;margin-left:1rem;margin-right:1rem;">Commandes traitées</a>
+        <a href="en_cours.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Commandes en cours</a>
+        <a href="non_traite.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Commandes non-traitées</a>
+        <a href="menu_adr.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Mise à jour menu</a>
     </div>
 
     <div style="background-color:white;" class="jumbotron text-center">
