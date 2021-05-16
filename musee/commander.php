@@ -35,7 +35,7 @@
                 setRequired("table", false)
                 setRequired("adresse", false)
                 setRequired("horaire", true)
-                setHoraire("12:00","21:00")
+                setHoraire("12:00", "21:00")
             } else {
                 $table.style.display = "none"
                 $adresse.style.display = "flex"
@@ -44,7 +44,7 @@
                 setRequired("table", false)
                 setRequired("adresse", true)
                 setRequired("horaire", true)
-                setHoraire("18:00","21:00")
+                setHoraire("18:00", "21:00")
             }
 
         }
@@ -106,7 +106,7 @@
             <div class="illustration_container ptitdej"></div>
         </section> -->
         <section class="carte infos covid">
-            <h1 style="font-size: 3rem;">⚠️Réouverture de la terasse du Musée⚠️</h1>
+            <h1 style="font-size: 4rem;">⚠️Réouverture de la terasse du Musée⚠️</h1>
             <p>
             <h3>Le Musée va pourvoir réouvrir sa terrasse à partir du 19 Mai! 😍
                 <br>Cependant pour que cela soit possible, un protocole sanitaire stricte devra être respecté 😷
@@ -165,9 +165,9 @@
                 ?>
                             <div class="categorie">
                                 <h3><?php echo $categorie["categorie"];
-                                if ($categorie["id"] == 15) { ?><span class="price" style="margin-left: auto;
-                                    font-size: 2rem; "> ( 25cl ou 50cl )</span> 
-                                <?php } ?></h3>
+                                    if ($categorie["id"] == 15) { ?><span class="price" style="margin-left: auto;
+                                    font-size: 2rem; "> ( 25cl ou 50cl )</span>
+                                    <?php } ?></h3>
                                 <ul>
                                     <?php
                                     // On affiche chaque article coché de la catégorie
@@ -194,7 +194,7 @@
                                     <?php
                                     }
                                     if ($categorie["id"] == 15) {
-                                        ?>
+                                    ?>
                                         <li>
                                             <div class="article">
                                                 Consigne<br>
@@ -213,13 +213,18 @@
                         <?php
                         } else {
                         ?>
-                            <div class="none"> Aucun article n'est disponible pour l'instant...</div>
-                <?php
+            </div>
+            <div class="none" style="display: block;"> 
+                <h2 style="margin-bottom: 1rem;">Le Musée n'est pas encore ouvert. <br> Horaires d'ouverture:</h2>
+                    <div style="text-align: center">
+                    Du Lundi au Jeudi de 12h à 14h et de 17h à 21h <br>et le Vendredi de 12h à 14h
+                    </div>
+            </div>
+<?php
                         }
                     }
                 }
-                ?>
-            </div>
+?>
         </section>
         <section class="commande">
             <h1>Formulaire de commande</h1>
