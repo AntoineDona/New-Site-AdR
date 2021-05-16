@@ -60,7 +60,7 @@
 				}
 				else{
 					if($type_commande=='A emporter'){
-						echo "Tu pourras passer récupérer ta commande à l'horaire choisi";
+						echo "Tu pourras passer la récupérer à l'horaire choisi";
 					}
 					else{
 						echo "Les AdR sont en train de la traiter et vont te servir directement à table!";
