@@ -35,6 +35,7 @@
                 setRequired("table", false)
                 setRequired("adresse", false)
                 setRequired("horaire", true)
+                setHoraire("12:00","21:00")
             } else {
                 $table.style.display = "none"
                 $adresse.style.display = "flex"
@@ -43,6 +44,7 @@
                 setRequired("table", false)
                 setRequired("adresse", true)
                 setRequired("horaire", true)
+                setHoraire("18:00","21:00")
             }
 
         }
@@ -55,6 +57,15 @@
             input[i].required = bool;
         }
     }
+
+    function setHoraire(min, max) {
+        input = document.getElementById("horaire").getElementsByTagName('input');
+        for (i = 0; i < input.length; i++) {
+            input[i].max = max;
+            input[i].min = min;
+        }
+    }
+
 
     $radiobuttons = document.querySelectorAll('input[name="question"]');
     for (const radiobutton of $radiobuttons) {
