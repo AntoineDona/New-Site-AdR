@@ -112,19 +112,18 @@
         <section class="carte infos">
             <h1 class="reservation">L'AdR pense à toi!</h1>
             <h3>Pour toi qui est confiné, tu as la possibilité de commander des articles au musée et venir chercher ta commande au musée!</h3>
-            <h3 style="color:darkred;">Nous proposons même une livraison chez toi tous les midi de 12h à 13h30 et le soir de 18h à 21h pour 1€ par tranche de 7€! </br> Donc si tu souhaites te faire livrer, coche la case "oui" tout en bas!</h6>
+            <h3 style="color:darkred;">Nous proposons même une livraison chez toi tous les soirs de 18h à 21h pour 1€ par tranche de 7€! </br> Donc si tu souhaites te faire livrer, coche la case "oui" tout en bas!</h6>
                 <br>
 
                 <!-- <h3 style="color:darkred;">BURGER SOLDOUT!!!</h3>
 			<img src="burger.jpeg" style="width:90%;">
 		 -->
                 <h2 style="color:darkred;">MENU DE LA SEMAINE</h2><br>
-                <a href="img/Menu semaine du 10 mai.jpg"><img class="menu_semaine" src="img/Menu semaine du 10 mai.jpg"></a>
+                <a href="img/Menu semaine du 17 mai.jpeg"><img class="menu_semaine" src="img/Menu semaine du 17 mai.jpeg"></a>
                 <br>
                 <!-- <h3>Le Menu de la semaine est disponible <a href="img/menu_semaine_07-02.jpeg">ici</a></h3>
 			<br> -->
-                <h2>Réserve ton p'tit dej spé pour mardi 🍳🥑 <a href=" https://docs.google.com/forms/d/e/1FAIpQLSdHfQHfEO-HeR4kXwFsZz5YFnXZUVxgYq-yCr-pynV9veIiXQ/viewform">ici</a> !
-                    <br> Au menu: toast avocat œuf et bananes au chocolat🍌🍫
+                <h2>Réserve ton p'tit dej de Mardi <a href=" https://docs.google.com/forms/d/e/1FAIpQLSdIl2pjrZ99A-Os2xXWpXKGB8F2PuGrlvXk5AEv-xbsJmFIXQ/viewform?usp=sf_link">ici</a> !
                 </h2>
                 <br>
         </section>
