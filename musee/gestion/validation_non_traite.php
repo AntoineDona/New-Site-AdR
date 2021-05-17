@@ -15,7 +15,14 @@
     <link rel="stylesheet" href="style3.css">
     <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
     <link rel="stylesheet" href="style_nav.css">
-    <meta http-equiv="refresh" content="1.5;url=traite.php" />
+    <meta http-equiv="refresh" content="1.5;url=
+    <?php if ($_GET['origin']==1){ //on redirige vers la page d'origine
+        echo "en_cours.php";
+        }else{
+            if ($_GET['origin']==2){
+                echo "traite.php";
+            }
+        } ?>"traite.php" />
     <!--on redirige au bout de 3 secondes vers les commandes traitées-->
 
 </head>
