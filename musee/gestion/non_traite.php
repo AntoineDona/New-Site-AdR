@@ -106,7 +106,7 @@ include("database.php"); ?>
 														if ($donnees['type_commande'] == 'A livrer') { ?> - Adresse: <?php echo $donnees['adresse'];
 															}
 														} ?></p>
-				<a href=<?php echo "validation_en_cours.php?id=" . $donnees['id'] . "&origin=0"; ?> style="background-color:orange" class="btn btn-success btn-lg">En cours de traitement</a>
+				<a href=<?php echo "validation_en_cours.php?id=" . $donnees['id'] . "&origin=0"; ?> style="background-color:orange; border-color:orange" class="btn btn-success btn-lg">En cours de traitement</a>
 				<a href=<?php echo "validation_traite.php?id=" . $donnees['id'] . "&origin=0"; ?> style="background-color:green" class="btn btn-success btn-lg">Commande traitée</a>
 			</div>
 		<?php
