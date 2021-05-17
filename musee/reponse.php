@@ -32,7 +32,7 @@
 		}
 		$type_commande = $_POST['question'];
 		if (isset($_POST['num_table'])) {
-			$table = $_POST['num_table'];
+			$table = htmlspecialchars($_POST['num_table']);
 		}
 		else{
 			$table = 'aucune';
