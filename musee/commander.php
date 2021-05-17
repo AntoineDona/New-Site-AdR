@@ -244,7 +244,7 @@
         </section>
         <section class="commande">
             <h1>Formulaire de commande <?php if (isset($_GET['nt'])) {
-                                            echo " - Table" . $_GET['nt'];
+                                            echo " - Table " . $_GET['nt'];
                                         } ?></h1>
             <form method="POST" action="reponse.php">
                 <!--onsubmit="this.submit(); this.reset(); return false;"-->
