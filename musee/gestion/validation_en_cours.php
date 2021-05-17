@@ -1,4 +1,6 @@
-<?php include("database.php"); ?>
+<?php include("database.php"); 
+session_start();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -13,7 +15,14 @@
     <link rel="stylesheet" type="text/css" title="mobile" href="../mobile.css" /> -->
     <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
     <link rel="stylesheet" href="style_nav.css">
-    <meta http-equiv="refresh" content="1.5;url=non_traite.php" />
+    <meta http-equiv="refresh" content="1.5;url=
+    <?php if ($_GET['origin']==0){ //on redirige vers la page d'origine
+        echo "non_traite.php";
+        }else{
+            if ($_GET['origin']==2){
+                echo "traite.php";
+            }
+        } ?>" />
     <!--on redirige au bout de 3 secondes vers les commandes non traitées -->
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="style3.css">
