@@ -11,44 +11,60 @@
     <title>Commander au Musée</title>
 </head>
 <script>
-    function diplay_input(x) {
+    function display_input(x) {
         $telephone = document.getElementById("telephone")
         $adresse = document.getElementById("adresse")
         $table = document.getElementById("table")
         $horaire = document.getElementById("horaire")
-        if (x == 0) {
-            $table.style.display = "flex"
+        $nom = document.getElementById("nom")
+        $type_cmd = document.getElementById("type_cmd")
+        <?php if (isset($_GET['nt'])) {?>
+            $table.style.display = "none"
             $adresse.style.display = "none"
             $horaire.style.display = "none"
-            $telephone.style.display = "none";
+            $telephone.style.display = "none"
+            $type_cmd.style.display = "none"
+            document.getElementById("terrasse").checked=true
             setRequired("table", true)
             setRequired("adresse", false)
             setRequired("horaire", false)
             setRequired("telephone", false)
             console.log("boucle")
-        } else {
-            if (x == 1) {
-                $table.style.display = "none"
+        <?php ;} else {?>
+            if (x == 0) {
+                $table.style.display = "flex"
                 $adresse.style.display = "none"
-                $horaire.style.display = "flex"
-                $telephone.style.display = "flex"
-                setRequired("table", false)
+                $horaire.style.display = "none"
+                $telephone.style.display = "none";
+                setRequired("table", true)
                 setRequired("adresse", false)
-                setRequired("horaire", true)
-                setHoraire("12:00", "21:00")
+                setRequired("horaire", false)
+                setRequired("telephone", false)
+                console.log("boucle")
             } else {
-                $table.style.display = "none"
-                $adresse.style.display = "flex"
-                $horaire.style.display = "flex"
-                $telephone.style.display = "flex"
-                setRequired("table", false)
-                setRequired("adresse", true)
-                setRequired("horaire", true)
-                setHoraire("18:00", "21:00")
-            }
+                if (x == 1) {
+                    $table.style.display = "none"
+                    $adresse.style.display = "none"
+                    $horaire.style.display = "flex"
+                    $telephone.style.display = "flex"
+                    setRequired("table", false)
+                    setRequired("adresse", false)
+                    setRequired("horaire", true)
+                    setHoraire("12:00", "21:00")
+                } else {
+                    $table.style.display = "none"
+                    $adresse.style.display = "flex"
+                    $horaire.style.display = "flex"
+                    $telephone.style.display = "flex"
+                    setRequired("table", false)
+                    setRequired("adresse", true)
+                    setRequired("horaire", true)
+                    setHoraire("18:00", "21:00")
+                }
 
-        }
-        console.log("ok")
+            }
+            console.log("ok")
+        <?php ;}?>
     }
 
     function setRequired(val, bool) {
@@ -73,13 +89,13 @@
         if (radiobutton.checked) {
             $button_id = radiobutton.id;
             if (button_id == "terrasse") {
-                diplay_input(0)
+                display_input(0)
             } else {
                 if (button_id == "emporter") {
-                    diplay_input(1)
+                    display_input(1)
                     console.log("zbeubzbeub")
                 } else {
-                    diplay_input(2)
+                    display_input(2)
                 }
             }
             break;
@@ -214,11 +230,11 @@
                         } else {
                         ?>
             </div>
-            <div class="none" style="display: block;"> 
+            <div class="none" style="display: block;">
                 <h2 style="margin-bottom: 1rem;">Le Musée n'est pas encore ouvert. <br> Horaires d'ouverture:</h2>
-                    <div style="text-align: center">
+                <div style="text-align: center">
                     Du Lundi au Jeudi de 12h à 14h et de 17h à 21h <br>et le Vendredi de 12h à 14h
-                    </div>
+                </div>
             </div>
 <?php
                         }
@@ -227,28 +243,30 @@
 ?>
         </section>
         <section class="commande">
-            <h1>Formulaire de commande</h1>
+            <h1>Formulaire de commande <?php if (isset($_GET['nt'])) {
+                                            echo " - Table" . $_GET['nt'];
+                                        } ?></h1>
             <form method="POST" action="reponse.php">
                 <!--onsubmit="this.submit(); this.reset(); return false;"-->
-                <article class="form">
+                <article class="form" id="type_cmd" >
                     <div class="left">
                         <label for="adresse"> Type de commande : </label>
                     </div>
                     <div class="right">
                         <div class="type_commande">
                             <div class="choix">
-                                <input type="radio" name="question" value="En terrasse" id="terrasse" onclick="diplay_input(0)" required /> <label for="non">En terrasse</label>
+                                <input type="radio" name="question" value="En terrasse" id="terrasse" onclick="display_input(0)" required /> <label for="non">En terrasse</label>
                             </div>
                             <div class="choix">
-                                <input type="radio" name="question" value="A emporter" id="emporter" onclick="diplay_input(1)" required /> <label for="oui">A emporter</label>
+                                <input type="radio" name="question" value="A emporter" id="emporter" onclick="display_input(1)" required /> <label for="oui">A emporter</label>
                             </div>
                             <div class="choix">
-                                <input type="radio" name="question" value="A livrer" id="livraison" onclick="diplay_input(2)" required /> <label for="non">Livraison</label>
+                                <input type="radio" name="question" value="A livrer" id="livraison" onclick="display_input(2)" required /> <label for="non">Livraison</label>
                             </div>
                         </div>
                     </div>
                 </article>
-                <article class="form" style="margin-top: 3rem;">
+                <article class="form" style="margin-top: 3rem;" id="nom">
                     <div class="left">
                         <label for="pseudo">Ton nom :</label>
                     </div>
@@ -279,7 +297,7 @@
                     <div class="right">
                         <div class="boite_form">
                             <span class="icon"><i class="fas fa-utensils"></i></i></span>
-                            <input class="input" placeholder="n°" type="text" name="num_table" required />
+                            <input class="input" placeholder="n°" type="text" name="num_table" id="num_table" required />
                         </div>
                     </div>
                 </article>
@@ -320,5 +338,13 @@
     </main>
     <?php include "included/footer.php" ?>
 </body>
+<script>
+    <?php if (isset($_GET['nt'])) { ?>
+        console.log('çamarche');
+        display_input(0);
+        document.getElementById("num_table").setAttribute('value', <?php echo $_GET["nt"] ?>);
+        document.getElementById("terrasse").checked = true;
+    <?php } ?>
+</script>
 
 </html>
