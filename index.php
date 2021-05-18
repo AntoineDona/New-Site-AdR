@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <?php include "included/meta.php" ?>
-    <meta name="description" content="AdR CentraleSupélec. L'Association des résidents de CentaleSupélec organise les grandes soirées de l'écoles CentraleSupélec, s'occupe des relations avec le gestionnaire de la résidence et tient le Musée, bar de l'école">
+    <meta name="description" content="AdR CentraleSupélec. L'Association des résidents de CentaleSupélec organise les grandes soirées de l'écoles CentraleSupélec, s'occupe des relations avec le gestionnaire de la résidence et tient le Musée, bar de l'école"/>
     <meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
     <title>AdR CentraleSupélec</title>
 </head>
