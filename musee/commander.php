@@ -250,6 +250,8 @@
                     }
                 }
 ?>
+        </div>
+        <h2 style="font-size: 3rem;">Vous trouverez la liste des allergènes <a href="/musee/img/allergenes.jpg">ici</a></h2>
         </section>
         <section class="commande">
             <h1>Formulaire de commande <?php if (isset($_GET['nt'])) {
