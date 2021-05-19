@@ -18,19 +18,20 @@
         $horaire = document.getElementById("horaire")
         $nom = document.getElementById("nom")
         $type_cmd = document.getElementById("type_cmd")
-        <?php if (isset($_GET['nt'])) {?>
+        <?php if (isset($_GET['nt'])) { ?>
             $table.style.display = "none"
             $adresse.style.display = "none"
             $horaire.style.display = "none"
             $telephone.style.display = "none"
             $type_cmd.style.display = "none"
-            document.getElementById("terrasse").checked=true
+            document.getElementById("terrasse").checked = true
             setRequired("table", true)
             setRequired("adresse", false)
             setRequired("horaire", false)
             setRequired("telephone", false)
             console.log("boucle")
-        <?php ;} else {?>
+        <?php ;
+        } else { ?>
             if (x == 0) {
                 $table.style.display = "flex"
                 $adresse.style.display = "none"
@@ -64,7 +65,8 @@
 
             }
             console.log("ok")
-        <?php ;}?>
+        <?php ;
+        } ?>
     }
 
     function setRequired(val, bool) {
@@ -124,10 +126,17 @@
         <section class="carte infos covid">
             <h1 style="font-size: 4rem;">⚠️Réouverture de la terasse du Musée⚠️</h1>
             <p>
-            <h3>Le Musée va pourvoir réouvrir sa terrasse à partir du 19 Mai! 😍
+            <h3>Le Musée ouvre sa terrasse à partir du 19 Mai! 😍
                 <br>Cependant pour que cela soit possible, un protocole sanitaire stricte devra être respecté 😷
-                <br>Vous trouverez bientot dans cette section le détail des règles à respecter pour que le Musée puisse garder ses portes ouvertes.
+                <br>Vous pouvez consulter l'ensemble des règle en suivant <a href="/musee/img/Reouverture du Musee.jpg">ce lien</a>
+                <br>ou bien visionner la video ci-dessous pour plus d'informations:
             </h3>
+            <video controls width="80%" style="margin-top: 1rem;">
+                <source src="/musee/AdRline.mp4" type="video/mp4">
+
+                Sorry, your browser doesn't support embedded videos.
+                Here is <a href="/musee/AdRline.mp4">a link to download the video</a>
+            </video>
             </p>
             <p style="margin-top: 2rem;">
             <h3>
@@ -248,7 +257,7 @@
                                         } ?></h1>
             <form method="POST" action="reponse.php">
                 <!--onsubmit="this.submit(); this.reset(); return false;"-->
-                <article class="form" id="type_cmd" >
+                <article class="form" id="type_cmd">
                     <div class="left">
                         <label for="adresse"> Type de commande : </label>
                     </div>
