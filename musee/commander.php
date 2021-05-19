@@ -131,7 +131,7 @@
                 <br>Vous pouvez consulter l'ensemble des règle en suivant <a href="/musee/img/Reouverture du Musee.jpg">ce lien</a>
                 <br>ou bien visionner la video ci-dessous pour plus d'informations:
             </h3>
-            <video controls width="80%" style="margin-top: 1rem;">
+            <video controls width="80%" style="margin-top: 1rem;" preload="metadata">
                 <source src="/musee/AdRline.mp4" type="video/mp4">
 
                 Sorry, your browser doesn't support embedded videos.
