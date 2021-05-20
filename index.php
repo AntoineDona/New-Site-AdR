@@ -5,7 +5,7 @@
     <?php include "included/meta.php" ?>
     <meta name="description" content="AdR CentraleSupélec. L'Association des résidents de CentaleSupélec (AdRCS) organise les grandes soirées de l'écoles CentraleSupélec, tient le Musée, bar de l'école et s'occupe des relations avec le gestionnaire de la résidence. AdR Centrale Supélec "/>
     <meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
-    <title>AdR CentraleSupélec</title>
+    <title>AdR CentraleSupélec (AdRCS)</title>
 </head>
 <body>
     <?php include "included/header.php" ?>
