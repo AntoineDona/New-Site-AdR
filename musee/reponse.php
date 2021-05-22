@@ -38,7 +38,7 @@
 			$type_food = $_POST['food'];
 		}
 		else{
-			$type_food = 'food';
+			$type_food = 'Nourriture';
 		}
 
 		$req = $bdd->prepare('INSERT INTO commande(nom, numero, traite, commande,Datetime,adresse,horaire,type_commande,num_table,type_food) VALUES(:nom, :numero, :traite, :commande,:Datetime,:adresse,:horaire,:type_commande,:num_table,:type_food)');

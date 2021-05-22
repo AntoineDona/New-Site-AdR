@@ -352,10 +352,10 @@
                     <div class="right">
                         <div class="type_food">
                             <div class="choix">
-                                <input type="radio" name="food" value="food" id="food" required /> <label for="non">Nourriture</label>
+                                <input type="radio" name="food" value="Nourriture" id="Nourriture" required /> <label for="non">Nourriture</label>
                             </div>
                             <div class="choix">
-                                <input type="radio" name="food" value="drink" id="drink" required /> <label for="oui">Boisson</label>
+                                <input type="radio" name="food" value="Boisson" id="Boisson" required /> <label for="oui">Boisson</label>
                             </div>
                         </div>
                     </div>

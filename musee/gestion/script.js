@@ -68,3 +68,18 @@ function displaySort(sessionOrder, sessionSort) {
     sort.parentElement.parentElement.style.color = `black`
 
 }
+
+function color_red(button) {
+    console.log("test réussi de color_red")
+    document.getElementById(button).classList.remove("btn-light")
+    document.getElementById(button).classList.add("btn-danger")
+}
+
+function diff_minutes(dt2, dt1) 
+ {
+
+  var diff =(dt2.getTime() - dt1.getTime()) / 1000;
+  diff /= 60;
+  return Math.abs(Math.round(diff));
+  
+ }

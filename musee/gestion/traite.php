@@ -37,17 +37,17 @@
 				<p><?php echo $donnees['nom']; ?> <?php if ($donnees['type_commande'] == 'A livrer') {
 														echo ' - ' . $donnees['numero'];
 													} ?> - <?php $date = new Datetime($donnees['Datetime']);
-															echo $date->format('H:i:s d/m/Y');
+															echo '<strong>' . $date->format('H \h i') . '</strong>';
 															?></p>
 				<p style="border: 2px solid black; border-radius:0.5rem; width:50%; margin:auto; padding:1rem 1rem; margin-bottom:1rem;"><span style="margin-bottom: 1rem; display:inline-block">Commande:</span><br><?php echo $donnees['commande']; ?></p>
 				<p style="color:darkred;"> Type: <?php echo $donnees['type_commande'];
 													if ($donnees['type_commande'] == 'En terrasse') {
-														echo ' - Table n°' . $donnees['num_table'];
+														echo ' - ' . $donnees['type_food'] . ' - Table n°' . $donnees['num_table'];
 													} else { ?> - Pour <?php $horaire = new Datetime($donnees['horaire']);
 																		echo $horaire->format('H\hi');
 																		if ($donnees['type_commande'] == 'A livrer') { ?> - Adresse: <?php echo $donnees['adresse'];
-																													}
-																												} ?></p>
+																																	}
+																																} ?></p>
 				<a href=<?php echo "validation_en_cours.php?id=" . $donnees['id'] . "&origin=2"; ?> style="background-color:orange; border-color:orange" class="btn btn-success btn-lg">En cours de traitement</a>
 				<a href=<?php echo "validation_non_traite.php?id=" . $donnees['id'] . "&origin=2"; ?> style="background-color:red" class="btn btn-danger btn-lg">Commande non-traitée</a>
 

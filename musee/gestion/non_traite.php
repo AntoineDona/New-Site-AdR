@@ -21,6 +21,14 @@ if (isset($_GET['sort_nt'])) { // Si on a appuyé sur un boutton de tri, on réc
 	//Sinon on conserve la variable de la session
 }
 
+if (isset($_GET['type_food'])) {
+	$_SESSION['type_food'] = $_GET['type_food'];
+} else {
+	if (!isset($_SESSION['type_food'])) {
+		$_SESSION['type_food'] = 'Nourriture';
+	}
+}
+
 $session_order = "{$_SESSION['order_nt']}";
 $session_sort = "{$_SESSION['sort_nt']}";
 
@@ -55,11 +63,15 @@ include("database.php"); ?>
 		<a href="en_cours.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Commandes en cours</a>
 		<a href="non_traite.php" role="button" class="btn btn-danger btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Commandes non-traitées</a>
 		<a href="menu_adr.php" role="button" class="btn btn-light btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Mise à jour menu</a>
-		</div>
+	</div>
 	<!-- <div class="defileParent">
 		le contenu défilant
 		<span class="defile" data-text="Nik la kafet ----- Pour passer une annonce, envoyer 1€ en Lydia au 06 07 76 40 74 ----- "> Nik la kafet ----- Pour passer une annonce, envoyer 1€ en Lydia au 06 07 76 40 74  ----- </div>
 	</div> -->
+	<div class="onglets" style="display:flex;width:60%; margin:auto; margin-top:1rem;">
+		<a href="?type_food=Nourriture" role="button" id="Nourriture" class="btn btn-light btn-lg btn-block" style=" margin-top: .5rem;margin-left:1rem;margin-right:1rem;">Nourriture</a>
+		<a href="?type_food=Boisson" role="button" id="Boisson" class="btn btn-light btn-lg btn-block" style="margin-left:1rem;margin-right:1rem;">Boisson</a>
+	</div>
 	<div class="tri" style="margin-top: 4rem;">
 		<h2>Trier par:</h2>
 		<a href="?order_nt=id&&sort_nt=<?php echo $_SESSION['sort_nt']; ?>">
@@ -94,8 +106,9 @@ include("database.php"); ?>
 
 	<main style="margin-bottom: 500px;">
 		<?php
-		// On récupère tout le contenu de la table jeux_video
-		$reponse = $bdd->query("SELECT * FROM commande WHERE traite='non' order by {$_SESSION['order_nt']} {$_SESSION['sort_nt']}");
+				// On récupère tout le contenu de la table jeux_video
+		$reponse = $bdd->prepare("SELECT * FROM commande WHERE traite='non' and type_food= ? order by {$_SESSION['order_nt']} {$_SESSION['sort_nt']}");
+		$reponse->execute(array($_SESSION['type_food']));
 
 		// On affiche chaque entrée une à une
 		while ($donnees = $reponse->fetch()) {
@@ -104,17 +117,17 @@ include("database.php"); ?>
 				<p><?php echo $donnees['nom']; ?> <?php if ($donnees['type_commande'] == 'A livrer') {
 														echo ' - ' . $donnees['numero'];
 													} ?> - <?php $date = new Datetime($donnees['Datetime']);
-															echo $date->format('H:i:s d/m/Y');
+															echo '<strong>' . $date->format('H \h i') . '</strong>';
 															?></p>
 				<p style="border: 2px solid black; border-radius:0.5rem; width:50%; margin:auto; padding:1rem 1rem; margin-bottom:1rem;"><span style="margin-bottom: 1rem; display:inline-block">Commande:</span><br><?php echo $donnees['commande']; ?></p>
 				<p style="color:darkred;"> Type: <?php echo $donnees['type_commande'];
 													if ($donnees['type_commande'] == 'En terrasse') {
-														echo ' - Table n°' . $donnees['num_table'];
+														echo ' - ' . $donnees['type_food'] . ' - Table n°' . $donnees['num_table'];
 													} else { ?> - Pour <?php $horaire = new Datetime($donnees['horaire']);
-														echo $horaire->format('H\hi');
-														if ($donnees['type_commande'] == 'A livrer') { ?> - Adresse: <?php echo $donnees['adresse'];
-															}
-														} ?></p>
+																		echo $horaire->format('H\hi');
+																		if ($donnees['type_commande'] == 'A livrer') { ?> - Adresse: <?php echo $donnees['adresse'];
+																													}
+																												} ?></p>
 				<a href=<?php echo "validation_en_cours.php?id=" . $donnees['id'] . "&origin=0"; ?> style="background-color:orange; border-color:orange" class="btn btn-success btn-lg">En cours de traitement</a>
 				<a href=<?php echo "validation_traite.php?id=" . $donnees['id'] . "&origin=0"; ?> style="background-color:green" class="btn btn-success btn-lg">Commande traitée</a>
 			</div>
@@ -142,6 +155,7 @@ include("database.php"); ?>
 
 	<script>
 		displaySort('<?php echo $session_order ?>', '<?php echo $session_sort ?>')
+		color_red('<?php echo $_SESSION['type_food']; ?>');
 	</script>
 
 	<body>
