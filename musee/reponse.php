@@ -37,8 +37,8 @@
 		else{
 			$table = 'aucune';
 		}
-		if (isset($_POST['type_food'])) {
-			$type_food = htmlspecialchars($_POST['type_food']);
+		if (isset($_POST['food'])) {
+			$type_food = htmlspecialchars($_POST['food']);
 		}
 		else{
 			$type_food = 'food';
