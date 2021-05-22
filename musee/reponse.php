@@ -37,8 +37,14 @@
 		else{
 			$table = 'aucune';
 		}
+		if (isset($_POST['type_food'])) {
+			$type_food = htmlspecialchars($_POST['type_food']);
+		}
+		else{
+			$type_food = 'food';
+		}
 
-		$req = $bdd->prepare('INSERT INTO commande(nom, numero, traite, commande,Datetime,adresse,horaire,type_commande,num_table) VALUES(:nom, :numero, :traite, :commande,:Datetime,:adresse,:horaire,:type_commande,:num_table)');
+		$req = $bdd->prepare('INSERT INTO commande(nom, numero, traite, commande,Datetime,adresse,horaire,type_commande,num_table,type_food) VALUES(:nom, :numero, :traite, :commande,:Datetime,:adresse,:horaire,:type_commande,:num_table,:type_food)');
 		$req->execute(array(
 			'nom' => $nom,
 			'numero' => $numero,
@@ -47,7 +53,7 @@
 			'Datetime' => $Datetime,
 			'adresse' => $adresse,
 			'horaire' => $horaire,
-			'type_commande' => $type_commande,
+			'type_food' => $type_food,
 			'num_table' => $table,
 		));
 	?>

@@ -19,45 +19,52 @@
         $horaire = document.getElementById("horaire")
         $nom = document.getElementById("nom")
         $type_cmd = document.getElementById("type_cmd")
-        <?php if (isset($_GET['nt'])) { ?>
+        $boisson = document.getElementById("boisson")
+        <?php if (isset($_GET['nt'])) { // si depuis qr code?>
             $table.style.display = "none"
             $adresse.style.display = "none"
             $horaire.style.display = "none"
             $telephone.style.display = "none"
             $type_cmd.style.display = "none"
+            $boisson.style.display = "flex"
             document.getElementById("terrasse").checked = true
             setRequired("table", true)
+            setRequired("boisson",true)
             setRequired("adresse", false)
             setRequired("horaire", false)
             setRequired("telephone", false)
             console.log("boucle")
         <?php ;
         } else { ?>
-            if (x == 0) {
+            if (x == 0) { // en terasse sans QR code
                 $table.style.display = "flex"
                 $adresse.style.display = "none"
                 $horaire.style.display = "none"
                 $telephone.style.display = "none";
+                $boisson.style.display = "flex"
                 setRequired("table", true)
+                setRequired("boisson",true)
                 setRequired("adresse", false)
                 setRequired("horaire", false)
                 setRequired("telephone", false)
                 console.log("boucle")
             } else {
-                if (x == 1) {
+                if (x == 1) { // à emporter
                     $table.style.display = "none"
                     $adresse.style.display = "none"
                     $horaire.style.display = "flex"
                     $telephone.style.display = "flex"
+                    $boisson.style.display = "none"
                     setRequired("table", false)
                     setRequired("adresse", false)
                     setRequired("horaire", true)
                     setHoraire("12:00", "21:00")
-                } else {
+                } else { // sinon livraison
                     $table.style.display = "none"
                     $adresse.style.display = "flex"
                     $horaire.style.display = "flex"
                     $telephone.style.display = "flex"
+                    $boisson.style.display = "none"
                     setRequired("table", false)
                     setRequired("adresse", true)
                     setRequired("horaire", true)
@@ -289,7 +296,7 @@
                         </div>
                     </div>
                 </article>
-
+                
                 <article class="form" id="telephone">
                     <div class="left">
                         <label for="numero"> Ton numéro de téléphone :</label>
@@ -333,6 +340,21 @@
                         <div class="boite_form" style=" padding-left:0px;">
                             <span class="icon" style="margin-right: auto;"><i class="fas fa-clock"></i></span>
                             <input class="input" type="time" name="horaire_livraison" required />
+                        </div>
+                    </div>
+                </article>
+                <article class="form" id="boisson">
+                    <div class="left">
+                        <label for="adresse"> Boisson ou nourriture? : </label>
+                    </div>
+                    <div class="right">
+                        <div class="type_food">
+                            <div class="choix">
+                                <input type="radio" name="food" value="food" id="terrasse" required /> <label for="non">Nourriture</label>
+                            </div>
+                            <div class="choix">
+                                <input type="radio" name="food" value="drink" id="emporter" required /> <label for="oui">Boisson</label>
+                            </div>
                         </div>
                     </div>
                 </article>

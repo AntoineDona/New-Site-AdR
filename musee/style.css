@@ -844,7 +844,7 @@ input[type="radio"] {
     /* transition: all 0.3s; */
 }
 
-.type_commande{
+.type_commande, .type_food{
     display: flex;
 }
 .choix{
@@ -858,7 +858,7 @@ input[type="radio"] {
 } */
 
 @media screen and (max-width:430px) {
-    .form_commande {
+    .form_commande{
         flex-direction: column;
     }
     .commande {
@@ -867,7 +867,7 @@ input[type="radio"] {
 }
 
 @media screen and (max-width:650px) {
-    .type_commande{
+    .type_commande, .type_food{
         display: flex;
         flex-direction: column;
         align-items:flex-start;
