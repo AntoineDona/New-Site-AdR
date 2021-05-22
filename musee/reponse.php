@@ -38,7 +38,7 @@
 			$table = 'aucune';
 		}
 		if (isset($_POST['food'])) {
-			$type_food = htmlspecialchars($_POST['food']);
+			$type_food = $_POST['food'];
 		}
 		else{
 			$type_food = 'food';
@@ -53,6 +53,7 @@
 			'Datetime' => $Datetime,
 			'adresse' => $adresse,
 			'horaire' => $horaire,
+			'type_commande' => $type_commande,
 			'type_food' => $type_food,
 			'num_table' => $table,
 		));
