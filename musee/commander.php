@@ -59,6 +59,7 @@
                     setRequired("adresse", false)
                     setRequired("horaire", true)
                     setHoraire("12:00", "21:00")
+                    setRequired("boisson",false)
                 } else { // sinon livraison
                     $table.style.display = "none"
                     $adresse.style.display = "flex"
@@ -69,6 +70,7 @@
                     setRequired("adresse", true)
                     setRequired("horaire", true)
                     setHoraire("18:00", "21:00")
+                    setRequired("boisson",false)
                 }
 
             }
