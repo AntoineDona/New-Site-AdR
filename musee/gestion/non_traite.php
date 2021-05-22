@@ -81,6 +81,15 @@ include("database.php"); ?>
 					<div class="sort_down"></div>
 			</button>
 		</a>
+		<a href="?order_nt=num_table&&sort_nt=<?php echo $_SESSION['sort_nt']; ?>">
+			<button class='btn_heure_livraison' id="horaire">
+				<h4>Numero de table</h4>
+				<div class='fleches_tri'>
+					<div class="sort"></div>
+					<div class="sort_up"></div>
+					<div class="sort_down"></div>
+			</button>
+		</a>
 	</div>
 
 	<main style="margin-bottom: 500px;">
