@@ -318,7 +318,7 @@
                     <div class="right">
                         <div class="boite_form">
                             <span class="icon"><i class="fas fa-utensils"></i></i></span>
-                            <input class="input" placeholder="n°" type="text" name="num_table" id="num_table" required />
+                            <input class="input" placeholder="n°" type="number" name="num_table" id="num_table" required />
                         </div>
                     </div>
                 </article>
