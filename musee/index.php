@@ -7,7 +7,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include "included/meta.php"?>
+    <?php include "included/meta.php" ?>
+    <!-- Balisage JSON-LD généré par l'outil d'aide au balisage de données structurées de Google -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Restaurant",
+            "name": "Le Musée",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1 rue Joliot Curie",
+                "addressLocality": "Gif-sur-Yvette",
+                "addressRegion": "Ile-de-France",
+                "addressCountry": "France",
+                "postalCode": "91190"
+            },
+            "menu": "https://adr.cs-campus.fr/musee/menu",
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": {
+                    "@type": "DayOfWeek",
+                    "name": "Lundi - Vendredi"
+                }
+            },
+            "url": "https://adr.cs-campus.fr/musee/index.php"
+        }
+    </script>
     <title>Le Musée</title>
 </head>
 
