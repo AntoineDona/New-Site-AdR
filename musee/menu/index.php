@@ -78,6 +78,8 @@
 		<br>
 		<h2>&#8764; Pizzas &#8765;</h2>
 		<div class="subcontent">
+			<div onClick="">Nouveauté: Poulet Cheddar<div class="compo">Composition : Sauce tomate, mozza, tenders, cheddar, olives, oigons frits, origan</div></div>
+				<div>5<small>,50</small> €</div>
 			<div onClick="">Reine <strong style="color:#ee0;">•</strong><div class="compo">Composition : Sauce tomate, mozza, jambon, olives, origan</div></div>
 				<div>5<small>,00</small> €</div>
 			<div onClick="">Poulet <strong style="color:#ee0;">•</strong><div class="compo">Composition : Sauce tomate, mozza, poulet, olives, origan</div></div>

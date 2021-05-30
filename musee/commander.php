@@ -148,24 +148,24 @@
                 Here is <a href="/musee/AdRline.mp4">a link to download the video</a>
             </video>
             </p>
-            <p style="margin-top: 2rem;">
+            <!-- <p style="margin-top: 2rem;">
             <h3>
                 Nous avons très hâte de vous retrouver le 19!
                 <br>L'Association ❤️🖤
             </h3>
-            </p>
+            </p> -->
         </section>
         <section class="carte infos">
             <h1 class="reservation">L'AdR pense à toi!</h1>
-            <h3>Pour toi qui est confiné, tu as la possibilité de commander des articles au musée et venir chercher ta commande au musée!</h3>
-            <h3 style="color:darkred;">Nous proposons même une livraison chez toi tous les soirs de 18h à 21h pour 1€ par tranche de 7€! </br> Donc si tu souhaites te faire livrer, coche la case "oui" tout en bas!</h6>
+            <h3>Pour toi qui est confiné, tu as la possibilité de commander des articles et venir chercher ta commande au Musée!</h3>
+            <h3 style="color:darkred;"> ⚠️Attention: en raison de la réouverture de la terrasse, nous arrêtons les livraisons le midi et le soir ⚠️ <br> Un grand MERCI à Huma et plus récemment Capèse pour leur aide précieuse! &lt;3 </h6>
                 <br>
 
                 <!-- <h3 style="color:darkred;">BURGER SOLDOUT!!!</h3>
 			<img src="burger.jpeg" style="width:90%;">
 		 -->
                 <h2 style="color:darkred;">MENU DE LA SEMAINE</h2><br>
-                <a href="img/Menu semaine du 24 mai.jpg"><img class="menu_semaine" src="img/Menu semaine du 24 mai.jpg"></a>
+                <a href="img/Menu semaine du 31 mai.jpg"><img class="menu_semaine" src="img/Menu semaine du 31 mai.jpg"></a>
                 <br>
                 <!-- <h3>Le Menu de la semaine est disponible <a href="img/menu_semaine_07-02.jpeg">ici</a></h3>
 			<br> -->
@@ -281,8 +281,8 @@
                             <div class="choix">
                                 <input type="radio" name="question" value="A emporter" id="emporter" onclick="display_input(1)" required /> <label for="oui">A emporter</label>
                             </div>
-                            <div class="choix">
-                                <input type="radio" name="question" value="A livrer" id="livraison" onclick="display_input(2)" required /> <label for="non">Livraison</label>
+                            <div class="choix" style="display: none;">
+                                <input type="radio" name="question" value="A livrer" id="livraison" onclick="display_input(2)" /> <label for="non">Livraison</label>
                             </div>
                         </div>
                     </div>
@@ -322,7 +322,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="form" id="adresse">
+                <article class="form" id="adresse" style="display: none">
                     <div class="left">
                         <label for="adresse"> Ton adresse : <br> (Si tu veux être livré)</label><br>
                     </div>
@@ -336,7 +336,7 @@
 
                 <article class="form" id="horaire">
                     <div class="left">
-                        <label for="horaire"> Horaire de collecte / livraison</label>
+                        <label for="horaire"> Horaire de collecte </label>
                     </div>
                     <div class="right">
                         <div class="boite_form" style=" padding-left:0px;">
