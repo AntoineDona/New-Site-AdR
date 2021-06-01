@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Le Musée. Passez ici vos commandes et retrouvez le menu du jour! "/>
+    <meta name="description" content="Le Musée. Passez ici vos commandes et retrouvez le menu du jour! " />
     <?php include "included/meta.php" ?>
     <title>Commander au Musée</title>
 </head>
@@ -20,21 +20,24 @@
         $nom = document.getElementById("nom")
         $type_cmd = document.getElementById("type_cmd")
         $boisson = document.getElementById("boisson")
-        <?php if (isset($_GET['nt'])) { // si depuis qr code?>
+        $msg_boisson = document.getElementById("msg_boisson")
+        <?php if (isset($_GET['nt'])) { // si depuis qr code
+        ?>
             $table.style.display = "none"
             $adresse.style.display = "none"
             $horaire.style.display = "none"
             $telephone.style.display = "none"
             $type_cmd.style.display = "none"
             $boisson.style.display = "flex"
+            $msg_boisson.style.display = "flex"
             document.getElementById("terrasse").checked = true
             setRequired("table", true)
-            setRequired("boisson",true)
+            setRequired("boisson", true)
             setRequired("adresse", false)
             setRequired("horaire", false)
             setRequired("telephone", false)
             console.log("boucle")
-        <?php ;
+        <?php
         } else { ?>
             if (x == 0) { // en terasse sans QR code
                 $table.style.display = "flex"
@@ -42,8 +45,9 @@
                 $horaire.style.display = "none"
                 $telephone.style.display = "none";
                 $boisson.style.display = "flex"
+                $msg_boisson.style.display = "flex"
                 setRequired("table", true)
-                setRequired("boisson",true)
+                setRequired("boisson", true)
                 setRequired("adresse", false)
                 setRequired("horaire", false)
                 setRequired("telephone", false)
@@ -55,27 +59,29 @@
                     $horaire.style.display = "flex"
                     $telephone.style.display = "flex"
                     $boisson.style.display = "none"
+                    $msg_boisson.style.display = "none"
                     setRequired("table", false)
                     setRequired("adresse", false)
                     setRequired("horaire", true)
                     setHoraire("12:00", "21:00")
-                    setRequired("boisson",false)
+                    setRequired("boisson", false)
                 } else { // sinon livraison
                     $table.style.display = "none"
                     $adresse.style.display = "flex"
                     $horaire.style.display = "flex"
                     $telephone.style.display = "flex"
                     $boisson.style.display = "none"
+                    $msg_boisson.style.display = "none"
                     setRequired("table", false)
                     setRequired("adresse", true)
                     setRequired("horaire", true)
                     setHoraire("18:00", "21:00")
-                    setRequired("boisson",false)
+                    setRequired("boisson", false)
                 }
 
             }
             console.log("ok")
-        <?php ;
+        <?php
         } ?>
     }
 
@@ -260,13 +266,24 @@
                     }
                 }
 ?>
-        </div>
-        <h2 style="font-size: 3rem; margin: 1rem 0;">Vous trouverez la liste des allergènes <a href="/musee/img/allergenes.jpg">ici</a></h2>
+</div>
+<h2 style="font-size: 3rem; margin: 1rem 0;">Vous trouverez la liste des allergènes <a href="/musee/img/allergenes.jpg">ici</a></h2>
         </section>
         <section class="commande">
             <h1>Formulaire de commande <?php if (isset($_GET['nt'])) {
                                             echo " - Table " . $_GET['nt'];
                                         } ?></h1>
+            <div class="nb_cmd" style="margin-bottom: 4rem">
+                ( Pour information: il y a actuellemen<strong>
+                    <?php
+                    $nbr_cmd = $bdd->query('SELECT count(*) FROM commande WHERE traite="en cours" OR traite="non" ');
+                    while ($row = $nbr_cmd->fetch()) {
+                        echo $row['count(*)'];
+                    }
+                    ?>
+                </strong>
+                commandes en préparation. )
+            </div>
             <form method="POST" action="reponse.php">
                 <!--onsubmit="this.submit(); this.reset(); return false;"-->
                 <article class="form" id="type_cmd">
@@ -298,7 +315,7 @@
                         </div>
                     </div>
                 </article>
-                
+
                 <article class="form" id="telephone">
                     <div class="left">
                         <label for="numero"> Ton numéro de téléphone :</label>
@@ -345,7 +362,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="form" id="boisson">
+                <article class="form" id="boisson" style="margin: 2rem 0rem;">
                     <div class="left">
                         <label for="adresse"> Boisson ou nourriture? : </label>
                     </div>
@@ -359,6 +376,19 @@
                             </div>
                         </div>
                     </div>
+                </article>
+                <article class="form" id="msg_boisson">
+                    <div class="message" style="text-align: left; margin:auto">
+                        <ul>
+                            <li>Si vous voulez tout en même temps, sélectionnez "Nourriture" </li>
+                            <li>Sinon, faites 2 commandes séparées: une "Nourriture" et une "Boisson" <br>
+                                => Vos boissons arriverons plus vite! </li>
+                        </ul>
+                        <br>
+                    </div>
+                </article>
+                <article id="nb_cmd" class="form">
+
                 </article>
                 <article class="form_commande">
                     <label for="commande"> Ta commande :</label><br>
