@@ -98,7 +98,6 @@
 						insert_in_array($name1, $demi, $food);
 						insert_in_array($name2, $pinte, $food);
 					}
-
 					echo serialize($drink);
 				} else {
 					if ($categorie['id'] == 14 or $categorie['id'] == 8 and $_POST['question'] == "En terrasse" ) {
