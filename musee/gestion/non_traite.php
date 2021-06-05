@@ -124,9 +124,9 @@ include("database.php"); ?>
 					<div style="display: flex; flex: 1; flex-flow:row wrap">
 						<?php display_cmd(unserialize($donnees['commande'])) ?>
 					</div>
-					<div>
+					<!-- <div style="margin">
 						<strong>TOTAL: <?php echo $donnees['prix']; ?>€ </strong>
-					</div>
+					</div> -->
 				</div>
 				<?php if (!empty($donnees['commentaire'])) {
 				?>
