@@ -9,7 +9,7 @@
 	<?php include "included/meta.php" ?>
 	<title>Confirmation de commande</title>
 
-	<meta http-equiv="refresh" content="10;url=commander.php" />
+	<!-- <meta http-equiv="refresh" content="10;url=commander.php" /> -->
 
 </head>
 
@@ -162,7 +162,7 @@
 				<h3>Redirection vers la page de commande dans <span id="countdown">10</span> secondes</h3>
 
 		</div>
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			// Total seconds to wait
 			var seconds = 10;
 
@@ -180,7 +180,7 @@
 			}
 			// Run countdown function
 			countdown();
-		</script>
+		</script> -->
 	<?php
 
 	} else {
