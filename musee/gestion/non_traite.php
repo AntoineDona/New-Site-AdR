@@ -124,12 +124,15 @@ include("database.php"); ?>
 					<div style="display: flex; flex: 1; flex-flow:row wrap">
 						<?php display_cmd(unserialize($donnees['commande'])) ?>
 					</div>
+					<div>
+						<strong>TOTAL: <?php echo $donnees['prix']; ?>€ </strong>
+					</div>
 				</div>
-				<?php if(!empty($donnees['commentaire'])){
-					?>
-				<p style="border: 2px solid black; border-radius:0.5rem; width:50%; margin:auto; padding:1rem 1rem; margin-bottom:1rem;"><span style="margin-bottom: 1rem; display:inline-block">Commentaire: </span>
-				<?php echo $donnees['commentaire']; ?>
-				</p>
+				<?php if (!empty($donnees['commentaire'])) {
+				?>
+					<p style="border: 2px solid black; border-radius:0.5rem; width:50%; margin:auto; padding:1rem 1rem; margin-bottom:1rem;"><span style="margin-bottom: 1rem; display:inline-block">Commentaire: </span>
+						<?php echo $donnees['commentaire']; ?>
+					</p>
 				<?php } ?>
 				<p style="color:darkred;"> Type: <?php echo $donnees['type_commande'];
 													if ($donnees['type_commande'] == 'En terrasse') {

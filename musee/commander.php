@@ -302,6 +302,7 @@
             <h1>Formulaire de commande <?php if (isset($_GET['nt'])) {
                                             echo " - Table " . $_GET['nt'];
                                         } ?></h1>
+            <p style="color: darkred;"><strong>UPDATE:</strong> Pour commander, il faut maitenant sélectionner directement sur la carte</p>
             <div class="nb_cmd" style="margin-bottom: 4rem">
                 ( Pour information: il y a actuellemen<strong>
                     <?php
