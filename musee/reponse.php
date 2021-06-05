@@ -93,10 +93,14 @@
 					$name2 = "Pinte_de_" . $name;
 					$pinte = "Pinte de " . $article["article"];
 					if ($_POST['question'] == "En terrasse") {
-						insert_in_array($name1, $demi, $drink);
+						if(isset($_POST[$name1])){
+							insert_in_array($name1, $demi, $drink);
+							$drink_price += $_POST[$name1] * ($article["prix"] + 1);
+						}
+						if(isset($_POST[$name2])){
 						insert_in_array($name2, $pinte, $drink);
-						$drink_price += $_POST[$name1] * ($article["prix"] + 1);
 						$drink_price += $_POST[$name2] * ($article["prix 2"] + 1);
+						}
 					} else {
 						insert_in_array($name1, $demi, $food);
 						insert_in_array($name2, $pinte, $food);
@@ -105,6 +109,7 @@
 					}
 					echo serialize($drink);
 				} else {
+					if(isset($_POST[$name])){
 					if ($categorie['id'] == 14 or $categorie['id'] == 8 and $_POST['question'] == "En terrasse") {
 						insert_in_array($name, $article["article"], $drink);
 						if ($categorie['id'] == 14) {
@@ -123,6 +128,7 @@
 					// if (isset($_POST[$name]) && $_POST[$name]!=0){
 					// 	echo "test";
 					// 	$array[$article['article']] = $_POST[$name];
+					}
 				}
 			}
 		}
