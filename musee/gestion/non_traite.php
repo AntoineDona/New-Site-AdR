@@ -35,6 +35,16 @@ $session_sort = "{$_SESSION['sort_nt']}";
 // print_r($session_order);
 // print_r($session_sort);
 
+function display_cmd($array)
+{
+	foreach ($array as $key => $value) {
+		if ($value > 0) {
+		
+			echo '<div style ="text-align: left; margin: 0 1rem; display: flex; flex-flow: column wrap; align-content: start;"> ' . $key . " x" . $value . "; </div>";
+		}
+	}
+}
+
 include("database.php"); ?>
 
 <!DOCTYPE html>
@@ -106,7 +116,7 @@ include("database.php"); ?>
 
 	<main style="margin-bottom: 500px;">
 		<?php
-				// On récupère tout le contenu de la table jeux_video
+		// On récupère tout le contenu de la table jeux_video
 		$reponse = $bdd->prepare("SELECT * FROM commande WHERE traite='non' and type_food= ? order by {$_SESSION['order_nt']} {$_SESSION['sort_nt']}");
 		$reponse->execute(array($_SESSION['type_food']));
 
@@ -119,15 +129,19 @@ include("database.php"); ?>
 													} ?> - <?php $date = new Datetime($donnees['Datetime']);
 															echo '<strong>' . $date->format('H \h i') . '</strong>';
 															?></p>
-				<p style="border: 2px solid black; border-radius:0.5rem; width:50%; margin:auto; padding:1rem 1rem; margin-bottom:1rem;"><span style="margin-bottom: 1rem; display:inline-block">Commande:</span><br><?php echo $donnees['commande']; ?></p>
+				<div style="border: 2px solid black; border-radius:0.5rem; width:50%; margin:auto; padding:1rem 1rem; margin-bottom:1rem;"><span style="margin-bottom: 1rem; display:inline-block">Commande:</span>
+					<div style="display: flex; flex: 1; flex-flow:row wrap">
+						<?php display_cmd(unserialize($donnees['commande'])) ?>
+					</div>
+				</div>
 				<p style="color:darkred;"> Type: <?php echo $donnees['type_commande'];
 													if ($donnees['type_commande'] == 'En terrasse') {
-														echo ' - ' . $donnees['type_food'] . ' - Table n°' . $donnees['num_table'];
+														echo ' - ' . $donnees['type_food'] . ' - Table n°' . $donnees['num_table'] . ' - Reglement <strong>' . $donnees['paiement'] . '</strong>';
 													} else { ?> - Pour <?php $horaire = new Datetime($donnees['horaire']);
 																		echo $horaire->format('H\hi');
 																		if ($donnees['type_commande'] == 'A livrer') { ?> - Adresse: <?php echo $donnees['adresse'];
-																													}
-																												} ?></p>
+																																	}
+																																} ?></p>
 				<a href=<?php echo "validation_en_cours.php?id=" . $donnees['id'] . "&origin=0"; ?> style="background-color:orange; border-color:orange" class="btn btn-success btn-lg">En cours de traitement</a>
 				<a href=<?php echo "validation_traite.php?id=" . $donnees['id'] . "&origin=0"; ?> style="background-color:green" class="btn btn-success btn-lg">Commande traitée</a>
 			</div>

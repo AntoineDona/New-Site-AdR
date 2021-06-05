@@ -9,64 +9,131 @@
 	<?php include "included/meta.php" ?>
 	<title>Confirmation de commande</title>
 
-	<meta http-equiv="refresh" content="10;url=commander.php" /> <!-- on redirige au bout de 3 secondes -->
+	<meta http-equiv="refresh" content="10;url=commander.php" /> 
 
 </head>
 
 <body>
-<?php include "included/header.php" ?>
+	<?php include "included/header.php" ?>
+
 
 	<?php
-	if (isset($_POST['nom']) && isset($_POST['commande'])) {
+	function insert_in_array($name, $article, &$array)
+	{ // fonction qui insère dans le array de commande les articles ainsi que la quantité, si bien définis
+		if (isset($_POST[$name]) && $_POST[$name] != 0) {
+			$array[$article] = $_POST[$name];
+		}
+	}
+
+	function update_database($array, $type_food)
+	{
+		echo "maseltof";
+		global $bdd, $req;
+		$serialized_array = serialize($array);
 		$nom = htmlspecialchars($_POST['nom']);
 		$numero = htmlspecialchars($_POST['numero']);
-		$commande = htmlspecialchars($_POST['commande']);
+		$commentaire = htmlspecialchars($_POST['commentaire']);
 		$Datetime = date("Y-m-d H:i:s");
 		$traite = 'non';
 		$adresse = htmlspecialchars($_POST['adresse']);
-		if(isset($_POST['horaire_livraison'])){
-			$horaire = $_POST['horaire_livraison'] . ':00';
+		if (isset($_POST['pay'])) {
+			$pay = $_POST['pay'];
+		} else {
+			$pay = "en caisse";
 		}
-		else{
+		if (isset($_POST['horaire_livraison'])) {
+			$horaire = $_POST['horaire_livraison'] . ':00';
+		} else {
 			$horaire = date("H:i:s");
 		}
+
 		$type_commande = $_POST['question'];
+
 		if (isset($_POST['num_table'])) {
 			$table = $_POST['num_table'];
 		}
-		if (isset($_POST['food'])) {
-			$type_food = $_POST['food'];
-		}
-		else{
-			$type_food = 'Nourriture';
-		}
 
-		$req = $bdd->prepare('INSERT INTO commande(nom, numero, traite, commande,Datetime,adresse,horaire,type_commande,num_table,type_food) VALUES(:nom, :numero, :traite, :commande,:Datetime,:adresse,:horaire,:type_commande,:num_table,:type_food)');
+		$req = $bdd->prepare('INSERT INTO commande(nom, numero, traite, commande,Datetime,adresse,horaire,type_commande,num_table,type_food,paiement,commentaire) VALUES(:nom, :numero, :traite, :commande,:Datetime,:adresse,:horaire,:type_commande,:num_table,:type_food,:paiement,:commentaire)');
 		$req->execute(array(
 			'nom' => $nom,
 			'numero' => $numero,
 			'traite' => $traite,
-			'commande' => $commande,
+			'commande' => $serialized_array,
 			'Datetime' => $Datetime,
 			'adresse' => $adresse,
 			'horaire' => $horaire,
 			'type_commande' => $type_commande,
 			'type_food' => $type_food,
 			'num_table' => $table,
+			'paiement' => $pay,
+			'commentaire' => $commentaire,
 		));
+	}
+
+	$food = array();
+	$drink = array();
+
+	$categories = $bdd->query('SELECT * FROM categories_menu ORDER BY ordre');
+	while ($categorie = $categories->fetch()) {
+		//Au moins un article de la catégorie: c'est toujours le cas ici!! On selectionne les articles de la catégorie :
+		$articles = $bdd->prepare('SELECT * FROM menu WHERE type_id=? order by article');
+		$articles->execute(array($categorie["id"]));
+		if ($categorie['id'] != 1) //On saute le aucun
+		{
+			while ($article = $articles->fetch()) //on parours les articles
+			{
+				$name = str_replace(' ', '_', $article["article"]); //on remplace les espaces par _ car php converti automatiquement dans POST les espaces
+				if ($categorie['id'] == 15) { // pour les pressions, 2 id possibles avec demi ou pinte
+					$name1 = "Demi_de_" . $name;
+					$demi = "Demi de " . $article["article"];
+					$name2 = "Pinte_de_" . $name;
+					$pinte = "Pinte de " . $article["article"];
+					if ($_POST['question'] == "En terrasse"){
+						insert_in_array($name1, $demi, $drink);
+						insert_in_array($name2, $pinte, $drink);
+					} else {
+						insert_in_array($name1, $demi, $food);
+						insert_in_array($name2, $pinte, $food);
+					}
+
+					echo serialize($drink);
+				} else {
+					if ($categorie['id'] == 14 or $categorie['id'] == 8 and $_POST['question'] == "En terrasse" ) {
+						insert_in_array($name, $article["article"], $drink);
+					} else {
+						insert_in_array($name, $article["article"], $food);
+					}
+					// if (isset($_POST[$name]) && $_POST[$name]!=0){
+					// 	echo "test";
+					// 	$array[$article['article']] = $_POST[$name];
+				}
+			}
+		}
+	}
+
+	//Une fois les tableaux complets, on les insère dans la base de donnée, s'il ne sont pas vides, et on a une condition globale modifiable
+	if (true) { //condition globale modifiable. Si non vérifiée -> pas de modification de la base de donnée. par ex: horaire!
+		echo empty($drink);
+		if (!empty($drink)) {
+			update_database($drink, "Boisson");
+			echo "maseltof";
+		}
+		if (!empty($food)) {
+			update_database($food, "Nourriture");
+		}
+
 	?>
+
 		<div class="carte" style="margin-top:10rem;">
 			<i style="color:#2FAF2C;" class="fas fa-check-circle fa-6x"></i>
 			<h3 style="color:#2FAF2C"> <br>Salut <?php echo $nom; ?>,
-				<br>Ta commande a bien été passée. 
-				<?php if($type_commande=='A livrer'){
+				<br>Ta commande a bien été passée.
+				<?php if ($type_commande == 'A livrer') {
 					echo "Huma va te livrer à l'horaire que tu as choisi, tu pourras payer à ce moment par Lydia!";
-				}
-				else{
-					if($type_commande=='A emporter'){
+				} else {
+					if ($type_commande == 'A emporter') {
 						echo "Tu pourras passer la récupérer à l'horaire choisi";
-					}
-					else{
+					} else {
 						echo "Les AdR sont en train de la traiter et vont te servir directement à table!";
 					}
 				}
