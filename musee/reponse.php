@@ -9,7 +9,7 @@
 	<?php include "included/meta.php" ?>
 	<title>Confirmation de commande</title>
 
-	<meta http-equiv="refresh" content="10;url=commander.php" /> 
+	<meta http-equiv="refresh" content="10;url=commander.php" />
 
 </head>
 
@@ -25,7 +25,7 @@
 		}
 	}
 
-	function update_database($array, $type_food)
+	function update_database($array, $type_food, $price)
 	{
 		echo "maseltof";
 		global $bdd, $req;
@@ -48,13 +48,11 @@
 			$horaire = date("H:i:s");
 		}
 
-		
-
 		if (isset($_POST['num_table'])) {
 			$table = $_POST['num_table'];
 		}
 
-		$req = $bdd->prepare('INSERT INTO commande(nom, numero, traite, commande,Datetime,adresse,horaire,type_commande,num_table,type_food,paiement,commentaire) VALUES(:nom, :numero, :traite, :commande,:Datetime,:adresse,:horaire,:type_commande,:num_table,:type_food,:paiement,:commentaire)');
+		$req = $bdd->prepare('INSERT INTO commande(nom, numero, traite, commande,Datetime,adresse,horaire,type_commande,num_table,type_food,prix,paiement,commentaire) VALUES(:nom, :numero, :traite, :commande,:Datetime,:adresse,:horaire,:type_commande,:num_table,:type_food,:prix,:paiement,:commentaire)');
 		$req->execute(array(
 			'nom' => $nom,
 			'numero' => $numero,
@@ -67,6 +65,7 @@
 			'type_food' => $type_food,
 			'num_table' => $table,
 			'paiement' => $pay,
+			'prix' => $price,
 			'commentaire' => $commentaire,
 		));
 	}
@@ -75,6 +74,8 @@
 	$drink = array();
 	$type_commande = $_POST['question'];
 	$nom = htmlspecialchars($_POST['nom']);
+	$food_price = 0;
+	$drink_price = 0;
 
 	$categories = $bdd->query('SELECT * FROM categories_menu ORDER BY ordre');
 	while ($categorie = $categories->fetch()) {
@@ -91,19 +92,33 @@
 					$demi = "Demi de " . $article["article"];
 					$name2 = "Pinte_de_" . $name;
 					$pinte = "Pinte de " . $article["article"];
-					if ($_POST['question'] == "En terrasse"){
+					if ($_POST['question'] == "En terrasse") {
 						insert_in_array($name1, $demi, $drink);
 						insert_in_array($name2, $pinte, $drink);
+						$drink_price += $_POST[$name1] * ($article["prix"] + 1);
+						$drink_price += $_POST[$name2] * ($article["prix 2"] + 1);
 					} else {
 						insert_in_array($name1, $demi, $food);
 						insert_in_array($name2, $pinte, $food);
+						$food_price += $_POST[$name1] * ($article["prix"] + 1);
+						$food_price += $_POST[$name2] * ($article["prix 2"] + 1);
 					}
 					echo serialize($drink);
 				} else {
-					if ($categorie['id'] == 14 or $categorie['id'] == 8 and $_POST['question'] == "En terrasse" ) {
+					if ($categorie['id'] == 14 or $categorie['id'] == 8 and $_POST['question'] == "En terrasse") {
 						insert_in_array($name, $article["article"], $drink);
+						if ($categorie['id'] == 14) {
+							$drink_price += $_POST[$name] * ($article["prix"] + 0.2);
+						} else {
+							$drink_price += $_POST[$name] * $article["prix"];
+						}
 					} else {
 						insert_in_array($name, $article["article"], $food);
+						if ($categorie['id'] == 14) {
+							$food_price += $_POST[$name] * ($article["prix"] + 0.2);
+						} else {
+							$food_price += $_POST[$name] * $article["prix"];
+						}
 					}
 					// if (isset($_POST[$name]) && $_POST[$name]!=0){
 					// 	echo "test";
@@ -113,15 +128,18 @@
 		}
 	}
 
+
+
+
 	//Une fois les tableaux complets, on les insère dans la base de donnée, s'il ne sont pas vides, et on a une condition globale modifiable
 	if (true) { //condition globale modifiable. Si non vérifiée -> pas de modification de la base de donnée. par ex: horaire!
 		echo empty($drink);
-		if (!empty($drink)) {
-			update_database($drink, "Boisson");
+		if (!empty($drink)) { // si la commande boisson n'est vide, on ajoute le prix total et on update la bdd
+			update_database($drink, "Boisson", $drink_price);
 			echo "maseltof";
 		}
-		if (!empty($food)) {
-			update_database($food, "Nourriture");
+		if (!empty($food)) { //si la commande bouffe n'est pas vide, on ajoute le prix total et on update la bdd
+			update_database($food, "Nourriture", $food_price);
 		}
 
 	?>
