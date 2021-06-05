@@ -621,7 +621,7 @@ h3{
 
 .categorie li .price, .soldout_select {
     margin-left: auto;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-top: 0.3rem;
 }
 
@@ -644,10 +644,14 @@ h3{
     height: 0.1rem;
     font-size: 0.1rem;
     flex-grow: 1;
-    margin-top: 1.5rem;
+    margin-top: 2.1rem;
     margin-left: 8px;
     margin-right: 8px;
     background-color: rgba(0, 0, 0, 0.198);
+}
+
+li .article{
+    max-width: 18rem;
 }
 
 input[type="checkbox"]:checked, input[type="checkbox"]:not(:checked) {
@@ -810,6 +814,13 @@ input[type="radio"] {
     margin-left: 5px;
     background: none;
     margin-right: 5px;
+}
+
+#nbr_article{
+    background-color: white;
+    width:4rem;
+    flex:none;
+    margin-left: 1rem;
 }
 
 #texte-com {

@@ -18,9 +18,10 @@
         $table = document.getElementById("table")
         $horaire = document.getElementById("horaire")
         $nom = document.getElementById("nom")
-        $type_cmd = document.getElementById("type_cmd")
-        $boisson = document.getElementById("boisson")
+        // $type_cmd = document.getElementById("type_cmd")
+        // $boisson = document.getElementById("boisson")
         $msg_boisson = document.getElementById("msg_boisson")
+        $pay = document.getElementById("pay")
         <?php if (isset($_GET['nt'])) { // si depuis qr code
         ?>
             $table.style.display = "none"
@@ -28,15 +29,16 @@
             $horaire.style.display = "none"
             $telephone.style.display = "none"
             $type_cmd.style.display = "none"
-            $boisson.style.display = "flex"
+            // $boisson.style.display = "flex"
             $msg_boisson.style.display = "flex"
+            $pay.style.display = "flex"
             document.getElementById("terrasse").checked = true
             setRequired("table", true)
-            setRequired("boisson", true)
+            // setRequired("boisson", true)
+            setRequired("pay", true)
             setRequired("adresse", false)
             setRequired("horaire", false)
             setRequired("telephone", false)
-            console.log("boucle")
         <?php
         } else { ?>
             if (x == 0) { // en terasse sans QR code
@@ -44,10 +46,12 @@
                 $adresse.style.display = "none"
                 $horaire.style.display = "none"
                 $telephone.style.display = "none";
-                $boisson.style.display = "flex"
+                // $boisson.style.display = "flex"
                 $msg_boisson.style.display = "flex"
+                $pay.style.display = "flex"
                 setRequired("table", true)
-                setRequired("boisson", true)
+                // setRequired("boisson", true)
+                setRequired("pay", true)
                 setRequired("adresse", false)
                 setRequired("horaire", false)
                 setRequired("telephone", false)
@@ -58,25 +62,29 @@
                     $adresse.style.display = "none"
                     $horaire.style.display = "flex"
                     $telephone.style.display = "flex"
-                    $boisson.style.display = "none"
+                    // $boisson.style.display = "none"
                     $msg_boisson.style.display = "none"
+                    $pay.style.display = "none"
                     setRequired("table", false)
+                    // setRequired("boisson", false)
+                    setRequired("pay", false)
                     setRequired("adresse", false)
                     setRequired("horaire", true)
                     setHoraire("12:00", "21:00")
-                    setRequired("boisson", false)
                 } else { // sinon livraison
                     $table.style.display = "none"
                     $adresse.style.display = "flex"
                     $horaire.style.display = "flex"
                     $telephone.style.display = "flex"
-                    $boisson.style.display = "none"
+                    // $boisson.style.display = "none"
                     $msg_boisson.style.display = "none"
+                    $pay.style.display = "none"
                     setRequired("table", false)
+                    // setRequired("boisson", false)
+                    setRequired("pay", false)
                     setRequired("adresse", true)
                     setRequired("horaire", true)
                     setHoraire("18:00", "21:00")
-                    setRequired("boisson", false)
                 }
 
             }
@@ -179,81 +187,103 @@
                 </h2>
                 <br>
         </section>
+        <form method="POST" action="reponse.php">
         <section class="carte">
             <h1>Carte du jour</h1>
             <div class="contenu">
-                <?php
-                // On récupère tout le contenu de la table menu
-                /* 
+                    <?php
+                    // On récupère tout le contenu de la table menu
+                    /* 
                 On parcourt les catégories par ordre
                 on compte le nombre d'articles correspondant
                 Si le nombre est nul -> on ne echo pas le nom de la catégorie
                 Si non nul -> on note le nom de la catégorie et on affiche tous les articles
                 */
 
-                $categories = $bdd->query('SELECT * FROM categories_menu ORDER BY ordre');
-                while ($categorie = $categories->fetch()) {
-                    $nbr_articles = $bdd->prepare('SELECT count(*) FROM menu WHERE type_id=? AND stock="oui" ');
-                    $nbr_articles->execute(array($categorie["id"]));
-                    if (!($nbr_articles->fetchColumn() > 0)) // si nombre d'articles de la catégorie=0
-                    {
-                    } else //si au moins un article de la catégorie
-                    {
-                        $articles = $bdd->prepare('SELECT * FROM menu WHERE type_id=? AND stock="oui" order by article');
-                        $articles->execute(array($categorie["id"]));
-                        if ($categorie['id'] != 1) //si id!=1 il y a des articles, on affiche la catégorie
+                    $categories = $bdd->query('SELECT * FROM categories_menu ORDER BY ordre');
+                    while ($categorie = $categories->fetch()) {
+                        $nbr_articles = $bdd->prepare('SELECT count(*) FROM menu WHERE type_id=? AND stock="oui" ');
+                        $nbr_articles->execute(array($categorie["id"]));
+                        if (!($nbr_articles->fetchColumn() > 0)) // si nombre d'articles de la catégorie=0
                         {
-                ?>
-                            <div class="categorie">
-                                <h3><?php echo $categorie["categorie"];
-                                    if ($categorie["id"] == 15) { ?><span class="price" style="margin-left: auto;
+                        } else //si au moins un article de la catégorie
+                        {
+                            $articles = $bdd->prepare('SELECT * FROM menu WHERE type_id=? AND stock="oui" order by article');
+                            $articles->execute(array($categorie["id"]));
+                            if ($categorie['id'] != 1) //si id!=1 il y a des articles, on affiche la catégorie
+                            {
+                    ?>
+                                <div class="categorie">
+                                    <h3><?php echo $categorie["categorie"];
+                                        if ($categorie["id"] == 15) { ?><span class="price" style="margin-left: auto;
                                     font-size: 2rem; "> ( 25cl ou 50cl )</span>
-                                    <?php } ?></h3>
-                                <ul>
-                                    <?php
-                                    // On affiche chaque article coché de la catégorie
-                                    while ($article = $articles->fetch()) {
-                                    ?>
-                                        <li>
-                                            <div class="article">
-                                                <?php echo $article['article']; ?><br>
-                                            </div>
-                                            <div class="ligne"></div>
-                                            <div class="price">
+                                        <?php } ?></h3>
+                                    <ul>
+                                        <?php
+                                        // On affiche chaque article coché de la catégorie
+                                        while ($article = $articles->fetch()) {
+                                        ?>
+                                            <li>
+                                                <div class="article" style="padding-top: 0.4rem;">
+                                                    <?php echo $article['article']; ?>
+                                                </div>
+                                                <div class="ligne"></div>
                                                 <?php
-                                                if ($article['soldout'] == "oui") {
-                                                    echo '<span class="soldout">(SOLDOUT!)</span>';
-                                                } else {
-                                                    echo $article['prix'] . '€';
-                                                }
+                                                if ($categorie["id"] == 15) {
                                                 ?>
-                                            </div>
-                                        </li>
-                                        <span class="ingredients">
-                                            <?php echo $article['infos']; ?>
-                                        </span>
-                                    <?php
-                                    }
-                                    if ($categorie["id"] == 15) {
-                                    ?>
-                                        <li>
-                                            <div class="article">
-                                                Consigne<br>
-                                            </div>
-                                            <div class="ligne"></div>
-                                            <div class="price">
-                                                1€
-                                            </div>
-                                        </li>
-                                    <?php
-                                    }
+                                                <div class="price">
+                                                    <?php
+                                                    if ($article['soldout'] == "oui") {
+                                                        echo '<span class="soldout">(SOLDOUT!)</span>';
+                                                    } else {
+                                                        echo $article['prix'] . '€';
+                                                    }
+                                                    ?>
+                                                    <input class="input" placeholder="n°" type="number" min="0" max="100" value="0" style="margin-right: 1rem;"name='<?php echo "Demi de " . htmlentities($article['article']); ?>' id="nbr_article" required />
+                                                <?php
+                                                    echo $article['prix 2'] . '€';
+                                                ?>
+                                                    <input class="input" placeholder="n°" type="number" min="0" max="100" value="0" name='<?php echo "Pinte de " . htmlentities($article['article']); ?>' id="nbr_article" required />
+                                                </div>
+                                                <?php
+                                                } else {
+                                                ?>
+                                                <div class="price">
+                                                    <?php
+                                                    if ($article['soldout'] == "oui") {
+                                                        echo '<span class="soldout">(SOLDOUT!)</span>';
+                                                    } else {
+                                                        echo $article['prix'] . '€';
+                                                    }
+                                                    ?>
+                                                <input class="input" placeholder="n°" type="number" min="0" max="100" value="0" style="margin-right: 1rem;"name='<?php echo htmlentities($article['article'], ENT_QUOTES); ?>' id="nbr_article" required />
+                                                <?php } ?>
+                                            </li>
+                                            <span class="ingredients">
+                                                <?php echo $article['infos']; ?>
+                                            </span>
+                                        <?php
+                                        }
+                                        if ($categorie["id"] == 15) {
+                                        ?>
+                                            <li>
+                                                <div class="article">
+                                                    Consigne<br>
+                                                </div>
+                                                <div class="ligne"></div>
+                                                <div class="price">
+                                                    1€
+                                                </div>
+                                            </li>
+                                        <?php
+                                        }
 
-                                    ?>
-                                </ul>
-                            </div>
-                        <?php
-                        } else {
-                        ?>
+                                        ?>
+                                    </ul>
+                                </div>
+                            <?php
+                            } else {
+                            ?>
             </div>
             <div class="none" style="display: block;">
                 <h2 style="margin-bottom: 1rem;">Le Musée n'est pas encore ouvert. <br> Horaires d'ouverture:</h2>
@@ -262,12 +292,12 @@
                 </div>
             </div>
 <?php
+                            }
                         }
-                    }
-                }
-?>
-</div>
-<h2 style="font-size: 3rem; margin: 1rem 0;">Vous trouverez la liste des allergènes <a href="/musee/img/allergenes.jpg">ici</a></h2>
+                    };
+?> 
+    </div>
+        <h2 style="font-size: 3rem; margin: 1rem 0;">Vous trouverez la liste des allergènes <a href="/musee/img/allergenes.jpg">ici</a></h2>
         </section>
         <section class="commande">
             <h1>Formulaire de commande <?php if (isset($_GET['nt'])) {
@@ -284,7 +314,6 @@
                 </strong>
                 commandes en préparation. )
             </div>
-            <form method="POST" action="reponse.php">
                 <!--onsubmit="this.submit(); this.reset(); return false;"-->
                 <article class="form" id="type_cmd">
                     <div class="left">
@@ -362,45 +391,61 @@
                         </div>
                     </div>
                 </article>
-                <article class="form" id="boisson" style="margin: 2rem 0rem;">
+                <!-- <article class="form" id="boisson" style="margin: 2rem 0rem;">
                     <div class="left">
                         <label for="adresse"> Boisson ou nourriture? : </label>
                     </div>
                     <div class="right">
                         <div class="type_food">
                             <div class="choix">
-                                <input type="radio" name="food" value="Nourriture" id="Nourriture" required /> <label for="non">Nourriture</label>
+                                <input type="radio" name="food" value="Nourriture" id="Nourriture" /> <label for="Nourriture">Nourriture</label>
                             </div>
                             <div class="choix">
-                                <input type="radio" name="food" value="Boisson" id="Boisson" required /> <label for="oui">Boisson</label>
+                                <input type="radio" name="food" value="Boisson" id="Boisson" /> <label for="Boisson">Boisson</label>
                             </div>
                         </div>
                     </div>
-                </article>
+                </article> -->
                 <article class="form" id="msg_boisson">
                     <div class="message" style="text-align: left; margin:auto">
                         <ul>
-                            <li>Si vous voulez tout en même temps, sélectionnez "Nourriture" </li>
-                            <li>Sinon, faites 2 commandes séparées: une "Nourriture" et une "Boisson" <br>
-                                => Vos boissons arriverons plus vite! </li>
+                            <li>Plus besoin de sélectionner nourriture ou boisson, nous séparons automatiquement la commande</li>
+                            <li>Si vous voulez recevoir vos boisson en même temps que la nourriture, spécifiez le en commentaire</li>
                         </ul>
                         <br>
                     </div>
                 </article>
+                <article class="form" id="pay" style="margin: 2rem 0rem;">
+                    <div class="left">
+                        <label for="adresse"> Moyen de paiement : </label>
+                    </div>
+                    <div class="right">
+                        <div class="type_food">
+                            <div class="choix">
+                                <input type="radio" name="pay" value="par Lydia" id="par Lydia" required /> <label for="par Lydia">Lydia</label>
+                            </div>
+                            <div class="choix">
+                                <input type="radio" name="pay" value="par CB" id="par CB" required /> <label for="par CB">Carte Bleue</label>
+                            </div>
+                            <div class="choix">
+                                <input type="radio" name="pay" value="en Espèces" id="en Espèces" required /> <label for="en Espèces">Espèces</label>
+                            </div>
+                        </div>
+                    </div>
+                </article>
                 <article id="nb_cmd" class="form">
-
                 </article>
                 <article class="form_commande">
-                    <label for="commande"> Ta commande :</label><br>
-                    <textarea id="texte-com" class="input" name="commande" rows="5"></textarea>
+                    <label for="commande"> Commentaires:</label><br>
+                    <textarea id="texte-com" class="input" name="commentaire" rows="3"></textarea>
                 </article>
 
                 <article class="envoyer">
                     <input id="submit" class="btn" type="submit" name="Envoyer">
                     <!-- <input style="background-color:grey" class="btn btn-secondary" type="button" name="Valider" onclick="submit_form();"> -->
                 </article>
-            </form>
         </section>
+        </form>
     </main>
     <?php include "included/footer.php" ?>
 </body>
