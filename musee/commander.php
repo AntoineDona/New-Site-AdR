@@ -86,7 +86,6 @@
                     setRequired("horaire", true)
                     setHoraire("18:00", "21:00")
                 }
-
             }
             console.log("ok")
         <?php
