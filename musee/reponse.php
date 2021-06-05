@@ -36,6 +36,7 @@
 		$Datetime = date("Y-m-d H:i:s");
 		$traite = 'non';
 		$adresse = htmlspecialchars($_POST['adresse']);
+		$type_commande = $_POST['question'];
 		if (isset($_POST['pay'])) {
 			$pay = $_POST['pay'];
 		} else {
@@ -47,7 +48,7 @@
 			$horaire = date("H:i:s");
 		}
 
-		$type_commande = $_POST['question'];
+		
 
 		if (isset($_POST['num_table'])) {
 			$table = $_POST['num_table'];
@@ -72,6 +73,8 @@
 
 	$food = array();
 	$drink = array();
+	$type_commande = $_POST['question'];
+	$nom = htmlspecialchars($_POST['nom']);
 
 	$categories = $bdd->query('SELECT * FROM categories_menu ORDER BY ordre');
 	while ($categorie = $categories->fetch()) {
