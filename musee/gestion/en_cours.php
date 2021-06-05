@@ -118,8 +118,17 @@ include("database.php"); ?>
 													} ?> - <?php $date = new Datetime($donnees['Datetime']);
 															echo '<strong>' . $date->format('H \h i') . '</strong>';
 															?></p>
-				<p style="border: 2px solid black; border-radius:0.5rem; width:50%; margin:auto; padding:1rem 1rem; margin-bottom:1rem;"><span style="margin-bottom: 1rem; display:inline-block">Commande:</span><br><?php echo $donnees['commande']; ?></p>
-				<p style="color:darkred;"> Type: <?php echo $donnees['type_commande'];
+				<div style="border: 2px solid black; border-radius:0.5rem; width:50%; margin:auto; padding:1rem 1rem; margin-bottom:1rem;"><span style="margin-bottom: 1rem; display:inline-block">Commande:</span>
+					<div style="display: flex; flex: 1; flex-flow:row wrap">
+						<?php display_cmd(unserialize($donnees['commande'])) ?>
+					</div>
+				</div>
+				<?php if(!empty($donnees['commentaire'])){
+					?>
+				<p style="border: 2px solid black; border-radius:0.5rem; width:50%; margin:auto; padding:1rem 1rem; margin-bottom:1rem;"><span style="margin-bottom: 1rem; display:inline-block">Commentaire: </span>
+				<?php echo $donnees['commentaire']; ?>
+				</p>
+				<?php } ?><p style="color:darkred;"> Type: <?php echo $donnees['type_commande'];
 													if ($donnees['type_commande'] == 'En terrasse') {
 														echo ' - ' . $donnees['type_food'] . ' - Table n°' . $donnees['num_table'];
 													} else { ?> - Pour <?php $horaire = new Datetime($donnees['horaire']);
