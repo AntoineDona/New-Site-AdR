@@ -1,4 +1,10 @@
-<?php include("included/database.php"); ?>
+<?php
+session_start();
+if(!isset($_SESSION['nom'])){
+	header('Location: /musee/confirmation.php');
+}
+include("included/database.php");
+?>
 
 <!DOCTYPE html>
 <html>
@@ -9,7 +15,7 @@
 	<?php include "included/meta.php" ?>
 	<title>Confirmation de commande</title>
 
-	<!-- <meta http-equiv="refresh" content="10;url=commander.php" /> -->
+	<meta http-equiv="refresh" content="10;url=commander.php" />
 
 </head>
 
@@ -20,8 +26,8 @@
 	<?php
 	function insert_in_array($name, $article, &$array)
 	{ // fonction qui insère dans le array de commande les articles ainsi que la quantité, si bien définis
-		if (isset($_POST[$name]) && $_POST[$name] != 0) {
-			$array[$article] = $_POST[$name];
+		if (isset($_SESSION[$name]) && $_SESSION[$name] != 0) {
+			$array[$article] = $_SESSION[$name];
 		}
 	}
 
@@ -30,26 +36,26 @@
 		echo "maseltof";
 		global $bdd, $req;
 		$serialized_array = serialize($array);
-		$nom = htmlspecialchars($_POST['nom']);
-		$numero = htmlspecialchars($_POST['numero']);
-		$commentaire = htmlspecialchars($_POST['commentaire']);
+		$nom = htmlspecialchars($_SESSION['nom']);
+		$numero = htmlspecialchars($_SESSION['numero']);
+		$commentaire = htmlspecialchars($_SESSION['commentaire']);
 		$Datetime = date("Y-m-d H:i:s");
 		$traite = 'non';
-		$adresse = htmlspecialchars($_POST['adresse']);
-		$type_commande = $_POST['question'];
-		if (isset($_POST['pay'])) {
-			$pay = $_POST['pay'];
+		$adresse = htmlspecialchars($_SESSION['adresse']);
+		$type_commande = $_SESSION['question'];
+		if (isset($_SESSION['pay'])) {
+			$pay = $_SESSION['pay'];
 		} else {
 			$pay = "en caisse";
 		}
-		if (isset($_POST['horaire_livraison'])) {
-			$horaire = $_POST['horaire_livraison'] . ':00';
+		if (isset($_SESSION['horaire_livraison'])) {
+			$horaire = $_SESSION['horaire_livraison'] . ':00';
 		} else {
 			$horaire = date("H:i:s");
 		}
 
-		if (isset($_POST['num_table'])) {
-			$table = $_POST['num_table'];
+		if (isset($_SESSION['num_table'])) {
+			$table = $_SESSION['num_table'];
 		}
 
 		$req = $bdd->prepare('INSERT INTO commande(nom, numero, traite, commande,Datetime,adresse,horaire,type_commande,num_table,type_food,prix,paiement,commentaire) VALUES(:nom, :numero, :traite, :commande,:Datetime,:adresse,:horaire,:type_commande,:num_table,:type_food,:prix,:paiement,:commentaire)');
@@ -72,8 +78,8 @@
 
 	$food = array();
 	$drink = array();
-	$type_commande = $_POST['question'];
-	$nom = htmlspecialchars($_POST['nom']);
+	$type_commande = $_SESSION['question'];
+	$nom = htmlspecialchars($_SESSION['nom']);
 	$food_price = 0;
 	$drink_price = 0;
 
@@ -92,42 +98,42 @@
 					$demi = "Demi de " . $article["article"];
 					$name2 = "Pinte_de_" . $name;
 					$pinte = "Pinte de " . $article["article"];
-					if ($_POST['question'] == "En terrasse") {
-						if(isset($_POST[$name1])){
+					if ($_SESSION['question'] == "En terrasse") {
+						if(isset($_SESSION[$name1])){
 							insert_in_array($name1, $demi, $drink);
-							$drink_price += $_POST[$name1] * ($article["prix"] + 1);
+							$drink_price += $_SESSION[$name1] * ($article["prix"] + 1);
 						}
-						if(isset($_POST[$name2])){
+						if(isset($_SESSION[$name2])){
 						insert_in_array($name2, $pinte, $drink);
-						$drink_price += $_POST[$name2] * ($article["prix 2"] + 1);
+						$drink_price += $_SESSION[$name2] * ($article["prix 2"] + 1);
 						}
 					} else {
 						insert_in_array($name1, $demi, $food);
 						insert_in_array($name2, $pinte, $food);
-						$food_price += $_POST[$name1] * ($article["prix"] + 1);
-						$food_price += $_POST[$name2] * ($article["prix 2"] + 1);
+						$food_price += $_SESSION[$name1] * ($article["prix"] + 1);
+						$food_price += $_SESSION[$name2] * ($article["prix 2"] + 1);
 					}
 					echo serialize($drink);
 				} else {
-					if(isset($_POST[$name])){
-					if ($categorie['id'] == 14 or $categorie['id'] == 8 and $_POST['question'] == "En terrasse") {
+					if(isset($_SESSION[$name])){
+					if ($categorie['id'] == 14 or $categorie['id'] == 8 and $_SESSION['question'] == "En terrasse") {
 						insert_in_array($name, $article["article"], $drink);
 						if ($categorie['id'] == 14) {
-							$drink_price += $_POST[$name] * ($article["prix"] + 0.2);
+							$drink_price += $_SESSION[$name] * ($article["prix"] + 0.2);
 						} else {
-							$drink_price += $_POST[$name] * $article["prix"];
+							$drink_price += $_SESSION[$name] * $article["prix"];
 						}
 					} else {
 						insert_in_array($name, $article["article"], $food);
 						if ($categorie['id'] == 14) {
-							$food_price += $_POST[$name] * ($article["prix"] + 0.2);
+							$food_price += $_SESSION[$name] * ($article["prix"] + 0.2);
 						} else {
-							$food_price += $_POST[$name] * $article["prix"];
+							$food_price += $_SESSION[$name] * $article["prix"];
 						}
 					}
-					// if (isset($_POST[$name]) && $_POST[$name]!=0){
+					// if (isset($_SESSION[$name]) && $_SESSION[$name]!=0){
 					// 	echo "test";
-					// 	$array[$article['article']] = $_POST[$name];
+					// 	$array[$article['article']] = $_SESSION[$name];
 					}
 				}
 			}
@@ -168,7 +174,7 @@
 				<h3>Redirection vers la page de commande dans <span id="countdown">10</span> secondes</h3>
 
 		</div>
-		<!-- <script type="text/javascript">
+		<script type="text/javascript">
 			// Total seconds to wait
 			var seconds = 10;
 
@@ -186,7 +192,7 @@
 			}
 			// Run countdown function
 			countdown();
-		</script> -->
+		</script>
 	<?php
 
 	} else {
