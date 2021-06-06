@@ -23,7 +23,7 @@ include("included/database.php");
         $table = document.getElementById("table")
         $horaire = document.getElementById("horaire")
         $nom = document.getElementById("nom")
-        // $type_cmd = document.getElementById("type_cmd")
+        $type_cmd = document.getElementById("type_cmd")
         // $boisson = document.getElementById("boisson")
         $msg_boisson = document.getElementById("msg_boisson")
         $pay = document.getElementById("pay")
