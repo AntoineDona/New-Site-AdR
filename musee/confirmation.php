@@ -6,6 +6,29 @@ foreach ($_POST as $key => $value) {
 }
 
 $_SESSION['verificateur'] = True;
+function display_cmd($array)
+
+{
+    echo "<table>";
+	foreach ($array as $key => $value) {
+		if ($value > 0) {
+		
+			echo "<tr>";
+			echo "<td style='padding-left:3rem;'>";
+			echo $key;
+			echo "</td>";
+			echo "<td> x";
+			echo $value;
+			echo "</td>";
+			echo "</tr>";
+		
+		?>
+<!-- <div style ="text-align:left; margin: 0 0.5rem; display: flex; flex-flow: column wrap; align-content: start;"> ' . $key . " x" . $value . " </div>"; -->
+		<?php
+        }
+	}
+    echo "</table>";
+}
 
 include("included/database.php");
 ?>
