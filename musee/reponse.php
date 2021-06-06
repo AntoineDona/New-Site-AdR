@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['nom'])){
+if(!isset($_SESSION['verificateur']) ||  !$_SESSION['verificateur']){
 	header('Location: /musee/confirmation.php');
 }
 include("included/database.php");
