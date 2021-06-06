@@ -1,5 +1,10 @@
-<?php $page = 'commander' ?>
-<?php include("included/database.php"); ?>
+<?php 
+session_start();
+session_unset();
+$page = 'commander';
+include("included/database.php"); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
