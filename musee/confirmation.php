@@ -5,6 +5,8 @@ foreach ($_POST as $key => $value) {
 	$_SESSION[$key] = htmlspecialchars($value);
 }
 
+$_SESSION['verificateur'] = True;
+
 include("included/database.php");
 ?>
 
