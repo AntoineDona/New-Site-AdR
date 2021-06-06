@@ -133,7 +133,7 @@ include("included/database.php");
 
 	?>
 	<div class="carte" style="margin-top:10rem; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-		<h1>Ta commande:</h1>
+		<h1 style="font-family:'Champagne', sans-serif;">Ta commande:</h1>
 		<div style="display: flex; flex-direction:column; font-size: 2rem; border: 2px solid black; width:35rem; margin:auto; padding:1rem 1rem; margin-bottom:1rem;">
 			<?php
 			if (!empty($food) && !empty($drink)) {
