@@ -20,21 +20,20 @@ include("included/database.php");
 
 <body>
 	<?php include "included/header.php" ?>
-	<table style="color: white;">
+	<!-- <table style="color: white;">
 		<?php
-		foreach ($_SESSION as $key => $value) {
-			echo "<tr>";
-			echo "<td>";
-			echo $key;
-			echo "</td>";
-			echo "<td>";
-			echo $value;
-			echo "</td>";
-			echo "</tr>";
-		}
+		// foreach ($_SESSION as $key => $value) {
+		// 	echo "<tr>";
+		// 	echo "<td>";
+		// 	echo $key;
+		// 	echo "</td>";
+		// 	echo "<td>";
+		// 	echo $value;
+		// 	echo "</td>";
+		// 	echo "</tr>";
+		// }
 		?>
-	</table>
-
+	</table> -->
 
 	<?php
 	function insert_in_array($name, $article, &$array)

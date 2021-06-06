@@ -186,7 +186,7 @@
                 </h2>
                 <br>
         </section>
-        <form method="POST" action="confirmation.php">
+        <form method="POST" action="reponse.php">
         <section class="carte">
             <h1>Carte du jour</h1>
             <div class="contenu">
