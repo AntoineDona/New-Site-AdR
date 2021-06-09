@@ -183,7 +183,7 @@ include("included/database.php");
 			<img src="burger.jpeg" style="width:90%;">
 		 -->
                 <h2 style="color:darkred;">MENU DE LA SEMAINE</h2><br>
-                <a href="img/Menu semaine du 31 mai.jpg"><img class="menu_semaine" src="img/Menu semaine du 31 mai.jpg"></a>
+                <a href="img/Menu semaine du 7 juin.jpg"><img class="menu_semaine" src="img/Menu semaine du 7 juin.jpg"></a>
                 <br>
                 <!-- <h3>Le Menu de la semaine est disponible <a href="img/menu_semaine_07-02.jpeg">ici</a></h3>
 			<br> -->
