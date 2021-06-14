@@ -9,7 +9,7 @@ if ($_SESSION["isConnected"]) {
     $_SESSION["prenom"] = $_SESSION["user"]["firstName"];
     $_SESSION["nom"] = $_SESSION["user"]["lastName"];
     echo $prenom . " " . $nom;
-    header("Location: /nano/index.php?nom=" . $nom . "&prenom=" . $prenom);
+    header("Location: https://adr.cs-campus.fr/nano/index.php?nom=" . $nom . "&prenom=" . $prenom);
 }
 ?>
 
