@@ -47,7 +47,7 @@ if ($_SESSION["isConnected"]) {
 
     <div class="connexion">
         <?php
-        echo(isset($_SESSION["isConnected"]));
+        echo($_SESSION["isConnected"]);
         if (isset($_SESSION["isConnected"])) {
             if (!$_SESSION["isConnected"]) {
                 echo "<p class= 'connexion'>Tu n'es pas encore connecté, pour shotgun une place au Nano il faut te connecter :</p> ";
