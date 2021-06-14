@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php include('/nano/database.php') ?>
+<?php include('database.php') ?>
 
 <!DOCTYPE html><html>
 <html>
@@ -48,16 +48,16 @@ $end_date = mktime(23, 50, 0, 9,29, 2020);
 $end_date_sec = (((date('d', $end_date)-1)*24 + date('H', $end_date))*60 + date('i', $end_date))*60 + date('s', $end_date);
 if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec) {
 	if ($_SESSION["cotisant"] == false) {
-		header("Location: /nano/non_cotisant.php");
+		header("Location: https://adr.cs-campus.fr/nano/non_cotisant.php");
 	} else {
 		if (!$_SESSION['shotgun']) {
 			if (number_place($pdo) < 550) {
 				$query=$pdo->prepare("INSERT into equinanox (prenom,nom,heure) VALUES (?,?,?)");
 				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],date("H:i:s")));
 				$_SESSION['shotgun'] = true;
-				header("Location: /nano/index.php");
+				header("Location: https://adr.cs-campus.fr/nano/index.php");
             } else {
-				header("Location: /nano/fini.php");
+				header("Location: https://adr.cs-campus.fr/nano/fini.php");
             }
      	} else {
 			$sql ='DELETE from equinanox WHERE prenom=:prenom AND nom= :nom';
@@ -66,11 +66,11 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 			$stmt->bindValue(':prenom', $_SESSION["prenom"]);
 			$res = $stmt->execute();
 			$_SESSION['shotgun'] = false;
-			header("Location: /nano/");
+			header("Location: https://adr.cs-campus.fr/nano/");
       	}
 	}
 } else {
-	header("Location: /nano/");
+	header("Location: https://adr.cs-campus.fr/nano/");
 }
  ?>
 
