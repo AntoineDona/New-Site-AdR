@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php include("/nano/database.php"); ?>
+<?php include("database.php"); ?>
 <!DOCTYPE html>
 <html>
 
