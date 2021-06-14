@@ -1,6 +1,6 @@
 <?php
 session_start();
-header("Location: /nano/interfacev2.php");
+header("Location: https://adr.cs-campus.fr/nano/interfacev2.php");
 ?>
 <?php include("database.php"); ?>
 
