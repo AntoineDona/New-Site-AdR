@@ -75,14 +75,14 @@
 		// la valeur n'existe pas -> action appropriée
 	} else {
 		$_SESSION['shotgun'] = true;
-		//echo 'y a de ouf';
+		//echo 'y a de ouf'; -> la personne a déjà sg
 		// valeur existe -> action appropriée
 	}
 	?>
 
 	<?php
 	if ($_SESSION["mail"] == 'agathe.auburtin@student-cs.fr') {
-		header("Location: /nano/agathe.php");
+		header("Location: https://adr.cs-campus.fr/nano/agathe.php");
 	}
 	?>
 
@@ -91,7 +91,7 @@
 	if ($_SESSION["promo"] == 2022) {
 		if ($cotiz == 0) {
 			$_SESSION["cotisant"] = false;
-			header("Location: /nano/non_cotisant.php");
+			header("Location: https://adr.cs-campus.fr/nano/non_cotisant.php");
 		} else {
 			$_SESSION["cotisant"] = true;
 			//echo "trop cool tu as cotisé";
@@ -108,9 +108,9 @@
 	<?php
 	if (number_place($pdo) >= 550 and !$_SESSION['shotgun']) {
 		if ($_SESSION["isConnected"]) {
-			header("Location: /nano/fini.php");
+			header("Location: https://adr.cs-campus.fr/nano/fini.php");
 		} else {
-			header("Location: /nano/connexion.php");
+			header("Location: https://adr.cs-campus.fr/nano/connexion.php");
 		}
 	}
 
