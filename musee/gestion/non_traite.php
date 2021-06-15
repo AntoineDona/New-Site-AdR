@@ -128,8 +128,10 @@ include("database.php"); ?>
 						<strong>TOTAL: <?php echo $donnees['prix']; ?>€ </strong>
 					</div>
 					<?php if ($donnees['type_food'] == "Boisson" and $donnees['beermin'] != $donnees['beermax']) {
+						$beermin = $donnees['beermin'] + 1;
+						$beermax = $donnees['beermax'];
 						echo "<div>
-						Compteur: Bières n°" . $donnees['beermin'] +1 . " à " . $donnees['beermax'] . "</div>";
+						Compteur: Bières n°" . $beermin . " à " . $beermax . "</div>";
 					}
 						?>
 				</div>
