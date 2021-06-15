@@ -188,7 +188,7 @@ include("included/database.php");
             <h2 style="margin-top: 1rem; text-decoration: underline;">Gagnants:</h2>
             <ul style="list-style-type: none;">
             <li><h3 style="font-size: 2rem; margin-top:1rem;">100ème bière: Arnò - Table n°31 </h3></li>
-            <!-- <li><h3 style="font-size: 2rem; margin-top:1rem;">200ème bière: ??? </h3></li>
+            <li><h3 style="font-size: 2rem; margin-top:1rem;">200ème bière: Pierre-Amaury - Table n°34 </h3></li>
             <li><h3 style="font-size: 2rem; margin-top:1rem;">300ème bière: ??? </h3></li>
             <li><h3 style="font-size: 2rem; margin-top:1rem;">400ème bière: ??? </h3></li>
             <li><h3 style="font-size: 2rem; margin-top:1rem;">500ème bière: ??? </h3></li> -->
