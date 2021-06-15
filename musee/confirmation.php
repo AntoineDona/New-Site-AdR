@@ -133,11 +133,7 @@ include("included/database.php");
 			}
 		}
 	}
-	$nbr_cmd = $bdd->query('SELECT beermax FROM commande ORDER BY id DESC LIMIT 1');
-	while ($row = $nbr_cmd->fetch()) {
-		$_SESSION['beermin'] = $row['beermax']; //beermin: n° de la dernière bière avant commande
-	};
-	$_SESSION['beermax'] = $_SESSION['beermin'] + $beercount // on incrémente. Gérer le cas ou c'est nul!!
+	$_SESSION['beercount'] = $beercount;
 
 	?>
 	<div class="carte" style="margin-top:10rem; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
