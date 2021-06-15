@@ -9,10 +9,10 @@ $_SESSION['verificateur'] = True;
 function display_cmd($array)
 
 {
-    echo "<table>";
+	echo "<table>";
 	foreach ($array as $key => $value) {
 		if ($value > 0) {
-		
+
 			echo "<tr>";
 			echo "<td style='padding-left:3rem;'>";
 			echo $key;
@@ -21,17 +21,16 @@ function display_cmd($array)
 			echo $value;
 			echo "</td>";
 			echo "</tr>";
-		
-		?>
-<!-- <div style ="text-align:left; margin: 0 0.5rem; display: flex; flex-flow: column wrap; align-content: start;"> ' . $key . " x" . $value . " </div>"; -->
-		<?php
-        }
+			
+		}
 	}
-    echo "</table>";
+	echo "</table>";
 }
+
 
 include("included/database.php");
 ?>
+<!-- <div style ="text-align:left; margin: 0 0.5rem; display: flex; flex-flow: column wrap; align-content: start;"> ' . $key . " x" . $value . " </div>"; -->
 
 <!DOCTYPE html>
 <html>
@@ -74,6 +73,7 @@ include("included/database.php");
 	$nom = htmlspecialchars($_POST['nom']);
 	$food_price = 0;
 	$drink_price = 0;
+	$beercount = 0;
 
 	$categories = $bdd->query('SELECT * FROM categories_menu ORDER BY ordre');
 	while ($categorie = $categories->fetch()) {
@@ -92,12 +92,14 @@ include("included/database.php");
 					$pinte = "Pinte de " . $article["article"];
 					if ($_POST['question'] == "En terrasse") {
 						if (isset($_POST[$name1])) {
-							insert_in_array($name1, $demi, $drink);
+							insert_in_array($name1, $demi, $drink); //on ajoute dans l'array des boissons
 							$drink_price += $_POST[$name1] * ($article["prix"] + 1);
+							$beercount += $_POST[$name1]; // on compte les bières dans name 1
 						}
 						if (isset($_POST[$name2])) {
 							insert_in_array($name2, $pinte, $drink);
 							$drink_price += $_POST[$name2] * ($article["prix 2"] + 1);
+							$beercount += $_POST[$name2]; // on compte les bières dans name 2
 						}
 					} else {
 						insert_in_array($name1, $demi, $food);
@@ -111,6 +113,7 @@ include("included/database.php");
 							insert_in_array($name, $article["article"], $drink);
 							if ($categorie['id'] == 14) {
 								$drink_price += $_POST[$name] * ($article["prix"] + 0.2);
+								$beercount += $_POST[$name];
 							} else {
 								$drink_price += $_POST[$name] * $article["prix"];
 							}
@@ -130,17 +133,22 @@ include("included/database.php");
 			}
 		}
 	}
+	$nbr_cmd = $bdd->query('SELECT beermax FROM commande ORDER BY id DESC LIMIT 1');
+	while ($row = $nbr_cmd->fetch()) {
+		$_SESSION['beermin'] = $row['beermax']; //beermin: n° de la dernière bière avant commande
+	};
+	$_SESSION['beermax'] = $_SESSION['beermin'] + $beercount // on incrémente. Gérer le cas ou c'est nul!!
 
 	?>
 	<div class="carte" style="margin-top:10rem; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
 		<h1 style="font-family:'Champagne', sans-serif;">Ta commande:</h1>
 		<div style="display: flex; flex-direction:column; font-size: 2rem; border: 2px solid black; width:35rem; margin:auto; padding:1rem 1rem; margin-bottom:1rem;">
 			<?php
-			if (!empty($food) && !empty($drink)) {
+			if (!empty($food) && !empty($drink)) { // si il y a nourriture + boisson dans la commande
 				echo "<h2 style='text-decoration:underline; margin-bottom:1rem;'> Nourriture: </h2>";
-				display_cmd($food);
+				display_cmd($food); // on affiche la nourriture
 				echo "<h2 style='text-decoration:underline; margin-top: 2rem; margin-bottom:1rem;'> Boissons: </h2>";
-				display_cmd($drink);
+				display_cmd($drink); // on affiche les boissons
 			} else if (!empty($food)) { // sinon, si drink est vide, mais pas food
 				echo "<h2 style='text-decoration:underline; margin-bottom:1rem;'> Nourriture: </h2>";
 				display_cmd($food);
@@ -177,5 +185,17 @@ include("included/database.php");
 	</div>
 
 </body>
+
+<style>
+	html {
+		font-size: 10px;
+		background-image: url(/musee/img/field.jpg);
+	}
+
+	button {
+		margin-top: 0.5rem;
+		max-width: 30vw;
+	}
+</style>
 
 </html>
