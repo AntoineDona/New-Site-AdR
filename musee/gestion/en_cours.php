@@ -122,6 +122,11 @@ include("database.php"); ?>
 					<div style="display: flex; flex: 1; flex-flow:row wrap">
 						<?php display_cmd(unserialize($donnees['commande'])) ?>
 					</div>
+					<?php if ($donnees['type_food'] == "Boisson" and $donnees['beermin'] != $donnees['beermax']) {
+						echo "<div>
+						Compteur: Bières n°" . $donnees['beermin'] . " à " . $donnees['beermax'] . "</div>";
+					}
+						?>
 					<div style="margin:0.5rem;">
 						<strong>TOTAL: <?php echo $donnees['prix']; ?>€ </strong>
 					</div>

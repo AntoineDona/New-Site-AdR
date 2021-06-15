@@ -43,6 +43,8 @@ include("included/database.php");
 		$traite = 'non';
 		$adresse = htmlspecialchars($_SESSION['adresse']);
 		$type_commande = $_SESSION['question'];
+		$beermin = $_SESSION['beermin'];
+		$beermax = $_SESSION['beermax'];
 		if (isset($_SESSION['pay'])) {
 			$pay = $_SESSION['pay'];
 		} else {
@@ -58,7 +60,7 @@ include("included/database.php");
 			$table = $_SESSION['num_table'];
 		}
 
-		$req = $bdd->prepare('INSERT INTO commande(nom, numero, traite, commande,Datetime,adresse,horaire,type_commande,num_table,type_food,prix,paiement,commentaire) VALUES(:nom, :numero, :traite, :commande,:Datetime,:adresse,:horaire,:type_commande,:num_table,:type_food,:prix,:paiement,:commentaire)');
+		$req = $bdd->prepare('INSERT INTO commande(nom, numero, traite, commande,Datetime,adresse,horaire,type_commande,num_table,type_food,prix,paiement,commentaire,beermin, beermax) VALUES(:nom, :numero, :traite, :commande,:Datetime,:adresse,:horaire,:type_commande,:num_table,:type_food,:prix,:paiement,:commentaire, :beermin, :beermax)');
 		$req->execute(array(
 			'nom' => $nom,
 			'numero' => $numero,
@@ -73,6 +75,8 @@ include("included/database.php");
 			'paiement' => $pay,
 			'prix' => $price,
 			'commentaire' => $commentaire,
+			'beermin' => $beermin,
+			'beermax' => $beermax,
 		));
 	}
 

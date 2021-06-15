@@ -127,6 +127,11 @@ include("database.php"); ?>
 					<div style="margin:0.5rem;">
 						<strong>TOTAL: <?php echo $donnees['prix']; ?>€ </strong>
 					</div>
+					<?php if ($donnees['type_food'] == "Boisson" and $donnees['beermin'] != $donnees['beermax']) {
+						echo "<div>
+						Compteur: Bières n°" . $donnees['beermin'] . " à " . $donnees['beermax'] . "</div>";
+					}
+						?>
 				</div>
 				<?php if (!empty($donnees['commentaire'])) {
 				?>

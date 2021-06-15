@@ -27,6 +27,7 @@ include("included/database.php");
         // $boisson = document.getElementById("boisson")
         $msg_boisson = document.getElementById("msg_boisson")
         $pay = document.getElementById("pay")
+        document.getElementById("terrasse").checked = true
         <?php if (isset($_GET['nt'])) { // si depuis qr code
         ?>
             $table.style.display = "none"
@@ -46,14 +47,15 @@ include("included/database.php");
             setRequired("telephone", false)
         <?php
         } else { ?>
-            if (x == 0) { // en terasse sans QR code
-                $table.style.display = "flex"
+            if (true) { // en terasse sans QR code
+                $table.style.display = "none"
                 $adresse.style.display = "none"
                 $horaire.style.display = "none"
                 $telephone.style.display = "none";
                 // $boisson.style.display = "flex"
                 $msg_boisson.style.display = "flex"
                 $pay.style.display = "flex"
+                document.getElementById("terrasse").checked = true  
                 setRequired("table", true)
                 // setRequired("boisson", true)
                 setRequired("pay", true)
@@ -61,36 +63,36 @@ include("included/database.php");
                 setRequired("horaire", false)
                 setRequired("telephone", false)
                 console.log("boucle")
-            } else {
-                if (x == 1) { // à emporter
-                    $table.style.display = "none"
-                    $adresse.style.display = "none"
-                    $horaire.style.display = "flex"
-                    $telephone.style.display = "flex"
-                    // $boisson.style.display = "none"
-                    $msg_boisson.style.display = "none"
-                    $pay.style.display = "none"
-                    setRequired("table", false)
-                    // setRequired("boisson", false)
-                    setRequired("pay", false)
-                    setRequired("adresse", false)
-                    setRequired("horaire", true)
-                    setHoraire("12:00", "21:00")
-                } else { // sinon livraison
-                    $table.style.display = "none"
-                    $adresse.style.display = "flex"
-                    $horaire.style.display = "flex"
-                    $telephone.style.display = "flex"
-                    // $boisson.style.display = "none"
-                    $msg_boisson.style.display = "none"
-                    $pay.style.display = "none"
-                    setRequired("table", false)
-                    // setRequired("boisson", false)
-                    setRequired("pay", false)
-                    setRequired("adresse", true)
-                    setRequired("horaire", true)
-                    setHoraire("18:00", "21:00")
-                }
+            // } else {
+            //     if (x == 1) { // à emporter
+            //         $table.style.display = "none"
+            //         $adresse.style.display = "none"
+            //         $horaire.style.display = "flex"
+            //         $telephone.style.display = "flex"
+            //         // $boisson.style.display = "none"
+            //         $msg_boisson.style.display = "none"
+            //         $pay.style.display = "none"
+            //         setRequired("table", false)
+            //         // setRequired("boisson", false)
+            //         setRequired("pay", false)
+            //         setRequired("adresse", false)
+            //         setRequired("horaire", true)
+            //         setHoraire("12:00", "21:00")
+            //     } else { // sinon livraison
+            //         $table.style.display = "none"
+            //         $adresse.style.display = "flex"
+            //         $horaire.style.display = "flex"
+            //         $telephone.style.display = "flex"
+            //         // $boisson.style.display = "none"
+            //         $msg_boisson.style.display = "none"
+            //         $pay.style.display = "none"
+            //         setRequired("table", false)
+            //         // setRequired("boisson", false)
+            //         setRequired("pay", false)
+            //         setRequired("adresse", true)
+            //         setRequired("horaire", true)
+            //         setHoraire("18:00", "21:00")
+            //     }
             }
             console.log("ok")
         <?php
@@ -152,7 +154,7 @@ include("included/database.php");
             <div class="illustration_container ptitdej"></div>
         </section> -->
         <section class="carte infos covid">
-            <h1 style="font-size: 4rem;">⚠️Réouverture de la terasse du Musée⚠️</h1>
+            <h1 style="font-size: 4rem;">⚠️Règles Sanitaires⚠️</h1>
             <p>
             <h3>Le Musée ouvre sa terrasse à partir du 19 Mai! 😍
                 <br>Cependant pour que cela soit possible, un protocole sanitaire stricte devra être respecté 😷
@@ -174,22 +176,35 @@ include("included/database.php");
             </p> -->
         </section>
         <section class="carte infos">
-            <h1 class="reservation">L'AdR pense à toi!</h1>
-            <h3>Pour toi qui est confiné, tu as la possibilité de commander des articles et venir chercher ta commande au Musée!</h3>
-            <h3 style="color:darkred;"> ⚠️Attention: en raison de la réouverture de la terrasse, nous arrêtons les livraisons le midi et le soir ⚠️ <br> Un grand MERCI à Huma et plus récemment Capèse pour leur aide précieuse! &lt;3 </h6>
-                <br>
+            <h2>Ce soir c'est match! <br> 🇫🇷 vs 🇩🇪</h2>
+            <h3 style="font-size: 2rem; margin-top:1rem;">Pour fêter cela, la personne qui commandera la 100ème bière, puis la 200ème puis la 300ème (tout les 100 t'as capté) se verra offrir <span style="font-weight: bold;">une pinte de Kro</span> par le BDS et l'AdR!!</h3>
+            <h2>Compteur de bières: <span style="font-weight: bold;">
+            <?php
+            $nbr_cmd = $bdd->query('SELECT beermax FROM commande ORDER BY id DESC LIMIT 1');
+            while ($row = $nbr_cmd->fetch()) {
+                echo $row['beermax'];
+            };
+            ?> x 🍺</span></h2>
+            <h2 style="margin-top: 1rem; text-decoration: underline;">Gagnants:</h2>
+            <ul style="list-style-type: none;">
+            <li><h3 style="font-size: 2rem; margin-top:1rem;">100ème bière: ??? </h3></li>
+            <!-- <li><h3 style="font-size: 2rem; margin-top:1rem;">200ème bière: ??? </h3></li>
+            <li><h3 style="font-size: 2rem; margin-top:1rem;">300ème bière: ??? </h3></li>
+            <li><h3 style="font-size: 2rem; margin-top:1rem;">400ème bière: ??? </h3></li>
+            <li><h3 style="font-size: 2rem; margin-top:1rem;">500ème bière: ??? </h3></li> -->
+            </ul>
+            
+            <!-- <h3 style="color:darkred;"> ⚠️Attention: en raison de la réouverture de la terrasse, nous arrêtons les livraisons le midi et le soir ⚠️ <br> Un grand MERCI à Huma et plus récemment Capèse pour leur aide précieuse! &lt;3 </h6> -->
 
                 <!-- <h3 style="color:darkred;">BURGER SOLDOUT!!!</h3>
 			<img src="burger.jpeg" style="width:90%;">
 		 -->
-                <h2 style="color:darkred;">MENU DE LA SEMAINE</h2><br>
+                <!-- <h2 style="color:darkred;">MENU DE LA SEMAINE</h2><br>
                 <a href="img/Menu semaine du 7 juin.jpg"><img class="menu_semaine" src="img/Menu semaine du 7 juin.jpg"></a>
-                <br>
+                <br> -->
                 <!-- <h3>Le Menu de la semaine est disponible <a href="img/menu_semaine_07-02.jpeg">ici</a></h3>
 			<br> -->
                 <!-- <h2>Réserve ton p'tit dej de Mardi <a href=" https://docs.google.com/forms/d/e/1FAIpQLSdIl2pjrZ99A-Os2xXWpXKGB8F2PuGrlvXk5AEv-xbsJmFIXQ/viewform?usp=sf_link">ici</a> ! -->
-                </h2>
-                <br>
         </section>
         <form method="POST" action="confirmation.php">
         <section class="carte">
@@ -320,16 +335,16 @@ include("included/database.php");
                 commandes en préparation. )
             </div>
                 <!--onsubmit="this.submit(); this.reset(); return false;"-->
-                <article class="form" id="type_cmd">
+                <article class="form" id="type_cmd" style="display: none;">
                     <div class="left">
                         <label for="adresse"> Type de commande : </label>
                     </div>
                     <div class="right">
-                        <div class="type_commande">
+                        <div class="type_commande" style="display: none;">
                             <div class="choix">
                                 <input type="radio" name="question" value="En terrasse" id="terrasse" onclick="display_input(0)" required /> <label for="non">En terrasse</label>
                             </div>
-                            <div class="choix">
+                            <div class="choix" style="display: none;">
                                 <input type="radio" name="question" value="A emporter" id="emporter" onclick="display_input(1)" required /> <label for="oui">A emporter</label>
                             </div>
                             <div class="choix" style="display: none;">
@@ -350,14 +365,14 @@ include("included/database.php");
                     </div>
                 </article>
 
-                <article class="form" id="telephone">
+                <article class="form" id="telephone" style="display: none;">
                     <div class="left">
                         <label for="numero"> Ton numéro de téléphone :</label>
                     </div>
                     <div class="right">
                         <div class="boite_form">
                             <span class="icon"><i class="fas fa-phone"></i></span>
-                            <input class="input" placeholder="+33" type="text" name="numero" required />
+                            <input class="input" placeholder="+33" type="text" name="numero" />
                         </div>
                     </div>
                 </article>
@@ -385,14 +400,14 @@ include("included/database.php");
                     </div>
                 </article>
 
-                <article class="form" id="horaire">
+                <article class="form" id="horaire" style="display: none;">
                     <div class="left">
                         <label for="horaire"> Horaire de collecte </label>
                     </div>
                     <div class="right">
                         <div class="boite_form" style=" padding-left:0px;">
                             <span class="icon" style="margin-right: auto;"><i class="fas fa-clock"></i></span>
-                            <input class="input" type="time" name="horaire_livraison" required />
+                            <input class="input" type="time" name="horaire_livraison" />
                         </div>
                     </div>
                 </article>
