@@ -4,6 +4,11 @@ if(!isset($_SESSION['verificateur']) ||  !$_SESSION['verificateur']){
 	header('Location: /musee/confirmation.php');
 }
 include("included/database.php");
+$nbr_cmd = $bdd->query('SELECT beermax FROM commande ORDER BY beermax DESC LIMIT 1');
+	while ($row = $nbr_cmd->fetch()) {
+		$_SESSION['beermin'] = $row['beermax']; //beermin: n° de la dernière bière avant commande
+	};
+	$_SESSION['beermax'] = $_SESSION['beermin'] + $_SESSION['beercount'] // on incrémente. Gérer le cas ou c'est nul!!
 ?>
 
 <!DOCTYPE html>
