@@ -123,8 +123,10 @@ include("database.php"); ?>
 						<?php display_cmd(unserialize($donnees['commande'])) ?>
 					</div>
 					<?php if ($donnees['type_food'] == "Boisson" and $donnees['beermin'] != $donnees['beermax']) {
+						$beermin = $donnees['beermin'] + 1;
+						$beermax = $donnees['beermax'];
 						echo "<div>
-						Compteur: Bières n°" . $donnees['beermin'] +1 . " à " . $donnees['beermax'] . "</div>";
+						Compteur: Bières n°" . $beermin . " à " . $beermax . "</div>";
 					}
 						?>
 					<div style="margin:0.5rem;">
