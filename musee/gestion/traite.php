@@ -49,8 +49,13 @@
 					<?php if ($donnees['type_food'] == "Boisson" and $donnees['beermin'] != $donnees['beermax']) {
 						$beermin = $donnees['beermin'] + 1;
 						$beermax = $donnees['beermax'];
-						echo "<div>
-						Compteur: Bières n°" . $beermin . " à " . $beermax . "</div>";
+						if ($beermin == $beermax){
+							echo "<div>
+						Compteur: Bière n°" . $beermin  . "</div>";
+						} else {
+							echo "<div>
+							Compteur: Bières n°" . $beermin . " à " . $beermax . "</div>";
+						}
 					}
 						?>
 				</div>
