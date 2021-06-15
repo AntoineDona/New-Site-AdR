@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<title>QuadraBang</title><link rel="icon" type="image/png" href="img/logo.png" />
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+<body onload="onLoad()">
+
+	<div class="quadra_img">
+		<div class="quadra_text">
+			<img src="img/QUADRATEXTE_1.png" id="quadratexte"/>
+			<h1 class="quadra">Bienvenue sur la page du Quadrabang !</h1>
+			<h2 class="quadra">Le QuadraBang et ses 4 salles reviennent le Vendredi 8 octobre 2021 à 23h sur le campus de CentraleSupélec pour accueillir plus de 2700 personnes dans 4 ambiances.</h2>
+			<div id="trailer_button" onclick="trailer()">&#8675; TEASER &#8675;</div>
+		</div>
+		<div id="counter" style="grid-area: bottom;">
+			<div style="grid-area: d_top;">00</div>
+			<div style="grid-area: h_top;">00</div>
+			<div style="grid-area: m_top;">00</div>
+			<div style="grid-area: s_top;">00</div>
+			<div style="grid-area: d_bottom; font-size:20%;">jour(s)</div>
+			<div style="grid-area: h_bottom; font-size:20%;">heure(s)</div>
+			<div style="grid-area: m_bottom; font-size:20%;">minute(s)</div>
+			<div style="grid-area: s_bottom; font-size:20%;">seconde(s)</div>
+		</div>
+	</div>
+	
+	<div class="billetterie">
+		<div class="billetterie_sub" id="earlybird">
+			<h2 style="margin-top:100px;">TICKET EARLY BIRD</h2>
+			<h1 >10€</h1>
+			<!--<a href="https://collecte.io/quadrabang-early-birds-222037/fr" target="_blank">--><div class="button">SOLD OUT</div><!--</a>-->
+			<h2 style="font-size:80%;margin-top:20px;">BILLETTERIE EPUISEE<h2>
+		</div>
+		<div class="billetterie_sub" id="normal">
+			<h2 style="margin-top:100px;">TICKET NORMAL</h2>
+			<h1 >14€</h1>
+			<!--<a href="https://collecte.io/quadrabang-2019-222042/fr" target="_blank">--><div class="button">SOLD OUT</div><!--</a>-->
+			<h2 style="font-size:80%;margin-top:20px;">BILLETTERIE EPUISEE<br><br>DERNIERES PLACES EN LIGNE<br>DISPOS LE 8 OCTOBRE<h2>
+		</div>
+		<div class="billetterie_sub" id="navette">
+			<h2 style="margin-top:140px;">NAVETTE GRATUITE</h2>
+			<h1 ></h1>
+			<a href="https://adr.cs-campus.fr/quadrabang/navettes.php" target="_blank"><div class="button">RUPTURE</div></a>
+			<h2 style="font-size:80%;margin-top:20px;">SHOTGUN<br>INDISPONIBLE LE 6 OCTOBRE A 12H<h2>
+		</div>
+		<div style="grid-area:e" class="billetterie_sub" id="latebird">
+			<h2 style="margin-top:100px;">TICKET LATE BIRD</h2>
+			<h1 >14€</h1>
+			<!--<a href="https://collecte.io/quadrabang-dernieres-places-229312/fr" target="_blank">--><div class="button">BILLETTERIE</div><!--</a>-->
+			<h2 id="ticket_content" style="font-size:80%;margin-top:20px;">SHOTGUN AU TARIF NORMAL<br>OUVERTURE LE 8 OCTOBRE A 10H30</h2>
+		</div>
+		
+		
+	</div>
+	
+	<div class="perms">
+		<h1 style="margin:50px;grid-column:1/4;grid-row:1;">Nos différentes perms préventes</h1>
+		<h2 style="grid-column:1/4;grid-row:2;font-size:100%;">Toutes les perms ont lieu le midi dans les écoles concernées (marquées par &#10004;).<br><br><i>Suite à l'épuisement de notre billetterie, les perms préventes dans les écoles sont annulées.<br>De nouvelles places seront mises en vente le vendredi 11 octobre pour les retardataires.</i></h2>
+		<div id="perms_button_left" style="width:50px;cursor:pointer;align-self:center;" onClick="drawerLeft()">
+			<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			viewBox="0 0 500 500" xml:space="preserve">
+			<path style="fill-opacity:0;stroke:#fff;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;"
+			d="M450,20 l-250,235 l250,235">
+			</svg>
+		</div>
+		<div class="perms_grid">
+		<table class="perms_table" id="table1">
+			<tr>
+				<td width="160px">&nbsp;</td>
+				<th scope="col">Lundi 30</th>
+				<th scope="col">Mardi 1</th>
+				<th scope="col">Mercredi 2</th>
+				<th scope="col">Jeudi 3</th>
+				<th scope="col">Vendredi 4</th>
+			</tr>
+			<tr>
+				<th scope="row">Ponts</th>
+				<td class="table_ok">&#10004;</td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">Mines Paris Tech</th>
+				<td></td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+			</tr>
+			<tr>
+				<th scope="row">Veto</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+			</tr>
+			<tr>
+				<th scope="row">ENSAE</th>
+				<td></td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+			</tr>
+			<tr>
+				<th scope="row">Ensta</th>
+				<td></td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+			</tr>
+			<tr>
+				<th scope="row">Polytechnique</th>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+			</tr>
+			<tr>
+				<th scope="row">Chimie</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">Polytech Paris Sud</th>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">ENS Cachan</th>
+				<td></td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">ESCP</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">ESTP</th>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">ESPCI</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">Supoptique</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">IUT d'Orsay</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<table class="perms_table" id="table2">
+			<tr>
+				<td width="160px">&nbsp;</td>
+				<th scope="col">Lundi 7</th>
+				<th scope="col">Mardi 8</th>
+				<th scope="col">Mercredi 9</th>
+				<th scope="col">Jeudi 10</th>
+				<th scope="col">Vendredi 11</th>
+			</tr>
+			<tr>
+				<th scope="row">Ponts</th>
+				<td class="table_ok">&#10004;</td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">Mines Paris Tech</th>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">Veto</th>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">ENSAE</th>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">Ensta</th>
+				<td class="table_ok">&#10004;</td>
+				<td class="table_ok">&#10004;</td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">Polytechnique</th>
+				<td></td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">Chimie</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">Polytech Paris Sud</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">ENS Cachan</th>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">ESCP</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">ESTP</th>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">ESPCI</th>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">Supoptique</th>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<th scope="row">IUT d'Orsay</th>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+				<td class="table_ok">&#10004;</td>
+				<td></td>
+			</tr>
+		</table>
+		</div>
+		<div id="perms_button_right" style="width:50px;cursor:pointer;align-self:center;" onClick="drawerRight()">
+			<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			viewBox="0 0 500 500" xml:space="preserve">
+			<path style="fill-opacity:0;stroke:#fff;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;"
+			d="M50,20 l250,235 l-250,235">
+			</svg>
+		</div>
+	</div>
+
+	<div class="infos">
+		<h1>Informations</h1>
+		<br><br>
+		pour suivre toutes les mises à jour de l'évènement : <a href="https://www.facebook.com/events/502646660485952/" target="_blank"><i>facebook.com/events/502646660485952/</i></a>
+		<br><br>
+		<strong>école CentraleSupélec</strong><br>
+		__________<br><br>
+		<b>· 1-3 rue joliot curie, 91190 gif-sur-yvette ·</b><br>
+		accès via le RER B (arrêt le guichet) ou via les bus 91.06 ou 91.10 depuis massy-palaiseau (arrêt joliot-curie)
+		<br><br><br>
+		<strong>vestiaire gratuit</strong><br>
+		<strong>navettes gratuites disponibles</strong><br>
+		__________<br><br>
+		carte étudiante obligatoire | l’organisation se réserve le droit d’entrée<br><br>
+		contact : <a href="https://www.facebook.com/adr.centralesupelec/" target="_blank"><i>facebook.com/adr.centralesupelec/</i></a><br>
+		
+	</div>
+	
+	<div class="trailer">
+	</div>
+
+</body>
+</html>
