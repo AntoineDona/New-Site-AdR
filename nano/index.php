@@ -130,12 +130,12 @@
 
 		<script type="text/javascript">
 			function shotgun() {
-				window.location = 'action.php';
+				window.location = 'https://adr.cs-campus.fr/nano/action.php';
 			}
 
 			function verif() {
 				if (confirm("En cliquant sur OK, tu annules ta place et la remets en jeu.")) {
-					window.location = 'action.php';
+					window.location = 'https://adr.cs-campus.fr/nano/action.php';
 				}
 			}
 		</script>
