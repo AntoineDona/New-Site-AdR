@@ -66,7 +66,7 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 			$stmt->bindValue(':prenom', $_SESSION["prenom"]);
 			$res = $stmt->execute();
 			$_SESSION['shotgun'] = false;
-			header("Location: https://adr.cs-campus.fr/nano/");
+			header("Location: https://adr.cs-campus.fr/nano/test.php");
       	}
 	}
 } else {
