@@ -41,7 +41,7 @@ $_SESSION["promo"]=$_SESSION["user"]["promo"];
  
 <?php 
 date_default_timezone_set('Europe/Paris');
-$current_date_sec = (((date('d')-1)*24 + date('H'))*60 + date('i'))*60 + date('s');
+// $current_date_sec = (((date('d')-1)*24 + date('H'))*60 + date('i'))*60 + date('s');
 $shotgun_date = mktime(21, 0, 0, 9, 28, 2020);
 // $shotgun_date_sec = (((date('d', $shotgun_date)-1)*24 + date('H', $shotgun_date))*60 + date('i', $shotgun_date))*60 + date('s', $shotgun_date);
 $end_date = mktime(23, 50, 0, 9, 29, 2022);
@@ -51,7 +51,7 @@ if (time() >= $shotgun_date && time() <= $end_date) {
 		header("Location: https://adr.cs-campus.fr/nano/non_cotisant.php");
 	} else {
 		if (!$_SESSION['shotgun']) {
-			if (number_place($pdo) < 550) {
+			if (number_place($pdo) < 200) {
 				$query=$pdo->prepare("INSERT into equinanox (prenom,nom,heure) VALUES (?,?,?)");
 				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],date("H:i:s")));
 				$_SESSION['shotgun'] = true;
@@ -66,7 +66,7 @@ if (time() >= $shotgun_date && time() <= $end_date) {
 			$stmt->bindValue(':prenom', $_SESSION["prenom"]);
 			$res = $stmt->execute();
 			$_SESSION['shotgun'] = false;
-			header("Location: https://adr.cs-campus.fr/nano/test.php");
+			header("Location: https://adr.cs-campus.fr/nano/index.php");
       	}
 	}
 } else {
