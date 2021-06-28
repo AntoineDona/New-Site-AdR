@@ -20,7 +20,7 @@ function number_place($pdo){
 		$result= $query->fetch();
 		return $result['c'];
 }
-if (number_place($pdo)<550){
+if (number_place($pdo)<200){
 	if ($_SESSION["isConnected"]){
 		header("Location: https://adr.cs-campus.fr/nano/index.php");
 	}
