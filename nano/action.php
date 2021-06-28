@@ -5,7 +5,8 @@
 <html>
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<title>EQUINANOXE</title><link rel="icon" type="image/png" href="img/adr_ico.png" />
+<title>EQUINANOXE</title>
+<link rel="icon" type="image/png" href="img/adr_ico.png" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body>
