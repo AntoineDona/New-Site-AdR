@@ -43,10 +43,10 @@ $_SESSION["promo"]=$_SESSION["user"]["promo"];
 date_default_timezone_set('Europe/Paris');
 $current_date_sec = (((date('d')-1)*24 + date('H'))*60 + date('i'))*60 + date('s');
 $shotgun_date = mktime(21, 0, 0, 9, 28, 2020);
-$shotgun_date_sec = (((date('d', $shotgun_date)-1)*24 + date('H', $shotgun_date))*60 + date('i', $shotgun_date))*60 + date('s', $shotgun_date);
+// $shotgun_date_sec = (((date('d', $shotgun_date)-1)*24 + date('H', $shotgun_date))*60 + date('i', $shotgun_date))*60 + date('s', $shotgun_date);
 $end_date = mktime(23, 50, 0, 9, 29, 2022);
-$end_date_sec = (((date('d', $end_date)-1)*24 + date('H', $end_date))*60 + date('i', $end_date))*60 + date('s', $end_date);
-if (time() >= $shotgun_date ) { //|| $current_date_sec <= $end_date_sec
+// $end_date_sec = (((date('d', $end_date)-1)*24 + date('H', $end_date))*60 + date('i', $end_date))*60 + date('s', $end_date);
+if (time() >= $shotgun_date && time() <= $end_date) { 
 	if ($_SESSION["cotisant"] == false) {
 		header("Location: https://adr.cs-campus.fr/nano/non_cotisant.php");
 	} else {
