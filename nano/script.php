@@ -22,10 +22,10 @@ function timer() {
 	var date = new Date();
 	<?php
 	if ($_SESSION['shotgun']) { 
-		echo 'var date_shotgun = new Date(2020, 08, 29, 22, 00);';
+		echo 'var date_shotgun = new Date(2022, 08, 29, 22, 00);';
 		echo 'title = "Début du NANO dans";';
 	} else {
-		echo 'var date_shotgun = new Date(2020, 08, 28, 21, 00);';
+		echo 'var date_shotgun = new Date(2022, 08, 28, 21, 00);';
 		echo 'title = "Ouverture du shotgun dans";';
 	}
 	?>
