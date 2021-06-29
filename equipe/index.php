@@ -35,7 +35,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole buro">
                     <h2 id="buro">⚙ Le Buro ⚙ </h2>
-                    <img class="prez" src="img_poles/Table.jpg">
+                    <img class="prez" src="img_poles/Table.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Fraîchement élu, prêt à tout changer !!
                         Que ce soit au niveau des résidences, des lieux de vie ou encore des différents évènements et activités proposés par l’AdRCS prochainement, nous avons pour objectif de faire ce pourquoi cette association a été créée, c’est à dire représenter et faire plaisir aux résidents du campus ! ❤❤
@@ -44,7 +44,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole">
                     <h2 id="ptitdej">🥐 VP P'tit Dej 🥐</strong></h2>
-                    <img class="prez" src="img_poles/ptit-dej.jpg">
+                    <img class="prez" src="img_poles/ptit-dej.jpg" onclick="window.open(this.src,'_self')">
                     <p>Description P'tit Dej </p>
                 </div>
 
@@ -53,7 +53,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole">
                     <h2 id="khafet">🍕 VP Khâfet 🍕</strong></h2>
-                    <img class="prez" src="img_poles/Khafet.jpg">
+                    <img class="prez" src="img_poles/Khafet.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Description de la Khâfet
                     </p>
@@ -63,7 +63,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole">
                     <h2 id="khoope">🥪 VP Khoôpé 🥪</strong></h2>
-                    <img class="prez" src="img_poles/Kopé.jpg">
+                    <img class="prez" src="img_poles/Kopé.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Description Koôpée
                     </p>
@@ -73,7 +73,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole">
                     <h2 id="bar">🍺 VP Bar 🍺</strong></h2>
-                    <img class="prez" src="img_poles/Bar.jpg">
+                    <img class="prez" src="img_poles/Bar.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Description du Bar
                         <!-- Vous servir bière au musée et alcool en soirée (quand y’en aura), toujours être chaud(e) pour un BP (qu’on va gagner), nous et Bertrand le gérant du musée seront vos VPs bar cette année et telle est notre mission.
@@ -85,7 +85,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole">
                     <h2 id="soiree">💃 VP Soirées et VP CQ 🚚</strong></h2>
-                    <img class="prez" src="img_poles/CQ-Soirée.jpg">
+                    <img class="prez" src="img_poles/CQ-Soirée.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Description des pôles CQ et Soirée
                     </p>
@@ -103,7 +103,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole">
                     <h2 id="eventos">🍣 VP Eventos 🍣</strong></h2>
-                    <img class="prez" src="img_poles/Eventos.jpg">
+                    <img class="prez" src="img_poles/Eventos.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Desciption du pôle Eventos
                         <!-- Le pôle eventos est un mélange entre les douceurs culinaires espagnoles et le savoir-vivre français pour des apéros toujours plus qualis et des événements encore plus hardcore. Tout au long de l’année il te permettra d’assister à des afterwork endiablés au musée, à des cafés débats (si tu te sens pousser des ailes de philosophes), à la création d’un coin chill au musée et bien d’autres choses encore.
@@ -121,7 +121,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole rez">
                     <h2 id="rez">🏚 VP Rez 🏚</strong></h2>
-                    <img class="prez" src="img_poles/Rez.jpg">
+                    <img class="prez" src="img_poles/Rez.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Desciption du pôle ReZ
                         <!-- Puisque ça ne s'appelle pas l'Association des REZidents pour rien, c'est au tour du pôle Rez de se présenter.
@@ -134,7 +134,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole qom">
                     <h2 id="qom">🧠 VP Qom 🧠</strong></h2>
-                    <img class="prez" src="img_poles/Qom.jpg">
+                    <img class="prez" src="img_poles/Qom.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Qom prévu le meilleur pour la fin, le Qoeur de l'AdR, le pôle qui fait tourner le Qampus, finalement j'ai nommé le pôle Qom. Nous faisons des visuels pour tous nos évènements genre soirées (quand y en aura), par des tentures, affiches, flyers, aQQompagnés de toute la QommuniQation qui en déQoule (fb, insta, snap, linkdIn, chatroulette, etc.). On en profite pour sharker quelques entreprises au passage :)
                         On fait aussi dans l'import-export de tentures (et la peinture qui va aveQ), que l'on vous fournira à un prix Qordial ;)
@@ -176,35 +176,35 @@ function display_buttons($nbr_annees)
                 <h1>AdR 2020</h1>
                 <div class="vieux">
                     <div class="pole">
-                        <a href="Vieux/2020/Buro.jpg"><img src="Vieux/2020/Buro.jpg"></a>
+                        <img src="Vieux/2020/Table.jpg" onclick="window.open(this.src,'_self')">
                         <p>Le Buro</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2020/Ptit Dej.jpg"><img src="Vieux/2020/Ptit Dej.jpg"></a>
+                        <img src="Vieux/2020/Ptit Dej.jpg" onclick="window.open(this.src,'_self')">
                         <p>Le P'tit Dej</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2020/Bar.jpg"><img src="Vieux/2020/Bar.jpg"></a>
+                        <img src="Vieux/2020/Bar.jpg" onclick="window.open(this.src,'_self')">
                         <p>Le Bar</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2020/CQ Soiree.jpg"><img src="Vieux/2020/CQ Soiree.jpg"></a>
+                        <img src="Vieux/2020/CQ Soiree.jpg" onclick="window.open(this.src,'_self')">
                         <p>Les CQ-Soirée</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2020/Copé.jpg"><img src="Vieux/2020/Copé.jpg"></a>
+                        <img src="Vieux/2020/Copé.jpg" onclick="window.open(this.src,'_self')">
                         <p>La Khoôpé</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2020/Qom.jpg"><img src="Vieux/2020/Qom.jpg"></a>
+                        <img src="Vieux/2020/Qom.jpg" onclick="window.open(this.src,'_self')">
                         <p>La Qom</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2020/Khâfet.jpg"><img src="Vieux/2020/Khâfet.jpg"></a>
+                        <img src="Vieux/2020/Khâfet.jpg" onclick="window.open(this.src,'_self')">
                         <p>La Khâfet</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2020/Rez.jpg"><img src="Vieux/2020/Rez.jpg"></a>
+                        <img src="Vieux/2020/Rez.jpg" onclick="window.open(this.src,'_self')">
                         <p>La ReZ</p>
                     </div>
                 </div>
@@ -214,39 +214,39 @@ function display_buttons($nbr_annees)
                 <h1>AdR 2019</h1>
                 <div class="vieux">
                 <div class="pole">
-                        <a href="Vieux/2019/Buro.jpeg"><img src="Vieux/2019/Buro.jpeg"></a>
+                        <img src="Vieux/2019/Table.jpeg" onclick="window.open(this.src,'_self')">
                         <p>Le Buro</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2019/Ptit Dej.jpeg"><img src="Vieux/2019/Ptit Dej.jpeg"></a>
+                       <img src="Vieux/2019/Ptit Dej.jpeg" onclick="window.open(this.src,'_self')">
                         <p>Le P'tit Dej</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2019/Bar.jpeg"><img src="Vieux/2019/Bar.jpeg"></a>
+                        <img src="Vieux/2019/Bar.jpeg" onclick="window.open(this.src,'_self')">
                         <p>Le Bar</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2019/CQ.jpeg"><img src="Vieux/2019/CQ.jpeg"></a>
+                        <img src="Vieux/2019/CQ.jpeg" onclick="window.open(this.src,'_self')">
                         <p>Les CQ</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2019/Soirée.jpeg"><img src="Vieux/2019/Soirée.jpeg"></a>
+                        <img src="Vieux/2019/Soirée.jpeg" onclick="window.open(this.src,'_self')">
                         <p>Les Soirée</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2019/Copé.jpeg"><img src="Vieux/2019/Copé.jpeg"></a>
+                        <img src="Vieux/2019/Copé.jpeg" onclick="window.open(this.src,'_self')">
                         <p>La Khoôpé</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2019/Qom.jpeg"><img src="Vieux/2019/Qom.jpeg"></a>
+                        <img src="Vieux/2019/Qom.jpeg" onclick="window.open(this.src,'_self')">
                         <p>La Qom</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2019/Khâfet.jpeg"><img src="Vieux/2019/Khâfet.jpeg"></a>
+                        <img src="Vieux/2019/Khâfet.jpeg" onclick="window.open(this.src,'_self')">
                         <p>La Khâfet</p>
                     </div>
                     <div class="pole">
-                        <a href="Vieux/2019/Rez.jpeg"><img src="Vieux/2019/Rez.jpeg"></a>
+                        <img src="Vieux/2019/Rez.jpeg" onclick="window.open(this.src,'_self')">
                         <p>La ReZ</p>
                     </div>
                 </div>
