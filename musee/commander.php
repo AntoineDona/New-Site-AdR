@@ -175,14 +175,14 @@ include("included/database.php");
             </h3>
             </p> -->
         </section>
-        <section class="carte infos">
+        <!-- <section class="carte infos">
             <h2>Ce soir c'est match! <br> 🇫🇷 vs 🇩🇪</h2>
             <h3 style="font-size: 2rem; margin-top:1rem;">Pour fêter cela, la personne qui commandera la 100ème bière, puis la 200ème puis la 300ème (tout les 100 t'as capté) se verra offrir <span style="font-weight: bold;">une pinte de Kro</span> par le BDS et l'AdR!!</h3>
             <h2>Compteur de bières: <span style="font-weight: bold;">
             <?php
             $nbr_cmd = $bdd->query('SELECT beermax FROM commande ORDER BY id DESC LIMIT 1');
             while ($row = $nbr_cmd->fetch()) {
-                echo $row['beermax'];
+                //echo $row['beermax'];
             };
             ?> x 🍺</span></h2>
             <h2 style="margin-top: 1rem; text-decoration: underline;">Gagnants:</h2>
@@ -190,9 +190,9 @@ include("included/database.php");
             <li><h3 style="font-size: 2rem; margin-top:1rem;">100ème bière: Arnò - Table n°31 </h3></li>
             <li><h3 style="font-size: 2rem; margin-top:1rem;">200ème bière: Pierre-Amaury - Table n°34 </h3></li>
             <li><h3 style="font-size: 2rem; margin-top:1rem;">300ème bière: ??? </h3></li>
-            <!-- <li><h3 style="font-size: 2rem; margin-top:1rem;">400ème bière: ??? </h3></li>
-            <li><h3 style="font-size: 2rem; margin-top:1rem;">500ème bière: ??? </h3></li> -->
-            </ul>
+            <li><h3 style="font-size: 2rem; margin-top:1rem;">400ème bière: ??? </h3></li>
+            <li><h3 style="font-size: 2rem; margin-top:1rem;">500ème bière: ??? </h3></li>
+            </ul> -->
             
             <!-- <h3 style="color:darkred;"> ⚠️Attention: en raison de la réouverture de la terrasse, nous arrêtons les livraisons le midi et le soir ⚠️ <br> Un grand MERCI à Huma et plus récemment Capèse pour leur aide précieuse! &lt;3 </h6> -->
 
@@ -205,7 +205,7 @@ include("included/database.php");
                 <!-- <h3>Le Menu de la semaine est disponible <a href="img/menu_semaine_07-02.jpeg">ici</a></h3>
 			<br> -->
                 <!-- <h2>Réserve ton p'tit dej de Mardi <a href=" https://docs.google.com/forms/d/e/1FAIpQLSdIl2pjrZ99A-Os2xXWpXKGB8F2PuGrlvXk5AEv-xbsJmFIXQ/viewform?usp=sf_link">ici</a> ! -->
-        </section>
+        <!-- </section> -->
         <form method="POST" action="confirmation.php">
         <section class="carte">
             <h1>Carte du jour</h1>
