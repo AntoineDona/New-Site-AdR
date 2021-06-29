@@ -712,6 +712,10 @@ section.poles {
     background-color: rgba(255, 255, 255, 0.555);
 }
 
+.vieux .pole img {
+    width: 100%;
+}
+
 @media screen and (max-width:500px) {
     .vieux {
         flex-direction: column;
