@@ -21,6 +21,11 @@ function display_buttons($nbr_annees)
 </head>
 
 <body>
+    <script>
+        function openImg(){
+            window.open(this.getElementsByTagName('img')[0].src,'_self')
+        }
+    </script>
     <?php include "../included/header.php" ?>
     <main id="swup" class="transition-fade">
         <section class="hero adr2k21" id="adr2k21">
@@ -42,7 +47,7 @@ function display_buttons($nbr_annees)
                     </p>
                 </div>
 
-                <div class="pole">
+                <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')" >
                     <h2 id="ptitdej">🥐 VP P'tit Dej 🥐</strong></h2>
                     <img class="prez" src="img_poles/ptit-dej.jpg" onclick="window.open(this.src,'_self')">
                     <p>Description P'tit Dej </p>
@@ -51,9 +56,9 @@ function display_buttons($nbr_annees)
 
                 <div class="separator"></div>
 
-                <div class="pole">
+                <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="khafet">🍕 VP Khâfet 🍕</strong></h2>
-                    <img class="prez" src="img_poles/Khafet.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/Khafet.jpg" >
                     <p>
                         Description de la Khâfet
                     </p>
@@ -61,7 +66,7 @@ function display_buttons($nbr_annees)
 
                 <div class="separator"></div>
 
-                <div class="pole">
+                <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="khoope">🥪 VP Khoôpé 🥪</strong></h2>
                     <img class="prez" src="img_poles/Kopé.jpg" onclick="window.open(this.src,'_self')">
                     <p>
@@ -71,7 +76,7 @@ function display_buttons($nbr_annees)
 
                 <div class="separator"></div>
 
-                <div class="pole">
+                <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="bar">🍺 VP Bar 🍺</strong></h2>
                     <img class="prez" src="img_poles/Bar.jpg" onclick="window.open(this.src,'_self')">
                     <p>
@@ -83,7 +88,7 @@ function display_buttons($nbr_annees)
 
                 <div class="separator"></div>
 
-                <div class="pole">
+                <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="soiree">💃 VP Soirées et VP CQ 🚚</strong></h2>
                     <img class="prez" src="img_poles/CQ-Soirée.jpg" onclick="window.open(this.src,'_self')">
                     <p>
@@ -101,7 +106,7 @@ function display_buttons($nbr_annees)
                 <img class="prez" src="CQ.jpeg">
                  -->
 
-                <div class="pole">
+                <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="eventos">🍣 VP Eventos 🍣</strong></h2>
                     <img class="prez" src="img_poles/Eventos.jpg" onclick="window.open(this.src,'_self')">
                     <p>
@@ -113,13 +118,13 @@ function display_buttons($nbr_annees)
 
                 <div class="separator"></div>
 
-                <!-- <div class="pole">
+                <!-- <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                 <h2 id="saclay">🏗 VP Saclay 🏗</strong></h2>
                 <p>
                     Le pôle Saclay, c’est le pôle qui s’occupera cette année de l’arrivée de l’ENS Paris-Saclay, notamment au niveau des résidences et de la vie commune qu’on devra mener à partir de l’année prochaine. C’est aussi le pôle qui peut se charger des aménagements pour le plateau, de la navette/bus aux terrains de sport.
                 </p></div> -->
 
-                <div class="pole rez">
+                <div class="pole rez" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="rez">🏚 VP Rez 🏚</strong></h2>
                     <img class="prez" src="img_poles/Rez.jpg" onclick="window.open(this.src,'_self')">
                     <p>
@@ -132,7 +137,7 @@ function display_buttons($nbr_annees)
 
                 <div class="separator"></div>
 
-                <div class="pole qom">
+                <div class="pole qom" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="qom">🧠 VP Qom 🧠</strong></h2>
                     <img class="prez" src="img_poles/Qom.jpg" onclick="window.open(this.src,'_self')">
                     <p>
@@ -175,35 +180,35 @@ function display_buttons($nbr_annees)
             <div class="tabPanel" id="2020">
                 <h1>AdR 2020</h1>
                 <div class="vieux">
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2020/Table.jpg" onclick="window.open(this.src,'_self')">
                         <p>Le Buro</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2020/Ptit Dej.jpg" onclick="window.open(this.src,'_self')">
                         <p>Le P'tit Dej</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2020/Bar.jpg" onclick="window.open(this.src,'_self')">
                         <p>Le Bar</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2020/CQ Soiree.jpg" onclick="window.open(this.src,'_self')">
                         <p>Les CQ-Soirée</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2020/Copé.jpg" onclick="window.open(this.src,'_self')">
                         <p>La Khoôpé</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2020/Qom.jpg" onclick="window.open(this.src,'_self')">
                         <p>La Qom</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2020/Khâfet.jpg" onclick="window.open(this.src,'_self')">
                         <p>La Khâfet</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2020/Rez.jpg" onclick="window.open(this.src,'_self')">
                         <p>La ReZ</p>
                     </div>
@@ -213,39 +218,39 @@ function display_buttons($nbr_annees)
             <div class="tabPanel" id="2019">
                 <h1>AdR 2019</h1>
                 <div class="vieux">
-                <div class="pole">
+                <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2019/Table.jpeg" onclick="window.open(this.src,'_self')">
                         <p>Le Buro</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                        <img src="Vieux/2019/Ptit Dej.jpeg" onclick="window.open(this.src,'_self')">
                         <p>Le P'tit Dej</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2019/Bar.jpeg" onclick="window.open(this.src,'_self')">
                         <p>Le Bar</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2019/CQ.jpeg" onclick="window.open(this.src,'_self')">
                         <p>Les CQ</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2019/Soirée.jpeg" onclick="window.open(this.src,'_self')">
                         <p>Les Soirée</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2019/Copé.jpeg" onclick="window.open(this.src,'_self')">
                         <p>La Khoôpé</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2019/Qom.jpeg" onclick="window.open(this.src,'_self')">
                         <p>La Qom</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2019/Khâfet.jpeg" onclick="window.open(this.src,'_self')">
                         <p>La Khâfet</p>
                     </div>
-                    <div class="pole">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2019/Rez.jpeg" onclick="window.open(this.src,'_self')">
                         <p>La ReZ</p>
                     </div>
