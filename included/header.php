@@ -7,7 +7,7 @@
 <header>
     <nav>
         <div class="logo">
-            <a href="#"><img src="/images/logo.png" alt=""></a>
+            <a href="/"><img src="/images/logo.png" alt=""></a>
         </div>
         <ul class="nav-links">
             <li class="nav-item">
