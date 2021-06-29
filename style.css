@@ -58,6 +58,7 @@ section {
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 p {
@@ -364,7 +365,7 @@ nav {
 }
 
 .imgt {
-    width: 20rem;
+    width: 40rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -540,7 +541,7 @@ nav {
 
 /* La REZ ------------------------------------------------------------------------------------------ */
 
-.rez {
+.hero.rez {
     background-image: url(/rez/img/muses.jpg);
 }
 
@@ -551,19 +552,9 @@ nav {
     background-image: url(/equipe/img_poles/AdR_2k21.jpg);
 }
 
-.poles {
+section.poles {
     padding: 2rem 0;
     align-items: center;
-}
-
-.poles h1 {
-    font-size: 3rem;
-    margin-bottom: 1em;
-}
-
-.poles h2 {
-    font-size: 2rem;
-    margin: 1em 0;
 }
 
 #equipe {
@@ -573,17 +564,71 @@ nav {
     justify-content: center;
 }
 
-#equipe .separator {
+/* #equipe .separator {
     width: 50%;
     height: 2px;
     background-color: rgb(161, 161, 161);
     margin-bottom: 2rem;
+} */
+
+.y2021 .pole {
+    width: 50vw;
+    border-radius: 2rem;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.11);
+    overflow: hidden;
+    margin: 0.5rem 0;
+    position: relative;
+    height: auto;
+    background-color: white;
+    transition: all ease 0.4s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#equipe img {
-    margin: 2rem 0;
+
+.pole:hover {
+    scale: 1.01;
+    transition: all ease 0.4s;
+    cursor: pointer;
 }
 
+.pole img{
+    max-height: 90vh;
+    width: auto;
+}
+
+.pole h1{
+    font-size: 3rem;
+    margin-bottom: 1em;
+}
+
+.pole h2 {
+    font-size: 2.5rem;
+    margin: 0.8em auto;
+}
+
+.pole p{
+    color: black;
+    font-size: 1.4rem;
+    padding: 1rem;
+    bottom:0rem;
+    background-color: rgba(255, 255, 255, 0.842);
+    width: 100%;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width:500px) {
+    .y2021 .pole {
+        width:95vw;
+
+    }
+
+    .imgt {
+    width: 40rem;
+    }
+
+}
 /* Vieux  */
 
 .tabContainer {
@@ -607,33 +652,77 @@ nav {
     text-align: center;
     font-family: sans-serif;
     font-size: 1.8rem;
-    background-color: #eee;
+    background-color: white;
+    border: solid 2px black;
 }
 
 .tabContainer .buttonContainer button:hover {
-    background-color: #d7d4d4;
+    background-color: black;
+    color: white;
+    transition: all ease 0.4s;
 }
 
 .tabContainer .tabPanel {
     color: black;
     text-align: center;
     box-sizing: border-box;
-    box-sizing: border-box;
     font-family: sans-serif;
     font-size: 22px;
-    display: none;
     padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .tabPanel h1 {
     margin-bottom: 5rem;
 }
 
-.tabPanel img {
+.tabPanel .pole {
     width: 40%;
+    margin: 0.5rem ;
+    min-width: 30rem;
 }
 
+.vieux{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+}
 
+.vieux .pole{
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.11);
+    position: relative;
+    height: auto;
+    background-color: white;
+    transition: all ease 0.4s;
+
+}
+
+.vieux .pole p{
+    position: absolute;
+    bottom: 0;
+    margin:unset;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.555);
+}
+
+@media screen and (max-width:500px) {
+    .vieux {
+        flex-direction: column;
+        width:95vw;
+    }
+
+    .vieux .pole {
+        width: 100%;
+    }
+
+}
 
 /* Partenariats --------------------------------------------------------------------------------------------- */
 
