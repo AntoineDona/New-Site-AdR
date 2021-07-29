@@ -90,7 +90,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="soiree">💃 VP Soirées et VP CQ 🚚</strong></h2>
-                    <img class="prez" src="img_poles/CQ-Soirée.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/cq-soirée.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Description des pôles CQ et Soirée
                     </p>
