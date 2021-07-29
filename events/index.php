@@ -4,7 +4,7 @@
 
 <head>
     <?php include "../included/meta.php" ?>
-    <title>Nos événements</title>
+    <title>Nos événements - AdR CentraleSupélec (AdRCS)</title>
 </head>
 
 <body>

@@ -10,6 +10,7 @@
 <script defer src="/app.js"></script>
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/master.css">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 

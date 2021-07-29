@@ -33,7 +33,7 @@
             "url": "https://adr.cs-campus.fr/musee/index.php"
         }
     </script>
-    <title>Le Musée</title>
+    <title>Le Musée - AdR CentraleSupélec (AdRCS)</title>
 </head>
 
 <body>
