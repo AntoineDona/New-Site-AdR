@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <?php include "../included/meta.php" ?>
-    <title>Rez</title>
+    <title>Infos ReZ - AdR CentraleSupélec (AdRCS)</title>
 </head>
 <body>
     <?php include "../included/header.php"?>

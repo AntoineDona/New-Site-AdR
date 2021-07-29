@@ -4,7 +4,7 @@
 
 <head>
     <?php include "../included/meta.php" ?>
-    <title>A propos de l'AdR</title>
+    <title>A propos - AdR CentraleSupélec (AdRCS)</title>
 </head>
 
 <body>

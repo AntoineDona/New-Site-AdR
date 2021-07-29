@@ -17,7 +17,7 @@ function display_buttons($nbr_annees)
 
 <head>
     <?php include "../included/meta.php" ?>
-    <title>Notre équipe</title>
+    <title>Notre Equipe - AdR CentraleSupélec (AdRCS)</title>
 </head>
 
 <body>
