@@ -128,7 +128,10 @@ function display_buttons($nbr_annees)
                     <h2 id="rez">🏚 VP Rez 🏚</strong></h2>
                     <img class="prez" src="img_poles/Rez.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                        Desciption du pôle ReZ
+                    Le pôle rez est posté en bas des blocs de Césal toute l’année, été compris ☀️, 
+                    pour représenter les résidents au quotidien 🏠, répondre à vos questions, 
+                    être l’intermédiaire en cas de litige, proposer des améliorations des résidences comme notre superbe terrain de pétanque 🏆, 
+                    gérer le matos et les prêts sur le campus, collaborer dans des projets sur tout le plateau de Saclay et évidemment peupler ce bon vieux Musée 🍻
                         <!-- Puisque ça ne s'appelle pas l'Association des REZidents pour rien, c'est au tour du pôle Rez de se présenter.
                         Vous avez déjà reçu notre mail de présentation la semaine dernière (et oui, on est des années lumières devant les autres pôles).
                         Ce qu’il faut surtout retenir, c’est que Léonard Corre, le Prez Rez, et les trois VP Rez Alexandre Couret, Guillaume Raysseguier et Clément Franey sont là pour représenter les résidents devant CESAL, et ramener la Poly à la maison. (RIP) -->
