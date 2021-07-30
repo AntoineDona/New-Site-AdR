@@ -26,7 +26,26 @@
         <div class="separator"></div>
     </div>
     <div class="footer-bottom">
-        <p>&copy;2020 disigned with ❤️🖤 by <span> AdR CentraleSupélec</span></p>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.php">
+                        <p>AdR CentraleSupélec</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index.php">
+                        <p>Mentions légales</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/index.php">
+                        <p>Ressources</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p>&copy;2020 disigned with ❤️🖤 in <a href="https://goo.gl/maps/BUUanjo1udNpVJdK6" target="_blank"> Gif-sur-Yvette</a></p>
     </div>
     <div id="preload">
         <img src="/Musee/img/bgimage1.jpg" />
