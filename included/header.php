@@ -32,11 +32,11 @@
                                                                 echo "current";
                                                             } ?>">Commander</a>
             </li> -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a href="/about/" class="nav-link <?php if ($page == 'Apropos') {
                                                                 echo "current";
                                                             } ?>">A propos</a>
-            </li>
+            </li> -->
         </ul>
         <div class="burger">
             <div class="line1"></div>
