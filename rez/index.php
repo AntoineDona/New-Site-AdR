@@ -30,7 +30,7 @@
 
                 <div class="questions">
                     <div class="visible-pannel">
-                        <h2>Quand se font les réservations à Césal pour les premières années (GPA) ?</h2>
+                        <h2>Quand se font les réservations à Césal pour les première année (GPA) ?</h2>
                         <i class="fas fa-plus"></i>
                         <i class="fas fa-minus"></i>
                     </div>
