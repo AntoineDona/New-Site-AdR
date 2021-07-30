@@ -46,7 +46,7 @@
                         <i class="fas fa-minus"></i>
                     </div>
                     <div class="toggle-pannel">
-                        <p>Il faut aller dans “activer mon compte” sur <a href="cesal.fr">cesal.fr</a>
+                        <p>Il faut aller dans “activer mon compte” sur <a href="https://www.cesal.fr/">cesal.fr</a>
                             et utiliser son adresse mail utilisée pour SCEI si vous n’avez pas encore votre adresse student-cs </p>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                         <i class="fas fa-minus"></i>
                     </div>
                     <div class="toggle-pannel">
-                        <p>Il existe des sites comme <a href="garentme.fr">garentme.fr</a> permettant d’obtenir un garant.</p>
+                        <p>Il existe des sites comme <a href="https://www.garentme.fr/">garentme.fr</a> permettant d’obtenir un garant.</p>
                     </div>
                 </div>
 
