@@ -821,6 +821,7 @@ footer {
 .footer-bottom nav ul {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   list-style-type: none;
   font-size: 1.4rem;
   word-spacing: 0.2px;
