@@ -369,7 +369,7 @@ header nav a:hover {
     flex-shrink: 0;
     flex-wrap: wrap;
     overflow-x: hidden;
-    background-color: rgba(249, 252, 255, 1);
+    background-color: white;
 }
 
 .smallapropos .cadre {
