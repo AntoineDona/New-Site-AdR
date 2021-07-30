@@ -81,7 +81,7 @@
                         <i class="fas fa-minus"></i>
                     </div>
                     <div class="toggle-pannel">
-                        <p>Il existe des sites comme <a href="https://www.garentme.fr/">garentme.fr</a> permettant d’obtenir un garant.</p>
+                        <p>Il existe des sites comme <a href="https://www.garantme.fr/">garentme.fr</a> ou <a href="https://www.visale.fr/">visale.fr</a> permettant d’obtenir un garant.</p>
                     </div>
                 </div>
 
