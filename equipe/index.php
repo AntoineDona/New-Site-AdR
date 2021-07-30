@@ -21,9 +21,10 @@ function display_buttons($nbr_annees)
 </head>
 
 <body>
+    <?php include "included/messenger.php" ?>
     <script>
-        function openImg(){
-            window.open(this.getElementsByTagName('img')[0].src,'_self')
+        function openImg() {
+            window.open(this.getElementsByTagName('img')[0].src, '_self')
         }
     </script>
     <?php include "../included/header.php" ?>
@@ -47,7 +48,7 @@ function display_buttons($nbr_annees)
                     </p>
                 </div>
 
-                <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')" >
+                <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="ptitdej">🥐 VP P'tit Dej 🥐</strong></h2>
                     <img class="prez" src="img_poles/ptit-dej.jpg" onclick="window.open(this.src,'_self')">
                     <p>Description P'tit Dej </p>
@@ -58,7 +59,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="khafet">🍕 VP Khâfet 🍕</strong></h2>
-                    <img class="prez" src="img_poles/Khafet.jpg" >
+                    <img class="prez" src="img_poles/Khafet.jpg">
                     <p>
                         Description de la Khâfet
                     </p>
@@ -128,10 +129,10 @@ function display_buttons($nbr_annees)
                     <h2 id="rez">🏚 VP Rez 🏚</strong></h2>
                     <img class="prez" src="img_poles/Rez.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                    Le pôle rez est posté en bas des blocs de Césal toute l’année, été compris ☀️, 
-                    pour représenter les résidents au quotidien 🏠, répondre à vos questions, 
-                    être l’intermédiaire en cas de litige, proposer des améliorations des résidences comme notre superbe terrain de pétanque 🏆, 
-                    gérer le matos et les prêts sur le campus, collaborer dans des projets sur tout le plateau de Saclay et évidemment peupler ce bon vieux Musée 🍻
+                        Le pôle rez est posté en bas des blocs de Césal toute l’année, été compris ☀️,
+                        pour représenter les résidents au quotidien 🏠, répondre à vos questions,
+                        être l’intermédiaire en cas de litige, proposer des améliorations des résidences comme notre superbe terrain de pétanque 🏆,
+                        gérer le matos et les prêts sur le campus, collaborer dans des projets sur tout le plateau de Saclay et évidemment peupler ce bon vieux Musée 🍻
                         <!-- Puisque ça ne s'appelle pas l'Association des REZidents pour rien, c'est au tour du pôle Rez de se présenter.
                         Vous avez déjà reçu notre mail de présentation la semaine dernière (et oui, on est des années lumières devant les autres pôles).
                         Ce qu’il faut surtout retenir, c’est que Léonard Corre, le Prez Rez, et les trois VP Rez Alexandre Couret, Guillaume Raysseguier et Clément Franey sont là pour représenter les résidents devant CESAL, et ramener la Poly à la maison. (RIP) -->
@@ -221,12 +222,12 @@ function display_buttons($nbr_annees)
             <div class="tabPanel" id="2019">
                 <h1>AdR 2019</h1>
                 <div class="vieux">
-                <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2019/Table.jpeg" onclick="window.open(this.src,'_self')">
                         <p>Le Buro</p>
                     </div>
                     <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
-                       <img src="Vieux/2019/Ptit Dej.jpeg" onclick="window.open(this.src,'_self')">
+                        <img src="Vieux/2019/Ptit Dej.jpeg" onclick="window.open(this.src,'_self')">
                         <p>Le P'tit Dej</p>
                     </div>
                     <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">

@@ -1,14 +1,16 @@
-<?php $page="Home"?>
+<?php $page = "Home" ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <?php include "included/meta.php" ?>
-    <meta name="description" content="AdR CentraleSupélec. L'Association des résidents de CentaleSupélec (AdRCS) organise les grandes soirées de l'écoles CentraleSupélec, tient le Musée, bar de l'école et s'occupe des relations avec le gestionnaire de la résidence. AdR Centrale Supélec "/>
+    <meta name="description" content="AdR CentraleSupélec. L'Association des résidents de CentaleSupélec (AdRCS) organise les grandes soirées de l'écoles CentraleSupélec, tient le Musée, bar de l'école et s'occupe des relations avec le gestionnaire de la résidence. AdR Centrale Supélec " />
     <meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
     <title>Accueil - AdR CentraleSupélec (AdRCS)</title>
 </head>
+
 <body>
-<?php include "included/messenger.php" ?>
+    <?php include "included/messenger.php" ?>
     <?php include "included/header.php" ?>
     <main>
         <section class="hero accueil" id="hero">
@@ -16,7 +18,12 @@
                 <div class="imgt">
                     <img src="images/adr_anim.svg">
                 </div>
-                <h1 class="headline" id="A">A</h1><h1 class="headline">ssociation </h1> <h1 class="headline" id="d">d</h1><h1 class="headline">es </h1> <h1 class="headline" id="R"> R</h1><h1 class="headline">ésidents de CentraleSupélec</h1>
+                <h1 class="headline" id="A">A</h1>
+                <h1 class="headline">ssociation </h1>
+                <h1 class="headline" id="d">d</h1>
+                <h1 class="headline">es </h1>
+                <h1 class="headline" id="R"> R</h1>
+                <h1 class="headline">ésidents de CentraleSupélec</h1>
                 <div class="headline-description">
                     <div class="separator">
                         <div class="line line-left"></div>
@@ -60,7 +67,7 @@
             <div class="container">
                 <div class="global-headline">
                     <h1 id="titre-famille" class="sub-headline titre animate-bottom">
-                        
+
                     </h1>
                     <video src="Perms_Rez.mpeg"></video>
                 </div>
@@ -68,6 +75,7 @@
         </section>
     </main>
     <?php include "included/footer.php" ?>
-    
+
 </body>
+
 </html>
