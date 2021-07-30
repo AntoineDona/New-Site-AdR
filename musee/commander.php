@@ -136,6 +136,7 @@ include("included/database.php");
 </script>
 
 <body>
+<?php include "../included/messenger.php" ?>
     <?php include "included/header.php" ?>
     <main>
         <section class='hero commander'>
