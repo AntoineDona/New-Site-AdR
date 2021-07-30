@@ -4,6 +4,9 @@
 
 <head>
     <?php include "included/meta.php" ?>
+    <meta name="author" content="Antoine Do" />
+    <meta name="copyright" content="ADRCS - AdR CentraleSupéléc" />
+    <meta name="og:site_name" content="AdR CentraleSupélec" />
     <meta name="description" content="AdR CentraleSupélec. L'Association des résidents de CentaleSupélec (AdRCS) organise les grandes soirées de l'écoles CentraleSupélec, tient le Musée, bar de l'école et s'occupe des relations avec le gestionnaire de la résidence. AdR Centrale Supélec " />
     <meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
     <title>Accueil - AdR CentraleSupélec (AdRCS)</title>
@@ -32,12 +35,14 @@
                     </div>
                     <div class="single-animation">
                         <!-- <h5>Toujours là pour vous faire kiffer</h5> -->
-                        <a href="#" class="btn cta-btn">Nous découvrir</a>
+                        <a href="#discover" class="btn cta-btn">Nous découvrir</a>
                     </div>
                 </div>
             </div>
         </section>
+        
         <section class="evenements">
+        <a class="anchor" id="discover"></a>
             <div class="container">
                 <div class="info">
                     <div class="evenements-description padding-right animate-left">
@@ -54,7 +59,7 @@
                         <p class="evenement-info">
                             Nous sommes spécialisés dans l'organisation de soirées étudiantes. Ces soirées sont reconnues dans la France entière depuis des décennies. Le Quadrabang en est l'exemple parfait (l'édition 2019 a réuni près de 3000 personnes!).
                         </p>
-                        <a href="#" class="btn body-btn">Nos prochains évènements</a>
+                        <a href="/events/" class="btn body-btn">Nos prochains évènements</a>
                     </div>
                     <div class="evenements-info-img animate-right">
                         <img src="images/soirée.jpg" alt="" id="soiree">

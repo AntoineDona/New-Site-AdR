@@ -292,6 +292,15 @@ nav {
   }
 }
 
+/* Anchors -------- */
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -8rem;
+    visibility: hidden;
+}
+
 /* Accueil ------------------------------------------------------------------------------------------------------------ */
 
 .hero.accueil {
