@@ -27,8 +27,8 @@
     </div>
 </footer>
 <div id="preload">
-    <img src="/Musée/img/bgimage1.jpg" />
-    <img src="/Musée/img/bgimage2.jpg" />
-    <img src="/Musée/img/apropos.jpg" />
-    <img src="/Musée/img/apropos_bg.jpg" />
+    <img src="/Musee/img/bgimage1.jpg" />
+    <img src="/Musee/img/bgimage2.jpg" />
+    <img src="/Musee/img/apropos.jpg" />
+    <img src="/Musee/img/apropos_bg.jpg" />
 </div>
