@@ -1,4 +1,4 @@
-<?php $page="Events"?>
+<?php $page = "Events" ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <?php include "../included/messenger.php" ?>
     <?php include "../included/header.php" ?>
     <main>
         <section class="hero events">

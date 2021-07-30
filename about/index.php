@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <?php include "../included/messenger.php" ?>
     <?php include "../included/header.php" ?>
     <main>
         <section class="hero apropos">

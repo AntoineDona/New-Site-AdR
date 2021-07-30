@@ -21,7 +21,7 @@ function display_buttons($nbr_annees)
 </head>
 
 <body>
-    <?php include "included/messenger.php" ?>
+    <?php include "../included/messenger.php" ?>
     <script>
         function openImg() {
             window.open(this.getElementsByTagName('img')[0].src, '_self')
