@@ -34,12 +34,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/index.php">
-                        <p>Mentions légales</p>
+                    <a href="/docs/Statuts_AdRCS_janvier_2020_signed.pdf">
+                        <p>Status</p>
                     </a>
                 </li>
                 <li>
-                    <a href="/index.php">
+                    <a href="/ressources.php">
                         <p>Ressources</p>
                     </a>
                 </li>
