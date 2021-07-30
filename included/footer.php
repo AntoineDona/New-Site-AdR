@@ -15,17 +15,23 @@
 	
 	<hr class="socket" style="color:rgba(5, 248, 17, 0.411)">
 	<p class="text-center">AdR CentraleSupélec.</p> -->
-        <div class="footer-content">
-            <h3>Suivez nous!</h3>
-            <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti ullam laborum non dolore modi.</p> -->
-            <ul class="socials">
-                <li><a href="https://www.facebook.com/adr.centralesupelec" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="https://www.instagram.com/adr.cs/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/association-des-résidents-de-centralesupélec/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-            <div class="separator"></div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy;2020 disigned with ❤️🖤 by <span> AdR CentraleSupélec</span></p>
-        </div>
-    </footer>
+    <div class="footer-content">
+        <h3>Suivez nous!</h3>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti ullam laborum non dolore modi.</p> -->
+        <ul class="socials">
+            <li><a href="https://www.facebook.com/adr.centralesupelec" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/adr.cs/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/association-des-résidents-de-centralesupélec/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+        <div class="separator"></div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy;2020 disigned with ❤️🖤 by <span> AdR CentraleSupélec</span></p>
+    </div>
+    <div id="preload">
+        <img src="/Musee/img/bgimage1.jpg" />
+        <img src="/Musee/img/bgimage2.jpg" />
+        <img src="/Musee/img/apropos.jpg" />
+        <img src="/Musee/img/apropos_bg.jpg" />
+    </div>
+</footer>
