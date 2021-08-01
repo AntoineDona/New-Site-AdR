@@ -861,6 +861,7 @@ footer {
 
 .footer-bottom span {
   font-weight: 200;
+  text-transform:lowercase;
 }
 
 .footer-bottom p {

@@ -12,18 +12,24 @@
         <nav>
             <ul>
                 <li>
-                <a href="/index.php"><p>AdR CentraleSupélec</p></a>
+                    <a href="/index.php">
+                        <p>AdR CentraleSupélec</p>
+                    </a>
                 </li>
                 <li>
-                <a href="/index.php"><p>Mentions légales</p></a>
+                    <a href="/docs/Statuts_AdRCS_janvier_2020_signed.pdf">
+                        <p>Mentions légales</p>
+                    </a>
                 </li>
                 <li>
-                <a href="/index.php"><p>Ressources</p></a>
+                    <a href="/index.php">
+                        <p>Ressources</p>
+                    </a>
                 </li>
             </ul>
         </nav>
-        
-        <p style="margin-left: 3rem;">&copy;2020 disigned with ❤️🖤 by <span> AdR CentraleSupélec</span></p>
+
+        <p style="margin-left: 3rem;">&copy;2020 disigned with ❤️🖤 by <a href="https://www.instagram.com/antoine.doo/" target="_blank">Antoine Do</a> </p>
     </div>
 </footer>
 <div id="preload">
