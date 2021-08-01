@@ -39,13 +39,15 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/ressources.php">
+                    <a href="/index.php">
                         <p>Ressources</p>
                     </a>
                 </li>
             </ul>
         </nav>
-        <p>&copy;2020 disigned with ❤️🖤 in <a href="https://goo.gl/maps/BUUanjo1udNpVJdK6" target="_blank"> Gif-sur-Yvette</a></p>
+        <p>&copy;2020 disigned with ❤️🖤 By <a href="https://www.instagram.com/antoine.doo/" target="_blank">Antoine Do</a> 
+        <!-- <span>in</span> <a href="https://goo.gl/maps/BUUanjo1udNpVJdK6" target="_blank"> Gif-sur-Yvette</a> -->
+    </p>
     </div>
     <div id="preload">
         <img src="/Musee/img/bgimage1.jpg" />
