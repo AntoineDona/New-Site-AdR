@@ -116,7 +116,7 @@
 			$('#link a.shotgun').css({
 				"pointer-events": "Visible"
 			});
-			<? php
+			<?php
 		} ?>
 
 		setTimeout(timer, 1000);
