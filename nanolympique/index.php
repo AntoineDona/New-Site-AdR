@@ -117,6 +117,7 @@
 
 	?>
 
+	<div id="titre_sg"></div>
 	<div id="holder">
 		<div class="olympics">
 			<div class="ring blue" id="mois">

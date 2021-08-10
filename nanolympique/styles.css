@@ -28,15 +28,14 @@ body {
   top: 0;
   bottom: 0;
   height: 100vh;
-  background-color: black;
-  background: url(""), url(""), url("img/nanolympique_mbg.jpg");
-  background-size: 100%, 100%, cover;
+  background: no-repeat url("img/nanolympique_lightbg.jpg");
+  background-size: contain;
   /* background-position: top center, bottom 80px center, center; */
   background-position: top center;
   background-repeat: no-repeat, no-repeat, repeat-y;
+  background-color: black;
   color: white;
   position: absolute;
-  box-shadow: 0 0 8px 8px black inset;
 }
 
 img.sydney {
@@ -57,20 +56,16 @@ img.sydney {
 
 #holder {
   position: relative;
-  width: 800px;
+  width: 500px;
+  max-width: 80vw;
   left: 0;
   right: 0;
   margin: auto;
-  top: 60vh;
+  top: 35vh;
 }
 
 #counter {
   position: relative;
-  display: grid;
-  grid-template-areas: "title title title title" "d_top h_top m_top s_top" "d_bottom h_bottom m_bottom s_bottom";
-  grid-template-columns: 200px 200px 200px 200px;
-  background: linear-gradient(var(--background_dark), var(--background_light));
-
   color: white;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff,
     /*0 0 21px #fff, */ 0 0 20px rgb(255, 0, 234), 0 0 42px rgb(255, 0, 234),
@@ -81,7 +76,6 @@ img.sydney {
 
   /* font-weight: bold; */
   text-align: center;
-  font-size: 80px;
   width: 800px;
   height: 180px;
   left: 0;
@@ -93,45 +87,65 @@ img.sydney {
   box-shadow: var(--shadow_color) 0px 0px 5px;
 }
 
-#link, #connexion_link{
+#link,
+#connexion_link {
   background: transparent;
   border: solid 5px white;
-  width: 30rem;
-  height: 7rem;
-  line-height: 8rem;
+  font-size: 3rem;
+  padding: 0 0.5rem;
+  width: auto;
+  height: 5rem;
   margin: auto;
   margin-top: 3rem;
   text-align: center;
   border-radius: 8px;
-  cursor: pointer;
   z-index: 1;
   transition: all 1s ease-in;
+  
+}
+
+#connexion_link{
   animation: sg_frame 5s ease infinite;
   box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
     inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
     inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
     inset 0 0 42px rgb(34, 207, 194);
+  cursor: pointer;
 }
 
 #link {
-  display: none;
+  border: solid 5px rgba(255, 255, 255, 0.541);
+  box-shadow: 0 0 7px rgba(255, 255, 255, 0.541),
+    inset 0 0 7px rgba(255, 255, 255, 0.541), 0 0 10px rgba(0, 0, 0, 0.555),
+    inset 0 0 10px rgba(0, 0, 0, 0.555);
+  cursor: not-allowed;
 }
 
-#link:hover, #connexion_link:hover {
-  margin-top: 10px;
+#link a.shotgun{
+  cursor: not-allowed;
+  pointer-events: none;
 }
-#link a, #connexion_link a{
+
+#shotgun {
+  color:rgba(255, 255, 255, 0.541);
+  font-family: "GangOfThree";
+  text-shadow: 0 0 7px rgba(255, 255, 255, 0.541), 0 0 10px rgba(0, 0, 0, 0.555);
+}
+
+#link a,
+#connexion_link a {
   color: white;
 }
-p#shotgun, .shotgun, a.connexion {
+
+a.connexion {
   font-family: "GangOfThree";
   text-shadow: 0 0 7px white, 0 0 10px rgb(34, 207, 194),
     0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194);
   animation: shotgun 3s ease infinite;
 }
 
-a.connexion{
-
+a.connexion {
+  animation: shotgun 4s ease infinite;
 }
 
 svg {
@@ -150,10 +164,11 @@ a:active {
 }
 
 div.connexion {
+  display: none;
   position: fixed;
   left: 0;
   right: 0;
-  top: 0;
+  bottom: 0;
   margin: 1rem;
   padding: 1rem;
   text-align: center;
@@ -276,6 +291,23 @@ p.soiree {
   font-size: 10em;
 }
 
+#titre_sg{
+  position: relative;
+  top: 34vh;
+  text-align: center;
+  width: 48rem;
+  margin: auto;
+  overflow: visible;
+  font-size: 3rem;
+  background-color: rgba(83, 0, 0, 0.568);
+  border: solid 0.3rem white;
+  border-radius: 1rem;
+  box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
+    inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
+    inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
+    inset 0 0 42px rgb(34, 207, 194);
+ 
+}
 .olympics {
   /* transform-style: preserve-3d; */
   width: 100%;
@@ -286,6 +318,7 @@ p.soiree {
   /* background-color: red; */
 }
 
+
 .ring {
   width: 30%;
   height: 0;
@@ -294,7 +327,7 @@ p.soiree {
   border-radius: 50%;
   /* border: solid #86d5fd 0.1rem; */
   position: absolute;
-  background: transparent;
+  background: rgba(38, 55, 58, 0.781);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -311,7 +344,7 @@ p.soiree {
 }
 
 .ring .chiffre {
-  font-size: 80px;
+  font-size: 4rem;
   text-shadow: 0 0 7px white, 0 0 10px #86f5fd, 0 0 21px #86f5fd,
     0 0 42px #86f5fd;
 }
@@ -319,7 +352,7 @@ p.soiree {
 .ring .text {
   text-shadow: 0 0 7px white, 0 0 10px #86d5fd, 0 0 21px #86d5fd,
     0 0 42px #86d5fd;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .yellow {
@@ -327,7 +360,6 @@ p.soiree {
   bottom: 0;
   left: 25%;
   transform: translate(-25%, 0);
-  animation: sg_frame 10s infinite;
   /* transform: rotateX(0deg); */
 }
 
@@ -343,6 +375,8 @@ p.soiree {
   bottom: 0;
   right: 25%;
   transform: translate(25%, 0);
+  animation: fourth_ring 15s infinite;
+  box-shadow: unset;
   /* transform: translateZ(20vh) rotateX(70deg) scaleY(2.9238); */
 }
 
@@ -354,8 +388,8 @@ p.soiree {
 
 @media screen and (orientation: portrait), screen and (max-width: 800px) {
   body {
-    background: url(""), url(""), url("img/nanolympique_mbg.jpg");
-    background-size: 100%, 100%, contain;
+    background: url(""), url(""), url("img/nanolympique_mlightbg.jpg");
+    background-size: 100%, 100%, cover;
     background-position: top center, bottom 80px center, center;
     background-repeat: no-repeat;
     background-color: black;
@@ -364,11 +398,14 @@ p.soiree {
   #counter {
     grid-template-columns: 170px 170px 170px 170px;
     width: 680px;
+    font-size: 80px;
   }
   #holder {
     top: 40vh;
+    width: 900px;
   }
-  #link , #connexion_link{
+  #link,
+  #connexion_link {
     font-size: 48pt;
     width: 600px;
     height: 100px;
@@ -380,12 +417,23 @@ p.soiree {
     font-size: 26pt;
   }
 
-  .connexion a.connexion{
+  .connexion a.connexion {
     font-size: 48px;
   }
-  
+
   .finito {
     font-weight: bold;
+  }
+
+  .olympics {
+    width: 100%;
+  }
+  .ring .chiffre {
+    font-size: 6rem;
+  }
+  
+  .ring .text {
+    font-size: 1.5rem;
   }
 }
 
@@ -427,6 +475,43 @@ p.soiree {
   0%,
   19%,
   25%,
+  100% {
+    border: solid 5px white;
+    box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
+      inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
+      inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
+      inset 0 0 42px rgb(34, 207, 194);
+  }
+}
+
+@keyframes fourth_ring {
+  20%,
+  21%,
+  21.2%,
+  40%,
+  40.3%,
+  70%,
+  74.1%,
+  74.5% {
+    border: solid 5px rgba(255, 255, 255, 0.541);
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.541),
+      inset 0 0 7px rgba(255, 255, 255, 0.541), 0 0 10px rgba(0, 0, 0, 0.555),
+      inset 0 0 10px rgba(0, 0, 0, 0.555); /*
+      0 0 21px rgba(34, 207, 193, 0.555),
+      inset 0 0 21px rgba(34, 207, 193, 0.555),
+      0 0 42px rgba(34, 207, 193, 0.555),
+      inset 0 0 42px rgba(34, 207, 193, 0.555); */
+  }
+  0%,
+  19.9%,
+  20.1%,
+  20.9%,
+  21.1%,
+  40.1%,
+  40.2%,
+  70.1%,
+  74%,
+  74.6%,
   100% {
     border: solid 5px white;
     box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
