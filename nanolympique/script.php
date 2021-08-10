@@ -19,10 +19,10 @@
 		<?php
 		// $_SESSION['shotgun'] = false;
 		if ($_SESSION['shotgun']) {
-			echo 'var date_shotgun = new Date(2021, 07, 11, 16, 00);';
+			echo 'var date_shotgun = new Date(2021, 07, 29, 22, 00);';
 			echo 'title = "Début du NANOLYMPIQUE dans :";';
 		} else {
-			echo 'var date_shotgun = new Date(2021, 07, 11, 00, 05, 50);';
+			echo 'var date_shotgun = new Date(2021, 07, 29, 00, 00, 00);';
 			echo 'var title = "Ouverture du Shotgun dans :";';
 		}
 		?>
