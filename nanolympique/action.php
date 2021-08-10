@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php include('/nanolympique/database.php') ?>
+<?php include('database.php') ?>
 
 <!DOCTYPE html><html>
 <html>
