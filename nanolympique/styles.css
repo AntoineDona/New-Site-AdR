@@ -1,0 +1,434 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: "GangOfThree" sans-serif;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+:root {
+  --background_dark: #bf2227;
+  --background_light: #f40f17;
+  --background_highlight: #f8f37e;
+  --text_color: rgb(255, 255, 255);
+  --shadow_color: #f8f584;
+
+  --link_color: #4891c7;
+  --template_color: #ba0b00;
+}
+html,
+body {
+  height: 100%;
+  font-family: "GangOfThree";
+}
+body {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  background-color: black;
+  background: url(""), url(""), url("img/nanolympique_mbg.jpg");
+  background-size: 100%, 100%, cover;
+  /* background-position: top center, bottom 80px center, center; */
+  background-position: top center;
+  background-repeat: no-repeat, no-repeat, repeat-y;
+  color: white;
+  position: absolute;
+  box-shadow: 0 0 8px 8px black inset;
+}
+
+img.sydney {
+  position: relative;
+  width: 20vw;
+  left: 40vw;
+  right: 40vw;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+#body {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#holder {
+  position: relative;
+  width: 800px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 60vh;
+}
+
+#counter {
+  position: relative;
+  display: grid;
+  grid-template-areas: "title title title title" "d_top h_top m_top s_top" "d_bottom h_bottom m_bottom s_bottom";
+  grid-template-columns: 200px 200px 200px 200px;
+  background: linear-gradient(var(--background_dark), var(--background_light));
+
+  color: white;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff,
+    /*0 0 21px #fff, */ 0 0 20px rgb(255, 0, 234), 0 0 42px rgb(255, 0, 234),
+    0 0 82px rgb(255, 0, 234);
+  /* 0 0 92px rgb(255, 0, 234), */
+  /* 0 0 102px rgb(255, 0, 234), */
+  /* 0 0 151px rgb(255, 0, 234); */
+
+  /* font-weight: bold; */
+  text-align: center;
+  font-size: 80px;
+  width: 800px;
+  height: 180px;
+  left: 0;
+  right: 0;
+  top: 0px;
+  margin: auto;
+  border-radius: 10px;
+  z-index: 2;
+  box-shadow: var(--shadow_color) 0px 0px 5px;
+}
+
+#link {
+  background: transparent;
+  border: solid 5px white;
+  width: 30rem;
+  height: 7rem;
+  line-height: 8rem;
+  margin: auto;
+  margin-top: 3rem;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 1s ease-in;
+  display: none;
+  animation: sg_frame 5s ease infinite;
+  box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
+    inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
+    inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
+    inset 0 0 42px rgb(34, 207, 194);
+}
+#link:hover {
+  margin-top: 10px;
+}
+#link a {
+  color: white;
+}
+p#shotgun {
+  font-family: "GangOfThree";
+  text-shadow: 0 0 7px white, 0 0 10px rgb(34, 207, 194),
+    0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194);
+  animation: shotgun 3s ease infinite;
+}
+
+svg {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--link_color);
+  cursor: pointer;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+div.connexion {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  text-align: center;
+  background-color: var(--template_color);
+  border-radius: 4px;
+  font-size: 18pt;
+}
+p.connexion {
+  font-family: "GangOfThree";
+}
+a.connexion {
+  font-family: "GangOfThree";
+}
+
+div.etat {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  text-align: center;
+  background-color: var(--template_color);
+  border-radius: 4px;
+  font-size: 18pt;
+}
+p.etat {
+  font-family: "CaviarDreams";
+}
+a.etat {
+  font-family: "CaviarDreams";
+}
+
+h1.soldout {
+  text-align: center;
+  font-size: 100px;
+  color: var(--text_color);
+  font-family: "special";
+  margin-top: 20vh;
+}
+
+h1.interface {
+  text-align: center;
+  font-size: 80px;
+  color: "white";
+  font-family: "CaviarDreams";
+  margin-top: 20vh;
+}
+
+h1.finito {
+  text-align: center;
+  color: var(--template_color);
+  font-family: "CaviarDreams";
+  /*text-shadow:1px 1px 1px #dbe8eb;*/
+}
+h2.finito {
+  text-align: center;
+  color: var(--template_color);
+  font-family: "CaviarDreams";
+  /*text-shadow:1px 1px 1px #dbe8eb;*/
+}
+#reload {
+  color: var(--template_color);
+  width: 160px;
+  height: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 46px;
+  border-radius: 30px;
+  border: 2px solid var(--template_color);
+  background: rgba(219, 232, 235, 0.4);
+  cursor: pointer;
+  transition: background 450ms, color 450ms;
+  user-select: none;
+}
+#reload:hover {
+  text-shadow: none;
+  background: var(--template_color);
+  color: var(--template_color);
+}
+
+p.liste {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  width: 40vw;
+  position: relative;
+  left: 30vw;
+  font-size: 2em;
+  text-align: center;
+}
+
+strong.nom {
+  color: "red";
+  font-style: bold;
+}
+
+/*div.liste{
+		padding:10px;
+		margin: 5px;
+		border-radius:10px;
+		background:rgba(255, 255, 255, 0.5);
+		width: 30vw;
+		position: relative;
+	}*/
+
+form.valide {
+  text-align: center;
+}
+
+p.soiree {
+  text-align: center;
+  font-size: 10em;
+}
+
+.olympics {
+  /* transform-style: preserve-3d; */
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  position: relative;
+  margin: auto;
+  /* background-color: red; */
+}
+
+.ring {
+  width: 30%;
+  height: 0;
+  padding-top: 15%;
+  padding-bottom: 15%;
+  border-radius: 50%;
+  /* border: solid #86d5fd 0.1rem; */
+  position: absolute;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px #86d5fd,
+    inset 0 0 10px #86f5fd, 0 0 21px #86f5fd, inset 0 0 21px #86f5fd,
+    0 0 42px #86f5fd, inset 0 0 42px #86f5fd, 0 0 0 rgba(34, 207, 193, 0.8); */
+  border: solid 0.3rem white;
+  box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
+    inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
+    inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
+    inset 0 0 42px rgb(34, 207, 194);
+}
+
+.ring .chiffre {
+  font-size: 80px;
+  text-shadow: 0 0 7px white, 0 0 10px #86f5fd, 0 0 21px #86f5fd,
+    0 0 42px #86f5fd;
+}
+
+.ring .text {
+  text-shadow: 0 0 7px white, 0 0 10px #86d5fd, 0 0 21px #86d5fd,
+    0 0 42px #86d5fd;
+  font-size: 1.5rem;
+}
+
+.yellow {
+  /* border-color: #f4c300; */
+  bottom: 0;
+  left: 25%;
+  transform: translate(-25%, 0);
+  animation: sg_frame 10s infinite;
+  /* transform: rotateX(0deg); */
+}
+
+.black {
+  /* border-color: black; */
+  left: 50%;
+  transform: translate(-50%, 0);
+  /* transform: rotateX(45deg) scaleY(1.4142); */
+}
+
+.green {
+  /* border-color:  #009f3d; */
+  bottom: 0;
+  right: 25%;
+  transform: translate(25%, 0);
+  /* transform: translateZ(20vh) rotateX(70deg) scaleY(2.9238); */
+}
+
+.red {
+  /* border-color: #df0024; */
+  right: 0;
+  /* transform: translateZ(-32vh) rotateX(80deg) scaleY(5.7588); */
+}
+
+@media screen and (orientation: portrait), screen and (max-width: 800px) {
+  body {
+    background: url(""), url(""), url("img/nanolympique_mbg.jpg");
+    background-size: 100%, 100%, contain;
+    background-position: top center, bottom 80px center, center;
+    background-repeat: no-repeat;
+    background-color: black;
+    box-shadow: 0 0 10px 10px white inset;
+  }
+  #counter {
+    grid-template-columns: 170px 170px 170px 170px;
+    width: 680px;
+  }
+  #holder {
+    top: 40vh;
+  }
+  #link {
+    font-size: 48pt;
+    width: 600px;
+    height: 100px;
+    line-height: 110px;
+    top: -120px;
+  }
+  div.connexion,
+  div.etat {
+    font-size: 26pt;
+  }
+  .finito {
+    font-weight: bold;
+  }
+}
+
+@keyframes shotgun {
+  40%,
+  44%,
+  70% {
+    color: rgba(241, 241, 241, 0.726);
+    text-shadow: 0 0 7px rgba(255, 255, 255, 0.644),
+      0 0 10px rgba(34, 207, 193, 0.61), 0 0 21px rgba(34, 207, 193, 0.61),
+      0 0 42px rgba(34, 207, 193, 0.61);
+  }
+  0%,
+  39%,
+  41%,
+  43%,
+  45%,
+  69%,
+  71%,
+  100% {
+    color: white;
+    text-shadow: 0 0 7px white, 0 0 10px rgb(34, 207, 194),
+      0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194);
+  }
+}
+
+@keyframes sg_frame {
+  20%,
+  24% {
+    border: solid 5px rgb(202, 202, 202);
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.836),
+      inset 0 0 7px rgba(255, 255, 255, 0.836), 0 0 10px rgb(34, 207, 194),
+      inset 0 0 10px rgba(34, 207, 193, 0.555),
+      0 0 21px rgba(34, 207, 193, 0.555),
+      inset 0 0 21px rgba(34, 207, 193, 0.555),
+      0 0 42px rgba(34, 207, 193, 0.555),
+      inset 0 0 42px rgba(34, 207, 193, 0.555);
+  }
+  0%,
+  19%,
+  25%,
+  100% {
+    border: solid 5px white;
+    box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
+      inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
+      inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
+      inset 0 0 42px rgb(34, 207, 194);
+  }
+}
+
+@font-face {
+  font-family: "CaviarDreams";
+  src: url("fonts/CaviarDreams.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GangOfThree";
+  src: url("fonts/go3v2.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
