@@ -15,7 +15,7 @@ session_start();
 
 <?php
 function number_place($pdo){
-		$query = $pdo->prepare("SELECT COUNT(*) as c from equinanox");
+		$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique");
 		$query->execute();
 		$result= $query->fetch();
 		return $result['c'];

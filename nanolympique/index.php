@@ -22,7 +22,7 @@
 	<?php
 	function number_place($pdo)
 	{
-		$query = $pdo->prepare("SELECT COUNT(*) as c from equinanox");
+		$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique");
 		$query->execute();
 		$result = $query->fetch();
 		return $result['c'];
@@ -32,7 +32,7 @@
 	<?php
 	function is_present($prenom, $nom, $pdo)
 	{
-		$query = $pdo->prepare("SELECT COUNT(*) as c from equinanox where prenom=? and nom=?");
+		$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique where prenom=? and nom=?");
 		$query->execute(array($prenom, $nom));
 		$result = $query->fetch();
 		return $result['c'];

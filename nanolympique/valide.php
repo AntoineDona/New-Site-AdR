@@ -16,13 +16,13 @@ session_start();
 
 <?php
 function number_place($pdo){
-		$query = $pdo->prepare("SELECT COUNT(*) as c from equinanox");
+		$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique");
 		$query->execute();
 		$result= $query->fetch();
 		return $result['c'];
 }
 	
-	$sql ='UPDATE equinanox SET entree="oui" WHERE prenom= :prenom AND nom= :nom ';
+	$sql ='UPDATE nanolympique SET entree="oui" WHERE prenom= :prenom AND nom= :nom ';
 	      $stmt = $pdo->prepare($sql);
 	      $stmt->bindValue(':prenom', $_GET["prenom"]);
 	      $stmt->bindValue(':nom', $_GET["nom"]);
