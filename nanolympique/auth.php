@@ -11,7 +11,7 @@ if (!isset($_SESSION["isConnected"]) || !$_SESSION["isConnected"]) // Si isConne
 		// Parameters à envoyer à VR pour l'auth
 		$grant_type = "authorization_code";
 		$code = $_GET["code"];
-		$redirect_uri = "https://adr.cs-campus.fr/nanolympique/index.php";
+		$redirect_uri = "https://adr.cs-campus.fr/nanolympique";
 		$client_id = "47e7231e6e5c333459f9280e6d3c7eef96b38ce6";
 		$client_secret = "0dee01e0437f6b07c784ae54af60b790d83fbcb0";
 		$data = array("grant_type" => $grant_type, "code" => $code, "redirect_uri" => $redirect_uri, "client_id" => $client_id, "client_secret" => $client_secret);
