@@ -93,7 +93,7 @@ img.sydney {
   box-shadow: var(--shadow_color) 0px 0px 5px;
 }
 
-#link {
+#link, #connexion_link{
   background: transparent;
   border: solid 5px white;
   width: 30rem;
@@ -106,24 +106,32 @@ img.sydney {
   cursor: pointer;
   z-index: 1;
   transition: all 1s ease-in;
-  display: none;
   animation: sg_frame 5s ease infinite;
   box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
     inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
     inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
     inset 0 0 42px rgb(34, 207, 194);
 }
-#link:hover {
+
+#link {
+  display: none;
+}
+
+#link:hover, #connexion_link:hover {
   margin-top: 10px;
 }
-#link a {
+#link a, #connexion_link a{
   color: white;
 }
-p#shotgun {
+p#shotgun, .shotgun, a.connexion {
   font-family: "GangOfThree";
   text-shadow: 0 0 7px white, 0 0 10px rgb(34, 207, 194),
     0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194);
   animation: shotgun 3s ease infinite;
+}
+
+a.connexion{
+
 }
 
 svg {
@@ -146,11 +154,15 @@ div.connexion {
   left: 0;
   right: 0;
   top: 0;
-  margin: 10px;
+  margin: 1rem;
+  padding: 1rem;
   text-align: center;
-  background-color: var(--template_color);
-  border-radius: 4px;
+  /* background-color: var(--template_color); */
   font-size: 18pt;
+  box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
+    inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
+    inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
+    inset 0 0 42px rgb(34, 207, 194);
 }
 p.connexion {
   font-family: "GangOfThree";
@@ -347,7 +359,7 @@ p.soiree {
     background-position: top center, bottom 80px center, center;
     background-repeat: no-repeat;
     background-color: black;
-    box-shadow: 0 0 10px 10px white inset;
+    box-shadow: 0 0 10px 5px black inset;
   }
   #counter {
     grid-template-columns: 170px 170px 170px 170px;
@@ -356,7 +368,7 @@ p.soiree {
   #holder {
     top: 40vh;
   }
-  #link {
+  #link , #connexion_link{
     font-size: 48pt;
     width: 600px;
     height: 100px;
@@ -367,6 +379,11 @@ p.soiree {
   div.etat {
     font-size: 26pt;
   }
+
+  .connexion a.connexion{
+    font-size: 48px;
+  }
+  
   .finito {
     font-weight: bold;
   }

@@ -21,7 +21,7 @@ function timer() {
 		echo 'var date_shotgun = new Date(2021, 07, 10, 16, 00);';
 		echo 'title = "Début du NANOLYMPIQUE dans";';
 	} else {
-		echo 'var date_shotgun = new Date(2021, 07, 10, 16, 00, 00);';
+		echo 'var date_shotgun = new Date(2021, 07, 11, 16, 00, 00);';
 		echo 'title = "Ouverture du shotgun dans";';
 	}
 	?>
