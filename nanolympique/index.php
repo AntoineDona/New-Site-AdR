@@ -1,4 +1,4 @@
-<?php // include("auth.php"); 
+<?php include("auth.php"); 
 ?>
 <?php include("database.php"); ?>
 
