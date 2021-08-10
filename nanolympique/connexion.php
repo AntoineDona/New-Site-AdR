@@ -27,18 +27,30 @@
 <body onload="onLoad()">
 
 	<div id="holder">
-		<div id="counter">
-			<div style="grid-area: d_top;">00</div>
-			<div style="grid-area: h_top;">00</div>
-			<div style="grid-area: m_top;">00</div>
-			<div style="grid-area: s_top;">00</div>
-			<div style="grid-area: d_bottom; font-size:20%;">jour(s)</div>
-			<div style="grid-area: h_bottom; font-size:20%;">heure(s)</div>
-			<div style="grid-area: m_bottom; font-size:20%;">minute(s)</div>
-			<div style="grid-area: s_bottom; font-size:20%;">seconde(s)</div>
+	<div class="olympics">
+			<div class="ring blue" id="mois">
+				<p class="chiffre">00</p>
+				<p>mois(s)</p>
+			</div>
+			<div class="ring yellow" id="jours">
+				<p class="chiffre">00</p>
+				<p>jour(s)</p>
+			</div>
+			<div class="ring black" id="heures">
+				<p class="chiffre">00</p>
+				<p>heure(s)</p>
+			</div>
+			<div class="ring green" id="minutes">
+				<p class="chiffre">00</p>
+				<p>minute(s)</p>
+			</div>
+			<div class="ring red" id="secondes">
+				<p class="chiffre">00</p>
+				<p>seconde(s)</p>
+			</div>
 		</div>
-		<div id="link" style="opacity:0;" href="#">
-			<a class= 'connexion' href='redirect.php?redirect=https://adr.cs-campus.fr/nanolympique/index.php'>Se connecter</a>
+		<div id="connexion_link" href="#">
+			<a class= 'shotgun' href='redirect.php?redirect=https://adr.cs-campus.fr/nanolympique/index.php'>Se connecter</a>
 		</div>
 	</div>
 

@@ -1,4 +1,4 @@
-<?php include("auth.php"); 
+<?php //include("auth.php"); 
 ?>
 <?php include("database.php"); ?>
 
@@ -140,7 +140,7 @@
 				<p>seconde(s)</p>
 			</div>
 		</div>
-		<div id="counter" style="display: none;">
+		<!-- <div id="counter" style="display: none;">
 			<div style="grid-area: d_top;">00</div>
 			<div style="grid-area: h_top;">00</div>
 			<div style="grid-area: m_top;">00</div>
@@ -149,7 +149,7 @@
 			<div style="grid-area: h_bottom; font-size:20%;">heure(s)</div>
 			<div style="grid-area: m_bottom; font-size:20%;">minute(s)</div>
 			<div style="grid-area: s_bottom; font-size:20%;">seconde(s)</div>
-		</div>
+		</div> -->
 
 		<script type="text/javascript">
 			function shotgun() {
