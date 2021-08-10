@@ -165,7 +165,7 @@
 		</script>
 
 		<div id="link" href="#">
-			<a class="shotgun" href="#">
+			<a class="shotgun" href="action.php">
 				<?php
 				if (!$_SESSION['shotgun']) {
 					echo '<p id="shotgun" onClick="shotgun();">SHOTGUN</p>';
