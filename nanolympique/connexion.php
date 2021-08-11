@@ -1,13 +1,15 @@
 <?php
 session_start();
 
-if ($_SESSION["isConnected"]) {
+if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"])  {
 	echo "Connecté : ";
 	// Pour voir plus de données disponibles, voir la documentation
 	// sur auth.viarezo.fr
 	//echo $_SESSION["user"]["login"];
 	$_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 	$_SESSION["nom"] = $_SESSION["user"]["lastName"];
+	$prenom = $_SESSION["prenom"];
+	$nom = $_SESSION["nom"];
 	echo $prenom . " " . $nom;
 	header("Location: https://adr.cs-campus.fr/nanolympique/index.php?nom=" . $nom . "&prenom=" . $prenom);
 }
@@ -15,10 +17,11 @@ if ($_SESSION["isConnected"]) {
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
 	<title>NANOLYMPIQUE</title>
-	<link rel="icon" type="image/png" href="img/adr_ico.png" />
+	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/images/favicon/favicon-96x96.png">
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
@@ -51,23 +54,19 @@ if ($_SESSION["isConnected"]) {
 				<p class="text">seconde(s)</p>
 			</div>
 		</div>
-		<div id="connexion_link" href="#">
-			<a class='shotgun' href='redirect.php?redirect=https://adr.cs-campus.fr/nanolympique'>Se connecter</a>
-		</div>
 	</div>
-
-	<div class="connexion">
+	<div id="co_msg_ctnr">
 		<?php
 		if (isset($_SESSION["isConnected"])) {
 			if (!$_SESSION["isConnected"]) {
-				echo "<p class= 'connexion'>Tu n'es pas encore connecté, pour shotgun une place au Nanolympique il faut te connecter :</p> ";
-				// Se connecter
-				echo "<a class= 'connexion' href='redirect.php?redirect=https://adr.cs-campus.fr/nanolympique'>Se connecter</a>";
+				echo "<p id='co_msg'>Tu n'es pas encore connecté, pour shotgun une place au Nanolympique il faut te connecter :</p> ";
 			}
 		}
 		?>
 	</div>
-
+	<div id="co_link_ctnr" href="#">
+		<a id="co_link" href='redirect.php?redirect=https://adr.cs-campus.fr/nanolympique'>Se connecter</a>
+	</div>
 </body>
 
 </html>
