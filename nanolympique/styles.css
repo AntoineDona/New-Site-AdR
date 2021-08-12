@@ -28,7 +28,7 @@ body {
   top: 0;
   bottom: 0;
   height: 100vh;
-  background: no-repeat url("img/nanolympique_lightbg.jpg");
+  background: no-repeat url("img/nanolympique_bg.jpg");
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat, no-repeat, repeat-y;
@@ -37,6 +37,7 @@ body {
   position: absolute;
 }
 
+/* Vieux bordel ------------------------------------------------------------------------------------------- */
 img.sydney {
   position: relative;
   width: 20vw;
@@ -47,142 +48,15 @@ img.sydney {
   border-radius: 20px;
 }
 
-#body {
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-#holder {
-  position: relative;
-  width: 500px;
-  max-width: 80vw;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 35vh;
-}
-
-#counter {
-  position: relative;
-  color: white;
-  text-shadow: 0 0 7px #fff, 0 0 10px #fff,
-    /*0 0 21px #fff, */ 0 0 20px rgb(255, 0, 234), 0 0 42px rgb(255, 0, 234),
-    0 0 82px rgb(255, 0, 234);
-  /* 0 0 92px rgb(255, 0, 234), */
-  /* 0 0 102px rgb(255, 0, 234), */
-  /* 0 0 151px rgb(255, 0, 234); */
-
-  /* font-weight: bold; */
-  text-align: center;
-  width: 800px;
-  height: 180px;
-  left: 0;
-  right: 0;
-  top: 0px;
-  margin: auto;
-  border-radius: 10px;
-  z-index: 2;
-  box-shadow: var(--shadow_color) 0px 0px 5px;
-}
-
-#link,
-#connexion_link {
-  background: transparent;
-  border: solid 5px white;
-  font-size: 3rem;
-  padding: 0 0.5rem;
-  width: auto;
-  height: 5rem;
-  margin: auto;
-  margin-top: 3rem;
-  text-align: center;
-  border-radius: 8px;
-  z-index: 1;
-  transition: all 1s ease-in;
-  
-}
-
-#connexion_link{
-  animation: sg_frame 5s ease infinite;
-  box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
-    inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
-    inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
-    inset 0 0 42px rgb(34, 207, 194);
-  cursor: pointer;
-}
-
-#link {
-  border: solid 5px rgba(255, 255, 255, 0.541);
-  box-shadow: 0 0 7px rgba(255, 255, 255, 0.541),
-    inset 0 0 7px rgba(255, 255, 255, 0.541), 0 0 10px rgba(0, 0, 0, 0.555),
-    inset 0 0 10px rgba(0, 0, 0, 0.555);
-  cursor: not-allowed;
-}
-
-#link a.shotgun{
-  cursor: not-allowed;
-  pointer-events: none;
-}
-
-#shotgun {
-  color:rgba(255, 255, 255, 0.541);
-  font-family: "GangOfThree";
-  text-shadow: 0 0 7px rgba(255, 255, 255, 0.541), 0 0 10px rgba(0, 0, 0, 0.555);
-}
-
-#link a,
-#connexion_link a {
-  color: white;
-}
-
-a.connexion {
-  font-family: "GangOfThree";
-  text-shadow: 0 0 7px white, 0 0 10px rgb(34, 207, 194),
-    0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194);
-  animation: shotgun 3s ease infinite;
-}
-
-a.connexion {
-  animation: shotgun 4s ease infinite;
-}
-
-svg {
-  width: 100%;
-}
-
 a {
   text-decoration: none;
   font-weight: bold;
-  color: var(--link_color);
+  color: white;
   cursor: pointer;
 }
 a:hover,
 a:active {
   text-decoration: none;
-}
-
-div.connexion {
-  display: none;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 1rem;
-  padding: 1rem;
-  text-align: center;
-  /* background-color: var(--template_color); */
-  font-size: 18pt;
-  box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
-    inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
-    inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
-    inset 0 0 42px rgb(34, 207, 194);
-}
-p.connexion {
-  font-family: "GangOfThree";
-}
-a.connexion {
-  font-family: "GangOfThree";
 }
 
 div.etat {
@@ -201,58 +75,6 @@ p.etat {
 }
 a.etat {
   font-family: "CaviarDreams";
-}
-
-h1.soldout {
-  text-align: center;
-  font-size: 100px;
-  color: var(--text_color);
-  font-family: "special";
-  margin-top: 20vh;
-}
-
-h1.interface {
-  text-align: center;
-  font-size: 80px;
-  color: "white";
-  font-family: "CaviarDreams";
-  margin-top: 20vh;
-}
-
-h1.finito {
-  text-align: center;
-  color: var(--template_color);
-  font-family: "CaviarDreams";
-  /*text-shadow:1px 1px 1px #dbe8eb;*/
-}
-h2.finito {
-  text-align: center;
-  color: var(--template_color);
-  font-family: "CaviarDreams";
-  /*text-shadow:1px 1px 1px #dbe8eb;*/
-}
-#reload {
-  color: var(--template_color);
-  width: 160px;
-  height: 50px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  margin-top: 30px;
-  text-align: center;
-  font-size: 20px;
-  line-height: 46px;
-  border-radius: 30px;
-  border: 2px solid var(--template_color);
-  background: rgba(219, 232, 235, 0.4);
-  cursor: pointer;
-  transition: background 450ms, color 450ms;
-  user-select: none;
-}
-#reload:hover {
-  text-shadow: none;
-  background: var(--template_color);
-  color: var(--template_color);
 }
 
 p.liste {
@@ -281,33 +103,124 @@ strong.nom {
 		position: relative;
 	}*/
 
-form.valide {
-  text-align: center;
-}
-
 p.soiree {
   text-align: center;
   font-size: 10em;
 }
 
-#titre_sg{
-  position: relative;
-  top: 34vh;
+/* Page shotgun (index) + Connexion -------------------------------------------------------------------------------- */
+
+#titre_sg {
+  /* Affiche si on a shotgun ou pas!! */
   text-align: center;
-  width: 48rem;
+  width: 30rem;
+  max-width: 90vw;
   margin: auto;
+  margin-top: 22vh;
+  margin-bottom: 2rem;
   overflow: visible;
-  font-size: 3rem;
+  font-size: 2rem;
   background-color: rgba(83, 0, 0, 0.568);
-  border: solid 0.3rem white;
+  border: solid 0.1rem white;
   border-radius: 1rem;
   box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
     inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
     inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
     inset 0 0 42px rgb(34, 207, 194);
   animation: frame_glow 8s ease infinite;
- 
 }
+
+#holder {
+  /* délimite le compteur: nécessaire pour la forme logo olympics en relative */
+  width: 500px;
+  max-width: 80vw;
+  margin: auto;
+}
+
+#co_msg_ctnr, #ok_msg_ctnr, #danger_msg_ctnr{
+  margin:auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.4rem;
+  width: 30rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  
+}
+
+#co_msg_ctnr, #danger_msg_ctnr{
+  background-color: rgba(167, 20, 20, 0.575);
+  /* border: solid 0.1rem white; */
+  box-shadow: 0 0 7px white, inset 0 0 7px white,
+    0 0 10px rgba(167, 20, 20, 0.575), inset 0 0 10px rgba(167, 20, 20, 0.575),
+    0 0 21px rgba(167, 20, 20, 0.575), inset 0 0 21px rgba(167, 20, 20, 0.575),
+    0 0 42px rgba(167, 20, 20, 0.575), inset 0 0 42px rgba(167, 20, 20, 0.575);
+}
+
+#ok_msg_ctnr{
+  background-color: rgba(0, 156, 8, 0.575);
+  /* border: solid 0.1rem white; */
+  box-shadow: 0 0 7px white, inset 0 0 7px white,
+    0 0 10px rgba(0, 156, 8, 0.575), inset 0 0 10px rgba(0, 156, 8, 0.575),
+    0 0 21px rgba(0, 156, 8, 0.575), inset 0 0 21px rgba(0, 156, 8, 0.575),
+    0 0 42px rgba(0, 156, 8, 0.575), inset 0 0 42px rgba(167, 20, 20, 0.575);
+}
+
+
+
+#co_msg {
+  width: auto;
+}
+
+#co_link_ctnr {
+  display: flex;
+  justify-content: center;
+}
+
+#sg_link_ctnr,
+#co_link {
+  background: transparent;
+  width: auto;
+  margin: auto;
+  text-align: center;
+  border-radius: 8px;
+  transition: all 1s ease-in;
+}
+
+#co_link {
+  padding: 0 0.5rem;
+  animation: sg_frame 5s ease infinite;
+  box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
+    inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
+    inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
+    inset 0 0 42px rgb(34, 207, 194);
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+#sg_link_ctnr {
+  cursor: not-allowed;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+#sg_link {
+  width: auto;
+  padding: 0.5rem 2rem;
+  font-family: "GangOfThree";
+  cursor: not-allowed;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.541);
+  text-shadow: 0 0 7px rgba(255, 255, 255, 0.541), 0 0 10px rgba(0, 0, 0, 0.555);
+  border: solid 5px white;
+  border: solid 5px rgba(255, 255, 255, 0.541);
+  border-radius: 8px;
+  box-shadow: 0 0 7px rgba(255, 255, 255, 0.541),
+    inset 0 0 7px rgba(255, 255, 255, 0.541), 0 0 10px rgba(0, 0, 0, 0.555),
+    inset 0 0 10px rgba(0, 0, 0, 0.555);
+}
+
 .olympics {
   /* transform-style: preserve-3d; */
   width: 100%;
@@ -318,16 +231,14 @@ p.soiree {
   /* background-color: red; */
 }
 
-
 .ring {
   width: 30%;
   height: 0;
   padding-top: 15%;
   padding-bottom: 15%;
   border-radius: 50%;
-  /* border: solid #86d5fd 0.1rem; */
+  border: solid #86d5fd 0.1rem;
   position: absolute;
-  background: rgba(38, 55, 58, 0.781);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -336,7 +247,7 @@ p.soiree {
   /* box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px #86d5fd,
     inset 0 0 10px #86f5fd, 0 0 21px #86f5fd, inset 0 0 21px #86f5fd,
     0 0 42px #86f5fd, inset 0 0 42px #86f5fd, 0 0 0 rgba(34, 207, 193, 0.8); */
-  border: solid 0.3rem white;
+  border: solid 0.2rem white;
   box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
     inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
     inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
@@ -360,6 +271,7 @@ p.soiree {
   bottom: 0;
   left: 25%;
   transform: translate(-25%, 0);
+  /* background: #f4c3003d; */
   /* transform: rotateX(0deg); */
 }
 
@@ -367,6 +279,7 @@ p.soiree {
   /* border-color: black; */
   left: 50%;
   transform: translate(-50%, 0);
+  /* background: rgba(38, 55, 58, 0.781); */
   /* transform: rotateX(45deg) scaleY(1.4142); */
 }
 
@@ -375,6 +288,7 @@ p.soiree {
   bottom: 0;
   right: 25%;
   transform: translate(25%, 0);
+  /* background: #009f3d73; */
   /* animation: fourth_ring 15s infinite; */
   box-shadow: unset;
   /* transform: translateZ(20vh) rotateX(70deg) scaleY(2.9238); */
@@ -383,46 +297,92 @@ p.soiree {
 .red {
   /* border-color: #df0024; */
   right: 0;
+  /* background: #df00255b; */
   /* transform: translateZ(-32vh) rotateX(80deg) scaleY(5.7588); */
 }
 
+/* Page Soldout -------------------------------------------------------------------------------------------------- */
+
+h1.soldout {
+  text-align: center;
+  font-size: 100px;
+  color: var(--text_color);
+  margin-top: 20vh;
+}
+
+#reload {
+  color: white;
+  width: 160px;
+  height: 50px;
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 46px;
+  border-radius: 30px;
+  border: 2px solid var(--template_color);
+  background: rgba(219, 232, 235, 0.4);
+  cursor: pointer;
+  transition: background 450ms, color 450ms;
+  user-select: none;
+}
+#reload:hover {
+  text-shadow: none;
+  background: var(--template_color);
+  color: var(--template_color);
+}
+
+/* Interface ----------------------------------------------------------------------------------------------------- */
+
+h1.interface {
+  text-align: center;
+  font-size: 80px;
+  color: "white";
+  font-family: "CaviarDreams";
+  margin-top: 20vh;
+}
+
+form.valide {
+  text-align: center;
+}
+
+/* Responsive ---------------------------------------------------------------------------------------------------- */
+
 @media screen and (orientation: portrait), screen and (max-width: 800px) {
   body {
-    background: url(""), url(""), url("img/nanolympique_mlightbg.jpeg");
-    background-size: 100%, 100%, cover;
-    background-position: top center, bottom 80px center, center;
+    background: url("img/nanolympique_mlightbg.jpeg");
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-color: black;
     box-shadow: 0 0 10px 5px black inset;
-  }
-  #counter {
-    grid-template-columns: 170px 170px 170px 170px;
-    width: 680px;
-    font-size: 80px;
   }
   #holder {
     top: 40vh;
     width: 900px;
   }
-  #link,
-  #connexion_link {
-    font-size: 48pt;
-    width: 600px;
-    height: 100px;
-    line-height: 110px;
-    top: -120px;
-  }
-  div.connexion,
-  div.etat {
-    font-size: 26pt;
+
+  #titre_sg {
+    width: 48rem;
+    overflow: visible;
+    margin-top: 35vh;
+    margin-bottom: 4rem;
+    font-size: 3rem;
+    background-color: rgba(83, 0, 0, 0.568);
+    border: solid 0.3rem white;
+    border-radius: 1rem;
   }
 
-  .connexion a.connexion {
-    font-size: 48px;
+  #co_msg_ctnr, #ok_msg_ctnr, #danger_msg_ctnr{
+   font-size: 2rem;
+   width: 50rem;
+   margin: 4rem auto;
   }
 
-  .finito {
-    font-weight: bold;
+  #sg_link,
+  #co_link {
+    font-size: 5rem;
+    padding: 1rem 6rem;
   }
 
   .olympics {
@@ -431,11 +391,13 @@ p.soiree {
   .ring .chiffre {
     font-size: 6rem;
   }
-  
+
   .ring .text {
     font-size: 1.5rem;
   }
 }
+
+/* Animations -------------------------------------------------------------------------------------------------------- */
 
 @keyframes shotgun {
   40%,
@@ -457,6 +419,27 @@ p.soiree {
     color: white;
     text-shadow: 0 0 7px white, 0 0 10px rgb(34, 207, 194),
       0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194);
+  }
+  20%,
+  24% {
+    border: solid 5px rgb(202, 202, 202);
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.836),
+      inset 0 0 7px rgba(255, 255, 255, 0.836), 0 0 10px rgb(34, 207, 194),
+      inset 0 0 10px rgba(34, 207, 193, 0.555),
+      0 0 21px rgba(34, 207, 193, 0.555),
+      inset 0 0 21px rgba(34, 207, 193, 0.555),
+      0 0 42px rgba(34, 207, 193, 0.555),
+      inset 0 0 42px rgba(34, 207, 193, 0.555);
+  }
+  0%,
+  19%,
+  25%,
+  100% {
+    border: solid 5px white;
+    box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
+      inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
+      inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
+      inset 0 0 42px rgb(34, 207, 194);
   }
 }
 
@@ -486,11 +469,16 @@ p.soiree {
 
 @keyframes ring {
   20%,
-  40.1%,40.3%,
-  74.1%,74.3%, 74.5%, 74.7%, 74.9%,75.1%,
-  78%
-   {
-    border: solid 5px rgba(255, 255, 255, 0.541);
+  40.1%,
+  40.3%,
+  74.1%,
+  74.3%,
+  74.5%,
+  74.7%,
+  74.9%,
+  75.1%,
+  78% {
+    border: solid 0.2rem rgba(255, 255, 255, 0.541);
     box-shadow: 0 0 7px rgba(255, 255, 255, 0.541),
       inset 0 0 7px rgba(255, 255, 255, 0.541), 0 0 10px rgba(0, 0, 0, 0.555),
       inset 0 0 10px rgba(0, 0, 0, 0.555); /*
@@ -503,11 +491,17 @@ p.soiree {
   19.9%,
   20.1%,
   40%,
-  40.2%, 40.4%,
-  74%,74.2%,74.4%,74.6%,74.8%,75%,
+  40.2%,
+  40.4%,
+  74%,
+  74.2%,
+  74.4%,
+  74.6%,
+  74.8%,
+  75%,
   78.1%,
   100% {
-    border: solid 5px white;
+    border: solid 0.2rem white;
     box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
       inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
       inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
@@ -515,9 +509,9 @@ p.soiree {
   }
 }
 @keyframes frame_glow {
-  49.1%,49.3%
-   {
-    border: solid 5px rgba(255, 255, 255, 0.541);
+  49.1%,
+  49.3% {
+    border: solid 0.2rem rgba(255, 255, 255, 0.541);
     box-shadow: 0 0 7px rgba(255, 255, 255, 0.541),
       inset 0 0 7px rgba(255, 255, 255, 0.541), 0 0 10px rgba(0, 0, 0, 0.555),
       inset 0 0 10px rgba(0, 0, 0, 0.555); /*
@@ -527,18 +521,21 @@ p.soiree {
       inset 0 0 42px rgba(34, 207, 193, 0.555); */
   }
   25%,
-  75%{
-    border: solid 5px rgb(255, 255, 255);
-    box-shadow: 0 0 7px rgba(255, 255, 255, 0.8), inset 0 0 7px rgba(255, 255, 255, 0.8), 0 0 10px rgba(34, 207, 193, 0.4),
+  75% {
+    border: solid 0.2rem rgb(255, 255, 255);
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.8),
+      inset 0 0 7px rgba(255, 255, 255, 0.8), 0 0 10px rgba(34, 207, 193, 0.4),
       inset 0 0 10px rgba(34, 207, 193, 0.4), 0 0 21px rgba(34, 207, 193, 0.4),
       inset 0 0 21px rgba(34, 207, 193, 0.4), 0 0 42px rgba(34, 207, 193, 0.4),
       inset 0 0 42px rgba(34, 207, 193, 0.4);
   }
   0%,
-  49%, 49.2%, 49.4%,
+  49%,
+  49.2%,
+  49.4%,
   50%,
   100% {
-    border: solid 5px white;
+    border: solid 0.2rem white;
     box-shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px rgb(34, 207, 194),
       inset 0 0 10px rgb(34, 207, 194), 0 0 21px rgb(34, 207, 194),
       inset 0 0 21px rgb(34, 207, 194), 0 0 42px rgb(34, 207, 194),
@@ -582,6 +579,8 @@ p.soiree {
       inset 0 0 42px rgb(34, 207, 194);
   }
 }
+
+/* Fonts ------------------------------------------------------------------------------------------------------------------------------ */
 
 @font-face {
   font-family: "CaviarDreams";
