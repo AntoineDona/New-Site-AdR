@@ -1,6 +1,79 @@
-<?php include("auth.php"); 
+<?php include("auth.php"); ?>
+<?php 
+include("database.php");
+
+function number_place($pdo)
+{
+	$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique");
+	$query->execute();
+	$result = $query->fetch();
+	return $result['c'];
+}
+
+function is_present($email, $pdo)
+{
+	$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique where email=?");
+	$query->execute(array($email));
+	$result = $query->fetch();
+	return $result['c'];
+}
+
+
+function is_rpz($email, $pdo)
+{
+	$query = $pdo->prepare("SELECT COUNT(*) as c from representants_fp where email=?");
+	$query->execute(array($email));
+	$result = $query->fetch();
+	if ($result['c'] == 0) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+$_SESSION["promo"] = $_SESSION["user"]["promo"];
+$_SESSION["prenom"] = $_SESSION["user"]["firstName"];
+$_SESSION["nom"] = $_SESSION["user"]["lastName"];
+$_SESSION["email"] = $_SESSION["user"]["email"];
+
+
+//$req='select count(*) from nanoween where prenom=$_SESSION["prenom"] AND nom =$_SESSION["nom"]';
+//$res=$pdo->query($req);
+
+$res = is_present($_SESSION["email"], $pdo);
+$_SESSION["is_representant"] = is_rpz($_SESSION["email"], $pdo);
+
+//echo $res;
+//echo 'est ce que ça fonctionne vraiment?';
+$reste = 550 - number_place($pdo);
+//echo 'Il reste '.$reste.' places au shotgun';
+if ($res == 0) {
+	$_SESSION['shotgun'] = false; //changer en false!!!
+	//echo 'y a pas';
+	// la valeur n'existe pas -> action appropriée
+} else {
+	$_SESSION['shotgun'] = true;
+	//echo 'y a de ouf';
+	// valeur existe -> action appropriée
+}
+
+// if ($_SESSION["email"] == 'agathe.auburtin@student-cs.fr') {
+// 	header("Location: https://adr.cs-campus.fr/nanolympique/agathe.php");
+// }
+
+if (number_place($pdo) >= 1 and !$_SESSION['shotgun']) {
+	if ($_SESSION["isConnected"]) {
+		header("Location: https://adr.cs-campus.fr/nanolympique/fini.php");
+	} else {
+		header("Location: https://adr.cs-campus.fr/nanolympique/connexion.php");
+	}
+}
+
+if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "action.php") {
+	echo "<script>alert(\"Tu n'es pas représentant de ta famille de parrainage... \")</script>";
+}
+
 ?>
-<?php include("database.php"); ?>
 
 <!DOCTYPE html>
 <html>
@@ -18,81 +91,6 @@
 <body onload="onLoad()">
 
 	<!-- <a href="deconnexion.php">se deconnecter</a> -->
-
-	<?php
-	function number_place($pdo)
-	{
-		$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique");
-		$query->execute();
-		$result = $query->fetch();
-		return $result['c'];
-	}
-
-	function is_present($email, $pdo)
-	{
-		$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique where email=?");
-		$query->execute(array($email));
-		$result = $query->fetch();
-		return $result['c'];
-	}
-
-
-	function is_rpz($email, $pdo)
-	{
-		$query = $pdo->prepare("SELECT COUNT(*) as c from representants_fp where email=?");
-		$query->execute(array($email));
-		$result = $query->fetch();
-		if ($result['c']==0){
-			return false;
-		}
-		else{
-			return true;
-		}
-	}
-
-	$_SESSION["promo"] = $_SESSION["user"]["promo"];
-	$_SESSION["prenom"] = $_SESSION["user"]["firstName"];
-	$_SESSION["nom"] = $_SESSION["user"]["lastName"];
-	$_SESSION["email"] = $_SESSION["user"]["email"];
-
-
-	//$req='select count(*) from nanoween where prenom=$_SESSION["prenom"] AND nom =$_SESSION["nom"]';
-	//$res=$pdo->query($req);
-
-	$res = is_present($_SESSION["email"], $pdo);
-	$_SESSION["is_representant"] = is_rpz($_SESSION["email"], $pdo);
-
-	//echo $res;
-	//echo 'est ce que ça fonctionne vraiment?';
-	$reste = 550 - number_place($pdo);
-	//echo 'Il reste '.$reste.' places au shotgun';
-	if ($res == 0) {
-		$_SESSION['shotgun'] = false; //changer en false!!!
-		//echo 'y a pas';
-		// la valeur n'existe pas -> action appropriée
-	} else {
-		$_SESSION['shotgun'] = true;
-		//echo 'y a de ouf';
-		// valeur existe -> action appropriée
-	}
-
-	// if ($_SESSION["email"] == 'agathe.auburtin@student-cs.fr') {
-	// 	header("Location: https://adr.cs-campus.fr/nanolympique/agathe.php");
-	// }
-
-	if (number_place($pdo) >= 1 and !$_SESSION['shotgun']) {
-		if ($_SESSION["isConnected"]) {
-			header("Location: https://adr.cs-campus.fr/nanolympique/fini.php");
-		} else {
-			header("Location: https://adr.cs-campus.fr/nanolympique/connexion.php");
-		}
-	}
-
-	if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION['prev_page']=="action.php"){
-		echo "<script>alert(\"Tu n'es pas représentant de ta famille de parrainage... \")</script>";
-	}
-
-	?>
 
 	<div id="titre_sg"></div>
 	<div id="holder">
@@ -141,14 +139,14 @@
 			}
 		</script>
 	</div>
-	
-		<?php
-		if (!$_SESSION["is_representant"]) {
-			echo " <div id='danger_msg_ctnr'> <p id='co_msg'>Attention, si vous voyez ce message, VOUS NE POURREZ PAS SHOTGUN!! Seuls les représentants de famille de parrainage ont la possibilité de Shotgun!!</p></div> ";
-		} else {
-			echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Salut " .$_SESSION["prenom"] . "! <br> Tu est bien représentant de ta famille de parainage, tu vas pouvoir Shotgun! </p></div>";
-		}
-		?>
+
+	<?php
+	if (!$_SESSION["is_representant"]) {
+		echo " <div id='danger_msg_ctnr'> <p id='co_msg'>Attention, si vous voyez ce message, VOUS NE POURREZ PAS SHOTGUN!! Seuls les représentants de famille de parrainage ont la possibilité de Shotgun!!</p></div> ";
+	} else {
+		echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Salut " . $_SESSION["prenom"] . "! <br> Tu est bien représentant de ta famille de parainage, tu vas pouvoir Shotgun! </p></div>";
+	}
+	?>
 	<div id="sg_link_ctnr" href="#">
 		<?php
 		if (!$_SESSION['shotgun']) {
