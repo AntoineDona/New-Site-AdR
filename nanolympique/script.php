@@ -21,7 +21,11 @@
 		var date_soiree = new Date(2021, 07, 29, 22, 00);
 		var title = "Ouverture du Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
-		var shotgun = '<?php echo $_SESSION['shotgun'];?>';
+		var shotgun = '<?php 
+		if (isset($_SESSION['shotgun'])){
+			echo $_SESSION['shotgun'];
+		} else {echo false;} // sinon on est pas connecté (car dès qu'on est connecté, on définie session(shotgun))
+		?>';
 
 		if (shotgun || total_sec >= 0){ //si la personne a sg ou le sg est fini (personne pas connectés)
 			var total_sec = Math.trunc((date_soiree.getTime() - date.getTime()) / 1000);
