@@ -20,8 +20,8 @@ session_start();
 		$result= $query->fetch();
 		return $result['c'];
 	}
-	$_SESSION["mail"] = $_SESSION["user"]["email"];
-	$cotiz = is_cotiz($_SESSION["mail"],$pdo);
+	$_SESSION["email"] = $_SESSION["user"]["email"];
+	$cotiz = is_cotiz($_SESSION["email"],$pdo);
 	
 	if ($_SESSION["promo"]==2022){
 			if ($cotiz==0){
