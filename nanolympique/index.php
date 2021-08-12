@@ -80,7 +80,7 @@
 	// 	header("Location: https://adr.cs-campus.fr/nanolympique/agathe.php");
 	// }
 
-	if (number_place($pdo) >= 550 and !$_SESSION['shotgun']) {
+	if (number_place($pdo) >= 1 and !$_SESSION['shotgun']) {
 		if ($_SESSION["isConnected"]) {
 			header("Location: https://adr.cs-campus.fr/nanolympique/fini.php");
 		} else {
@@ -135,7 +135,7 @@
 			}
 
 			function verif() {
-				if (confirm("En cliquant sur OK, tu annules ta place et la remets en jeu.")) {
+				if (confirm("ATTENTION: En cliquant sur OK, tu annules ta place et la remets en jeu.")) {
 					window.location = 'action.php';
 				}
 			}
@@ -154,7 +154,7 @@
 		if (!$_SESSION['shotgun']) {
 			echo '<a id="sg_link" href="action.php" onClick="shotgun();">SHOTGUN</a>';
 		} else {
-			echo '<a id="sg_link" href="action.php"onClick="verif();">DEPAPS</a>';
+			echo '<a id="sg_link" href="action.php" onClick="verif();">DEPAPS</a>';
 		}
 		?>
 	</div>
