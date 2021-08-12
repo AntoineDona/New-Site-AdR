@@ -16,12 +16,12 @@
 
 	function timer() {
 		var date = new Date();
-		// $_SESSION['shotgun'] = false;
+		<?php //$_SESSION['shotgun'] = false; ?>
 		var date_shotgun = new Date(2021, 07, 11, 00, 00, 00);
 		var date_soiree = new Date(2021, 07, 29, 22, 00);
 		var title = "Ouverture du Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
-		var shotgun = <?php echo $_SESSION['shotgun'] ?>
+		var shotgun = '<?php echo $_SESSION['shotgun'];?>';
 
 		if (shotgun || total_sec >= 0){ //si la personne a sg ou le sg est fini (personne pas connectés)
 			var total_sec = Math.trunc((date_soiree.getTime() - date.getTime()) / 1000);
