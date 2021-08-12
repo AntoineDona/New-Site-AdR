@@ -163,9 +163,9 @@ if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION[
 	<div id="sg_link_ctnr" href="#">
 		<?php
 		if (!$_SESSION['shotgun']) {
-			echo '<a id="sg_link" href="action.php" onClick="shotgun();">SHOTGUN</a>';
+			echo '<a id="sg_link" href=# onClick="shotgun();">SHOTGUN</a>';
 		} else {
-			echo '<a id="sg_link" href="action.php" onClick="verif();">DEPAPS</a>';
+			echo '<a id="sg_link" href=# onClick="verif();">DEPAPS</a>';
 		}
 		?>
 	</div>
