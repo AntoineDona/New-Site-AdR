@@ -30,7 +30,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 
 <body onload="onLoad()">
 	<?php
-	if ($_SESSION['prev_page'] == "logout.php") {
+	if (isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "logout.php") {
 		echo "<script>alert(\"Tu as bien été déconnecté \")</script>";
 	}
 	?>
