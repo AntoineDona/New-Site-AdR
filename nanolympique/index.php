@@ -1,5 +1,5 @@
 <?php include("auth.php"); ?>
-<?php 
+<?php
 include("database.php");
 
 function number_place($pdo)
@@ -141,10 +141,15 @@ if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION[
 	</div>
 
 	<?php
-	if (!$_SESSION["is_representant"]) {
-		echo " <div id='danger_msg_ctnr'> <p id='co_msg'>Attention, si vous voyez ce message, VOUS NE POURREZ PAS SHOTGUN!! Seuls les représentants de famille de parrainage ont la possibilité de Shotgun!!</p></div> ";
+
+	if (!$_SESSION['shotgun']) {
+		if (!$_SESSION["is_representant"]) {
+			echo " <div id='danger_msg_ctnr'> <p id='co_msg'>Attention, si vous voyez ce message, VOUS NE POURREZ PAS SHOTGUN!! Seuls les représentants de famille de parrainage ont la possibilité de Shotgun!!</p></div> ";
+		} else {
+			echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Salut " . $_SESSION["prenom"] . "! <br> Tu est bien représentant de ta famille de parainage, tu vas pouvoir Shotgun! </p></div>";
+		}
 	} else {
-		echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Salut " . $_SESSION["prenom"] . "! <br> Tu est bien représentant de ta famille de parainage, tu vas pouvoir Shotgun! </p></div>";
+		echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au Nanolympique, à demain! </p></div>";
 	}
 	?>
 	<div id="sg_link_ctnr" href="#">
@@ -155,19 +160,6 @@ if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION[
 			echo '<a id="sg_link" href="action.php" onClick="verif();">DEPAPS</a>';
 		}
 		?>
-	</div>
-
-
-	<div class="etat" style="display: none;">
-		<p>Salut <?php echo $_SESSION["prenom"] . ' ' . $_SESSION["nom"]; ?> !<br>
-			<?php
-			if ($_SESSION['shotgun']) {
-				echo 'Tu as déjà ta place !';
-			} else {
-				echo "Tu n'as pas encore ta place !";
-			}
-			?>
-		</p>
 	</div>
 
 </body>
