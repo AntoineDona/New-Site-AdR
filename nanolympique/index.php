@@ -27,9 +27,7 @@
 		$result = $query->fetch();
 		return $result['c'];
 	}
-	?>
 
-	<?php
 	function is_present($email, $pdo)
 	{
 		$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique where email=?");
@@ -52,16 +50,10 @@
 		}
 	}
 
-	?>
-
-
-	<?php
 	$_SESSION["promo"] = $_SESSION["user"]["promo"];
 	$_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 	$_SESSION["nom"] = $_SESSION["user"]["lastName"];
 	$_SESSION["email"] = $_SESSION["user"]["email"];
-
-
 
 
 	//$req='select count(*) from nanoween where prenom=$_SESSION["prenom"] AND nom =$_SESSION["nom"]';
@@ -83,16 +75,11 @@
 		//echo 'y a de ouf';
 		// valeur existe -> action appropriée
 	}
-	?>
 
-	<?php
-	if ($_SESSION["email"] == 'agathe.auburtin@student-cs.fr') {
-		header("Location: https://adr.cs-campus.fr/nanolympique/agathe.php");
-	}
-	?>
+	// if ($_SESSION["email"] == 'agathe.auburtin@student-cs.fr') {
+	// 	header("Location: https://adr.cs-campus.fr/nanolympique/agathe.php");
+	// }
 
-
-	<?php
 	if (number_place($pdo) >= 550 and !$_SESSION['shotgun']) {
 		if ($_SESSION["isConnected"]) {
 			header("Location: https://adr.cs-campus.fr/nanolympique/fini.php");
@@ -100,6 +87,9 @@
 			header("Location: https://adr.cs-campus.fr/nanolympique/connexion.php");
 		}
 	}
+
+	if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION['prev_page']=="action.php")
+	echo "<script>alert(\"Tu n'es pas représentant de ta famille de parrainage... \")</script>";
 
 	?>
 
