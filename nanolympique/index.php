@@ -89,9 +89,9 @@
 
 	<?php
 	if ($rpz == 0) {
-		$_SESSION["representant"] = false;
+		$_SESSION["is_representant"] = false;
 	} else {
-		$_SESSION["representant"] = true;
+		$_SESSION["is_representant"] = true;
 		//echo "trop cool tu as cotisé";
 	}
 	?>
