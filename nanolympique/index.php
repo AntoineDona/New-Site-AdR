@@ -44,7 +44,12 @@
 		$query = $pdo->prepare("SELECT COUNT(*) as c from representants_fp where email=?");
 		$query->execute(array($email));
 		$result = $query->fetch();
-		return $result['c'];
+		if ($result['c']==0){
+			return false;
+		}
+		else{
+			return true;
+		}
 	}
 
 	?>
@@ -63,7 +68,7 @@
 	//$res=$pdo->query($req);
 
 	$res = is_present($_SESSION["email"], $pdo);
-	$rpz = is_rpz($_SESSION["email"], $pdo);
+	$_SESSION["is_representant"] = is_rpz($_SESSION["email"], $pdo);
 
 	//echo $res;
 	//echo 'est ce que ça fonctionne vraiment?';
@@ -83,16 +88,6 @@
 	<?php
 	if ($_SESSION["email"] == 'agathe.auburtin@student-cs.fr') {
 		header("Location: https://adr.cs-campus.fr/nanolympique/agathe.php");
-	}
-	?>
-
-
-	<?php
-	if ($rpz == 0) {
-		$_SESSION["is_representant"] = false;
-	} else {
-		$_SESSION["is_representant"] = true;
-		//echo "trop cool tu as cotisé";
 	}
 	?>
 

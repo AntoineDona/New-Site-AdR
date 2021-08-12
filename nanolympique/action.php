@@ -21,17 +21,30 @@ function number_place($pdo){
 	return $result['c'];
 }
 
-function isCotisant($mail,$pdo){
-	$query = $pdo->prepare("SELECT * from parrains WHERE EMAIL=?");
-	$query->execute(array($mail));
-	$result= $query->fetch();
-	if ($result["COTISANT"] == 'oui'){
-		return true;
-	}
-	else{
+function is_rpz($email, $pdo)
+{
+	$query = $pdo->prepare("SELECT COUNT(*) as c from representants_fp where email=?");
+	$query->execute(array($email));
+	$result = $query->fetch();
+	if ($result['c']==0){
 		return false;
 	}
+	else{
+		return true;
+	}
 }
+
+// function isCotisant($mail,$pdo){
+// 	$query = $pdo->prepare("SELECT * from parrains WHERE EMAIL=?");
+// 	$query->execute(array($mail));
+// 	$result= $query->fetch();
+// 	if ($result["COTISANT"] == 'oui'){
+// 		return true;
+// 	}
+// 	else{
+// 		return false;
+// 	}
+// }
 
 
 $_SESSION["promo"]=$_SESSION["user"]["promo"];
@@ -47,8 +60,9 @@ $shotgun_date_sec = (((date('d', $shotgun_date)-1)*24 + date('H', $shotgun_date)
 $end_date = mktime(22, 00, 0, 8, 29, 2021);
 $end_date_sec = (((date('d', $end_date)-1)*24 + date('H', $end_date))*60 + date('i', $end_date))*60 + date('s', $end_date);
 if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec) {
-	if ($_SESSION["cotisant"] == false) {
-		header("Location: /nanolympique/non_cotisant.php");
+	if ($_SESSION["is_representant"] == false) {
+		echo "<script>alert(\"Tu n'es pas représentant de ta famille de parrainage... \")</script>";
+		header("Location: /nanolympique/index.php");
 	} else {
 		if (!$_SESSION['shotgun']) {
 			if (number_place($pdo) < 0) {
