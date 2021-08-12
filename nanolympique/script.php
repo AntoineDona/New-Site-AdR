@@ -16,17 +16,18 @@
 
 	function timer() {
 		var date = new Date();
-		<?php
 		// $_SESSION['shotgun'] = false;
-		if ($_SESSION['shotgun']) {
-			echo 'var date_shotgun = new Date(2021, 07, 29, 22, 00);';
-			echo 'title = "Début du NANOLYMPIQUE dans :";';
-		} else {
-			echo 'var date_shotgun = new Date(2021, 07, 11, 00, 00, 00);';
-			echo 'var title = "Ouverture du Shotgun dans :";';
-		}
-		?>
+		var date_shotgun = new Date(2021, 07, 11, 00, 00, 00);
+		var date_soiree = new Date(2021, 07, 29, 22, 00);
+		var title = "Ouverture du Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
+		var shotgun = <?php echo $_SESSION['shotgun'] ?>
+
+		if (shotgun || total_sec >= 0){ //si la personne a sg ou le sg est fini (personne pas connectés)
+			var total_sec = Math.trunc((date_soiree.getTime() - date.getTime()) / 1000);
+			var title = "Début du NANOLYMPIQUE dans :";
+		}
+
 		var diff_jour = getFormattedDigits(Math.trunc(total_sec / 3600 / 24));
 		var diff_hour = getFormattedDigits(Math.trunc((total_sec - diff_jour * 24 * 3600) / 3600));
 		var diff_min = getFormattedDigits(Math.trunc((total_sec - diff_jour * 24 * 3600 - diff_hour * 3600) / 60));
