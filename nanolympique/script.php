@@ -18,7 +18,7 @@
 	function timer() {
 		var date = new Date();
 		<?php //$_SESSION['shotgun'] = false; ?>
-		var date_shotgun = new Date(2021, 07, 11, 00, 00, 00);
+		var date_shotgun = new Date(2021, 07, 12, 21, 00, 00);
 		var date_soiree = new Date(2021, 07, 29, 22, 00);
 		var title = "Ouverture du Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
