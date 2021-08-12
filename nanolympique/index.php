@@ -18,6 +18,14 @@ function is_present($email, $pdo)
 	return $result['c'];
 }
 
+function get_row($email, $pdo)
+{
+	$query = $pdo->prepare("SELECT id from nanolympique where email=?");
+	$query->execute(array($email));
+	$result = $query->fetch();
+	return $result['id'];
+}
+
 
 function is_rpz($email, $pdo)
 {
@@ -45,7 +53,7 @@ $_SESSION["is_representant"] = is_rpz($_SESSION["email"], $pdo);
 
 //echo $res;
 //echo 'est ce que ça fonctionne vraiment?';
-$reste = 550 - number_place($pdo);
+$reste = 6 - number_place($pdo);
 //echo 'Il reste '.$reste.' places au shotgun';
 if ($res == 0) {
 	$_SESSION['shotgun'] = false; //changer en false!!!
@@ -61,7 +69,7 @@ if ($res == 0) {
 // 	header("Location: https://adr.cs-campus.fr/nanolympique/agathe.php");
 // }
 
-if (number_place($pdo) >= 1 and !$_SESSION['shotgun']) {
+if (number_place($pdo) >= 6 and !$_SESSION['shotgun']) {
 	if ($_SESSION["isConnected"]) {
 		header("Location: https://adr.cs-campus.fr/nanolympique/fini.php");
 	} else {
@@ -149,7 +157,7 @@ if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION[
 			echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien représentant de ta famille de parainage, tu vas pouvoir Shotgun! </p></div>";
 		}
 	} else {
-		echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au Nanolympique, à demain! </p></div>";
+		echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au Nanolympique. Tu as été le " . get_row($_SESSION["email"],$pdo) . "e </p></div>";
 	}
 	?>
 	<div id="sg_link_ctnr" href="#">
