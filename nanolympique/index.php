@@ -88,8 +88,9 @@
 		}
 	}
 
-	if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION['prev_page']=="action.php")
-	echo "<script>alert(\"Tu n'es pas représentant de ta famille de parrainage... \")</script>";
+	if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION['prev_page']=="action.php"){
+		echo "<script>alert(\"Tu n'es pas représentant de ta famille de parrainage... \")</script>";
+	}
 
 	?>
 
