@@ -33,18 +33,14 @@ if ($_SESSION['shotgun']) {
 ?>
 
 <body>
-	<div class="fin">
-		<h1 class="soldout">SOLD-OUT</h1>
-		<h1 class="finito">Le monde appartient à ceux qui se lèvent tôt! Et à ceux qui ont la fibre...</h1>
-		<h2 class="finito"><br>
-			<?php
-
-			echo 'Salut ' . $_SESSION["prenom"] . ', vérifie si tu as bien ta place en rechargeant !';
-			?>
-
-		</h2>
+	<div class="soldout_ctnr">
+		<h1 id="soldout_title">SOLD-OUT</h1>
+		<p> Désolé <?php echo $_SESSION["prenom"]; ?>! <br>
+			Le monde appartient à ceux qui se lèvent tôt... <br>
+			Vérifie si tu as shotgun en cliquant sur recharger:
+		</p>
+		<div href="#" onClick="window.location='index.php'" id="reload">&#8635; Recharger</div>
 	</div>
-	<div href="#" onClick="window.location='index.php'" id="reload">&#8635; Recharger</div>
 
 </body>
 
