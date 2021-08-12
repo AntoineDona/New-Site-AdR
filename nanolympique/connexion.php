@@ -29,7 +29,6 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"])  {
 <?php include("script.php"); ?>
 
 <body onload="onLoad()">
-
 	<div id="titre_sg">Le shotgun commence dans:</div>
 	<div id="holder">
 		<div class="olympics">

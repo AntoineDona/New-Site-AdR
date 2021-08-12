@@ -17,18 +17,18 @@
 
 	function timer() {
 		var date = new Date();
+		console.log(date);
 		<?php //$_SESSION['shotgun'] = false; ?>
-		var date_shotgun = new Date(2021, 07, 12, 20, 00, 00);
+		var date_shotgun = new Date(2021, 07, 12, 21, 00, 00);
 		var date_soiree = new Date(2021, 07, 29, 21, 00);
 		var title = "Ouverture du Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
 		var shotgun = '<?php 
 		if (isset($_SESSION['shotgun']) && $_SESSION['shotgun']==true){
-			echo true;
-		} else {echo false ;} // sinon on est pas connecté (car dès qu'on est connecté, on définie session(shotgun))
+			echo 1;
+		} else {echo 0;} // sinon on est pas connecté (car dès qu'on est connecté, on définie session(shotgun))
 		?>';
-
-		if (shotgun || total_sec >= 0){ //si la personne a sg ou le sg est fini (personne pas connectés)
+		if (shotgun==1 || total_sec <= 0){ // Obligé d'utiliser des nombres car convertion php js pourrie
 			var total_sec = Math.trunc((date_soiree.getTime() - date.getTime()) / 1000);
 			var title = "Début du NANOLYMPIQUE dans :";
 		}
