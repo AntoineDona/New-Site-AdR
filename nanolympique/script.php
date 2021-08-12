@@ -27,6 +27,7 @@
 			var total_sec = Math.trunc((date_soiree.getTime() - date.getTime()) / 1000);
 			var title = "Début du NANOLYMPIQUE dans :";
 		}
+		console.log(shotgun);
 
 		var diff_jour = getFormattedDigits(Math.trunc(total_sec / 3600 / 24));
 		var diff_hour = getFormattedDigits(Math.trunc((total_sec - diff_jour * 24 * 3600) / 3600));
