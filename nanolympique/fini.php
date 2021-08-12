@@ -39,7 +39,10 @@ if ($_SESSION['shotgun']) {
 			Le monde appartient à ceux qui se lèvent tôt... <br>
 			Vérifie si tu as shotgun en cliquant sur recharger:
 		</p>
-		<div href="#" onClick="window.location='index.php'" id="reload">&#8635; Recharger</div>
+		<div class="btns_ctnr">
+			<div href="#" onClick="window.location='index.php'" id="reload">&#8635; Recharger</div>
+			<div href="#" onClick="window.location='logout.php'" id="reload">Se Déconnecter</div>
+		</div>
 	</div>
 
 </body>

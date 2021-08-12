@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"])  {
+if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	echo "Connecté : ";
 	// Pour voir plus de données disponibles, voir la documentation
 	// sur auth.viarezo.fr
@@ -29,6 +29,11 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"])  {
 <?php include("script.php"); ?>
 
 <body onload="onLoad()">
+	<?php
+	if ($_SESSION['prev_page'] == "logout.php") {
+		echo "<script>alert(\"Tu as bien été déconnecté \")</script>";
+	}
+	?>
 	<div id="titre_sg">Le shotgun commence dans:</div>
 	<div id="holder">
 		<div class="olympics">
