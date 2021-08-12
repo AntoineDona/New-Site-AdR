@@ -8,7 +8,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
 	<title>NANOLYMPIQUE</title>
-	<link rel="icon" type="image/png" href="img/adr_ico.png" />
+	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/images/favicon/favicon-96x96.png">
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
@@ -39,9 +39,9 @@
 	}
 
 
-	function is_cotiz($mail, $pdo)
+	function is_rpz($mail, $pdo)
 	{
-		$query = $pdo->prepare("SELECT COUNT(*) as c from cotisants_p2022 where EMAIL=? and COTISANT='oui'");
+		$query = $pdo->prepare("SELECT COUNT(*) as c from representants_fp where EMAIL=?");
 		$query->execute(array($mail));
 		$result = $query->fetch();
 		return $result['c'];
@@ -63,7 +63,7 @@
 	//$res=$pdo->query($req);
 
 	$res = is_present($_SESSION["prenom"], $_SESSION["nom"], $pdo);
-	$cotiz = is_cotiz($_SESSION["mail"], $pdo);
+	$rpz = is_rpz($_SESSION["mail"], $pdo);
 
 	//echo $res;
 	//echo 'est ce que ça fonctionne vraiment?';
@@ -88,21 +88,12 @@
 
 
 	<?php
-
-	if ($_SESSION["promo"] == 2022) {
-		if ($cotiz == 0) {
-			$_SESSION["cotisant"] = false;
-			header("Location: https://adr.cs-campus.fr/nanolympique/non_cotisant.php");
-		} else {
-			$_SESSION["cotisant"] = true;
-			//echo "trop cool tu as cotisé";
-		}
+	if ($rpz == 0) {
+		$_SESSION["representant"] = false;
 	} else {
-		$_SESSION["cotisant"] = true;
-		//echo "bah toi t'es en 2A ou plus";
+		$_SESSION["representant"] = true;
+		//echo "trop cool tu as cotisé";
 	}
-
-	//echo 'bonjour'; 
 	?>
 
 
@@ -163,19 +154,25 @@
 				}
 			}
 		</script>
-
-		<div id="link" href="#">
-			<a class="shotgun" href="action.php">
-				<?php
-				if (!$_SESSION['shotgun']) {
-					echo '<p id="shotgun" onClick="shotgun();">SHOTGUN</p>';
-				} else {
-					echo '<p id="shotgun" onClick="verif();">DEPAPS</p>';
-				}
-				?>
-			</a>
-		</div>
 	</div>
+	
+		<?php
+		if (!$_SESSION["is_representant"]) {
+			echo " <div id='danger_msg_ctnr'> <p id='co_msg'>Attention, si vous voyez ce message, VOUS NE POURREZ PAS SHOTGUN!! Seuls les représentants de famille de parrainage ont la possibilité de Shotgun!!</p></div> ";
+		} else {
+			echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Salut " .$_SESSION["prenom"] . "! <br> Tu est bien représentant de ta famille de parainage, tu vas pouvoir Shotgun! </p></div>";
+		}
+		?>
+	<div id="sg_link_ctnr" href="#">
+		<?php
+		if (!$_SESSION['shotgun']) {
+			echo '<a id="sg_link" href="action.php" onClick="shotgun();">SHOTGUN</a>';
+		} else {
+			echo '<a id="sg_link" href="action.php"onClick="verif();">DEPAPS</a>';
+		}
+		?>
+	</div>
+
 
 	<div class="etat" style="display: none;">
 		<p>Salut <?php echo $_SESSION["prenom"] . ' ' . $_SESSION["nom"]; ?> !<br>
