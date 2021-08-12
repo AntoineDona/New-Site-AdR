@@ -30,13 +30,13 @@ session_start();
 			else{
 				$_SESSION["cotisant"] = true;
 				echo "trop cool tu as cotisé";
-				header("Location: https://adr.cs-campus.fr/nanolympique/index.php");
+				// header("Location: https://adr.cs-campus.fr/nanolympique/index.php");
 			}
 		}
 		else{
 			$_SESSION["cotisant"] = true;
 			echo "bah toi t'es en 2A";
-			header("Location: https://adr.cs-campus.fr/nanolympique/index.php");
+			// header("Location: https://adr.cs-campus.fr/nanolympique/index.php");
 		}
 	
 	?>
