@@ -1,4 +1,5 @@
 <script type="text/javascript">
+	
 	function redirect(url) {
 		window.location = url;
 	};
@@ -22,16 +23,15 @@
 		var title = "Ouverture du Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
 		var shotgun = '<?php 
-		if (isset($_SESSION['shotgun'])){
-			echo $_SESSION['shotgun'];
-		} else {echo false;} // sinon on est pas connecté (car dès qu'on est connecté, on définie session(shotgun))
+		if (isset($_SESSION['shotgun']) && $_SESSION['shotgun']==true){
+			echo true;
+		} else {echo false ;} // sinon on est pas connecté (car dès qu'on est connecté, on définie session(shotgun))
 		?>';
 
 		if (shotgun || total_sec >= 0){ //si la personne a sg ou le sg est fini (personne pas connectés)
 			var total_sec = Math.trunc((date_soiree.getTime() - date.getTime()) / 1000);
 			var title = "Début du NANOLYMPIQUE dans :";
 		}
-		console.log(shotgun);
 
 		var diff_jour = getFormattedDigits(Math.trunc(total_sec / 3600 / 24));
 		var diff_hour = getFormattedDigits(Math.trunc((total_sec - diff_jour * 24 * 3600) / 3600));
