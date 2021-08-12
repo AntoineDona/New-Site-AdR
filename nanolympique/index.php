@@ -30,19 +30,19 @@
 	?>
 
 	<?php
-	function is_present($prenom, $nom, $pdo)
+	function is_present($email, $pdo)
 	{
-		$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique where prenom=? and nom=?");
-		$query->execute(array($prenom, $nom));
+		$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique where email=?");
+		$query->execute(array($email));
 		$result = $query->fetch();
 		return $result['c'];
 	}
 
 
-	function is_rpz($mail, $pdo)
+	function is_rpz($email, $pdo)
 	{
-		$query = $pdo->prepare("SELECT COUNT(*) as c from representants_fp where EMAIL=?");
-		$query->execute(array($mail));
+		$query = $pdo->prepare("SELECT COUNT(*) as c from representants_fp where email=?");
+		$query->execute(array($email));
 		$result = $query->fetch();
 		return $result['c'];
 	}
@@ -54,7 +54,7 @@
 	$_SESSION["promo"] = $_SESSION["user"]["promo"];
 	$_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 	$_SESSION["nom"] = $_SESSION["user"]["lastName"];
-	$_SESSION["mail"] = $_SESSION["user"]["email"];
+	$_SESSION["email"] = $_SESSION["user"]["email"];
 
 
 
@@ -62,8 +62,8 @@
 	//$req='select count(*) from nanoween where prenom=$_SESSION["prenom"] AND nom =$_SESSION["nom"]';
 	//$res=$pdo->query($req);
 
-	$res = is_present($_SESSION["prenom"], $_SESSION["nom"], $pdo);
-	$rpz = is_rpz($_SESSION["mail"], $pdo);
+	$res = is_present($_SESSION["email"], $pdo);
+	$rpz = is_rpz($_SESSION["email"], $pdo);
 
 	//echo $res;
 	//echo 'est ce que ça fonctionne vraiment?';
@@ -81,7 +81,7 @@
 	?>
 
 	<?php
-	if ($_SESSION["mail"] == 'agathe.auburtin@student-cs.fr') {
+	if ($_SESSION["email"] == 'agathe.auburtin@student-cs.fr') {
 		header("Location: https://adr.cs-campus.fr/nanolympique/agathe.php");
 	}
 	?>
