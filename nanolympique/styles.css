@@ -226,6 +226,7 @@ p.soiree {
   box-shadow: 0 0 7px rgba(255, 255, 255, 0.541),
     inset 0 0 7px rgba(255, 255, 255, 0.541), 0 0 10px rgba(0, 0, 0, 0.555),
     inset 0 0 10px rgba(0, 0, 0, 0.555);
+  transition: all 0.4s ease;
 }
 
 .olympics {
