@@ -22,7 +22,7 @@
 			echo 'var date_shotgun = new Date(2021, 07, 29, 22, 00);';
 			echo 'title = "Début du NANOLYMPIQUE dans :";';
 		} else {
-			echo 'var date_shotgun = new Date(2021, 07, 29, 00, 00, 00);';
+			echo 'var date_shotgun = new Date(2021, 07, 11, 00, 00, 00);';
 			echo 'var title = "Ouverture du Shotgun dans :";';
 		}
 		?>
@@ -83,37 +83,17 @@
 		}
 
 		if (total_sec <= 0) {
-			$('#link').css({
-				animation: "sg_frame 5s ease infinite"
-			});
-			$('#link').css({
-				cursor: "pointer"
-			});
-			$('#link a.shotgun').css({
-				cursor: "pointer"
-			});
-			$('#shotgun').css({
-				animation: "shotgun 3s ease infinite"
-			});
-			$('#link a.shotgun').css({
+			$('#sg_link').css({
+				cursor: "pointer",
+				animation: "shotgun 3s ease infinite",
 				"pointer-events": "Visible"
 			});
 		}
 		<?php if ($_SESSION['shotgun']) {
 			?>
-			$('#link').css({
-				animation: "sg_frame 5s ease infinite"
-			});
-			$('#link').css({
-				cursor: "pointer"
-			});
-			$('#link a.shotgun').css({
-				cursor: "pointer"
-			});
-			$('#shotgun').css({
-				animation: "shotgun 3s ease infinite"
-			});
-			$('#link a.shotgun').css({
+			$('#sg_link').css({
+				cursor: "pointer",
+				animation: "shotgun 3s ease infinite",
 				"pointer-events": "Visible"
 			});
 			<?php
