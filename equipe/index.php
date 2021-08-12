@@ -61,7 +61,9 @@ function display_buttons($nbr_annees)
                     <h2 id="khafet">🍕 VP Khâfet 🍕</strong></h2>
                     <img class="prez" src="img_poles/Khafet.jpg">
                     <p>
-                        Description de la Khâfet
+                    Ils se disent tous le meilleur pôle mais il n'y a qu'à regarder les chiffres pour voir que la khâfet est LE pôle le plus prisé. 
+                    La team Khâfet toujours au complet s'occupe de régaler le campus chaque midi de 11h45 à 13h45. 
+                    À la place de votre RU habituel, venez déguster les meilleures pizzas du campus mais aussi de bon petits plats maison préparés le jour même par notre ékip 🔥😋 !
                     </p>
                 </div>
 
