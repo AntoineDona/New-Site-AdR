@@ -21,7 +21,7 @@ function is_present($email, $pdo)
 
 function is_rpz($email, $pdo)
 {
-	$query = $pdo->prepare("SELECT COUNT(*) as c from representants_fp where email=?");
+	$query = $pdo->prepare("SELECT COUNT(*) as c from adr_2k21 where email=?"); //changer en representants_fp
 	$query->execute(array($email));
 	$result = $query->fetch();
 	if ($result['c'] == 0) {
