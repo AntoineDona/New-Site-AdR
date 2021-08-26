@@ -157,7 +157,7 @@ if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION[
 			echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien représentant de ta famille de parainage, tu vas pouvoir Shotgun! </p></div>";
 		}
 	} else {
-		echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au Nanolympique. Tu as été le " . get_row($_SESSION["email"],$pdo) . "e </p></div>";
+		echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au Nanolympique. <!-- Tu as été le " . get_row($_SESSION["email"],$pdo) . "e --> </p></div>";
 	}
 	?>
 	<div id="sg_link_ctnr" href="#">
