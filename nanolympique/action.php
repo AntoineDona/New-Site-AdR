@@ -69,7 +69,7 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 		header("Location: /nanolympique/index.php");
 	} else {
 		if (!$_SESSION['shotgun']) {
-			if (number_place($pdo) < 6) {
+			if (number_place($pdo) < 40) {
 				$query=$pdo->prepare("INSERT into nanolympique (prenom,nom, email, heure) VALUES (?,?,?,?)");
 				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time']));
 				$_SESSION['shotgun'] = true;
