@@ -69,7 +69,7 @@ if ($res == 0) {
 // 	header("Location: https://adr.cs-campus.fr/nanolympique/agathe.php");
 // }
 
-if (number_place($pdo) >= 6 and !$_SESSION['shotgun']) {
+if (number_place($pdo) >= 40 and !$_SESSION['shotgun']) {
 	if ($_SESSION["isConnected"]) {
 		header("Location: https://adr.cs-campus.fr/nanolympique/fini.php");
 	} else {
