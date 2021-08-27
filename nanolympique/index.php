@@ -12,10 +12,10 @@ function number_place($pdo)
 
 function family_size($email, $pdo){
 
-	$query = $pdo->prepare("SELECT family-size as fs from representants_fp where email=?");
+	$query = $pdo->prepare("SELECT * from representants_fp where email=?");
 	$query->execute(array($email));
 	$result= $query->fetch();
-	return $result['fs'];
+	return $result['taille'];
 }
 
 function is_present($email, $pdo)
