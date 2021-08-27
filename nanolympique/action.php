@@ -25,7 +25,7 @@ function number_place($pdo){
 
 function is_rpz($email, $pdo)
 {
-	$query = $pdo->prepare("SELECT COUNT(*) as c from adr_2k21 where email=?"); //changer en representants_fp
+	$query = $pdo->prepare("SELECT COUNT(*) as c from representants_fp where email=?"); //changer en representants_fp
 	$query->execute(array($email));
 	$result = $query->fetch();
 	if ($result['c']==0){
@@ -38,7 +38,7 @@ function is_rpz($email, $pdo)
 
 function family_size($pdo){
 
-	$query = $pdo->prepare("SELECT family-size as fs from adr_2k21 where email=?");
+	$query = $pdo->prepare("SELECT family-size as fs from representants_fp where email=?");
 	$query->execute();
 	$result= $query->fetch();
 	return $result['fs'];
@@ -58,9 +58,8 @@ function family_size($pdo){
 
 
 $_SESSION["promo"]=$_SESSION["user"]["promo"];
-$_SESSION["email"]=$_SESSION["user"]["email"];
 ?>
-
+	
 
  
 <?php 
@@ -88,9 +87,10 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 				header("Location: /nanolympique/fini.php");
             }
      	} else {
-			$sql ='DELETE from nanolympique WHERE email=:email ';
+			$sql ='DELETE from nanolympique WHERE prenom=:prenom AND nom= :nom';
 			$stmt = $pdo->prepare($sql);
-			$stmt->bindValue(':email', $_SESSION["email"]);
+			$stmt->bindValue(':nom', $_SESSION["nom"]);
+			$stmt->bindValue(':prenom', $_SESSION["prenom"]);
 			$res = $stmt->execute();
 			$_SESSION['shotgun'] = false;
 			header("Location: /nanolympique/");
