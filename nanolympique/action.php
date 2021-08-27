@@ -36,7 +36,7 @@ function is_rpz($email, $pdo)
 	}
 }
 
-function family-size($pdo){
+function family_size($pdo){
 
 	$query = $pdo->prepare("SELECT family-size as fs from adr_2k21 where email=?");
 	$query->execute();
@@ -77,7 +77,7 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 		header("Location: /nanolympique/index.php");
 	} else {
 		if (!$_SESSION['shotgun']) {
-			if (number_place($pdo) + family-size($pdo)< 500) {
+			if (number_place($pdo) + family_size($pdo)< 500) {
 				$query=$pdo->prepare("INSERT into nanolympique (prenom,nom, email, heure, family-size) VALUES (?,?,?,?,?)");
 				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time'],family-size($pdo)
 				));
