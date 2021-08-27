@@ -10,10 +10,10 @@ function number_place($pdo)
 	return $result['s'];
 }
 
-function family_size($pdo){
+function family_size($email,$pdo){
 
 	$query = $pdo->prepare("SELECT family-size as fs from representants_fp where email=?");
-	$query->execute();
+	$query->execute(array($email));
 	$result= $query->fetch();
 	return $result['fs'];
 }
@@ -61,7 +61,7 @@ $_SESSION["is_representant"] = is_rpz($_SESSION["email"], $pdo);
 
 //echo $res;
 //echo 'est ce que ça fonctionne vraiment?';
-$reste = 500 - number_place($pdo) - family_size($pdo);
+$reste = 500 - number_place($pdo) - family_size($_SESSION["email"],$pdo);
 //echo 'Il reste '.$reste.' places au shotgun';
 if ($res == 0) {
 	$_SESSION['shotgun'] = false; //changer en false!!!
