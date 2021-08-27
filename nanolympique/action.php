@@ -36,6 +36,14 @@ function is_rpz($email, $pdo)
 	}
 }
 
+function family-size($pdo){
+
+	$query = $pdo->prepare("SELECT family-size as fs from adr_2k21 where email=?");
+	$query->execute();
+	$result= $query->fetch();
+	return $result['fs'];
+}
+
 // function isCotisant($mail,$pdo){
 // 	$query = $pdo->prepare("SELECT * from parrains WHERE EMAIL=?");
 // 	$query->execute(array($mail));
@@ -69,9 +77,10 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 		header("Location: /nanolympique/index.php");
 	} else {
 		if (!$_SESSION['shotgun']) {
-			if (number_place($pdo) < 40) {
-				$query=$pdo->prepare("INSERT into nanolympique (prenom,nom, email, heure) VALUES (?,?,?,?)");
-				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time']));
+			if (number_place($pdo) + family-size($pdo)< 500) {
+				$query=$pdo->prepare("INSERT into nanolympique (prenom,nom, email, heure, family-size) VALUES (?,?,?,?,?)");
+				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time'],family-size($pdo)
+				));
 				$_SESSION['shotgun'] = true;
 				header("Location: /nanolympique/index.php");
             } else {
