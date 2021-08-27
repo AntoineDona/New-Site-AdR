@@ -77,7 +77,7 @@ if ($res == 0) {
 // 	header("Location: https://adr.cs-campus.fr/nanolympique/agathe.php");
 // }
 
-if (number_place($pdo) + family_size($pdo) >= 500 and !$_SESSION['shotgun']) {
+if (number_place($pdo) + family_size($_SESSION["email"],$pdo) >= 500 and !$_SESSION['shotgun']) {
 	if ($_SESSION["isConnected"]) {
 		header("Location: https://adr.cs-campus.fr/nanolympique/fini.php");
 	} else {
