@@ -38,10 +38,10 @@ function is_rpz($email, $pdo)
 
 function family_size($email, $pdo){
 
-	$query = $pdo->prepare("SELECT family-size from representants_fp where email=?");
+	$query = $pdo->prepare("SELECT * from representants_fp where email=?");
 	$query->execute(array($email));
 	$result= $query->fetch();
-	return $result['family-size'];
+	return $result['taille'];
 }
 
 $_SESSION["promo"]=$_SESSION["user"]["promo"];
