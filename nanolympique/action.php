@@ -17,10 +17,10 @@
 $_SESSION['sg_time'] = date("Y-m-d H:i:s");
 
 function number_place($pdo){
-	$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique");
+	$query = $pdo->prepare("SELECT SUM(family-size) as s from nanolympique");
 	$query->execute();
 	$result= $query->fetch();
-	return $result['c'];
+	return $result['s'];
 }
 
 function is_rpz($email, $pdo)
