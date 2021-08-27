@@ -87,10 +87,9 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 				header("Location: /nanolympique/fini.php");
             }
      	} else {
-			$sql ='DELETE from nanolympique WHERE prenom=:prenom AND nom= :nom';
+			$sql ='DELETE from nanolympique WHERE email= :email';
 			$stmt = $pdo->prepare($sql);
-			$stmt->bindValue(':nom', $_SESSION["nom"]);
-			$stmt->bindValue(':prenom', $_SESSION["prenom"]);
+			$stmt->bindValue(':email', $_SESSION["email"]);
 			$res = $stmt->execute();
 			$_SESSION['shotgun'] = false;
 			header("Location: /nanolympique/");
