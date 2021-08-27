@@ -58,8 +58,9 @@ function family_size($pdo){
 
 
 $_SESSION["promo"]=$_SESSION["user"]["promo"];
+$_SESSION["email"]=$_SESSION["user"]["email"];
 ?>
-	
+
 
  
 <?php 
