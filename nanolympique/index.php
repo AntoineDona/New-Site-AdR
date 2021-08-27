@@ -10,7 +10,7 @@ function number_place($pdo)
 	return $result['s'];
 }
 
-function family_size($email,$pdo){
+function family_size($email, $pdo){
 
 	$query = $pdo->prepare("SELECT family-size as fs from representants_fp where email=?");
 	$query->execute(array($email));
