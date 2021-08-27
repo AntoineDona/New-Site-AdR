@@ -82,7 +82,7 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time'],family_size($_SESSION["email"],$pdo)
 				));
 				$_SESSION['shotgun'] = true;
-				header("Location: /nanolympique/inde.php");
+				header("Location: /nanolympique/index.php");
             } else {
 				header("Location: /nanolympique/fini.php");
             }
