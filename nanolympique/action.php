@@ -79,7 +79,7 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 		if (!$_SESSION['shotgun']) {
 			if (number_place($pdo) + family_size($pdo)< 500) {
 				$query=$pdo->prepare("INSERT into nanolympique (prenom,nom, email, heure, family-size) VALUES (?,?,?,?,?)");
-				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time'],family-size($pdo)
+				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time'],family_size($pdo)
 				));
 				$_SESSION['shotgun'] = true;
 				header("Location: /nanolympique/index.php");
@@ -87,7 +87,7 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 				header("Location: /nanolympique/fini.php");
             }
      	} else {
-			$sql ='DELETE from nanolympique WHERE email= :email';
+			$sql ='DELETE from nanolympique WHERE email=:email ';
 			$stmt = $pdo->prepare($sql);
 			$stmt->bindValue(':email', $_SESSION["email"]);
 			$res = $stmt->execute();
