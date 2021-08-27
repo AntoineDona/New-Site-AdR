@@ -44,7 +44,7 @@ function family_size($email, $pdo){
 	return $result['taille'];
 }
 
-$_SESSION["fsize"] = family_size($_SESSION["email"],$pdo)
+$_SESSION["fsize"] = family_size($_SESSION["email"],$pdo);
 
 // function isCotisant($mail,$pdo){
 // 	$query = $pdo->prepare("SELECT * from parrains WHERE EMAIL=?");
