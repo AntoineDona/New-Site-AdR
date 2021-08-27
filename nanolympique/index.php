@@ -4,10 +4,18 @@ include("database.php");
 
 function number_place($pdo)
 {
-	$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique");
+	$query = $pdo->prepare("SELECT SUM(family-size) as s from nanolympique");
 	$query->execute();
 	$result = $query->fetch();
-	return $result['c'];
+	return $result['s'];
+}
+
+function family_size($pdo){
+
+	$query = $pdo->prepare("SELECT family-size as fs from representants_fp where email=?");
+	$query->execute();
+	$result= $query->fetch();
+	return $result['fs'];
 }
 
 function is_present($email, $pdo)
@@ -29,7 +37,7 @@ function get_row($email, $pdo)
 
 function is_rpz($email, $pdo)
 {
-	$query = $pdo->prepare("SELECT COUNT(*) as c from adr_2k21 where email=?"); //changer en representants_fp
+	$query = $pdo->prepare("SELECT COUNT(*) as c from representants_fp where email=?"); //changer en representants_fp
 	$query->execute(array($email));
 	$result = $query->fetch();
 	if ($result['c'] == 0) {
@@ -53,7 +61,7 @@ $_SESSION["is_representant"] = is_rpz($_SESSION["email"], $pdo);
 
 //echo $res;
 //echo 'est ce que ça fonctionne vraiment?';
-$reste = 6 - number_place($pdo);
+$reste = 500 - number_place($pdo) - family_size($pdo);
 //echo 'Il reste '.$reste.' places au shotgun';
 if ($res == 0) {
 	$_SESSION['shotgun'] = false; //changer en false!!!
@@ -69,7 +77,7 @@ if ($res == 0) {
 // 	header("Location: https://adr.cs-campus.fr/nanolympique/agathe.php");
 // }
 
-if (number_place($pdo) >= 40 and !$_SESSION['shotgun']) {
+if (number_place($pdo) + family_size($pdo) >= 500 and !$_SESSION['shotgun']) {
 	if ($_SESSION["isConnected"]) {
 		header("Location: https://adr.cs-campus.fr/nanolympique/fini.php");
 	} else {
@@ -79,6 +87,7 @@ if (number_place($pdo) >= 40 and !$_SESSION['shotgun']) {
 
 if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "action.php") {
 	echo "<script>alert(\"Tu n'es pas représentant de ta famille de parrainage... \")</script>";
+	$_SESSION['prenom'] = "index.php";
 }
 
 ?>
