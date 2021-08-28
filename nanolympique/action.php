@@ -86,7 +86,7 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 				$query=$pdo->prepare("INSERT into nanolympique (prenom,nom, email, heure, taille) VALUES (?,?,?,?,?)");
 				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time'],family_size($_SESSION["email"],$pdo)));
 				//$_SESSION['shotgun'] = true;
-				header("refresh:2; url=/nanolympique/index.php");
+				header("refresh:5; url=/nanolympique/index.php");
             } else {
 				header("Location: /nanolympique/fini.php");
             }
@@ -103,7 +103,11 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 	header("Location: /nanolympique/");
 }
  ?>
+ <div class="loading-animation-box">
+   <div>
 <div class="lds-ripple"><div></div><div></div></div>
+</div>
+ </div>
 
 </body>
 </html>
