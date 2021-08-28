@@ -373,6 +373,13 @@ form.valide {
 
 /* Loading page*/
 
+.loading-animation-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+  
 .lds-ripple {
   display: inline-block;
   position: relative;
