@@ -1,6 +1,9 @@
 <?php include("auth.php"); ?>
 <?php
 include("database.php");
+if (isset($_SESSION["preshotgun"]) && $_SESSION["preshotgun"]) {
+	  header("Location: https://adr.cs-campus.fr/nanolympique/action.php")
+	}
 
 function number_place($pdo)
 {
