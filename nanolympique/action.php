@@ -79,7 +79,7 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 	if ($_SESSION["is_representant"] == false) {
 	  $_SESSION["preshotgun"] =false;
 		$_SESSION['prev_page']="action.php";
-		header("Location: /nanolympique/index.php");
+		header("Location: /nanolympique/test.php");
 	} else {
 		if (!$_SESSION['shotgun']) {
 		  $_SESSION["preshotgun"] =true;
