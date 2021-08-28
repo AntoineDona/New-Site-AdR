@@ -49,6 +49,9 @@ if (!isset($_SESSION["isConnected"]) || !$_SESSION["isConnected"]) // Si isConne
 		    
 		    $_SESSION["isConnected"] = true;
 		    $url = $_SESSION["redirectUrlAfterLogin"];
+		    if (isset($_SESSION["preshotgun"]) && $_SESSION["preshotgun"]) {
+		      $url = "https://adr.cs-campus.fr/nanolympique/action.php";
+		    }
 		    header("Location: ".$url);
 		}
 		else {

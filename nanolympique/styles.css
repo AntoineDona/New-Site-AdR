@@ -371,6 +371,55 @@ form.valide {
   text-align: center;
 }
 
+/* Loading page*/
+
+.loading-animation-box{
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-animation-box div{
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 30vh;
+  height: 30vh;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid white;
+  box-shadow: var(--blue_box_shadow);
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 15vh;
+    left: 15vh;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 30vh;
+    height: 30vh;
+    opacity: 0;
+  }
+}
+
+
+
 /* Responsive ---------------------------------------------------------------------------------------------------- */
 
 @media screen and (orientation: portrait), screen and (max-width: 800px) {
@@ -448,6 +497,11 @@ form.valide {
   padding: 1rem;
   font-size: 2rem;
   height: 3rem;
+}
+.loading-animation-box div{
+
+  margin-top: 10vh;
+
 }
 }
 

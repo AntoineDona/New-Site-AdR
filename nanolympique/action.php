@@ -8,11 +8,14 @@
 <title>NANOLYMPIQUE</title><link rel="icon" type="image/png" href="img/adr_ico.png" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
+
 <body>
  
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
 <?php
+
+
 
 $_SESSION['sg_time'] = date("Y-m-d H:i:s");
 
@@ -25,7 +28,7 @@ function number_place($pdo){
 
 function is_rpz($email, $pdo)
 {
-	$query = $pdo->prepare("SELECT COUNT(*) as c from adr_2k21 where email=?"); //changer en representants_fp
+	$query = $pdo->prepare("SELECT COUNT(*) as c from representants_fp where email=?"); //changer en representants_fp
 	$query->execute(array($email));
 	$result = $query->fetch();
 	if ($result['c']==0){
@@ -35,6 +38,16 @@ function is_rpz($email, $pdo)
 		return true;
 	}
 }
+
+function family_size($email, $pdo){
+
+	$query = $pdo->prepare("SELECT * from representants_fp where email=?");
+	$query->execute(array($email));
+	$result= $query->fetch();
+	return $result['taille'];
+}
+
+$_SESSION["fsize"] = family_size($_SESSION["email"],$pdo);
 
 // function isCotisant($mail,$pdo){
 // 	$query = $pdo->prepare("SELECT * from parrains WHERE EMAIL=?");
@@ -58,7 +71,7 @@ $_SESSION["promo"]=$_SESSION["user"]["promo"];
 date_default_timezone_set('Europe/Paris');
 $current_date_sec = (((date('d')-1)*24 + date('H'))*60 + date('i'))*60 + date('s');
 
-$shotgun_date = mktime(22, 0, 0, 8, 12, 2021);
+$shotgun_date = mktime(22, 0, 0, 8, 28, 2021);
 $shotgun_date_sec = (((date('d', $shotgun_date)-1)*24 + date('H', $shotgun_date))*60 + date('i', $shotgun_date))*60 + date('s', $shotgun_date);
 
 $end_date = mktime(22, 00, 0, 8, 29, 2021);
@@ -69,29 +82,32 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 		header("Location: /nanolympique/index.php");
 	} else {
 		if (!$_SESSION['shotgun']) {
-			if (number_place($pdo) < 6) {
-				$query=$pdo->prepare("INSERT into nanolympique (prenom,nom, email, heure) VALUES (?,?,?,?)");
-				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time']));
-				$_SESSION['shotgun'] = true;
-				header("Location: /nanolympique/index.php");
+			if (number_place($pdo)< 47) {
+				$query=$pdo->prepare("INSERT into nanolympique (prenom,nom, email, heure, taille) VALUES (?,?,?,?,?)");
+				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time'],family_size($_SESSION["email"],$pdo)));
+				//$_SESSION['shotgun'] = true;
+				header("refresh:5; url=/nanolympique/index.php");
             } else {
 				header("Location: /nanolympique/fini.php");
             }
      	} else {
-			$sql ='DELETE from nanolympique WHERE prenom=:prenom AND nom= :nom';
+			$sql ='DELETE from nanolympique WHERE email=:email';
 			$stmt = $pdo->prepare($sql);
-			$stmt->bindValue(':nom', $_SESSION["nom"]);
-			$stmt->bindValue(':prenom', $_SESSION["prenom"]);
+			$stmt->bindValue(':email', $_SESSION["email"]);
 			$res = $stmt->execute();
 			$_SESSION['shotgun'] = false;
-			header("Location: /nanolympique/");
+			header("Location: /nanolympique/index.php");
       	}
 	}
 } else {
 	header("Location: /nanolympique/");
 }
  ?>
-
+ <div class="loading-animation-box">
+   <div>
+<div class="lds-ripple"><div></div><div></div></div>
+</div>
+ </div>
 
 </body>
 </html>
