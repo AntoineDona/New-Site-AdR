@@ -20,10 +20,10 @@
 $_SESSION['sg_time'] = date("Y-m-d H:i:s");
 
 function number_place($pdo){
-	$query = $pdo->prepare("SELECT SUM(family-size) as s from nanolympique");
+	$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique");
 	$query->execute();
 	$result= $query->fetch();
-	return $result['s'];
+	return $result['c'];
 }
 
 function is_rpz($email, $pdo)
@@ -82,7 +82,7 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 		header("Location: /nanolympique/index.php");
 	} else {
 		if (!$_SESSION['shotgun']) {
-			if (number_place($pdo) + family_size($_SESSION["email"],$pdo)< 500) {
+			if (number_place($pdo)< 47) {
 				$query=$pdo->prepare("INSERT into nanolympique (prenom,nom, email, heure, taille) VALUES (?,?,?,?,?)");
 				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time'],family_size($_SESSION["email"],$pdo)));
 				//$_SESSION['shotgun'] = true;
