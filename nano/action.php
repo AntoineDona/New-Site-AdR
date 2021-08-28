@@ -21,7 +21,7 @@
 $_SESSION['sg_time'] = date("Y-m-d H:i:s");
 
 function number_place($pdo){
-	$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique");
+	$query = $pdo->prepare("SELECT COUNT(*) as c from nano");
 	$query->execute();
 	$result= $query->fetch();
 	return $result['c'];
@@ -80,28 +80,28 @@ $end_date_sec = (((date('d', $end_date)-1)*24 + date('H', $end_date))*60 + date(
 if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec) {
 	if ($_SESSION["is_representant"] == false) {
 		$_SESSION['prev_page']="action.php";
-		header("Location: /nanolympique/index.php");
+		header("Location: /nano/index.php");
 	} else {
 		if (!$_SESSION['shotgun']) {
 			if (number_place($pdo)< 47) {
-				$query=$pdo->prepare("INSERT into nanolympique (prenom,nom, email, heure, taille) VALUES (?,?,?,?,?)");
+				$query=$pdo->prepare("INSERT into nano (prenom,nom, email, heure, taille) VALUES (?,?,?,?,?)");
 				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time'],family_size($_SESSION["email"],$pdo)));
 				//$_SESSION['shotgun'] = true;
-				header("refresh:5; url=/nanolympique/index.php");
+				header("refresh:5; url=/nano/index.php");
             } else {
-				header("Location: /nanolympique/fini.php");
+				header("Location: /nano/fini.php");
             }
      	} else {
-			$sql ='DELETE from nanolympique WHERE email=:email';
+			$sql ='DELETE from nano WHERE email=:email';
 			$stmt = $pdo->prepare($sql);
 			$stmt->bindValue(':email', $_SESSION["email"]);
 			$res = $stmt->execute();
 			$_SESSION['shotgun'] = false;
-			header("Location: /nanolympique/index.php");
+			header("Location: /nano/index.php");
       	}
 	}
 } else {
-	header("Location: /nanolympique/");
+	header("Location: /nano/");
 }
  ?>
  <div class="loading-animation-box">
