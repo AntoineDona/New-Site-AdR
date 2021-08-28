@@ -381,9 +381,6 @@ form.valide {
   align-items: center;
 }
 
-.loading-animation-box div{
-  background-color: red;
-}
 .lds-ripple {
   display: inline-block;
   position: relative;
