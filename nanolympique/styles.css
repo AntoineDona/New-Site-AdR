@@ -377,6 +377,8 @@ form.valide {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 50rem;
+  height:50rem;
   
 }
   
@@ -412,8 +414,6 @@ form.valide {
     opacity: 0;
   }
 }
-
-
 
 
 
