@@ -14,6 +14,8 @@
 
 <?php
 
+$_SESSION["preshotgun"] =true;
+
 $_SESSION['sg_time'] = date("Y-m-d H:i:s");
 
 function number_place($pdo){
