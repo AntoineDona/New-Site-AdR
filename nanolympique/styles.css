@@ -423,7 +423,7 @@ form.valide {
 
 /* Responsive ---------------------------------------------------------------------------------------------------- */
 
-@media screen and (orientation: portrait), screen and (max-width: 800px) {
+@media screen and (orientation: portrait), screen and (max-width: 800px), screen and (orientation: landscape) {
   body {
     background: url("img/nanolympique_mlightbg.jpeg");
     background-size: cover;
