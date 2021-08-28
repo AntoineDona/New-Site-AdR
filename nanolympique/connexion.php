@@ -11,7 +11,11 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	$prenom = $_SESSION["prenom"];
 	$nom = $_SESSION["nom"];
 	echo $prenom . " " . $nom;
+	if (isset($_SESSION["preshotgun"]) && $_SESSION["preshotgun"]) {
+	  header("Location: https://adr.cs-campus.fr/nanolympique/action.php")
+	} else {
 	header("Location: https://adr.cs-campus.fr/nanolympique/index.php?nom=" . $nom . "&prenom=" . $prenom);
+	}
 } else {$_SESSION["isConnected"] = false;}
 ?>
 
