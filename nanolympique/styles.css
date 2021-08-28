@@ -382,7 +382,7 @@ form.valide {
 }
 
 .loading-animation-box div{
-  margin-top: 5vh;
+  margin-top: 1vh;
 }
 
 .lds-ripple {
@@ -498,6 +498,11 @@ form.valide {
   padding: 1rem;
   font-size: 2rem;
   height: 3rem;
+}
+.loading-animation-box div{
+
+  margin-top: 6vh;
+
 }
 }
 
