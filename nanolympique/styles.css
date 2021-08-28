@@ -374,9 +374,11 @@ form.valide {
 /* Loading page*/
 
 .loading-animation-box{
-  width: 50rem;
-  height:50rem;
-  
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
   
 .lds-ripple {
@@ -397,8 +399,8 @@ form.valide {
 }
 @keyframes lds-ripple {
   0% {
-    top: 36px;
-    left: 36px;
+    top: 50px;
+    left: 50px;
     width: 0;
     height: 0;
     opacity: 1;
@@ -406,8 +408,8 @@ form.valide {
   100% {
     top: 0px;
     left: 0px;
-    width: 72px;
-    height: 72px;
+    width: 200px;
+    height: 200px;
     opacity: 0;
   }
 }
