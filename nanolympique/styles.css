@@ -379,7 +379,7 @@ form.valide {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right-color: red;
+  background-color: red;
 }
 
 .loading-animation-box div{
