@@ -74,7 +74,7 @@ if ($res == 0) {
 	// valeur existe -> action appropriée
 }
 
-if (isset($_SESSION["preshotgun"]) && $_SESSION["preshotgun"] && !$_SESSION["shotgun"]) {
+if (isset($_SESSION["preshotgun"]) && $_SESSION["preshotgun"]) {
 	  header("Location: https://adr.cs-campus.fr/nanolympique/action.php");
 	}
 
