@@ -381,6 +381,10 @@ form.valide {
   align-items: center;
 }
 
+.loading-animation-box div{
+  margin-top: 20vh;
+}
+
 .lds-ripple {
   display: inline-block;
   position: relative;
