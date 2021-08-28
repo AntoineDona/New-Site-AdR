@@ -85,9 +85,7 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 				$query=$pdo->prepare("INSERT into nanolympique (prenom,nom, email, heure, taille) VALUES (?,?,?,?,?)");
 				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time'],family_size($_SESSION["email"],$pdo)));
 				//$_SESSION['shotgun'] = true;
-				echo "email:" . $_SESSION["email"];
-echo "famsize:" . family_size($_SESSION["email"],$pdo);
-				header("refresh:5; url: /nanolympique/index.php");
+				header("refresh:5; url=/nanolympique/index.php");
             } else {
 				header("Location: /nanolympique/fini.php");
             }
