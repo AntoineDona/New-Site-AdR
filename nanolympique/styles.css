@@ -374,9 +374,6 @@ form.valide {
 /* Loading page*/
 
 .loading-animation-box{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 50rem;
   height:50rem;
   
