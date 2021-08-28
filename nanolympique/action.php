@@ -8,6 +8,7 @@
 <title>NANOLYMPIQUE</title><link rel="icon" type="image/png" href="img/adr_ico.png" />
 <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
+
 <body>
  
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -102,7 +103,7 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 	header("Location: /nanolympique/");
 }
  ?>
-
+<div class="lds-ripple"><div></div><div></div></div>
 
 </body>
 </html>
