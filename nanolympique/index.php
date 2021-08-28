@@ -2,12 +2,21 @@
 <?php
 include("database.php");
 
+
 function number_place($pdo)
 {
 	$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique");
 	$query->execute();
 	$result = $query->fetch();
 	return $result['c'];
+}
+
+function family_size($email, $pdo){
+
+	$query = $pdo->prepare("SELECT * from representants_fp where email=?");
+	$query->execute(array($email));
+	$result= $query->fetch();
+	return $result['taille'];
 }
 
 function is_present($email, $pdo)
@@ -29,7 +38,7 @@ function get_row($email, $pdo)
 
 function is_rpz($email, $pdo)
 {
-	$query = $pdo->prepare("SELECT COUNT(*) as c from adr_2k21 where email=?"); //changer en representants_fp
+	$query = $pdo->prepare("SELECT COUNT(*) as c from representants_fp where email=?"); //changer en representants_fp
 	$query->execute(array($email));
 	$result = $query->fetch();
 	if ($result['c'] == 0) {
@@ -53,7 +62,7 @@ $_SESSION["is_representant"] = is_rpz($_SESSION["email"], $pdo);
 
 //echo $res;
 //echo 'est ce que ça fonctionne vraiment?';
-$reste = 6 - number_place($pdo);
+$reste = 47 - number_place($pdo);
 //echo 'Il reste '.$reste.' places au shotgun';
 if ($res == 0) {
 	$_SESSION['shotgun'] = false; //changer en false!!!
@@ -65,11 +74,12 @@ if ($res == 0) {
 	// valeur existe -> action appropriée
 }
 
+
 // if ($_SESSION["email"] == 'agathe.auburtin@student-cs.fr') {
 // 	header("Location: https://adr.cs-campus.fr/nanolympique/agathe.php");
 // }
 
-if (number_place($pdo) >= 6 and !$_SESSION['shotgun']) {
+if (number_place($pdo) >= 47 and !$_SESSION['shotgun']) {
 	if ($_SESSION["isConnected"]) {
 		header("Location: https://adr.cs-campus.fr/nanolympique/fini.php");
 	} else {
@@ -79,6 +89,7 @@ if (number_place($pdo) >= 6 and !$_SESSION['shotgun']) {
 
 if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "action.php") {
 	echo "<script>alert(\"Tu n'es pas représentant de ta famille de parrainage... \")</script>";
+	$_SESSION['prenom'] = "index.php";
 }
 
 ?>
@@ -157,7 +168,7 @@ if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION[
 			echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien représentant de ta famille de parainage, tu vas pouvoir Shotgun! </p></div>";
 		}
 	} else {
-		echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au Nanolympique. Tu as été le " . get_row($_SESSION["email"],$pdo) . "e </p></div>";
+		echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au Nanolympique. <!-- Tu as été le " . get_row($_SESSION["email"],$pdo) . "e --> </p></div>";
 	}
 	?>
 	<div id="sg_link_ctnr" href="#">

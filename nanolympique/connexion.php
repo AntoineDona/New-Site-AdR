@@ -12,6 +12,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	$nom = $_SESSION["nom"];
 	echo $prenom . " " . $nom;
 	header("Location: https://adr.cs-campus.fr/nanolympique/index.php?nom=" . $nom . "&prenom=" . $prenom);
+	
 } else {$_SESSION["isConnected"] = false;}
 ?>
 
