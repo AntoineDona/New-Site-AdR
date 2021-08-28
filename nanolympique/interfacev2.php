@@ -12,14 +12,14 @@
 
 <?php
 function number_place($pdo){
-		$query = $pdo->prepare("SELECT COUNT(*) as c from papy");
+		$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique");
 		$query->execute();
 		$result= $query->fetch();
 		return $result['c'];
 }
 
 function entree($pdo){
-		$query = $pdo->prepare("SELECT COUNT(*) as d from papy WHERE entree='oui'");
+		$query = $pdo->prepare("SELECT COUNT(*) as d from nanolympique WHERE entree='oui'");
 		$query->execute();
 		$result= $query->fetch();
 		return $result['d'];
