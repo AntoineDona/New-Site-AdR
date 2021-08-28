@@ -379,7 +379,6 @@ form.valide {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
 }
 
 .loading-animation-box div{
@@ -423,7 +422,7 @@ form.valide {
 
 /* Responsive ---------------------------------------------------------------------------------------------------- */
 
-@media screen and (orientation: portrait), screen and (max-width: 800px), screen and (orientation: landscape) {
+@media screen and (orientation: portrait), screen and (max-width: 800px) {
   body {
     background: url("img/nanolympique_mlightbg.jpeg");
     background-size: cover;
