@@ -97,7 +97,7 @@ echo "famsize:" . family_size($_SESSION["email"],$pdo);
 			$stmt->bindValue(':email', $_SESSION["email"]);
 			$res = $stmt->execute();
 			$_SESSION['shotgun'] = false;
-			header("Location: /nanolympique/test.php");
+			header("Location: /nanolympique/index.php");
       	}
 	}
 } else {
