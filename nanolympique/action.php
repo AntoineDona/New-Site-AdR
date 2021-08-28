@@ -87,7 +87,7 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 				//$_SESSION['shotgun'] = true;
 				echo "email:" . $_SESSION["email"];
 echo "famsize:" . family_size($_SESSION["email"],$pdo);
-				header("Location: /nanolympique/index.php");
+				header("refresh:5; Location: /nanolympique/index.php");
             } else {
 				header("Location: /nanolympique/fini.php");
             }
