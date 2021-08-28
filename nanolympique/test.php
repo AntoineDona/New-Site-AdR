@@ -50,11 +50,12 @@ echo "email:" . $_SESSION["email"];
 echo "famsize:" . family_size($_SESSION["email"],$pdo);
 ?>
  <div class="loading-animation-box">
-
-   
-
-<div class="lds-ripple"><div></div><div></div></div>
-
+<div>
+<div class="lds-ripple">
+  <div></div>
+  <div></div>
+</div>
+</div>
  </div>
 
 </body>
