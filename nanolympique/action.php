@@ -14,7 +14,7 @@
 
 <?php
 
-$_SESSION["preshotgun"] =true;
+
 
 $_SESSION['sg_time'] = date("Y-m-d H:i:s");
 
@@ -77,10 +77,12 @@ $end_date = mktime(22, 00, 0, 8, 29, 2021);
 $end_date_sec = (((date('d', $end_date)-1)*24 + date('H', $end_date))*60 + date('i', $end_date))*60 + date('s', $end_date);
 if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec) {
 	if ($_SESSION["is_representant"] == false) {
+	  $_SESSION["preshotgun"] =false;
 		$_SESSION['prev_page']="action.php";
 		header("Location: /nanolympique/index.php");
 	} else {
 		if (!$_SESSION['shotgun']) {
+		  $_SESSION["preshotgun"] =true;
 			if (number_place($pdo) + family_size($_SESSION["email"],$pdo)< 500) {
 				$query=$pdo->prepare("INSERT into nanolympique (prenom,nom, email, heure, taille) VALUES (?,?,?,?,?)");
 				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time'],family_size($_SESSION["email"],$pdo)));
@@ -92,6 +94,7 @@ echo "famsize:" . family_size($_SESSION["email"],$pdo);
 				header("Location: /nanolympique/fini.php");
             }
      	} else {
+     	  $_SESSION["preshotgun"] =false;
 			$sql ='DELETE from nanolympique WHERE email=:email';
 			$stmt = $pdo->prepare($sql);
 			$stmt->bindValue(':email', $_SESSION["email"]);
