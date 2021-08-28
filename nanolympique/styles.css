@@ -384,8 +384,8 @@ form.valide {
 .lds-ripple {
   display: inline-block;
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 40rem;
+  height: 40rem;
 }
 .lds-ripple div {
   position: absolute;
@@ -400,8 +400,8 @@ form.valide {
 }
 @keyframes lds-ripple {
   0% {
-    top: 100px;
-    left: 100px;
+    top: 20rem;
+    left: 20rem;
     width: 0;
     height: 0;
     opacity: 1;
@@ -409,8 +409,8 @@ form.valide {
   100% {
     top: 0px;
     left: 0px;
-    width: 200px;
-    height: 200px;
+    width: 40rem;
+    height: 40rem;
     opacity: 0;
   }
 }
