@@ -389,7 +389,8 @@ form.valide {
 }
 .lds-ripple div {
   position: absolute;
-  border: 4px solid #fff;
+  border: 4px solid white;
+  box-shadow: var(--blue_box_shadow);
   opacity: 1;
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
@@ -399,8 +400,8 @@ form.valide {
 }
 @keyframes lds-ripple {
   0% {
-    top: 50px;
-    left: 50px;
+    top: 100px;
+    left: 100px;
     width: 0;
     height: 0;
     opacity: 1;
