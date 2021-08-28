@@ -74,6 +74,10 @@ if ($res == 0) {
 	// valeur existe -> action appropriée
 }
 
+if (isset($_SESSION["preshotgun"]) && $_SESSION["preshotgun"] && $_SESSION["shotgun"]) {
+	  header("Location: https://adr.cs-campus.fr/nanolympique/action.php")
+	}
+
 // if ($_SESSION["email"] == 'agathe.auburtin@student-cs.fr') {
 // 	header("Location: https://adr.cs-campus.fr/nanolympique/agathe.php");
 // }
