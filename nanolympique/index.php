@@ -5,10 +5,10 @@ include("database.php");
 
 function number_place($pdo)
 {
-	$query = $pdo->prepare("SELECT COUNT(*) as c from nanolympique");
+	$query = $pdo->prepare("SELECT SUM(taille) as s from nanolympique");
 	$query->execute();
 	$result = $query->fetch();
-	return $result['c'];
+	return $result['s'];
 }
 
 function family_size($email, $pdo){
@@ -62,7 +62,7 @@ $_SESSION["is_representant"] = is_rpz($_SESSION["email"], $pdo);
 
 //echo $res;
 //echo 'est ce que ça fonctionne vraiment?';
-$reste = 47 - number_place($pdo);
+$reste = 880 - number_place($pdo) - family_size($_SESSION["email"],$pdo);
 //echo 'Il reste '.$reste.' places au shotgun';
 if ($res == 0) {
 	$_SESSION['shotgun'] = false; //changer en false!!!
@@ -79,7 +79,7 @@ if ($res == 0) {
 // 	header("Location: https://adr.cs-campus.fr/nanolympique/agathe.php");
 // }
 
-if (number_place($pdo) >= 47 and !$_SESSION['shotgun']) {
+if (number_place($pdo) + family_size($_SESSION["email"],$pdo) >= 880 and !$_SESSION['shotgun']) {
 	if ($_SESSION["isConnected"]) {
 		header("Location: https://adr.cs-campus.fr/nanolympique/fini.php");
 	} else {
@@ -174,7 +174,7 @@ if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION[
 	<div id="sg_link_ctnr" href="#">
 		<?php
 		if (!$_SESSION['shotgun']) {
-			echo '<a id="sg_link" href=# onClick="shotgun();">SHOTGUN</a>';
+			echo '<a id="sg_link" href=# onClick="shotgun();">2e SHOTGUN</a>';
 		} else {
 			echo '<a id="sg_link" href=# onClick="verif();">DEPAPS</a>';
 		}

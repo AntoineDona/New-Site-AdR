@@ -71,7 +71,7 @@ $_SESSION["promo"]=$_SESSION["user"]["promo"];
 date_default_timezone_set('Europe/Paris');
 $current_date_sec = (((date('d')-1)*24 + date('H'))*60 + date('i'))*60 + date('s');
 
-$shotgun_date = mktime(14, 0, 0, 8, 29, 2021);
+$shotgun_date = mktime(19, 0, 0, 8, 29, 2021);
 $shotgun_date_sec = (((date('d', $shotgun_date)-1)*24 + date('H', $shotgun_date))*60 + date('i', $shotgun_date))*60 + date('s', $shotgun_date);
 
 $end_date = mktime(22, 00, 0, 8, 29, 2021);
@@ -82,13 +82,13 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 		header("Location: /nanolympique/index.php");
 	} else {
 		if (!$_SESSION['shotgun']) {
-			if (number_place($pdo) + $_SESSION["fsize"] < 860) {
+			if (number_place($pdo) + $_SESSION["fsize"] < 880) {
 				$query=$pdo->prepare("INSERT into nanolympique (prenom,nom, email, heure, taille) VALUES (?,?,?,?,?)");
 				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time'],$_SESSION["fsize"]));
 				//$_SESSION['shotgun'] = true;
 				header("refresh:5; url=/nanolympique/index.php");
             } else {
-				header("Location: /nanolympique/fini.php");
+				header("refresh:5; url=/nanolympique/fini.php");
             }
      	} else {
 			$sql ='DELETE from nanolympique WHERE email=:email';
