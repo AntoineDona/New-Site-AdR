@@ -90,15 +90,15 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
             } else {
 				header("refresh:5; url=/nanolympique/fini.php");
             }
-     	} else {
-			$sql ='DELETE from nanolympique WHERE email=:email';
-			$stmt = $pdo->prepare($sql);
-			$stmt->bindValue(':email', $_SESSION["email"]);
-			$res = $stmt->execute();
-			$_SESSION['shotgun'] = false;
-			header("Location: /nanolympique/index.php");
-      	}
+     	}
 	}
+} else if($_SESSION['shotgun']){
+	$sql ='DELETE from nanolympique WHERE email=:email';
+	$stmt = $pdo->prepare($sql);
+	$stmt->bindValue(':email', $_SESSION["email"]);
+	$res = $stmt->execute();
+	$_SESSION['shotgun'] = false;
+	header("Location: /nanolympique/index.php");
 } else {
 	header("Location: /nanolympique/");
 }
