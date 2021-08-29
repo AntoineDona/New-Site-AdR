@@ -46,7 +46,7 @@
 	if (isset($_POST['Rechercher'])) { // Si il clique sur valider
 		$_SESSION["search"] = $_POST['pseudo']; // Ici on va defenire que la session bla bla bla va être définie comme ce que il a écrit dans pseudo
 		// Si tout va bien, on peut continuer
-		$reponse = $pdo->query("SELECT * FROM nanolympique WHERE CONCAT_WS('', prenom, nom, famille) LIKE '%" . $_SESSION["search"] . "%' ");
+		$reponse = $pdo->query("SELECT * FROM nanolympique WHERE CONCAT_WS('', prenom, nom, famille, email) LIKE '%" . $_SESSION["search"] . "%' ");
 		// On affiche chaque entrée une à une
 		while ($donnees = $reponse->fetch()) {
 
