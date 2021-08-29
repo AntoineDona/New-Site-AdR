@@ -20,23 +20,24 @@
   --white_border: 0.1rem solid white;
   --blue: rgb(34, 207, 194);
   --blue_text_shadow: 0 0 7px white, 0 0 10px #86d5fd, 0 0 21px #86d5fd,
-  0 0 42px #86d5fd;
+    0 0 42px #86d5fd;
   --blue_box_shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px var(--blue),
-  inset 0 0 10px var(--blue), 0 0 21px var(--blue),
-  inset 0 0 21px var(--blue), 0 0 42px var(--blue),
-  inset 0 0 42px var(--blue);
+    inset 0 0 10px var(--blue), 0 0 21px var(--blue), inset 0 0 21px var(--blue),
+    0 0 42px var(--blue), inset 0 0 42px var(--blue);
   --danger: rgba(167, 20, 20, 0.575);
-  --danger_text_shadow: 0 0 7px white, 0 0 10px var(--danger), 0 0 21px var(--danger),
-  0 0 42px var(--danger);
-  --danger_box_shadow:0 0 7px white, inset 0 0 7px white,
-  0 0 10px var(--danger), inset 0 0 10px var(--danger),
-  0 0 21px var(--danger), inset 0 0 21px var(--danger),
-  0 0 42px var(--danger), inset 0 0 42px var(--danger);
+  --danger_text_shadow: 0 0 7px white, 0 0 10px var(--danger),
+    0 0 21px var(--danger), 0 0 42px var(--danger);
+  --danger_box_shadow: 0 0 7px white, inset 0 0 7px white,
+    0 0 10px var(--danger), inset 0 0 10px var(--danger), 0 0 21px var(--danger),
+    inset 0 0 21px var(--danger), 0 0 42px var(--danger),
+    inset 0 0 42px var(--danger);
   --green: rgba(0, 156, 8, 0.575);
-  --green_box_shadow: 0 0 7px white, inset 0 0 7px white,
-  0 0 10px var(--green), inset 0 0 10px var(--green),
-  0 0 21px var(--green), inset 0 0 21px var(--green),
-  0 0 42px var(--green), inset 0 0 42px var(--green);
+  --green_text_shadow: 0 0 7px white, 0 0 10px var(--green),
+    0 0 21px var(--green), 0 0 42px var(--green);
+  --green_box_shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px var(--green),
+    inset 0 0 10px var(--green), 0 0 21px var(--green),
+    inset 0 0 21px var(--green), 0 0 42px var(--green),
+    inset 0 0 42px var(--green);
 }
 html,
 body {
@@ -56,6 +57,7 @@ body {
   background-color: black;
   color: white;
   position: absolute;
+  text-align: center;
 }
 
 /* Vieux bordel ------------------------------------------------------------------------------------------- */
@@ -155,24 +157,26 @@ p.soiree {
   margin: auto;
 }
 
-#co_msg_ctnr, #ok_msg_ctnr, #danger_msg_ctnr{
-  margin:auto;
+#co_msg_ctnr,
+#ok_msg_ctnr,
+#danger_msg_ctnr {
+  margin: auto;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   padding: 0.4rem;
   width: 30rem;
   text-align: center;
   border-radius: 0.5rem;
-  
 }
 
-#co_msg_ctnr, #danger_msg_ctnr{
-  background-color:var(--danger);
+#co_msg_ctnr,
+#danger_msg_ctnr {
+  background-color: var(--danger);
   /* border: solid 0.1rem white; */
   box-shadow: var(--danger_box_shadow);
 }
 
-#ok_msg_ctnr{
+#ok_msg_ctnr {
   background-color: var(--green);
   /* border: solid 0.1rem white; */
   box-shadow: var(--green_box_shadow);
@@ -305,11 +309,11 @@ p.soiree {
 
 /* Page Soldout -------------------------------------------------------------------------------------------------- */
 
-.soldout_ctnr{
+.soldout_ctnr {
   margin: auto;
   margin-top: 25vh;
   padding: 2rem;
-  width:50vw;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -318,19 +322,19 @@ p.soiree {
   border-radius: 1rem;
   box-shadow: var(--danger_box_shadow);
 }
-.soldout_ctnr p{
+.soldout_ctnr p {
   font-size: 1.5rem;
   text-align: center;
   text-shadow: var(--danger_text_shadow);
 }
 
-#soldout_title{
+#soldout_title {
   margin-bottom: 2rem;
   font-size: 5rem;
   text-shadow: var(--danger_text_shadow);
 }
 
-.btns_ctnr{
+.btns_ctnr {
   display: flex;
   margin-top: 30px;
 }
@@ -371,17 +375,113 @@ form.valide {
   text-align: center;
 }
 
-/* Loading page*/
+.nb_entrees {
+  display:inline-block; 
+  background-color: rgba(10, 10, 10, 0.616);
+  font-size: 5rem;
+  margin: 2rem auto;
+  padding:  0 1rem;
+  text-align: center;
+  border: solid 3px white;
+  box-shadow: var(--blue_box_shadow);
+}
 
-.loading-animation-box{
-  width: 100vw;
-  height: 100vw;
+form {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.loading-animation-box div{
+#searchform {
+  position: relative;
+  width: 30rem;
+  margin: auto;
+  height: 2rem;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: var(--blue_box_shadow);
+}
+
+#search {
+  height: 2rem;
+  width: 100%;
+  padding: 0 10px;
+  border: transparent;
+}
+
+#submit {
+  position: absolute;
+  color: black;
+  background-color: transparent;
+  border: transparent;
+  width: 2.5rem;
+  height: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  cursor: pointer;
+}
+
+.greencard {
+  background: rgba(125, 250, 125, 0.3);
+  width: 60vw;
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+  color: white;
+  margin: auto;
+  margin-top: 4vw;
+  padding: 10px;
+  border-radius: 8px;
+  border: white solid 2px;
+  box-shadow: var(--green_box_shadow);
+  text-shadow: var(--green_text_shadow);
+}
+.redcard {
+  background: rgba(92, 92, 92, 0.3);
+  width: 60vw;
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  margin: auto;
+  margin-top: 4vw;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: var(--danger_box_shadow);
+  text-shadow: var(--danger_text_shadow);
+}
+
+.submit {
+  font-size: 50px;
+  font-family: "CaviarDreams";
+  color: white;
+  font-weight: bold;
+  margin: 8px;
+  border-width: 0;
+  border-radius: 8px;
+  padding: 6px;
+  background-color: transparent;
+  border: white 3px solid;
+  box-shadow: var(--green_box_shadow);
+  text-shadow: var(--green_text_shadow);
+  cursor: pointer;
+}
+
+.submit:hover {
+  box-shadow: var(--blue_box_shadow);
+  text-shadow: var(--blue_text_shadow);
+  transition: all 0.4s ease;
+}
+
+/* Loading page*/
+
+.loading-animation-box {
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .lds-ripple {
@@ -418,8 +518,6 @@ form.valide {
   }
 }
 
-
-
 /* Responsive ---------------------------------------------------------------------------------------------------- */
 
 @media screen and (orientation: portrait), screen and (max-width: 800px) {
@@ -447,10 +545,12 @@ form.valide {
     border-radius: 1rem;
   }
 
-  #co_msg_ctnr, #ok_msg_ctnr, #danger_msg_ctnr{
-   font-size: 2rem;
-   width: 50rem;
-   margin: 4rem auto;
+  #co_msg_ctnr,
+  #ok_msg_ctnr,
+  #danger_msg_ctnr {
+    font-size: 2rem;
+    width: 50rem;
+    margin: 4rem auto;
   }
 
   #sg_link,
@@ -470,39 +570,36 @@ form.valide {
     font-size: 1.5rem;
   }
 
+  /* Responsive soldout */
 
-/* Responsive soldout */
+  .soldout_ctnr {
+    margin-top: 30vh;
+    width: 70vw;
+    min-width: 5rem;
+  }
+  .soldout_ctnr p {
+    font-size: 2.5rem;
+  }
 
-.soldout_ctnr{
-  margin-top: 30vh;
-  width:70vw;
-  min-width: 5rem;
-}
-.soldout_ctnr p{
-  font-size: 2.5rem;
-}
+  #soldout_title {
+    font-size: 8rem;
+  }
 
-#soldout_title{
-  font-size: 8rem;
-}
-
-#reload {
-  width: auto;
-  height: auto;
-  margin: auto;
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  padding: 1rem;
-  font-size: 2rem;
-  height: 3rem;
-}
-.loading-animation-box div{
-
-  margin-top: 10vh;
-
-}
+  #reload {
+    width: auto;
+    height: auto;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+    height: 3rem;
+  }
+  .loading-animation-box div {
+    margin-top: 10vh;
+  }
 }
 
 /* Animations -------------------------------------------------------------------------------------------------------- */
