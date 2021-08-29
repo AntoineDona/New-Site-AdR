@@ -136,7 +136,7 @@ p.soiree {
 #titre_sg {
   /* Affiche si on a shotgun ou pas!! */
   text-align: center;
-  width: 30rem;
+  width: 33rem;
   max-width: 90vw;
   margin: auto;
   margin-top: 22vh;
@@ -539,7 +539,7 @@ form {
   }
 
   #titre_sg {
-    width: 49rem;
+    width: 48rem;
     overflow: visible;
     margin-top: 35vh;
     margin-bottom: 4rem;
