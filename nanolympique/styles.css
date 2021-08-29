@@ -425,6 +425,8 @@ form {
 
 .greencard {
   background: rgba(125, 250, 125, 0.3);
+  font-family: arial;
+  font-weight: bold;
   width: 60vw;
   text-align: center;
   font-weight: bold;
@@ -440,6 +442,8 @@ form {
 }
 .redcard {
   background: rgba(92, 92, 92, 0.3);
+  font-family: arial;
+  font-weight: bold;
   width: 60vw;
   text-align: center;
   font-size: 60px;
