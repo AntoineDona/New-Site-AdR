@@ -51,7 +51,10 @@ function display_buttons($nbr_annees)
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="ptitdej">🥐 VP P'tit Dej 🥐</strong></h2>
                     <img class="prez" src="img_poles/ptit-dej.jpg" onclick="window.open(this.src,'_self')">
-                    <p>Description P'tit Dej </p>
+                    <p>Voilà le pôle le plus important de l'AdR : LE P'tit Déj !! 🥐 
+                        Les seuls du campus capables de régaler ceux qui se lèvent pour suivre les cours 📚 autant que ceux qui détestent le sommeil et qui sont encore en nuit blanche 🔭 
+                        Cette courageuse équipe de lèves-tôt 🥱 saura te réveiller dans la meilleure des ambiances au Musée, au son de douces musiques (et parfois de cris stridents 👭). 
+                        Venez donc découvrir la délicieuse formule (et tout un tas d'autres choses🍏) de ces crèmes du p'tit dèj tous les matins entre 7h30 et 9h 🖤❤️</p>
                 </div>
 
 
