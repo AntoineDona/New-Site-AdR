@@ -10,6 +10,19 @@
     <meta name="description" content="AdR CentraleSupélec. L'Association des résidents de CentaleSupélec (AdRCS) organise les grandes soirées de l'écoles CentraleSupélec, tient le Musée, bar de l'école et s'occupe des relations avec le gestionnaire de la résidence. AdR Centrale Supélec " />
     <meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
     <title>Accueil - AdR CentraleSupélec (AdRCS)</title>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9WXGDB2E4H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9WXGDB2E4H');
+    </script>
 </head>
 
 <body>
@@ -40,9 +53,9 @@
                 </div>
             </div>
         </section>
-        
+
         <section class="evenements">
-        <a class="anchor" id="discover"></a>
+            <a class="anchor" id="discover"></a>
             <div class="container">
                 <div class="info">
                     <div class="evenements-description padding-right animate-left">
