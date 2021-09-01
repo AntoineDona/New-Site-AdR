@@ -82,12 +82,12 @@ function stopAlcool(){
 
 
 function q() {
-    var audio = new Audio('victoire.mp3');
+    var audio = new Audio('easteregg/victoire.mp3');
     audio.play();
     alert('le Q vaincra');
     var im = document.getElementsByTagName("img") ;
     for (var i = 0; i < im.length; i++) {
-        im[i].src="Q.svg";
+        im[i].src="easteregg/Q.svg";
     }
     window.history.pushState('nicoduq', 'Title', '?leQvaincra');
 }
