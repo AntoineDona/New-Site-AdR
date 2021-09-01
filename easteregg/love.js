@@ -1,6 +1,6 @@
 document.addEventListener("keypress", function (e) {
     var touche = String.fromCharCode(e.charCode); // Récupération de la touche pressée
-    touche = touche.toUpperCase(); // Pour gérer indifféremment minuscules et majuscules
+    // touche = touche.toUpperCase(); // Pour gérer indifféremment minuscules et majuscules
     var couleur = "";
     switch (touche) {
     case "B":
