@@ -70,7 +70,7 @@ document.addEventListener("keypress", function (e) {
         code = "";
     }
     if (regexQuadra.test(code)){
-        var audio = new Audio('easteregg/djadja.mp3');
+        var audio = new Audio('easteregg/quadra.mp3');
         audio.play();
         code = "";
     }
