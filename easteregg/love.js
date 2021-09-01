@@ -36,6 +36,7 @@ document.addEventListener("keypress", function (e) {
     console.log("Vous avez appuyé sur la touche " + String.fromCharCode(e.charCode));
     var regexAlcool = /jaimelalcool/;
     var regexDjadja = /djadja/;
+    var regexQuadra = /quadra/;
     var regexNeige = /neige/;
     console.log(code)
     var alcool = "";
@@ -64,6 +65,11 @@ document.addEventListener("keypress", function (e) {
 
     }
     if (regexDjadja.test(code)){
+        var audio = new Audio('easteregg/djadja.mp3');
+        audio.play();
+        code = "";
+    }
+    if (regexQuadra.test(code)){
         var audio = new Audio('easteregg/djadja.mp3');
         audio.play();
         code = "";
