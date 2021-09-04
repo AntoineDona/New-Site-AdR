@@ -50,7 +50,7 @@ body {
   top: 0;
   bottom: 0;
   height: 100vh;
-  background: no-repeat url("img/nanolympique_bg.jpg");
+  background: no-repeat url("img/fond_latinano.jpeg");
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat, no-repeat, repeat-y;
@@ -526,7 +526,7 @@ form {
 
 @media screen and (orientation: portrait), screen and (max-width: 800px) {
   body {
-    background: url("img/nanolympique_mlightbg.jpeg");
+    background: url("img/fond_latinano_m.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
