@@ -19,9 +19,9 @@
 		var date = new Date();
 		console.log(date);
 		<?php //$_SESSION['shotgun'] = false; ?>
-		var date_shotgun = new Date(2021, 07, 29, 19, 00, 00);
-		var date_soiree = new Date(2021, 07, 29, 23, 00);
-		var title = "Ouverture du 2e Shotgun dans :";
+		var date_shotgun = new Date(2021, 08, 07, 21, 00, 00);
+		var date_soiree = new Date(2021, 08, 08, 23, 00);
+		var title = "Ouverture du Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
 		var shotgun = '<?php 
 		if (isset($_SESSION['shotgun']) && $_SESSION['shotgun']==true){

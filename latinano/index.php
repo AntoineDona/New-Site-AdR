@@ -1,4 +1,5 @@
-<?php include("auth.php"); ?>
+<?php include("auth.php"); 
+?>
 <?php
 include("database.php");
 
@@ -112,30 +113,29 @@ if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION[
 	<!-- <a href="deconnexion.php">se deconnecter</a> -->
 
 	<div id="titre_sg"></div>
-	<div id="holder">
-		<div class="olympics">
-			<div class="ring blue" id="mois">
-				<p class="chiffre">00</p>
-				<p>mois(s)</p>
-			</div>
-			<div class="ring yellow" id="jours">
-				<p class="chiffre">00</p>
-				<p>jour(s)</p>
-			</div>
-			<div class="ring black" id="heures">
-				<p class="chiffre">00</p>
-				<p>heure(s)</p>
-			</div>
-			<div class="ring green" id="minutes">
-				<p class="chiffre">00</p>
-				<p>minute(s)</p>
-			</div>
-			<div class="ring red" id="secondes">
-				<p class="chiffre">00</p>
-				<p>seconde(s)</p>
-			</div>
+	<div id="counter">
+		<!-- <div class="digit_holder months" id="mois">
+			<p class="chiffre">00</p>
+			<p>mois(s)</p>
+		</div> -->
+		<div class="digit_holder days" id="jours">
+			<p class="chiffre">00</p>
+			<p>jour(s)</p>
 		</div>
-		<!-- <div id="counter" style="display: none;">
+		<div class="digit_holder hours" id="heures">
+			<p class="chiffre">00</p>
+			<p>heure(s)</p>
+		</div>
+		<div class="digit_holder minutes" id="minutes">
+			<p class="chiffre">00</p>
+			<p>minute(s)</p>
+		</div>
+		<div class="digit_holder seconds" id="secondes">
+			<p class="chiffre">00</p>
+			<p>seconde(s)</p>
+		</div>
+	</div>
+	<!-- <div id="counter" style="display: none;">
 			<div style="grid-area: d_top;">00</div>
 			<div style="grid-area: h_top;">00</div>
 			<div style="grid-area: m_top;">00</div>
@@ -146,35 +146,35 @@ if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION[
 			<div style="grid-area: s_bottom; font-size:20%;">seconde(s)</div>
 		</div> -->
 
-		<script type="text/javascript">
-			function shotgun() {
+	<script type="text/javascript">
+		function shotgun() {
+			window.location = 'action.php';
+		}
+
+		function verif() {
+			if (confirm("ATTENTION: En cliquant sur OK, tu annules ta place et la remets en jeu.")) {
 				window.location = 'action.php';
 			}
-
-			function verif() {
-				if (confirm("ATTENTION: En cliquant sur OK, tu annules ta place et la remets en jeu.")) {
-					window.location = 'action.php';
-				}
-			}
-		</script>
+		}
+	</script>
 	</div>
 
 	<?php
 
 	if (!$_SESSION['shotgun']) {
 		if (!$_SESSION["is_representant"]) {
-			echo " <div id='danger_msg_ctnr'> <p id='co_msg'>Attention, si vous voyez ce message, VOUS NE POURREZ PAS SHOTGUN!! Seuls les représentants de famille de parrainage ont la possibilité de Shotgun!!</p></div> ";
+			echo " <div id='danger_msg_ctnr'> <p id='co_msg'>ATTENTION, TU N'est pas représentant, tu NE POURREZ PAS SHOTGUN!!</p></div> ";
 		} else {
 			echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien représentant de ta famille de parainage, tu vas pouvoir Shotgun! </p></div>";
 		}
 	} else {
-		echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au Latinano. <!-- Tu as été le " . get_row($_SESSION["email"],$pdo) . "e --> </p></div>";
+		echo " <div id='ok_msg_ctnr'> <p id='co_msg'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au Latinano. </p></div>";
 	}
 	?>
 	<div id="sg_link_ctnr" href="#">
 		<?php
 		if (!$_SESSION['shotgun']) {
-			echo '<a id="sg_link" href=# onClick="shotgun();">2e SHOTGUN</a>';
+			echo '<a id="sg_link" href=# onClick="shotgun();">SHOTGUN</a>';
 		} else {
 			echo '<a id="sg_link" href=# onClick="verif();">DEPAPS</a>';
 		}
