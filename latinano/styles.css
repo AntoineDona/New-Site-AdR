@@ -226,8 +226,6 @@ p.soiree {
 #sg_link {
   width: auto;
   padding: 0.5rem 2rem;
-  cursor: not-allowed;
-  pointer-events: none;
   background-color: var(--dark_purple);
   border: solid 5px var(--yellow);
   border-radius: 8px;
