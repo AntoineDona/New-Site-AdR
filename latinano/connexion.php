@@ -12,8 +12,9 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	$nom = $_SESSION["nom"];
 	echo $prenom . " " . $nom;
 	header("Location: https://adr.cs-campus.fr/latinano/index.php?nom=" . $nom . "&prenom=" . $prenom);
-	
-} else {$_SESSION["isConnected"] = false;}
+} else {
+	$_SESSION["isConnected"] = false;
+}
 ?>
 
 <!DOCTYPE html>
@@ -36,28 +37,22 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	}
 	?>
 	<div id="titre_sg">Le shotgun commence dans:</div>
-	<div id="holder">
-		<div class="olympics">
-			<div class="ring blue" id="mois">
-				<p class="chiffre">00</p>
-				<p class="text">mois(s)</p>
-			</div>
-			<div class="ring yellow" id="jours">
-				<p class="chiffre">00</p>
-				<p class="text">jour(s)</p>
-			</div>
-			<div class="ring black" id="heures">
-				<p class="chiffre">00</p>
-				<p class="text">heure(s)</p>
-			</div>
-			<div class="ring green" id="minutes">
-				<p class="chiffre">00</p>
-				<p class="text">minute(s)</p>
-			</div>
-			<div class="ring red" id="secondes">
-				<p class="chiffre">00</p>
-				<p class="text">seconde(s)</p>
-			</div>
+	<div id="counter">
+		<div class="digit_holder days" id="jours">
+			<p class="chiffre">00</p>
+			<p>jour(s)</p>
+		</div>
+		<div class="digit_holder hours" id="heures">
+			<p class="chiffre">00</p>
+			<p>heure(s)</p>
+		</div>
+		<div class="digit_holder minutes" id="minutes">
+			<p class="chiffre">00</p>
+			<p>minute(s)</p>
+		</div>
+		<div class="digit_holder seconds" id="secondes">
+			<p class="chiffre">00</p>
+			<p>seconde(s)</p>
 		</div>
 	</div>
 	<div id="co_msg_ctnr">
