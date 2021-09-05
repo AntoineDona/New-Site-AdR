@@ -453,28 +453,21 @@ form {
 
 @media screen and (orientation: portrait), screen and (max-width: 800px) {
   body {
-    background: url("img/fond_latinano_m.jpeg");
+    background: url("img/fond_latinano_m.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: black;
-    box-shadow: 0 0 10px 5px black inset;
+    background-color: var(--dark_purple);
+    box-shadow: 0 0 10px 5px var(--dark_purple) inset;
   }
   
   #titre_sg {
     width: 48rem;
     overflow: visible;
-    margin-top: 35vh;
+    margin-top: 48rem;
     margin-bottom: 4rem;
-    font-size: 3rem;
-    background-color: rgba(83, 0, 0, 0.568);
-    border: solid 0.3rem white;
+    font-size: 5rem;
     border-radius: 1rem;
-  }
-
-  #holder {
-    top: 40vh;
-    width: 900px;
   }
 
   #co_msg_ctnr,
@@ -491,15 +484,16 @@ form {
     padding: 1rem 6rem;
   }
 
-  .olympics {
-    width: 100%;
-  }
-  .ring .chiffre {
-    font-size: 6rem;
+  .chiffre {
+    font-size: 8rem;
   }
 
-  .ring .text {
-    font-size: 1.5rem;
+  .text {
+    font-size: 2rem;
+  }
+
+  .digit_holder{
+    margin: 0 2rem;
   }
 
   /* Responsive soldout */
