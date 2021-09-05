@@ -120,7 +120,7 @@
 		$_SESSION['shotgun'] = false;
 		header("Location: /latinano/index.php");
 	} else {
-		header("Location: /latinano/test.php");
+		header("Location: /latinano/index.php");
 	}
 	?>
 	<div class="loading-animation-box">
