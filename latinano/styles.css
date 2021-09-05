@@ -185,6 +185,7 @@ p.soiree {
 #ok_msg_ctnr {
   background-color: var(--green);
   /* border: solid 0.1rem white; */
+  border: solid 0.2rem white;
   box-shadow: var(--green_box_shadow);
 }
 
