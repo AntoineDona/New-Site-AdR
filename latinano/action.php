@@ -92,7 +92,7 @@
 	if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec) {
 		if ($_SESSION["is_representant"] == false) {
 			$_SESSION['prev_page'] = "action.php";
-			// header("Location: /latinano/index.php");
+			header("Location: /latinano/index.php");
 		} else {
 			if (!$_SESSION['shotgun']) {
 				if (number_place($pdo) + $_SESSION["fsize"] < 880) {
