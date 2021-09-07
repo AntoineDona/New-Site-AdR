@@ -84,7 +84,7 @@
 	date_default_timezone_set('Europe/Paris');
 	$current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
-	$shotgun_date = mktime(15, 51, 0, 9, 7, 2021);
+	$shotgun_date = mktime(21, 0, 0, 9, 7, 2021);
 	$shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
 	$end_date = mktime(22, 00, 0, 9, 8, 2021);
