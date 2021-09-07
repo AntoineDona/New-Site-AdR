@@ -39,29 +39,22 @@
 		}
 	}
 
-	function family_size($email, $pdo)
+	function infos($email, $pdo)
 	{
 
 		$query = $pdo->prepare("SELECT * from representants_fp where email=?");
 		$query->execute(array($email));
 		$result = $query->fetch();
-		return $result['taille'];
+		return $result;
 	}
+	$_SESSION["infos"] = infos($_SESSION["email"], $pdo);
 
 
-
-	$_SESSION["fsize"] = family_size($_SESSION["email"], $pdo);
-
-	function family_name($email, $pdo)
-	{
-
-		$query = $pdo->prepare("SELECT * from representants_fp where email=?");
-		$query->execute(array($email));
-		$result = $query->fetch();
-		return $result['famille'];
-	}
-
-	$_SESSION["fname"] = family_name($_SESSION["email"], $pdo);
+	$_SESSION["prenom"] = $_SESSION["infos"]["prenom"];
+	$_SESSION["nom"] = $_SESSION["infos"]["nom"];
+	$_SESSION["fsize"] = $_SESSION["infos"]["taille"];
+	$_SESSION["fname"] = $_SESSION["infos"]["famille"];
+	$_SESSION["preshotgun"] = $_SESSION["infos"]["preshotgun"];
 
 	// function isCotisant($mail,$pdo){
 	// 	$query = $pdo->prepare("SELECT * from parrains WHERE EMAIL=?");
@@ -89,7 +82,7 @@
 
 	$end_date = mktime(22, 00, 0, 9, 8, 2021);
 	$end_date_sec = (((date('d', $end_date) - 1) * 24 + date('H', $end_date)) * 60 + date('i', $end_date)) * 60 + date('s', $end_date);
-	if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec) {
+	if (($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec) || $_SESSION["preshotgun"]) {
 		if ($_SESSION["is_representant"] == false) {
 			$_SESSION['prev_page'] = "action.php";
 			header("Location: /latinano/index.php");
