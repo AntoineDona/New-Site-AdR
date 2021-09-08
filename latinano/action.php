@@ -77,18 +77,18 @@
 	date_default_timezone_set('Europe/Paris');
 	$current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
-	$shotgun_date = mktime(23, 45, 0, 9, 8, 2021);
+	$shotgun_date = mktime(0, 0, 0, 9, 9, 2021);
 	$shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
 	$end_date = mktime(22, 00, 0, 9, 8, 2021);
 	$end_date_sec = (((date('d', $end_date) - 1) * 24 + date('H', $end_date)) * 60 + date('i', $end_date)) * 60 + date('s', $end_date);
-	if (($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec) || $_SESSION["preshotgun"] == "true") {
+	if (($current_date_sec >= $shotgun_date_sec) || $_SESSION["preshotgun"] == "true") {
 		if ($_SESSION["is_representant"] == false) {
 			$_SESSION['prev_page'] = "action.php";
 			header("Location: /latinano/index.php");
 		} else {
 			if (!$_SESSION['shotgun']) {
-				if (number_place($pdo) + $_SESSION["fsize"] < 880) {
+				if (number_place($pdo) + $_SESSION["fsize"] < 730) {
 					$query = $pdo->prepare("INSERT into latinano (prenom, nom, email, heure, taille, famille) VALUES (?,?,?,?,?,?)");
 					$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time'], $_SESSION["fsize"], $_SESSION["fname"]));
 					//$_SESSION['shotgun'] = true;

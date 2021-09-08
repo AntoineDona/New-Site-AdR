@@ -19,7 +19,7 @@
 		var date = new Date();
 		console.log(date);
 		<?php //$_SESSION['shotgun'] = false; ?>
-		var date_shotgun = new Date(2021, 08, 07, 21, 00, 00);
+		var date_shotgun = new Date(2021, 08, 09, 00, 00, 00);
 		var date_soiree = new Date(2021, 08, 08, 23, 00);
 		var title = "Ouverture du Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
