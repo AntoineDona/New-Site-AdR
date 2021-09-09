@@ -38,6 +38,7 @@ document.addEventListener("keypress", function (e) {
     var regexDjadja = /djadja/;
     var regexQuadra = /quadra/;
     var regexNeige = /neige/;
+    var regexSydney = /sydney/;
     console.log(code)
     var alcool = "";
     if (regexAlcool.test(code)) {
@@ -74,6 +75,10 @@ document.addEventListener("keypress", function (e) {
         audio.play();
         code = "";
     }
+    if (regexSydney.test(code)){
+        window.open("easteregg/sydney.jpeg","_self");
+    }
+
     if (regexNeige.test(code)){
         function affiche_text(text){
         document.getElementById("neige").innerHTML = text;
