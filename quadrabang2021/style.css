@@ -20,6 +20,7 @@ body {
   background-color: black;
 }
 
+
 .parallax_group {
   position: relative;
   overflow-x: hidden;
@@ -34,6 +35,8 @@ body {
   /* background-color: red; */
   /* z-index: 10; */
 }
+
+/* Parallax background ----------------------------------- */
 
 .parallax_layer {
   position: absolute;
@@ -78,9 +81,11 @@ body {
   transform: translateZ(-400px) scale(1.5);
 }
 
+/* Contenu -------------------------------- */
+
 .quadra {
   position: absolute;
-  top:0;
+  inset: 0;
   height: 100vh;
   width: 150vw;
   background-image: url("img/quadrabang.png");
