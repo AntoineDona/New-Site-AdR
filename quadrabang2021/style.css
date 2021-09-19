@@ -22,8 +22,7 @@ body {
 
 .parallax_group {
   position: relative;
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow: hidden;
   height: 100vh;
   perspective: 800px;
   transform-style: preserve-3d;
