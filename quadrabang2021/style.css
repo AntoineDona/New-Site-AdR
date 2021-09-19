@@ -141,7 +141,7 @@ body {
   font-family: Retroica, Verdana, Geneva, Tahoma, sans-serif;
   display: grid;
   grid-template-areas: "d_top h_top m_top s_top" "d_bottom h_bottom m_bottom s_bottom";
-  grid-template-columns: 15rem 15rem 15rem 15rem;
+  grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 10rem 2rem;
   color: white;
   text-align: center;
@@ -160,6 +160,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Responsive ---------------------------------------- */
+
+@media screen and (orientation: portrait), screen and (max-width: 800px) {
+  html {
+    font-size: 6px;
+  }
 }
 
 
