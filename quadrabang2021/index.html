@@ -15,6 +15,9 @@
 
 <body onload="onLoad()">
     <div class="parallax_group">
+        <div class="loading_page">
+            <div class="loader"></div>
+        </div>
         <div class="parallax_layer base_layer"></div>
         <div class="parallax_layer mid_layer"></div>
         <div class="parallax_layer top_layer"></div>
@@ -32,5 +35,13 @@
 		</div>
     
     </div>
+    <script>
+        let loading_page = document.querySelector('.loading_page');
+
+        window.addEventListener('load', setTimeout(() => {
+            loading_page.style.opacity = '0';
+            loading_page.style.visibility = 'hidden';
+        }, 5000));
+    </script>
 </body>
 </html>
