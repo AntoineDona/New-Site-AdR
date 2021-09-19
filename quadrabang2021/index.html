@@ -37,10 +37,12 @@
     </div>
     <script>
         let loading_page = document.querySelector('.loading_page');
+        let parallax_group = document.querySelector('.parallax_group');
 
         window.addEventListener('load', setTimeout(() => {
             loading_page.style.opacity = '0';
             loading_page.style.visibility = 'hidden';
+            parallax_group.style.overflowY = 'visible';
         }, 5000));
     </script>
 </body>
