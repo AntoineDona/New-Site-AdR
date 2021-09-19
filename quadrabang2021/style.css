@@ -20,7 +20,6 @@ body {
   background-color: black;
 }
 
-
 .parallax_group {
   position: relative;
   overflow-x: hidden;
@@ -34,6 +33,54 @@ body {
   align-items: center;
   /* background-color: red; */
   /* z-index: 10; */
+}
+
+
+/* Loader -------------------------------------------- */
+
+.loading_page {
+  z-index: 100;
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.8s;
+  opacity: 1;
+}
+
+.loader {
+  background-image: url("img/logo_blanc.png");
+  background-attachment: local;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 10rem;
+  height: 20rem;
+  animation: rotationX 4s infinite linear;
+}
+
+@keyframes rotationX {
+  0%{
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  25%{
+    transform: rotateX(180deg);
+  }
+  50%{
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  75% {
+    transform: rotateX(359deg) rotateY(180deg);
+  }
+
+  100%{
+    transform: rotateX(359deg) rotateY(359deg);
+  }
+
 }
 
 /* Parallax background ----------------------------------- */
@@ -97,7 +144,7 @@ body {
 
 #counter {
   position: absolute;
-  top:100vh;
+  top: 100vh;
   font-family: Retroica, Verdana, Geneva, Tahoma, sans-serif;
   display: grid;
   grid-template-areas: "d_top h_top m_top s_top" "d_bottom h_bottom m_bottom s_bottom";
