@@ -127,9 +127,13 @@ button{
 
 /* Contenu ------------------------------------------------------------------------ */
 
-.quadra {
+
+.main{
   position: absolute;
   inset: 0;
+}
+
+.quadra {
   height: 100vh;
   width: 100vw;
   background-image: url("img/quadrabang.png");
@@ -142,8 +146,6 @@ button{
 /* Compteur ----------- */
 
 .counter_wrapper {
-  position: absolute;
-  top: 100vh;
   height: auto;
   width: 100vw;
   padding: 6rem 1rem;
@@ -186,11 +188,10 @@ button{
 /* Billeterie --------- */
 
 .billeterie {
-  position: absolute;
-  top: 150vh;
   height: auto;
+  min-height: 100vh;
   width: 100vw;
-  padding: 4rem 1rem;
+  padding: 1rem 1rem;
   /* background-color: var(--transparent_black);
   box-shadow: 0 0 5px 5px var(--transparent_black); */
   z-index: 1;
@@ -201,6 +202,7 @@ button{
 }
 
 .billeterie h3 {
+  margin: 5rem auto;
   font-size: 5rem;
   text-shadow: var(--white_glow);
 }
@@ -209,7 +211,6 @@ button{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 5rem;
   max-width: 100vw;
 }
 
