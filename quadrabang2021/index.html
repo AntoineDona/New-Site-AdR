@@ -23,17 +23,79 @@
         <div class="parallax_layer top_layer"></div>
 
         <div class="quadra"></div>
-        <div id="counter" style="grid-area: bottom;">
-			<div style="grid-area: d_top;">00</div>
-			<div style="grid-area: h_top;">00</div>
-			<div style="grid-area: m_top;">00</div>
-			<div style="grid-area: s_top;">00</div>
-			<div style="grid-area: d_bottom; font-size:20%;">jour(s)</div>
-			<div style="grid-area: h_bottom; font-size:20%;">heure(s)</div>
-			<div style="grid-area: m_bottom; font-size:20%;">minute(s)</div>
-			<div style="grid-area: s_bottom; font-size:20%;">seconde(s)</div>
-		</div>
-    
+        <div class="counter_wrapper">
+            <h3>Le Quadrabang débute dans :</h3>
+            <div id="counter" style="grid-area: bottom;">
+                <div style="grid-area: d_top;">00</div>
+                <div style="grid-area: h_top;">00</div>
+                <div style="grid-area: m_top;">00</div>
+                <div style="grid-area: s_top;">00</div>
+                <div style="grid-area: d_bottom; font-size:20%;">jour(s)</div>
+                <div style="grid-area: h_bottom; font-size:20%;">heure(s)</div>
+                <div style="grid-area: m_bottom; font-size:20%;">minute(s)</div>
+                <div style="grid-area: s_bottom; font-size:20%;">seconde(s)</div>
+            </div>
+        </div>
+        <div class="billeterie">
+            <h3>BiLLETERIE</h3>
+            <div class="billet_ctnr">
+                <div class="billet earlys">
+                    <h4>Early Birds</h4>
+                    <p class="prix">10€</p>
+                    <p class="tarif">Tarif réduit limité <br> (100 places) </p>
+                    <p class="ouverture">
+                        Ouverture des earlys:
+                    </p>
+                    <p class="date_ouverture">
+                        Dimanche 26 septembre <br> 12:00
+                    </p>
+                    <a class='achat' href="">
+                        <button>ACHETER</button>
+                    </a>
+                    
+                </div>
+                <div class="billet normal">
+                    <h4>Normal</h4>
+                    <div class="prix">15€</div>
+                    <p class="tarif">Tarif normal</p>
+                    <p class="ouverture">
+                        Ouverture de la billeterie:
+                    </p>
+                    <p class="date_ouverture">
+                        Lundi 27 septembre <br> 12:00
+                    </p>
+                    <a class='achat' href="">
+                        <button>ACHETER</button>
+                    </a>
+                </div>
+                <div class="billet CS">
+                    <h4>Cotisant AdR</h4>
+                    <div class="prix">10€</div>
+                    <p class="tarif">Tarif réservé aux <br> cotisants AdR</p>
+                    <p class="ouverture">
+                        Ouverture de la billeterie:
+                    </p>
+                    <p class="date_ouverture">
+                        Lundi 27 septembre <br> 12:00
+                    </p>
+                    <a class='achat' href="">
+                        <button>ACHETER</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="partenaires">
+            <div class="partner_ctnr">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="informations">
+
+        </div>
+            
     </div>
     <script>
         let loading_page = document.querySelector('.loading_page');
