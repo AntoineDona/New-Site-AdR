@@ -6,11 +6,12 @@
 
 :root {
   --white_glow: 0 0 3px white;
+  --transparent_black: rgba(0, 0, 0, 0.5);
 }
 
 html {
   font-size: 10px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Retroica, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -18,6 +19,11 @@ body {
   font-size: 5rem;
   color: white;
   background-color: black;
+}
+
+button{
+  background: unset;
+  border: unset;
 }
 
 .parallax_group {
@@ -33,7 +39,6 @@ body {
   /* background-color: red; */
   /* z-index: 10; */
 }
-
 
 /* Loader -------------------------------------------- */
 
@@ -57,23 +62,22 @@ body {
 }
 
 @keyframes rotationX {
-  0%{
+  0% {
     transform: rotateX(0deg) rotateY(0deg);
   }
-  25%{
+  25% {
     transform: rotateX(180deg);
   }
-  50%{
+  50% {
     transform: rotateX(180deg) rotateY(180deg);
   }
   75% {
     transform: rotateX(359deg) rotateY(180deg);
   }
 
-  100%{
+  100% {
     transform: rotateX(359deg) rotateY(359deg);
   }
-
 }
 
 /* Parallax background ----------------------------------- */
@@ -121,7 +125,7 @@ body {
   transform: translateZ(-400px) scale(1.5);
 }
 
-/* Contenu -------------------------------- */
+/* Contenu ------------------------------------------------------------------------ */
 
 .quadra {
   position: absolute;
@@ -135,9 +139,28 @@ body {
   background-position: center;
 }
 
-#counter {
+/* Compteur ----------- */
+
+.counter_wrapper {
   position: absolute;
   top: 100vh;
+  height: auto;
+  width: 100vw;
+  padding: 6rem 1rem;
+  background-color: var(--transparent_black);
+  box-shadow: 0 0 5px 5px var(--transparent_black);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter_wrapper h3 {
+  font-size: 3rem;
+  text-shadow: var(--white_glow);
+}
+#counter {
   font-family: Retroica, Verdana, Geneva, Tahoma, sans-serif;
   display: grid;
   grid-template-areas: "d_top h_top m_top s_top" "d_bottom h_bottom m_bottom s_bottom";
@@ -149,9 +172,7 @@ body {
   width: min(100vw, 60rem);
   height: auto;
   margin: auto;
-  margin-top: 10rem;
-  border-radius: 10px;
-  z-index: 1;
+  margin-top: 4rem;
   text-shadow: var(--white_glow);
 }
 
@@ -162,13 +183,122 @@ body {
   align-items: center;
 }
 
-/* Responsive ---------------------------------------- */
+/* Billeterie --------- */
+
+.billeterie {
+  position: absolute;
+  top: 150vh;
+  height: auto;
+  width: 100vw;
+  padding: 4rem 1rem;
+  /* background-color: var(--transparent_black);
+  box-shadow: 0 0 5px 5px var(--transparent_black); */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.billeterie h3 {
+  font-size: 5rem;
+  text-shadow: var(--white_glow);
+}
+
+.billet_ctnr {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  max-width: 100vw;
+}
+
+.billet{
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+
+  width: 25rem;
+  padding: 4rem 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  /* background-color: rgba(139, 0, 0, 0.616); */
+  /* box-shadow: 0 0 px 5px rgba(62, 96, 106, 0.527);  */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.prix{
+  font-size: 4rem;
+  margin: 2rem;
+  font-family: Retroica, Verdana, Geneva, Tahoma, sans-serif;
+  z-index: 1;
+}
+
+.tarif{
+  height: 6rem
+}
+
+.billet a{
+  display: block;
+  height: auto;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  z-index: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgba(196, 82, 66, 0.712);
+  box-shadow: 0 0 10rem 100rem rgba(62, 96, 106, 0.527);
+  transition: all 0.4s ease;
+}
+
+.billet a.achat:hover{
+background-color: rgba(255, 0, 0, 0.8);
+transition: all 0.4s ease;
+}
+
+.billet button{
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+  color: white;
+  background-color: transparent;
+  font-family: Retroica, Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+}
+
+.billet h4{
+  font-size: 3rem;
+  font-family: Retroica, Verdana, Geneva, Tahoma, sans-serif;
+  z-index: 1;
+}
+
+.billet p{
+  z-index: 1;
+}
+
+.ouverture{
+  font-size: 1.3rem;
+}
+.date_ouverture{
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  line-height: 25px;
+}
+
+
+
+/* Responsive ------------------------------------------------------------- */
 
 @media screen and (orientation: portrait), screen and (max-width: 800px) {
   html {
     font-size: 6px;
   }
-  .quadra{
+  .quadra {
     background-image: url("img/quadra_m.png");
   }
   #counter {
@@ -176,8 +306,7 @@ body {
   }
 }
 
-
-/* Fonts --------------------------------------------- */
+/* Fonts ------------------------------------------------------------------------- */
 
 @font-face {
   font-family: "Retroica";
