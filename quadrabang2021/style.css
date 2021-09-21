@@ -168,6 +168,12 @@ body {
   html {
     font-size: 6px;
   }
+  .quadra{
+    background-image: url("img/quadra_m.png");
+  }
+  #counter {
+    font-size: 10rem;
+  }
 }
 
 
