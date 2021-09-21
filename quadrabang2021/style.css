@@ -5,7 +5,7 @@
 }
 
 :root {
-  --white_glow: 0 0 3px white;
+  --white_glow: 0 0 2px white;
   --transparent_black: rgba(0, 0, 0, 0.5);
 }
 
@@ -251,14 +251,13 @@ button{
   padding: 2rem 3rem;
   z-index: 0;
   border-radius: 10px;
-  
   box-shadow: 0 0 10rem 100rem rgba(62, 96, 106, 0.527);
   transition: all 0s ease;
-  /* pointer-events: none; */
 }
 
 .billet a.indisponible{
   background-color: rgba(196, 82, 66, 0.712);
+  pointer-events: none;
 }
 .billet a.achat{
   background-color: rgba(255, 0, 0, 0.664);
