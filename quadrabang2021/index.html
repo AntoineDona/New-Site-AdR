@@ -10,7 +10,6 @@
     <link rel="icon" type="image/png" href="img/logo.png" />
 </head>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
 
 <body onload="onLoad()">
@@ -100,15 +99,5 @@
         </div>
             
     </div>
-    <script>
-        let loading_page = document.querySelector('.loading_page');
-        let parallax_group = document.querySelector('.parallax_group');
-
-        window.addEventListener('load', setTimeout(() => {
-            loading_page.style.opacity = '0';
-            loading_page.style.visibility = 'hidden';
-            parallax_group.style.overflowY = 'visible';
-        }, 2000));
-    </script>
 </body>
 </html>
