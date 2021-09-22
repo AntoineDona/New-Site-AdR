@@ -7,7 +7,7 @@ function onLoad() {
 	let parallax = document.querySelector('.parallax_group');
 	setTimeout(() => {
 		loading_page.style.opacity = '0';
-		parallax.classList.toggle('scroll-enable');
+		parallax.style.overflowY = "visible";
 		setTimeout(() => {
 			loading_page.style.visibility = 'hidden';
 		}, 2000)
@@ -74,7 +74,6 @@ const navSlide = () => {
 	const burger = document.querySelector('.burger');
 	const nav = document.querySelector('.nav-links');
 	const navLinks = document.querySelectorAll('.nav-links li');
-	const parallax = document.querySelector('.parallax_group');
 
 	burger.addEventListener('click', () => {
 		//toggle Nav
