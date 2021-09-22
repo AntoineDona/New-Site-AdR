@@ -4,10 +4,10 @@ var getFormattedDigits = function getFormattedDigits(num) {
 
 function onLoad() {
 	let loading_page = document.querySelector('.loading_page');
-	let parallax_group = document.querySelector('.parallax_group');
+	let parallax = document.querySelector('.parallax_group');
 	setTimeout(() => {
 		loading_page.style.opacity = '0';
-		parallax_group.style.overflowY = 'visible';
+		parallax.classList.toggle('scroll-enable');
 		setTimeout(() => {
 			loading_page.style.visibility = 'hidden';
 		}, 2000)
@@ -55,7 +55,8 @@ function timer() {
 			document.getElementById("navbar").style.backgroundColor = "black";
 			document.getElementById("navbar").style.opacity = 1;
 			if (document.getElementById("navbar").style.width >= 950) {
-			document.getElementById("navbar").style.height = "6rem";}
+				document.getElementById("navbar").style.height = "6rem";
+			}
 		} else {
 			document.getElementById("navbar").style.backgroundColor = "transparent";
 			document.getElementById("navbar").style.height = "8rem";
@@ -65,22 +66,45 @@ function timer() {
 }
 
 const navSlide = () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
+	const burger = document.querySelector('.burger');
+	const nav = document.querySelector('.nav-links');
+	const navLinks = document.querySelectorAll('.nav-links li');
+	const parallax = document.querySelector('.parallax_group');
 
-    burger.addEventListener('click',() => {
-        //toggle Nav
-        nav.classList.toggle('nav-active');
-        //Animate Links
-        navLinks.forEach((link,index) => {
-            if (link.style.animation){
-                link.style.animation = ''
-            } else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
-            }
-        });
-        //Burger Animation
-        burger.classList.toggle('toggle');
-    });
+	burger.addEventListener('click', () => {
+		//toggle Nav
+		nav.classList.toggle('nav-active');
+		parallax.classList.toggle('scroll-enable');
+		parallax.classList.toggle('scroll-disable');
+		//Animate Links
+		navLinks.forEach((link, index) => {
+			if (link.style.animation) {
+				link.style.animation = ''
+			} else {
+				link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
+			}
+		});
+		//Burger Animation
+		burger.classList.toggle('toggle');
+	});
+	if (document.getElementById("navbar").style.width >= 950) {
+		navLinks.forEach((link) => {
+			link.addEventListener('click', () => {
+				//toggle Nav
+				nav.classList.toggle('nav-active');
+				parallax.classList.toggle('scroll-enable');
+				parallax.classList.toggle('scroll-disable');
+				//Animate Links
+				navLinks.forEach((link, index) => {
+					if (link.style.animation) {
+						link.style.animation = ''
+					} else {
+						link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
+					}
+				});
+				//Burger Animation
+				burger.classList.toggle('toggle');
+			});
+		});
+	}
 }
