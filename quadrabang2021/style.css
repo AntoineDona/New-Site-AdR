@@ -111,7 +111,7 @@ button {
 
 .base_layer {
   position: absolute;
-  height: 450vh;
+  height: 350vh;
   background-image: url("img/fond_affiche.jpg");
   background-attachment: local;
   background-size: cover;
@@ -121,7 +121,7 @@ button {
 
 .top_layer {
   position: absolute;
-  height: 590vh;
+  height: 420vh;
   background-image: url("img/diag_rouge.png");
   background-attachment: local;
   background-size: min(120rem, 100vw) auto;
@@ -132,7 +132,7 @@ button {
 
 .mid_layer {
   position: absolute;
-  height: 500vh;
+  height: 390vh;
   background-image: url("img/diag_bleue.png");
   background-attachment: local;
   background-size: min(120rem, 100vw) auto;
@@ -577,8 +577,8 @@ p.desc_quadra {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--transparent_black);
-  box-shadow: 0 0 5px 5px var(--transparent_black);
+  background-color: var(--black);
+  box-shadow: 0 0 5px 5px var(--black);
 }
 
 .informations p, .informations ul {
