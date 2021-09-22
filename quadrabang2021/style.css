@@ -111,7 +111,7 @@ button {
 
 .base_layer {
   position: absolute;
-  height: 300vh;
+  height: 450vh;
   background-image: url("img/fond_affiche.jpg");
   background-attachment: local;
   background-size: cover;
@@ -121,7 +121,7 @@ button {
 
 .top_layer {
   position: absolute;
-  height: 410vh;
+  height: 590vh;
   background-image: url("img/diag_rouge.png");
   background-attachment: local;
   background-size: min(120rem, 100vw) auto;
@@ -132,7 +132,7 @@ button {
 
 .mid_layer {
   position: absolute;
-  height: 380vh;
+  height: 500vh;
   background-image: url("img/diag_bleue.png");
   background-attachment: local;
   background-size: min(120rem, 100vw) auto;
@@ -581,9 +581,20 @@ p.desc_quadra {
   box-shadow: 0 0 5px 5px var(--transparent_black);
 }
 
-p.infos {
+.informations p, .informations ul {
   font-size: 2rem;
   margin: 4rem 0;
+}
+
+.informations ul{
+  text-align: left;
+}
+.informations a{
+  color: white;
+}
+
+.informations h4{
+  font-size: 4rem;
 }
 
 /* Responsive ------------------------------------------------------------- */
