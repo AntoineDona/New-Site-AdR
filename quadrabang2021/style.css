@@ -111,34 +111,34 @@ button {
 
 .base_layer {
   position: absolute;
-  height: 350vh;
+  height: 200vh;
   background-image: url("img/fond_affiche.jpg");
   background-attachment: local;
   background-size: cover;
   background-repeat: repeat-y;
-  transform: translateZ(-800px) scale(2);
+  transform: translateZ(-1600px) scale(3);
 }
 
 .top_layer {
   position: absolute;
-  height: 420vh;
+  height: 350vh;
   background-image: url("img/diag_rouge.png");
   background-attachment: local;
   background-size: min(120rem, 100vw) auto;
   background-repeat: repeat-y;
   background-position: top;
-  transform: translateZ(-100px) scale(1.125);
+  transform: translateZ(-400px) scale(1.5);
 }
 
 .mid_layer {
   position: absolute;
-  height: 390vh;
+  height: 300vh;
   background-image: url("img/diag_bleue.png");
   background-attachment: local;
   background-size: min(120rem, 100vw) auto;
   background-repeat: repeat-y;
   background-position: top;
-  transform: translateZ(-400px) scale(1.5);
+  transform: translateZ(-800px) scale(2);
 }
 
 /* Contenu ------------------------------------------------------------------------ */
