@@ -42,24 +42,29 @@ function timer() {
 
 	var elmnt = document.getElementById("parallax");
 	var prevScrollpos = elmnt.scrollTop;
+	var navbar = document.getElementById("navbar");
+	var nav = document.getElementById("nav-links")
 
 	elmnt.onscroll = function () {
 		var currentScrollPos = elmnt.scrollTop;
-		if (prevScrollpos >= currentScrollPos) {
-			document.getElementById("navbar").style.top = "0";
+		if (prevScrollpos >= currentScrollPos || nav.classList.contains("nav-active")) {
+			navbar.style.top = "0";
+			console.log(nav.classList.contains("nav-active"));
+
 		} else {
-			document.getElementById("navbar").style.top = "-8rem";
-			document.getElementById("navbar").style.opacity = 0;
+			navbar.style.top = "-8rem";
+			navbar.style.opacity = 0;
+			console.log(nav.classList.contains("nav-active"));
 		}
 		if (currentScrollPos != 0) {
-			document.getElementById("navbar").style.backgroundColor = "black";
-			document.getElementById("navbar").style.opacity = 1;
-			if (document.getElementById("navbar").style.width >= 950) {
-				document.getElementById("navbar").style.height = "6rem";
+			navbar.style.backgroundColor = "black";
+			navbar.style.opacity = 1;
+			if (navbar.style.width >= 950) {
+				navbar.style.height = "6rem";
 			}
 		} else {
-			document.getElementById("navbar").style.backgroundColor = "transparent";
-			document.getElementById("navbar").style.height = "8rem";
+			navbar.style.backgroundColor = "transparent";
+			navbar.style.height = "8rem";
 		}
 		prevScrollpos = currentScrollPos;
 	}
@@ -74,8 +79,6 @@ const navSlide = () => {
 	burger.addEventListener('click', () => {
 		//toggle Nav
 		nav.classList.toggle('nav-active');
-		parallax.classList.toggle('scroll-enable');
-		parallax.classList.toggle('scroll-disable');
 		//Animate Links
 		navLinks.forEach((link, index) => {
 			if (link.style.animation) {
@@ -92,8 +95,6 @@ const navSlide = () => {
 			link.addEventListener('click', () => {
 				//toggle Nav
 				nav.classList.toggle('nav-active');
-				parallax.classList.toggle('scroll-enable');
-				parallax.classList.toggle('scroll-disable');
 				//Animate Links
 				navLinks.forEach((link, index) => {
 					if (link.style.animation) {
