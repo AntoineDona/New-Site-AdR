@@ -96,10 +96,6 @@ button {
   z-index: 10;
 }
 
-.parallax_group.scroll-disable {
-  overflow-y: hidden;
-}
-
 .parallax_group.scroll-enable {
   overflow-y: visible;
 }
@@ -183,7 +179,7 @@ nav {
 
 .nav-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   min-width: 500px;
   width: 70%;
@@ -255,7 +251,7 @@ a.nav-link:hover {
     min-width: 50px;
     width: 250px;
     padding: 0;
-    padding-top: max(6.4rem, 6.4vh);
+    padding-top: max(10rem, 10vh);
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
@@ -267,7 +263,7 @@ a.nav-link:hover {
   }
   .nav-links li {
     opacity: 0;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
   }
   .burger {
     display: block;
@@ -486,7 +482,6 @@ a.nav-link:hover {
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 2rem 0;
 }
 
 .partner_ctnr {
