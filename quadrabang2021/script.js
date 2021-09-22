@@ -7,10 +7,9 @@ function onLoad() {
 	let parallax = document.querySelector('.parallax_group');
 	setTimeout(() => {
 		loading_page.style.opacity = '0';
-		parallax.style.overflowY = "visible";
 		setTimeout(() => {
 			loading_page.style.visibility = 'hidden';
-		}, 2000)
+		}, 500)
 	}, 2000)
 	timer();
 	navSlide();

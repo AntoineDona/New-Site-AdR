@@ -7,6 +7,7 @@
 :root {
   --white_glow: 0 0 2px white;
   --transparent_black: transparent;
+  --black: rgba(0, 0, 0, 0.6);
   --red: rgb(253, 108, 89);
 }
 
@@ -39,7 +40,7 @@ button {
 
 .loading_page {
   z-index: 15;
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-color: black;
   height: 100vh;
@@ -84,6 +85,7 @@ button {
 .parallax_group {
   position: relative;
   overflow: hidden;
+  overflow-y: visible;
   scroll-behavior: smooth;
   height: 100vh;
   width: 100vw;
@@ -163,6 +165,7 @@ nav {
   inset: 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: nowrap;
   width: 100%;
   height: 8rem;
@@ -179,6 +182,7 @@ nav {
   align-items: center;
   min-width: 500px;
   width: 70%;
+  max-width: 90rem;
   list-style-type: none;
   padding: 0 4rem;
 }
@@ -358,6 +362,51 @@ a.nav-link:hover {
   align-items: center;
 }
 
+/* Le Quadrabang -------------------- */
+
+.quadrabang {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  box-shadow: 0 0 5px 5px var(--black);
+}
+
+.quadrabang .ctnr{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p.desc_quadra {
+  flex-basis: 1;
+  font-size: 1.7rem;
+  text-align:justify;
+  width: 40%;
+  padding: 0 2rem;
+  margin-right: 2rem;
+  line-height: 3rem;
+  text-indent: 6rem;
+}
+
+.trailer_ctnr{
+  height: auto;
+  width: 40%;
+  
+  overflow: hidden;
+  margin-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trailer_ctnr video {
+  width: 100%;
+  border-radius: 20px;
+}
+
 /* Billeterie ----------------------- */
 
 .billeterie {
@@ -506,7 +555,7 @@ a.nav-link:hover {
 
 /* Teaser --------------------------------- */
 
-.teaser {
+.recap {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -514,7 +563,7 @@ a.nav-link:hover {
   padding: 4rem 0;
 }
 
-.teaser video {
+.recap video {
   max-width: 90vw;
 }
 /* Informations --------------------------- */
@@ -544,6 +593,24 @@ p.infos {
   #counter {
     font-size: 10rem;
   }
+
+  .quadrabang  .ctnr{
+    flex-direction: column;
+  }
+
+  p.desc_quadra{
+    max-width: 100%;
+    width: 80%;
+    margin-right: unset;
+    min-width: none;
+    padding: 0 2rem;
+  }
+
+  .trailer_ctnr{
+    width: 70%;
+    margin-top: 3rem;
+  }
+
 }
 
 @media screen and (orientation: portrait), screen and (max-width: 500px) {
