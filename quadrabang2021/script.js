@@ -5,10 +5,13 @@ var getFormattedDigits = function getFormattedDigits(num) {
 function onLoad() {
 	let loading_page = document.querySelector('.loading_page');
 	let parallax_group = document.querySelector('.parallax_group');
-	loading_page.style.opacity = '0';
-	loading_page.style.visibility = 'hidden';
-	parallax_group.style.overflowY = 'visible';
-
+	setTimeout(() => {
+		loading_page.style.opacity = '0';
+		parallax_group.style.overflowY = 'visible';
+		setTimeout(() => {
+			loading_page.style.visibility = 'hidden';
+		}, 2000)
+	}, 2000)
 	timer();
 };
 
@@ -35,4 +38,27 @@ function timer() {
 	}
 
 	setTimeout(timer, 1000);
+
+	var elmnt = document.getElementById("parallax");
+	var prevScrollpos = elmnt.scrollTop;
+
+	elmnt.onscroll = function () {
+		var currentScrollPos = elmnt.scrollTop;
+		if (prevScrollpos >= currentScrollPos) {
+			document.getElementById("navbar").style.top = "0";
+		} else {
+			document.getElementById("navbar").style.top = "-8rem";
+			document.getElementById("navbar").style.opacity = 0;
+		}
+		if (currentScrollPos != 0) {
+			document.getElementById("navbar").style.backgroundColor = "black";
+			document.getElementById("navbar").style.opacity = 1;
+			if (document.getElementById("navbar").style.width >= 950) {
+			document.getElementById("navbar").style.height = "6rem";}
+		} else {
+			document.getElementById("navbar").style.backgroundColor = "transparent";
+			document.getElementById("navbar").style.height = "8rem";
+		}
+		prevScrollpos = currentScrollPos;
+	}
 }
