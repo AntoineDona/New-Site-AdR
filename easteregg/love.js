@@ -66,17 +66,17 @@ document.addEventListener("keypress", function (e) {
 
     }
     if (regexDjadja.test(code)){
-        var audio = new Audio('easteregg/djadja.mp3');
+        var audio = new Audio('/easteregg/djadja.mp3');
         audio.play();
         code = "";
     }
     if (regexQuadra.test(code)){
-        var audio = new Audio('easteregg/quadra.mp3');
+        var audio = new Audio('/easteregg/quadra.mp3');
         audio.play();
         code = "";
     }
     if (regexSydney.test(code)){
-        window.open("easteregg/sydney.jpeg","_self");
+        window.open("/easteregg/sydney.jpeg","_self");
     }
 
     if (regexNeige.test(code)){
@@ -93,7 +93,7 @@ function stopAlcool(){
 
 
 function q() {
-    var audio = new Audio('easteregg/victoire.mp3');
+    var audio = new Audio('/easteregg/victoire.mp3');
     audio.play();
     alert('le Q vaincra');
     var im = document.getElementsByTagName("img") ;
