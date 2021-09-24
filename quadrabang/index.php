@@ -8,16 +8,24 @@ $shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_d
 $shotgun_date2 = mktime(12, 0, 0, 9, 27, 2021);
 $shotgun_date_sec2 = (((date('d', $shotgun_date2) - 1) * 24 + date('H', $shotgun_date2)) * 60 + date('i', $shotgun_date2)) * 60 + date('s', $shotgun_date2);
 
-function display_btn($date, $shotgun)
+function display_btn($date, $shotgun, $soldout)
 {
   if ($date >= $shotgun) {
+    if (!$soldout) {
 ?>
-    <a class="achat" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-      <button>ACHETER</button>
+      <a class="achat" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+        <button>ACHETER</button>
+      </a>
+    <?php
+    } else {
+      ?>
+    <a class="indisponible" href="">
+      <button>SOLDOUT</button>
     </a>
-  <?php
+<?php
+    }
   } else {
-  ?>
+    ?>
     <a class="indisponible" href="">
       <button>INDISPONIBLE</button>
     </a>
@@ -124,7 +132,7 @@ function display_btn($date, $shotgun)
             <p class="ouverture">Disponible à partir du:</p>
             <p class="date_ouverture">Dimanche 26 septembre 12:00</p>
             <?php
-            display_btn($current_date_sec, $shotgun_date_sec);
+            display_btn($current_date_sec, $shotgun_date_sec, true);
             ?>
           </div>
           <div class="billet normal">
@@ -134,7 +142,7 @@ function display_btn($date, $shotgun)
             <p class="ouverture">Disponible à partir du:</p>
             <p class="date_ouverture">Lundi 27 septembre 12:00</p>
             <?php
-            display_btn($current_date_sec, $shotgun_date_sec);
+            display_btn($current_date_sec, $shotgun_date_sec2, false);
             ?>
           </div>
           <div class="billet CS">
@@ -144,7 +152,7 @@ function display_btn($date, $shotgun)
             <p class="ouverture">Disponible à partir du:</p>
             <p class="date_ouverture">Lundi 27 septembre 12:00</p>
             <?php
-            display_btn($current_date_sec, $shotgun_date_sec);
+            display_btn($current_date_sec, $shotgun_date_sec2, false);
             ?>
           </div>
         </div>
