@@ -2,7 +2,7 @@
 date_default_timezone_set('Europe/Paris');
 $current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
-$shotgun_date = mktime(2, 21, 0, 9, 25, 2021);
+$shotgun_date = mktime(12, 0, 0, 9, 26, 2021);
 $shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
 $shotgun_date2 = mktime(12, 0, 0, 9, 27, 2021);
@@ -13,7 +13,7 @@ function display_btn($date, $shotgun, $soldout)
   if ($date >= $shotgun) {
     if (!$soldout) {
 ?>
-      <a class="achat" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+      <a class="achat" href="https://billetterie.pumpkin-app.com/6697396447-quadrabang" target="_blank">
         <button>ACHETER</button>
       </a>
     <?php
