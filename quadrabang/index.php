@@ -124,6 +124,11 @@ function display_btn($date, $shotgun, $soldout)
       </section>
       <section class="billeterie" id="billeterie">
         <h3>BILLETERIE</h3>
+        <p class="infos_billeterie" style="text-indent: 6rem">La billetterie du QuadraBang 2021 ouvre dimanche à 12h pour les earlies, lundi à 12h pour les places classiques. Le paiement se fera par PUMPKIN ou par CB. Nous aimerions préciser quatre points: </p>
+<p class="infos_billeterie">🎁 Grâce à notre partenariat avec Pumpkin, pour toute ouverture de compte avec le code QUADRA21, gagnez 15€ lors de la première utilisation de votre carte Pumpkin🥳 </p>
+<p class="infos_billeterie">🆔 Pour payer avec Pumpkin, vous devrez au préalable avoir validé votre identité! Faites le dès maintenant. Un conseil : si vous rencontrez des problèmes à la faire valider, il faut essayer avec une autre pièce d’identité😌</p>
+<p class="infos_billeterie">⏰ Lors du shotgun, et particulièrement pour les earlies, vous serez beaucoup à vous connecter en même temps. Les temps d’attente pourront monter jusqu’à 1h, pas d’inquiétude il y aura de la place pour [presque] tout le monde🤡</p>
+<p class="infos_billeterie">3️⃣0️⃣ Une fois que votre place est prise, vous aurez 30min pour payer, passé ce délais elle sera remise en vente. Ainsi, si le site Pumpkin affiche sold out, restez à l’affût pour récupérer ces places🤙🏼</p>
         <div class="billet_ctnr">
           <div class="billet early">
             <h4>Early Bird</h4>
@@ -216,7 +221,7 @@ function display_btn($date, $shotgun, $soldout)
         </ul>
         <p>
           <strong>Vestiaire gratuit</strong><br />
-          <strong>Navettes gratuites disponibles</strong><br />
+          <strong>Navettes gratuites disponibles depuis Paris et les grandes écoles</strong><br />
           __________<br /><br />
           Pass Sanitaire obligatoire | carte étudiante obligatoire <br />
           l’organisation se réserve le droit d’entrée<br /><br />
