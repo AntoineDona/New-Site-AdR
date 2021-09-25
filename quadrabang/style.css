@@ -422,6 +422,18 @@ p.desc_quadra {
   align-items: center;
 }
 
+p.infos_billeterie {
+  flex-basis: 1;
+  font-size: 1.7rem;
+  text-align:justify;
+  width: 70%;
+  padding: 0 2rem;
+  margin-right: 2rem;
+  line-height: 3rem;
+  text-indent: 3rem;
+  margin-bottom: 2rem;
+}
+
 .billet_ctnr {
   display: flex;
   justify-content: center;
@@ -618,6 +630,11 @@ p.desc_quadra {
     margin-right: unset;
     min-width: none;
     padding: 0 2rem;
+  }
+
+  p.infos_billeterie{
+    max-width: 100%;
+    width: 80%;
   }
 
   .trailer_ctnr{
