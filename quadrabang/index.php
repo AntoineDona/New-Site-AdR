@@ -137,7 +137,7 @@ function display_btn($date, $shotgun, $soldout)
             <p class="ouverture">Disponible à partir du:</p>
             <p class="date_ouverture">Dimanche 26 septembre 12:00</p>
             <?php
-            display_btn($current_date_sec, $shotgun_date_sec, false);
+            display_btn($current_date_sec, $shotgun_date_sec, true);
             ?>
           </div>
           <div class="billet normal">
