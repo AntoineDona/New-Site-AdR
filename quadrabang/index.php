@@ -184,7 +184,7 @@ function is_cotisant($email, $pdo)
         <div class="cotisant" id="cotisant">
           <h4>Vérifie ton adresse de cotisant ici:</h4>
           <form action="index.php#cotisant">
-            <input id="email" name="email" type="text" placeholder="mon email" />
+            <input id="email" name="email" type="text" placeholder="mon email centralesupélec" />
             <input id="submit" type="submit" value="Vérifier">
           </form>
           <p>
