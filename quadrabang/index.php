@@ -271,6 +271,15 @@ function is_cotisant($email, $pdo)
     </div>
   </div>
   <script src="../easteregg/love.js"></script>
+  <script>
+    let loading_page = document.querySelector('.loading_page');
+    setTimeout(() => {
+      loading_page.style.opacity = '0';
+      setTimeout(() => {
+        loading_page.style.visibility = 'hidden';
+      }, 500)
+    }, 2000)
+  </script>
 </body>
 
 </html>
