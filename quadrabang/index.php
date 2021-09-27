@@ -131,12 +131,12 @@ function is_cotisant($email, $pdo)
             Le Quadrabang, c'est 4 salles et 4 ambiances avec des scènes
             incroyables pour vous faire voyager toute la soirée ! RDV le 8
             Octobre pour enflammer le dance floor avec plus de 2500 étudiants
-            ! 🔥 En attendant voici un petit Recap du Quadra 2019 pour vous faire
+            ! 🔥 En attendant voici un petit Teaser pour vous faire
             patienter...
           </p>
           <div class="trailer_ctnr">
             <video controls poster="img/poster.jpg" width="100%">
-              <source src="https://www.youtube.com/watch?v=iMRi6l7UoKQ" type="video/mp4" />
+              <source src="teaser-quadrabang-2021" type="video/mp4" />
               Sorry, your browser doesn't support embedded videos.
             </video>
           </div>
