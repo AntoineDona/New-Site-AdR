@@ -536,6 +536,47 @@ p.infos_billeterie {
   max-width: 100%;
 }
 
+.cotisant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cotisant h4{
+  margin: 4rem 0;
+  font-size: 4rem;
+}
+
+.cotisant form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.cotisant :is(#email, #submit){
+  padding: 1rem;
+}
+
+#email{
+  width: 100%;
+}
+
+#submit{
+  margin-left: 1rem;
+  width: 20rem;
+  cursor: pointer;
+}
+
+.cotisant #email::placeholder{
+  padding-left: 1rem;
+}
+
+.cotisant p{
+  margin-top: 4rem;
+
+}
+
 /* Partenaires ----------------------*/
 
 .partenaires {

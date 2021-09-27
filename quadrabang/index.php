@@ -18,11 +18,11 @@ function display_btn($date, $shotgun, $soldout)
       </a>
     <?php
     } else {
-      ?>
-    <a class="indisponible" href="">
-      <button>SOLDOUT</button>
-    </a>
-<?php
+    ?>
+      <a class="indisponible" href="">
+        <button>SOLDOUT</button>
+      </a>
+    <?php
     }
   } else {
     ?>
@@ -31,6 +31,26 @@ function display_btn($date, $shotgun, $soldout)
     </a>
 <?php
   }
+}
+
+//config SQL
+$DBhost  = "localhost";
+$DBowner = "root";
+$DBpw    = $_ENV["db_password"];
+$DBName  = "adr";
+$DBconnect = "mysql:dbname=" . $DBName . ";host=" . $DBhost;
+
+// $pdo = new PDO($DBconnect, $DBowner, $DBpw);
+
+$pdo = new PDO('mysql:host=localhost;port=3306;dbname=adr;charset=utf8', 'root', 'root');
+// $bdd = new PDO('mysql:host=localhost;port=3306;dbname=adr;charset=utf8', 'root', 'root');
+
+function is_cotisant($email, $pdo)
+{
+  $query = $pdo->prepare("SELECT COUNT(*) as c from cotisants_vrac where EMAIL=?");
+  $query->execute(array($email));
+  $result = $query->fetch();
+  return $result['c'] != 0;
 }
 ?>
 
@@ -160,6 +180,25 @@ function display_btn($date, $shotgun, $soldout)
             display_btn($current_date_sec, $shotgun_date_sec2, false);
             ?>
           </div>
+        </div>
+        <div class="cotisant" id="cotisant">
+          <h4>Vérifie ton adresse de cotisant ici:</h4>
+          <form action="index.php#cotisant">
+            <input id="email" name="email" type="text" placeholder="mon email" />
+            <input id="submit" type="submit" value="Vérifier">
+          </form>
+          <p>
+            <?php
+            if (isset($_GET["email"])) {
+              if (is_cotisant($_GET["email"], $pdo)) {
+                echo "✅ Tu es bien cotisant ✅";
+              } else {
+                echo "⚠️ Tu n'es pas cotisant ⚠️";
+              }
+            }
+            ?>
+          </p>
+
         </div>
       </section>
       <section class="partenaires" id="partners">
