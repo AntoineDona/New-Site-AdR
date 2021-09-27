@@ -3,14 +3,6 @@ var getFormattedDigits = function getFormattedDigits(num) {
 };
 
 function onLoad() {
-	let loading_page = document.querySelector('.loading_page');
-	let parallax = document.querySelector('.parallax_group');
-	setTimeout(() => {
-		loading_page.style.opacity = '0';
-		setTimeout(() => {
-			loading_page.style.visibility = 'hidden';
-		}, 500)
-	}, 2000)
 	timer();
 	navSlide();
 };
