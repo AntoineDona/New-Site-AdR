@@ -544,13 +544,14 @@ p.infos_billeterie {
 
 .cotisant h4{
   margin: 4rem 0;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .cotisant form{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -559,11 +560,11 @@ p.infos_billeterie {
 }
 
 #email{
-  width: 100%;
+  width: 90%;
 }
 
 #submit{
-  margin-left: 1rem;
+  margin-top: 3rem;
   width: 20rem;
   cursor: pointer;
 }
@@ -574,6 +575,7 @@ p.infos_billeterie {
 
 .cotisant p{
   margin-top: 4rem;
+  font-size: 3.5rem;
 
 }
 
