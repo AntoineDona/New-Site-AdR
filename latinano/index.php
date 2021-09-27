@@ -1,6 +1,7 @@
-<?php include("auth.php"); 
+<?php // include("auth.php"); 
 ?>
-<?php
+<?php 
+session_start();
 include("database.php");
 
 
@@ -53,6 +54,7 @@ $_SESSION["promo"] = $_SESSION["user"]["promo"];
 $_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 $_SESSION["nom"] = $_SESSION["user"]["lastName"];
 $_SESSION["email"] = $_SESSION["user"]["email"];
+$_SESSION["email"] = "antoine.donascimento@student-cs.fr";
 
 
 //$req='select count(*) from nanoween where prenom=$_SESSION["prenom"] AND nom =$_SESSION["nom"]';
