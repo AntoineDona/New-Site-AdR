@@ -5,7 +5,7 @@ $current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 +
 $shotgun_date = mktime(12, 0, 0, 9, 26, 2021);
 $shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
-$shotgun_date2 = mktime(12, 0, 0, 9, 28, 2021);
+$shotgun_date2 = mktime(19, 45, 0, 9, 29, 2021);
 $shotgun_date_sec2 = (((date('d', $shotgun_date2) - 1) * 24 + date('H', $shotgun_date2)) * 60 + date('i', $shotgun_date2)) * 60 + date('s', $shotgun_date2);
 
 function display_btn($date, $shotgun, $soldout)
@@ -13,8 +13,8 @@ function display_btn($date, $shotgun, $soldout)
   if ($date >= $shotgun) {
     if (!$soldout) {
 ?>
-      <a class="achat" href="https://billetterie.pumpkin-app.com/372788255-quadrabang" target="_blank">
-        <button>ACHETER</button>
+      <a class="achat" href="https://forms.viarezo.fr/paps/re24ap" target="_blank">
+        <button>SHOTGUN</button>
       </a>
     <?php
     } else {
@@ -167,7 +167,7 @@ function is_cotisant($email, $pdo)
             <p class="ouverture">Disponible à partir du:</p>
             <p class="date_ouverture">Mardi 28 septembre 12:00</p>
             <?php
-            display_btn($current_date_sec, $shotgun_date_sec2, false);
+            display_btn($current_date_sec, $shotgun_date_sec2, true);
             ?>
           </div>
           <div class="billet CS">
@@ -175,7 +175,7 @@ function is_cotisant($email, $pdo)
             <div class="prix">10€</div>
             <p class="tarif">Tarif réservé aux cotisants AdR</p>
             <p class="ouverture">Disponible à partir du:</p>
-            <p class="date_ouverture">Mardi 28 septembre 12:00</p>
+            <p class="date_ouverture">Mercredi 29 septembre 20:00</p>
             <?php
             display_btn($current_date_sec, $shotgun_date_sec2, false);
             ?>
