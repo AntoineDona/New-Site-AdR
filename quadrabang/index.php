@@ -10,8 +10,8 @@ $shotgun_date_sec2 = (((date('d', $shotgun_date2) - 1) * 24 + date('H', $shotgun
 
 function display_btn($date, $shotgun, $soldout)
 {
-  if ($date >= $shotgun) {
-    if (!$soldout) {
+  if (!$soldout) {
+    if ($date >= $shotgun) {
 ?>
       <a class="achat" href="https://forms.viarezo.fr/paps/re24ap" target="_blank">
         <button>SHOTGUN</button>
@@ -20,16 +20,16 @@ function display_btn($date, $shotgun, $soldout)
     } else {
     ?>
       <a class="indisponible" href="">
-        <button>SOLDOUT</button>
-      </a>
+      <button>INDISPONIBLE</button>
+    </a>
     <?php
     }
   } else {
     ?>
-    <a class="indisponible" href="">
-      <button>INDISPONIBLE</button>
-    </a>
-<?php
+      <a class="indisponible" href="">
+        <button>SOLDOUT</button>
+      </a>
+    <?php
   }
 }
 
