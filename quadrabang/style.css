@@ -476,7 +476,7 @@ p.infos_billeterie {
 
 #navettes h4{
   min-height: 6rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 #navettes .ouverture{
@@ -485,6 +485,7 @@ p.infos_billeterie {
 
 .horaire {
   font-size: 2.5rem;
+  margin-bottom: 1.5rem;
   text-decoration: underline;
 }
 
