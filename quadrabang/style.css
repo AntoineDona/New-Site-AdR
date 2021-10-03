@@ -474,6 +474,19 @@ p.infos_billeterie {
   height: 6rem;
 }
 
+#navettes h4{
+  min-height: 6rem;
+  margin-bottom: 3rem;
+}
+
+#navettes .ouverture{
+  margin-top: 2rem;
+}
+
+.horaires {
+  margin-bottom: 1rem;
+}
+
 .billet a {
   display: block;
   height: 6rem;
