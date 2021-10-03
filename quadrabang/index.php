@@ -20,16 +20,16 @@ function display_btn($date, $shotgun, $soldout)
     } else {
     ?>
       <a class="indisponible" href="">
-      <button>INDISPONIBLE</button>
-    </a>
+        <button>INDISPONIBLE</button>
+      </a>
     <?php
     }
   } else {
     ?>
-      <a class="indisponible" href="">
-        <button>SOLDOUT</button>
-      </a>
-    <?php
+    <a class="indisponible" href="">
+      <button>SOLDOUT</button>
+    </a>
+<?php
   }
 }
 
@@ -87,6 +87,9 @@ function is_cotisant($email, $pdo)
         </li>
         <li class="nav-item">
           <a href="#billeterie" class="nav-link">Billeterie</a>
+        </li>
+        <li class="nav-item">
+          <a href="#navettes" class="nav-link">Navettes</a>
         </li>
         <li class="nav-item">
           <a href="#partners" class="nav-link">Partenaires</a>
@@ -199,6 +202,56 @@ function is_cotisant($email, $pdo)
             ?>
           </p>
 
+        </div>
+      </section>
+      <section class="billeterie" id="navettes">
+        <h3>Navettes</h3>
+        <p class="infos_billeterie" style="text-indent: 6rem; text-align:center">Des navettes gratuites vous sont mises à disposition depuis les grandes écoles et Paris</p>
+        <div class="billet_ctnr">
+          <div class="billet">
+            <h4>Denfert Rochereau</h4>
+            <p class="horaires" style="text-decoration: underline; font-size:2rem;">Horaires:</p>
+            <p class="horaires">Aller : 22h30 et 00h00</p>
+            <p class="horaires">Retour : 3h30 et 5h00</p>
+            <p class="ouverture">Disponible à partir du:</p>
+            <p class="date_ouverture">Mardi 5 septembre 19:00</p>
+            <a class="achat" href="#">
+              <button>RESERVER</button>
+            </a>
+          </div>
+          <div class="billet">
+            <h4>Massy (RER B)</h4>
+            <p class="horaires" style="text-decoration: underline; font-size:2rem;">Horaires:</p>
+            <p class="horaires">Aller : 0h10 et 1h00</p>
+            <p class="horaires">Retour : 3h15 et 3h45</p>
+            <p class="ouverture">Disponible à partir du:</p>
+            <p class="date_ouverture">Mardi 5 septembre 19:00</p>
+            <a class="achat" href="#">
+              <button>RESERVER</button>
+            </a>
+          </div>
+          <div class="billet">
+            <h4>Polytechnique</h4>
+            <p class="horaires" style="text-decoration: underline; font-size:2rem;">Horaires:</p>
+            <p class="horaires">Aller : 23h20 et 0h55</p>
+            <p class="horaires">Retour : 3h15 et 3h45</p>
+            <p class="ouverture">Disponible à partir du:</p>
+            <p class="date_ouverture">Mardi 5 septembre 19:00</p>
+            <a class="achat" href="#">
+              <button>RESERVER</button>
+            </a>
+          </div>
+          <div class="billet">
+            <h4>Les Ponts</h4>
+            <p class="horaires" style="text-decoration: underline; font-size:2rem;">Horaires:</p>
+            <p class="horaires">Aller : 22h45</p>
+            <p class="horaires">Retour : 4h20 et 4h50</p>
+            <p class="ouverture">Disponible à partir du:</p>
+            <p class="date_ouverture">Mardi 5 septembre 19:00</p>
+            <a class="achat" href="#">
+              <button>RESERVER</button>
+            </a>
+          </div>
         </div>
       </section>
       <section class="partenaires" id="partners">
