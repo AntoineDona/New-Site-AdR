@@ -40,9 +40,9 @@ $DBpw    = "Morangis91";
 $DBName  = "adr";
 $DBconnect = "mysql:dbname=" . $DBName . ";host=" . $DBhost;
 
-$pdo = new PDO($DBconnect, $DBowner, $DBpw);
+// $pdo = new PDO($DBconnect, $DBowner, $DBpw);
 
-// $pdo = new PDO('mysql:host=localhost;port=3306;dbname=adr;charset=utf8', 'root', 'root');
+$pdo = new PDO('mysql:host=localhost;port=3306;dbname=adr;charset=utf8', 'root', 'root');
 // $bdd = new PDO('mysql:host=localhost;port=3306;dbname=adr;charset=utf8', 'root', 'root');
 
 function is_cotisant($email, $pdo)
@@ -210,7 +210,7 @@ function is_cotisant($email, $pdo)
         <div class="billet_ctnr">
           <div class="billet">
             <h4>Denfert Rochereau</h4>
-            <p class="horaires" style="text-decoration: underline; font-size:2rem;">Horaires:</p>
+            <p class="horaire">Horaires:</p>
             <p class="horaires">Aller : 22h30 et 00h00</p>
             <p class="horaires">Retour : 3h30 et 5h00</p>
             <p class="ouverture">Disponible à partir du:</p>
@@ -221,7 +221,7 @@ function is_cotisant($email, $pdo)
           </div>
           <div class="billet">
             <h4>Massy (RER B)</h4>
-            <p class="horaires" style="text-decoration: underline; font-size:2rem;">Horaires:</p>
+            <p class="horaire">Horaires:</p>
             <p class="horaires">Aller : 0h10 et 1h00</p>
             <p class="horaires">Retour : 3h15 et 3h45</p>
             <p class="ouverture">Disponible à partir du:</p>
@@ -232,7 +232,7 @@ function is_cotisant($email, $pdo)
           </div>
           <div class="billet">
             <h4>Polytechnique</h4>
-            <p class="horaires" style="text-decoration: underline; font-size:2rem;">Horaires:</p>
+            <p class="horaire">Horaires:</p>
             <p class="horaires">Aller : 23h20 et 0h55</p>
             <p class="horaires">Retour : 3h15 et 3h45</p>
             <p class="ouverture">Disponible à partir du:</p>
@@ -243,7 +243,7 @@ function is_cotisant($email, $pdo)
           </div>
           <div class="billet">
             <h4>Les Ponts</h4>
-            <p class="horaires" style="text-decoration: underline; font-size:2rem;">Horaires:</p>
+            <p class="horaire">Horaires:</p>
             <p class="horaires">Aller : 22h45</p>
             <p class="horaires">Retour : 4h20 et 4h50</p>
             <p class="ouverture">Disponible à partir du:</p>

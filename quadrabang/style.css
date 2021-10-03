@@ -483,6 +483,11 @@ p.infos_billeterie {
   margin-top: 2rem;
 }
 
+.horaire {
+  font-size: 2.5rem;
+  text-decoration: underline;
+}
+
 .horaires {
   margin-bottom: 1rem;
 }
@@ -748,6 +753,25 @@ p.infos_billeterie {
 
   .tarif,
   .ouverture {
+    font-size: 2rem;
+  }
+
+  #navettes h4{
+    min-height: 6rem;
+    margin-bottom: 1rem;
+  }
+  
+  #navettes .ouverture{
+    margin-top: 2rem;
+  }
+  
+  .horaire {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .horaires {
+    margin-bottom: 1rem;
     font-size: 2rem;
   }
 
