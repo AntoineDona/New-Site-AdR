@@ -178,9 +178,9 @@ function is_cotisant($email, $pdo)
             <div class="prix">10€</div>
             <p class="tarif">Tarif réservé aux cotisants AdR</p>
             <p class="ouverture">Disponible à partir du:</p>
-            <p class="date_ouverture">Mercredi 29 septembre 20:00</p>
+            <p class="date_ouverture">Mercredi 29 septembre 12:00</p>
             <?php
-            display_btn($current_date_sec, $shotgun_date_sec2, false);
+            display_btn($current_date_sec, $shotgun_date_sec2, true);
             ?>
           </div>
         </div>
@@ -214,8 +214,8 @@ function is_cotisant($email, $pdo)
             <p class="horaires">Aller : 22h30 et 00h00</p>
             <p class="horaires">Retour : 3h30 et 5h00</p>
             <p class="ouverture">Disponible à partir du:</p>
-            <p class="date_ouverture">Mardi 5 septembre 19:00</p>
-            <a class="achat" href="#">
+            <p class="date_ouverture">Mardi 5 septembre 18:00</p>
+            <a class="achat" href="https://billetterie.pumpkin-app.com/navettes-quadrabang">
               <button>RESERVER</button>
             </a>
           </div>
@@ -225,8 +225,8 @@ function is_cotisant($email, $pdo)
             <p class="horaires">Aller : 0h10 et 1h00</p>
             <p class="horaires">Retour : 3h15 et 3h45</p>
             <p class="ouverture">Disponible à partir du:</p>
-            <p class="date_ouverture">Mardi 5 septembre 19:00</p>
-            <a class="achat" href="#">
+            <p class="date_ouverture">Mardi 5 septembre 18:00</p>
+            <a class="achat" href="https://billetterie.pumpkin-app.com/navettes-quadrabang">
               <button>RESERVER</button>
             </a>
           </div>
@@ -236,8 +236,8 @@ function is_cotisant($email, $pdo)
             <p class="horaires">Aller : 23h20 et 0h55</p>
             <p class="horaires">Retour : 3h15 et 3h45</p>
             <p class="ouverture">Disponible à partir du:</p>
-            <p class="date_ouverture">Mardi 5 septembre 19:00</p>
-            <a class="achat" href="#">
+            <p class="date_ouverture">Mardi 5 septembre 18:00</p>
+            <a class="achat" href="https://billetterie.pumpkin-app.com/navettes-quadrabang">
               <button>RESERVER</button>
             </a>
           </div>
@@ -247,8 +247,8 @@ function is_cotisant($email, $pdo)
             <p class="horaires">Aller : 22h45</p>
             <p class="horaires">Retour : 4h20 et 4h50</p>
             <p class="ouverture">Disponible à partir du:</p>
-            <p class="date_ouverture">Mardi 5 septembre 19:00</p>
-            <a class="achat" href="#">
+            <p class="date_ouverture">Mardi 5 septembre 18:00</p>
+            <a class="achat" href="https://billetterie.pumpkin-app.com/navettes-quadrabang">
               <button>RESERVER</button>
             </a>
           </div>
