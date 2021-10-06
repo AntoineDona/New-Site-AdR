@@ -263,6 +263,9 @@ function is_cotisant($email, $pdo)
           <a href="https://www.pumpkin-app.co" target="_blank">
             <img src="img/Pumpkin_blanc.png" alt="" />
           </a>
+          <a href="https://www.heetch.com" target="_blank">
+            <img src="img/heetch.png" alt="" />
+          </a>
           <a href="https://www.sbcs-events.fr" target="_blank">
             <img src="img/SBCS.png" alt="" />
           </a>
