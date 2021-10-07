@@ -170,7 +170,7 @@ function is_cotisant($email, $pdo)
             <p class="ouverture">Disponible à partir du:</p>
             <p class="date_ouverture">Mardi 28 septembre 12:00</p>
             <?php
-            display_btn($current_date_sec, $shotgun_date_sec2, true);
+            display_btn($current_date_sec, $shotgun_date_sec2, false);
             ?>
           </div>
           <div class="billet CS">
