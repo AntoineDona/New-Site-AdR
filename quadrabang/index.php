@@ -13,7 +13,7 @@ function display_btn($date, $shotgun, $soldout)
   if (!$soldout) {
     if (true) {
 ?>
-      <a class="achat" href="https://forms.viarezo.fr/paps/re24ap" target="_blank">
+      <a class="achat" href="https://billetterie.pumpkin-app.com/372788255-quadrabang" target="_blank">
         <button>SHOTGUN</button>
       </a>
     <?php
