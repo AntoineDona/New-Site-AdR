@@ -326,7 +326,7 @@ function is_cotisant($email, $pdo)
       </section>
     </div>
   </div>
-  <script src="../easteregg/love.js"></script>
+  <script src="../js/love.js"></script>
   <script>
     let loading_page = document.querySelector('.loading_page');
     setTimeout(() => {
