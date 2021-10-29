@@ -93,7 +93,7 @@
         </section>
     </main>
     <?php include "included/footer.php" ?>
-    <script src="easteregg/love.js"></script>
+    <script src="js/love.js"></script>
 
 </body>
 
