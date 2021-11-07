@@ -1,7 +1,5 @@
 <?php include("auth.php"); 
-?>
-<?php 
-session_start();
+
 include("database.php");
 
 
