@@ -53,8 +53,8 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
 	} else {
 		if (!$_SESSION['shotgun']) {
 			if (number_place($pdo) < $_SESSION['total_places']) {
-				$query=$pdo->prepare("INSERT into nanovni (prenom,nom, email, heure, taille) VALUES (?,?,?,?,?)");
-				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"],$_SESSION['sg_time'],$_SESSION["fsize"]));
+				$query=$pdo->prepare("INSERT into nanovni (prenom,nom, email, heure) VALUES (?,?,?,?)");
+				$query->execute(array($_SESSION["prenom"],$_SESSION["nom"],$_SESSION["email"]));
 				//$_SESSION['shotgun'] = true;
 				header("refresh:5; url=/nanovni/index.php");
             } else {
