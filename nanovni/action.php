@@ -41,7 +41,7 @@ $_SESSION['is_cotisant'] = is_cotisant($_SESSION['email'],$pdo);
 date_default_timezone_set('Europe/Paris');
 $current_date_sec = (((date('d')-1)*24 + date('H'))*60 + date('i'))*60 + date('s');
 
-$shotgun_date = mktime(19, 0, 0, 8, 29, 2021);
+$shotgun_date = mktime(19, 0, 0, 11, 1, 2021);
 $shotgun_date_sec = (((date('d', $shotgun_date)-1)*24 + date('H', $shotgun_date))*60 + date('i', $shotgun_date))*60 + date('s', $shotgun_date);
 
 $end_date = mktime(22, 00, 0, 11, 29, 2021);
