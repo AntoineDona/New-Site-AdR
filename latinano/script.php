@@ -14,13 +14,16 @@
 		// document.body.style.backgroundPosition = "top " + top_margin + "px center, bottom " + bottom_margin + "px center, center";
 		timer();
 	};
+	function select_id(str){
+		return document.getElementById(str);
+	}
 
 	function timer() {
 		var date = new Date();
-		console.log(date);
+		// console.log(date);
 		<?php //$_SESSION['shotgun'] = false; ?>
-		var date_shotgun = new Date(2021, 08, 09, 00, 00, 00);
-		var date_soiree = new Date(2021, 08, 08, 23, 00);
+		var date_shotgun = new Date(2021, 11, 09, 00, 00, 00);
+		var date_soiree = new Date(2021, 11, 08, 23, 00);
 		var title = "Ouverture du Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
 		var shotgun = '<?php 
@@ -38,70 +41,32 @@
 		var diff_min = getFormattedDigits(Math.trunc((total_sec - diff_jour * 24 * 3600 - diff_hour * 3600) / 60));
 		var diff_sec = getFormattedDigits(Math.trunc(total_sec - diff_jour * 24 * 3600 - diff_hour * 3600 - diff_min * 60));
 		if (total_sec >= 0) {
-			$('#titre_sg').html(
-				'<span>' + title + '</span>'
-			);
-			$('#mois').html(
-				'<p class="chiffre"> 00 </p>' +
-				'<p class="text">mois(s)</p>'
-			);
-			$('#jours').html(
-				'<p class="chiffre">' + diff_jour + '</p>' +
-				'<p class="text">jours(s)</p>'
-			)
-			$('#heures').html(
-				'<p class="chiffre">' + diff_hour + '</p>' +
-				'<p class="text">heure(s)</p>'
-			)
-			$('#minutes').html(
-				'<p class="chiffre">' + diff_min + '</p>' +
-				'<p class="text">minutes(s)</p>'
-			)
-			$('#secondes').html(
-				'<p class="chiffre">' + diff_sec + '</p>' +
-				'<p class="text">secondes(s)</p>'
-			)
+			select_id('titre_sg').innerHTML = '<span>' + title + '</span>';
+			// select_id('mois').innerHTML = '<p class="chiffre"> 00 </p>' + '<p class="text">mois(s)</p>';
+			select_id('jours').innerHTML = '<p class="chiffre">' + diff_jour + '</p>' + '<p class="text">jours(s)</p>';
+			select_id('heures').innerHTML = '<p class="chiffre">' + diff_hour + '</p>' + '<p class="text">heure(s)</p>';
+			select_id('minutes').innerHTML = '<p class="chiffre">' + diff_min + '</p>' + '<p class="text">minutes(s)</p>';
+			select_id('secondes').innerHTML = '<p class="chiffre">' + diff_sec + '</p>' + '<p class="text">secondes(s)</p>';
 
 		} else {
-			$('#titre_sg').html(
-				'<span>' + title + '</span>'
-			);
-			$('#mois').html(
-				'<p class="chiffre"> 00 </p>' +
-				'<p class="text">mois(s)</p>'
-			);
-			$('#jours').html(
-				'<p class="chiffre"> 00 </p>' +
-				'<p class="text">jours(s)</p>'
-			)
-			$('#heures').html(
-				'<p class="chiffre"> 00 </p>' +
-				'<p class="text">heure(s)</p>'
-			)
-			$('#minutes').html(
-				'<p class="chiffre"> 00 </p>' +
-				'<p class="text">minutes(s)</p>'
-			)
-			$('#secondes').html(
-				'<p class="chiffre"> 00 </p>' +
-				'<p class="text">secondes(s)</p>'
-			)
+			select_id('titre_sg').innerHTML = '<span>' + title + '</span>';
+			// select_id('mois').innerHTML = '<p class="chiffre"> 00 </p>' + '<p class="text">mois(s)</p>';
+			select_id('jours').innerHTML = '<p class="chiffre"> 00 </p>' +	'<p class="text">jours(s)</p>';
+			select_id('heures').innerHTML = '<p class="chiffre"> 00 </p>' + '<p class="text">heure(s)</p>';
+			select_id('minutes').innerHTML = '<p class="chiffre"> 00 </p>' + '<p class="text">minutes(s)</p>';
+			select_id('secondes').innerHTML = '<p class="chiffre"> 00 </p>' + '<p class="text">secondes(s)</p>';
 		}
 
 		if (total_sec <= 0) {
-			$('#sg_link').css({
-				cursor: "pointer",
-				animation: "shotgun 3s ease infinite",
-				"pointer-events": "Visible"
-			});
+			select_id('sg_link').style.cursor = "pointer";
+			select_id('sg_link').style.animation = "shotgun 3s ease infinite";
+			select_id('sg_link').style.pointerEvents = "Visible" ;
 		}
 		<?php if ($_SESSION['shotgun']) {
 			?>
-			$('#sg_link').css({
-				cursor: "pointer",
-				animation: "shotgun 3s ease infinite",
-				"pointer-events": "Visible"
-			});
+			select_id('#sg_link').style.cursor = "pointer";
+			select_id('#sg_link').style.animation = "shotgun 3s ease infinite";
+			select_id('#sg_link').style.pointerEvents = "Visible";
 			<?php
 		} ?>
 

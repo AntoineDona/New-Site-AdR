@@ -14,8 +14,6 @@
 
 <body>
 
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
 	<?php
 	$_SESSION['sg_time'] = date("Y-m-d H:i:s");
 
