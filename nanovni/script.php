@@ -29,7 +29,7 @@
 		var title = "Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
 		var has_shotgun = <?php echo json_encode(isset($_SESSION['shotgun']))?> && <?php echo json_encode($_SESSION['shotgun']) ?>;
-		if (has_shotgun){ // Obligé d'utiliser des nombres car convertion php js pourrie
+		if (has_shotgun){
 			var total_sec = Math.trunc((date_soiree.getTime() - date.getTime()) / 1000);
 			var title = "Début du NANOVNI dans :";
 		};
@@ -61,9 +61,9 @@
 		}
 		<?php if ($_SESSION['shotgun']) {
 			?>
-			select_id('#sg_link').style.cursor = "pointer";
-			select_id('#sg_link').style.animation = "shotgun 3s ease infinite";
-			select_id('#sg_link').style.pointerEvents = "Visible";
+			select_id('sg_link').style.cursor = "pointer";
+			select_id('sg_link').style.animation = "shotgun 3s ease infinite";
+			select_id('sg_link').style.pointerEvents = "Visible";
 			<?php
 		} ?>
 
