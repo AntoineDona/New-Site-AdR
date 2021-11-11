@@ -46,7 +46,7 @@ html {
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-image: url("img/nanovni_bg.jpg");
   background-size: contain;
   background-position: top center;
@@ -158,6 +158,7 @@ a:active {
   /* border: solid 0.1rem white; */
   box-shadow: var(--green_box_shadow);
   color: var(--light_green);
+  text-shadow: var(--purple_text_shadow);
 }
 
 #co_link_ctnr {
@@ -560,7 +561,7 @@ screen and (max-width: 800px) {
     background-position: center;
     background-repeat: no-repeat;
     background-color: black;
-    /* box-shadow: 0 0 10px 5px black inset; */
+    box-shadow: 0 10px 10px 5px black inset;
     overflow: hidden;
   }
 
