@@ -76,7 +76,6 @@ a:active {
 #titre_sg {
   /* Affiche si on a shotgun ou pas!! */
   text-align: center;
-  width: 33rem;
   max-width: 90vw;
   margin: auto;
   margin-top: 40vh;
@@ -111,6 +110,10 @@ a:active {
 .digit_holder {
   margin: 0 1rem;
   width: 11rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .chiffre {
@@ -208,12 +211,9 @@ a:active {
   font-size: 2rem;
 }
 
-p#footer {
-  position: absolute;
-  bottom: 1rem;
-  left: 0;
-  right: 0;
+#footer {
   margin: auto;
+  margin-top: 2rem;
   text-align: center;
 }
 
@@ -222,7 +222,7 @@ p#footer {
 
 .planet-wrapper {
   position: absolute;
-  right: 20vw;
+  right: 15vw;
   top: 33%;
   width: 120px;
   aspect-ratio: 1 / 1;
@@ -320,56 +320,61 @@ p#footer {
 /* Page Soldout -------------------------------------------------------------------------------------------------- */
 
 .soldout_ctnr {
+  display: inline-block;
   margin: auto;
-  margin-top: 25vh;
+  margin-top: 40vh;
   padding: 2rem;
-  width: 50vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  width: auto;
   border: var(--white_border);
   border-radius: 1rem;
-  box-shadow: var(--danger_box_shadow);
+  box-shadow: var(--green_box_shadow);
 }
 
 .soldout_ctnr p {
+  line-height: 2rem;
+  display: inline-block;
+  width: auto;
   font-size: 1.5rem;
   text-align: center;
-  text-shadow: var(--danger_text_shadow);
+  text-shadow: var(--green_text_shadow);
 }
 
 #soldout_title {
   margin-bottom: 2rem;
   font-size: 5rem;
-  text-shadow: var(--danger_text_shadow);
+  text-shadow: var(--green_text_shadow);
 }
 
 .btns_ctnr {
+  margin: auto;
   display: flex;
+  justify-content: space-around;
   margin-top: 30px;
 }
 
 #reload {
+  vertical-align: top;
   color: white;
   height: 2rem;
   margin: auto;
   margin: 0 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
   font-size: 20px;
   border-radius: 30px;
   border: 0.1rem solid white;
-  box-shadow: var(--danger_box_shadow);
-  text-shadow: var(--danger_text_shadow);
+  box-shadow: var(--green_box_shadow);
+  text-shadow: var(--green_text_shadow);
   cursor: pointer;
   transition: all 0.4s ease;
   user-select: none;
+  display: flex;
+  align-items: center;
 }
 
 #reload:hover {
-  box-shadow: var(--blue_box_shadow);
-  text-shadow: var(--blue_text_shadow);
+  box-shadow: var(--purple_box_shadow);
+  text-shadow: var(--purple_text_shadow);
   transition: all 0.4s ease;
 }
 
@@ -560,52 +565,65 @@ screen and (max-width: 800px) {
   }
 
   #titre_sg {
-    width: 48rem;
     overflow: visible;
-    margin-top: 70rem;
+    margin-top: 40vh;
     margin-bottom: 4rem;
-    font-size: 5rem;
+    font-size: 6rem;
     border-radius: 1rem;
   }
 
   #co_msg_ctnr,
   #ok_msg_ctnr,
   #danger_msg_ctnr {
-    font-size: 2rem;
-    width: 50rem;
-    margin: 4rem auto;
+    font-size: 2.8rem;
+    padding: 3rem;
+    margin-top: 10rem;
+    margin-bottom: 20rem;
+    line-height: 4rem;
   }
 
   #sg_link,
   #co_link {
-    font-size: 5rem;
-    padding: 1rem 6rem;
+    font-size: 6rem;
+    padding: 3rem;
   }
 
   .chiffre {
-    font-size: 8rem;
+    font-size: 10rem;
   }
 
   .text {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .digit_holder {
-    margin: 0 2rem;
+    margin: 0 4rem;
+  }
+
+  .planet-wrapper{
+    right: 10vw;
+    top: 10rem;
+  }
+
+  #footer{
+    margin-top: 3rem;
+    font-size: 2rem;
   }
 
   /* Responsive soldout */
 
   .soldout_ctnr {
-    margin-top: 45vh;
+    margin-top: 40vh;
     width: 70vw;
     min-width: 5rem;
+    padding: 3rem;
   }
 
   .soldout_ctnr p {
     margin: 3rem auto;
     font-size: 2.5rem;
     padding: 1rem;
+    line-height: 4rem;
   }
 
   #soldout_title {
@@ -613,8 +631,8 @@ screen and (max-width: 800px) {
   }
 
   #reload {
-    padding: 1rem;
-    font-size: 2.4rem;
+    padding: 2rem;
+    font-size: 3rem;
     height: 3rem;
   }
 

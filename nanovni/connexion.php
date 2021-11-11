@@ -23,14 +23,20 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
-<?php include("script.php"); ?>
-
 <body onload="onLoad()">
 	<?php
 	if (isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "logout.php") {
 		echo "<script>alert(\"Tu as bien été déconnecté \")</script>";
 	}
 	?>
+	<div class="planet-wrapper">
+		<div class="planet">
+		</div>
+		<div class="moon-wrapper">
+			<div class="moon">
+			</div>
+		</div>
+	</div>
 	<div id="titre_sg">Le shotgun commence dans:</div>
 	<div id="counter">
 		<!-- <div class="digit_holder months" id="mois">
@@ -64,6 +70,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	<div id="co_link_ctnr" href="#">
 		<a id="co_link" href='redirect.php?redirect=https://adr.cs-campus.fr/nanovni'>Se connecter</a>
 	</div>
+	<?php include("script.php"); ?>
 </body>
 
 </html>

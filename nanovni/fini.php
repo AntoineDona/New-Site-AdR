@@ -1,7 +1,6 @@
 <?php
 session_start();
-?>
-<?php include("database.php"); ?>
+include("database.php"); ?>
 
 <!DOCTYPE html>
 <html>
@@ -20,7 +19,7 @@ function number_place($pdo)
 	$result = $query->fetch();
 	return $result['c'];
 }
-if (number_place($pdo) < 0) {
+if (number_place($pdo) < $_SESSION["total_places"]) {
 	if ($_SESSION["isConnected"]) {
 		header("Location: https://adr.cs-campus.fr/nanovni/index.php");
 	} else {
@@ -33,10 +32,18 @@ if ($_SESSION['shotgun']) {
 ?>
 
 <body>
+	<div class="planet-wrapper">
+		<div class="planet">
+		</div>
+		<div class="moon-wrapper">
+			<div class="moon">
+			</div>
+		</div>
+	</div>
 	<div class="soldout_ctnr">
 		<h1 id="soldout_title">SOLD-OUT</h1>
-		<p> Désolé <?php echo $_SESSION["prenom"]; ?>! <br>
-			Le monde appartient à ceux qui se lèvent tôt... <br>
+		<p> Désolé <?php echo $_SESSION["prenom"]; ?>! <br />
+			Le monde appartient à ceux qui se lèvent tôt... <br />
 			Vérifie si tu as shotgun en cliquant sur recharger:
 		</p>
 		<div class="btns_ctnr">
