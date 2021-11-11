@@ -27,7 +27,6 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <?php include("script.php"); ?>
 
 <body onload="onLoad()">
