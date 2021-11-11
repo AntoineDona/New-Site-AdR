@@ -119,7 +119,6 @@ if (!$_SESSION["is_cotisant"] && isset($_SESSION['prev_page']) && $_SESSION['pre
 		</div>
 	</div>
 	</div>
-	<p id="footer">Pas besoin de recharger la page au moment du shotgun!</p>
 
 	<?php
 
@@ -142,6 +141,8 @@ if (!$_SESSION["is_cotisant"] && isset($_SESSION['prev_page']) && $_SESSION['pre
 		}
 		?>
 	</div>
+	<p id="footer">Pas besoin de recharger la page au moment du shotgun!</p>
+
 	<?php include("script.php"); ?>
 	<script type="text/javascript">
 		function shotgun() {
