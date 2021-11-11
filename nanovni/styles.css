@@ -208,6 +208,15 @@ a:active {
   font-size: 2rem;
 }
 
+p#footer {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
 /* Planete */
 
 
