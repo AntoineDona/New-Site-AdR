@@ -29,6 +29,7 @@ function is_present($email, $pdo)
 
 function get_row($email, $pdo)
 {
+	/* Gets the rank of someone who has successfuly shotguned*/ 
 	$query = $pdo->prepare("SELECT id from nanolympique where email=?");
 	$query->execute(array($email));
 	$result = $query->fetch();
