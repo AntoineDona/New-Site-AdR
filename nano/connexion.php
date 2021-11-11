@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if ($_SESSION["isConnected"]) {
+if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
     echo "Connecté : ";
     // Pour voir plus de données disponibles, voir la documentation
     // sur auth.viarezo.fr

@@ -1,4 +1,5 @@
-<?php include("auth.php"); 
+<?php
+include("auth.php"); 
 
 include("database.php");
 
@@ -105,12 +106,9 @@ if (!$_SESSION["is_representant"] && isset($_SESSION['prev_page']) && $_SESSION[
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <?php include("script.php"); ?>
 
 <body onload="onLoad()">
-
-	<!-- <a href="deconnexion.php">se deconnecter</a> -->
 
 	<div id="titre_sg"></div>
 	<div id="counter">

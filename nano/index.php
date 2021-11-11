@@ -1,6 +1,8 @@
 <!-- Page par défaut quand on se connecte pour le nano -->
-<?php include("auth.php"); //on inclue l'auth?> 
-<?php include("database.php"); ?>
+<?php 
+include("auth.php"); //on inclue l'auth
+include("database.php"); 
+?>
 
 <!DOCTYPE html>
 <html>

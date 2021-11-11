@@ -1,5 +1,5 @@
 <?php //auth effectue les différentes étapes d'auth viarezo
-session_start();
+
 if (!isset($_SESSION["isConnected"]) || !$_SESSION["isConnected"]) // Si isConnected pas défini ou faux
     
 {
