@@ -43,7 +43,7 @@ include('database.php') ?>
 		$stmt->bindValue(':email', $email);
 		$res = $stmt->execute();
 		$_SESSION['shotgun'] = false;
-		// header("Location: /nanovni/index.php");
+		header("Location: /nanovni/index.php");
 	}
 
 	$_SESSION['sg_time'] = date("Y-m-d H:i:s");
