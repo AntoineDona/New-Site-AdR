@@ -78,9 +78,10 @@ include('database.php') ?>
 					echo "<p>On est en 6</p>";
 					header("refresh:5; url=/nanovni/fini.php");
 				}
+			} else {
+				echo "<p>On est en 7</p>";
+				depaps($_SESSION["email"], $pdo);
 			}
-			echo "<p>On est en 7</p>";
-			depaps($_SESSION["email"], $pdo);
 		}
 	} else if ($_SESSION['shotgun']) {
 		echo "<p>On est en 8</p>";
