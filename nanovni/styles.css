@@ -579,7 +579,7 @@ screen and (max-width: 800px) {
     font-size: 2.8rem;
     padding: 3rem;
     margin-top: 6rem;
-    margin-bottom: 20rem;
+    margin-bottom: 10vh;
     line-height: 4rem;
   }
 
@@ -640,6 +640,23 @@ screen and (max-width: 800px) {
   .loading-animation-box div {
     margin-top: 10vh;
   }
+}
+@media screen and (orientation: landscape){
+  #co_msg_ctnr,
+  #ok_msg_ctnr,
+  #danger_msg_ctnr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #sg_link,
+  #co_link {
+    font-size: 2.2rem;
+    padding: 1rem;
+  }
+  #footer{
+    margin-top: 1rem;
+  }
+
 }
 
 /* Animations -------------------------------------------------------------------------------------------------------- */
