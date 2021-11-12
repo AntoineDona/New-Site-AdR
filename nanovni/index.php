@@ -60,7 +60,7 @@ if ($_SESSION["email"] == '???') {
 // 	header("Location: ".$url);
 //   }
 
-if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun'] ) {
+if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	if ($_SESSION["isConnected"]) {
 		header("Location: https://adr.cs-campus.fr/nanovni/fini.php");
 	} else {
@@ -82,8 +82,10 @@ if (!$_SESSION["is_cotisant"] && isset($_SESSION['prev_page']) && $_SESSION['pre
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
 	<title>NANOVNI</title>
+	<meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
+	<meta property="og:image" content="https://adr.cs-campus.fr/nanovni/img/fb_banner.jpg" />
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/nanovni/img/ufo.png">
-	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 
 <body onload="onLoad()">

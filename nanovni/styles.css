@@ -641,7 +641,7 @@ screen and (max-width: 800px) {
     margin-top: 10vh;
   }
 }
-@media screen and (orientation: landscape){
+@media screen and (orientation: landscape), screen and (max-width: 800px){
   #co_msg_ctnr,
   #ok_msg_ctnr,
   #danger_msg_ctnr {
