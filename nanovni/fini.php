@@ -19,7 +19,7 @@ function number_place($pdo)
 	$result = $query->fetch();
 	return $result['c'];
 }
-if (number_place($pdo) < $_SESSION["total_places"]) {
+if (number_place($pdo) < $_SESSION["total_places"] or false) {
 	if ($_SESSION["isConnected"]) {
 		header("Location: https://adr.cs-campus.fr/nanovni/index.php");
 	} else {
