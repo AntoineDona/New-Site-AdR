@@ -51,7 +51,7 @@ $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
 
 if ($_SESSION["email"] == '???') {
-	header("Location: https://adr.cs-campus.fr/latinano/troll.php");
+	header("Location: https://adr.cs-campus.fr/nanovni/troll.php");
 }
 
 // if (isset($_SESSION["preshotgun"]) && $_SESSION["preshotgun"]) {
@@ -60,11 +60,11 @@ if ($_SESSION["email"] == '???') {
 // 	header("Location: ".$url);
 //   }
 
-if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
+if ((number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) or true) {
 	if ($_SESSION["isConnected"]) {
-		header("Location: https://adr.cs-campus.fr/latinano/fini.php");
+		header("Location: https://adr.cs-campus.fr/nanovni/fini.php");
 	} else {
-		header("Location: https://adr.cs-campus.fr/latinano/connexion.php");
+		header("Location: https://adr.cs-campus.fr/nanovni/connexion.php");
 	}
 }
 
