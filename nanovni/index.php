@@ -45,7 +45,7 @@ $_SESSION["nom"] = $_SESSION["user"]["lastName"];
 $_SESSION["email"] = $_SESSION["user"]["email"];
 $_SESSION["email"] = "antoine.donascimento@student-cs.fr";
 
-$_SESSION['total_places'] = 400;
+$_SESSION['total_places'] = 0;
 $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
 $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
@@ -60,7 +60,7 @@ if ($_SESSION["email"] == '???') {
 // 	header("Location: ".$url);
 //   }
 
-if ((number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) or true) {
+if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun'] ) {
 	if ($_SESSION["isConnected"]) {
 		header("Location: https://adr.cs-campus.fr/nanovni/fini.php");
 	} else {
