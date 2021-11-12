@@ -43,7 +43,7 @@ include('database.php') ?>
 		$stmt->bindValue(':email', $email);
 		$res = $stmt->execute();
 		$_SESSION['shotgun'] = false;
-		header("Location: /nanovni/index.php");
+		// header("Location: /nanovni/index.php");
 	}
 
 	$_SESSION['sg_time'] = date("Y-m-d H:i:s");
@@ -63,7 +63,7 @@ include('database.php') ?>
 		if ($_SESSION["is_cotisant"] == false) {
 			echo "<p>On est en 2</p>";
 			$_SESSION['prev_page'] = "action.php";
-			header("Location: /nanovni/index.php");
+			// header("Location: /nanovni/index.php");
 		} else {
 			echo "<p>On est en 3</p>";
 			if (!$_SESSION['shotgun']) {
@@ -73,7 +73,7 @@ include('database.php') ?>
 					$query = $pdo->prepare("INSERT into nanovni (prenom,nom, email, heure) VALUES (?,?,?,?)");
 					$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time']));
 					//$_SESSION['shotgun'] = true;
-					header("refresh:5; url=/nanovni/index.php");
+					// header("refresh:5; url=/nanovni/index.php");
 				} else {
 					echo "<p>On est en 6</p>";
 					header("refresh:5; url=/nanovni/fini.php");
