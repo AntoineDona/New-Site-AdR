@@ -35,6 +35,15 @@ function is_cotisant($email, $pdo)
 	}
 }
 
+function depaps($email,$pdo) {
+	$sql = 'DELETE from latinano WHERE email=:email';
+			$stmt = $pdo->prepare($sql);
+			$stmt->bindValue(':email', $email);
+			$res = $stmt->execute();
+			$_SESSION['shotgun'] = false;
+			header("Location: /latinano/index.php");
+}
+
 $_SESSION['sg_time'] = date("Y-m-d H:i:s");
 $_SESSION['is_cotisant'] = is_cotisant($_SESSION['email'],$pdo);
 
@@ -69,15 +78,11 @@ if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec
             }
      	}
 		echo "<p>On est en 7</p>";
+		depaps($_SESSION["email"],$pdo);
 	}
 } else if($_SESSION['shotgun']){
 	echo "<p>On est en 8</p>";
-	$sql ='DELETE from nanovni WHERE email=:email';
-	$stmt = $pdo->prepare($sql);
-	$stmt->bindValue(':email', $_SESSION["email"]);
-	$res = $stmt->execute();
-	$_SESSION['shotgun'] = false;
-	header("Location: /nanovni/index.php");
+	depaps($_SESSION["email"],$pdo);
 } else {
 	echo "<p>On est en 9</p>";
 	header("Location: /nanovni/");
