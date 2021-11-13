@@ -134,10 +134,10 @@ if (!$_SESSION["is_cotisant"] && isset($_SESSION['prev_page']) && $_SESSION['pre
 		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au Nanovni. </p>";
 	}
 	?>
-	<div id="sg_link_ctnr" href="#">
+	<div id="sg_link_ctnr">
 		<?php
 		if (!$_SESSION['shotgun']) {
-			echo '<a id="sg_link" href=# onClick="shotgun();">SHOTGUN</a>';
+			echo '<a id="sg_link" href="action.php">SHOTGUN</a>';
 		} else {
 			echo '<a id="sg_link" href=# onClick="verif();">DEPAPS</a>';
 		}
