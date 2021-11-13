@@ -52,7 +52,7 @@ include('database.php') ?>
 	date_default_timezone_set('Europe/Paris');
 	$current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
-	$shotgun_date = mktime(1, 21, 59, 11, 13, 2021);
+	$shotgun_date = mktime(1, 29, 59, 11, 13, 2021);
 	$shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
 	$end_date = mktime(00, 05, 0, 11, 19, 2021);
