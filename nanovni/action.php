@@ -48,12 +48,12 @@ include('database.php') ?>
 
 	$_SESSION['sg_time'] = date("Y-m-d H:i:s");
 	$_SESSION['is_cotisant'] = is_cotisant($_SESSION['email'], $pdo);
-	$_SESSION['total_places'] = 450;
+	$_SESSION['total_places'] = 440;
 
 	date_default_timezone_set('Europe/Paris');
 	$current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
-	$shotgun_date = mktime(20, 59, 0, 11, 15, 2021);
+	$shotgun_date = mktime(20, 59, 59, 11, 15, 2021);
 	$shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
 	$end_date = mktime(00, 05, 0, 11, 19, 2021);
@@ -64,7 +64,7 @@ include('database.php') ?>
 			header("Location: /nanovni/index.php");
 		} else {
 			if (!$_SESSION['shotgun']) {
-				if (number_place($pdo) < $_SESSION['total_places'] and false) {
+				if (number_place($pdo) < $_SESSION['total_places']) {
 					$query = $pdo->prepare("INSERT into nanovni (prenom,nom, email, heure) VALUES (?,?,?,?)");
 					$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time']));
 					$_SESSION['shotgun'] = true;
