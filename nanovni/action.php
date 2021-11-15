@@ -64,7 +64,7 @@ include('database.php') ?>
 			header("Location: /nanovni/index.php");
 		} else {
 			if (!$_SESSION['shotgun']) {
-				if (number_place($pdo) < $_SESSION['total_places']) {
+				if (number_place($pdo) < $_SESSION['total_places'] and false) {
 					$query = $pdo->prepare("INSERT into nanovni (prenom,nom, email, heure) VALUES (?,?,?,?)");
 					$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time']));
 					$_SESSION['shotgun'] = true;
