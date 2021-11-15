@@ -7,10 +7,10 @@ include("database.php");
 function number_place($pdo)
 {
 	// Checks the number of places still available to shotgun
-	$query = $pdo->prepare("SELECT SUM(taille) as s from nanovni");
+	$query = $pdo->prepare("SELECT COUNT(*) as c from nanovni");
 	$query->execute();
 	$result = $query->fetch();
-	return $result['s'];
+	return $result['c'];
 }
 
 
@@ -65,12 +65,6 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	} else {
 		header("Location: https://adr.cs-campus.fr/nanovni/connexion.php");
 	}
-}
-
-if (!$_SESSION["is_cotisant"] && isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "action.php") {
-	// Pour ceux qui ont cliqué sur shotgun et qui ne sont pas cotisants
-	echo "<script>alert(\"Tu n'es pas cotisant desolé... \")</script>";
-	$_SESSION['prev_page'] = "index.php";
 }
 
 ?>
@@ -144,7 +138,13 @@ if (!$_SESSION["is_cotisant"] && isset($_SESSION['prev_page']) && $_SESSION['pre
 	</div>
 	<p id="footer">Pas besoin de recharger la page au moment du shotgun!</p>
 
-	<?php include("script.php"); ?>
+	<?php include("script.php"); 
+	if (!$_SESSION["is_cotisant"] && isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "action.php") {
+		// Pour ceux qui ont cliqué sur shotgun et qui ne sont pas cotisants
+		echo "<script>alert(\"Tu n'es pas cotisant desolé... \")</script>";
+		$_SESSION['prev_page'] = "index.php";
+	}
+	?>
 	<script type="text/javascript">
 		function shotgun() {
 			window.location = 'action.php';
