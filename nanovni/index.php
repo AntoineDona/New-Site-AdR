@@ -43,7 +43,6 @@ function is_cotisant($email, $pdo)
 $_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 $_SESSION["nom"] = $_SESSION["user"]["lastName"];
 $_SESSION["email"] = $_SESSION["user"]["email"];
-$_SESSION["email"] = "antoine.donascimento@student-cs.fr";
 
 $_SESSION['total_places'] = 450;
 $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
