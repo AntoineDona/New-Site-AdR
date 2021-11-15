@@ -48,6 +48,7 @@ include('database.php') ?>
 
 	$_SESSION['sg_time'] = date("Y-m-d H:i:s");
 	$_SESSION['is_cotisant'] = is_cotisant($_SESSION['email'], $pdo);
+	$_SESSION['total_places'] = 450;
 
 	date_default_timezone_set('Europe/Paris');
 	$current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
