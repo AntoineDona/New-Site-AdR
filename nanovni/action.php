@@ -18,10 +18,10 @@ include('database.php') ?>
 
 	function number_place($pdo)
 	{
-		$query = $pdo->prepare("SELECT SUM(taille) as s from nanovni");
+		$query = $pdo->prepare("SELECT COUNT(*) as c from nanovni");
 		$query->execute();
 		$result = $query->fetch();
-		return $result['s'];
+		return $result['c'];
 	}
 
 	function is_cotisant($email, $pdo)
