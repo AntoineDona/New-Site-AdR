@@ -573,7 +573,8 @@ screen and (max-width: 800px) {
   }
 
   #counter {
-    font-size: 10rem;
+    font-size: 15rem;
+    letter-spacing: 3px;
   }
 
   .quadrabang .ctnr {
@@ -606,32 +607,38 @@ screen and (max-width: 800px) {
     height: 100vh;
     margin-top: -20vh;
     background-size: cover;
+    transform: translateZ(-6400px) scale(9);
+  }
+  .second_layer{
+    transform: translateZ(-3200px) scale(5);
   }
   .third_layer{
-    margin-top: -70vh;
-    background-size: 80vw;
+    margin-top: -100vh;
+    background-size: 100vw;
+    transform: translateZ(-3200px) scale(5);
   }
   .fourth_layer{
     margin-top: -40vh;
     transform: translateZ(-400px) scale(1.5);
   }
   .fifth_layer{
-    margin-top: 55vh;
+    margin-top: 80vh;
+    transform: translateZ(-200px) scale(1.25);
   }
   .sixth_layer{
-    margin-top: 23vh;
+    margin-top: 76vh;
     height: 400vh;
-    transform: translateZ(200px) scale(0.75);
+    transform: none;
   }
   .seventh_layer {
     visibility: visible;
-    margin-top: 120vh;
-    height: 300vh;
-    transform: translateZ(200px) scale(0.75);
+    margin-top: 190vh;
+    height: 420vh;
+    transform: none;
     background-repeat: repeat-y;
   }
   .main{
-    transform: translateZ(200px) scale(0.75);
+    transform: none;
   }
   .counter_wrapper {
     margin-top: 100vh;
