@@ -92,6 +92,7 @@ button {
   background-image: url("img/layer_1.jpg");
   background-attachment: local;
   background-size: cover;
+  background-position: top;
   transform: translateZ(-3200px) scale(5);
   z-index: -12;
 }
@@ -601,8 +602,10 @@ screen and (max-width: 800px) {
     background-size: contain;
   }
   .first_layer{
-    background-size: 300vw;
-    height: 50vh;
+    /* background-size: 300vw; */
+    height: 100vh;
+    margin-top: -20vh;
+    background-size: cover;
   }
   .third_layer{
     margin-top: -70vh;
