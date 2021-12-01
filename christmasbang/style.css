@@ -89,7 +89,7 @@ button {
 .first_layer {
   position: absolute;
   height: 200vh;
-  background-image: url("img/couche\ 3.jpg");
+  background-image: url("img/layer_1.jpg");
   background-attachment: local;
   background-size: cover;
   transform: translateZ(-3200px) scale(5);
@@ -99,7 +99,7 @@ button {
 .second_layer {
   position: absolute;
   height: 100vh;
-  background-image: url("img/couche\ 5.png");
+  background-image: url("img/layer_2.png");
   background-attachment: local;
   background-position: top;
   transform: translateZ(-1600px) scale(3);
@@ -109,7 +109,7 @@ button {
   position: absolute;
   margin-top: -10vh;
   height: 100vh;
-  background-image: url("img/couche\ 4.png");
+  background-image: url("img/layer_3.png");
   background-size: max(60vw, 60rem);
   background-attachment: local;
   background-position: center;
@@ -120,8 +120,8 @@ button {
 .fourth_layer {
   position: absolute;
   height: 200vh;
-  margin-top: -10vh;
-  background-image: url("img/couche\ 6.png");
+  margin-top: 20vh;
+  background-image: url("img/layer_4.png");
   background-attachment: local;
   background-position: center;
   background-size: cover;
@@ -132,7 +132,7 @@ button {
   position: absolute;
   margin-top: 120vh;
   height: 100vh;
-  background-image: url("img/couche\ 1.png");
+  background-image: url("img/layer_5.png");
   background-attachment: local;
   background-position: top;
   /* background-size: contain; */
@@ -142,8 +142,19 @@ button {
 .sixth_layer {
   position: absolute;
   margin-top: 30vh;
-  height: 550vh;
-  background-image: url("img/couche\ 2.png");
+  height: 520vh;
+  background-image: url("img/layer_6.png");
+  background-attachment: local;
+  background-position: top;
+  background-size: cover;
+  transform: translateZ(400px) scale(0.5);
+}
+.seventh_layer {
+  position: absolute;
+  visibility: hidden;
+  margin-top: 30vh;
+  height: 520vh;
+  background-image: url("img/layer_7.png");
   background-attachment: local;
   background-position: top;
   background-size: cover;
@@ -190,7 +201,7 @@ button {
 
 #scroll_anchor {
   position: absolute;
-  margin-top: 151vh;
+  margin-top: 140vh;
 }
 
 /* Contenu ------------------------------------------------------------------------ */
@@ -230,7 +241,7 @@ section h3 {
 .counter_wrapper {
   height: auto;
   width: 100vw;
-  margin-top: 328vh;
+  margin-top: 300vh;
   padding: 6rem 1rem;
   background-color: var(--transparent_black);
   box-shadow: 0 0 5px 5px var(--transparent_black);
@@ -542,9 +553,15 @@ p.infos_billeterie {
 /* Responsive ------------------------------------------------------------- */
 
 @media screen and (max-width: 1300px) {
+  .fifth_layer{
+    margin-top: 100vh;
+  }
   .sixth_layer {
-    margin-top: 30vh;
+    margin-top: -10vh;
     height: 600vh;
+  }
+  .counter_wrapper{
+    margin-top: 270vh;
   }
 }
 
@@ -585,6 +602,7 @@ screen and (max-width: 800px) {
   }
   .first_layer{
     background-size: 300vw;
+    height: 50vh;
   }
   .third_layer{
     margin-top: -70vh;
@@ -598,10 +616,25 @@ screen and (max-width: 800px) {
     margin-top: 55vh;
   }
   .sixth_layer{
-    margin-top: -86vh;
+    margin-top: 23vh;
+    height: 400vh;
+    transform: translateZ(200px) scale(0.75);
+  }
+  .seventh_layer {
+    visibility: visible;
+    margin-top: 120vh;
+    height: 300vh;
+    transform: translateZ(200px) scale(0.75);
+    background-repeat: repeat-y;
+  }
+  .main{
+    transform: translateZ(200px) scale(0.75);
   }
   .counter_wrapper {
     margin-top: 100vh;
+  }
+  #scroll_anchor {
+    margin-top: 70vh;
   }
 }
 
