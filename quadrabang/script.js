@@ -40,12 +40,12 @@ function timer() {
 		var currentScrollPos = elmnt.scrollTop;
 		if (prevScrollpos >= currentScrollPos || nav.classList.contains("nav-active")) {
 			navbar.style.top = "0";
-			console.log(nav.classList.contains("nav-active"));
+			// console.log(nav.classList.contains("nav-active"));
 
 		} else {
 			navbar.style.top = "-8rem";
 			navbar.style.opacity = 0;
-			console.log(nav.classList.contains("nav-active"));
+			// console.log(nav.classList.contains("nav-active"));
 		}
 		if (currentScrollPos != 0) {
 			navbar.style.backgroundColor = "black";
