@@ -1,0 +1,671 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --white_glow: 0 0 2px white;
+    --transparent_black: transparent;
+    --black: rgba(0, 0, 0, 0.6);
+    --red: rgb(253, 108, 89);
+    --blue: #25495f;
+  }
+  
+  html {
+    font-size: 10px;
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: Retroica, Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  body {
+    overflow: hidden;
+    font-size: 5rem;
+    color: white;
+    background-color: black;
+  }
+  
+  button {
+    background: unset;
+    border: unset;
+  }
+  
+  /* Loader -------------------------------------------- */
+  
+  .loading_page {
+    z-index: 49;
+    position: fixed;
+    inset: 0;
+    background-color: #1b2735;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity ease 0.8s;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+    
+  /* Parallax background ----------------------------------- */
+  
+  .parallax_group {
+    position: relative;
+    overflow: hidden;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+    height: 100vh;
+    width: 100vw;
+    perspective: 800px;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+    z-index: 10;
+  }
+  
+  .parallax_layer {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -10;
+  }
+  
+  .first_layer {
+    position: absolute;
+    height: 100vh;
+    background-image: url("img/couche\ 3.png");
+    background-attachment: local;
+    background-size: cover;
+    transform: translateZ(-3200px) scale(5);
+    z-index: -12;
+  }
+  
+  .second_layer {
+    position: absolute;
+    height: 100vh;
+    background-image: url("img/couche\ 5.png");
+    background-attachment: local;
+    background-position: top;
+    transform: translateZ(-1600px) scale(3);
+  }
+
+  .third_layer {
+    position: absolute;
+    margin-top: -10vh;
+    height: 100vh;
+    background-image: url("img/couche\ 4.png");
+    background-size: max(60vw,60rem);
+    background-attachment: local;
+    background-position: center;
+    transform: translateZ(-1600px) scale(3);
+  }
+
+  
+  .fourth_layer {
+    position: absolute;
+    height: 200vh;
+    margin-top: -10vh;
+    background-image: url("img/couche\ 6.png");
+    background-attachment: local;
+    background-position: center;
+    background-size: cover;
+    transform: translateZ(-800px) scale(2);
+  }
+  
+  .fifth_layer {
+    position: absolute;
+    margin-top: 120vh;
+    height: 100vh;
+    background-image: url("img/couche\ 1.png");
+    background-attachment: local;
+    background-position: top;
+    /* background-size: contain; */
+    transform: translateZ(100px) scale(0.875);
+  }
+  
+  .sixth_layer {
+    position: absolute;
+    margin-top: -70vh;
+    height: 1000vh;
+    background-image: url("img/couche\ 2.png");
+    background-attachment: local;
+    background-position: top;
+    background-size: contain;
+    transform: translateZ(400px) scale(0.5);
+  }
+
+  /*  Scroll arrows */
+
+  .scroll-arrow {
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    animation: arrow-wave 1s infinite;
+    animation-direction: alternate;
+  }
+  .scroll-arrow:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .scroll-arrow:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .scroll-arrow:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes arrow-wave {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  #scroll_anchor {
+    position: absolute;
+    margin-top: 151vh;
+  }
+
+  /* Contenu ------------------------------------------------------------------------ */
+  
+  .main {
+    position: absolute;
+    inset: 0;
+    transform: translateZ(400px) scale(0.5);
+  }
+  
+  section {
+    padding: 4rem 0;
+  }
+  
+  section h3 {
+    margin: 5rem auto;
+    font-size: 5rem;
+    text-shadow: var(--white_glow);
+  }
+  
+  
+  
+  /* Hero ---------------------------------- */
+  
+  .quadra {
+    position: absolute;
+    height: 95vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  /* Compteur ---------------------------- */
+  
+  .counter_wrapper {
+    height: auto;
+    width: 100vw;
+    margin-top: 340vh;
+    padding: 6rem 1rem;
+    background-color: var(--transparent_black);
+    box-shadow: 0 0 5px 5px var(--transparent_black);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Christmas, Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 5px;
+  }
+  
+  .counter_wrapper h3 {
+    font-size: 3rem;
+    text-shadow: var(--white_glow);
+  }
+  
+  #counter {
+    display: grid;
+    grid-template-areas: "d_top h_top m_top s_top" "d_bottom h_bottom m_bottom s_bottom";
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10rem 2rem;
+    color: white;
+    text-align: center;
+    font-size: 10rem;
+    width: min(100%, 60rem);
+    height: auto;
+    margin: auto;
+    margin-top: 4rem;
+    text-shadow: var(--white_glow);
+  }
+  
+  #counter div {
+    vertical-align: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  /* Billeterie ----------------------- */
+  
+  .billeterie {
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+    /* background-color: var(--transparent_black);
+    box-shadow: 0 0 5px 5px var(--transparent_black); */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  p.infos_billeterie {
+    flex-basis: 1;
+    font-size: 1.7rem;
+    text-align:justify;
+    width: 70%;
+    padding: 0 2rem;
+    margin-right: 2rem;
+    line-height: 3rem;
+    text-indent: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .billet_ctnr {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100vw;
+  }
+  
+  .billet {
+    font-size: 1.5rem;
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    width: 30rem;
+    padding: 4rem 0.5rem;
+    margin: 1rem;
+    border-radius: 2px;
+    /* background-color: rgba(139, 0, 0, 0.616); */
+    box-shadow: 0 0 1px 1px white; 
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    
+    border-radius: 10px;
+    /* border: 2px solid white; */
+  }
+  
+  .prix {
+    font-size: 4rem;
+    margin: 2rem;
+    font-family: Christmas, Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 5px;
+    z-index: 1;
+  }
+  
+  .tarif {
+    height: 6rem;
+  }
+  
+  #navettes h4{
+    min-height: 6rem;
+    margin-bottom: 2rem;
+  }
+  
+  #navettes .ouverture{
+    margin-top: 2rem;
+  }
+  
+  .horaire {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+  }
+  
+  .horaires {
+    margin-bottom: 1rem;
+  }
+  
+  .billet a {
+    display: block;
+    height: 6rem;
+    margin-top: 2rem;
+    padding: 2rem 3rem;
+    z-index: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10rem 100rem var(--blue);
+    /* rgba(62, 96, 106, 0.527) */
+    transition: all 0s ease;
+  }
+  
+  .billet a.indisponible {
+    /* background-color: rgba(196, 82, 66, 0.712); */
+    pointer-events: none;
+  }
+  
+  .billet a.achat {
+    background-color: #2b73a0;
+    /* display: none; */
+  }
+  
+  .billet a.achat:hover {
+    border: 2px solid white;
+    height: 6rem;
+    background-color: #2b73a0;
+    transition: all 0.1s ease;
+  }
+  
+  .billet button {
+    width: 100%;
+    height: 100%;
+    font-size: 1.5rem;
+    letter-spacing: 2.5px;
+    color: white;
+    background-color: transparent;
+    font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .billet h4 {
+    font-size: 3rem;
+    font-family: Christmas, Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 5px;
+    z-index: 1;
+  }
+  
+  .billet p {
+    z-index: 1;
+  }
+  
+  .ouverture {
+    font-size: 1.3rem;
+  }
+  
+  .date_ouverture {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    line-height: 25px;
+    width: 26rem;
+    max-width: 100%;
+  }
+  
+  .cotisant {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cotisant h4{
+    margin: 4rem 0;
+    font-size: 3rem;
+  }
+  
+  .cotisant form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .cotisant :is(#email, #submit){
+    padding: 1rem;
+  }
+  
+  #email{
+    width: 90%;
+    border-radius: 5px;
+  }
+  
+  #submit{
+    margin-top: 3rem;
+    width: 15rem;
+    cursor: pointer;
+    /* border: 1px solid white; */
+    border: none;
+    box-shadow:  inset -0.5px -0.5px 3px 1px rgb(122, 122, 122);
+    border-radius: 5px;
+    background-color: white;
+    transition: all 0.4s ease;
+  }
+  
+  #submit:hover{
+    color: white;
+    background-color: green;
+    box-shadow:  inset -0.5px -0.5px 3px 1px rgb(1, 77, 1);
+    /* border: 2px solid white; */
+    transition: background-color 0.4s ease;
+  }
+  
+  .cotisant #email::placeholder{
+    padding-left: 1rem;
+  }
+  
+  .cotisant p{
+    margin-top: 4rem;
+    font-size: 3.5rem;
+  
+  }
+  
+  /* Partenaires ----------------------*/
+  
+  .partenaires {
+    background-color: var(--transparent_black);
+    box-shadow: 0 0 5px 5px var(--transparent_black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .partner_ctnr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .partner_ctnr img {
+    margin: 2rem 3rem;
+    width: 10rem;
+    height: auto;
+    transition: opacity 0.2s ease;
+  }
+  
+  .partner_ctnr a:hover img {
+    opacity: 0.6;
+    transition: opacity 0.4s ease;
+  }
+  
+  /* Informations --------------------------- */
+  
+  .informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .informations p, .informations ul {
+    font-size: 2rem;
+    margin: 4rem 0;
+  }
+  
+  .informations ul{
+    text-align: left;
+  }
+  .informations a{
+    color: white;
+  }
+  
+  .informations h4{
+    font-size: 4rem;
+  }
+  
+  /* Responsive ------------------------------------------------------------- */
+  
+  @media screen and (orientation: portrait), screen and (max-width: 800px) {
+    html {
+      font-size: 8px;
+    }
+  
+    #counter {
+      font-size: 10rem;
+    }
+  
+    .quadrabang  .ctnr{
+      flex-direction: column;
+    }
+  
+    p.desc_quadra{
+      max-width: 100%;
+      width: 80%;
+      margin-right: unset;
+      min-width: none;
+      padding: 0 2rem;
+    }
+  
+    p.infos_billeterie{
+      max-width: 100%;
+      width: 80%;
+    }
+  
+    .trailer_ctnr{
+      width: 70%;
+      margin-top: 3rem;
+    }
+  
+  }
+  
+  @media screen and (orientation: portrait), screen and (max-width: 500px) {
+    html {
+      font-size: 6px;
+    }
+  
+    .quadra {
+      background-image: url("img/quadra_m.png");
+    }
+  
+    #counter {
+      font-size: 8rem;
+    }
+  
+    .billet_ctnr {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .billet {
+      width: 70%;
+      margin: 2rem auto;
+    }
+  
+    .billet h4 {
+      font-size: 4rem;
+    }
+  
+    .prix {
+      font-size: 5rem;
+    }
+  
+    .tarif,
+    .ouverture {
+      font-size: 2rem;
+    }
+  
+    #navettes h4{
+      min-height: 6rem;
+      margin-bottom: 1rem;
+    }
+    
+    #navettes .ouverture{
+      margin-top: 2rem;
+    }
+    
+    .horaire {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+    
+    .horaires {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+  
+    .ouverture {
+      font-size: 1.5rem;
+    }
+  
+    .date_ouverture {
+      font-size: 2rem;
+      margin-top: 1rem;
+      line-height: 25px;
+      width: 40rem;
+    }
+  }
+  
+  /* Fonts ------------------------------------------------------------------------- */
+  
+  @font-face {
+    font-family: "Christmas";
+    src: url("fonts/CHRISTMAS\ DAY.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Retroica";
+    src: url("fonts/Retroica.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Thin.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: bolder;
+  }
+  
