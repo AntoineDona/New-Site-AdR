@@ -5,7 +5,7 @@
   }
   
   :root {
-    --white_glow: 0 0 2px white;
+    --white_glow: 0 0 1px white;
     --transparent_black: transparent;
     --black: rgba(0, 0, 0, 0.6);
     --red: rgb(253, 108, 89);
