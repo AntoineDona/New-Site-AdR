@@ -10,6 +10,8 @@
   --black: rgba(0, 0, 0, 0.6);
   --red: rgb(253, 108, 89);
   --blue: #25495f;
+  --dark_blue: #273547;
+  --dark_blue_box_shadow: 0 -500px 500px 100px var(--dark_blue);
 }
 
 html {
@@ -143,19 +145,8 @@ button {
 .sixth_layer {
   position: absolute;
   margin-top: 30vh;
-  height: 520vh;
+  height: 200vh;
   background-image: url("img/layer_6.png");
-  background-attachment: local;
-  background-position: top;
-  background-size: cover;
-  transform: translateZ(400px) scale(0.5);
-}
-.seventh_layer {
-  position: absolute;
-  visibility: hidden;
-  margin-top: 30vh;
-  height: 520vh;
-  background-image: url("img/layer_7.png");
   background-attachment: local;
   background-position: top;
   background-size: cover;
@@ -214,7 +205,8 @@ button {
 }
 
 section {
-  padding: 4rem 0;
+  padding: 4rem 2rem;
+  width: 100%;
 }
 
 section h3 {
@@ -287,7 +279,7 @@ section h3 {
 
 .billeterie {
   height: auto;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   width: 100vw;
   /* background-color: var(--transparent_black);
     box-shadow: 0 0 5px 5px var(--transparent_black); */
@@ -491,16 +483,22 @@ p.infos_billeterie {
 
 }
 
+#navettes{
+  background-color: var(--dark_blue);
+  box-shadow: var(--dark_blue_box_shadow);
+}
+
 /* Partenaires ----------------------*/
 
 .partenaires {
-  background-color: var(--transparent_black);
+  background-color: var(--dark_blue);
   box-shadow: 0 0 5px 5px var(--transparent_black);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
+  /* box-shadow: var(--dark_blue_box_shadow); */
 }
 
 .partner_ctnr {
@@ -526,6 +524,7 @@ p.infos_billeterie {
 /* Informations --------------------------- */
 
 .informations {
+  background-color: var(--dark_blue);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -558,8 +557,7 @@ p.infos_billeterie {
     margin-top: 100vh;
   }
   .sixth_layer {
-    margin-top: -10vh;
-    height: 600vh;
+    margin-top: 95vh;
   }
   .counter_wrapper{
     margin-top: 270vh;
@@ -607,7 +605,7 @@ screen and (max-width: 800px) {
     height: 100vh;
     margin-top: -20vh;
     background-size: cover;
-    transform: translateZ(-6400px) scale(9);
+    /* transform: translateZ(-6400px) scale(9); */
   }
   .second_layer{
     transform: translateZ(-3200px) scale(5);
@@ -622,29 +620,26 @@ screen and (max-width: 800px) {
     transform: translateZ(-400px) scale(1.5);
   }
   .fifth_layer{
-    margin-top: 80vh;
-    transform: translateZ(-200px) scale(1.25);
+    margin-top: 52vh;
+    transform: translateZ(200px) scale(0.75);
   }
   .sixth_layer{
-    margin-top: 76vh;
+    margin-top: -2vh;
     height: 400vh;
-    transform: none;
-  }
-  .seventh_layer {
-    visibility: visible;
-    margin-top: 190vh;
-    height: 420vh;
-    transform: none;
-    background-repeat: repeat-y;
+    transform: translateZ(300px) scale(0.625);
   }
   .main{
-    transform: none;
+    transform: translateZ(300px) scale(0.625);
   }
   .counter_wrapper {
     margin-top: 100vh;
   }
   #scroll_anchor {
     margin-top: 70vh;
+  }
+  #billeterie{
+    background-color: var(--dark_blue);
+    box-shadow: 0 -100px 100px 50px var(--dark_blue);
   }
 }
 
