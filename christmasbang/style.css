@@ -26,6 +26,7 @@ h3,
 h4 {
   font-family: Christmas, Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 6px;
+  text-align: center;
 }
 
 body {
@@ -300,8 +301,8 @@ p.infos_billeterie {
   padding: 0 2rem;
   margin-right: 2rem;
   line-height: 3rem;
-  text-indent: 3rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .billet_ctnr {
@@ -552,6 +553,18 @@ p.infos_billeterie {
   font-size: 4rem;
 }
 
+footer{
+  text-align: center;
+  font-weight: normal;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
+}
+
 /* Responsive ------------------------------------------------------------- */
 
 @media screen and (max-width: 1300px) {
@@ -578,6 +591,7 @@ screen and (max-width: 800px) {
   #counter {
     font-size: 15rem;
     letter-spacing: 3px;
+    grid-template-rows: 10rem 6rem;
   }
 
   .quadrabang .ctnr {
@@ -633,14 +647,11 @@ screen and (max-width: 800px) {
     height: 400vh;
     transform: translateZ(300px) scale(0.625);
   }
-  /* .main{
-    transform: translateZ(300px) scale(0.625);
-  } */
   .counter_wrapper {
     margin-top: 100vh;
   }
   #scroll_anchor {
-    margin-top: 70vh;
+    margin-top: 90vh;
   }
   #billeterie{
     background-color: var(--dark_blue);
@@ -655,10 +666,6 @@ screen and (max-width: 800px) {
 screen and (max-width: 500px) {
   html {
     font-size: 6px;
-  }
-
-  .quadra {
-    background-image: url("img/quadra_m.png");
   }
 
   #counter {
