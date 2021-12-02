@@ -659,7 +659,7 @@ screen and (max-width: 800px) {
     box-shadow: 0 -100px 100px 50px var(--dark_blue);
   }
   .quadra{
-    height: 90vh; /* pour que les fleches dedéfilement ne soient pas cachées */
+    height: 72vh; /* pour que les fleches dedéfilement ne soient pas cachées */
   }
 
 }
