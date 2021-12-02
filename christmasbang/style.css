@@ -11,7 +11,7 @@
   --red: rgb(253, 108, 89);
   --blue: #25495f;
   --dark_blue: #273547;
-  --dark_blue_box_shadow: 0 -500px 500px 100px var(--dark_blue);
+  --dark_blue_box_shadow: 0 -100px 100px 50px var(--dark_blue);
 }
 
 html {
@@ -32,7 +32,7 @@ body {
   overflow: hidden;
   font-size: 5rem;
   color: white;
-  background-color: black;
+  background-color: var(--dark_blue);
 }
 
 button {
@@ -68,11 +68,9 @@ button {
   width: 100vw;
   perspective: 800px;
   transform-style: preserve-3d;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   /* background-color: red; */
   z-index: 10;
+  /* perspective-origin: bottom right; */
 }
 
 .parallax_layer {
@@ -86,6 +84,7 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -10;
+  /* transform-origin: bottom right; ce qui m'a sauvé:  https://stackoverflow.com/questions/58391945/pure-css-parallax-inconsistent-scrolling-between-firefox-and-chrome */
 }
 
 .first_layer {
@@ -144,7 +143,7 @@ button {
 
 .sixth_layer {
   position: absolute;
-  margin-top: 30vh;
+  margin-top: 120vh;
   height: 200vh;
   background-image: url("img/layer_6.png");
   background-attachment: local;
@@ -153,7 +152,41 @@ button {
   transform: translateZ(400px) scale(0.5);
 }
 
-/*  Scroll arrows */
+
+
+/* Contenu ------------------------------------------------------------------------ */
+
+.main {
+  position: absolute;
+  inset: 0;
+  /* transform: translateZ(400px) scale(0.5); */
+  transform: none;
+}
+
+section {
+  padding: 4rem 2rem;
+  width: 100vw;
+}
+
+section h3 {
+  margin: 5rem auto;
+  font-size: 8rem;
+  text-shadow: var(--white_glow);
+}
+
+
+
+/* Hero aka scroll arrows ---------------------------------- */
+
+.quadra {
+  position: absolute;
+  height: 95vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
 
 .scroll-arrow {
   width: 12px;
@@ -193,40 +226,7 @@ button {
 
 #scroll_anchor {
   position: absolute;
-  margin-top: 140vh;
-}
-
-/* Contenu ------------------------------------------------------------------------ */
-
-.main {
-  position: absolute;
-  inset: 0;
-  transform: translateZ(400px) scale(0.5);
-}
-
-section {
-  padding: 4rem 2rem;
-  width: 100%;
-}
-
-section h3 {
-  margin: 5rem auto;
-  font-size: 8rem;
-  text-shadow: var(--white_glow);
-}
-
-
-
-/* Hero ---------------------------------- */
-
-.quadra {
-  position: absolute;
-  height: 95vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  margin-top: 200vh;
 }
 
 /* Compteur ---------------------------- */
@@ -234,10 +234,10 @@ section h3 {
 .counter_wrapper {
   height: auto;
   width: 100vw;
-  margin-top: 300vh;
+  margin-top: 210vh;
   padding: 6rem 1rem;
-  background-color: var(--transparent_black);
-  box-shadow: 0 0 5px 5px var(--transparent_black);
+  background-color: var(--dark_blue);
+  box-shadow: var(--dark_blue_box_shadow);
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -288,6 +288,8 @@ section h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--dark_blue);
+  box-shadow: var(--dark_blue_box_shadow);
 }
 
 p.infos_billeterie {
@@ -560,7 +562,10 @@ p.infos_billeterie {
     margin-top: 95vh;
   }
   .counter_wrapper{
-    margin-top: 270vh;
+    margin-top: 180vh;
+  }
+  #scroll_anchor {
+    margin-top: 180vh;
   }
 }
 
@@ -612,7 +617,7 @@ screen and (max-width: 800px) {
   }
   .third_layer{
     margin-top: -100vh;
-    background-size: 100vw;
+    background-size: min(100vw,500px);
     transform: translateZ(-3200px) scale(5);
   }
   .fourth_layer{
@@ -628,9 +633,9 @@ screen and (max-width: 800px) {
     height: 400vh;
     transform: translateZ(300px) scale(0.625);
   }
-  .main{
+  /* .main{
     transform: translateZ(300px) scale(0.625);
-  }
+  } */
   .counter_wrapper {
     margin-top: 100vh;
   }
@@ -640,6 +645,9 @@ screen and (max-width: 800px) {
   #billeterie{
     background-color: var(--dark_blue);
     box-shadow: 0 -100px 100px 50px var(--dark_blue);
+  }
+  .quadra{
+    height: 90vh; /* pour que les fleches dedéfilement ne soient pas cachées */
   }
 }
 
