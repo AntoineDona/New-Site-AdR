@@ -146,7 +146,7 @@ button {
   position: absolute;
   margin-top: 120vh;
   height: 200vh;
-  background-image: url("img/layer_6.png");
+  background-image: url("img/layer_6_bis.png");
   background-attachment: local;
   background-position: top;
   background-size: cover;
@@ -163,7 +163,6 @@ button {
   /* transform: translateZ(400px) scale(0.5); */
   transform: none;
   z-index: 10;
-  --webkit-transform: translate3d(0px, 0px, 0px); /* trying to solve safari bug */
 }
 
 section {
@@ -662,6 +661,7 @@ screen and (max-width: 800px) {
   .quadra{
     height: 90vh; /* pour que les fleches dedéfilement ne soient pas cachées */
   }
+
 }
 
 @media screen and (orientation: portrait),
@@ -725,6 +725,14 @@ screen and (max-width: 500px) {
     margin-top: 1rem;
     line-height: 25px;
     width: 40rem;
+  }
+
+  .sixth_layer{
+    background-image: url('/christmasbang/img/layer_6_ter.png');
+    background-size: cover;
+    box-shadow: 0 200px 200px 100px var(--dark_blue);
+    height: 150vh;
+    margin-top: -30vh;
   }
 }
 
