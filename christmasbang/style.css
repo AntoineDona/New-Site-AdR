@@ -225,7 +225,7 @@ section h3 {
   }
 }
 
-#scroll_anchor {
+#anchor {
   position: absolute;
   margin-top: 200vh;
 }
@@ -577,7 +577,7 @@ footer a{
   .counter_wrapper{
     margin-top: 180vh;
   }
-  #scroll_anchor {
+  #anchor {
     margin-top: 180vh;
   }
 }
@@ -650,7 +650,7 @@ screen and (max-width: 800px) {
   .counter_wrapper {
     margin-top: 100vh;
   }
-  #scroll_anchor {
+  #anchor {
     margin-top: 90vh;
   }
   #billeterie{
