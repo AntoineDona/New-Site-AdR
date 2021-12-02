@@ -730,7 +730,7 @@ screen and (max-width: 500px) {
   .sixth_layer{
     background-image: url('/christmasbang/img/layer_6_ter.png');
     background-size: cover;
-    box-shadow: 0 200px 200px 100px var(--dark_blue);
+    box-shadow: 0 200px 200px 150px #2d3d51, inset 0 -20px 20px #2d3d51;
     height: 150vh;
     margin-top: -30vh;
   }
