@@ -1,7 +1,7 @@
 <?php
 session_start();
-require ('/home/do/vendor/autoload.php');
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+require ('vendor/autoload.php');
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
 $redirect_uri = "https://adr.cs-campus.fr/nanolympique";
