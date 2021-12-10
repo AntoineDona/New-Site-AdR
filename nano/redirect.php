@@ -1,8 +1,10 @@
 <?php //fichier dans lequel on fait la requête Viarezo, on demande tout ce qu'on veut 
 session_start();
+
 require ('../vendor/autoload.php');
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
+
 $redirect_uri = "https://adr.cs-campus.fr/nano/index.php";
 $client_id = "47e7231e6e5c333459f9280e6d3c7eef96b38ce6";
 $client_secret = $_ENV['client_secret'];
