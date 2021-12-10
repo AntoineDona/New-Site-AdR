@@ -12,7 +12,7 @@ if (!isset($_SESSION["isConnected"]) || !$_SESSION["isConnected"]) // Si isConne
 		$code = $_GET["code"];
 		$redirect_uri = "https://adr.cs-campus.fr/nanovni";
 		$client_id = "47e7231e6e5c333459f9280e6d3c7eef96b38ce6";
-		$client_secret = $_ENV["client_secret"];
+		$client_secret = $_ENV['client_secret'];
 		$data = array("grant_type" => $grant_type, "code" => $code, "redirect_uri" => $redirect_uri, "client_id" => $client_id, "client_secret" => $client_secret);
 		$ch = curl_init();
 		$url = "https://auth.viarezo.fr/oauth/token";
