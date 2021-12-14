@@ -21,3 +21,6 @@ $url = "https://auth.viarezo.fr/oauth/authorize?redirect_uri=".$redirect_uri
         ."&state=".$state."&scope=".$scope;
 $_SESSION["redirectUrlAfterLogin"] = $_GET["redirect"];
 header("Location: ".$url);
+if(!isset($_SESSION['redirect_url'])){
+        header("Location: https://adr.cs-campus.fr");
+}
