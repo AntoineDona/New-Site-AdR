@@ -1,6 +1,6 @@
 <?php
 
-if(!isset($_SESSION['redirect_url'])){
+if(!isset($_SESSION['redirect_url']) || false){
 	header("Location: https://adr.cs-campus.fr");
 }
 
