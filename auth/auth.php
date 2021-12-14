@@ -1,9 +1,5 @@
 <?php
 
-if(!isset($_SESSION['redirect_url']) || false){
-	header("Location: https://adr.cs-campus.fr");
-}
-
 
 require ('../vendor/autoload.php');
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
@@ -12,7 +8,11 @@ $dotenv->load();
 if (!isset($_SESSION["isConnected"]) || !$_SESSION["isConnected"]) // Si isConnected pas défini ou faux
     
 {
-    header("Location: " . $_SESSION['redirect_url'] ."/connexion.php"); //On redirige vers la page de connexion
+	if(isset($_SESSION['redirect_url'])){
+		header("Location: " . $_SESSION['redirect_url'] ."/connexion.php"); //On redirige vers la page de connexion
+	} else {
+		header("Location: https://adr.cs-campus.fr");
+	}
 	$_SESSION["isConnected"] = false; //On set isConnected à False (pour le cas ou pas défini)
 	if (isset($_GET["code"]) && isset($_GET["state"])) {
 	    if (strcmp($_SESSION["state"], $_GET["state"]) == 0) { //si le Get est égal la variable de session, 
