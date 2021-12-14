@@ -1,5 +1,10 @@
 <?php
 session_start();
+
+if(!isset($_SESSION['redirect_url'])){
+        header("Location: https://adr.cs-campus.fr");
+}
+
 require ('../vendor/autoload.php');
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
@@ -16,4 +21,3 @@ $url = "https://auth.viarezo.fr/oauth/authorize?redirect_uri=".$redirect_uri
         ."&state=".$state."&scope=".$scope;
 $_SESSION["redirectUrlAfterLogin"] = $_GET["redirect"];
 header("Location: ".$url);
-?>
