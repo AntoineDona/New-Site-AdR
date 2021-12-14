@@ -1,5 +1,10 @@
 <?php
 
+if(!isset($_SESSION['redirect_url'])){
+	header("Location: https://adr.cs-campus.fr");
+}
+
+
 require ('../vendor/autoload.php');
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
