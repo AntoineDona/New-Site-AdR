@@ -1,5 +1,7 @@
-<?php include("auth.php"); ?>
-<?php
+<?php 
+session_start();
+$_SESSION['redirect_url'] = "https://adr.cs-campus.fr/nanolympique";
+include("../auth/auth.php"); 
 include("database.php");
 
 
