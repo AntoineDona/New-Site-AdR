@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['redirect_url'] = "https://adr.cs-campus.fr/nanolympique";
 
 if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	echo "Connecté : ";
@@ -13,7 +14,9 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	echo $prenom . " " . $nom;
 	header("Location: https://adr.cs-campus.fr/nanolympique/index.php?nom=" . $nom . "&prenom=" . $prenom);
 	
-} else {$_SESSION["isConnected"] = false;}
+} else {
+	$_SESSION["isConnected"] = false;
+}
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +73,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 		?>
 	</div>
 	<div id="co_link_ctnr" href="#">
-		<a id="co_link" href='redirect.php?redirect=https://adr.cs-campus.fr/nanolympique'>Se connecter</a>
+		<a id="co_link" href='../auth/redirect.php?redirect=https://adr.cs-campus.fr/nanolympique'>Se connecter</a>
 	</div>
 </body>
 
