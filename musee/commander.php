@@ -181,7 +181,7 @@ include("included/database.php");
             <h3 style="font-size: 2rem; margin-top:1rem;">Pour fêter cela, la personne qui commandera la 100ème bière, puis la 200ème puis la 300ème (tout les 100 t'as capté) se verra offrir <span style="font-weight: bold;">une pinte de Kro</span> par le BDS et l'AdR!!</h3>
             <h2>Compteur de bières: <span style="font-weight: bold;">
             <?php
-            $nbr_cmd = $bdd->query('SELECT beermax FROM commande ORDER BY id DESC LIMIT 1');
+            $nbr_cmd = $bdd->query('SELECT beermax FROM commandes ORDER BY id DESC LIMIT 1');
             while ($row = $nbr_cmd->fetch()) {
                 //echo $row['beermax'];
             };
@@ -327,7 +327,7 @@ include("included/database.php");
             <div class="nb_cmd" style="margin-bottom: 4rem">
                 ( Pour information: il y a actuellemen<strong>
                     <?php
-                    $nbr_cmd = $bdd->query('SELECT count(*) FROM commande WHERE traite="en cours" OR traite="non" ');
+                    $nbr_cmd = $bdd->query('SELECT count(*) FROM commandes WHERE traite="en cours" OR traite="non" ');
                     while ($row = $nbr_cmd->fetch()) {
                         echo $row['count(*)'];
                     }
