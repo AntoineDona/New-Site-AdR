@@ -60,7 +60,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="khafet">🍕 VP Khâfet 🍕</strong></h2>
-                    <img class="prez" src="img_poles/khafet-2k22.jpg">
+                    <img class="prez" src="img_poles/Khafet-2k22.jpg">
                     <p>
                     Bienvenue à la Khafiestaaa !! 🎉 Retrouvez notre équipe toute la semaine de 11h45 à 13h45 pour vous régaler de plats frais 🥗 ou de pizzas chaudes 🍕. Sous grosse playlist 🎶 et chorées improvisées 🕺, la khâfet relève le niveau de votre pause dej. À plus au Musée 💙💛💚💜
                     </p>
@@ -129,7 +129,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole rez" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="rez">🏚 VP Rez 🏚</strong></h2>
-                    <img class="prez" src="img_poles/rez-2k22.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/Rez-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Chargé de la bonne ambiance sur le campus de Paris Saclay 🎉, le pôle Rez saura répondre à toutes tes questions concernant Césal en te représentant en tant que résident🏡, te proposer des projets sur le campus et dans ta rez 🏖 et te prêter un max de matos à toi et tes assos 🤝
                     </p>
@@ -139,7 +139,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole qom" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="qom">🧠 VP Qom 🧠</strong></h2>
-                    <img class="prez" src="img_poles/qom-2k22.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/Qom-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Et finalement les plus beaux Q de cette fine éQuipe ! J'ai nommé le pôle ✨Qom✨ ! Formés et Qualifiés pour vous servir , on régalera aveQ des visuels toujours plus Qualis pour annoncer au Qampus tous les évènements !
                     </p>
