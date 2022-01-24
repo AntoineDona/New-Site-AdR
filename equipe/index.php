@@ -83,9 +83,9 @@ function display_buttons($nbr_annees)
                     <img class="prez" src="img_poles/bar-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         BAAAAAAAAAAAAAAR 🍺
-                        Une petite faim ? Viens au bar.
-                        Une grande soif ? Viens au bar.
-                        Tu te fais chier ? Viens au bar.
+                        Une petite faim ? Viens au bar.</br>
+                        Une grande soif ? Viens au bar.</br>
+                        Tu te fais chier ? Viens au bar.</br>
                         Du lundi au jeudi dès 20h30 🕣
                     </p>
                 </div>
