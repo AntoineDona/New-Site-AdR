@@ -41,7 +41,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole buro">
                     <h2 id="buro">⚙ Le Buro ⚙ </h2>
-                    <img class="prez" src="img_poles/bureau.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/bureau-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                     Le bureau : c’est 4 personnes et tout autant de melons. les chevilles gonflées, ils tirent cette bande de chibrons contre vent et marée. Jamais derrière le bar mais prêt pour la bagarre.
                     </p>
@@ -49,7 +49,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="ptitdej">🥐 VP P'tit Dej 🥐</strong></h2>
-                    <img class="prez" src="img_poles/ptit-dej.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/ptit-dej-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Levés dès 7h30, les VP P'tit Dej seront là tous les matins sans faute ni retard pour vous proposer viennoiseries, jus, cafés, cookies, mais surtout leur formule à 2 euros jusqu'à 9h ! 🥐🌛 Venez vous rassasier au son d'une douce musique pour bien commencer votre journée ! 🧸
                     </p>
@@ -60,7 +60,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="khafet">🍕 VP Khâfet 🍕</strong></h2>
-                    <img class="prez" src="img_poles/khafet.jpg">
+                    <img class="prez" src="img_poles/khafet-2k22.jpg">
                     <p>
                     Bienvenue à la Khafiestaaa !! 🎉 Retrouvez notre équipe toute la semaine de 11h45 à 13h45 pour vous régaler de plats frais 🥗 ou de pizzas chaudes 🍕. Sous grosse playlist 🎶 et chorées improvisées 🕺, la khâfet relève le niveau de votre pause dej. À plus au Musée 💙💛💚💜
                     </p>
@@ -70,7 +70,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="khoope">🥪 VP Khoôpé 🥪</strong></h2>
-                    <img class="prez" src="img_poles/khoopé.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/khoopé-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                     Tous les pôles se battent entre eux pour savoir lequel est le meilleur... Pourtant, il n'y a qu'un superpôle. Celui qui te sert des cookies bien chaud à 17h🍪, te nourrit jusqu’à 20h30🍕 et t'emmène proche de ton bonheur. Viens donc décompresser et chiller un bon coup à la Khoôpé!
                     </p>
@@ -80,7 +80,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="bar">🍺 VP Bar 🍺</strong></h2>
-                    <img class="prez" src="img_poles/bar.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/bar-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         BAAAAAAAAAAAAAAR 🍺
                         Une petite faim ? Viens au bar.
@@ -94,7 +94,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="soiree">💃 VP Soirées et VP CQ 🚚</strong></h2>
-                    <img class="prez" src="img_poles/cq-soirée.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/cq-soirée-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                     Rencontrez l'équipe qui organisera toutes vos festivités a échelle de CS ! La team imberbe 🧑‍🦲 à la soirée et la team barbue 🧔 à la CQ sauront vous régaler comme jamais. La première régalera vos meilleurs TU🕺, qui seront assurés et CQrisés 🚧 par les seconds. Entre quadra et nano,  crash et coup de Taser, une équipe de choc : t’as peur.
                     </p>
@@ -112,7 +112,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="eventos">🍣 VP Eventos 🍣</strong></h2>
-                    <img class="prez" src="img_poles/eventos.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/Eventos-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Voici le pôle Eventos, aka le pôle Camilles (ou Camcams pour les intimes)🥰.Nous nous chargons de réaliser des events, des expos et des apéros au Musée.🥂 N'hésitez pas à nous contacter pour réaliser un de ces événements avec nous!💃 Aucune restriction … on s'occupe de tout!🕺
                         PS : pour avoir plein d’exclus, follow <a href='https://www.instagram.com/les_camilles_eventos/'>@les_camilles_eventos </a>
@@ -129,7 +129,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole rez" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="rez">🏚 VP Rez 🏚</strong></h2>
-                    <img class="prez" src="img_poles/rez.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/rez-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Chargé de la bonne ambiance sur le campus de Paris Saclay 🎉, le pôle Rez saura répondre à toutes tes questions concernant Césal en te représentant en tant que résident🏡, te proposer des projets sur le campus et dans ta rez 🏖 et te prêter un max de matos à toi et tes assos 🤝
                     </p>
@@ -139,7 +139,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole qom" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="qom">🧠 VP Qom 🧠</strong></h2>
-                    <img class="prez" src="img_poles/qom.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/qom-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Et finalement les plus beaux Q de cette fine éQuipe ! J'ai nommé le pôle ✨Qom✨ ! Formés et Qualifiés pour vous servir , on régalera aveQ des visuels toujours plus Qualis pour annoncer au Qampus tous les évènements !
                     </p>
