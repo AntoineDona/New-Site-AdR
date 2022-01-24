@@ -115,7 +115,7 @@ function display_buttons($nbr_annees)
                     <img class="prez" src="img_poles/eventos.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                         Voici le pôle Eventos, aka le pôle Camilles (ou Camcams pour les intimes)🥰.Nous nous chargons de réaliser des events, des expos et des apéros au Musée.🥂 N'hésitez pas à nous contacter pour réaliser un de ces événements avec nous!💃 Aucune restriction … on s'occupe de tout!🕺
-                        PS : pour avoir plein d’exclus, follow <a href='https://www.instagram.com/les_camilles_eventos/'>@les_camilles_eventos</a>
+                        PS : pour avoir plein d’exclus, follow <a href='https://www.instagram.com/les_camilles_eventos/'>@les_camilles_eventos </a>
                     </p>
                 </div>
 
