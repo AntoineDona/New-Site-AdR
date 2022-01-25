@@ -29,10 +29,9 @@ function display_buttons($nbr_annees)
     </script>
     <?php include "../included/header.php" ?>
     <main id="swup" class="transition-fade">
-        <section class="hero adr2k22" style='background-image:/equipe/img_poles/groupe2k22_v2.jpg'>
+        <section class="hero adr2k22">
             <div class="container">
             <h1 class="headline"> Notre équipe </h1>
-            <!-- <img src="/equipe/img_poles/groupe2k22_v2.jpg" alt="l'équipe" style="margin:0;"> -->
                 
             </div>
         </section>
