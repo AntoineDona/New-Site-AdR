@@ -43,7 +43,7 @@ function display_buttons($nbr_annees)
                     <h2 id="buro">⚙ Le Buro ⚙ </h2>
                     <img class="prez" src="img_poles/bureau-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                    Le bureau : c’est 4 personnes et tout autant de melons. les chevilles gonflées, ils tirent cette bande de chibrons contre vent et marée. Jamais derrière le bar mais prêt pour la bagarre.
+                    Le bureau : c’est 4 personnes et tout autant de melons. les chevilles gonflées, ils tirent cette bande de chibrons contre vents et marées. Jamais derrière le bar mais prêts pour la bagarre.
                     </p>
                 </div>
 
