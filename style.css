@@ -554,9 +554,9 @@ a.anchor {
 
 /* L'equipe ------------------------------------------------------------------------------------------ */
 
-.adr2k22 {
-  background-image: url(equipe/img_poles/groupe2k22_v3.jpg);
-}
+  /* .adr2k22 {
+    background-image: url(/equipe/img_poles/groupe2k22_v3.jpg);
+  } */
 
 section.poles {
   padding: 2rem 0;
