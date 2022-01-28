@@ -8,7 +8,7 @@ session_start();
 
 if (isset($_SESSION['is_connected']) and $_SESSION['is_connected']) {
     ?>
-        <meta http-equiv="Refresh" content="0;url=gestion/non_traite.php" />
+        <meta http-equiv="Refresh" content="0;url=girafe/index.php" />
     <?php
     } 
 ?>
