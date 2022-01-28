@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+viewBox="0 0 500 500" xml:space="preserve">
+
+<path style="fill-opacity:0;stroke:#f00;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;"
+	d="M450,20
+	l-250,235
+	l250,235">
+	<animate attributeType="xml" attributeName="d"
+	id="anim_right_out"
+	from="M200,20
+	l250,235
+	l-250,235"
+	to="M450,20
+	l-250,235
+	l250,235"
+	dur="0.3s" begin="click" repeatCount="1" fill="freeze"/>
+	<animate attributeType="xml" attributeName="d"
+	id="anim_right_in"
+	to="M200,20
+	l250,235
+	l-250,235"
+	from="M450,20
+	l-250,235
+	l250,235"
+	dur="0.3s" begin="click" repeatCount="1" fill="freeze"/>
+</path>
+
+</svg>

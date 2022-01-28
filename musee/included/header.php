@@ -16,24 +16,22 @@
                                                         } ?>" >Menu</a>
             </li>
             <li class="nav-item">
-                <a href="/musee/commander.php" class="nav-link <?php if ($page == 'commander') {
-                                                                    echo "current";
-                                                                } ?>">Commander</a>
-            </li>
-            <li class="nav-item">
                 <a href="/musee/apropos.php" class="nav-link <?php if ($page == 'apropos') {
                                                                     echo "current";
                                                                 } ?>">A propos</a>
             </li>
-            <li class="espace_adr">
+            <?php if (isset($_SESSION['is_connected']) and $_SESSION['is_connected']):?>
+                <li class="espace_adr">
+                <a href="/musee/girafe/index.php" class="nav-link">Girafe</a>
+            </li>
+            <? else:?>
+                <li class="espace_adr">
                 <a href="/musee/connexion.php" class="nav-link <?php if ($page == 'connexion') {
                                                                     echo "current";
                                                                 } ?>">Connexion</a>
             </li>
+            <?php endif;?>
         </ul>
-        <!-- <div class="espace_adr">
-                <a href="/musee/espace_adr.php" class="nav-link">Connexion</a>
-            </div> -->
         <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
