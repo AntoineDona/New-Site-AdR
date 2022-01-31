@@ -1,5 +1,5 @@
 <?php 
-$page='tableau';
+$page='mes girafes';
 session_start();
 include 'header.php';
 ?>
@@ -10,7 +10,7 @@ include 'header.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>Tableau de chasse</title>
+    <title>Mes girafes</title>
 </head>
 <body>
     
