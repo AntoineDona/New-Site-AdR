@@ -22,18 +22,19 @@ session_start();
 include 'database.php'; 
 
 $sqlQuery = 'SELECT * FROM girafe';
-$girafeStatement = $mysqlClient->prepare($sqlQuery);
+$girafeStatement = $pdo->prepare($sqlQuery);
 $girafeStatement->execute();
-$girafe = $girafeStatement->fetchAll();
+$girafes = $girafeStatement->fetchAll();
 
-$_SESSION['girafe']=$girafe;
+$_SESSION['girafe']=$girafes;
 function check_user($girfs,$username){
+    $test=false;
     foreach ($girfs as $girf){
         if($username==$girf['login']){
-            echo true;
+            $test=true;
         }
     }
-    echo false;
+    return $test;
 }
 
 
@@ -42,7 +43,7 @@ if (isset($_POST["username"]) and isset($_POST['password'])) //si on a bien subm
     // if ($_POST["username"] == "do" and $_POST['password'] == "raven") {
     //     $_SESSION['is_connected'] = True;
     //     $_SESSION['incorrect'] = False;
-    if (check_user($girafe,$_POST['username']) and $_POST['password'] == "girafeadr") {
+    if (check_user($girafes,$_POST['username']) and $_POST['password'] == "p") {
         $_SESSION['is_connected'] = True;
         $_SESSION['incorrect'] = False;
 ?>
