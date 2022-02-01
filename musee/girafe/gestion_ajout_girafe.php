@@ -40,7 +40,8 @@ else{
     foreach($liste_chasseur as $chasseur){
         $sqlQuery='';
         $insertGirafe=$pdo->prepare($sqlQuery);
-        $insertGirafe=execute()
+        $insertGirafe=execute();
+        
     }
 
 
