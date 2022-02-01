@@ -17,7 +17,7 @@ $girafes=$_SESSION['girafe'];
 <body>
     <?php include 'header.php' ?> 
     <div id="form-ajouter-grf" >
-    <form method="post" action="gestion.php" >
+    <form method="post" action="gestion_ajout_girafe.php" >
         <!-- bouton de nombre de chasseur -->
         <p >Nombre de personne non AdR : <br/></p>
         <input type="number" name="counter_nadr" required="required" value="0" min='0' id='button-nadr' >
@@ -31,7 +31,7 @@ $girafes=$_SESSION['girafe'];
             ?>
         </p>
         <label for="type-grf">Quelle est votre girafe ?</label>
-        <input type="number" multiple name="type-grf" id="type-grf" list="2-types-grf" required size="64">
+        <input type="text" multiple name="type-grf" id="type-grf" list="2-types-grf" required size="64">
 
         <datalist id="2-types-grf">
         <option valeur="17">Girafe de kro - 17€</option>
@@ -40,6 +40,11 @@ $girafes=$_SESSION['girafe'];
 
         <input type="submit" value="Partager la girafe">
     </form>
+    <?php 
+    if(isset($_SESSION['incorrect_grf']) and $_SESSION['incorrect_grf']){
+        echo '<p style="color:red">'.$_SESSION['message'].'</p>';
+    }
+    ?>
     </div>
     
     

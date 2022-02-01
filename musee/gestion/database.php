@@ -2,14 +2,13 @@
 //config SQL
 $DBhost  = "localhost";
 $DBowner = "root";
-$DBpw    = "root";
-// $DBpw    = "Morangis91";
+$DBpw    = "Morangis91";
 $DBName  = "adr";
 
 $DBconnect = "mysql:port=3306;dbname=".$DBName.";host=".$DBhost;
 
 
-$pdo = new PDO('mysql:localhost;port=3306;dbname=adr', 'root', 'root', [
+$pdo = new PDO('mysql:'.$DBhost.';port=3306;dbname=adr', $DBowner, $DBpw, [
     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_EMULATE_PREPARES   => false
