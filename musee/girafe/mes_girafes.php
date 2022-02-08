@@ -87,6 +87,7 @@ include 'header.php';
     <form action="resetBalance.php" method='post' onSubmit="return confirm('Es-tu sûr de reset ta note?') " >
         <input type="submit" value="J'ai payé ma note">
     </form>
+    <p>La dernière fois que tu as payé ta note est le : <?php echo $user['dateLastPayment']?></p>
 
     </div>
 
