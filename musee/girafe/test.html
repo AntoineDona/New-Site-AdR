@@ -1,73 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_girafe.css">
+
+  <title>Document</title>
 </head>
-<body>
-    <form method="post" action="ton_action">
-        <p>
-            Ta phrase de presentation :<br />
-            <input type="checkbox" name="ton_nom" id="ton_nom" /> <label for="ton_nom">Le nom du truc</label><br />
-            <input type="checkbox" name="ton_nom" id="ton_nom" /> <label for="ton_nom">Le nom du truc</label><br />
-            <input type="checkbox" name="ton_nom" id="ton_nom" /> <label for="ton_nom">Le nom du truc</label><br />
-            <input type="checkbox" name="ton_nom" id="ton_nom" /> <label for="ton_nom">Le nom du truc</label>
-        </p>
-     </form>
+<body style='background-color: black;text-align:center;'>
+  <form action=""><input type="submit" value="reset"></form>
+  <input type="number" name="counter_nadr" required="required" value='0' min='0' id='button-nadr' >
+  <input type="text" multiple name="type-grf" id="type-grf" list="2-types-grf" required size="64">
+
+  <datalist id="2-types-grf">
+  <option value="17€">Girafe de kro</option>
+  <option value="22€">Girafe haut de gamme</option>
+  </datalist>
 </body>
 </html>
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Autocomplete - Default functionality</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#tags" ).autocomplete({
-      source: availableTags
-    });
-  } );
-  </script>
-</head>
-<body>
- 
-<div class="ui-widget">
-  <label for="tags">Tags: </label>
-  <input id="tags">
-</div>
- 
- 
-</body>
-</html
