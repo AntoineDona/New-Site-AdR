@@ -1,0 +1,17 @@
+Pour reset un db automatiquement, il faut utiliser 'scheduler' de mysql
+ce site explique bien : https://vijaymrami.wordpress.com/2016/01/28/how-to-schedule-mysql-query-using-mysql-event-in-phpmyadmin/
+étape : 
+
+1 - Pour obtenir l'autorisation
+    SET GLOBAL event_scheduler := 1 
+
+2 - On créé notre évenement
+    CREATE EVENT reset_soiree
+
+    ON SCHEDULE EVERY 1 DAY
+    STARTS '2022-08-02 17:15:00'
+    DO
+    UPDATE girafe SET nb_girafe_soiree=0, biere_soiree=0,id_last_girafe=0;
+    TRUNCATE TABLE last_girafe
+
+On peut le voir sur phpmyadmin dans le section events
