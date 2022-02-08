@@ -21,12 +21,7 @@ session_start();
 
 include 'database.php'; 
 
-$sqlQuery = 'SELECT * FROM girafe';
-$girafeStatement = $pdo->prepare($sqlQuery);
-$girafeStatement->execute();
-$girafes = $girafeStatement->fetchAll();
 
-$_SESSION['girafe']=$girafes;
 function check_user($girfs,$username){
     $test=false;
     foreach ($girfs as $girf){
@@ -40,9 +35,10 @@ function check_user($girfs,$username){
 
 if (isset($_POST["username"]) and isset($_POST['password'])) //si on a bien submit, cad on vient de la page de connexion
 {
-    // if ($_POST["username"] == "do" and $_POST['password'] == "raven") {
-    //     $_SESSION['is_connected'] = True;
-    //     $_SESSION['incorrect'] = False;
+    $_SESSION['username']=$_POST['username'];
+    $_SESSION['nadrNombre']=0;
+    $_SESSION['checkModif']=false;//lorsque l'on vient de connecter, on défini la variable de session pour les modif de girafes
+    
     if (check_user($girafes,$_POST['username']) and $_POST['password'] == "p") {
         $_SESSION['is_connected'] = True;
         $_SESSION['incorrect'] = False;
