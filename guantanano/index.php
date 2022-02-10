@@ -3,20 +3,20 @@ session_start();
 
 include("auth.php"); 
 include("database.php");
-//
-	//
-	$_SESSION["isConnected"] = true;
-	$_SESSION["is_cotisant"]=false;
-	$_SESSION['shotgun']=true;
-	$_SESSION["user"]=array(
-		'firstName'=>'Bastien',
-		'lastName'=>'de Rugy',
-		'email'=>'B.gdr@student-cs.fr',
-		'promo'=>'2024',
-	);
+// //
+// 	//
+// 	$_SESSION["isConnected"] = true;
+// 	$_SESSION["is_cotisant"]=false;
+// 	$_SESSION['shotgun']=true;
+// 	$_SESSION["user"]=array(
+// 		'firstName'=>'Bastien',
+// 		'lastName'=>'de Rugy',
+// 		'email'=>'B.gdr@student-cs.fr',
+// 		'promo'=>'2024',
+// 	);
 
-	//
-	//
+// 	//
+// 	//
 
 function number_place($pdo)
 {
