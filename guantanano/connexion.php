@@ -30,7 +30,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 		echo "<script>alert(\"Tu as bien été déconnecté \")</script>";
 	}
 	?>
-	<div id="titre_sg">Le shotgun commence dans:</div>
+	<div id="se_co_titre_sg" >Le shotgun commence dans:</div>
 	<div id="counter">
 		<!-- <div class="digit_holder months" id="mois">
 			<p class="chiffre">00</p>
