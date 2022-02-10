@@ -1,0 +1,20 @@
+
+
+@media only screen and (max-width: 480px) {
+    body {
+        background: no-repeat url(bckground.png) black  ;
+        background-position: center top;
+        background-size:180% ;
+    }
+  }
+
+@media only screen and (min-width: 480px) {
+
+body{
+    background: no-repeat url(bckground.png) black  ;
+    background-position: center top;
+    background-size:80% ;
+    
+}
+
+}
