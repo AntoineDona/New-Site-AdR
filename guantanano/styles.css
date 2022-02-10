@@ -90,6 +90,24 @@ a:active {
   z-index: 0;
   position: relative;
 }
+#se_co_titre_sg {
+  /* Affiche si on a shotgun ou pas!! */
+  text-align: center;
+  max-width: 90vw;
+  margin: auto;
+  margin-top: 50vh;
+  margin-bottom: 1rem;
+  overflow: visible;
+  font-size: 2rem;
+  color: var(--light_green);
+  /* border: solid 0.1rem rgb(221, 255, 223); */
+  border-radius: 1rem;
+  /* box-shadow: var(--green_box_shadow); */
+  /* animation: frame_glow 8s ease infinite; */
+  z-index: 0;
+  position: relative;
+}
+
 
 
 #counter {
@@ -211,6 +229,8 @@ a:active {
   animation: shotgun 3s ease infinite;
   cursor: pointer;
   font-size: 2rem;
+  margin-top: 1em;
+
 }
 
 #footer {
@@ -473,6 +493,13 @@ screen and (max-width: 800px) {
   #titre_sg {
     overflow: visible;
     margin-top: 45vh;
+    margin-bottom: 4rem;
+    font-size: 6rem;
+    border-radius: 1rem;
+  }
+  #se_co_titre_sg {
+    overflow: visible;
+    margin-top: 60vh;
     margin-bottom: 4rem;
     font-size: 6rem;
     border-radius: 1rem;
