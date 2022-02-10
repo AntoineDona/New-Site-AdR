@@ -1,5 +1,5 @@
 <?php
-config SQL
+
 $DBhost  = "localhost";
 $DBowner = "root";
 $DBpw    = "Morangis91";
