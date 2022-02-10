@@ -53,10 +53,10 @@ include('database.php') ?>
 	date_default_timezone_set('Europe/Paris');
 	$current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
-	$shotgun_date = mktime(20, 59, 59, 11, 15, 2021);
+	$shotgun_date = mktime(12, 59, 59, 02, 11, 2022);
 	$shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
-	$end_date = mktime(00, 05, 0, 11, 19, 2021);
+	$end_date = mktime(03, 00, 0, 02, 17, 2022);
 	$end_date_sec = (((date('d', $end_date) - 1) * 24 + date('H', $end_date)) * 60 + date('i', $end_date)) * 60 + date('s', $end_date);
 	if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec) {
 		if ($_SESSION["is_cotisant"] == false) {
