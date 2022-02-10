@@ -1,6 +1,7 @@
 <?php
 session_start();
-include("database.php"); ?>
+include("database.php"); 
+?>
 
 <!DOCTYPE html>
 <html>
@@ -32,14 +33,6 @@ if ($_SESSION['shotgun']) {
 ?>
 
 <body>
-	<div class="planet-wrapper">
-		<div class="planet">
-		</div>
-		<div class="moon-wrapper">
-			<div class="moon">
-			</div>
-		</div>
-	</div>
 	<div class="soldout_ctnr">
 		<h1 id="soldout_title">SOLD-OUT</h1>
 		<p> Désolé <?php echo $_SESSION["prenom"]; ?>! <br />

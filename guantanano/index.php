@@ -1,8 +1,22 @@
 <?php
 session_start();
+
 include("auth.php"); 
 include("database.php");
+//
+	//
+	$_SESSION["isConnected"] = true;
+	$_SESSION["is_cotisant"]=false;
+	$_SESSION['shotgun']=true;
+	$_SESSION["user"]=array(
+		'firstName'=>'Bastien',
+		'lastName'=>'de Rugy',
+		'email'=>'B.gdr@student-cs.fr',
+		'promo'=>'2024',
+	);
 
+	//
+	//
 
 function number_place($pdo)
 {
@@ -48,7 +62,6 @@ $_SESSION['total_places'] = 450;
 $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
 $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
-
 if ($_SESSION["email"] == '???') {
 	header("Location: /guantanano/troll.php");
 }
@@ -83,14 +96,6 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 </head>
 
 <body onload="onLoad()">
-	<div class="planet-wrapper">
-		<div class="planet">
-		</div>
-		<div class="moon-wrapper">
-			<div class="moon">
-			</div>
-		</div>
-	</div>
 	<div id="titre_sg"></div>
 	<div id="counter">
 		<!-- <div class="digit_holder months" id="mois">
@@ -117,7 +122,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	</div>
 
 	<?php
-
+	
 	if (!$_SESSION['shotgun']) {
 		if (!$_SESSION["is_cotisant"]) {
 			echo "<p id='danger_msg_ctnr'>ATTENTION !! <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
