@@ -55,7 +55,7 @@ body {
   color: white;
   position: absolute;
   text-align: center;
-  font-family: "NeonGuanta3";
+  font-family: "NeonGuanta";
   overflow-x: hidden;
 }
 
@@ -191,7 +191,7 @@ a:active {
 
 #sg_link {
   padding: 0.5rem 2rem;
-  font-family: "Azonix";
+  font-family: "NeonGuata";
   cursor: not-allowed;
   pointer-events: none;
   color: rgba(255, 255, 255, 0.541);
@@ -384,7 +384,7 @@ h1.interface {
   text-align: center;
   font-size: 80px;
   color: "white";
-  font-family: "CaviarDreams";
+  font-family: "NeonGuata";
   margin-top: 20vh;
 }
 
@@ -442,7 +442,7 @@ form {
 
 .greencard {
   background: rgba(125, 250, 125, 0.3);
-  font-family: arial;
+  font-family: 'NeonGuata';
   font-weight: bold;
   width: 60vw;
   text-align: center;
@@ -476,7 +476,7 @@ form {
 
 .submit {
   font-size: 50px;
-  font-family: "CaviarDreams";
+  font-family: "NeonGuata";
   color: white;
   font-weight: bold;
   margin: 8px;
@@ -865,22 +865,7 @@ screen and (max-width: 800px) {
 }
 
 @font-face {
-  font-family: "NeonGuanta3";
-  font-weight: bold;
-  src: url("fonts/NeonSans.otf") format("opentype");
-}
-@font-face {
   font-family: "NeonGuanta";
   font-weight: bold;
-  src: url("fonts/NeonRobot.otf") format("opentype");
-}
-@font-face {
-  font-family: "NeonGuanta2";
-  font-weight: bold;
-  src: url("fonts/Neon.ttf") format("truetype");
-}
-@font-face {
-  font-family: "NeonGuanta4";
-  font-weight: bold;
-  src: url("fonts/University.otf") format("opentype");
+  src: url("fonts/NeonSans.otf") format("opentype");
 }
