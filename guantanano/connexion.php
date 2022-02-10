@@ -1,6 +1,18 @@
 <?php
 session_start();
 
+//
+//
+$_SESSION["isConnected"] = true;
+$_SESSION["user"]=array(
+	'firstName'=>'Bastien',
+	'lastName'=>'de Rugy',
+	'email'=>'B.gdr@student-cs.fr',
+	'promo'=>'2024',
+);
+//
+//
+
 if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	echo "Connecté : ";
 	// Pour voir plus de données disponibles, voir la documentation

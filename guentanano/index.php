@@ -8,7 +8,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	//echo $_SESSION["user"]["login"];
 	$_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 	$_SESSION["nom"] = $_SESSION["user"]["lastName"];
-	header("Location: https://adr.cs-campus.fr/nanovni/index.php");
+	header("Location: https://adr.cs-campus.fr/guantanano/index.php");
 	
 } else {$_SESSION["isConnected"] = false;}
 ?>

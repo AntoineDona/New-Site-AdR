@@ -78,7 +78,7 @@ a:active {
   text-align: center;
   max-width: 90vw;
   margin: auto;
-  margin-top: 50vh;
+  margin-top: 30vh;
   margin-bottom: 1rem;
   overflow: visible;
   font-size: 2rem;
@@ -171,7 +171,6 @@ a:active {
   background: transparent;
   width: auto;
   margin: auto;
-  margin-top: 2em;
   text-align: center;
   border-radius: 8px;
 }
@@ -194,14 +193,17 @@ a:active {
   font-family: "NeonGuata";
   cursor: not-allowed;
   pointer-events: none;
-  color: rgba(255, 255, 255, 0.541);
+  /* color: rgba(255, 255, 255, 0.541);
   text-shadow: 0 0 7px rgba(255, 255, 255, 0.541), 0 0 10px rgba(0, 0, 0, 0.555);
   border: solid 5px white;
   border: solid 5px rgba(255, 255, 255, 0.541);
   box-shadow: 0 0 7px rgba(255, 255, 255, 0.541),
     inset 0 0 7px rgba(255, 255, 255, 0.541), 0 0 10px rgba(0, 0, 0, 0.555),
     inset 0 0 10px rgba(0, 0, 0, 0.555);
-  transition: all 0.4s ease;
+  transition: all 0.4s ease; */
+  animation: shotgun 3s ease infinite;
+
+
 }
 
 #co_link {
@@ -470,7 +472,7 @@ screen and (max-width: 800px) {
 
   #titre_sg {
     overflow: visible;
-    margin-top: 58vh;
+    margin-top: 45vh;
     margin-bottom: 4rem;
     font-size: 6rem;
     border-radius: 1rem;
@@ -482,13 +484,14 @@ screen and (max-width: 800px) {
     font-size: 2.8rem;
     padding: 3rem;
     margin-top: 6rem;
-    margin-bottom: 10vh;
+    margin-bottom: 1vh;
     line-height: 4rem;
   }
 
   #sg_link,
   #co_link {
     font-size: 6rem;
+    margin-top: 1em;
     padding: 3rem;
   }
 
@@ -549,7 +552,7 @@ screen and (max-width: 800px) {
   #ok_msg_ctnr,
   #danger_msg_ctnr {
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
   }
   #sg_link,
   #co_link {
