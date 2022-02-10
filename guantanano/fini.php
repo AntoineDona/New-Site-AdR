@@ -14,7 +14,7 @@ include("database.php"); ?>
 <?php
 function number_place($pdo)
 {
-	$query = $pdo->prepare("SELECT COUNT(*) as c from nanovni");
+	$query = $pdo->prepare("SELECT COUNT(*) as c from guantanano");
 	$query->execute();
 	$result = $query->fetch();
 	return $result['c'];
