@@ -7,7 +7,7 @@ include("database.php");
 function number_place($pdo)
 {
 	// Checks the number of places still available to shotgun
-	$query = $pdo->prepare("SELECT COUNT(*) as c from nanovni");
+	$query = $pdo->prepare("SELECT COUNT(*) as c from guantanano");
 	$query->execute();
 	$result = $query->fetch();
 	return $result['c'];
@@ -17,7 +17,7 @@ function number_place($pdo)
 function has__already_shotgun($email, $pdo)
 {
 	//  Checks if email already shotgun, return 1 if true and 0 else
-	$query = $pdo->prepare("SELECT COUNT(*) as c from nanovni where email=?");
+	$query = $pdo->prepare("SELECT COUNT(*) as c from guantanano where email=?");
 	$query->execute(array($email));
 	$result = $query->fetch();
 	if ($result['c'] == 0) {
@@ -75,7 +75,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
-	<title>NANOVNI</title>
+	<title>GUANTANANO</title>
 	<meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
 	<!-- <meta property="og:image" content="https://adr.cs-campus.fr/guantanano/img/fb_banner.jpg" /> -->
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/guantanano/img/prison.png">
@@ -125,7 +125,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 			echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir Shotgun! </p>";
 		}
 	} else {
-		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au Nanovni. </p>";
+		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au guantanano. </p>";
 	}
 	?>
 	<div id="sg_link_ctnr">

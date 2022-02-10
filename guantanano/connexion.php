@@ -18,7 +18,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
-	<title>NANOVNI</title>
+	<title>GUANTANANO</title>
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/guantanano/img/prison.png">
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
