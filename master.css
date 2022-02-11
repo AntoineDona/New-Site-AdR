@@ -25,3 +25,26 @@ main{
         transform: translateY(0);
     }
 }
+
+/*Pour la page event*/
+.description_event{
+    background:white;
+    text-align: left;
+    border-radius: 12px;
+    padding:2em;
+}
+.description_event h2{
+    font-size: 2em;
+}
+.description_event img{
+    height: 20px;
+}
+.description_event div{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+.description_event div h2{
+    margin:0 5px;
+
+}
