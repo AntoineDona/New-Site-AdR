@@ -76,7 +76,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	if ($_SESSION["isConnected"]) {
 		header("Location: /guantanano/fini.php");
 	} else {
-		header("Location: /localhost/guantanano/connexion.php");
+		header("Location: /guantanano/connexion.php");
 		// header("Location: https://adr.cs-campus.fr
 	}
 }

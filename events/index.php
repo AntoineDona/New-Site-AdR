@@ -25,7 +25,7 @@
                     Liberez la Grim 🍻 et les danses enflammées
                     Shotgun pour les cotisants AdR le vendredi 11 Février à 13h.
                     N'oublie pas ton pass sanitaire pour festoyer comme il se doit !💃</br>
-                    Le lien du shotgun : <a href="https://adr.cs-campus.fr/guantanano/">ici</a></p>
+                    Le lien du shotgun : <a href="/guantanano/">ici</a></p>
                 </div>
             </div>
         </section>
