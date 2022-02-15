@@ -23,7 +23,7 @@ session_start();
     }
 </style>
 <body>
-    <?php if($_SESSION['username']=='2021goulletba'):?>
+    <!-- <?php if($_SESSION['username']=='2021goulletba'):?> -->
         <form method="post" action="ajoutAdrGestion.php">
         <label for="type-grf" >Quelle est votre pôle ?</label>
             <input type="text" multiple name="type-pole" id="type-pole" list="types-pole" required size="32">
@@ -44,8 +44,8 @@ session_start();
     </br><label for="surnom">Choisir un surnom : </label><input type="text" name='surnom' required>
     </br><label for="loginVR">Donner votre indentifiant VR : </label><input type="text" name='loginVR' required>
         </form>
-    <?php else: ?>
+    <!-- <?php else: ?>
         <p>Tu n'as pas accès à cette page, demande à ton VP Geek préféré</p>
-    <?php endif;?>
+    <?php endif;?> -->
 </body>
 </html>
