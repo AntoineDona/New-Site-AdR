@@ -40,9 +40,9 @@ session_start();
             <option value="Eventos"></option>
             <option value="Rez"></option>
             </datalist>
-    </br><label for="prenom">Donner votre prénom (si vous faites partie des doublons, précisez la première lettre du nom, ex : Bastien G) : </label><input type="text" name='prenom' required>
+    </br><label for="prenom">Donnez votre prénom (si vous faites partie des doublons, précisez la première lettre du nom, ex : Bastien G) : </label><input type="text" name='prenom' required>
     </br><label for="surnom">Choisir un surnom : </label><input type="text" name='surnom' required>
-    </br><label for="loginVR">Donner votre indentifiant VR : </label><input type="text" name='loginVR' required>
+    </br><label for="loginVR">Donnez votre indentifiant VR : </label><input type="text" name='loginVR' required>
         </form>
     <!-- <?php else: ?>
         <p>Tu n'as pas accès à cette page, demande à ton VP Geek préféré</p>
