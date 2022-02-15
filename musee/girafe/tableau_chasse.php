@@ -1,8 +1,16 @@
 <?php 
 $page='tableau';
 session_start();
+if(!isset($_SESSION['is_connected'])){
+    header('Location:/musee/connexion.php');
+}
+elseif(isset($_SESSION['is_connected']) and !$_SESSION['is_connected']){
+    header('Location:/musee/connexion.php');
+}
 include 'header.php';
 include '../gestion/database.php';
+include '../included/meta.php';
+
 $girafes=$_SESSION['girafe'];
 function trieChasseurs($grfs,$key){// trie les chasseurs selon le critère choisi avec $key ex: $key='nb_girafe'
     $tabLoginValue=array();
@@ -101,10 +109,30 @@ foreach($girafes as $girafe){
             
             ?>
         </table>
-        <h1>Mes stat</h1>
+        <h2>Les plus gros buveurs de bières de tout les temps</h2>
+        <table>
+            <tr>
+                <td></td>
+                <td>Nom</td>
+                <td>Quantité de bière bu (en L)</td>
+            </tr>
+            <?php 
+            $chasseursTries=trieChasseurs($girafes,'biere_total');
+            for($i=0;$i<5;$i++){
+                $I=$i+1;
+                echo '<tr>
+                        <td>'.$I.'</td>
+                        <td>'.$chasseursTries[$i]['prenom'].'</td>
+                        <td>'.$chasseursTries[$i]['biere_total'].'</td>
+                    </tr>';
+            }
+            
+            ?>
+        </table>
+        <h1>Mes stats</h1>
         <p>Nombre de girafes tuées à ton actif : <?php echo $user['nb_girafe']?></p>
         <p>Nombre de girafes tuées ce soir : <?php echo $user['nb_girafe_soiree']?></p>
-        <p>Record de girafes tuées en un soirf : <?php echo $user['record_soiree']?></p>
+        <p>Record de girafes tuées en un soir : <?php echo $user['record_soiree']?></p>
         <p>Quantité de bière bu ce soir : <?php echo $user['biere_soiree']?> L</p>
         <p>Record de bière bu en un soir : <?php echo $user['record_biere_soiree']?> L</p>
         <p>Quantité de bière bu depuis le début de la tuerie : <?php echo $user['biere_total']?> L</p>

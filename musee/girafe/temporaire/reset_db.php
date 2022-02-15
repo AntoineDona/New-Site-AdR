@@ -1,7 +1,7 @@
 <?php
 session_start();
 $girafes=$_SESSION['girafe'];
-include '../gestion/database.php';
+include '../../gestion/database.php';
 
 //réinitialiser la database    
 foreach($girafes as $girafe){
@@ -20,5 +20,5 @@ $insertGirafe->execute([
     'id_last_girafe'=>0,
     ]) or die(print_r($pdo->errorInfo()));}
 ?>
-    <meta http-equiv="Refresh" content="0;url=../girafe/index.php" /> 
+    <meta http-equiv="Refresh" content="0;url=../../girafe/index.php" /> 
 

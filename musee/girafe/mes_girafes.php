@@ -1,7 +1,14 @@
 <?php 
 $page='mes girafes';
 session_start();
+if(!isset($_SESSION['is_connected'])){
+    header('Location:/musee/connexion.php');
+}
+elseif(isset($_SESSION['is_connected']) and !$_SESSION['is_connected']){
+    header('Location:/musee/connexion.php');
+}
 include 'header.php';
+include '../included/meta.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,41 +30,44 @@ include 'header.php';
             $user=$girafe;
         }
     }
-    if($user['id_last_girafe']==-1){
-
-    }
-    else{
-    foreach($last_girafes as $last_girafe){
-        if($user['id_last_girafe']==$last_girafe['id_girafe']){
-            $lastGirafeUser=$last_girafe;
-        }
-    }
     
-    $_SESSION['user']=$user;
-    $_SESSION['lastGirafeUser']=$lastGirafeUser;
-    $chasseurs=unserialize($lastGirafeUser['adr']);
-    }
-    function loginToName($login,$grfs){
-        $bool=true;
-        $i=0;
-        while($bool){
-            if($grfs[$i]['login']==$login){
-                $bool=false;
-                return $grfs[$i]['prenom'];
-            }
-            $i++;
-        }
-
-    }
+    
     ?>
     
     <h1>Dernières girafes</h1>
-    <?php if($user['id_last_girafe']==0):?>
+    <?php if($user['id_last_girafe']==0)://pas de girafe de la journée?>
+        
         <p>Tu n'as pas chassé de girafe ce soir.</p>
-    <?php elseif($user['id_last_girafe']==-1):?>
-    <p>Attention! Tu as modifié une girafe et tu n'as pas enregistré. Si personne est entrain de la modifier, réenregistre la.</p>
+    <?php elseif($user['id_last_girafe']==-1)://girafe modifiée?>
+        
+        <p>Attention! Quelqu'un a modifié une girafe et ne l'a pas enregistré. Si personne est entrain de la modifier, réenregistres la.</p>
+    <?php elseif($user['id_last_girafe']==-2)://était dans une girafe modifiée et a été enlevé?>
+        <p>Tu étais dans une girafe, mais tu a été enlevé...</p>
     <?php else :?>
-    <p>Ta dernière girafe était le <?php echo $lastGirafeUser['date']; ?></br>
+        <?php 
+        foreach($last_girafes as $last_girafe){
+            if($user['id_last_girafe']==$last_girafe['id_girafe']){
+                $lastGirafeUser=$last_girafe;
+            }
+        }
+        
+        $_SESSION['user']=$user;
+        $_SESSION['lastGirafeUser']=$lastGirafeUser;
+        $chasseurs=unserialize($lastGirafeUser['adr']);
+        
+        function loginToName($login,$grfs){
+            $bool=true;
+            $i=0;
+            while($bool){
+                if($grfs[$i]['login']==$login){
+                    $bool=false;
+                    return $grfs[$i]['prenom'];
+                }
+                $i++;
+            }
+    
+        }?>
+    <p>Ta dernière girafe était à <?php echo $lastGirafeUser['date']; ?></br>
         Tu as chassé avec : 
         <?php foreach($chasseurs as $chasseur){
             echo loginToName($chasseur,$girafes) ?>, 
@@ -87,9 +97,23 @@ include 'header.php';
     <form action="resetBalance.php" method='post' onSubmit="return confirm('Es-tu sûr de reset ta note?') " >
         <input type="submit" value="J'ai payé ma note">
     </form>
-    <p>La dernière fois que tu as payé ta note est le : <?php echo $user['dateLastPayment']?></p>
+    <p style='margin-bottom:2em'>La dernière fois que tu as payé ta note est le : <?php echo $user['dateLastPayment']?></p>
+    <?php if($_SESSION['username']=='2021goulletba'){
+        echo '<a href="temporaire/ajoutAdr.php" style="
+        font-size:1rem;
+        text-decoration:none;
+        border-radius: 10px;
+        background-color:#506AD4;
+        color:#FFFCE6;
+        border:#506AD4;
+        padding: 8px 12px;
+        ">Ajouter AdR</a>
+        ';
+    } ?>
 
+    
     </div>
+
 
 
     
