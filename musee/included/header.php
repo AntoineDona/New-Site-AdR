@@ -24,7 +24,7 @@
                 <li class="espace_adr">
                 <a href="/musee/girafe/index.php" class="nav-link">Girafe</a>
             </li>
-            <? else:?>
+            <?php else:?>
                 <li class="espace_adr">
                 <a href="/musee/connexion.php" class="nav-link <?php if ($page == 'connexion') {
                                                                     echo "current";
