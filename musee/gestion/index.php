@@ -2,22 +2,7 @@
 
 <?php
 session_start();
-// $DBhost  = "localhost";
-// $DBowner = "root";
-// $DBpw    = "";
-// $DBName  = "adr";
-// $DBconnect = "mysql:dbname=".$DBName.";host=".$DBhost;
 
-
-// try
-// {
-//     $pdo = new PDO($DBconnect, $DBowner, $DBpw);
-// 	// $db = new PDO('mysql:host=localhost;port=3306;dbname=adr;charset=utf8', 'root', 'root',[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
-// }
-// catch (Exception $e)
-// {
-//         die('Erreur : ' . $e->getMessage());
-// }
 
 include 'database.php'; 
 
@@ -39,7 +24,7 @@ if (isset($_POST["username"]) and isset($_POST['password'])) //si on a bien subm
     $_SESSION['nadrNombre']=0;
     $_SESSION['checkModif']=false;//lorsque l'on vient de connecter, on défini la variable de session pour les modif de girafes
     
-    if (check_user($girafes,$_POST['username']) and $_POST['password'] == "p") {
+    if (check_user($girafes,$_POST['username']) and $_POST['password'] == "girafekiller") {
         $_SESSION['is_connected'] = True;
         $_SESSION['incorrect'] = False;
 ?>
