@@ -2,8 +2,14 @@
 session_start();
 $page='ajout girafe';
 $girafes=$_SESSION['girafe'];
+if(!isset($_SESSION['is_connected'])){
+    header('Location:/musee/connexion.php');
+}
+elseif(isset($_SESSION['is_connected']) and !$_SESSION['is_connected']){
+    header('Location:/musee/connexion.php');
+}
 include '../gestion/database.php';
-
+include '../included/meta.php';
 
 // définition des prix en fonction de la girafe et du nombre de chasseur
 $price=array(
@@ -42,11 +48,11 @@ $_SESSION['litre']=$litre;
         <h1 style='font-size:3em;'>Choisis les caractéristiques de la girafe</h1>
         <!-- bouton de nombre de chasseur -->
         <p >Nombre de personne non AdR : <br/></p>
-        <input type="number" name="counter_nadr" required="required" value=<?php echo $_SESSION['nadrNombre'] ?> min='0' id='button-nadr' >
+            <input type="number" name="counter_nadr" required="required" value=<?php echo $_SESSION['nadrNombre'] ?> min='0' id='button-nadr' >
         <p>
-            Sélectionnez les chasseurs :<br />
+            Sélectionnez les chasseurs :<br /></p>
             <!-- autre facon de le faire : https://developer.mozilla.org/fr/docs/Web/HTML/Attributes/multiple -->
-            <?php
+            <div id='check-div'><?php
             foreach($girafes as $girafe){
                 if($girafe['login']==$_SESSION['username']){
                     $user=$girafe;
@@ -60,12 +66,12 @@ $_SESSION['litre']=$litre;
                 }
             }
             foreach($girafes as $girafe){
-                echo '<input type="checkbox" name="'.$girafe['login'].'" id="'.$girafe['login'].'" class="check-with-label" '.checked($_SESSION['checkModif'],$girafe['login'],$user).' /> <label for="'.$girafe['prenom'].'" class="label-for-check" >'.$girafe['prenom'].'</label><br />';
+                echo '<div class="check-label-div"><input type="checkbox" name="'.$girafe['login'].'" id="'.$girafe['login'].'" class="check-with-label" '.checked($_SESSION['checkModif'],$girafe['login'],$user).' /> <label for="'.$girafe['prenom'].'" class="label-for-check" >'.$girafe['prenom'].'</label><br /></div>';
             }
             ?>
-        </p>
+        </div>
         <p>Ne pas dépasser <strong>10 chasseurs</strong></p>  
-        <label for="type-grf">Quelle est votre girafe ?</label>
+        <label for="type-grf" style="font-size:2rem">Quelle est votre girafe ?</label>
         <input type="text" multiple name="type-grf" id="type-grf" list="2-types-grf" required size="64">
 
         <datalist id="2-types-grf">
@@ -73,9 +79,9 @@ $_SESSION['litre']=$litre;
         <option value="22€">Girafe haut de gamme</option>
         </datalist>
 
-        <input type="submit" value="Partager la girafe">
+        </br><input type="submit" value="Partager la girafe">
     </form>
-    <form action="reset_db.php"><input type="submit" value="reset"></form>
+    <form action="temporaire/reset_db.php"><input type="submit" value="reset"></form>
     <?php 
     if(isset($_SESSION['incorrect_grf']) and $_SESSION['incorrect_grf']){
         echo '<p style="color:red">'.$_SESSION['message'].'</p>';

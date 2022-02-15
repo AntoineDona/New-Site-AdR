@@ -39,7 +39,7 @@ else{
 
     // ajout de la girafe dans la db avec les adr, les non adr et la date  
     date_default_timezone_set('Europe/Paris');
-    $date=date('d.m H:i');
+    $date=date('H:i');
     $sqlQuery='INSERT INTO last_girafe(prix,nadr,adr,date) VALUES (:prix,:nadr,:adr,:date)';
     $insertLast_girafe=$pdo->prepare($sqlQuery);
     $insertLast_girafe->execute([
@@ -128,6 +128,13 @@ else{
 
 
 }
+
+//une personne qui était initalement dans la girafe mais qui l'est plus, -2 signifie qu'il a fait des girafes et que on ne peut plus retrouver la trace de ses anciennes (on peut mais c'est chiant et inutile)
+$sqlQuery='UPDATE girafe SET id_last_girafe=:id_last_girafe WHERE id_last_girafe =-1';
+$insertGirafe=$pdo->prepare($sqlQuery);
+$insertGirafe->execute([
+    'id_last_girafe'=>-2,
+]) or die(print_r($pdo->errorInfo()));
 
 
 ?>

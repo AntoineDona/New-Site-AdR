@@ -4,12 +4,12 @@ $DBhost  = "localhost";
 $DBowner = "root";
 // $DBpw    = $_ENV["db_password"];
 $DBpw    = "root";
-$DBName  = "adr";
+$DBName  = "musee";
 
 $DBconnect = "mysql:port=3306;dbname=".$DBName.";host=".$DBhost;
 
 
-$pdo = new PDO('mysql:'.$DBhost.';port=3306;dbname=adr', $DBowner, $DBpw,array(
+$pdo = new PDO('mysql:'.$DBhost.';port=3306;dbname='.$DBName.'', $DBowner, $DBpw,array(
     PDO::MYSQL_ATTR_INIT_COMMAND => "SET CHARACTER SET utf8, NAMES utf8",
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_EMULATE_PREPARES   => false,
