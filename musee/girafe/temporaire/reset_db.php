@@ -1,3 +1,6 @@
+<!-- 
+faire attentoin a ce fichier, il réanitialise toutes les données, à éviter
+
 <?php
 session_start();
 $girafes=$_SESSION['girafe'];
@@ -21,4 +24,4 @@ $insertGirafe->execute([
     ]) or die(print_r($pdo->errorInfo()));}
 ?>
     <meta http-equiv="Refresh" content="0;url=../../girafe/index.php" /> 
-
+ -->

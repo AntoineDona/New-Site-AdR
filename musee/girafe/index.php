@@ -81,13 +81,10 @@ $_SESSION['litre']=$litre;
 
         </br><input type="submit" value="Partager la girafe">
     </form>
-    <form action="temporaire/reset_db.php"><input type="submit" value="reset"></form>
+    <!-- <form action="temporaire/reset_db.php"><input type="submit" value="reset"></form> -->
     <?php 
     if(isset($_SESSION['incorrect_grf']) and $_SESSION['incorrect_grf']){
         echo '<p style="color:red">'.$_SESSION['message'].'</p>';
-    }
-    foreach($_SESSION['price']['17€'] as $key=>$prix){
-        echo 'le prix pour '.$key.' personnes est '.$prix;?></br><?php 
     }
     ?>
     </div>
