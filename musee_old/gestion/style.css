@@ -1,0 +1,118 @@
+/* Reset page style */
+
+*, html, body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+/* Header --------------------------------------------------------------------------------*/
+
+header {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 6rem;
+    min-height: 6rem;
+    z-index: 10000;
+    background-color: rgba(249, 252, 255, 0.9);
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.493);
+    transition: all 0.2s ease-in;
+}
+
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    min-width: 50px;
+    width: 250px;
+    padding-top: max(6.4rem, 6.4vh);
+    z-index: 1000;
+    background-color: rgba(249, 252, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in, border 0.4s ease;
+    margin: none;
+    margin-right: unset;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.253);
+}
+
+.espace_adr {
+    position: unset;
+    margin-top: 30vh;
+    margin-bottom: 4rem;
+}
+
+.nav-links li:nth-of-type(1) {
+    margin-left: unset;
+    margin-top: 4rem;
+}
+
+.nav-links li {
+    opacity: 0;
+    margin-left: unset;
+}
+
+/* .nav-item {
+    /* padding:10rem 0;
+} */
+
+.nav-links a {
+    font-size: 2rem;
+}
+
+nav a:hover {
+    font-size: 2.5rem;
+    transition: all 0.2s ease-in;
+}
+
+.nav-links .current {
+    font-size: 2.5rem;
+}
+
+nav h1 {
+    display: block;
+    flex-grow: 1;
+    margin-right: 8rem;
+    text-align: center;
+    font-size: 3rem;
+}
+.onglets {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+}
+
+button {
+    width: 100%;
+    margin: auto;
+    padding: 0.8rem 0.8rem;
+    font-size: 1.8rem;
+    background-color: white;
+    border-radius: 0.4rem;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(78, 78, 78);
+    color: white;
+    cursor: pointer;
+    /* transition: all 0.3s; */
+}
+
+/* Menu --------------------------------------------------------------------------------*/
+
+.categorie{
+    background-color: white;
+}

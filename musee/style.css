@@ -668,10 +668,10 @@ input[type="checkbox"]:checked+label {
     transition: 0.2s ease-in-out;
 }
 
-input[type="checkbox"]:not(:checked)+label {
+/* input[type="checkbox"]:not(:checked)+label {
     color: rgb(78, 78, 78);
     transition: 0.2s ease-in-out;
-}
+} */
 
 .carte #submit {
     color: #fff;
