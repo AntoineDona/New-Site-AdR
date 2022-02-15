@@ -23,7 +23,7 @@
                 <li class="espace_adr">
                 <a href="/musee/girafe/logout.php" class="nav-link">Déconnexion</a>
             </li>
-            <? else:?>
+            <?php else:?>
                 <li class="espace_adr">
                 <a href="/musee/connexion.php" class="nav-link <?php if ($page == 'connexion') {
                                                                     echo "current";
