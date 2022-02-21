@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background: rgb(78, 78, 78) no-repeat center; */
+  }
+  
+  .base {
+    width: 500px;
+    border-top: 5px solid gray;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    padding: 0 0 30px;
+  }
+  
+  .holder {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background: black;
+    margin: auto;
+    border-radius: 0 0 50% 50%;
+  }
+  
+  .chain {
+    display: inline-block;
+        /* width: 2px;
+        height: 200px;
+        background: black;
+        border-radius: 5px; */
+    position: relative;
+    transform-origin: 50% 0;
+    animation: moveIt 4.5s ease-in-out infinite;
+  }
+  
+  
+    
+  .wrecking-ball {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: -9px;
+  }
+  .wrecking-ball img{
+      position: relative;
+      left:50%;
+      transform: translateX(-50%);
+      width:15rem;
+  }
+  
+  
+  .shadow {
+    width: 30px;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin: 50px auto 0;
+    animation: moveShade 2s ease-in-out alternate infinite;
+  }
+  
+  @keyframes moveIt {
+    0%, 100% {
+      transform: rotate(45deg);
+    }
+    50% {
+      transform: rotate(-45deg);
+    }
+  }
+  
+  @keyframes moveShade {
+    0% {
+      transform: translateX(-220px) scale(1.4, .5);
+      filter: blur(20px);
+    }
+    50% {
+      filter: blur(3px);
+    }
+    100% {
+      transform: translateX(220px) scale(1.4, .5);
+      filter: blur(20px);
+    }
+  }
+  
