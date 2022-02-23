@@ -32,6 +32,7 @@ main{
     text-align: left;
     border-radius: 12px;
     padding:2em;
+    margin:1em;
 }
 .description_event h2{
     font-size: 2em;
