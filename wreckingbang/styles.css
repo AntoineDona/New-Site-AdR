@@ -437,6 +437,9 @@ body:before{
       #counter{
           margin-top:0;
       }
+      .base{
+        margin-bottom:0;
+      }
 }
 @media screen and (max-width:450px)  {
   .wrecking-ball img{
@@ -444,6 +447,9 @@ body:before{
   }
   #counter{
       margin-top:0;
+  }
+  .base{
+    margin-bottom:0;
   }
 }
 
