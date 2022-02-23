@@ -27,6 +27,11 @@
                     N'oublie pas ton pass sanitaire pour festoyer comme il se doit !💃</br>
                     Le lien du shotgun : <a href="/guantanano/">ici</a></p>
                 </div>
+                <div class="description_event">
+                <div ><img src="img/iconBall.png" alt="icon ball"><h2>Wrecking Bang</h2><img src="img/iconBall.png" alt="icon ball"></div>
+                    <p>Une envie de vous défouler dès le retour des vacances?😮
+Alors on vous attend très chauds le 11 Mars de 23h à 5h au Wrecking Bang 🏗️ pour un chantier des plus festifs...🎉<a href="/wreckingbang/">ici</a></p>
+                </div>
             </div>
         </section>
     </main>
