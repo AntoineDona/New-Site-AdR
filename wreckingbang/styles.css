@@ -116,7 +116,10 @@ body:before{
   @media screen and (max-width:550px) and (min-width:450px) {
       .wrecking-ball img{
             width: 35vw;
-      }
+          }
+          #counter{
+              margin-top:10px;
+          }
   }
   @media screen and (max-width:450px)  {
       .wrecking-ball img{
