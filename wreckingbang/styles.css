@@ -432,8 +432,13 @@ body:before{
       background-size: 100%  ;
       background-position: top;
       width: 100%;
+      height: 75vh;
   
   }
+  #pre-first-block{
+    height: 75vh;
+  }
+
 }
 
 /* Fonts ------------------------------------------------------------------------------------------------------------------------------ */
