@@ -432,7 +432,7 @@ body:before{
 }
 @media screen and (max-width:550px) and (min-width:450px) {
   .wrecking-ball img{
-        width: 35vw;
+        width: 40vw;
       }
       #counter{
           margin-top:0;
@@ -443,7 +443,7 @@ body:before{
 }
 @media screen and (max-width:450px)  {
   .wrecking-ball img{
-        width: 45vw;
+        width: 50vw;
   }
   #counter{
       margin-top:0;
