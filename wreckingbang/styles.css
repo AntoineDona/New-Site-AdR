@@ -108,27 +108,7 @@ body:before{
       transform: translateX(-50%);
       width:20vw;
   }
-  @media screen and (max-width:800px) and (min-width:550px) {
-      .wrecking-ball img{
-            width: 25vw;
-      }
-  }
-  @media screen and (max-width:550px) and (min-width:450px) {
-      .wrecking-ball img{
-            width: 35vw;
-          }
-          #counter{
-              margin-top:10px;
-          }
-  }
-  @media screen and (max-width:450px)  {
-      .wrecking-ball img{
-            width: 45vw;
-      }
-      #counter{
-          margin-top:10px;
-      }
-  }
+
   
   
   /* .shadow {
@@ -235,8 +215,7 @@ body:before{
     justify-content: center;
     font-size: 6vw;
     margin: 40px 0 0 0;
-}
-
+  }
 
 /* places et lien  */
 
@@ -445,6 +424,27 @@ body:before{
     height: 75vh;
   }
 
+}
+@media screen and (max-width:800px) and (min-width:550px) {
+  .wrecking-ball img{
+        width: 25vw;
+  }
+}
+@media screen and (max-width:550px) and (min-width:450px) {
+  .wrecking-ball img{
+        width: 35vw;
+      }
+      #counter{
+          margin-top:0;
+      }
+}
+@media screen and (max-width:450px)  {
+  .wrecking-ball img{
+        width: 45vw;
+  }
+  #counter{
+      margin-top:0;
+  }
 }
 
 /* Fonts ------------------------------------------------------------------------------------------------------------------------------ */
