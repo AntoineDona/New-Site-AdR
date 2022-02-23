@@ -115,12 +115,12 @@ body:before{
   }
   @media screen and (max-width:550px) and (min-width:450px) {
       .wrecking-ball img{
-            width: 30vw;
+            width: 35vw;
       }
   }
   @media screen and (max-width:450px)  {
       .wrecking-ball img{
-            width: 40vw;
+            width: 45vw;
       }
   }
   
