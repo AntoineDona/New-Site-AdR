@@ -2,8 +2,8 @@
 //config SQL
 $DBhost  = "localhost";
 $DBowner = "root";
-$DBpw    = "Morangis91";
-// $DBpw    = "root";
+// $DBpw    = "Morangis91";
+$DBpw    = "root";
 $DBName  = "musee";
 
 $DBconnect = "mysql:port=3306;dbname=".$DBName.";host=".$DBhost;
