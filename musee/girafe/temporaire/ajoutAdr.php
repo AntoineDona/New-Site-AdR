@@ -23,12 +23,11 @@ session_start();
     }
 </style>
 <body>
-    <!-- <?php if($_SESSION['username']=='2021goulletba'):?> -->
-        <form method="post" action="ajoutAdrGestion.php">
+    <form method="post" action="ajoutAdrGestion.php">
         <label for="type-grf" >Quelle est votre pôle ?</label>
-            <input type="text" multiple name="type-pole" id="type-pole" list="types-pole" required size="32">
-    
-            <datalist id="types-pole">
+        <input type="text" multiple name="type-pole" id="type-pole" list="types-pole" required size="32">
+        
+        <datalist id="types-pole">
             <option value="bar"></option>
             <option value="buro"></option>
             <option value="CQ"></option>
@@ -39,12 +38,14 @@ session_start();
             <option value="Khoopé"></option>
             <option value="Eventos"></option>
             <option value="Rez"></option>
-            </datalist>
+        </datalist>
     </br><label for="prenom">Donnez votre prénom (si vous faites partie des doublons, précisez la première lettre du nom, ex : Bastien G) : </label><input type="text" name='prenom' required>
     </br><label for="surnom">Choisir un surnom : </label><input type="text" name='surnom' required>
-    </br><label for="loginVR">Donnez votre indentifiant VR : </label><input type="text" name='loginVR' required>
-        </form>
-    <!-- <?php else: ?>
+</br><label for="loginVR">Donnez votre indentifiant VR : </label><input type="text" name='loginVR' required>
+<input type="submit" value="Envoyer">
+</form>
+<!-- <?php if($_SESSION['username']=='2021goulletba'):?> -->
+<!-- <?php else: ?>
         <p>Tu n'as pas accès à cette page, demande à ton VP Geek préféré</p>
     <?php endif;?> -->
 </body>
