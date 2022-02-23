@@ -7,6 +7,7 @@ body{
     
     /* background: linear-gradient(to bottom, black, black 90vh, #485058 140vh)  ; */
     background-size: 100%  ;
+    background-color: black;
     background-position: top;
     font-family: 'gilmer','constructionLine';
     font-style: bold;
@@ -18,7 +19,7 @@ body:before{
     background:center url(img/bck1.png) ;
     position: fixed;
     left: -25px;
-    height: 110%; width: 110%;
+    height: 115%; width: 115%;
     filter:blur(10px);
     background-size: cover;
     z-index: -1;
@@ -114,12 +115,12 @@ body:before{
   }
   @media screen and (max-width:550px) and (min-width:450px) {
       .wrecking-ball img{
-            width: 35vw;
+            width: 30vw;
       }
   }
   @media screen and (max-width:450px)  {
       .wrecking-ball img{
-            width: 45vw;
+            width: 40vw;
       }
   }
   
@@ -424,6 +425,15 @@ body:before{
     }
 
     
+}
+@media screen and (max-width:450px) {
+  #first-block{
+      background: no-repeat center url(img/bck.png);
+      background-size: 100%  ;
+      background-position: top;
+      width: 100%;
+  
+  }
 }
 
 /* Fonts ------------------------------------------------------------------------------------------------------------------------------ */
