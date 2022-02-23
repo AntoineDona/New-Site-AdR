@@ -122,6 +122,9 @@ body:before{
       .wrecking-ball img{
             width: 45vw;
       }
+      #counter{
+          margin-top:10px;
+      }
   }
   
   
