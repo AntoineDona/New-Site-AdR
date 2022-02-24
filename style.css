@@ -245,15 +245,11 @@ nav {
 /* general classes  */
 
 .hero {
-  widows: 100%;
+  width: 100%;
   height: 100vh;
   background-position: center center;
   background-size: cover;
-  max-height: 999px;
   overflow: hidden;
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -503,48 +499,120 @@ a.anchor {
 /* Events ------------------------------------------------------------------------------------------------------------ */
 
 .events {
-  background-image: url(images/quadrabang.jpg);
-  widows: 100%;
-  height: 100vh;
-  background-position: center center;
-  background-size: cover;
-  max-height: 999px;
-  overflow: hidden;
+  background-image: url(/events/christmasbang.jpg);
   position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  text-align: center;
   z-index: 0;
 }
 
-/* @media screen and (max-width: 1000px){
-    .hero_events{
-        background-image: url(images/affiche_cyberbang_telephone.jpg)
-    }
-} */
-
-.events a {
-  margin: auto;
-  margin-top: 60vh;
-}
-
-#lien_resa:hover {
-  width: 32vw;
-  transition: all 0.3s;
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0rem 0rem 2rem 2rem rgba(255, 255, 255, 0.2);
-  border-radius: 2rem;
-}
-
 #lien_resa {
-  width: 30vw;
-  min-width: 20rem;
-  max-width: 35rem;
+  position: absolute;
+  top: 70vh;
   margin: auto;
+  margin-top: 5rem;
+  font-size: 5rem;
+  font-family: Christmas, Arial, Helvetica, sans-serif;
+  color: white;
   transition: all 0.3s;
+  z-index: 0;
 }
+
+.events .container{
+  display: flex;
+  flex-direction: column;
+}
+
+
+@font-face {
+  font-family: "Christmas";
+  src: url("christmasbang/fonts/CHRISTMAS\ DAY.otf") format("opentype");
+  color: white;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.to_come{
+  z-index: 1;
+  position: relative;
+  background-color: black;
+  box-shadow: 0 -10px 10px 5px black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.to_come h2{
+  font-size: 4rem;
+  margin-bottom: 5rem;
+}
+
+.event{
+  position: relative;
+  width: 70rem;
+  max-width: 70vw;
+  height: 25rem;
+}
+
+.background{
+  position: absolute;
+  height: 100%;
+  width: 70rem;
+  max-width: 70vw;
+  background-image: url('/events/christmasbang.jpg');
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.content{
+  position: absolute;
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+  width: 70rem;
+  height: 100%;
+  max-width: 70vw;
+  min-width: 50rem;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.event .infos{
+  background-color: rgba(255, 255, 255, 0.699);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  text-align: center;
+}
+
+.event_img{
+  background-image: url('/events/christmasbang.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.infos h3{
+  font-size: 2.5rem;
+}
+
+.infos h4{
+  font-size: 1.5rem;
+}
+
+.infos a{
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 
 /* La REZ ------------------------------------------------------------------------------------------ */
 
