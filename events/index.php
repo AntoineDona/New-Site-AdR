@@ -33,7 +33,6 @@
 Alors on vous attend très chauds le 11 Mars de 23h à 5h au Wrecking Bang 🏗️ pour un chantier des plus festifs...🎉<a href="/wreckingbang/">ici</a></p>
                 </div>
             </div>
-            <a href="/christmasbang/" id="lien_resa">Lien du Christmas Bang</a>
         </section>
         <section class="to_come">
             <h2>Evenements à venir</h2>
