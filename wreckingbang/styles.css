@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    /* background: linear-gradient(to bottom, black, black 90vh, #485058 140vh)  ; */
+    background-size: 100%  ;
+    background-color: black;
+    background-position: top;
+    font-family: 'gilmer','constructionLine';
+    font-style: bold;
+    text-align: center;
+    color: white;
+}
+body:before{
+    content:"";
+    background:center url(img/bck1.png) ;
+    position: fixed;
+    left: -25px;
+    height: 115%; width: 115%;
+    filter:blur(10px);
+    background-size: cover;
+    z-index: -1;
+}
+/* image de l'arrivée sur la page */
+#first-block{
+    background: no-repeat center url(img/bckPanov2.png), linear-gradient(to bottom, black, black 95vh, #485058 140vh);
+    background-size: auto 100%;
+    background-position: top;
+    height: 95vh;
+    width: 100%;
+
+}
+#pre-first-block{
+    background:  linear-gradient(to bottom, black, black 95vh, #485058 140vh);
+    background-size: auto 100%;
+    background-position: top;
+    height: 95vh;
+    width: 100%;
+
+}
+
+#degrade-block{
+    height: 15vh;
+    width: 100%;
+    background: linear-gradient(to bottom, black, rgb(0,0,0,0) 15vh)  ;
+    color: white;
+}
+
+@media screen and (min-width:980px) {
+    #first-block{
+        background: no-repeat center url(img/bckPanov2.png);
+        background-size: 100%  ;
+        background-position: top;
+        width: 100%;
+    
+    }
+  }
+  
+/* la boule qui se balance */
+
+  .base {
+    /* border-top: 5px solid gray; */
+    margin: auto;
+    margin-top:1rem;
+    text-align: center;
+    position: relative;
+    top: -40px;
+    padding: 0 0 30px;
+    height: 32vh;
+    /* background-color: white; */
+  }
+  
+  /* .holder {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background: black;
+    margin: auto;
+    border-radius: 0 0 50% 50%;
+  } */
+  
+  .chain {
+    display: inline-block;
+        /* width: 2px;
+        height: 200px;
+        background: black;
+        border-radius: 5px; */
+    position: relative;
+    transform-origin: 50% 0;
+    animation: moveIt 4.6s ease-in-out infinite;
+  }
+  
+  
+    
+  .wrecking-ball {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: -9px;
+  }
+  .wrecking-ball img{
+      position: relative;
+      left:50%;
+      transform: translateX(-50%);
+      width:20vw;
+  }
+
+  
+  
+  /* .shadow {
+    width: 30px;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin: 50px auto 0;
+    animation: moveShade 2.3s ease-in-out alternate infinite;
+  } */
+  
+  @keyframes moveIt {
+    0%, 100% {
+      transform: rotate(45deg);
+    }
+    50% {
+      transform: rotate(-45deg);
+    }
+  }
+  
+  @keyframes moveShade {
+    0% {
+      transform: translateX(-220px) scale(1.4, .5);
+      filter: blur(20px);
+    }
+    50% {
+      filter: blur(3px);
+    }
+    100% {
+      transform: translateX(220px) scale(1.4, .5);
+      filter: blur(20px);
+    }
+  }
+
+  /* Hero aka scroll arrows ---------------------------------- */
+
+.quadra {
+    position: relative;
+    height: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: black;
+  }
+  
+  .scroll-arrow {
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    animation: arrow-wave 1s infinite;
+    animation-direction: alternate;
+  }
+  
+  .scroll-arrow:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .scroll-arrow:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .scroll-arrow:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  
+  @keyframes arrow-wave {
+    0% {
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 0.5;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  #anchor {
+    position: absolute;
+    margin-top: 200vh;
+  }
+/* décompte */
+
+#scroll{
+    color: white ;
+    background-color: none;
+    font-size:2rem;
+    margin-top: 1em;
+}
+#scroll h3{
+    margin-top:2rem;
+    text-align: center;
+}
+#counter{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 6vw;
+    margin: 40px 0 0 0;
+  }
+
+/* places et lien  */
+
+#places-link{
+    width:50%;
+    margin: 40px 0 100px 50%;
+    transform: translateX(-50%);
+    padding: 2em;
+}
+.panneau {
+    background: white;
+    border: solid #BF213E 10px;
+    border-radius: 12px;
+    width:225px;
+    padding: 12px 8px;
+    color: black;
+}
+
+#billeterie{
+    background:#049DD9;
+    border: solid white 2px;
+    box-shadow: 0 0 0 1px black;
+    width:6rem;
+    height:6rem;
+    padding: 6px;
+    border-radius: 50%;
+    color:white;
+    text-decoration: none;
+    animation: reflet 1.5s infinite linear alternate;
+}
+@keyframes reflet{
+    0%{
+        background:#049DD9;
+    }
+    100%{
+        background: #50cdff;
+    }
+}
+
+#barre{
+    height: 250px;
+    width: 10px;
+    background-color:#594736 ;
+}
+.liaison-barre{
+    height: 10px;
+    width: 20px;
+    background-color:#594736 ;
+}
+.content-panneau{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+#place{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.place-disp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#panneau-up{
+    position:relative;
+    top:-3rem;
+}
+#panneau-down{
+    position:relative;
+    top:2rem;
+}
+@media screen and (max-width:640px){
+    .panneau{
+        width: 100px;
+        font-size: 0.8rem;
+    }
+}
+/* Partenaires ----------------------*/
+
+.partenaires {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.partenaires h3{
+    font-size: 4rem;
+    margin: 50px 0 20px 0;
+  }
+  
+  .partner_ctnr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .partner_ctnr img {
+    margin: 1.5rem 2rem;
+    width: 6rem;
+    height: auto;
+    transition: opacity 0.2s ease;
+  }
+  
+  .partner_ctnr a:hover img {
+    opacity: 0.6;
+    transition: opacity 0.4s ease;
+  }
+
+/* informations */
+.informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .informations p,
+  .informations ul {
+    font-size: 1.5rem;
+    margin: 4rem 0;
+  }
+  
+  .informations ul {
+    text-align: left;
+  }
+  
+  .informations a {
+    color: white;
+  }
+  
+  .informations h3 {
+    font-size: 4rem;
+  }
+  .informations h4 {
+    font-size: 3rem;
+  }
+  
+  footer{
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.5rem;
+    padding: 2rem;
+  }
+  
+  footer a{
+    color: white;
+    text-decoration: none;
+  }
+
+
+
+/* responsive */
+@media screen and (orientation: portrait),screen and (max-width:800px){
+    #scroll h3{
+        font-size: 1.5rem;
+    }
+    #counter{
+        font-size: 10vw;
+    }
+    section{
+        padding: 0 20px;
+    }
+    /* .informations h3{
+        font-size: 2rem;
+        margin: 20px 0;
+    } */
+    .informations h4{
+        font-size: 2rem;
+    }
+    .informations h3{
+        font-size: 2.5rem;
+    }
+    .informations p{
+        font-size: 1rem;
+    }
+    .informations ul{
+        font-size: 1rem;
+        margin: 20px  10px 0 0px;
+    }
+    .partenaires h3{
+        font-size: 2.5rem;
+    }
+    .partenaires img{
+        width: 3rem;
+        margin: 1rem 1.5rem;
+
+    }
+
+    
+}
+@media screen and (max-width:450px) {
+  #first-block{
+      background: no-repeat center url(img/bck.png);
+      background-size: 100%  ;
+      background-position: top;
+      width: 100%;
+      height: 75vh;
+  
+  }
+  #pre-first-block{
+    height: 75vh;
+  }
+
+}
+@media screen and (max-width:800px) and (min-width:550px) {
+  .wrecking-ball img{
+        width: 25vw;
+  }
+}
+@media screen and (max-width:550px) and (min-width:450px) {
+  .wrecking-ball img{
+        width: 40vw;
+      }
+      #counter{
+          margin-top:0;
+      }
+      .base{
+        margin-bottom:0;
+      }
+}
+@media screen and (max-width:450px)  {
+  .wrecking-ball img{
+        width: 50vw;
+  }
+  #counter{
+      margin-top:0;
+  }
+  .base{
+    margin-bottom:0;
+  }
+}
+
+/* Fonts ------------------------------------------------------------------------------------------------------------------------------ */
+
+/* @font-face {
+    font-family: "CaviarDreams";
+    src: url("fonts/CaviarDreams.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  } */
+  
+  @font-face {
+    font-family: "constructionLine";
+    font-weight: normal;
+    src: url("fonts/constructionLines.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "gilmer";
+    font-weight: normal;
+    src: url("fonts/gilmer.otf") format("opentype");
+  }
+  
+  
+  
+  
+
+  

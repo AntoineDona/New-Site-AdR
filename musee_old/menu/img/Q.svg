@@ -1,0 +1,42 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 100 100" xml:space="preserve">
+<g>
+	<pattern id="water-red" width=".25" height="1.8" patternContentUnits="objectBoundingBox">
+		<path fill="#dd2528" d="M0.25,1.7 h-0.25 v-1.5 c0.083,-0.103 0.158,0.134 0.25,0z"/>
+	</pattern>
+	<pattern id="water-blue" width=".25" height="1.8" patternContentUnits="objectBoundingBox">
+		<path fill="#4990c5" d="M0.25,1.7 h-0.25 v-1.5 c0.083,-0.103 0.158,0.134 0.25,0z"/>
+	</pattern>
+
+	<text id="red" x="50" y="50"
+		font-size="55"
+		text-anchor="middle">
+    Q
+	</text>
+	<mask id="red-mask">
+		<use x="0" y="0" xlink:href="#red" opacity="1" fill="#fff"/>
+	</mask>	
+	<g id="red-eff">
+		<use x="0" y="0" xlink:href="#red" fill="#fff"/>
+		<rect class="water-fill" mask="url(#red-mask)" fill="url(#water-red)" x="-300" y="-75" width="1200" height="280" opacity="0.4">
+			<animate attributeType="xml" attributeName="x" from="-300" to="0" repeatCount="indefinite" dur="3s"/>
+			<animate id="animation" attributeType="xml" attributeName="y" from="200" to="-75" dur="8s" begin="fade_out.end"/>
+		</rect>
+		<rect class="water-fill" mask="url(#red-mask)" fill="url(#water-red)" y="-80" width="1600" height="280" opacity="0.4">
+			<animate attributeType="xml" attributeName="x" from="-400" to="0" repeatCount="indefinite" dur="4s"/>
+			<animate id="animation" attributeType="xml" attributeName="y" from="200" to="-80" dur="8s" begin="fade_out.end"/>
+		</rect>
+		<rect class="water-fill" mask="url(#red-mask)" fill="url(#water-red)" y="-70" width="800" height="280" opacity="0.4">
+			<animate attributeType="xml" attributeName="x" from="-200" to="0" repeatCount="indefinite" dur="2.4s"/>
+			<animate id="animation" attributeType="xml" attributeName="y" from="200" to="-70" dur="8s" begin="fade_out.end"/>
+		</rect>
+		<rect class="water-fill" mask="url(#red-mask)" fill="url(#water-red)" y="-70" width="2000" height="280" opacity="0.4">
+			<animate attributeType="xml" attributeName="x" from="-500" to="0" repeatCount="indefinite" dur="3.8s"/>
+			<animate id="animation" attributeType="xml" attributeName="y" from="200" to="-70" dur="8s" begin="fade_out.end"/>
+		</rect>
+	</g>
+	
+	
+	<animate id="fade_out" attributeType="xml" attributeName="opacity" from="1" to="0" begin="animation.end;0s" dur="1s"/>
+	<animate id="fade_in" attributeType="xml" attributeName="opacity" from="0" to="1" begin="fade_out.end" dur="1s"/>
+</g>
+</svg>
