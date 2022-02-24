@@ -29,9 +29,10 @@ function display_buttons($nbr_annees)
     </script>
     <?php include "../included/header.php" ?>
     <main id="swup" class="transition-fade">
-        <section class="hero adr2k21" id="adr2k21">
+        <section class="hero adr2k22">
             <div class="container">
-                <h1 class="headline"> Notre équipe </h1>
+            <h1 class="headline"> Notre équipe </h1>
+                
             </div>
         </section>
         <section class="poles">
@@ -41,20 +42,18 @@ function display_buttons($nbr_annees)
 
                 <div class="pole buro">
                     <h2 id="buro">⚙ Le Buro ⚙ </h2>
-                    <img class="prez" src="img_poles/Table.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/bureau-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                        Fraîchement élu, prêt à tout changer !!
-                        Que ce soit au niveau des résidences, des lieux de vie ou encore des différents évènements et activités proposés par l’AdRCS prochainement, nous avons pour objectif de faire ce pourquoi cette association a été créée, c’est à dire représenter et faire plaisir aux résidents du campus ! ❤❤
+                    Le bureau : c’est 4 personnes et tout autant de melons. les chevilles gonflées, ils tirent cette bande de chibrons contre vents et marées. Jamais derrière le bar mais prêts pour la bagarre.
                     </p>
                 </div>
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="ptitdej">🥐 VP P'tit Dej 🥐</strong></h2>
-                    <img class="prez" src="img_poles/ptit-dej.jpg" onclick="window.open(this.src,'_self')">
-                    <p>Voilà le pôle le plus important de l'AdR : LE P'tit Déj !! 🥐 
-                        Les seuls du campus capables de régaler ceux qui se lèvent pour suivre les cours 📚 autant que ceux qui détestent le sommeil et qui sont encore en nuit blanche 🔭 
-                        Cette courageuse équipe de lèves-tôt 🥱 saura te réveiller dans la meilleure des ambiances au Musée, au son de douces musiques (et parfois de cris stridents 👭). 
-                        Venez donc découvrir la délicieuse formule (et tout un tas d'autres choses🍏) de ces crèmes du p'tit dèj tous les matins entre 7h30 et 9h 🖤❤️</p>
+                    <img class="prez" src="img_poles/ptit-dej-2k22.jpg" onclick="window.open(this.src,'_self')">
+                    <p>
+                        Levés dès 7h30, les VP P'tit Dej seront là tous les matins sans faute ni retard pour vous proposer viennoiseries, jus, cafés, cookies, mais surtout leur formule à 2 euros jusqu'à 9h ! 🥐🌛 Venez vous rassasier au son d'une douce musique pour bien commencer votre journée ! 🧸
+                    </p>
                 </div>
 
 
@@ -62,11 +61,9 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="khafet">🍕 VP Khâfet 🍕</strong></h2>
-                    <img class="prez" src="img_poles/Khafet.jpg">
+                    <img class="prez" src="img_poles/Khafet-2k22.jpg">
                     <p>
-                    Ils se disent tous le meilleur pôle mais il n'y a qu'à regarder les chiffres pour voir que la khâfet est LE pôle le plus prisé. 
-                    La team Khâfet toujours au complet s'occupe de régaler le campus chaque midi de 11h45 à 13h45. 
-                    À la place de votre RU habituel, venez déguster les meilleures pizzas du campus mais aussi de bon petits plats maison préparés le jour même par notre ékip 🔥😋 !
+                    Bienvenue à la Khafiestaaa !! 🎉 Retrouvez notre équipe toute la semaine de 11h45 à 13h45 pour vous régaler de plats frais 🥗 ou de pizzas chaudes 🍕. Sous grosse playlist 🎶 et chorées improvisées 🕺, la khâfet relève le niveau de votre pause dej. À plus au Musée 💙💛💚💜
                     </p>
                 </div>
 
@@ -74,9 +71,9 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="khoope">🥪 VP Khoôpé 🥪</strong></h2>
-                    <img class="prez" src="img_poles/Kopé.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/khoopé-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                        Description Koôpée
+                    Tous les pôles se battent entre eux pour savoir lequel est le meilleur... Pourtant, il n'y a qu'un superpôle. Celui qui te sert des cookies bien chaud à 17h🍪, te nourrit jusqu’à 20h30🍕 et t'emmène proche de ton bonheur. Viens donc décompresser et chiller un bon coup à la Khoôpé!
                     </p>
                 </div>
 
@@ -84,11 +81,13 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="bar">🍺 VP Bar 🍺</strong></h2>
-                    <img class="prez" src="img_poles/Bar.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/bar-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                        Description du Bar
-                        <!-- Vous servir bière au musée et alcool en soirée (quand y’en aura), toujours être chaud(e) pour un BP (qu’on va gagner), nous et Bertrand le gérant du musée seront vos VPs bar cette année et telle est notre mission.
-                        Pour nous trouver, rien de bien compliqué, il suffit de passer au Musée à partir de 20h30, et venir nous défier si vous l’osez.-->
+                        BAAAAAAAAAAAAAAR 🍺
+                        Une petite faim ? Viens au bar.</br>
+                        Une grande soif ? Viens au bar.</br>
+                        Tu te fais chier ? Viens au bar.</br>
+                        Du lundi au jeudi dès 20h30 🕣
                     </p>
                 </div>
 
@@ -96,9 +95,9 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="soiree">💃 VP Soirées et VP CQ 🚚</strong></h2>
-                    <img class="prez" src="img_poles/cq-soirée.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/cq-soirée-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                        Description des pôles CQ et Soirée
+                    Rencontrez l'équipe qui organisera toutes vos festivités a échelle de CS ! La team imberbe 🧑‍🦲 à la soirée et la team barbue 🧔 à la CQ sauront vous régaler comme jamais. La première régalera vos meilleurs TU🕺, qui seront assurés et CQrisés 🚧 par les seconds. Entre quadra et nano,  crash et coup de Taser, une équipe de choc : t’as peur.
                     </p>
                 </div>
 
@@ -114,11 +113,10 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="eventos">🍣 VP Eventos 🍣</strong></h2>
-                    <img class="prez" src="img_poles/Eventos.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/Eventos-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                        Desciption du pôle Eventos
-                        <!-- Le pôle eventos est un mélange entre les douceurs culinaires espagnoles et le savoir-vivre français pour des apéros toujours plus qualis et des événements encore plus hardcore. Tout au long de l’année il te permettra d’assister à des afterwork endiablés au musée, à des cafés débats (si tu te sens pousser des ailes de philosophes), à la création d’un coin chill au musée et bien d’autres choses encore.
-                        Le pôle apéro pour des ienclis satisfaits. -->
+                        Voici le pôle Eventos, aka le pôle Camilles (ou Camcams pour les intimes)🥰.Nous nous chargons de réaliser des events, des expos et des apéros au Musée.🥂 N'hésitez pas à nous contacter pour réaliser un de ces événements avec nous!💃 Aucune restriction … on s'occupe de tout!🕺
+                        PS : pour avoir plein d’exclus, follow <a href='https://www.instagram.com/les_camilles_eventos/'>@les_camilles_eventos </a>
                     </p>
                 </div>
 
@@ -132,15 +130,9 @@ function display_buttons($nbr_annees)
 
                 <div class="pole rez" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="rez">🏚 VP Rez 🏚</strong></h2>
-                    <img class="prez" src="img_poles/Rez.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/Rez-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                        Le pôle rez est posté en bas des blocs de Césal toute l’année, été compris ☀️,
-                        pour représenter les résidents au quotidien 🏠, répondre à vos questions,
-                        être l’intermédiaire en cas de litige, proposer des améliorations des résidences comme notre superbe terrain de pétanque 🏆,
-                        gérer le matos et les prêts sur le campus, collaborer dans des projets sur tout le plateau de Saclay et évidemment peupler ce bon vieux Musée 🍻
-                        <!-- Puisque ça ne s'appelle pas l'Association des REZidents pour rien, c'est au tour du pôle Rez de se présenter.
-                        Vous avez déjà reçu notre mail de présentation la semaine dernière (et oui, on est des années lumières devant les autres pôles).
-                        Ce qu’il faut surtout retenir, c’est que Léonard Corre, le Prez Rez, et les trois VP Rez Alexandre Couret, Guillaume Raysseguier et Clément Franey sont là pour représenter les résidents devant CESAL, et ramener la Poly à la maison. (RIP) -->
+                        Chargé de la bonne ambiance sur le campus de Paris Saclay 🎉, le pôle Rez saura répondre à toutes tes questions concernant Césal en te représentant en tant que résident🏡, te proposer des projets sur le campus et dans ta rez 🏖 et te prêter un max de matos à toi et tes assos 🤝
                     </p>
                 </div>
 
@@ -148,11 +140,9 @@ function display_buttons($nbr_annees)
 
                 <div class="pole qom" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="qom">🧠 VP Qom 🧠</strong></h2>
-                    <img class="prez" src="img_poles/Qom.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/Qom-2k22.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                        Qom prévu le meilleur pour la fin, le Qoeur de l'AdR, le pôle qui fait tourner le Qampus, finalement j'ai nommé le pôle Qom. Nous faisons des visuels pour tous nos évènements genre soirées (quand y en aura), par des tentures, affiches, flyers, aQQompagnés de toute la QommuniQation qui en déQoule (fb, insta, snap, linkdIn, chatroulette, etc.). On en profite pour sharker quelques entreprises au passage :)
-                        On fait aussi dans l'import-export de tentures (et la peinture qui va aveQ), que l'on vous fournira à un prix Qordial ;)
-                        Nous sommes désolés pour l'othographe, on a quelques problèmes de Q à régler
+                        Et finalement les plus beaux Q de cette fine éQuipe ! J'ai nommé le pôle ✨Qom✨ ! Formés et Qualifiés pour vous servir , on régalera aveQ des visuels toujours plus Qualis pour annoncer au Qampus tous les évènements !
                     </p>
                 </div>
 
@@ -181,11 +171,51 @@ function display_buttons($nbr_annees)
                 <?php
                 // display_buttons(3); //POur générer les boutons (fleme de faire à la main)
                 ?>
-                <button onclick="showPanel(0)">2020</button>
-                <button onclick="showPanel(1)">2019</button>
-                <button onclick="showPanel(2)">2018</button>
-                <button onclick="showPanel(3)">2016</button>
+                <button onclick="showPanel(0)">2021</button>
+                <button onclick="showPanel(1)">2020</button>
+                <button onclick="showPanel(2)">2019</button>
+                <button onclick="showPanel(3)">2018</button>
+                <button onclick="showPanel(4)">2016</button>
             </div>
+            <div class="tabPanel" id="2021">
+                <h1>AdR 2021</h1>
+                <div class="vieux">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2021/Table.jpg" onclick="window.open(this.src,'_self')">
+                        <p>Le Buro</p>
+                    </div>
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2021/ptit-dej.jpg" onclick="window.open(this.src,'_self')">
+                        <p>Le P'tit Dej</p>
+                    </div>
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2021/Bar_v2.jpg" onclick="window.open(this.src,'_self')">
+                        <p>Le Bar</p>
+                    </div>
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2021/cq-soirée_v2.jpg" onclick="window.open(this.src,'_self')">
+                        <p>Les CQ-Soirée</p>
+                    </div>
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2021/Kopé.jpg" onclick="window.open(this.src,'_self')">
+                        <p>La Khoôpé</p>
+                    </div>
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2021/Qom.jpg" onclick="window.open(this.src,'_self')">
+                        <p>La Qom</p>
+                    </div>
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2021/Khafet_v2.jpg" onclick="window.open(this.src,'_self')">
+                        <p>La Khâfet</p>
+                    </div>
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2021/Rez_v2.jpg" onclick="window.open(this.src,'_self')">
+                        <p>La ReZ</p>
+                    </div>
+                </div>
+
+            </div>
+
             <div class="tabPanel" id="2020">
                 <h1>AdR 2020</h1>
                 <div class="vieux">
