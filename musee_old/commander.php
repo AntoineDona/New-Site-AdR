@@ -56,9 +56,9 @@ include("included/database.php");
                 $msg_boisson.style.display = "flex"
                 $pay.style.display = "flex"
                 document.getElementById("terrasse").checked = true  
-                setRequired("table", true)
+                setRequired("table", false)
                 // setRequired("boisson", true)
-                setRequired("pay", true)
+                setRequired("pay", false)
                 setRequired("adresse", false)
                 setRequired("horaire", false)
                 setRequired("telephone", false)
