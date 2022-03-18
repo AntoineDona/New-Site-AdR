@@ -51,7 +51,7 @@
 					• 1 soft ou 1 bière <strong style="color:#ee0;">•</strong><br>
 				</div>
 				<div>
-					5<small>,00</small> €
+					5<small>,20</small> €
 				</div>
 			</div><br>
 			<h2>&#8764; Menu pizza &#8765;</h2>
@@ -242,26 +242,26 @@
 				<div>1/2</div>
 				<div>Pinte</div>
 				<div>• Kronenbourg <small>(4,2%)</small> <strong style="color:#ee0;">•</strong><br></div>
-				<div>1<small>,50</small> €</div>
-				<div>2<small>,90</small> €</div>
+				<div>1<small>,60</small> €</div>
+				<div>3<small>,00</small> €</div>
 				<div>• Cidre brut <small>(4,5%)</small> <strong style="color:#ee0;">•</strong><br></div>
 				<div>1<small>,50</small> €</div>
 				<div>2<small>,90</small> €</div>
 				<div>• 1664 blanche <small>(5%)</small><br></div>
-				<div>2<small>,00</small> €</div>
-				<div>3<small>,90</small> €</div>
+				<div>2<small>,20</small> €</div>
+				<div>4<small>,00</small> €</div>
 				<div>• Grim Pale <small>(5,5%)</small><br></div>
-				<div>2<small>,00</small> €</div>
-				<div>3<small>,90</small> €</div>
+				<div>2<small>,20</small> €</div>
+				<div>4<small>,00</small> €</div>
 				<div>• Tigre Bock <small>(5,5%)</small><br></div>
-				<div>2<small>,00</small> €</div>
-				<div>3<small>,90</small> €</div>
+				<div>2<small>,20</small> €</div>
+				<div>4<small>,00</small> €</div>
 				<div>• Grim blonde <small>(6,7%)</small><br></div>
-				<div>2<small>,00</small> €</div>
-				<div>3<small>,90</small> €</div>
+				<div>2<small>,20</small> €</div>
+				<div>4<small>,00</small> €</div>
 				<div>• Elephant <small>(7,2%)</small><br></div>
-				<div>2<small>,00</small> €</div>
-				<div>3<small>,90</small> €</div>
+				<div>2<small>,20</small> €</div>
+				<div>4<small>,00</small> €</div>
 			</div><br>
 			<h2>&#8764; Les bouteilles &#8765;</h2>
 			<div class="subcontent">
