@@ -61,11 +61,11 @@ img.sydney{
 	font-weight: bold;
 	text-align:center;
 	font-size:90px;
-	width:400px;
+	width:330px;
 	height:80px;
 	left:0;
 	right:0;
-	top:50px;
+	top:-50px;
 	margin:auto;
 	border-radius:10px;
 	z-index:2;
