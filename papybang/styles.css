@@ -27,7 +27,7 @@ body{
 	bottom:0;
 	height:100vh;
 	background:url('img/fond_test.png');
-	/*background-position: top center, bottom 80px center, center;*/
+	background-position: center center;
 	background-repeat:no-repeat;
 	color:white;
 	position:absolute;
