@@ -33,7 +33,8 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	<div id="titre_sg" style='margin-top: 60vh;' >Le shotgun commence dans:</div>
 	<div id="prez">
 		<p>
-			Rejoins l'AdR 2K19 pour une dernière soirée de folie, à l'ancienne, parce que c'est quand même mieux avant.
+			Rejoins l'AdR 2K19 pour une dernière soirée de folie, à l'ancienne, parce que c'est quand même mieux avant. J'espère que
+			ce petit site ultra rudimentaire réveille en toi de doux souvenirs de doute et de stress. Est-ce que ce shotgun va fonctionner ? 
 		</p>
 	</div>
 	<div id="counter">
