@@ -25,6 +25,7 @@ body{
 	background:url('img/fond_test2.png');
 	background-position:center;
 	background-size:100%;
+	background-repeat:no-repeat;
 }
 
 img.sydney{
