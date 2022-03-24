@@ -75,7 +75,7 @@ img.sydney{
 #prez{
 	position:relative;
 	left:37vw;
-	top:-27vh;
+	top:-50vh;
 	color:green;
 	width:340px;
 }
@@ -83,14 +83,14 @@ img.sydney{
 #co_link_ctnr{
 	position:relative;
 	left:40vw;
-	top:-25vh;
+	top:0vh;
 	font-size:30px;
 }
 
 #abang{
-	width:20vw;
+	width:30vw;
 	heigth:auto;
-	left:40vw;
+	left:35vw;
 	z-index:1;
 	position:relative;
 }
@@ -116,6 +116,7 @@ img.sydney{
 	box-shadow:var(--shadow_color) 0px 0px 5px;
 	opacity:0;
 }
+
 #link:hover{
 	margin-top:10px;
 }
