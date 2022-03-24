@@ -1,19 +1,23 @@
 <?php
-session_start();
-if (!isset($_SESSION["isConnected"]) || !$_SESSION["isConnected"])
+
+require ('../vendor/autoload.php');
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
+
+if (!isset($_SESSION["isConnected"]) || !$_SESSION["isConnected"]) // Si isConnected pas défini ou faux
     
 {
-    header("Location: https://adr.cs-campus.fr/papybang/connexion.php");
-	$_SESSION["isConnected"] = false;
+    header("Location: /guantanano/connexion.php"); //On redirige vers la page de connexion
+	$_SESSION["isConnected"] = false; //On set isConnected à False (pour le cas ou pas défini)
 	if (isset($_GET["code"]) && isset($_GET["state"])) {
-	    if (strcmp($_SESSION["state"], $_GET["state"]) == 0) {
-		$_SESSION["code"] = $_GET["code"];
-		// Parameters
+	    if (strcmp($_SESSION["state"], $_GET["state"]) == 0) { //si le Get est égal la variable de session, 
+		$_SESSION["code"] = $_GET["code"]; // On rentre le code tapé en variable de session
+		// Parameters à envoyer à VR pour l'auth
 		$grant_type = "authorization_code";
 		$code = $_GET["code"];
-		$redirect_uri = "https://adr.cs-campus.fr/papybang/index.php";
+		$redirect_uri = "https://adr.cs-campus.fr/guantanano";
 		$client_id = "47e7231e6e5c333459f9280e6d3c7eef96b38ce6";
-		$client_secret = $_ENV["client_secret"];
+		$client_secret = $_ENV['client_secret'];
 		$data = array("grant_type" => $grant_type, "code" => $code, "redirect_uri" => $redirect_uri, "client_id" => $client_id, "client_secret" => $client_secret);
 		$ch = curl_init();
 		$url = "https://auth.viarezo.fr/oauth/token";
@@ -32,7 +36,7 @@ if (!isset($_SESSION["isConnected"]) || !$_SESSION["isConnected"])
 	 
 		$responseObject = json_decode($response);
 		$_SESSION["token"] = (array) $responseObject;
-		if (isset($_SESSION["token"]["access_token"])) {
+		if (isset($_SESSION["token"]["access_token"])) { //si VR nous a bien connecté, on passe isConnected à True et on save les données
 		    $ch = curl_init();
 		    $url = "https://auth.viarezo.fr/api/user/show/me";
 		    curl_setopt($ch, CURLOPT_URL, $url);
@@ -60,3 +64,4 @@ if (!isset($_SESSION["isConnected"]) || !$_SESSION["isConnected"])
 	else {
 	}
 }
+?>
