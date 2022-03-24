@@ -59,14 +59,13 @@ img.sydney{
 		grid-template-columns:80px 80px 80px 80px;
 	color:green;
 	font-weight: bold;
-	font-family: retro;
 	text-align:center;
 	font-size:10px;
 	width:330px;
 	height:80px;
 	left:0;
 	right:0;
-	top:0px;
+	top:-100px;
 	margin:auto;
 	border-radius:10px;
 	z-index:2;
