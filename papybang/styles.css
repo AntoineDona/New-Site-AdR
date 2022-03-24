@@ -88,8 +88,9 @@ img.sydney{
 }
 
 #abang{
-	width:300px;
+	width:10vw;
 	heigth:auto;
+	left:45vw;
 	z-index:1;
 	position:relative;
 }
