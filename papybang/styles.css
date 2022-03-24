@@ -82,8 +82,9 @@ img.sydney{
 
 #co_link_ctnr{
 	position:relative;
-	left:45vw;
-	top:-20vh;
+	left:43vw;
+	top:-25vh;
+	font-size:20;
 }
 	
 #link{
