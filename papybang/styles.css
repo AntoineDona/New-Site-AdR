@@ -66,7 +66,7 @@ img.sydney{
 	height:100px;
 	left:0;
 	right:0;
-	top:0vh;
+	top:-48vh;
 	margin:auto;
 	/*border-radius:10px;*/
 	z-index:2;
@@ -76,7 +76,7 @@ img.sydney{
 #prez{
 	position:relative;
 	left:37vw;
-	top:0vh;
+	top:-50vh;
 	color:green;
 	width:340px;
 }
@@ -84,7 +84,7 @@ img.sydney{
 #co_link_ctnr{
 	position:relative;
 	left:40vw;
-	top:0vh;
+	top:-50vh;
 	font-size:30px;
 }
 
