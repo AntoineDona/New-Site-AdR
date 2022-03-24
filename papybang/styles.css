@@ -71,6 +71,10 @@ img.sydney{
 	z-index:2;
 	box-shadow:white 0px 0px 10px;
 }
+
+#prez{
+	position:relative;
+}
 	
 #link{
 	position:relative;
