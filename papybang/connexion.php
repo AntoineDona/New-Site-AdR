@@ -9,7 +9,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	//echo $_SESSION["user"]["login"];
 	$_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 	$_SESSION["nom"] = $_SESSION["user"]["lastName"];
-	header("Location: /guantanano/index.php");
+	header("Location: /papybang/index.php");
 	
 } else {$_SESSION["isConnected"] = false;}
 ?>
@@ -19,7 +19,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
-	<title>GUANTANANO</title>
+	<title>PAPYBANG</title>
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/guantanano/img/prison.png">
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
@@ -61,7 +61,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 		}
 		?> -->
 	<div id="co_link_ctnr" href="#">
-		<a id="co_link" href='redirect.php?redirect=https://adr.cs-campus.fr/guantanano'>Se connecter</a>
+		<a id="co_link" href='redirect.php?redirect=https://adr.cs-campus.fr/papybang'>Se connecter</a>
 	</div>
 	<?php include("script.php"); ?>
 </body>
