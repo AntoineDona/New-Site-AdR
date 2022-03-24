@@ -79,6 +79,12 @@ img.sydney{
 	color:green;
 	width:340px;
 }
+
+#co_link_ctnr{
+	position:relative;
+	left:37vw;
+	top:-10vh;
+}
 	
 #link{
 	position:relative;
