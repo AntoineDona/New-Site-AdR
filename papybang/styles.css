@@ -127,6 +127,15 @@ img.sydney{
 	margin:auto;
 	
 }
+
+#titre_sg{
+	color:white;
+	position:relative;
+	left:0vw;
+	width:20vw;
+	top:22vh;
+	margin:auto;
+}
 	
 #link{
 	position:relative;
