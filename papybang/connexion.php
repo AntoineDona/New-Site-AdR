@@ -30,9 +30,9 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 		echo "<script>alert(\"Tu as bien été déconnecté \")</script>";
 	}
 	?>
-	<div>
-		<img id="abang" src="img/proj4_title.png"
-	</div>
+	
+	<img id="abang" src="img/proj4_title.png">
+	
 	<div id="titre_sg" style='margin-top: 60vh;' >Le shotgun commence dans:</div>
 	<div id="prez">
 		<p>
