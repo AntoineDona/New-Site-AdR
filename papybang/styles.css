@@ -96,6 +96,11 @@ img.sydney{
 	z-index:1;
 	position:relative;
 }
+
+#ok_msg_ctnr{
+	color:green;
+	position:relative;
+}
 	
 #link{
 	position:relative;
