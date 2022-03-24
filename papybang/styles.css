@@ -26,8 +26,7 @@ body{
 	top:0;
 	bottom:0;
 	height:100vh;
-	background:url('img/fond_papy.jpg');
-	background-size: cover;
+	background:url('img/fond_test.jpg');
 	//background-position: top center, bottom 80px center, center;
 	//background-repeat:no-repeat, no-repeat, repeat-y;
 	color:white;
