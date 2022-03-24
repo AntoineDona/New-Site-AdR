@@ -97,7 +97,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 
 <body onload="onLoad()">
 	<div id="titre_sg"></div>
-	<div id="counter">
+	<div id="counter_index">
 		<!-- <div class="digit_holder months" id="mois">
 			<p class="chiffre">00</p>
 			<p class="text">mois(s)</p>
