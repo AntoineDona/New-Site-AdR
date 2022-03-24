@@ -7,7 +7,7 @@ include('database.php') ?>
 
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
-	<title>GUANTANANO</title>
+	<title>PAPYBANG</title>
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/guantanano/img/prison.png">
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
@@ -18,7 +18,7 @@ include('database.php') ?>
 
 	function number_place($pdo)
 	{
-		$query = $pdo->prepare("SELECT COUNT(*) as c from GUANTANANO");
+		$query = $pdo->prepare("SELECT COUNT(*) as c from papybang");
 		$query->execute();
 		$result = $query->fetch();
 		return $result['c'];
@@ -38,12 +38,12 @@ include('database.php') ?>
 
 	function depaps($email, $pdo)
 	{
-		$sql = 'DELETE from guantanano WHERE email=:email';
+		$sql = 'DELETE from papybang WHERE email=:email';
 		$stmt = $pdo->prepare($sql);
 		$stmt->bindValue(':email', $email);
 		$res = $stmt->execute();
 		$_SESSION['shotgun'] = false;
-		header("Location: /guantanano/index.php");
+		header("Location: /papybang/index.php");
 	}
 
 	$_SESSION['sg_time'] = date("Y-m-d H:i:s");
@@ -65,12 +65,12 @@ include('database.php') ?>
 		} else {
 			if (!$_SESSION['shotgun']) {
 				if (number_place($pdo) < $_SESSION['total_places']) {
-					$query = $pdo->prepare("INSERT into guantanano (prenom,nom, email, heure) VALUES (?,?,?,?)");
+					$query = $pdo->prepare("INSERT into papybang (prenom,nom, email, heure) VALUES (?,?,?,?)");
 					$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time']));
 					$_SESSION['shotgun'] = true;
-					header("refresh:5; url=/guantanano/index.php");
+					header("refresh:5; url=/papybang/index.php");
 				} else {
-					header("refresh:5; url=/guantanano/fini.php");
+					header("refresh:5; url=/papybang/fini.php");
 				}
 			} else {
 				depaps($_SESSION["email"], $pdo);
@@ -79,7 +79,7 @@ include('database.php') ?>
 	} else if ($_SESSION['shotgun']) {
 		depaps($_SESSION["email"], $pdo);
 	} else {
-		header("Location: /guantanano/");
+		header("Location: /papybang/");
 	}
 	?>
 	<div class="loading-animation-box">
