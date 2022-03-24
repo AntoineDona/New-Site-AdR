@@ -31,7 +31,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	}
 	?>
 	
-	<img id="abang" src="img/logobang.png">
+	<img id="abang" src="img/logobang.jpg">
 	
 	<div id="titre_sg" style='margin-top: 60vh;' >Le shotgun commence dans:</div>
 	<div id="prez">
