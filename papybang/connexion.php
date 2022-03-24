@@ -31,6 +31,11 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	}
 	?>
 	<div id="titre_sg" style='margin-top: 60vh;' >Le shotgun commence dans:</div>
+	<div id="prez">
+		<p>
+			Rejoins l'AdR 2K19 pour une dernière soirée de folie, à l'ancienne, parce que c'est quand même mieux avant.
+		</p>
+	</div>
 	<div id="counter">
 		<!-- <div class="digit_holder months" id="mois">
 			<p class="chiffre">00</p>
