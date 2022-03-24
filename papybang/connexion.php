@@ -9,7 +9,7 @@
 		$_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 		$_SESSION["nom"] = $_SESSION["user"]["lastName"]; 
 	    echo $prenom." ".$nom;
-		header("Location: https://adr.cs-campus.fr/nano/index.php?nom=".$nom."&prenom=".$prenom);
+		header("Location: https://adr.cs-campus.fr/papybang/index.php?nom=".$nom."&prenom=".$prenom);
 	} 			
 ?>
 
@@ -38,7 +38,7 @@
 			<div style="grid-area: s_bottom; font-size:20%;">seconde(s)</div>
 		</div>
 		<div id="link" style="opacity:0;" href="#">
-			<a class= 'connexion' href='redirect.php?redirect=https://adr.cs-campus.fr/nano/index.php'>Se connecter</a>
+			<a class= 'connexion' href='redirect.php?redirect=https://adr.cs-campus.fr/papybang/index.php'>Se connecter</a>
 		</div>
 	</div>
 
@@ -48,7 +48,7 @@
 		if (!$_SESSION["isConnected"]){
 			echo "<p class= 'connexion'>Tu n'es pas encore connecté, pour shotgun une place au Nano il faut te connecter :</p> ";
 			// Se connecter
-			echo "<a class= 'connexion' href='redirect.php?redirect=https://adr.cs-campus.fr/nano/index.php'>Se connecter</a>";
+			echo "<a class= 'connexion' href='redirect.php?redirect=https://adr.cs-campus.fr/papybang/index.php'>Se connecter</a>";
 		}
 	}
 ?>
