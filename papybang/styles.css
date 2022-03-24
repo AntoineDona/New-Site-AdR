@@ -247,7 +247,7 @@ p.soiree{
 
 @media screen and (orientation:portrait), screen and (max-width:800px) {
 	body{
-		background:url(''),url(''),url('fond_equinanox_m.jpg');
+		background:url(''),url(''),url('img/proj4_1.jpg');
 		background-size:100%, 100%, cover;
 		background-position: top center, bottom 80px center, center;
 		background-repeat:no-repeat;
