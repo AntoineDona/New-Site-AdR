@@ -142,7 +142,6 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		}
 		?>
 	</div>
-	<p id="footer">Pas besoin de recharger la page au moment du shotgun!</p>
 
 	<?php include("script.php"); 
 	if (!$_SESSION["is_cotisant"] && isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "action.php") {
