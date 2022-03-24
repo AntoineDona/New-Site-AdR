@@ -61,15 +61,15 @@ img.sydney{
 	font-weight: bold;
 	text-align:center;
 	font-size:90px;
-	width:200px;
+	width:400px;
 	height:80px;
 	left:0;
 	right:0;
-	top:0px;
+	top:50px;
 	margin:auto;
 	border-radius:10px;
 	z-index:2;
-	box-shadow:white 0px 0px 5px;
+	box-shadow:white 0px 0px 10px;
 }
 	
 #link{
