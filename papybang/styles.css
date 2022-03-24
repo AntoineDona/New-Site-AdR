@@ -27,7 +27,7 @@ body{
 	bottom:0;
 	height:100vh;
 	background:url(''),url(''),url('img/proj4_1.jpg');
-	background-size:100%, 100%, cover;
+	/*background-size:100%, 100%, cover;*/
 	background-position: top center, bottom 80px center, center;
 	background-repeat:no-repeat, no-repeat, repeat-y;
 	color:white;
