@@ -21,14 +21,8 @@ html, body {
   height:100%;
 }
 body{
-	left:0;
-	right:0;
-	top:0;
-	bottom:0;
+	background-color:black;
 	background:url('img/fond_test.png');
-	background-position: center center;
-	background-repeat:no-repeat;
-	position:absolute;
 }
 
 img.sydney{
