@@ -5,7 +5,7 @@ require ('../vendor/autoload.php');
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
-$redirect_uri = "https://adr.cs-campus.fr/guantanano";
+$redirect_uri = "https://adr.cs-campus.fr/papybang";
 $client_id = "47e7231e6e5c333459f9280e6d3c7eef96b38ce6";
 $client_secret = $_ENV['client_secret'];
 $response_type = "code";
