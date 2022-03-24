@@ -1,58 +1,69 @@
 <?php
-    session_start();
+session_start();
+
+
+if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
+	echo "Connecté : ";
+	// Pour voir plus de données disponibles, voir la documentation
+	// sur auth.viarezo.fr
+	//echo $_SESSION["user"]["login"];
+	$_SESSION["prenom"] = $_SESSION["user"]["firstName"];
+	$_SESSION["nom"] = $_SESSION["user"]["lastName"];
+	header("Location: /guantanano/index.php");
 	
-	if ($_SESSION["isConnected"]) {
-		echo "Connecté : ";
-		// Pour voir plus de données disponibles, voir la documentation
-		// sur auth.viarezo.fr
-		//echo $_SESSION["user"]["login"];
-		$_SESSION["prenom"] = $_SESSION["user"]["firstName"];
-		$_SESSION["nom"] = $_SESSION["user"]["lastName"]; 
-	    echo $prenom." ".$nom;
-		header("Location: https://adr.cs-campus.fr/papybang/index.php?nom=".$nom."&prenom=".$prenom);
-	} 			
+} else {$_SESSION["isConnected"] = false;}
 ?>
 
-<!DOCTYPE html><html>
+<!DOCTYPE html>
 <html>
+
 <head>
-<meta content="text/html; charset=utf-8" http-equiv="content-type">
-<title>EQUINANOXE</title><link rel="icon" type="image/png" href="img/adr_ico.png" />
-<link rel="stylesheet" type="text/css" href="styles.css" />
+	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<title>GUANTANANO</title>
+	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/guantanano/img/prison.png">
+	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<?php include("script.js.php"); ?>
-
 <body onload="onLoad()">
-
-	<div id="holder">
-		<div id="counter">
-			<div style="grid-area: d_top;">01</div>
-			<div style="grid-area: h_top;">02</div>
-			<div style="grid-area: m_top;">03</div>
-			<div style="grid-area: s_top;">04</div>
-			<div style="grid-area: d_bottom; font-size:20%;">jour(s)</div>
-			<div style="grid-area: h_bottom; font-size:20%;">heure(s)</div>
-			<div style="grid-area: m_bottom; font-size:20%;">minute(s)</div>
-			<div style="grid-area: s_bottom; font-size:20%;">seconde(s)</div>
+	<?php
+	if (isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "logout.php") {
+		echo "<script>alert(\"Tu as bien été déconnecté \")</script>";
+	}
+	?>
+	<div id="titre_sg" style='margin-top: 60vh;' >Le shotgun commence dans:</div>
+	<div id="counter">
+		<!-- <div class="digit_holder months" id="mois">
+			<p class="chiffre">00</p>
+			<p class="text">mois(s)</p>
+		</div> -->
+		<div class="digit_holder days" id="jours">
+			<p class="chiffre">00</p>
+			<p class="text">jours</p>
 		</div>
-		<div id="link" style="opacity:0;" href="#">
-			<a class= 'connexion' href='redirect.php?redirect=https://adr.cs-campus.fr/papybang/index.php'>Se connecter</a>
+		<div class="digit_holder hours" id="heures">
+			<p class="chiffre">00</p>
+			<p class="text">heures</p>
+		</div>
+		<div class="digit_holder minutes" id="minutes">
+			<p class="chiffre">00</p>
+			<p class="text">minutes</p>
+		</div>
+		<div class="digit_holder seconds" id="secondes">
+			<p class="chiffre">00</p>
+			<p class="text">secondes</p>
 		</div>
 	</div>
-
-<div class="connexion">
-<?php
-	if (isset($_SESSION["isConnected"])){
-		if (!$_SESSION["isConnected"]){
-			echo "<p class= 'connexion'>Tu n'es pas encore connecté, pour shotgun une place au Nano il faut te connecter :</p> ";
-			// Se connecter
-			echo "<a class= 'connexion' href='redirect.php?redirect=https://adr.cs-campus.fr/papybang/index.php'>Se connecter</a>";
+		<!-- <?php
+		if (isset($_SESSION["isConnected"])) {
+			if (!$_SESSION["isConnected"]) {
+				echo "<p id='co_msg_ctnr'>Tu n'es pas encore connecté</p> ";
+			}
 		}
-	}
-?>
-</div>
-
+		?> -->
+	<div id="co_link_ctnr" href="#">
+		<a id="co_link" href='redirect.php?redirect=https://adr.cs-campus.fr/guantanano'>Se connecter</a>
+	</div>
+	<?php include("script.php"); ?>
 </body>
+
 </html>
