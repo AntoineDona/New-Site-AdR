@@ -75,6 +75,23 @@ img.sydney{
 
 #counter_index{
 	z-index:100;
+	position:relative;
+		display:grid;
+		grid-template-areas: "title title title title" "d_top h_top m_top s_top" "d_bottom h_bottom m_bottom s_bottom";
+		grid-template-columns:80px 80px 80px 80px;
+	color:green;
+	font-weight: bold;
+	text-align:center;
+	font-size:12px;
+	width:330px;
+	height:100px;
+	left:0;
+	right:0;
+	/*top:-35vh;*/
+	margin:auto;
+	/*border-radius:10px;*/
+	z-index:2;
+	/*box-shadow:white 0px 0px 10px;*/
 }
 
 #prez{
