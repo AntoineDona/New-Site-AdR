@@ -23,6 +23,7 @@ html, body {
 body{
 	background-color:black;
 	background:url('img/fond_test.png');
+	background-size:contain;
 }
 
 img.sydney{
