@@ -57,12 +57,12 @@ img.sydney{
 		display:grid;
 		grid-template-areas: "title title title title" "d_top h_top m_top s_top" "d_bottom h_bottom m_bottom s_bottom";
 		grid-template-columns:200px 200px 200px 200px;
-	color:black;
+	color:white;
 	font-weight: bold;
 	text-align:center;
 	font-size:90px;
-	width:800px;
-	height:180px;
+	width:200px;
+	height:80px;
 	left:0;
 	right:0;
 	top:0px;
