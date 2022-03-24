@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION["isConnected"]) || !$_SESSION["isConnected"])
     
 {
-    header("Location: https://adr.cs-campus.fr/nano/connexion.php");
+    header("Location: https://adr.cs-campus.fr/papybang/connexion.php");
 	$_SESSION["isConnected"] = false;
 	if (isset($_GET["code"]) && isset($_GET["state"])) {
 	    if (strcmp($_SESSION["state"], $_GET["state"]) == 0) {
@@ -11,7 +11,7 @@ if (!isset($_SESSION["isConnected"]) || !$_SESSION["isConnected"])
 		// Parameters
 		$grant_type = "authorization_code";
 		$code = $_GET["code"];
-		$redirect_uri = "https://adr.cs-campus.fr/nano/index.php";
+		$redirect_uri = "https://adr.cs-campus.fr/papybang/index.php";
 		$client_id = "47e7231e6e5c333459f9280e6d3c7eef96b38ce6";
 		$client_secret = $_ENV["client_secret"];
 		$data = array("grant_type" => $grant_type, "code" => $code, "redirect_uri" => $redirect_uri, "client_id" => $client_id, "client_secret" => $client_secret);
