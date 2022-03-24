@@ -73,6 +73,10 @@ img.sydney{
 	/*box-shadow:white 0px 0px 10px;*/
 }
 
+#counter_index{
+	z-index:1;
+}
+
 #prez{
 	position:relative;
 	left:37vw;
