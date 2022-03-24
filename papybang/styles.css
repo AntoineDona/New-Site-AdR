@@ -87,7 +87,7 @@ img.sydney{
 	height:100px;
 	left:0;
 	right:0;
-	top:35vh;
+	top:60vh;
 	margin:auto;
 	/*border-radius:10px;*/
 	z-index:2;
@@ -121,9 +121,9 @@ img.sydney{
 #ok_msg_ctnr{
 	color:green;
 	position:relative;
-	left:0;
-	right:0;
-	top:35vh;
+	left:40vw;
+	width:20vw;
+	top:50vh;
 	margin:auto;
 	
 }
