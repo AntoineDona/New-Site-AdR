@@ -56,11 +56,11 @@ img.sydney{
 	position:relative;
 		display:grid;
 		grid-template-areas: "title title title title" "d_top h_top m_top s_top" "d_bottom h_bottom m_bottom s_bottom";
-		grid-template-columns:100px 100px 100px 100px;
+		grid-template-columns:90px 90px 90px 90px;
 	color:white;
 	font-weight: bold;
 	text-align:center;
-	font-size:20px;
+	font-size:15px;
 	width:330px;
 	height:80px;
 	left:0;
