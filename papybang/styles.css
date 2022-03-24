@@ -74,7 +74,8 @@ img.sydney{
 
 #prez{
 	position:relative;
-	left:40vw;
+	left:35vw;
+	top:25vh;
 	color:green;
 	width:400px;
 }
