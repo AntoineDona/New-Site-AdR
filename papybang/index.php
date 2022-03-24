@@ -106,10 +106,10 @@ function number_place($pdo){
 <?php
 if (number_place($pdo)>=550 AND !$_SESSION['shotgun']){
 	if ($_SESSION["isConnected"]){
-		header("Location: https://adr.cs-campus.fr/nano/fini.php");
+		header("Location: https://adr.cs-campus.fr/papybang/fini.php");
 	}
 	else{
-		header("Location: https://adr.cs-campus.fr/nano/connexion.php");
+		header("Location: https://adr.cs-campus.fr/papybang/connexion.php");
 	}
 }
 	
