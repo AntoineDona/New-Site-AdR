@@ -59,7 +59,7 @@ img.sydney{
 	top:60vh;
 }
 	
-#counter{
+/*#counter{
 	position:relative;
 		display:grid;
 		grid-template-areas: "title title title title" "d_top h_top m_top s_top" "d_bottom h_bottom m_bottom s_bottom";
@@ -78,7 +78,7 @@ img.sydney{
 	border-radius:10px;
 	z-index:2;
 	box-shadow:var(--shadow_color) 0px 0px 5px;
-}
+}*/
 	
 #link{
 	position:relative;
