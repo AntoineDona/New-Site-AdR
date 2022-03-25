@@ -23,7 +23,7 @@
 	function timer() {
 		var date = new Date();
 		// console.log(date);
-		<?php $_SESSION['shotgun'] = false; ?>
+		<?php //$_SESSION['shotgun'] = false; ?>
 		var date_shotgun = new Date(2022, 02, 25, 09, 48, 00);
 		var date_soiree = new Date(2022, 03, 01, 23, 00);
 		var title = "Shotgun dans :";
