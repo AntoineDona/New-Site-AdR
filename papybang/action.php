@@ -8,7 +8,7 @@ include('database.php') ?>
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
 	<title>PAPYBANG</title>
-	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/guantanano/img/prison.png">
+	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/img/cassette.png">
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
@@ -61,7 +61,7 @@ include('database.php') ?>
 	if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec) {
 		if ($_SESSION["is_cotisant"] == false) {
 			$_SESSION['prev_page'] = "action.php";
-			header("Location: /guantanano/index.php");
+			header("Location: /papybang/index.php");
 		} else {
 			if (!$_SESSION['shotgun']) {
 				if (number_place($pdo) < $_SESSION['total_places']) {
