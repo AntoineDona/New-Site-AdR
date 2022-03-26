@@ -48,15 +48,15 @@ include('database.php') ?>
 
 	$_SESSION['sg_time'] = date("Y-m-d H:i:s");
 	$_SESSION['is_cotisant'] = is_cotisant($_SESSION['email'], $pdo);
-	$_SESSION['total_places'] = 400;
+	$_SESSION['total_places'] = 800;
 
 	date_default_timezone_set('Europe/Paris');
 	$current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
-	$shotgun_date = mktime(12, 59, 59, 02, 11, 2022);
+	$shotgun_date = mktime(12, 59, 59, 02, 28, 2022);
 	$shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
-	$end_date = mktime(03, 00, 00, 05, 17, 2022);
+	$end_date = mktime(03, 00, 00, 03, 02, 2022);
 	$end_date_sec = (((date('d', $end_date) - 1) * 24 + date('H', $end_date)) * 60 + date('i', $end_date)) * 60 + date('s', $end_date);
 	if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec) {
 		if ($_SESSION["is_cotisant"] == false) {

@@ -21,7 +21,7 @@
                 <div class="description_event">
                 <div ><img src="img/cassetteIcon.png" alt="icon ball"><h2>Papy Bang</h2><img src="img/iconBall.png" alt="icon ball"></div>
                     <p>Les vieux AdR 👨‍🦳👵 reviennent ce 1er Avril (no joke) pour vous prouver que c'était mieux Abang ! Afin de montrer qu'ils organisent toujours les meilleures soirées du platal, ils vous convient au PapyBang ce vendredi 1er Avril de 23h à 5h en Bouygues ! 😎
-⚠️La soirée est réservée aux cotisants AdR ⚠️. Le lien du shotgun est <a href="/papybang/">ici</a></p>
+                       ⚠️La soirée est réservée aux cotisants AdR ⚠️. Le lien du shotgun est <a href="/papybang/">ici</a></p>
                 </div>
 
                 <div class="description_event">
@@ -43,8 +43,12 @@
                 
             </div>
         </section>
-        <section class="to_come">
+        <!-- <section class="to_come">
             <h2>Evenements à venir</h2>
+            
+        </section>
+        <section class="old_events">
+            <h2>Evenements passés</h2>
             <div class="event">
                 <div class="background" id="christmasbang"></div>
                 <div class="content">
@@ -60,15 +64,8 @@
                 </div>
 
             </div>
-        </section>
-        <section class="old_events">
-            <h2>Evenements passés</h2>
-            <div class="event">
-                
-            </div>
-        </section>
+        </section> -->
     </main>
-    <?php include "../included/footer.php" ?>
     <script src="/app.js"></script>
 </body>
 

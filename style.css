@@ -270,7 +270,7 @@ nav {
 .container {
   width: 100%;
   max-width: 122.5rem;
-  margin: 0 auto;
+  margin: 0 auto 200px auto;
   padding: 0 2.4rem;
   text-align: center;
 }
@@ -499,10 +499,11 @@ a.anchor {
 /* Events ------------------------------------------------------------------------------------------------------------ */
 
 .events {
-  background-image: url(/events/christmasbang.jpg);
+  background-image: url(/events/img/affichePapyBang.jpg);
   position: relative;
   z-index: 0;
 }
+
 
 #lien_resa {
   position: absolute;
@@ -517,8 +518,12 @@ a.anchor {
 }
 
 .events .container{
+  margin-top: 8rem;
   display: flex;
   flex-direction: column;
+}
+.container .headline{
+  margin-top:100px;
 }
 
 
@@ -951,6 +956,7 @@ html.is-leaving .transition-fade {
   transform: translateX(0);
   transition: 100ms;
 }
+
 
 /* .loader-wrapper{
     height:100%;
