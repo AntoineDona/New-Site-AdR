@@ -45,38 +45,67 @@ include('database.php') ?>
 		$_SESSION['shotgun'] = false;
 		header("Location: /papybang/index.php");
 	}
+	##les fonctionnalités qui suivent sont exclusivent au papybang##
+	function isOld($login){
+		$year=intval(substr($login, 0, 4));
+		if($year<2020){
+			return True;
+		}
+		else{
+			return False;
+		}
+	}
+	function isYoung($login){
+		$year=intval(substr($login, 0, 4));
+		if($year>=2020){
+			return True;
+		}
+		else{
+			return False;
+		}
+	}
+	$shotgun_date_young = mktime(12, 59, 59, 03, 30, 2022);
+	$shotgun_date_young_sec = (((date('d', $shotgun_date_young) - 1) * 24 + date('H', $shotgun_date_young)) * 60 + date('i', $shotgun_date_young)) * 60 + date('s', $shotgun_date_young);
 
+
+	##
 	$_SESSION['sg_time'] = date("Y-m-d H:i:s");
 	$_SESSION['is_cotisant'] = is_cotisant($_SESSION['email'], $pdo);
-	$_SESSION['total_places'] = 400;
+	$_SESSION['total_places'] = 750;
 
 	date_default_timezone_set('Europe/Paris');
 	$current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
-	$shotgun_date = mktime(12, 59, 59, 02, 11, 2022);
+	$shotgun_date = mktime(12, 59, 59, 03, 28, 2022);
 	$shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
-	$end_date = mktime(03, 00, 0, 02, 17, 2022);
+	$end_date = mktime(03, 00, 00, 04, 02, 2022);
 	$end_date_sec = (((date('d', $end_date) - 1) * 24 + date('H', $end_date)) * 60 + date('i', $end_date)) * 60 + date('s', $end_date);
 	if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec) {
-		if ($_SESSION["is_cotisant"] == false) {
-			$_SESSION['prev_page'] = "action.php";
-			header("Location: /papybang/index.php");
-		} else {
-			if (!$_SESSION['shotgun']) {
-				if (number_place($pdo) < $_SESSION['total_places']) {
-					$query = $pdo->prepare("INSERT into papybang (prenom,nom, email, heure) VALUES (?,?,?,?)");
-					$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time']));
-					$_SESSION['shotgun'] = true;
-					header("refresh:5; url=/papybang/index.php");
-				} else {
-					header("refresh:5; url=/papybang/fini.php");
+		if(isOld($_SESSION["login"]) or (isYoung($_SESSION["login"]) and $current_date_sec >= $shotgun_date_young_sec)){#ligne pour la condition sur les vieux
+			if ($_SESSION["is_cotisant"] == false) {
+				$_SESSION['prev_page'] = "action.php";
+				header("Location: /papybang/index.php");
+			} 
+			else {
+				if (!$_SESSION['shotgun']) {
+					if (number_place($pdo) < $_SESSION['total_places']) {
+						$query = $pdo->prepare("INSERT into papybang (prenom,nom, email, heure) VALUES (?,?,?,?)");
+						$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time']));
+						$_SESSION['shotgun'] = true;
+						header("refresh:5; url=/papybang/index.php");
+					} 
+					else {
+						header("refresh:5; url=/papybang/fini.php");
+					}
+				} 
+				else {
+					depaps($_SESSION["email"], $pdo);
 				}
-			} else {
-				depaps($_SESSION["email"], $pdo);
 			}
 		}
-	} else if ($_SESSION['shotgun']) {
+		} 
+	else if ($_SESSION['shotgun']) {
 		depaps($_SESSION["email"], $pdo);
 	} else {
 		header("Location: /papybang/");
