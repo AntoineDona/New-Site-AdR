@@ -24,14 +24,14 @@
 		var date = new Date();
 		// console.log(date);
 		<?php //$_SESSION['shotgun'] = false; ?>
-		var date_shotgun = new Date(2022, 02, 28, 12, 59, 59);
-		var date_soiree = new Date(2022, 03, 01, 23, 00);
+		var date_shotgun = new Date(2022, 02, 28, 13, 00, 00);
+		var date_soiree = new Date(2022, 03, 1, 23, 00);
 		var title = "Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
 		var has_shotgun = <?php echo json_encode(isset($_SESSION['shotgun']))?> && <?php echo json_encode($_SESSION['shotgun']) ?>;
 		if (has_shotgun){
 			var total_sec = Math.trunc((date_soiree.getTime() - date.getTime()) / 1000);
-			var title = "Début du C'ÉTAIT MIEUX ABANG dans :";
+			var title = "Début du GUANTANANO dans :";
 		};
 		var diff_jour = getFormattedDigits(Math.trunc(total_sec / 3600 / 24));
 		var diff_hour = getFormattedDigits(Math.trunc((total_sec - diff_jour * 24 * 3600) / 3600));
