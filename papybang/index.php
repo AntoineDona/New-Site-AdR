@@ -1,19 +1,20 @@
 <?php
 session_start();
 
-include("auth.php"); 
+// include("auth.php"); 
 include("database.php");
 // //
 // 	//
-// 	$_SESSION["isConnected"] = true;
-// 	$_SESSION["is_cotisant"]=false;
-// 	$_SESSION['shotgun']=true;
-// 	$_SESSION["user"]=array(
-// 		'firstName'=>'Bastien',
-// 		'lastName'=>'de Rugy',
-// 		'email'=>'B.gdr@student-cs.fr',
-// 		'promo'=>'2024',
-// 	);
+$_SESSION["isConnected"] = true;
+$_SESSION["is_cotisant"]=true;
+$_SESSION['shotgun']=false;
+$_SESSION["user"]=array(
+	'firstName'=>'Bastien',
+	'lastName'=>'de Rugy',
+	'login'=>'2019goulletba',
+	'email'=>'b.gdr@student-cs.fr',
+	'promo'=>'2024',
+);
 
 // 	//
 // 	//
@@ -57,11 +58,43 @@ function is_cotisant($email, $pdo)
 $_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 $_SESSION["nom"] = $_SESSION["user"]["lastName"];
 $_SESSION["email"] = $_SESSION["user"]["email"];
+$_SESSION['login']=$_SESSION['user']['login'];
 
 $_SESSION['total_places'] = 400;
 $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
 $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
+//
+$_SESSION["isConnected"] = true;
+	$_SESSION["is_cotisant"]=true;
+	$_SESSION['shotgun']=false;
+	$_SESSION["user"]=array(
+		'firstName'=>'Bastien',
+		'lastName'=>'de Rugy',
+		'login'=>'2019goulletba',
+		'email'=>'b.gdr@student-cs.fr',
+		'promo'=>'2024',
+	);
+//
+##les fonctionnalités qui suivent sont exclusivent au papybang##
+function isOld($login){
+	$year=intval(substr($login, 0, 4));
+	if($year<2020){
+		return True;
+	}
+	else{
+		return False;
+	}
+}
+function isYoung($login){
+	$year=intval(substr($login, 0, 4));
+	if($year>=2020){
+		return True;
+	}
+	else{
+		return False;
+	}
+}
 if ($_SESSION["email"] == '???') {
 	header("Location: /papybang/troll.php");
 }
@@ -96,6 +129,34 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 </head>
 
 <body onload="onLoad()">
+
+<?php
+	
+	// if (!$_SESSION['shotgun']) {
+	// 	if (!$_SESSION["is_cotisant"]) {
+	// 		echo "<p id='danger_msg_ctnr'>ATTENTION !! <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
+	// 	} else {
+	// 		echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir Shotgun! </p>";
+	// 	}
+	// } else {
+	// 	echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au papybang. </p>";
+	// }
+	if (!$_SESSION['shotgun']) {
+		if (!$_SESSION["is_cotisant"]) {
+			echo "<p id='danger_msg_ctnr'>ATTENTION !! <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
+		} else {
+			if(isOld($_SESSION['login'])){
+				echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant (et vieux), tu vas pouvoir Shotgun! </p>";
+			}
+			elseif(isYoung($_SESSION['login'])){
+				echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant mais </strong>ton shotgun est mercredi à 13h!<strong><br> Laisses les vieux shotgun lundi à 13h</p>";
+			}			
+		}
+	} 
+	else {
+		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au papybang. </p>";
+	}
+	?>
 	<div id="titre_sg"></div>
 	<div id="counter">
 		<!-- <div class="digit_holder months" id="mois">
@@ -121,18 +182,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	</div>
 	</div>
 
-	<?php
 	
-	if (!$_SESSION['shotgun']) {
-		if (!$_SESSION["is_cotisant"]) {
-			echo "<p id='danger_msg_ctnr'>ATTENTION !! <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
-		} else {
-			echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir Shotgun! </p>";
-		}
-	} else {
-		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au papybang. </p>";
-	}
-	?>
 	<div id="sg_link_ctnr">
 		<?php
 		if (!$_SESSION['shotgun']) {
