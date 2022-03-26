@@ -3,21 +3,6 @@ session_start();
 
 // include("auth.php"); 
 include("database.php");
-// //
-// 	//
-$_SESSION["isConnected"] = true;
-$_SESSION["is_cotisant"]=true;
-$_SESSION['shotgun']=false;
-$_SESSION["user"]=array(
-	'firstName'=>'Bastien',
-	'lastName'=>'de Rugy',
-	'login'=>'2019goulletba',
-	'email'=>'b.gdr@student-cs.fr',
-	'promo'=>'2024',
-);
-
-// 	//
-// 	//
 
 function number_place($pdo)
 {
@@ -65,16 +50,16 @@ $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
 $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
 //
-$_SESSION["isConnected"] = true;
-	$_SESSION["is_cotisant"]=true;
-	$_SESSION['shotgun']=false;
-	$_SESSION["user"]=array(
-		'firstName'=>'Bastien',
-		'lastName'=>'de Rugy',
-		'login'=>'2019goulletba',
-		'email'=>'b.gdr@student-cs.fr',
-		'promo'=>'2024',
-	);
+// $_SESSION["isConnected"] = true;
+// 	$_SESSION["is_cotisant"]=true;
+// 	$_SESSION['shotgun']=false;
+// 	$_SESSION["user"]=array(
+// 		'firstName'=>'Bastien',
+// 		'lastName'=>'de Rugy',
+// 		'login'=>'2019goulletba',
+// 		'email'=>'b.gdr@student-cs.fr',
+// 		'promo'=>'2024',
+// 	);
 //
 ##les fonctionnalités qui suivent sont exclusivent au papybang##
 function isOld($login){
