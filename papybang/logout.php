@@ -2,5 +2,5 @@
 session_start();
 session_destroy();
 $_SESSION['prev_page'] == "logout.php";
-header("Location: /guantanano/");
+header("Location: /papybang/");
 ?>
