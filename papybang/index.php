@@ -91,7 +91,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	<title>PAPYBANG</title>
 	<meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
 	<!-- <meta property="og:image" content="https://adr.cs-campus.fr/papybang/img/fb_banner.jpg" /> -->
-	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/papybang/img/prison.png">
+	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/papybang/img/cassetteIcon.png">
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 
@@ -162,7 +162,6 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 			}
 		}
 	</script>
-
 </body>
 
 </html>

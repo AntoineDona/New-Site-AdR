@@ -8,7 +8,7 @@ include('database.php') ?>
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
 	<title>PAPYBANG</title>
-	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/papybang/img/prison.png">
+	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/papybang/img/cassetteIcon.png">
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 

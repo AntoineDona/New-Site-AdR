@@ -47,15 +47,16 @@ html {
 body {
   width: 100vw;
   height: 100%;
-  background-image: url("img/bckground.png");
+  background-image: url('/papybang/img/fondPapy.jpg');
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
-  background-color: black;
+  /* background-color: linear-gradient(, #9198e5); */
+  background-color: rgb(86,83,97);
   color: white;
   position: absolute;
   text-align: center;
-  font-family: "NeonGuanta";
+  font-family: "retro";
   overflow-x: hidden;
 }
 
@@ -106,7 +107,6 @@ a:active {
   text-shadow: var(--green_text_shadow);
   z-index: 0;
   position: relative;
-  /* font-family: "Digital_tech"; */
 }
 
 .digit_holder {
@@ -142,7 +142,7 @@ a:active {
   z-index: 0;
   position: relative;
   line-height: 2rem;
-  font-family: "NeonGuanta";
+  font-family: "retro";
 }
 
 
@@ -192,7 +192,7 @@ a:active {
 
 #sg_link {
   padding: 0.5rem 2rem;
-  font-family: "NeonGuata";
+  font-family: "retro";
   cursor: not-allowed;
   pointer-events: none;
   /* color: rgba(255, 255, 255, 0.541);
@@ -294,7 +294,7 @@ h1.interface {
   text-align: center;
   font-size: 80px;
   color: "white";
-  font-family: "NeonGuata";
+  font-family: "retro";
   margin-top: 20vh;
 }
 
@@ -352,7 +352,7 @@ form {
 
 .greencard {
   background: rgba(125, 250, 125, 0.3);
-  font-family: 'NeonGuata';
+  font-family: 'retro';
   font-weight: bold;
   width: 60vw;
   text-align: center;
@@ -370,7 +370,7 @@ form {
 
 .redcard {
   background: rgba(92, 92, 92, 0.3);
-  font-family: arial;
+  font-family: 'retro';
   font-weight: bold;
   width: 60vw;
   text-align: center;
@@ -386,7 +386,7 @@ form {
 
 .submit {
   font-size: 50px;
-  font-family: "NeonGuata";
+  font-family: "retro";
   color: white;
   font-weight: bold;
   margin: 8px;
@@ -465,7 +465,7 @@ form {
 @media screen and (orientation: portrait),
 screen and (max-width: 800px) {
   body {
-    background: url("img/guentaBackground.png");
+    background: url("/papybang/img/fondPapy.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -758,26 +758,9 @@ screen and (max-width: 800px) {
 /* Fonts ------------------------------------------------------------------------------------------------------------------------------ */
 
 @font-face {
-  font-family: "CaviarDreams";
-  src: url("fonts/CaviarDreams.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-family:'retro';
+  src:url('/papybang/fonts/RetroGaming.ttf') format('truetype');
+  font-weight:normal;
+  font-style:normal;
 }
 
-@font-face {
-  font-family: "Digital_tech";
-  font-weight: bold;
-  src: url("fonts/Digital_tech.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Azonix";
-  font-weight: bold;
-  src: url("fonts/Azonix.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "NeonGuanta";
-  font-weight: bold;
-  src: url("fonts/NeonSans.otf") format("opentype");
-}
