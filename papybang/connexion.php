@@ -9,7 +9,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	//echo $_SESSION["user"]["login"];
 	$_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 	$_SESSION["nom"] = $_SESSION["user"]["lastName"];
-	header("Location: /papybang/index.php");
+	header("Location: /guantanano/index.php");
 	
 } else {$_SESSION["isConnected"] = false;}
 ?>
@@ -19,8 +19,8 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
-	<title>PAPYBANG</title>
-	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/img/cassetteIcon.png">
+	<title>GUANTANANO</title>
+	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/guantanano/img/prison.png">
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
@@ -30,16 +30,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 		echo "<script>alert(\"Tu as bien été déconnecté \")</script>";
 	}
 	?>
-	
-	<img id="abang" src="img/proj4_title.png">
-	
-	
-	<div id="prez">
-		<p>
-			Rejoins l'AdR 2K19 pour une dernière soirée de folie, à l'ancienne, parce que c'était quand même mieux avant. J'espère que
-			ce petit site ultra rudimentaire réveille en toi de doux souvenirs de doute et de stress. Est-ce que ce shotgun va fonctionner ? 
-		</p>
-	</div>
+	<div id="titre_sg" style='margin-top: 60vh;' >Le shotgun commence dans:</div>
 	<div id="counter">
 		<!-- <div class="digit_holder months" id="mois">
 			<p class="chiffre">00</p>
@@ -70,7 +61,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 		}
 		?> -->
 	<div id="co_link_ctnr" href="#">
-		<a id="co_link" href='redirect.php?redirect=https://adr.cs-campus.fr/papybang'>Se connecter</a>
+		<a id="co_link" href='redirect.php?redirect=https://adr.cs-campus.fr/guantanano'>Se connecter</a>
 	</div>
 	<?php include("script.php"); ?>
 </body>

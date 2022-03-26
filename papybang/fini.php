@@ -15,20 +15,20 @@ include("database.php");
 <?php
 function number_place($pdo)
 {
-	$query = $pdo->prepare("SELECT COUNT(*) as c from papybang");
+	$query = $pdo->prepare("SELECT COUNT(*) as c from guantanano");
 	$query->execute();
 	$result = $query->fetch();
 	return $result['c'];
 }
 if (number_place($pdo) < $_SESSION["total_places"]) {
 	if ($_SESSION["isConnected"]) {
-		header("Location: /papybang/index.php");
+		header("Location: /guantanano/index.php");
 	} else {
-		header("Location: /papybang/connexion.php");
+		header("Location: /guantanano/connexion.php");
 	}
 }
 if ($_SESSION['shotgun']) {
-	header("Location: /papybang/index.php");
+	header("Location: /guantanano/index.php");
 }
 ?>
 
