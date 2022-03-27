@@ -147,8 +147,8 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	}
 	?>
 	
-	<div id="titre_sg" class="titre_index" style='top: -60vh;'></div>
-	<div id="counter" class="counter_index" style='top: -60vh;'>
+	<div id="titre_sg" class="titre_index" style='top: -61vh;'></div>
+	<div id="counter" class="counter_index" style='top: -61vh;'>
 		<!-- <div class="digit_holder months" id="mois">
 			<p class="chiffre">00</p>
 			<p class="text">mois(s)</p>
