@@ -90,7 +90,7 @@ a:active {
   /* animation: frame_glow 8s ease infinite; */
   z-index: 0;
   position: relative;
-  top:0vh;
+  top:5vh;
   background-color:red;
 }
 
@@ -109,6 +109,7 @@ a:active {
   text-shadow: var(--green_text_shadow);
   z-index: 0;
   position: relative;
+  top:5vh;
 }
 
 .digit_holder {
