@@ -10,11 +10,11 @@
   --blue_box_shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px var(--blue),
     inset 0 0 10px var(--blue), 0 0 21px var(--blue), inset 0 0 21px var(--blue),
     0 0 42px var(--blue), inset 0 0 42px var(--blue);
-  --purple: rgb(255, 44, 7);/*c'est rouge mais la flm de changer*/
+  --purple: #4891c7;/*c'est rouge mais la flm de changer*/
   --purple_box_shadow: 0 0 7px white, inset 0 0 7px white, 0 0 10px var(--purple),
     inset 0 0 10px var(--purple), 0 0 21px var(--purple), inset 0 0 21px var(--purple),
     0 0 42px var(--purple), inset 0 0 42px var(--purple);
-  --danger: rgb(167, 20, 20);
+  --danger: #4891c7;
   --light_danger: rgb(253, 234, 234);
   --danger_text_shadow: 0 0 7px white, 0 0 10px var(--danger),
     0 0 21px var(--danger), 0 0 42px var(--danger);
@@ -182,9 +182,20 @@ a:active {
 #danger_msg_ctnr {
   /* background-color: var(--danger); */
   /* border: solid 0.1rem white; */
-  box-shadow: var(--danger_box_shadow);
+  
   color: var(--light_danger);
-  text-shadow: var(--danger_text_shadow);
+  width: 80%;
+  
+}
+#message{
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  width: 80%;
+
+
 }
 
 #co_msg_ctnr,
@@ -209,15 +220,14 @@ a:active {
   width: auto;
   margin: auto;
   text-align: center;
-  border-radius: 8px;
 }
 
 
 #sg_link_ctnr {
-  position:relative;
-  top:-55vh;
+  /* position:relative;
+  top:-55vh; */
   z-index:34567;
-  font-size: 5rem;
+  font-size: 4rem;
   display: flex;
   justify-content: center;
 }
@@ -237,7 +247,8 @@ a:active {
 #sg_link,
 #co_link {
   width: auto;
-  border-radius: 8px;
+  color: #4891c7 ;
+
 }
 
 #sg_link {
@@ -245,15 +256,6 @@ a:active {
   font-family: "retro";
   cursor: not-allowed;
   pointer-events: none;
-  /* color: rgba(255, 255, 255, 0.541);
-  text-shadow: 0 0 7px rgba(255, 255, 255, 0.541), 0 0 10px rgba(0, 0, 0, 0.555);
-  border: solid 5px white;
-  border: solid 5px rgba(255, 255, 255, 0.541);
-  box-shadow: 0 0 7px rgba(255, 255, 255, 0.541),
-    inset 0 0 7px rgba(255, 255, 255, 0.541), 0 0 10px rgba(0, 0, 0, 0.555),
-    inset 0 0 10px rgba(0, 0, 0, 0.555);
-  transition: all 0.4s ease; */
-  animation: shotgun 3s ease infinite;
   z-index:23456789;
 
 }
@@ -552,7 +554,6 @@ screen and (max-width: 800px) {
   #sg_link,
   #co_link {
     font-size: 6rem;
-    margin-top: 1em;
     padding: 3rem;
   }
 
@@ -618,7 +619,6 @@ screen and (max-width: 800px) {
   #sg_link,
   #co_link {
     font-size: 2.2rem;
-    padding: 1rem;
   }
   #footer{
     margin-top: 1rem;
