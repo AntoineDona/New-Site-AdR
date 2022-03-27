@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("auth.php"); 
+// include("auth.php"); 
 include("database.php");
 
 function number_place($pdo)
@@ -40,27 +40,28 @@ function is_cotisant($email, $pdo)
 	}
 }
 
+//
+$_SESSION["isConnected"] = true;
+$_SESSION["is_cotisant"]=true;
+$_SESSION['shotgun']=false;
+$_SESSION["user"]=array(
+		'firstName'=>'Bastien',
+		'lastName'=>'de Rugy',
+		'login'=>'2019goulletba',
+		'email'=>'b.gdr@student-cs.fr',
+		'promo'=>'2024',
+	);
+//
+
 $_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 $_SESSION["nom"] = $_SESSION["user"]["lastName"];
 $_SESSION["email"] = $_SESSION["user"]["email"];
 $_SESSION['login']=$_SESSION['user']['login'];
 
 $_SESSION['total_places'] = 750;
-$_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
-$_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
+// $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
+// $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
-//
-// $_SESSION["isConnected"] = true;
-// 	$_SESSION["is_cotisant"]=true;
-// 	$_SESSION['shotgun']=false;
-// 	$_SESSION["user"]=array(
-// 		'firstName'=>'Bastien',
-// 		'lastName'=>'de Rugy',
-// 		'login'=>'2019goulletba',
-// 		'email'=>'b.gdr@student-cs.fr',
-// 		'promo'=>'2024',
-// 	);
-//
 ##les fonctionnalités qui suivent sont exclusivent au papybang##
 function isOld($login){
 	$year=intval(substr($login, 0, 4));
@@ -119,44 +120,17 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		<img class="logobang_img" src="img/proj4_title.png">
 	</div>
 
-<?php
-	
-	// if (!$_SESSION['shotgun']) {
-	// 	if (!$_SESSION["is_cotisant"]) {
-	// 		echo "<p id='danger_msg_ctnr'>ATTENTION !! <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
-	// 	} else {
-	// 		echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir Shotgun! </p>";
-	// 	}
-	// } else {
-	// 	echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au papybang. </p>";
-	// }
-	if (!$_SESSION['shotgun']) {
-		if (!$_SESSION["is_cotisant"]) {
-			echo "<p id='danger_msg_ctnr'>ATTENTION !! <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
-		} else {
-			if(isOld($_SESSION['login'])){
-				echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant (et vieux), tu vas pouvoir Shotgun! </p>";
-			}
-			elseif(isYoung($_SESSION['login'])){
-				echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant mais </strong>ton shotgun est mercredi à 13h!<strong><br> Laisses les vieux shotgun lundi à 13h</p>";
-			}			
-		}
-	} 
-	else {
-		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au papybang. </p>";
-	}
-	?>
-	
+<div id='sgSpace'>
 	<div id="titre_sg" class="titre_index" style='top: -61vh;'></div>
 	<div id="counter" class="counter_index" style='top: -61vh;'>
 		<!-- <div class="digit_holder months" id="mois">
 			<p class="chiffre">00</p>
 			<p class="text">mois(s)</p>
 		</div> -->
-		<div class="digit_holder days" id="jours">
+		<!-- <div class="digit_holder days" id="jours">
 			<p class="chiffre">00</p>
 			<p class="text">jours</p>
-		</div>
+		</div> -->
 		<div class="digit_holder hours" id="heures">
 			<p class="chiffre">00</p>
 			<p class="text">heures</p>
@@ -182,7 +156,9 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		}
 		?>
 	</div>
-	<p id="footer">Pas besoin de recharger la page au moment du shotgun!</p>
+	
+	</div>
+	
 
 	<?php include("script.php"); 
 	if (!$_SESSION["is_cotisant"] && isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "action.php") {
@@ -202,6 +178,25 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 			}
 		}
 	</script>
+	<div id="message">
+	<?php
+	if (!$_SESSION['shotgun']) {
+		if (!$_SESSION["is_cotisant"]) {
+			echo "<p >ATTENTION !! <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
+		} else {
+			if(isOld($_SESSION['login'])){
+				echo "<p > Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant (et vieux), tu vas pouvoir Shotgun! </p>";
+			}
+			elseif(isYoung($_SESSION['login'])){
+				echo "<p> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant mais </strong>ton shotgun est mercredi à 13h!<strong><br> Laisses les vieux shotgun lundi à 13h</p>";
+			}			
+		}
+	} 
+	else {
+		echo "<p> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au papybang. </p>";
+	}
+	?>
+	</div>
 </body>
 
 </html>
