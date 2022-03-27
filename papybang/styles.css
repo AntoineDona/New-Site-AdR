@@ -96,7 +96,7 @@ a:active {
 }
 
 .titre_index{
-  top:0vh;
+  top:-5vh;
 }
 
 
@@ -116,7 +116,7 @@ a:active {
 }
 
 .counter_index{
-  top:0vh;
+  top:-5vh;
 }
 
 .digit_holder {
@@ -159,7 +159,6 @@ a:active {
   margin-bottom: 8rem;
   padding: 1.5rem;
   width: 20vw;
-  color:green;
   font-size: 1.5rem;
   text-align: center;
   border-radius: 0.5rem;
@@ -184,8 +183,7 @@ a:active {
   /* background-color: var(--green); */
   /* border: solid 0.1rem white; */
   box-shadow: var(--green_box_shadow);
-  /*color: var(--light_green);*/
-  color:green;
+  color: var(--light_green);
   text-shadow: var(--purple_text_shadow);
 }
 
