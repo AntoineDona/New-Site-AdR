@@ -134,6 +134,12 @@ a:active {
   background-color:yellow;
 }
 
+.logobang_img{
+  position:relative;
+  left:35vw;
+  width:30vw;
+}
+
 #co_msg_ctnr,
 #ok_msg_ctnr,
 #danger_msg_ctnr {
