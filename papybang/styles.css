@@ -129,6 +129,11 @@ a:active {
   font-size: 1.1rem;
 }
 
+#logobang{
+  z-index:234567;
+  background-color:yellow;
+}
+
 #co_msg_ctnr,
 #ok_msg_ctnr,
 #danger_msg_ctnr {
