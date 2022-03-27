@@ -31,7 +31,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	}
 	?>
 	<div id="logobang">
-		<img src="proj4_title.png">
+		<img src="img/proj4_title.png">
 	</div>
 	<div id="tease">
 	<p>Rejoins nous pour une dernière soirée, à lancienne, parce que c'était mieux avant. 
