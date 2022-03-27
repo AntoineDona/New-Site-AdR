@@ -90,7 +90,7 @@ a:active {
   /* animation: frame_glow 8s ease infinite; */
   z-index: 0;
   position: relative;
-  top:6vh;
+  top:5vh;
   background-color:red;
 }
 
@@ -109,7 +109,7 @@ a:active {
   text-shadow: var(--green_text_shadow);
   z-index: 0;
   position: relative;
-  top:6vh;
+  top:5vh;
 }
 
 .digit_holder {
@@ -170,7 +170,7 @@ a:active {
   display: flex;
   justify-content: center;
   position:relative;
-  top:4vh;
+  top:3vh;
 }
 
 #sg_link_ctnr,
