@@ -96,6 +96,7 @@ a:active {
 }
 
 .titre_index{
+  position: relative;
   top:-5vh;
 }
 
@@ -116,6 +117,7 @@ a:active {
 }
 
 .counter_index{
+  positive: relative;
   top:-5vh;
 }
 
