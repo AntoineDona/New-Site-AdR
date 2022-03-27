@@ -138,7 +138,8 @@ a:active {
 .logobang_img{
   /*background-color:red;*/
   position:relative;
-  width:30vw;
+  top:-10vh;
+  width:40vw;
 }
 
 #co_msg_ctnr,
