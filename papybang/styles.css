@@ -185,7 +185,9 @@ a:active {
 }
 
 #tease {
-  font-size: 3rem;
+  font-size: 0.5rem;
+  margin-top:30vh;
+  width: 20vw;
   color:green;
   display: flex;
   justify-content: center;
