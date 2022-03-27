@@ -522,17 +522,19 @@ screen and (max-width: 800px) {
     width: 60vw;
     margin-top: 45vh;
     margin-bottom: 4rem;
-    font-size: 6rem;
+    font-size: 4rem;
     border-radius: 1rem;
   }
   
   #counter{
-    width:60vw;
+    width:80vw;
   }
   
   #tease{
     color:green;
+    font:3rem;
     width:60vw;
+    left:20vw;
   }
 
   #co_msg_ctnr,
