@@ -186,6 +186,7 @@ a:active {
 }
 
 #tease {
+  position:relative;
   font-size: 1rem;
   top:30vh;
   width: 20vw;
