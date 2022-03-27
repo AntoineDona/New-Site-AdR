@@ -90,7 +90,7 @@ a:active {
   /* animation: frame_glow 8s ease infinite; */
   z-index: 0;
   position: relative;
-  top:-30vh;
+  top:-50vh;
   background-color:red;
 }
 
@@ -109,7 +109,7 @@ a:active {
   text-shadow: var(--green_text_shadow);
   z-index: 0;
   position: relative;
-  top:-30vh;
+  top:-50vh;
 }
 
 .digit_holder {
@@ -204,7 +204,7 @@ a:active {
 #tease {
   position:relative;
   font-size: 1.3rem;
-  top:-60vh;
+  top:-30vh;
   width: 20vw;
   left: 40vw;
   color:green;
