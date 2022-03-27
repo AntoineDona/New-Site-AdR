@@ -99,6 +99,12 @@ a:active {
   position: relative;
   top:-5vh;
 }
+#sgSpace{
+  position: absolute;
+  top: 68vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 
 #counter {
@@ -110,16 +116,15 @@ a:active {
   justify-content: center;
   align-items: center;
   color: var(--light_green);
-  text-shadow: var(--green_text_shadow);
   z-index: 0;
   position: relative;
   top:-55vh;
 }
 
-/* .counter_index{
+.counter_index{
   position: relative;
   top:-5vh;
-} */
+}
 
 .digit_holder {
   margin: 0 1rem;
@@ -128,10 +133,11 @@ a:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: green;
 }
 
 .chiffre {
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 .text {
@@ -146,9 +152,10 @@ a:active {
 
 .logobang_img{
   /*background-color:red;*/
-  position:relative;
-  top:-10vh;
-  width:40vw;
+  position:absolute;
+  top:0.5vh;
+  transform: translateX(-50%);
+  width:30vh;
 }
 
 #co_msg_ctnr,
@@ -253,11 +260,9 @@ a:active {
 
 #co_link {
   padding: 2rem;
-  animation: shotgun 3s ease infinite;
   cursor: pointer;
   font-size: 2rem;
-  margin-top: 1em;
-
+  color: #4891c7;
 }
 
 #footer {
@@ -520,8 +525,6 @@ screen and (max-width: 800px) {
   #titre_sg {
     overflow: visible;
     width: 60vw;
-    margin-top: 45vh;
-    margin-bottom: 4rem;
     font-size: 4rem;
     border-radius: 1rem;
   }
