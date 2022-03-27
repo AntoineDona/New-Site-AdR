@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// include("auth.php"); 
+include("auth.php"); 
 include("database.php");
 
 function number_place($pdo)
@@ -45,7 +45,7 @@ $_SESSION["nom"] = $_SESSION["user"]["lastName"];
 $_SESSION["email"] = $_SESSION["user"]["email"];
 $_SESSION['login']=$_SESSION['user']['login'];
 
-$_SESSION['total_places'] = 400;
+$_SESSION['total_places'] = 750;
 $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
 $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
