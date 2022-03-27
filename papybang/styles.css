@@ -90,7 +90,7 @@ a:active {
   /* animation: frame_glow 8s ease infinite; */
   z-index: 0;
   position: relative;
-  top:10vh;
+  top:0vh;
   background-color:red;
 }
 
@@ -188,8 +188,8 @@ a:active {
 
 #tease {
   position:relative;
-  font-size: 1.5rem;
-  top:45vh;
+  font-size: 1.2rem;
+  top:43vh;
   width: 20vw;
   left: 40vw;
   color:green;
