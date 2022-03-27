@@ -184,6 +184,13 @@ a:active {
   justify-content: center;
 }
 
+#tease {
+  font-size: 3rem;
+  color:green;
+  display: flex;
+  justify-content: center;
+}
+
 #sg_link,
 #co_link {
   width: auto;
