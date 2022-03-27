@@ -34,7 +34,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	<p>Rejoins nous pour une dernière soirée, à lancienne, parce que c'était mieux avant. 
 	J'espère que ce petit site rudimentaire fait remonter des souvenirs de doute et de stress.</p>
 	</div>
-	<div id="titre_sg" style='margin-top: 60vh;' >Le shotgun commence dans:</div>
+	<div id="titre_sg" style='margin-top: 40vh;' >Le shotgun commence dans:</div>
 	<div id="counter">
 		<!-- <div class="digit_holder months" id="mois">
 			<p class="chiffre">00</p>
