@@ -58,6 +58,7 @@ body {
   text-align: center;
   font-family: "retro";
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 a {
