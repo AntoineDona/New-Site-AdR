@@ -169,6 +169,7 @@ a:active {
 #co_link_ctnr {
   display: flex;
   justify-content: center;
+  position:relative;
   top:5vh;
 }
 
@@ -190,7 +191,7 @@ a:active {
 
 #tease {
   position:relative;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   top:43vh;
   width: 20vw;
   left: 40vw;
