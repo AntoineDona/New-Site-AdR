@@ -132,6 +132,7 @@ a:active {
 #logobang{
   z-index:234567;
   background-color:yellow;
+  height:60%;
 }
 
 .logobang_img{
