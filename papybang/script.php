@@ -40,8 +40,8 @@
 		if (total_sec >= 0) {
 			select_id('titre_sg').innerHTML = '<span>' + title + '</span>';
 			// select_id('mois').innerHTML = '<p class="chiffre"> 00 </p>' + '<p class="text">mois</p>';
-			select_id('jours').innerHTML = '<p class="chiffre">' + diff_jour + '</p>' + '<p class="text">jours</p>';
-			select_id('heures').innerHTML = '<p class="chiffre">' + diff_hour + '</p>' + '<p class="text">heures</p>';
+			// select_id('jours').innerHTML = '<p class="chiffre">' + diff_jour + '</p>' + '<p class="text">jours</p>';
+			// select_id('heures').innerHTML = '<p class="chiffre">' + diff_hour + '</p>' + '<p class="text">heures</p>';
 			select_id('minutes').innerHTML = '<p class="chiffre">' + diff_min + '</p>' + '<p class="text">minutes</p>';
 			select_id('secondes').innerHTML = '<p class="chiffre">' + diff_sec + '</p>' + '<p class="text">secondes</p>';
 
