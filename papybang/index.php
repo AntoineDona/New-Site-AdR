@@ -142,6 +142,9 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au papybang. </p>";
 	}
 	?>
+	<div id="logobang">
+		<img class="logobang_img" src="img/proj4_title.png">
+	</div>
 	<div id="titre_sg" class="titre_index"></div>
 	<div id="counter" class="counter_index">
 		<!-- <div class="digit_holder months" id="mois">
