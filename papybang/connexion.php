@@ -34,7 +34,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 		<img class="logobang_img" src="img/proj4_title.png">
 	</div>
 	<div id="tease">
-	<p>Rejoins nous pour une dernière soirée, à lancienne, parce que c'était mieux avant. 
+	<p>Rejoins nous pour une dernière soirée, à l'ancienne, parce que c'était mieux avant. 
 	J'espère que ce petit site rudimentaire fait remonter des souvenirs de doute et de stress.</p>
 	</div>
 	<div id="titre_sg" style='margin-top: 40vh;' >Le shotgun commence dans:</div>
