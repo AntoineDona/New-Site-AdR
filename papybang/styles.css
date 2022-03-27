@@ -207,6 +207,8 @@ a:active {
 
 
 #sg_link_ctnr {
+  position:relative;
+  top:50vh;
   font-size: 5rem;
   display: flex;
   justify-content: center;
