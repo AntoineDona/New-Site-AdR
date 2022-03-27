@@ -209,6 +209,7 @@ a:active {
 #sg_link_ctnr {
   position:relative;
   top:-55vh;
+  z-index:34567;
   font-size: 5rem;
   display: flex;
   justify-content: center;
