@@ -95,7 +95,9 @@ a:active {
   /*background-color:red;*/
 }
 
-
+.titre_index{
+  top:0vh;
+}
 
 
 #counter {
@@ -111,6 +113,10 @@ a:active {
   z-index: 0;
   position: relative;
   top:-55vh;
+}
+
+.counter_index{
+  top:0vh;
 }
 
 .digit_holder {
