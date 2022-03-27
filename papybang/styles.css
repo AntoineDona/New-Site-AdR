@@ -132,11 +132,10 @@ a:active {
 #logobang{
   z-index:234567;
   background-color:yellow;
-  display:flex;
-  justify-content:center;
 }
 
 .logobang_img{
+  background-color:red;
   position:relative;
   left:35vw;
   width:30vw;
