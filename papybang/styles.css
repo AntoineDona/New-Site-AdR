@@ -519,12 +519,21 @@ screen and (max-width: 800px) {
 
   #titre_sg {
     overflow: visible;
+    width: 60vw;
     margin-top: 45vh;
     margin-bottom: 4rem;
     font-size: 6rem;
     border-radius: 1rem;
   }
   
+  #counter{
+    width:60vw;
+  }
+  
+  #tease{
+    color:green;
+    width:60vw;
+  }
 
   #co_msg_ctnr,
   #ok_msg_ctnr,
