@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("auth.php"); 
+include("auth.php");
 include("database.php");
 
 function number_place($pdo)
@@ -59,8 +59,8 @@ $_SESSION["email"] = $_SESSION["user"]["email"];
 $_SESSION['login']=$_SESSION['user']['login'];
 
 $_SESSION['total_places'] = 750;
-// $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
-// $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
+$_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
+$_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
 ##les fonctionnalités qui suivent sont exclusivent au papybang##
 function isOld($login){
@@ -115,7 +115,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 </head>
 
 <body onload="onLoad()">
-	
+
 	<div id="logobang">
 		<img class="logobang_img" src="img/proj4_title.png">
 	</div>
@@ -146,7 +146,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	</div>
 	</div>
 
-	
+
 	<div id="sg_link_ctnr">
 		<?php
 		if (!$_SESSION['shotgun']) {
@@ -156,11 +156,11 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		}
 		?>
 	</div>
-	
-	</div>
-	
 
-	<?php include("script.php"); 
+	</div>
+
+
+	<?php include("script.php");
 	if (!$_SESSION["is_cotisant"] && isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "action.php") {
 		// Pour ceux qui ont cliqué sur shotgun et qui ne sont pas cotisants
 		echo "<script>alert(\"Tu n'es pas cotisant desolé... \")</script>";
@@ -189,9 +189,9 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 			}
 			elseif(isYoung($_SESSION['login'])){
 				echo "<p> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant mais </strong>ton shotgun est mercredi à 13h!<strong><br> Laisses les vieux shotgun lundi à 13h</p>";
-			}			
+			}
 		}
-	} 
+	}
 	else {
 		echo "<p> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au papybang. </p>";
 	}
