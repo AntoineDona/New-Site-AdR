@@ -46,24 +46,24 @@ include('database.php') ?>
 		header("Location: /papybang/index.php");
 	}
 	##les fonctionnalités qui suivent sont exclusivent au papybang##
-	// function isOld($login){
-	// 	$year=intval(substr($login, 0, 4));
-	// 	if($year<2025){
-	// 		return True;
-	// 	}
-	// 	elseif($login=='2021goulletba'){
-	// 		return True;
-	// 	}
-	// 	else{
-	// 		return False;
-	// 	}
-	// }
+	function isOld($login){
+		$year=intval(substr($login, 0, 4));
+		if($year>=2020){
+			return False;
+		}
+		elseif($login=='2021goulletba'){
+			return True;
+		}
+		else{
+			return true;
+		}
+	}
 	// function isYoung($login){
 	// 	$year=intval(substr($login, 0, 4));
 	// 	if($login=='2021goulletba'){
 	// 		return false;
 	// 	}
-	// 	elseif($year>=2025){
+	// 	elseif($year>=2020){
 	// 		return True;
 	// 	}
 	// 	else{
@@ -87,15 +87,20 @@ include('database.php') ?>
 
 	$end_date = mktime(03, 00, 00, 04, 02, 2022);
 	$end_date_sec = (((date('d', $end_date) - 1) * 24 + date('H', $end_date)) * 60 + date('i', $end_date)) * 60 + date('s', $end_date);
-	
-			
-			
+	if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec){
+			if ($_SESSION["is_cotisant"] == false) {
+				$_SESSION['prev_page'] = "action.php";
+				header("Location: /papybang/index.php");
+			} 
+			else {
 				if (!$_SESSION['shotgun']) {
 					if (number_place($pdo) < $_SESSION['total_places']) {
+						if(isOld($_SESSION['login'])){
 							$query = $pdo->prepare("INSERT into papybang (prenom,nom, email, heure) VALUES (?,?,?,?)");
 							$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time']));
 							$_SESSION['shotgun'] = true;
 							header("refresh:5; url=/papybang/index.php");
+						}
 					} 
 					else {
 						header("refresh:5; url=/papybang/fini.php");
@@ -104,9 +109,13 @@ include('database.php') ?>
 				else {
 					depaps($_SESSION["email"], $pdo);
 				}
-		
-		
-	
+			}
+		}
+	else if ($_SESSION['shotgun']) {
+		depaps($_SESSION["email"], $pdo);
+	} else {
+		header("Location: /papybang/");
+	}
 	?>
 	<div class="loading-animation-box">
 		<div>

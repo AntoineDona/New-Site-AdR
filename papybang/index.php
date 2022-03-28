@@ -65,7 +65,7 @@ $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 ##les fonctionnalités qui suivent sont exclusivent au papybang##
 function isOld($login){
 	$year=intval(substr($login, 0, 4));
-	if($year<2025){
+	if($year<2020){
 		return True;
 	}
 	elseif($login=='2021goulletba'){
@@ -80,7 +80,7 @@ function isYoung($login){
 	if($login=='2021goulletba'){
 		return false;
 	}
-	elseif($year>=2025){
+	elseif($year>=2020){
 		return True;
 	}
 	else{
@@ -191,12 +191,12 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		if (!$_SESSION["is_cotisant"]) {
 			echo "<p >ATTENTION !! <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
 		} else {
-			// if(isOld($_SESSION['login'])){
+			if(isOld($_SESSION['login'])){
 				echo "<p > Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir Shotgun! </p>";
-			// }
-			// elseif(isYoung($_SESSION['login'])){
-			// 	echo "<p> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant mais </strong>ton shotgun est mercredi à 13h!<strong><br> Laisses les vieux shotgun lundi à 13h</p>";
-			// }
+			}
+			elseif(isYoung($_SESSION['login'])){
+				echo "<p> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant mais </strong>ton shotgun est mercredi à 13h!<strong><br> Laisses les vieux shotgun lundi à 13h</p>";
+			}
 		}
 	}
 	else {
