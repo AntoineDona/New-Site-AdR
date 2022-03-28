@@ -48,7 +48,7 @@ include('database.php') ?>
 	##les fonctionnalités qui suivent sont exclusivent au papybang##
 	function isOld($login){
 		$year=intval(substr($login, 0, 4));
-		if($year<2020 or $login=='2021goulletba'){
+		if($year<2022 or $login=='2021goulletba'){
 			return True;
 		}
 		else{
@@ -57,7 +57,7 @@ include('database.php') ?>
 	}
 	function isYoung($login){
 		$year=intval(substr($login, 0, 4));
-		if($year>=2020){
+		if($year>=2022){
 			return True;
 		}
 		elseif($login=='2021goulletba'){
