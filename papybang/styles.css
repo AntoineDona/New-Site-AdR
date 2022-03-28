@@ -254,7 +254,7 @@ a:active {
 #sg_link {
   padding: 0.5rem 2rem;
   font-family: "retro";
-  cursor: not-allowed;
+  /* cursor: not-allowed; */
   pointer-events: none;
   z-index:23456789;
 
