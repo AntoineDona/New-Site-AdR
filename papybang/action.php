@@ -88,11 +88,8 @@ include('database.php') ?>
 	$end_date = mktime(03, 00, 00, 04, 02, 2022);
 	$end_date_sec = (((date('d', $end_date) - 1) * 24 + date('H', $end_date)) * 60 + date('i', $end_date)) * 60 + date('s', $end_date);
 	
-			if ($_SESSION["is_cotisant"] == false) {
-				$_SESSION['prev_page'] = "action.php";
-				header("Location: /papybang/index.php");
-			} 
-			else {
+			
+			
 				if (!$_SESSION['shotgun']) {
 					if (number_place($pdo) < $_SESSION['total_places']) {
 							$query = $pdo->prepare("INSERT into papybang (prenom,nom, email, heure) VALUES (?,?,?,?)");
@@ -107,7 +104,7 @@ include('database.php') ?>
 				else {
 					depaps($_SESSION["email"], $pdo);
 				}
-			}
+		
 		
 	
 	?>
