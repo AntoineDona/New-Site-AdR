@@ -46,30 +46,30 @@ include('database.php') ?>
 		header("Location: /papybang/index.php");
 	}
 	##les fonctionnalités qui suivent sont exclusivent au papybang##
-	function isOld($login){
-		$year=intval(substr($login, 0, 4));
-		if($year<2025){
-			return True;
-		}
-		elseif($login=='2021goulletba'){
-			return True;
-		}
-		else{
-			return False;
-		}
-	}
-	function isYoung($login){
-		$year=intval(substr($login, 0, 4));
-		if($login=='2021goulletba'){
-			return false;
-		}
-		elseif($year>=2025){
-			return True;
-		}
-		else{
-			return False;
-		}
-	}
+	// function isOld($login){
+	// 	$year=intval(substr($login, 0, 4));
+	// 	if($year<2025){
+	// 		return True;
+	// 	}
+	// 	elseif($login=='2021goulletba'){
+	// 		return True;
+	// 	}
+	// 	else{
+	// 		return False;
+	// 	}
+	// }
+	// function isYoung($login){
+	// 	$year=intval(substr($login, 0, 4));
+	// 	if($login=='2021goulletba'){
+	// 		return false;
+	// 	}
+	// 	elseif($year>=2025){
+	// 		return True;
+	// 	}
+	// 	else{
+	// 		return False;
+	// 	}
+	// }
 	$shotgun_date_young = mktime(12, 59, 59, 03, 30, 2022);
 	$shotgun_date_young_sec = (((date('d', $shotgun_date_young) - 1) * 24 + date('H', $shotgun_date_young)) * 60 + date('i', $shotgun_date_young)) * 60 + date('s', $shotgun_date_young);
 
@@ -95,12 +95,10 @@ include('database.php') ?>
 			else {
 				if (!$_SESSION['shotgun']) {
 					if (number_place($pdo) < $_SESSION['total_places']) {
-						if(isOld($_SESSION["login"])){
 							$query = $pdo->prepare("INSERT into papybang (prenom,nom, email, heure) VALUES (?,?,?,?)");
 							$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time']));
 							$_SESSION['shotgun'] = true;
 							header("refresh:5; url=/papybang/index.php");
-						}
 					} 
 					else {
 						header("refresh:5; url=/papybang/fini.php");

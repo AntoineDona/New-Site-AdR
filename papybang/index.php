@@ -191,12 +191,12 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		if (!$_SESSION["is_cotisant"]) {
 			echo "<p >ATTENTION !! <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
 		} else {
-			if(isOld($_SESSION['login'])){
-				echo "<p > Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant (et vieux), tu vas pouvoir Shotgun! </p>";
-			}
-			elseif(isYoung($_SESSION['login'])){
-				echo "<p> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant mais </strong>ton shotgun est mercredi à 13h!<strong><br> Laisses les vieux shotgun lundi à 13h</p>";
-			}
+			// if(isOld($_SESSION['login'])){
+				echo "<p > Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir Shotgun! </p>";
+			// }
+			// elseif(isYoung($_SESSION['login'])){
+			// 	echo "<p> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant mais </strong>ton shotgun est mercredi à 13h!<strong><br> Laisses les vieux shotgun lundi à 13h</p>";
+			// }
 		}
 	}
 	else {
