@@ -255,8 +255,8 @@ a:active {
   padding: 0.5rem 2rem;
   font-family: "retro";
   /* cursor: not-allowed;
-  pointer-events: none; */
-  z-index:23456789;
+  pointer-events: none;
+  z-index:23456789; */
 
 }
 
