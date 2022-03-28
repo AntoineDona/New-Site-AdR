@@ -90,10 +90,12 @@ include('database.php') ?>
 	
 				if (!$_SESSION['shotgun']) {
 					if (number_place($pdo) < $_SESSION['total_places']) {
+						if(intval($_SESSION['user']['promo'])<2023){
 							$query = $pdo->prepare("INSERT into papybang (prenom,nom, email, heure, promo) VALUES (?,?,?,?,?)");
 							$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time'],$_SESSION['user']['promo']));
 							$_SESSION['shotgun'] = true;
 							header("refresh:5; url=/papybang/index.php");
+						}
 					} 
 					else {
 						header("refresh:5; url=/papybang/fini.php");
