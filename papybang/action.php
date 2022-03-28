@@ -57,11 +57,11 @@ include('database.php') ?>
 	}
 	function isYoung($login){
 		$year=intval(substr($login, 0, 4));
-		if($year>=2020){
-			return True;
-		}
-		elseif($login=='2021goulletba'){
+		if($login=='2021goulletba'){
 			return false;
+		}
+		elseif($year>=2020){
+			return True;
 		}
 		else{
 			return False;
