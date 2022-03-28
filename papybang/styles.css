@@ -221,6 +221,11 @@ a:active {
   margin: auto;
   text-align: center;
 }
+#sg_link{
+	margin:auto;
+	width:30vw;
+  font-family: 'retro';
+}
 
 
 #sg_link_ctnr {
@@ -231,6 +236,7 @@ a:active {
   display: flex;
   justify-content: center;
 }
+
 
 #tease {
   position:relative;
@@ -244,21 +250,13 @@ a:active {
  /* background-color:red;*/
 }
 
-#sg_link,
 #co_link {
   width: auto;
   color: #4891c7 ;
 
 }
 
-#sg_link {
-  padding: 0.5rem 2rem;
-  font-family: "retro";
-  /* cursor: not-allowed;
-  pointer-events: none;
-  z-index:23456789; */
 
-}
 
 #co_link {
   cursor: pointer;
@@ -551,7 +549,6 @@ screen and (max-width: 800px) {
     line-height: 4rem;
   }
 
-  #sg_link,
   #co_link {
     font-size: 6rem;
     padding: 3rem;
@@ -616,7 +613,6 @@ screen and (max-width: 800px) {
     margin-top: 2rem;
     /* margin-bottom: 2rem; */
   }
-  #sg_link,
   #co_link {
     font-size: 2.2rem;
   }
