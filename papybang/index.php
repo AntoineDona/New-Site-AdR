@@ -68,19 +68,26 @@ function isOld($login){
 	if($year<2020){
 		return True;
 	}
-	else{
-		return False;
-	}
-}
-function isYoung($login){
-	$year=intval(substr($login, 0, 4));
-	if($year>=2020){
+	elseif($login=='2021goulletba'){
 		return True;
 	}
 	else{
 		return False;
 	}
 }
+function isYoung($login){
+	$year=intval(substr($login, 0, 4));
+	if($login=='2021goulletba'){
+		return false;
+	}
+	elseif($year>=2020){
+		return True;
+	}
+	else{
+		return False;
+	}
+}
+
 if ($_SESSION["email"] == '???') {
 	header("Location: /papybang/troll.php");
 }
