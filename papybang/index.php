@@ -134,10 +134,10 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 			<p class="chiffre">00</p>
 			<p class="text">mois(s)</p>
 		</div> -->
-		<!-- <div class="digit_holder days" id="jours">
+		<div class="digit_holder days" id="jours">
 			<p class="chiffre">00</p>
 			<p class="text">jours</p>
-		</div> -->
+		</div>
 		<div class="digit_holder hours" id="heures">
 			<p class="chiffre">00</p>
 			<p class="text">heures</p>
