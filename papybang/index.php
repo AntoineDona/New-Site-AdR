@@ -157,7 +157,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	<div id="sg_link_ctnr">
 		<?php
 		if (!$_SESSION['shotgun']) {
-			echo '<a id="sg_link" href="action.php" style="z-index: 245678;">SHOTGUN</a>';
+			echo '<a id="sg_link" href="action.php" >SHOTGUN</a>';
 		} else {
 			echo '<a id="sg_link" href=# onClick="verif();">DEPAPS</a>';
 		}
