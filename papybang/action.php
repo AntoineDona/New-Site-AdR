@@ -87,7 +87,7 @@ include('database.php') ?>
 
 	$end_date = mktime(03, 00, 00, 04, 02, 2022);
 	$end_date_sec = (((date('d', $end_date) - 1) * 24 + date('H', $end_date)) * 60 + date('i', $end_date)) * 60 + date('s', $end_date);
-	if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec && isOld($_SESSION["login"])){
+	if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec){
 			if ($_SESSION["is_cotisant"] == false) {
 				$_SESSION['prev_page'] = "action.php";
 				header("Location: /papybang/index.php");
@@ -95,10 +95,12 @@ include('database.php') ?>
 			else {
 				if (!$_SESSION['shotgun']) {
 					if (number_place($pdo) < $_SESSION['total_places']) {
-						$query = $pdo->prepare("INSERT into papybang (prenom,nom, email, heure) VALUES (?,?,?,?)");
-						$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time']));
-						$_SESSION['shotgun'] = true;
-						header("refresh:5; url=/papybang/index.php");
+						if(isOld($_SESSION["login"])){
+							$query = $pdo->prepare("INSERT into papybang (prenom,nom, email, heure) VALUES (?,?,?,?)");
+							$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time']));
+							$_SESSION['shotgun'] = true;
+							header("refresh:5; url=/papybang/index.php");
+						}
 					} 
 					else {
 						header("refresh:5; url=/papybang/fini.php");
