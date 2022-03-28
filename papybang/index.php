@@ -47,7 +47,7 @@ function is_cotisant($email, $pdo)
 // $_SESSION["user"]=array(
 // 		'firstName'=>'Bastien',
 // 		'lastName'=>'de Rugy',
-// 		'login'=>'2019goulletba',
+// 		'login'=>'2020goulletba',
 // 		'email'=>'b.gdr@student-cs.fr',
 // 		'promo'=>'2024',
 // 	);
