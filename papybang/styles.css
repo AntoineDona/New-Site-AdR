@@ -225,6 +225,7 @@ a:active {
 	margin:auto;
 	width:30vw;
   font-family: 'retro';
+  color:#4891c7
 }
 
 
@@ -623,7 +624,7 @@ screen and (max-width: 800px) {
 }
 
 /* Animations -------------------------------------------------------------------------------------------------------- */
-
+/* 
 @keyframes shotgun {
 
   40%,
@@ -667,7 +668,7 @@ screen and (max-width: 800px) {
     border: solid 5px white;
     box-shadow: var(--purple_box_shadow);
   }
-}
+} */
 
 @keyframes sg_frame {
 
