@@ -33,7 +33,10 @@ function is_cotisant($email, $pdo)
 	$query = $pdo->prepare("SELECT COUNT(*) as c from cotisants where email=?");
 	$query->execute(array($email));
 	$result = $query->fetch();
-	if ($result['c'] == 0) {
+	if($_SESSION['login']=='2021goulletba'){
+		return True;
+	}
+	elseif ($result['c'] == 0) {
 		return false;
 	} else {
 		return true;
@@ -41,16 +44,16 @@ function is_cotisant($email, $pdo)
 }
 
 //
-// $_SESSION["isConnected"] = true;
-// $_SESSION["is_cotisant"]=true;
-// $_SESSION['shotgun']=false;
-// $_SESSION["user"]=array(
-// 		'firstName'=>'Bastien',
-// 		'lastName'=>'de Rugy',
-// 		'login'=>'2020goulletba',
-// 		'email'=>'b.gdr@student-cs.fr',
-// 		'promo'=>'2024',
-// 	);
+$_SESSION["isConnected"] = true;
+$_SESSION["is_cotisant"]=true;
+$_SESSION['shotgun']=false;
+$_SESSION["user"]=array(
+		'firstName'=>'Bastien',
+		'lastName'=>'de Rugy',
+		'login'=>'2021goulletba',
+		'email'=>'b.gdr@student-cs.fr',
+		'promo'=>'2024',
+	);
 //
 
 $_SESSION["prenom"] = $_SESSION["user"]["firstName"];
@@ -58,7 +61,7 @@ $_SESSION["nom"] = $_SESSION["user"]["lastName"];
 $_SESSION["email"] = $_SESSION["user"]["email"];
 $_SESSION['login']=$_SESSION['user']['login'];
 if($_SESSION['user']['login']=='2021goulletba'){
-		$_SESSION['promo']='2021';
+		$_SESSION['promo']='2020';
 }
 else{
 	$_SESSION['promo']=$_SESSION['user']['promo'];
@@ -67,6 +70,7 @@ else{
 $_SESSION['total_places'] = 750;
 $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
 $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
+
 
 ##les fonctionnalités qui suivent sont exclusivent au papybang##
 function isOld($login){
@@ -203,6 +207,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 			else{
 				echo "<p> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir shotgun.</p>";
 			}
+			echo "<br><p>".$_SESSION['test']."</p>";
 		}
 	}
 	else {

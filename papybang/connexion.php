@@ -12,6 +12,8 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	header("Location: /papybang/index.php");
 	
 } else {$_SESSION["isConnected"] = false;}
+
+$_SESSION['test']='no boucle';
 ?>
 
 <!DOCTYPE html>
