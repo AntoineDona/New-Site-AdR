@@ -24,14 +24,15 @@
 		var date = new Date();
 		// console.log(date);
 		<?php //$_SESSION['shotgun'] = false; ?>
-		var date_shotgun = new Date(2022, 02, 28, 12, 59, 59);
-		var date_soiree = new Date(2022, 03, 01, 23, 00);
+		var date_shotgun = new Date(2022, 02, 30, 13, 00, 00);
+		var testPromo
+		var date_soiree = new Date(2022, 03, 1, 23, 00);
 		var title = "Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
 		var has_shotgun = <?php echo json_encode(isset($_SESSION['shotgun']))?> && <?php echo json_encode($_SESSION['shotgun']) ?>;
 		if (has_shotgun){
 			var total_sec = Math.trunc((date_soiree.getTime() - date.getTime()) / 1000);
-			var title = "Début du C'ÉTAIT MIEUX ABANG dans :";
+			var title = "Début du PAPYBANG dans :";
 		};
 		var diff_jour = getFormattedDigits(Math.trunc(total_sec / 3600 / 24));
 		var diff_hour = getFormattedDigits(Math.trunc((total_sec - diff_jour * 24 * 3600) / 3600));
@@ -40,7 +41,7 @@
 		if (total_sec >= 0) {
 			select_id('titre_sg').innerHTML = '<span>' + title + '</span>';
 			// select_id('mois').innerHTML = '<p class="chiffre"> 00 </p>' + '<p class="text">mois</p>';
-			select_id('jours').innerHTML = '<p class="chiffre">' + diff_jour + '</p>' + '<p class="text">jours</p>';
+			// select_id('jours').innerHTML = '<p class="chiffre">' + diff_jour + '</p>' + '<p class="text">jours</p>';
 			select_id('heures').innerHTML = '<p class="chiffre">' + diff_hour + '</p>' + '<p class="text">heures</p>';
 			select_id('minutes').innerHTML = '<p class="chiffre">' + diff_min + '</p>' + '<p class="text">minutes</p>';
 			select_id('secondes').innerHTML = '<p class="chiffre">' + diff_sec + '</p>' + '<p class="text">secondes</p>';

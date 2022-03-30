@@ -8,7 +8,7 @@ include("database.php");
 
 <head>
 	<title>SOLD-OUT</title>
-	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/img/ufo.png">
+	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/img/cassetteIcon.png">
 	<link rel="stylesheet" href="styles.css">
 </head>
 
@@ -33,6 +33,9 @@ if ($_SESSION['shotgun']) {
 ?>
 
 <body>
+	<div id="logobang">
+		<img class="logobang_img" src="img/proj4_title.png">
+	</div>
 	<div class="soldout_ctnr">
 		<h1 id="soldout_title">SOLD-OUT</h1>
 		<p> Désolé <?php echo $_SESSION["prenom"]; ?>! <br />
