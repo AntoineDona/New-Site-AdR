@@ -277,15 +277,29 @@ a:active {
 
 /* Page Soldout -------------------------------------------------------------------------------------------------- */
 
+#logobangFini{
+  z-index:234567;
+  /*background-color:yellow;*/
+  height:60%;
+  position: absolute;
+  left: 50%;
+}
+
+.logobang_imgFini{
+  /*background-color:red;*/
+  position:absolute;
+  top:0.5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width:30vh;
+}
+
 .soldout_ctnr {
   display: inline-block;
   margin: auto;
-  margin-top: 40vh;
+  margin-top: 35vh;
   padding: 2rem;
   width: auto;
-  border: var(--white_border);
-  border-radius: 1rem;
-  box-shadow: var(--green_box_shadow);
 }
 
 .soldout_ctnr p {
@@ -294,13 +308,13 @@ a:active {
   width: auto;
   font-size: 1.5rem;
   text-align: center;
-  text-shadow: var(--green_text_shadow);
+  color: green;
 }
+
 
 #soldout_title {
   margin-bottom: 2rem;
   font-size: 5rem;
-  text-shadow: var(--green_text_shadow);
 }
 
 .btns_ctnr {
@@ -322,7 +336,6 @@ a:active {
   border-radius: 30px;
   border: 0.1rem solid white;
   box-shadow: var(--green_box_shadow);
-  text-shadow: var(--green_text_shadow);
   cursor: pointer;
   transition: all 0.4s ease;
   user-select: none;
@@ -595,6 +608,7 @@ screen and (max-width: 800px) {
 
   #soldout_title {
     font-size: 8rem;
+    color: #4891c7;
   }
 
   #reload {

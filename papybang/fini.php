@@ -33,9 +33,7 @@ if ($_SESSION['shotgun']) {
 ?>
 
 <body>
-	<div id="logobang">
-		<img class="logobang_img" src="img/proj4_title.png">
-	</div>
+		<img class="logobang_imgFini" src="img/proj4_title.png">
 	<div class="soldout_ctnr">
 		<h1 id="soldout_title">SOLD-OUT</h1>
 		<p> Désolé <?php echo $_SESSION["prenom"]; ?>! <br />
