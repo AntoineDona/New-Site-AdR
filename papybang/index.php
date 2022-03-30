@@ -67,7 +67,7 @@ else{
 	$_SESSION['promo']=$_SESSION['user']['promo'];
 }
 
-$_SESSION['total_places'] = 750;
+$_SESSION['total_places'] = 730;
 $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
 $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
