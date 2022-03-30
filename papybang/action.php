@@ -54,9 +54,9 @@ include('database.php') ?>
 	$current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
 	$shotgun_date_old = mktime(12, 59, 59, 03, 28, 2022);
-	$shotgun_date_old_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
+	$shotgun_date_old_sec = (((date('d', $shotgun_date_old) - 1) * 24 + date('H', $shotgun_date_old)) * 60 + date('i', $shotgun_date_old)) * 60 + date('s', $shotgun_date_old);
 	$shotgun_date_young = mktime(12, 59, 59, 03, 30, 2022);
-	$shotgun_date_young_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
+	$shotgun_date_young_sec = (((date('d', $shotgun_date_young) - 1) * 24 + date('H', $shotgun_date_young)) * 60 + date('i', $shotgun_date_young)) * 60 + date('s', $shotgun_date_young);
 	if($_SESSION['promo']=='2024' OR $_SESSION['promo']=='2023'){
 		$shotgun_date_sec=$shotgun_date_young_sec;
 	}
@@ -65,8 +65,9 @@ include('database.php') ?>
 	}
 	
 
-	$end_date = mktime(03, 00, 0, 04, 02, 2022);
+	$end_date = mktime(05, 00, 0, 04, 02, 2022);
 	$end_date_sec = (((date('d', $end_date) - 1) * 24 + date('H', $end_date)) * 60 + date('i', $end_date)) * 60 + date('s', $end_date);
+
 	if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec) {
 		if ($_SESSION["is_cotisant"] == false) {
 			$_SESSION['prev_page'] = "action.php";
