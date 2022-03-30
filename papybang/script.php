@@ -26,7 +26,7 @@
 		<?php //$_SESSION['shotgun'] = false; ?>
 		var testPromo
 		var date_soiree = new Date(2022, 03, 1, 23, 00);
-		<?php if($_SESSION['promo']=='2024' or $_SESSION['promo']=='2023') :?>
+		<?php if(isset($_SESSION['promo']) and ($_SESSION['promo']=='2024' or $_SESSION['promo']=='2023')) :?>
 			var date_shotgun = new Date(2022, 02, 30, 13, 00, 00);
 		<?php else:?>
 			var date_shotgun = new Date(2022, 02, 28, 13, 00, 00);
