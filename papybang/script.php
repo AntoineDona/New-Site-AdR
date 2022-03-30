@@ -24,8 +24,13 @@
 		var date = new Date();
 		// console.log(date);
 		<?php //$_SESSION['shotgun'] = false; ?>
-		var date_shotgun = new Date(2022, 02, 28, 13, 00, 00);
+		var testPromo
 		var date_soiree = new Date(2022, 03, 1, 23, 00);
+		<?php if($_SESSION['promo']=='2024' or $_SESSION['promo']=='2023') :?>
+			var date_shotgun = new Date(2022, 02, 30, 13, 00, 00);
+		<?php else:?>
+			var date_shotgun = new Date(2022, 02, 28, 13, 00, 00);
+		<?php endif;?>
 		var title = "Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
 		var has_shotgun = <?php echo json_encode(isset($_SESSION['shotgun']))?> && <?php echo json_encode($_SESSION['shotgun']) ?>;
