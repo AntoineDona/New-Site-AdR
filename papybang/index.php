@@ -207,7 +207,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 			else{
 				echo "<p> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir shotgun.</p>";
 			}
-			echo "<br><p>".$_SESSION['test']."</p>";
+			// echo "<br><p>".$_SESSION['test']."</p>";
 		}
 	}
 	else {
