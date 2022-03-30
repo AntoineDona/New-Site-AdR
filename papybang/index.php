@@ -44,16 +44,16 @@ function is_cotisant($email, $pdo)
 }
 
 //
-$_SESSION["isConnected"] = true;
-$_SESSION["is_cotisant"]=true;
-$_SESSION['shotgun']=false;
-$_SESSION["user"]=array(
-		'firstName'=>'Bastien',
-		'lastName'=>'de Rugy',
-		'login'=>'2021goulletba',
-		'email'=>'b.gdr@student-cs.fr',
-		'promo'=>'2024',
-	);
+// $_SESSION["isConnected"] = true;
+// $_SESSION["is_cotisant"]=true;
+// $_SESSION['shotgun']=false;
+// $_SESSION["user"]=array(
+// 		'firstName'=>'Bastien',
+// 		'lastName'=>'de Rugy',
+// 		'login'=>'2021goulletba',
+// 		'email'=>'b.gdr@student-cs.fr',
+// 		'promo'=>'2024',
+// 	);
 //
 
 $_SESSION["prenom"] = $_SESSION["user"]["firstName"];
