@@ -1,16 +1,11 @@
 <?php
 session_start();
 include('../database.php');
-if(!isset($_SESSION['is_connected'])){
+if(!isset($_SESSION['is_connected']) or !isset($_GET['id']) or (isset($_SESSION['is_connected']) and !$_SESSION['is_connected'])){
     header('Location: /actionNano/scanBillet/index.php');
+    $_SESSION['is_connected']=false;
 }
 
-elseif(isset($_SESSION['is_connected']) and !$_SESSION['is_connected']){
-    header('Location: /actionNano/scanBillet/index.php');
-}
-elseif(!isset($_GET['id'])){
-    header('Location: /actionNano/scanBillet/index.php');
-}
 
 $id=intval($_GET['id']);
 
@@ -29,26 +24,30 @@ $users = $pdoStatement->fetchAll();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
     <title>SCAN NANO</title>
 </head>
-<body>
-    <!-- test si la place existe bien -->
-    <?php if($users==array()):?>
-        <p>La place n'est plus valide, demander à la personne de récuperer son QR code sur la page du sg.</p>
-    
-    <?php else:?>
-        <?php $user=$users[0];?>
-        <!-- test si la place n'a pas encore été scanné -->
-        <?php if($user['entree']==0): ?>
-            <p><?php echo $user['prenom'].' '.$user['nom']; ?></p>
-            <form action="scan.php" method='post'>
-                <input type="hidden" name="id" value=<?php echo $id; ?>>
-                <input type="submit" value='SCAN'></input>
-            </form>
-            <button>Annuler</button>
-        <?else:?>
-            <p>La place a déjà été scanné.</p>
+<body class='align'>
+    <div class="grid">
+        <!-- test si la place existe bien -->
+        <?php if($users==array()):?>
+            <p class='message'>La place n'est plus valide, demander à la personne de récuperer son QR code sur la page du sg.</p>
+        
+        <?php else:?>
+            <?php $user=$users[0];?>
+            <!-- test si la place n'a pas encore été scanné -->
+            <?php if($user['entree']==0): ?>
+                <p class='message'><?php echo $user['nom'].' '.$user['prenom']; ?></p>
+                <form action="scan.php" method='post' class='form action'>
+                    <input type="hidden" name="id" value=<?php echo $id; ?> >
+                    <div class="form__field">
+                        <input type="submit" value='SCAN' class='scan-button' ></input>
+                    </div>
+                </form>
+            <?else:?>
+                <p class='message'>La place a déjà été scanné.</p>
+            <?php endif;?>
         <?php endif;?>
-    <?php endif;?>
+    </div>
 </body>
 </html>

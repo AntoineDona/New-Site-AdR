@@ -25,10 +25,13 @@ $scanStatement->execute([
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
     <title>SCAN NANO</title>
 </head>
-<body>
-    <p>Scan réussi.</p>
-    <button onclick="window.open('','_self','').close()">Fermer la page</button>
+<body class='align'>
+    <div class="grid">
+        <p class='message' style='background:'>Scan réussi.</p>
+        <!-- <button onclick="window.open('','_self','').close()">Fermer la page</button> -->
+    </div>
 </body>
 </html>
