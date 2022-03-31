@@ -21,7 +21,7 @@ $id=$users[0]['id'];
     <title>QR code</title>
 </head>
 <body>
-    <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&choe=UTF-8&chl=http://localhost/actionNano/scanBillet/billet.php?id=<?php echo $id;?>" title="QR code soirée" /> 
+    <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&choe=UTF-8&chl=http://adr.cs-campus.fr/actionNano/scanBillet/billet.php?id=<?php echo $id;?>" title="QR code soirée" /> 
     <div id="content" >
         <?php echo '<p>'.$_SESSION['prenom'].' '.$_SESSION['nom'];'</p>'?> 
         <div><a href="/papybang/index.php">Revenir à la page d'avant</a></div>
