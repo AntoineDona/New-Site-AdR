@@ -1,6 +1,19 @@
 <?php
 session_start();
 
+//
+// $_SESSION["isConnected"] = true;
+// $_SESSION["is_cotisant"]=true;
+// $_SESSION['shotgun']=false;
+// $_SESSION["user"]=array(
+// 		'firstName'=>'Bastien',
+// 		'lastName'=>'de Rugy',
+// 		'login'=>'2021goulletba',
+// 		'email'=>'bastien.goullet-de-rugy@student-cs.fr',
+// 		'promo'=>'2024',
+// 	);
+//
+
 include("auth.php");
 include("database.php");
 
@@ -43,18 +56,7 @@ function is_cotisant($email, $pdo)
 	}
 }
 
-//
-// $_SESSION["isConnected"] = true;
-// $_SESSION["is_cotisant"]=true;
-// $_SESSION['shotgun']=false;
-// $_SESSION["user"]=array(
-// 		'firstName'=>'Bastien',
-// 		'lastName'=>'de Rugy',
-// 		'login'=>'2021goulletba',
-// 		'email'=>'b.gdr@student-cs.fr',
-// 		'promo'=>'2024',
-// 	);
-//
+
 
 $_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 $_SESSION["nom"] = $_SESSION["user"]["lastName"];
@@ -169,7 +171,8 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		if (!$_SESSION['shotgun']) {
 			echo '<a id="sg_link" href="action.php" >SHOTGUN</a>';
 		} else {
-			echo '<a id="sg_link" href=# onClick="verif();">DEPAPS</a>';
+			echo '<div><a id="sg_link" href=# onClick="verif();">DEPAPS</a></div>';
+			echo '<div id="qrLink"><a  href="/papybang/QRgenerator.php" >Voir mon QR code</a></div>';
 		}
 		?>
 	</div>
