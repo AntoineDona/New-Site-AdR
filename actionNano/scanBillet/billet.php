@@ -38,7 +38,7 @@ $users = $pdoStatement->fetchAll();
             <!-- test si la place n'a pas encore été scanné -->
             <?php if($user['entree']==0): ?>
                 <p class='message'><?php echo $user['prenom'].' '.$user['nom']; ?></p>
-                <form action="scan.php" method='post' class='form action'>
+                <form action="scan.php" method='post' class='form login'>
                     <input type="hidden" name="id" value=<?php echo $id; ?> >
                     <div class="form__field">
                         <input type="submit" value='SCAN' class='scan-button' ></input>
