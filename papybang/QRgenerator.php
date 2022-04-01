@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['is_connected']) or (isset($_SESSION['is_connected']) and !$_SESSION['is_connected'])){
+if(!isset($_SESSION['isConnected']) or (isset($_SESSION['isConnected']) and !$_SESSION['isConnected'])){
     header('Location: /papybang/index.php');
 }
 include('database.php');
