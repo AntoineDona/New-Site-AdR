@@ -17,6 +17,20 @@ $scanStatement->execute([
     'entree'=>1,
     'id'=>$id,
 ]) or die(print_r($pdo->errorInfo()));
+
+$sqlQuery2='SELECT COUNT(*) FROM papybang WHERE entree=0';
+$noScannedStatement=$pdo->prepare($sqlQuery2);
+$noScannedStatement->execute();
+$noScanned = $noScannedStatement->fetchAll();
+
+$sqlQuery3='SELECT COUNT(*) FROM papybang WHERE entree=1';
+$scannedStatement=$pdo->prepare($sqlQuery3);
+$scannedStatement->execute();
+$scanned = $scannedStatement->fetchAll();
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +46,10 @@ $scanStatement->execute([
     <div class="grid">
         <p class='message' style='background:#4DAF7C'>Scan réussi.</p>
         <!-- <button onclick="window.open('','_self','').close()">Fermer la page</button> -->
+        <div class="message">
+            <p class='message'>Billets scannés : <?php echo $scanned[0][0] ?></p>
+            <p>Billets non scannés : <?php echo $noScanned[0][0] ?></p>
+        </div>
     </div>
 </body>
 </html>

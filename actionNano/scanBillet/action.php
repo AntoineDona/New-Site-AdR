@@ -1,5 +1,16 @@
 <?php
 session_start();
+include('../database.php');
+$sqlQuery2='SELECT COUNT(*) FROM papybang WHERE entree=0';
+$noScannedStatement=$pdo->prepare($sqlQuery2);
+$noScannedStatement->execute();
+$noScanned = $noScannedStatement->fetchAll();
+
+$sqlQuery3='SELECT COUNT(*) FROM papybang WHERE entree=1';
+$scannedStatement=$pdo->prepare($sqlQuery3);
+$scannedStatement->execute();
+$scanned = $scannedStatement->fetchAll();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +36,10 @@ session_start();
             }
             ?>
         </div>  
+        <div class="message">
+            <p>Billets scannés : <?php echo $scanned[0][0] ?></p>
+            <p>Billets non scannés : <?php echo $noScanned[0][0] ?></p>
+        </div>
     </div>
 </body>
 
