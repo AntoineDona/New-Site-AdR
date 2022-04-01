@@ -226,5 +226,16 @@ text-align: center;
   border-radius: var(--loginBorderRadus);
   text-align: center;
   padding:1rem;
-  overflow:visible;
+}
+
+.button-submit{
+  cursor: pointer;
+  inline-size: 100%;
+  border-radius: var(--loginBorderRadus);
+  padding: 1rem;
+  background-color: var(--loginSubmitBackgroundColor);
+  color: var(--loginSubmitColor);
+  font-weight: 700;
+  text-transform: uppercase;
+  border:none;
 }
