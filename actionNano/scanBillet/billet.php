@@ -37,14 +37,14 @@ $users = $pdoStatement->fetchAll();
             <?php $user=$users[0];?>
             <!-- test si la place n'a pas encore été scanné -->
             <?php if($user['entree']==0): ?>
-                <p class='message'><?php echo $user['nom'].' '.$user['prenom']; ?></p>
+                <p class='message'><?php echo $user['prenom'].' '.$user['nom']; ?></p>
                 <form action="scan.php" method='post' class='form action'>
                     <input type="hidden" name="id" value=<?php echo $id; ?> >
                     <div class="form__field">
                         <input type="submit" value='SCAN' class='scan-button' ></input>
                     </div>
                 </form>
-            <?else:?>
+            <?php else:?>
                 <p class='message'>La place a déjà été scanné.</p>
             <?php endif;?>
         <?php endif;?>
