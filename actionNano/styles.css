@@ -217,11 +217,13 @@
       padding: 1rem;
       border-radius: var(--loginBorderRadus);
       text-align: center;
+      padding:1rem;
     }
-  .scan-button{
+    .scan-button{
       background: var(--loginSubmitBackgroundColor);
       color: white;
       padding: 1rem;
       border-radius: var(--loginBorderRadus);
       text-align: center;
+      padding:1rem;
   }
