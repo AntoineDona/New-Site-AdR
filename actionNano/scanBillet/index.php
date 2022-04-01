@@ -27,9 +27,7 @@ session_start();
       </div>
 
       <div class="form__field">
-        <!-- <input type="submit" value="Valider"> -->
-        <!-- <p class='message'><input type="submit">Valider </input></p> -->
-        <button type="submit" name="your_name" class="button-submit">Valider</button>
+        <button type="submit" name="passwordButton" class="button-submit">Valider</button>
       </div>
 
       

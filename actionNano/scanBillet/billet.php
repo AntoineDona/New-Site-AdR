@@ -41,7 +41,8 @@ $users = $pdoStatement->fetchAll();
                 <form action="scan.php" method='post' class='form login'>
                     <input type="hidden" name="id" value=<?php echo $id; ?> >
                     <div class="form__field">
-                        <input type="submit" value='SCAN' class='scan-button' ></input>
+                        <!-- <input type="submit" value='SCAN' class='scan-button' ></input> -->
+                        <button type="submit" name="scanButton" class="button-submit">SCAN</button>
                     </div>
                 </form>
             <?php else:?>
