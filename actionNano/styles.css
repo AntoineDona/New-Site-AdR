@@ -217,9 +217,8 @@
       padding: 1rem;
       border-radius: var(--loginBorderRadus);
       text-align: center;
-      background: #4DAF7C;
     }
-    .scan-button{
+  .scan-button{
       background: var(--loginSubmitBackgroundColor);
       color: white;
       padding: 1rem;
