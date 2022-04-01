@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(!isset($_SESSION['is_connected']) or (isset($_SESSION['is_connected']) and !$_SESSION['is_connected'])){
+    header('Location: /papybang/index.php');
+}
 include('database.php');
 
 $sqlQuery = 'SELECT * FROM papybang WHERE email=:email';

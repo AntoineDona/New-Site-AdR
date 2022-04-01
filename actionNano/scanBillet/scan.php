@@ -30,7 +30,7 @@ $scanStatement->execute([
 </head>
 <body class='align'>
     <div class="grid">
-        <p class='message' style='background:'>Scan réussi.</p>
+        <p class='message' style='background:#4DAF7C'>Scan réussi.</p>
         <!-- <button onclick="window.open('','_self','').close()">Fermer la page</button> -->
     </div>
 </body>
