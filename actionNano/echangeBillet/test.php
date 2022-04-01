@@ -22,9 +22,7 @@
       </div>
 
       <div class="form__field">
-        <label for="login__password"><svg class="icon">
-            <use xlink:href="#icon-lock"></use>
-          </svg><span class="hidden">Password</span></label>
+        <label for="login__password"><span class="hidden">Password</span></label>
         <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>
       </div>
 
