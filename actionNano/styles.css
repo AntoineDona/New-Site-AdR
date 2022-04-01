@@ -226,6 +226,7 @@ text-align: center;
   border-radius: var(--loginBorderRadus);
   text-align: center;
   padding:1rem;
+  overflow:visible;
 }
 .size-button{
   padding:1rem;
