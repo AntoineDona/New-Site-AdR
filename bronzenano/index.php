@@ -7,6 +7,6 @@
     <title>NANO</title>
 </head>
 <body>
-    
+    <p>Le shotgun arrive ...</p>
 </body>
 </html>
