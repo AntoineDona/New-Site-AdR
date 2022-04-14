@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 if(!isset($_SESSION['isConnected']) or (isset($_SESSION['isConnected']) and !$_SESSION['isConnected'])){
     header('Location: /bronzenano/index.php');
@@ -51,4 +51,16 @@ $id=$users[0]['id'];
         text-decoration:none;
     }
     </style>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QE code</title>
+</head>
+<body>
+    <p>Le QR code sera disponible la semaine du nano.</p>
+</body>
 </html>
