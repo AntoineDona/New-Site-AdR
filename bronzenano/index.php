@@ -5,7 +5,7 @@ include("auth.php");
 include("database.php");
 // //
 // 	//
-	// $_SESSION["isConnected"] = false;
+	// $_SESSION["isConnected"] = true;
 	// $_SESSION["is_cotisant"]=true;
 	// $_SESSION['shotgun']=false;
 	// $_SESSION['login']='2021goulletba';
@@ -63,7 +63,7 @@ $_SESSION["nom"] = $_SESSION["user"]["lastName"];
 $_SESSION["email"] = $_SESSION["user"]["email"];
 
 $_SESSION['total_places'] = 450;
-// $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
+$_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
 $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
 if ($_SESSION["email"] == '???') {
@@ -81,7 +81,6 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		header("Location: /bronzenano/fini.php");
 	} else {
 		header("Location: /bronzenano/connexion.php");
-		// header("Location: https://adr.cs-campus.fr
 	}
 }
 
@@ -127,9 +126,10 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		<?php
 		if (!$_SESSION['shotgun']) {
 			echo '<a id="sg_link" href="action.php" >SHOTGUN</a>';
-		} else {
-			echo '<div><a id="sg_link" href=# onClick="verif();">DEPAPS</a></div>';
-			echo '<div id="qrLink"><a  href="/papybang/QRgenerator.php" >Voir mon QR code</a></div>';
+		} 
+		else {
+			echo '<div id="depaps" ><a id="sg_link"  href=# onClick="verif();">DEPAPS</a></div>';
+			echo '<div id="qrLink"><a  href="/bronzenano/QRgenerator.php" >Voir mon QR code</a></div>';
 		}
 		?>
 	</div>
@@ -146,8 +146,11 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	} else {
 		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au bronzenano. </p>";
 	}
+	if (!$_SESSION['shotgun']) {
+			echo '<p id="footer">Pas besoin de recharger la page au moment du shotgun!</p>';
+			
+		} 
 	?>
-	<p id="footer">Pas besoin de recharger la page au moment du shotgun!</p>
 
 	<?php include("script.php"); 
 	if (!$_SESSION["is_cotisant"] && isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "action.php") {
