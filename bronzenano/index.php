@@ -48,10 +48,7 @@ function is_cotisant($email, $pdo)
 	$query = $pdo->prepare("SELECT COUNT(*) as c from cotisants where email=?");
 	$query->execute(array($email));
 	$result = $query->fetch();
-	if($_SESSION['login']=='2021goulletba'){
-		return True;
-	}
-	elseif ($result['c'] == 0) {
+	if ($result['c'] == 0) {
 		return false;
 	} else {
 		return true;
