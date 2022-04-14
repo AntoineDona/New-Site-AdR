@@ -47,15 +47,14 @@ html {
 body {
   width: 100vw;
   height: 100%;
-  background-color: linear-gradient(#e66465, #9198e5);
-  background-image: url("img/bandeauFB.png");
+  background-image: url("img/bandeauLarge.png"),linear-gradient(to bottom,#CF1C39, #FCD55F 78vh, #5E8FA5,#2A3877);
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
   color: white;
   position: absolute;
   text-align: center;
-  font-family: "NeonGuanta";
+  font-family: "LouisGeorgeCafe";
   overflow-x: hidden;
 }
 
@@ -142,7 +141,7 @@ a:active {
   z-index: 0;
   position: relative;
   line-height: 2rem;
-  font-family: "NeonGuanta";
+  font-family: "LouisGeorgeCafe";
 }
 
 
@@ -465,12 +464,11 @@ form {
 @media screen and (orientation: portrait),
 screen and (max-width: 800px) {
   body {
-    background: url("img/guentaBackground.png");
+    background: url("img/bckTel.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: black;
-    box-shadow: 0 10px 10px 5px black inset;
     overflow: hidden;
   }
 
@@ -572,50 +570,6 @@ screen and (max-width: 800px) {
 
 /* Animations -------------------------------------------------------------------------------------------------------- */
 
-@keyframes shotgun {
-
-  40%,
-  44%,
-  70% {
-    color: rgba(241, 241, 241, 0.726);
-    text-shadow: 0 0 7px rgba(255, 255, 255, 0.644),
-      0 0 10px rgba(255, 7, 58, 0.61), 0 0 21px rgba(255, 7, 58, 0.61),
-      0 0 42px rgba(255, 7, 58, 0.61);
-  }
-
-  0%,
-  39%,
-  41%,
-  43%,
-  45%,
-  69%,
-  71%,
-  100% {
-    color: white;
-    text-shadow: 0 0 7px white, 0 0 10px rgb(255, 7, 58),
-      0 0 21px rgb(255, 7, 58), 0 0 42px rgb(255, 7, 58);
-  }
-
-  20%,
-  24% {
-    border: solid 5px rgb(202, 202, 202);
-    box-shadow: 0 0 7px rgba(255, 255, 255, 0.836),
-      inset 0 0 7px rgba(255, 255, 255, 0.836), 0 0 10px rgb(255, 7, 58),
-      inset 0 0 10px rgba(255, 7, 58, 0.555),
-      0 0 21px rgba(255, 7, 58, 0.555),
-      inset 0 0 21px rgba(255, 7, 58, 0.555),
-      0 0 42px rgba(255, 7, 58, 0.555),
-      inset 0 0 42px rgba(255, 7, 58, 0.555);
-  }
-
-  0%,
-  19%,
-  25%,
-  100% {
-    border: solid 5px white;
-    box-shadow: var(--purple_box_shadow);
-  }
-}
 
 @keyframes sg_frame {
 
@@ -780,4 +734,9 @@ screen and (max-width: 800px) {
   font-family: "NeonGuanta";
   font-weight: bold;
   src: url("fonts/NeonSans.otf") format("opentype");
+}
+@font-face {
+  font-family: 'LouisGeorgeCafe';
+  font-weight: normal;
+  src: url('fonts/LouisGeorgeCafe.ttf') format('truetype');
 }

@@ -1,20 +1,20 @@
 <?php
 session_start();
 
-// include("auth.php"); 
+include("auth.php"); 
 include("database.php");
 // //
 // 	//
-	$_SESSION["isConnected"] = true;
-	$_SESSION["is_cotisant"]=true;
-	$_SESSION['shotgun']=false;
-	$_SESSION['login']='2021goulletba';
-	$_SESSION["user"]=array(
-		'firstName'=>'Bastien',
-		'lastName'=>'de Rugy',
-		'email'=>'B.gdr@student-cs.fr',
-		'promo'=>'2024',
-	);
+	// $_SESSION["isConnected"] = false;
+	// $_SESSION["is_cotisant"]=true;
+	// $_SESSION['shotgun']=false;
+	// $_SESSION['login']='2021goulletba';
+	// $_SESSION["user"]=array(
+	// 	'firstName'=>'Bastien',
+	// 	'lastName'=>'de Rugy',
+	// 	'email'=>'B.gdr@student-cs.fr',
+	// 	'promo'=>'2024',
+	// );
 
 // 	//
 // 	//
@@ -147,15 +147,6 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au bronzenano. </p>";
 	}
 	?>
-	<div id="sg_link_ctnr">
-		<?php
-		if (!$_SESSION['shotgun']) {
-			echo '<a id="sg_link" href="action.php">SHOTGUN</a>';
-		} else {
-			echo '<a id="sg_link" href=# onClick="verif();">DEPAPS</a>';
-		}
-		?>
-	</div>
 	<p id="footer">Pas besoin de recharger la page au moment du shotgun!</p>
 
 	<?php include("script.php"); 
