@@ -8,7 +8,7 @@ include("database.php");
 
 <head>
 	<title>SOLD-OUT</title>
-	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/img/ufo.png">
+	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/img/plage.png">
 	<link rel="stylesheet" href="styles.css">
 </head>
 

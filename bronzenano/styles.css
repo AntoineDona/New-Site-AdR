@@ -190,8 +190,6 @@ a:active {
   padding: 0.5rem 2rem;
   width: auto;
   font-family: "LouisGeorgeCafe";
-  cursor: not-allowed;
-  pointer-events: none;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
@@ -201,6 +199,10 @@ a:active {
   background-size: 400%;
   border-radius: 30px;
   animation: animate 10s linear infinite;
+}
+.degraMov{
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 #depaps{
@@ -488,7 +490,7 @@ screen and (max-width: 800px) {
   #co_msg_ctnr,
   #ok_msg_ctnr,
   #danger_msg_ctnr {
-    font-size: 2.8rem;
+    font-size: 4rem;
     padding: 3rem;
     margin-top:14rem;
     margin-bottom: 1vh;
