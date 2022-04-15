@@ -145,14 +145,6 @@ a:active {
 }
 
 
-#danger_msg_ctnr {
-  /* background-color: var(--danger); */
-  /* border: solid 0.1rem white; */
-  box-shadow: var(--danger_box_shadow);
-  color: var(--light_danger);
-  text-shadow: var(--danger_text_shadow);
-}
-
 
 
 #co_link_ctnr {
