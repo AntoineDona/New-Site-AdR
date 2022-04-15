@@ -58,7 +58,7 @@ include('database.php') ?>
 
 	$end_date = mktime(03, 00, 0, 04, 23, 2022);
 	$end_date_sec = (((date('d', $end_date) - 1) * 24 + date('H', $end_date)) * 60 + date('i', $end_date)) * 60 + date('s', $end_date);
-	if ($current_date_sec >= $shotgun_date_sec && $current_date_sec <= $end_date_sec) {
+	if ($current_date_sec >= $shotgun_date_sec) {
 		if ($_SESSION["is_cotisant"] == false) {
 			$_SESSION['prev_page'] = "action.php";
 			header("Location: /bronzenano/index.php");

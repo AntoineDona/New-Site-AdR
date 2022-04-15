@@ -7,12 +7,12 @@ include("database.php");
 // 	//
 	// $_SESSION["isConnected"] = true;
 	// $_SESSION["is_cotisant"]=true;
-	// $_SESSION['shotgun']=false;
+	// // $_SESSION['shotgun']=false;
 	// $_SESSION['login']='2021goulletba';
 	// $_SESSION["user"]=array(
 	// 	'firstName'=>'Bastien',
 	// 	'lastName'=>'de Rugy',
-	// 	'email'=>'B.gdr@student-cs.fr',
+	// 	'email'=>'bastien.goullet-de-rugy@student-cs.fr',
 	// 	'promo'=>'2024',
 	// );
 
@@ -122,10 +122,10 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	<div id="sg_link_ctnr">
 		<?php
 		if (!$_SESSION['shotgun']) {
-			echo '<a id="sg_link" href="action.php" >SHOTGUN</a>';
+			echo '<a id="sg_link" class="degraMov" href="action.php" >SHOTGUN</a>';
 		} 
 		else {
-			echo '<div id="depaps" ><a id="sg_link"  href=# onClick="verif();">DEPAPS</a></div>';
+			echo '<div id="depaps" ><a id="sg_link" class="degraMov"  href=# onClick="verif();">DEPAPS</a></div>';
 			echo '<div id="qrLink"><a  href="/bronzenano/QRgenerator.php" >Voir mon QR code</a></div>';
 		}
 		?>
@@ -141,7 +141,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 			echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir Shotgun! </p>";
 		}
 	} else {
-		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au bronzenano. </p>";
+		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place pour Y'a du soleil et des NANO. </p>";
 	}
 	if (!$_SESSION['shotgun']) {
 			echo '<p id="footer">Pas besoin de recharger la page au moment du shotgun!</p>';
