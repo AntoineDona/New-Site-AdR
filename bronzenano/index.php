@@ -6,7 +6,7 @@ include("database.php");
 // //
 // 	//
 	// $_SESSION["isConnected"] = true;
-	// $_SESSION["is_cotisant"]=true;
+	// $_SESSION["is_cotisant"]=false;
 	// // $_SESSION['shotgun']=false;
 	// $_SESSION['login']='2021goulletba';
 	// $_SESSION["user"]=array(
@@ -136,7 +136,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	
 	if (!$_SESSION['shotgun']) {
 		if (!$_SESSION["is_cotisant"]) {
-			echo "<p id='danger_msg_ctnr'>ATTENTION !! <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
+			echo "<p id='danger_msg_ctnr'><span style='color:red;'>ATTENTION !!</span> <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
 		} else {
 			echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir Shotgun! </p>";
 		}
