@@ -1,36 +1,92 @@
 <?php
-// fichiers pour ajouter les vieux qui se sont listés
+// fihier pour ajouter les vieux lors d'un nano
 session_start();
-
-//indiquer ci-dessous le nom de db du nano associer
-$_SESSION['nomNano']='bronzenano';
 
 include("auth.php"); 
 include("database.php");
+
+// //
+// 	//
+	// $_SESSION["isConnected"] = true;
+	// $_SESSION["is_cotisant"]=false;
+	// // $_SESSION['shotgun']=false;
+	// $_SESSION['login']='2021goulletba';
+	// $_SESSION["user"]=array(
+	// 	'firstName'=>'Bastien',
+	// 	'lastName'=>'de Rugy',
+	// 	'email'=>'bastien.goullet-de-rugy@student-cs.fr',
+	// 	'promo'=>'2024',
+	// );
+
+// 	//
+// 	//
+
+
+
+function has__already_shotgun($email, $pdo)
+{
+	//  Checks if email already shotgun, return 1 if true and 0 else
+	$query = $pdo->prepare("SELECT COUNT(*) as c from bronzenano where email=?");
+	$query->execute(array($email));
+	$result = $query->fetch();
+	if ($result['c'] == 0) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+
+function is_cotisant($email, $pdo)
+{
+	$query = $pdo->prepare("SELECT COUNT(*) as c from cotisants where email=?");
+	$query->execute(array($email));
+	$result = $query->fetch();
+	if ($result['c'] == 0) {
+		return false;
+	} else {
+		return true;
+	}
+}
 
 $_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 $_SESSION["nom"] = $_SESSION["user"]["lastName"];
 $_SESSION["email"] = $_SESSION["user"]["email"];
 
+$_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
+$_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
+
 
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles.css" />
-    <title>SG VIEUX</title>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<title>SG VIEUX</title>
+	<meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
-<body>
-<div id="sg_link_ctnr">
+
+<body onload="onLoad()">
+	<div >
 		<?php
 		if (!$_SESSION['shotgun']) {
 			echo '<a href="action.php" >SHOTGUN</a>';
 		} 
+		else {
+            header('Location:../'.$_SESSION['nomNano']);
+		}
 		?>
 	</div>
+
+	<?php
+	
+	
+	?>
+
+
 </body>
+
 </html>
