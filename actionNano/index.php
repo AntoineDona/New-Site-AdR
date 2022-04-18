@@ -1,22 +1,25 @@
 <?php
-// fihier pour ajouter les vieux lors d'un nano
+// fichier pour ajouter les vieux lors d'un nano
 session_start();
+
+//indiquer le nom de la db du nano et celui du dossier associer
+$_SESSION['nomNano']='bronzenano';
 
 include("auth.php"); 
 include("database.php");
 
 // //
-// 	//
-	// $_SESSION["isConnected"] = true;
-	// $_SESSION["is_cotisant"]=false;
-	// // $_SESSION['shotgun']=false;
-	// $_SESSION['login']='2021goulletba';
-	// $_SESSION["user"]=array(
-	// 	'firstName'=>'Bastien',
-	// 	'lastName'=>'de Rugy',
-	// 	'email'=>'bastien.goullet-de-rugy@student-cs.fr',
-	// 	'promo'=>'2024',
-	// );
+// // 	//
+// 	$_SESSION["isConnected"] = true;
+// 	$_SESSION["is_cotisant"]=true;
+// 	// $_SESSION['shotgun']=false;
+// 	$_SESSION['login']='2021goulletba';
+// 	$_SESSION["user"]=array(
+// 		'firstName'=>'Bastien',
+// 		'lastName'=>'de Rugy',
+// 		'email'=>'bastien.goullet-de-rugy@student-cs.fr',
+// 		'promo'=>'2024',
+// 	);
 
 // 	//
 // 	//
@@ -69,16 +72,18 @@ $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 
-<body onload="onLoad()">
-	<div >
-		<?php
-		if (!$_SESSION['shotgun']) {
-			echo '<a href="action.php" >SHOTGUN</a>';
-		} 
-		else {
-            header('Location:../'.$_SESSION['nomNano']);
-		}
-		?>
+<body class="align">
+	<div class='grid'>
+        <div class="form__field">
+            <?php
+            if (!$_SESSION['shotgun']) {
+                echo '<a class="button-submit" href="action.php" >SHOTGUN</a>';
+            } 
+            else {
+                header('Location:../'.$_SESSION['nomNano']);
+            }
+            ?>
+        </div>
 	</div>
 
 	<?php
