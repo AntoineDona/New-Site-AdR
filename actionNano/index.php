@@ -25,6 +25,12 @@ $_SESSION["email"] = $_SESSION["user"]["email"];
     <title>SG VIEUX</title>
 </head>
 <body>
-    <p>Connecté</p>
+<div id="sg_link_ctnr">
+		<?php
+		if (!$_SESSION['shotgun']) {
+			echo '<a href="action.php" >SHOTGUN</a>';
+		} 
+		?>
+	</div>
 </body>
 </html>
