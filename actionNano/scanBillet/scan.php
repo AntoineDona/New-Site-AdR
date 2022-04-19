@@ -2,28 +2,29 @@
 session_start();
 include('../database.php');
 
-if(isset($_SESSION['is_connected']) and !$_SESSION['is_connected']){
+if(isset($_COOKIE['is_connected']) and !$_COOKIE['is_connected']){
     header('Location: index.php');
 }
 elseif(!isset($_POST['id'])){
     header('Location: index.php');
 }
 
+
 $id=$_POST['id'];
 
-$sqlQuery='UPDATE papybang SET entree=:entree WHERE id=:id';
+$sqlQuery='UPDATE '.$_COOKIE['nomNano'].' SET entree=:entree WHERE id=:id';
 $scanStatement=$pdo->prepare($sqlQuery);
 $scanStatement->execute([
     'entree'=>1,
     'id'=>$id,
 ]) or die(print_r($pdo->errorInfo()));
 
-$sqlQuery2='SELECT COUNT(*) FROM papybang WHERE entree=0';
+$sqlQuery2='SELECT COUNT(*) FROM '.$_COOKIE['nomNano'].' WHERE entree=0';
 $noScannedStatement=$pdo->prepare($sqlQuery2);
 $noScannedStatement->execute();
 $noScanned = $noScannedStatement->fetchAll();
 
-$sqlQuery3='SELECT COUNT(*) FROM papybang WHERE entree=1';
+$sqlQuery3='SELECT COUNT(*) FROM '.$_COOKIE['nomNano'].' WHERE entree=1';
 $scannedStatement=$pdo->prepare($sqlQuery3);
 $scannedStatement->execute();
 $scanned = $scannedStatement->fetchAll();

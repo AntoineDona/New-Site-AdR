@@ -1,16 +1,45 @@
 <?php
 session_start();
 include('../database.php');
-if(!isset($_SESSION['is_connected']) or !isset($_GET['id']) or (isset($_SESSION['is_connected']) and !$_SESSION['is_connected'])){
+if(!isset($_COOKIE['is_connected']) or !isset($_GET['id']) or (isset($_COOKIE['is_connected']) and !$_COOKIE['is_connected'])){
     header('Location: /actionNano/scanBillet/index.php');
-    $_SESSION['is_connected']=false;
+    setcookie(
+        'is_connected',
+        false,
+        [
+            'expires' => time() + 24*3600,
+            'secure' => true,
+            'httponly' => true,
+        ]
+    );
 }
 
+function decodeId($id){
+    $tabL=array(
+        '2X'=>'1',
+        '7A'=>'2',
+        'ZB'=>'3',
+        'JI'=>'4',
+        'K0'=>'5',
+        'H3'=>'6',
+        'GM'=>'7',
+        'W6'=>'8',
+        '12'=>'9',
+    );
+    $code='';
+    for($i=0;$i<strlen($id);$i++){
+        if($i%2==1){
+            $key=$id[$i-1].$id[$i];
+            $code=$code.$tabL[$key];
+        }
+    }
+    return $code;
+}
 
-$id=intval($_GET['id']);
+$id=intval(decodeId($_GET['id']));
 
 //on récupère les données de la personne
-$sqlQuery = 'SELECT * FROM papybang WHERE id=:id';
+$sqlQuery = 'SELECT * FROM '.$_COOKIE['nomNano'].' WHERE id=:id';
 $pdoStatement = $pdo->prepare($sqlQuery);
 $pdoStatement->execute([
     'id'=>$id
