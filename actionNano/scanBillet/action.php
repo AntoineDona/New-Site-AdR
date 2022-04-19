@@ -1,12 +1,19 @@
 <?php
+
 session_start();
 include('../database.php');
-$sqlQuery2='SELECT COUNT(*) FROM papybang WHERE entree=0';
+
+// if(!isset($_COOKIE['nomNano']) and !isset($_COOKIE['is_connected'])){
+//     header('Location : index.php');
+// }
+
+
+$sqlQuery2='SELECT COUNT(*) FROM '.$_COOKIE['nomNano'].' WHERE entree=0';
 $noScannedStatement=$pdo->prepare($sqlQuery2);
 $noScannedStatement->execute();
 $noScanned = $noScannedStatement->fetchAll();
 
-$sqlQuery3='SELECT COUNT(*) FROM papybang WHERE entree=1';
+$sqlQuery3='SELECT COUNT(*) FROM '.$_COOKIE['nomNano'].' WHERE entree=1';
 $scannedStatement=$pdo->prepare($sqlQuery3);
 $scannedStatement->execute();
 $scanned = $scannedStatement->fetchAll();
@@ -27,12 +34,21 @@ $scanned = $scannedStatement->fetchAll();
             <?php
             $password=$_POST['password'];
             if($password!='1969'){
-                header('Location: index.php');
                 $_SESSION['error']=true;
+                header('Location: index.php');
             }
             else{
-                $_SESSION['is_connected']=true;
+                $_SESSION['error']=false;
                 echo '<p class="message">Tu es connecté(e), tu peux commencer à scanner les billets.</p>';
+                setcookie(
+                    'is_connected',
+                    true,
+                    [
+                        'expires' => time() + 24*3600,
+                        'secure' => true,
+                        'httponly' => true,
+                    ]
+                );
             }
             ?>
         </div>  

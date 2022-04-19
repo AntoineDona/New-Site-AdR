@@ -1,6 +1,16 @@
 <?php
+//fichiers pour les scans des places des nanos
+//indiquer le nom du nano avec la variable de cookie ci-dessous
 session_start();
-
+setcookie(
+  'nomNano',
+  'bronzenano',
+  [
+      'expires' => time() + 24*3600,
+      'secure' => true,
+      'httponly' => true,
+  ]
+);
 
 ?>
 
@@ -23,16 +33,17 @@ session_start();
         <label for="login__password"><svg class="icon">
             <use xlink:href="#icon-lock"></use>
           </svg><span class="hidden">Password</span></label>
-        <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>
+        <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" <?php if(isset($_COOKIE['is_connected']) and $_COOKIE['is_connected']){echo 'value="1969"'; }?> required>
       </div>
 
       <div class="form__field">
         <button type="submit" name="passwordButton" class="button-submit">Valider</button>
       </div>
-
       
-
     </form>
+    <?php if(isset($_SESSION['error']) and $_SESSION['error']):?>
+      <p class='message'>Ce n'est pas le bon mot de passe.</p>
+    <?php endif;?>
 
   </div>
 
