@@ -16,6 +16,7 @@ $formBool=$users[0]['form'];
 
 function codeId($id){
     $tabN=array(
+        '0'=>'7I',
         '1'=>'2X',
         '2'=>'7A',
         '3'=>'ZB',
@@ -33,6 +34,7 @@ function codeId($id){
 }
 function decodeId($id){
     $tabL=array(
+        '7I'=>'0',
         '2X'=>'1',
         '7A'=>'2',
         'ZB'=>'3',

@@ -16,6 +16,7 @@ if(!isset($_COOKIE['is_connected']) or !isset($_GET['id']) or (isset($_COOKIE['i
 
 function decodeId($id){
     $tabL=array(
+        '7I'=>'0',
         '2X'=>'1',
         '7A'=>'2',
         'ZB'=>'3',
