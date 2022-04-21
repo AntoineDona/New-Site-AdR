@@ -5,7 +5,7 @@ session_start();
 setcookie(
   'nomNano',
   'bronzenano',
-  time() + 24*3600,
+  time() + 24*3600
 );
 
 ?>
