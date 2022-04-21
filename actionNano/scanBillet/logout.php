@@ -5,7 +5,7 @@ session_destroy();
 setcookie(
     'is_connected',
     false,
-    time() + 24*3600,
+    time() + 24*3600
 );
 header("location:index.php");
 exit();
