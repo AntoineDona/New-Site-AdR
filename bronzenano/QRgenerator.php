@@ -69,7 +69,7 @@ function decodeId($id){
     <?php if($formBool): ?>
         <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&choe=UTF-8&chl=http://adr.cs-campus.fr/actionNano/scanBillet/billet.php?id=<?php echo codeId($id);?>" title="QR code soirée" /> 
     <?php else:?>
-        <div>Il faut remplir ce formulaire de sensibilation contre les VSS en soirée pour obtenir son QR code :</div>  <div><a href="formCheck.php">le formulaire</a></div>
+        <div>Il faut remplir ce formulaire de sensibilisation contre les VSS en soirée pour obtenir son QR code :</div>  <div><a href="formCheck.php">le formulaire</a></div>
     <?php endif;?>
         <?php echo '<p>'.$_SESSION['prenom'].' '.$_SESSION['nom'];'</p>'?> 
         <div><a href="/bronzenano/index.php">Revenir à la page d'avant</a></div>
