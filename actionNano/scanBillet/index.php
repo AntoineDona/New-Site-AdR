@@ -5,11 +5,7 @@ session_start();
 setcookie(
   'nomNano',
   'bronzenano',
-  [
-      'expires' => time() + 24*3600,
-      'secure' => true,
-      'httponly' => true,
-  ]
+  time() + 24*3600,
 );
 
 ?>
