@@ -43,11 +43,7 @@ $scanned = $scannedStatement->fetchAll();
                 setcookie(
                     'is_connected',
                     true,
-                    [
-                        'expires' => time() + 24*3600,
-                        'secure' => true,
-                        'httponly' => true,
-                    ]
+                    time() + 24*3600
                 );
             }
             ?>

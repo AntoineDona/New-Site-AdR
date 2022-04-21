@@ -6,11 +6,7 @@ if(!isset($_COOKIE['is_connected']) or !isset($_GET['id']) or (isset($_COOKIE['i
     setcookie(
         'is_connected',
         false,
-        [
-            'expires' => time() + 24*3600,
-            'secure' => true,
-            'httponly' => true,
-        ]
+        time()+24*3600
     );
 }
 

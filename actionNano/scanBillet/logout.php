@@ -5,11 +5,7 @@ session_destroy();
 setcookie(
     'is_connected',
     false,
-    [
-        'expires' => time() + 24*3600,
-        'secure' => true,
-        'httponly' => true,
-    ]
+    time() + 24*3600,
 );
 header("location:index.php");
 exit();
