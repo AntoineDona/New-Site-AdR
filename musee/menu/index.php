@@ -48,7 +48,7 @@
 				<div>
 					• 1 plat <strong style="color:#ee0;">•</strong><br>
 					• 1 dessert<br>
-					• 1 soft ou 1 bière <strong style="color:#ee0;">•</strong><br>
+					• 1 soft ou 1/2 de Kro (+0,50€) <strong style="color:#ee0;">•</strong><br>
 				</div>
 				<div>
 					5<small>,20</small> €
@@ -58,7 +58,7 @@
 			<div class="subcontent">
 				<div>
 					• 1 pizza <strong style="color:#ee0;">•</strong><br>
-					• 1 soft ou 1 bière <strong style="color:#ee0;">•</strong><br>
+					• 1 soft ou 1/2 de Kro (+0,50€) <strong style="color:#ee0;">•</strong><br>
 				</div>
 				<div>
 					5<small>,70</small> €
@@ -81,23 +81,23 @@
 			<br>
 			<h2>&#8764; Pizzas &#8765;</h2>
 			<div class="subcontent">
-				<div onClick="">Nouveauté: Poulet Cheddar<div class="compo">Composition : Sauce tomate, mozza, tenders, cheddar, olives, oigons frits, origan</div>
-				</div>
-				<div>5<small>,50</small> €</div>
 				<div onClick="">Reine <strong style="color:#ee0;">•</strong>
 					<div class="compo">Composition : Sauce tomate, mozza, jambon, olives, origan</div>
 				</div>
 				<div>5<small>,00</small> €</div>
+				<div onClick="">Kebab <strong style="color:#ee0;">•</strong>
+					<div class="compo">Composition : Sauce tomate, mozza, kebab, salade, sauce blanche, origan</div>
+				</div>
+				<div>5<small>,00</small> €</div>
+				<div onClick="">Poulet Cheddar<div class="compo">Composition : Sauce tomate, mozza, tenders, cheddar, olives, oigons frits, origan</div>
+				</div>
+				<div>5<small>,50</small> €</div>
 				<div onClick="">Poulet <strong style="color:#ee0;">•</strong>
 					<div class="compo">Composition : Sauce tomate, mozza, poulet, olives, origan</div>
 				</div>
 				<div>5<small>,00</small> €</div>
 				<div onClick="">Pepperoni <strong style="color:#ee0;">•</strong>
 					<div class="compo">Composition : Sauce tomate, mozza, pepperoni, origan</div>
-				</div>
-				<div>5<small>,00</small> €</div>
-				<div onClick="">Kebab <strong style="color:#ee0;">•</strong>
-					<div class="compo">Composition : Sauce tomate, mozza, kebab, salade, sauce blanche, origan</div>
 				</div>
 				<div>5<small>,00</small> €</div>
 				<div onClick="">Végétarienne &#127811;<div class="compo">Composition : Sauce tomate, mozza, artichauts, poivrons, tomates, salade, olives, origan</div>
@@ -169,10 +169,6 @@
 					<div class="compo">Composition : Feta, salade, oignons</div>
 				</div>
 				<div>3<small>,80</small> €</div>
-				<div onClick="">Chef <strong style="color:#ee0;">•</strong>
-					<div class="compo">Composition : Jambon, oeuf dur, fromage, crudités</div>
-				</div>
-				<div>3<small>,80</small> €</div>
 				<div onClick="">Italienne <strong style="color:#ee0;">•</strong>
 					<div class="compo">Composition : Jambon cru, mozza, tomates séchées, salade</div>
 				</div>
@@ -181,16 +177,18 @@
 			<h2>&#8764; Quiches &#8765;</h2>
 			<div class="subcontent">
 				<div onClick="">Lorraine <strong style="color:#ee0;">•</strong></div>
-				<div>2<small>,60</small> €</div>
-				<div onClick="">Saumon</div>
-				<div>3<small>,50</small> €</div>
+				<div>3<small>,40</small> €</div>
+				<div onClick="">Légumes <strong style="color:#ee0;">•</strong></div>
+				<div>3<small>,40</small> €</div>
+				<div onClick=""> Quiche du jlur <strong style="color:#ee0;">•</strong></div>
+				<div>3<small>,40</small> €</div>
 			</div><br>
 			<h2>&#8764; Pasta box &#8765;</h2>
 			<div class="subcontent">
 				<div onClick="">Carbonara <strong style="color:#ee0;">•</strong></div>
-				<div>3<small>,00</small> €</div>
-				<div onClick="">Bolognaise</div>
 				<div>3<small>,50</small> €</div>
+				<div onClick="">Pesto</div>
+				<div>3<small>,00</small> €</div>
 				<div onClick="">Saumon</div>
 				<div>3<small>,50</small> €</div>
 			</div><br>
@@ -208,10 +206,10 @@
 				<div>3<small>,80</small> €</div>
 				<div>Nems <small>(8)</small> <strong style="color:#ee0;">•</strong><br></div>
 				<div>3<small>,80</small> €</div>
+				<div>avec frites<br></div>
+				<div>+1<small>,00</small> €</div>
 				<div>Frites<br></div>
 				<div>2<small>,00</small> €</div>
-				<div>Saucisses Frites<br></div>
-				<div>3<small>,80</small> €</div>
 			</div><br>
 			<h2>&#8764; Desserts &#8765;</h2>
 			<div class="subcontent">
@@ -244,24 +242,27 @@
 				<div>• Kronenbourg <small>(4,2%)</small> <strong style="color:#ee0;">•</strong><br></div>
 				<div>1<small>,60</small> €</div>
 				<div>3<small>,00</small> €</div>
-				<div>• Cidre brut <small>(4,5%)</small> <strong style="color:#ee0;">•</strong><br></div>
-				<div>1<small>,50</small> €</div>
-				<div>2<small>,90</small> €</div>
+				<div>17<small>,00</small> € (3L)</div>
 				<div>• 1664 blanche <small>(5%)</small><br></div>
 				<div>2<small>,20</small> €</div>
 				<div>4<small>,00</small> €</div>
+				<div>23<small>,00</small> € (3L)</div>
 				<div>• Grim Pale <small>(5,5%)</small><br></div>
 				<div>2<small>,20</small> €</div>
 				<div>4<small>,00</small> €</div>
+				<div>23<small>,00</small> € (3L)</div>
 				<div>• Tigre Bock <small>(5,5%)</small><br></div>
 				<div>2<small>,20</small> €</div>
 				<div>4<small>,00</small> €</div>
+				<div>23<small>,00</small> € (3L)</div>
 				<div>• Grim blonde <small>(6,7%)</small><br></div>
 				<div>2<small>,20</small> €</div>
 				<div>4<small>,00</small> €</div>
+				<div>23<small>,00</small> € (3L)</div>
 				<div>• Elephant <small>(7,2%)</small><br></div>
 				<div>2<small>,20</small> €</div>
 				<div>4<small>,00</small> €</div>
+				<div>23<small>,00</small> € (3L)</div>
 			</div><br>
 			<h2>&#8764; Les bouteilles &#8765;</h2>
 			<div class="subcontent">
