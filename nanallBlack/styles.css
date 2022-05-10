@@ -47,7 +47,7 @@ html {
 body {
   width: 100vw;
   height: 100%;
-  background-image: url("img/bandeauLarge.png"),linear-gradient(to bottom,#CF1C39, #FCD55F 78vh, #5E8FA5,#2A3877);
+  background-image: url("img/bandeauLarge.png"),linear-gradient(to bottom,#292929, #292929 78vh, #A3B28F,#A3B28F);
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
@@ -95,17 +95,21 @@ a:active {
 
 #counter {
   /* délimite le compteur: nécessaire pour la forme logo olympics en relative */
-  width: 300px;
+  /* width: 300px; */
   max-width: 80vw;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--light_green);
-  text-shadow: var(--green_text_shadow);
+  color: #DA251D;
+  text-shadow:  0 0 7px #DA251D, 0 0 10px #DA251D;
   z-index: 0;
   position: relative;
-  /* font-family: "Digital_tech"; */
+  font-family: "DigitalAB";
+  background: black;
+  border: 3px grey solid;
+  border-radius: 12px;
+  padding: 3px;
 }
 
 .digit_holder {
@@ -187,10 +191,6 @@ a:active {
   text-transform: uppercase;
   text-decoration: none;
   box-sizing: border-box;
-  background: linear-gradient(90deg,#0644BF,#05AFF2,#F2E313,#F29F05,#F20505 ,#0644BF);
-  background-size: 400%;
-  border-radius: 30px;
-  animation: animate 10s linear infinite;
 }
 .degraMov{
   cursor: not-allowed;
@@ -443,14 +443,23 @@ form {
   }
 }
 
-@keyframes animate {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 400%;
-  }
+:root{
+  --anime-time: 8s;
+  --box-size: 200px;
+  --clip-distance: .05;
+  --clip-size: var(--box-size) * (1 + var(--clip-distance) * 2);
+  --path-width: 2px;
+
 }
+
+
+@keyframes clipMe {
+  0%, 100% {clip: rect(0px, var(--clip-size), var(--path-width), 0px); }
+  25% {clip: rect(0px), var(--path-width), var(--clip-size), 0px; }
+  50% {clip: rect(var(--clip-size) - var(--path-width), var(--clip-size), var(--clip-size), 0px); }
+  75% {clip: rect(0px), var(--clip-size), var(--clip-size), var(--clip-size) - var(--path-width); }
+}
+
 /* Responsive ---------------------------------------------------------------------------------------------------- */
 
 @media screen and (max-width: 1100px) {
@@ -743,4 +752,9 @@ screen and (max-width: 800px) {
   font-family: 'LouisGeorgeCafe';
   font-weight: normal;
   src: url('fonts/LouisGeorgeCafe.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'DigitalAB';
+  font-weight: normal;
+  src: url('fonts/DigitalAllBlack.TTF') format('truetype');
 }

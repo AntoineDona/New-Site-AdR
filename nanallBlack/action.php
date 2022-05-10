@@ -8,7 +8,7 @@ include('database.php') ?>
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
 	<title>NAN'ALL BLACK</title>
-	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/bronzenano/img/iconballon.png">
+	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/nanallBlack/img/iconballon.png">
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
@@ -18,7 +18,7 @@ include('database.php') ?>
 
 	function number_place($pdo)
 	{
-		$query = $pdo->prepare("SELECT COUNT(*) as c from bronzenano");
+		$query = $pdo->prepare("SELECT COUNT(*) as c from nanall_black");
 		$query->execute();
 		$result = $query->fetch();
 		return $result['c'];
@@ -38,39 +38,39 @@ include('database.php') ?>
 
 	function depaps($email, $pdo)
 	{
-		$sql = 'DELETE from bronzenano WHERE email=:email';
+		$sql = 'DELETE from nanall_black WHERE email=:email';
 		$stmt = $pdo->prepare($sql);
 		$stmt->bindValue(':email', $email);
 		$res = $stmt->execute();
 		$_SESSION['shotgun'] = false;
-		header("Location: /bronzenano/index.php");
+		header("Location: /nanallBlack/index.php");
 	}
 
 	$_SESSION['sg_time'] = date("Y-m-d H:i:s");
 	$_SESSION['is_cotisant'] = is_cotisant($_SESSION['email'], $pdo);
-	$_SESSION['total_places'] = 440;
+	$_SESSION['total_places'] = 700;
 
 	date_default_timezone_set('Europe/Paris');
 	$current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
-	$shotgun_date = mktime(12, 59, 59, 04, 15, 2022);
+	$shotgun_date = mktime(12, 59, 59, 05, 13, 2022);
 	$shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
-	$end_date = mktime(03, 00, 0, 04, 23, 2022);
+	$end_date = mktime(03, 00, 0, 05, 20, 2022);
 	$end_date_sec = (((date('d', $end_date) - 1) * 24 + date('H', $end_date)) * 60 + date('i', $end_date)) * 60 + date('s', $end_date);
 	if ($current_date_sec >= $shotgun_date_sec) {
 		if ($_SESSION["is_cotisant"] == false) {
 			$_SESSION['prev_page'] = "action.php";
-			header("Location: /bronzenano/index.php");
+			header("Location: /nanallBlack/index.php");
 		} else {
 			if (!$_SESSION['shotgun']) {
 				if (number_place($pdo) < $_SESSION['total_places']) {
-					$query = $pdo->prepare("INSERT into bronzenano (prenom,nom, email, heure) VALUES (?,?,?,?)");
+					$query = $pdo->prepare("INSERT into nanall_black (prenom,nom, email, heure) VALUES (?,?,?,?)");
 					$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time']));
 					$_SESSION['shotgun'] = true;
-					header("refresh:5; url=/bronzenano/index.php");
+					header("refresh:5; url=/nanallBlack/index.php");
 				} else {
-					header("refresh:5; url=/bronzenano/fini.php");
+					header("refresh:5; url=/nanallBlack/fini.php");
 				}
 			} else {
 				depaps($_SESSION["email"], $pdo);
@@ -79,7 +79,7 @@ include('database.php') ?>
 	} else if ($_SESSION['shotgun']) {
 		depaps($_SESSION["email"], $pdo);
 	} else {
-		header("Location: /bronzenano/");
+		header("Location: /nanallBlack/");
 	}
 	?>
 	<div class="loading-animation-box">

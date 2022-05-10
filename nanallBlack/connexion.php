@@ -9,7 +9,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	//echo $_SESSION["user"]["login"];
 	$_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 	$_SESSION["nom"] = $_SESSION["user"]["lastName"];
-	header("Location: /bronzenano/index.php");
+	header("Location: /nanallBlack/index.php");
 	
 } else {$_SESSION["isConnected"] = false;}
 ?>
@@ -20,7 +20,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
 	<title>NAN'ALL BLACK</title>
-	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/bronzenano/img/iconballon.png">
+	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/nanallBlack/img/iconballon.png">
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
@@ -61,7 +61,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 		}
 		?> -->
 	<div id="co_link_ctnr" href="#">
-		<a id="co_link" href='redirect.php?redirect=https://adr.cs-campus.fr/bronzenano'>Se connecter</a>
+		<a id="co_link" href='redirect.php?redirect=https://adr.cs-campus.fr/nanallBlack'>Se connecter</a>
 	</div>
 	<?php include("script.php"); ?>
 </body>

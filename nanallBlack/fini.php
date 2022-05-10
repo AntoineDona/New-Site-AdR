@@ -15,20 +15,20 @@ include("database.php");
 <?php
 function number_place($pdo)
 {
-	$query = $pdo->prepare("SELECT COUNT(*) as c from bronzenano");
+	$query = $pdo->prepare("SELECT COUNT(*) as c from nanall_black");
 	$query->execute();
 	$result = $query->fetch();
 	return $result['c'];
 }
 if (number_place($pdo) < $_SESSION["total_places"]) {
 	if ($_SESSION["isConnected"]) {
-		header("Location: /bronzenano/index.php");
+		header("Location: /nanallBlack/index.php");
 	} else {
-		header("Location: /bronzenano/connexion.php");
+		header("Location: /nanallBlack/connexion.php");
 	}
 }
 if ($_SESSION['shotgun']) {
-	header("Location: /bronzenano/index.php");
+	header("Location: /nanallBlack/index.php");
 }
 ?>
 

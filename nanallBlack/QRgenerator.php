@@ -1,11 +1,11 @@
 <?php
 session_start();
 if(!isset($_SESSION['isConnected']) or (isset($_SESSION['isConnected']) and !$_SESSION['isConnected'])){
-    header('Location: /bronzenano/index.php');
+    header('Location: /nanallBlack/index.php');
 }
 include('database.php');
 
-$sqlQuery = 'SELECT * FROM bronzenano WHERE email=:email';
+$sqlQuery = 'SELECT * FROM nanall_black WHERE email=:email';
 $pdoStatement = $pdo->prepare($sqlQuery);
 $pdoStatement->execute([
     'email'=>$_SESSION['email'],
@@ -72,7 +72,7 @@ function decodeId($id){
         <div>Il faut remplir ce formulaire de sensibilisation contre les VSS en soirée pour obtenir son QR code :</div>  <div><a href="formCheck.php">le formulaire</a></div>
     <?php endif;?>
         <?php echo '<p>'.$_SESSION['prenom'].' '.$_SESSION['nom'];'</p>'?> 
-        <div><a href="/bronzenano/index.php">Revenir à la page d'avant</a></div>
+        <div><a href="/nanallBlack/index.php">Revenir à la page d'avant</a></div>
     </div>
 
 </body>
