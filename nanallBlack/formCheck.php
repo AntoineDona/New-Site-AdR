@@ -2,7 +2,7 @@
 session_start();
 include('database.php');
 
-$sqlQuery='UPDATE bronzenano SET form=:form WHERE email=:email';
+$sqlQuery='UPDATE nanall_black SET form=:form WHERE email=:email';
 $exempleStatement=$pdo->prepare($sqlQuery);
 $exempleStatement->execute([
     'form'=>1,

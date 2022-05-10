@@ -5,16 +5,16 @@ include("auth.php");
 include("database.php");
 // //
 // 	//
-	// $_SESSION["isConnected"] = true;
-	// $_SESSION["is_cotisant"]=true;
-	// // $_SESSION['shotgun']=false;
-	// $_SESSION['login']='2021goulletba';
-	// $_SESSION["user"]=array(
-	// 	'firstName'=>'Bastien',
-	// 	'lastName'=>'de Rugy',
-	// 	'email'=>'bastien.goullet-de-rugy@student-cs.fr',
-	// 	'promo'=>'2024',
-	// );
+	$_SESSION["isConnected"] = true;
+	$_SESSION["is_cotisant"]=true;
+	// $_SESSION['shotgun']=false;
+	$_SESSION['login']='2021goulletba';
+	$_SESSION["user"]=array(
+		'firstName'=>'Bastien',
+		'lastName'=>'de Rugy',
+		'email'=>'bastien.goullet-de-rugy@student-cs.fr',
+		'promo'=>'2024',
+	);
 
 // 	//
 // 	//
@@ -22,7 +22,7 @@ include("database.php");
 function number_place($pdo)
 {
 	// Checks the number of places still available to shotgun
-	$query = $pdo->prepare("SELECT COUNT(*) as c from bronzenano");
+	$query = $pdo->prepare("SELECT COUNT(*) as c from nanall_black");
 	$query->execute();
 	$result = $query->fetch();
 	return $result['c'];
@@ -32,7 +32,7 @@ function number_place($pdo)
 function has__already_shotgun($email, $pdo)
 {
 	//  Checks if email already shotgun, return 1 if true and 0 else
-	$query = $pdo->prepare("SELECT COUNT(*) as c from bronzenano where email=?");
+	$query = $pdo->prepare("SELECT COUNT(*) as c from nanall_black where email=?");
 	$query->execute(array($email));
 	$result = $query->fetch();
 	if ($result['c'] == 0) {
@@ -59,25 +59,25 @@ $_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 $_SESSION["nom"] = $_SESSION["user"]["lastName"];
 $_SESSION["email"] = $_SESSION["user"]["email"];
 
-$_SESSION['total_places'] = 440;
+$_SESSION['total_places'] = 700;
 $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
 $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
 if ($_SESSION["email"] == '???') {
-	header("Location: /bronzenano/troll.php");
+	header("Location: /nanallBlack/troll.php");
 }
 
 // if (isset($_SESSION["preshotgun"]) && $_SESSION["preshotgun"]) {
 // 	// Si dans la liste de préshotgun -> shotgun direct, en vrai pas super utile...
-// 	$url = "https://adr.cs-campus.fr/bronzenano/action.php";
+// 	$url = "https://adr.cs-campus.fr/nanallBlack/action.php";
 // 	header("Location: ".$url);
 //   }
 
 if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	if ($_SESSION["isConnected"]) {
-		header("Location: /bronzenano/fini.php");
+		header("Location: /nanallBlack/fini.php");
 	} else {
-		header("Location: /bronzenano/connexion.php");
+		header("Location: /nanallBlack/connexion.php");
 	}
 }
 
@@ -90,8 +90,8 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
 	<title>NAN'ALL BLACK</title>
 	<meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
-	<!-- <meta property="og:image" content="https://adr.cs-campus.fr/bronzenano/img/fb_banner.jpg" /> -->
-	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/bronzenano/img/iconballon.png">
+	<!-- <meta property="og:image" content="https://adr.cs-campus.fr/nanallBlack/img/fb_banner.jpg" /> -->
+	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/nanallBlack/img/iconballon.png">
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
 </head>
 
@@ -126,7 +126,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		} 
 		else {
 			echo '<div id="depaps" ><a id="sg_link" class="degraMov"  href=# onClick="verif();">DEPAPS</a></div>';
-			echo '<div id="qrLink"><a  href="/bronzenano/QRgenerator.php" >Voir mon QR code</a></div>';
+			echo '<div id="qrLink"><a  href="/nanallBlack/QRgenerator.php" >Voir mon QR code</a></div>';
 		}
 		?>
 	</div>

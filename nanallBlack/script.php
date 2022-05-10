@@ -24,8 +24,8 @@
 		var date = new Date();
 		// console.log(date);
 		<?php //$_SESSION['shotgun'] = false; ?>
-		var date_shotgun = new Date(2022, 03, 15, 13, 00, 00);
-		var date_soiree = new Date(2022, 03, 21, 23, 00);
+		var date_shotgun = new Date(2022, 04, 13, 13, 00, 00);
+		var date_soiree = new Date(2022, 04, 19, 23, 00);
 		var title = "Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
 		var has_shotgun = <?php echo json_encode(isset($_SESSION['shotgun']))?> && <?php echo json_encode($_SESSION['shotgun']) ?>;
