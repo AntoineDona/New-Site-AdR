@@ -40,7 +40,7 @@ include('database.php') ?>
 	date_default_timezone_set('Europe/Paris');
 	$current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
-	$shotgun_date = mktime(12, 59, 59, 05, 9, 2022);
+	$shotgun_date = mktime(11, 59, 59, 05, 10, 2022);
 	$shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
 	if ($current_date_sec >= $shotgun_date_sec) {
