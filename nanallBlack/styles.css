@@ -47,7 +47,7 @@ html {
 body {
   width: 100vw;
   height: 100%;
-  background-image: url("img/bandeauLarge.png"),linear-gradient(to bottom,#292929, #292929 78vh, #A3B28F,#A3B28F);
+  background-image: url("img/bckPaysage.png"),linear-gradient(to bottom,#292929, #292929 78vh, #A3B28F,#A3B28F);
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
@@ -77,8 +77,8 @@ a:active {
   text-align: center;
   max-width: 90vw;
   margin: auto;
-  margin-top: 20vh;
   margin-bottom: 1rem;
+  margin-top:10vh;
   overflow: visible;
   font-size: 2rem;
   color: var(--light_green);
@@ -95,7 +95,6 @@ a:active {
 
 #counter {
   /* délimite le compteur: nécessaire pour la forme logo olympics en relative */
-  /* width: 300px; */
   max-width: 80vw;
   margin: auto;
   display: flex;
@@ -103,13 +102,21 @@ a:active {
   align-items: center;
   color: #DA251D;
   text-shadow:  0 0 7px #DA251D, 0 0 10px #DA251D;
+  font-family: "DigitalAB";
   z-index: 0;
   position: relative;
-  font-family: "DigitalAB";
   background: black;
   border: 3px grey solid;
   border-radius: 12px;
   padding: 3px;
+}
+#panneau{
+  position: absolute;
+  z-index: -20;
+  filter: brightness(0%);
+  width: 40vw;
+  top: 0.1vh;
+
 }
 
 .digit_holder {
@@ -163,6 +170,7 @@ a:active {
   margin: auto;
   text-align: center;
   border-radius: 8px;
+  margin-top:34vh;
 }
 
 
@@ -180,17 +188,23 @@ a:active {
   width: auto;
   border-radius: 8px;
   margin-top: 1em;
+  
 }
 
 #sg_link {
   padding: 0.5rem 2rem;
   width: auto;
-  font-family: "LouisGeorgeCafe";
   text-align: center;
-  color: #fff;
   text-transform: uppercase;
   text-decoration: none;
   box-sizing: border-box;
+  color: #DA251D;
+  text-shadow:  0 0 7px #DA251D, 0 0 10px #DA251D;
+  font-family: "DigitalAB";
+  background: black;
+  border: 3px grey solid;
+  border-radius: 12px;
+  padding: 3px;
 }
 .degraMov{
   cursor: not-allowed;
@@ -467,7 +481,14 @@ form {
     background-size: cover;
   }
 }
-
+@media screen and (orientation: landscape) {
+  #counter{
+    width: 50%;
+  }
+  #panneau{
+    width: 0px;
+  }
+}
 @media screen and (orientation: portrait),
 screen and (max-width: 800px) {
   body {
@@ -481,10 +502,10 @@ screen and (max-width: 800px) {
 
   #titre_sg {
     overflow: visible;
-    margin-top: 40vh;
     margin-bottom: 4rem;
     font-size: 6rem;
     border-radius: 1rem;
+    margin-top: 12vh;
   }
   
 
@@ -493,11 +514,14 @@ screen and (max-width: 800px) {
   #danger_msg_ctnr {
     font-size: 4rem;
     padding: 3rem;
-    margin-top:14rem;
+    margin-top:11rem;
     margin-bottom: 1vh;
     line-height: 4rem;
   }
+  #ok_msg_ctnr{
+    margin-top:8rem;
 
+  }
   #sg_link,
   #co_link {
     font-size: 6rem;
@@ -559,6 +583,34 @@ screen and (max-width: 800px) {
   .loading-animation-box div {
     margin-top: 10vh;
   }
+
+  /* partie nanall black */
+  #panneau{
+    position: absolute;
+    z-index: -20;
+    filter: brightness(0%);
+    width: 40vw;
+    top: 2vh;
+  }
+  
+#counter {
+  /* délimite le compteur: nécessaire pour la forme logo olympics en relative */
+  /* width: 300px; */
+  max-width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #DA251D;
+  text-shadow:  0 0 7px #DA251D, 0 0 10px #DA251D;
+  font-family: "DigitalAB";
+  z-index: 0;
+  position: relative;
+  background: black;
+  border: 3px grey solid;
+  border-radius: 12px;
+  padding: 3px;
+}
 }
 @media screen and (max-height: 400px){
   #co_msg_ctnr,

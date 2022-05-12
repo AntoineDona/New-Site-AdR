@@ -24,21 +24,21 @@
 		var date = new Date();
 		// console.log(date);
 		<?php //$_SESSION['shotgun'] = false; ?>
-		var date_shotgun = new Date(2022, 04, 13, 13, 00, 00);
+		var date_shotgun = new Date(2022, 04, 11, 13, 00, 00);
 		var date_soiree = new Date(2022, 04, 19, 23, 00);
 		var title = "Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
 		var has_shotgun = <?php echo json_encode(isset($_SESSION['shotgun']))?> && <?php echo json_encode($_SESSION['shotgun']) ?>;
 		if (has_shotgun){
 			var total_sec = Math.trunc((date_soiree.getTime() - date.getTime()) / 1000);
-			var title = "Y'a du soleil et des NANO dans :";
+			var title = "NAN'ALL BLACK dans :";
 		};
 		var diff_jour = getFormattedDigits(Math.trunc(total_sec / 3600 / 24));
 		var diff_hour = getFormattedDigits(Math.trunc((total_sec - diff_jour * 24 * 3600) / 3600));
 		var diff_min = getFormattedDigits(Math.trunc((total_sec - diff_jour * 24 * 3600 - diff_hour * 3600) / 60));
 		var diff_sec = getFormattedDigits(Math.trunc(total_sec - diff_jour * 24 * 3600 - diff_hour * 3600 - diff_min * 60));
 		if (total_sec >= 0) {
-			select_id('titre_sg').innerHTML = '<span>' + title + '</span>';
+			select_id('titre_sg').innerHTML = '<span id="titre_sg_txt">' + title + '</span>';
 			// select_id('mois').innerHTML = '<p class="chiffre"> 00 </p>' + '<p class="text">mois</p>';
 			select_id('jours').innerHTML = '<p class="chiffre">' + diff_jour + '</p>' + '<p class="text">jours</p>';
 			select_id('heures').innerHTML = '<p class="chiffre">' + diff_hour + '</p>' + '<p class="text">heures</p>';
