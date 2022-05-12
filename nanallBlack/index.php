@@ -5,16 +5,16 @@ include("auth.php");
 include("database.php");
 // //
 // 	//
-	// $_SESSION["isConnected"] = true;
-	// $_SESSION["is_cotisant"]=true;
-	// // $_SESSION['shotgun']=false;
-	// $_SESSION['login']='2021goulletba';
-	// $_SESSION["user"]=array(
-	// 	'firstName'=>'Bastien',
-	// 	'lastName'=>'de Rugy',
-	// 	'email'=>'bastien.goullet-de-rugy@student-cs.fr',
-	// 	'promo'=>'2024',
-	// );
+	$_SESSION["isConnected"] = true;
+	$_SESSION["is_cotisant"]=false;
+	$_SESSION['shotgun']=false;
+	$_SESSION['login']='2021goulletba';
+	$_SESSION["user"]=array(
+		'firstName'=>'Bastien',
+		'lastName'=>'de Rugy',
+		'email'=>'bastien.goullet-de-rugy@student-cs.fr',
+		'promo'=>'2024',
+	);
 
 // 	//
 // 	//
@@ -60,7 +60,7 @@ $_SESSION["nom"] = $_SESSION["user"]["lastName"];
 $_SESSION["email"] = $_SESSION["user"]["email"];
 
 $_SESSION['total_places'] = 700;
-$_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
+// $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
 $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
 if ($_SESSION["email"] == '???') {
@@ -96,6 +96,17 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 </head>
 
 <body onload="onLoad()">
+<div id="sg_link_ctnr">
+		<?php
+		if (!$_SESSION['shotgun']) {
+			echo '<a id="sg_link" class="degraMov" href="action.php" >SHOTGUN</a>';
+		} 
+		else {
+			echo '<div id="depaps" ><a id="sg_link" class="degraMov"  href=# onClick="verif();">DEPAPS</a></div>';
+			echo '<div id="qrLink"><a  href="/nanallBlack/QRgenerator.php" >Voir mon QR code</a></div>';
+		}
+		?>
+	</div>
 	<div id="titre_sg"></div>
 	<div id="counter">
 		<!-- <div class="digit_holder months" id="mois">
@@ -118,19 +129,9 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 			<p class="chiffre">00</p>
 			<p class="text">secondes</p>
 		</div>
+		<img src="img/soclePanneau.png" alt="teneur de panneau" id="panneau">
 	</div>
-	<div id="sg_link_ctnr">
-		<?php
-		if (!$_SESSION['shotgun']) {
-			echo '<a id="sg_link" class="degraMov" href="action.php" >SHOTGUN</a>';
-		} 
-		else {
-			echo '<div id="depaps" ><a id="sg_link" class="degraMov"  href=# onClick="verif();">DEPAPS</a></div>';
-			echo '<div id="qrLink"><a  href="/nanallBlack/QRgenerator.php" >Voir mon QR code</a></div>';
-		}
-		?>
-	</div>
-	</div>
+	
 
 	<?php
 	
@@ -141,7 +142,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 			echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir Shotgun! </p>";
 		}
 	} else {
-		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place pour Y'a du soleil et des NANO. </p>";
+		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place pour le NAN'ALL BLACK. </p>";
 	}
 	if (!$_SESSION['shotgun']) {
 			echo '<p id="footer">Pas besoin de recharger la page au moment du shotgun!</p>';
