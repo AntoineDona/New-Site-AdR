@@ -5,16 +5,16 @@ include("auth.php");
 include("database.php");
 // //
 // 	//
-	$_SESSION["isConnected"] = true;
-	$_SESSION["is_cotisant"]=false;
-	$_SESSION['shotgun']=false;
-	$_SESSION['login']='2021goulletba';
-	$_SESSION["user"]=array(
-		'firstName'=>'Bastien',
-		'lastName'=>'de Rugy',
-		'email'=>'bastien.goullet-de-rugy@student-cs.fr',
-		'promo'=>'2024',
-	);
+	// $_SESSION["isConnected"] = true;
+	// $_SESSION["is_cotisant"]=false;
+	// $_SESSION['shotgun']=false;
+	// $_SESSION['login']='2021goulletba';
+	// $_SESSION["user"]=array(
+	// 	'firstName'=>'Bastien',
+	// 	'lastName'=>'de Rugy',
+	// 	'email'=>'bastien.goullet-de-rugy@student-cs.fr',
+	// 	'promo'=>'2024',
+	// );
 
 // 	//
 // 	//
@@ -60,7 +60,7 @@ $_SESSION["nom"] = $_SESSION["user"]["lastName"];
 $_SESSION["email"] = $_SESSION["user"]["email"];
 
 $_SESSION['total_places'] = 700;
-// $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
+$_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
 $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
 if ($_SESSION["email"] == '???') {
