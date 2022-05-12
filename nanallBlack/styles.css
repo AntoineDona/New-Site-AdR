@@ -611,6 +611,21 @@ screen and (max-width: 800px) {
   border-radius: 12px;
   padding: 3px;
 }
+#sg_link {
+  padding: 0.5rem 2rem;
+  width: auto;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #DA251D;
+  text-shadow:  0 0 7px #DA251D, 0 0 10px #DA251D;
+  font-family: "DigitalAB";
+  background: black;
+  border: 3px grey solid;
+  border-radius: 12px;
+  padding: 3px;
+}
 }
 @media screen and (max-height: 400px){
   #co_msg_ctnr,
