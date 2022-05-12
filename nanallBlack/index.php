@@ -129,7 +129,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 			<p class="chiffre">00</p>
 			<p class="text">secondes</p>
 		</div>
-		<img src="img/soclePanneau.png" alt="teneur de panneau" id="panneau">
+		<!-- <img src="img/soclePanneau.png" alt="teneur de panneau" id="panneau"> -->
 	</div>
 	
 
