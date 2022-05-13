@@ -6,8 +6,8 @@ include("database.php");
 // //
 // 	//
 	// $_SESSION["isConnected"] = true;
-	// $_SESSION["is_cotisant"]=false;
-	// $_SESSION['shotgun']=false;
+	// $_SESSION["is_cotisant"]=true;
+	// // $_SESSION['shotgun']=true;
 	// $_SESSION['login']='2021goulletba';
 	// $_SESSION["user"]=array(
 	// 	'firstName'=>'Bastien',
