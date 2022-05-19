@@ -19,6 +19,12 @@
                 <h1 class="headline"> Nos Events</h1>
 
                 <div class="description_event">
+                <div ><img src="img/plage.png" alt="plage icon"><h2>Y'a du soleil et des nanos</h2><img src="img/plage.png" alt="plage icon"></div>
+                    <p>Hâte des beaux jours ensoleillés?☀️
+                    En attendant l'été qui se profile, l'AdR vous invite à Y'a du Soleil et des Nanos, en SD001 le jeudi 21 Avril de 23h à 3h.
+                    Rien de mieux pour fêter le retour de la belle saison🌴 (désolé la Wacs🥶) que de festoyer sous les spots d'une magnifique scène SBCS!💃. Le lien du shotgun est <a href="/bronzenano/">ici</a></p>
+                </div>
+                <div class="description_event">
                 <div ><img src="img/cassetteIcon.png" alt="icon ball"><h2>Papy Bang</h2><img src="img/iconBall.png" alt="icon ball"></div>
                     <p>Les vieux AdR 👨‍🦳👵 reviennent ce 1er Avril (no joke) pour vous prouver que c'était mieux Abang ! Afin de montrer qu'ils organisent toujours les meilleures soirées du platal, ils vous convient au PapyBang ce vendredi 1er Avril de 23h à 5h en Bouygues ! 😎
                        ⚠️La soirée est réservée aux cotisants AdR ⚠️. Le lien du shotgun est <a href="/papybang/">ici</a></p>

@@ -22,6 +22,7 @@
         </section>
         <section class="FAQ">
             <h1>FAQ de la ReZ</h1>
+            <h2>Questions générales</h2>
 
             <!-- <p>Voici la FAQ qui répertorie les questions les plus fréquentes. Elle sera mise à jour régulièrement. 
             Si vous rencontrez un problème qui n'est pas mentionné ici, ou pour toute autre question, 
@@ -83,6 +84,21 @@
                     </div>
                     <div class="toggle-pannel">
                         <p>Il existe des sites comme <a href="https://www.garantme.fr/">garentme.fr</a> ou <a href="https://www.visale.fr/">visale.fr</a> permettant d’obtenir un garant.</p>
+                    </div>
+                </div>
+
+            </div>
+            <h2>Questions concernant la seconde année</h2>
+            <div class="container-faq">
+
+                <div class="questions">
+                    <div class="visible-pannel">
+                        <h2>Comment se feront les réservations pour les deuxièmes années?</h2>
+                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <div class="toggle-pannel">
+                        <p>Dès le 2 juin.</p>
                     </div>
                 </div>
 

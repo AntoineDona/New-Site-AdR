@@ -30,8 +30,8 @@
     <?php include "included/header.php" ?>
     <main>
         <section class="hero accueil" id="hero">
-            <div class="container">
-                <div class="imgt">
+            <div class="container" > 
+                <div class="imgt" style='margin-top: 30vh;'>
                     <img src="images/adr_anim.svg">
                 </div>
                 <h1 class="headline" id="A">A</h1>
