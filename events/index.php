@@ -11,7 +11,7 @@
     <?php include "../included/messenger.php" ?>
     <?php include "../included/header.php" ?>
     <main>
-        <section class="hero events">
+        <section class="events">
             <!-- <a href="https://www.cyberpunk.net/fr/fr/" target="_blank">
                 <img src="../images/lien_de_resa.png" alt="resa" id="lien_resa">
             </a> -->
@@ -19,21 +19,36 @@
                 <h1 class="headline"> Nos Events</h1>
 
                 <div class="description_event">
+                <div ><img src="img/plage.png" alt="plage icon"><h2>Nan'all black</h2><img src="img/plage.png" alt="plage icon"></div>
+                    <p>En forme pour une soirée des plus sportives?🏉
+
+                        L'AdR et le C7 s'allient pour vous présenter un nano des plus mythiques, le Nan'All Blacks!🖤
+                        C'est ainsi que nous vous convions sous les spots de SBCS🕺 en Bouygues le jeudi 19 mai de 22h à 3h pour vous ambiancer comme jamais en compagnie des joueurs du C7.🎉 Le lien du shotgun est <a href="/nanallBlack/">ici</a>
+                    <br>Le lien de l'album pics : <a href="https://galerie.pics/galerie/nanall-black">album</a>
+                    </p>
+                </div>
+                <div class="description_event">
                 <div ><img src="img/plage.png" alt="plage icon"><h2>Y'a du soleil et des nanos</h2><img src="img/plage.png" alt="plage icon"></div>
                     <p>Hâte des beaux jours ensoleillés?☀️
                     En attendant l'été qui se profile, l'AdR vous invite à Y'a du Soleil et des Nanos, en SD001 le jeudi 21 Avril de 23h à 3h.
-                    Rien de mieux pour fêter le retour de la belle saison🌴 (désolé la Wacs🥶) que de festoyer sous les spots d'une magnifique scène SBCS!💃. Le lien du shotgun est <a href="/bronzenano/">ici</a></p>
+                    Rien de mieux pour fêter le retour de la belle saison🌴 (désolé la Wacs🥶) que de festoyer sous les spots d'une magnifique scène SBCS!💃. Le lien du shotgun est <a href="/bronzenano/">ici</a>
+                    <br>Le lien de l'album pics : <a href="https://galerie.pics/galerie/ya-du-soleil-et-des-nanos">album</a>
+                    </p>
                 </div>
                 <div class="description_event">
                 <div ><img src="img/cassetteIcon.png" alt="icon ball"><h2>Papy Bang</h2><img src="img/iconBall.png" alt="icon ball"></div>
                     <p>Les vieux AdR 👨‍🦳👵 reviennent ce 1er Avril (no joke) pour vous prouver que c'était mieux Abang ! Afin de montrer qu'ils organisent toujours les meilleures soirées du platal, ils vous convient au PapyBang ce vendredi 1er Avril de 23h à 5h en Bouygues ! 😎
-                       ⚠️La soirée est réservée aux cotisants AdR ⚠️. Le lien du shotgun est <a href="/papybang/">ici</a></p>
+                       ⚠️La soirée est réservée aux cotisants AdR ⚠️. Le lien du shotgun est <a href="/papybang/">ici</a>
+                       <br>Le lien de l'album pics : <a href="https://galerie.pics/galerie/cetait-mieux-abang">album</a>
+                    </p>
                 </div>
 
                 <div class="description_event">
                 <div ><img src="img/iconBall.png" alt="icon ball"><h2>Wrecking Bang</h2><img src="img/iconBall.png" alt="icon ball"></div>
                     <p>Une envie de vous défouler dès le retour des vacances?😮
-                        Alors on vous attend très chauds le 11 Mars de 23h à 5h au Wrecking Bang 🏗️ pour un chantier des plus festifs...🎉. Le lien du shotgun est <a href="/wreckingbang/">ici</a></p>
+                        Alors on vous attend très chauds le 11 Mars de 23h à 5h au Wrecking Bang 🏗️ pour un chantier des plus festifs...🎉. Le lien du shotgun est <a href="/wreckingbang/">ici</a>
+                        <br>Le lien de l'album pics : <a href="https://galerie.pics/galerie/wrecking-bang">album</a>
+                    </p>
                 </div>
 
                 <div class='description_event'>
@@ -44,7 +59,9 @@
                     Liberez la Grim 🍻 et les danses enflammées
                     Shotgun pour les cotisants AdR le vendredi 11 Février à 13h.
                     N'oublie pas ton pass sanitaire pour festoyer comme il se doit !💃</br>
-                    Le lien du shotgun : <a href="/guantanano/">ici</a></p>
+                    Le lien du shotgun : <a href="/guantanano/">ici</a>
+                    <br>Le lien de l'album pics : <a href="https://galerie.pics/galerie/guantanano">album</a>
+                    </p>
                 </div>
                 
             </div>

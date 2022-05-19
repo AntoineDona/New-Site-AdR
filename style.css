@@ -283,6 +283,9 @@ nav {
     text-align: center;
     text-shadow: 2px 2px 5px black;
   }
+  .events .headline{
+    font-size: 9rem;
+  }
 }
 
 /* Anchors -------- */
@@ -499,9 +502,27 @@ a.anchor {
 /* Events ------------------------------------------------------------------------------------------------------------ */
 
 .events {
-  background-image: url(/events/img/affichePapyBang.jpg);
+  background-image: url(/events/img/afficheNanallBlack.png);
   position: relative;
   z-index: 0;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 0;
+}
+.events h1 {
+  display: block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14rem;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
 }
 
 
@@ -518,13 +539,10 @@ a.anchor {
 }
 
 .events .container{
-  margin-top: 8rem;
   display: flex;
   flex-direction: column;
 }
-.container .headline{
-  margin-top:100px;
-}
+
 
 
 @font-face {
