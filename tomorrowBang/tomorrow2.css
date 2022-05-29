@@ -2,7 +2,7 @@ body	{
     background-color : #001126;
     margin: 0;
 }
-@keyframes 			firework-animation {
+/* @keyframes 			firework-animation {
     0% {background-color : #ff8426;}
     25% {background-color : #fffc84;}
     50% {background-color : #ff83f4;}
@@ -79,7 +79,7 @@ body	{
   justify-content: center;
   align-items: center;
 
-}
+} */
 
 
 /* Titre sg */
