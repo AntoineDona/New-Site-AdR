@@ -1,5 +1,6 @@
 body	{
     background-color : #001126;
+    margin: 0;
 }
 @keyframes 			firework-animation {
     0% {background-color : #ff8426;}
@@ -68,8 +69,11 @@ body	{
 }		
 
 /* partie titre tomorrow bang */
+#titreBang{
+    width: 100%;
+}
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
-.text {
+#svg1 .text,#svg2 .text {
   fill: none;
   stroke-width: 3;
   stroke-linejoin: round;
@@ -78,27 +82,27 @@ body	{
   -webkit-animation: stroke 6s infinite linear;
   animation: stroke 6s infinite linear;
 }
-.text:nth-child(5n+1) {
+#svg1 .text:nth-child(5n+1),#svg2 .text:nth-child(5n+1) {
   stroke: #F2385A;
   -webkit-animation-delay: -1.2s;
   animation-delay: -1.2s;
 }
-.text:nth-child(5n+2) {
+#svg1 .text:nth-child(5n+2),#svg2 .text:nth-child(5n+2) {
   stroke: #F5A503;
   -webkit-animation-delay: -2.4s;
   animation-delay: -2.4s;
 }
-.text:nth-child(5n+3) {
+#svg1 .text:nth-child(5n+3),#svg2 .text:nth-child(5n+3) {
   stroke: #E9F1DF;
   -webkit-animation-delay: -3.6s;
   animation-delay: -3.6s;
 }
-.text:nth-child(5n+4) {
+#svg1 .text:nth-child(5n+4),#svg2 .text:nth-child(5n+4) {
   stroke: #56D9CD;
   -webkit-animation-delay: -4.8s;
   animation-delay: -4.8s;
 }
-.text:nth-child(5n+5) {
+#svg1 .text:nth-child(5n+5),#svg2 .text:nth-child(5n+5) {
   stroke: #3AA1BF;
   -webkit-animation-delay: -6s;
   animation-delay: -6s;
@@ -125,10 +129,10 @@ svg {
     font: 5em/1 Open Sans, Impact;
     text-transform: uppercase;
     margin: 0;
-    /* position: absolute; */
     width: 1200;
     height: 600;
 }
+
 
 
 /* bloc liens sg et info */
@@ -140,13 +144,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
   }
   .btn-shine {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 12px 48px;
     color: #fff;
-    background: linear-gradient(to right, #4d4d4d 0, #fff 10%, #4d4d4d 20%);
+    background: linear-gradient(to right, #7d7d7d 0, #fff 10%, #7d7d7d 20%);
     background-position: 0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -158,7 +158,30 @@ body {
     text-decoration: none;
     white-space: nowrap;
   }
-  
+  @-moz-keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 300px;
+    }
+  }
+  @-webkit-keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 300px;
+    }
+  }
+  @-o-keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    100% {
+      background-position: 300px;
+    }
+  }
   @keyframes shine {
     0% {
       background-position: 0;
@@ -168,7 +191,9 @@ body {
     }
   }
 
-  
+  #svg2{
+      transform: translateY(-50px);
+  }
   
   #lienSgInfo{
       display: flex;
@@ -177,13 +202,21 @@ body {
       justify-content: center;
       align-items: center;
       text-align: center;
-      
+      text-transform: uppercase;
+
     } 
     #lienSgInfo a{
         margin: 10px;
         padding: 5px;
         border-radius: 12px;
-        border: #4d4d4d solid 1px;
+        border: #7d7d7d solid 2px;
+    }
+
+    #content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     /* .btn-shine {
       color: #fff;
@@ -200,12 +233,21 @@ body {
 /* responsive */
 
 @media screen and (orientation: portrait),screen and (max-width:800px){
-    svg{
+    #svg1{
         margin: 75px 20px 0 20px;
+        height: 30vh;
     }
-    .text{
+    svg{
+        height: 30vh;
+    }
+    svg .text{
         font-size: 200%;
-        stroke-width: 5;
-
+        stroke-width: 4;
+    }
+    #content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

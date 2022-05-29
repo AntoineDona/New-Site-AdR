@@ -4,31 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" sizes="96x96" type="image/png" href="/wreckingbang/img/iconBall.png">
+    <link rel="shortcut icon" sizes="96x96" type="image/png" href="/tomorrowBang/img/festival.png">
     <link rel="stylesheet" href="tomorrow.css" />
 
     <title>TOMORROW BANG</title>
 </head>
 
 <body>
+    <div id="content">
     <div id="titreBang">
-        <svg viewBox="0 0 1200 200">
+        <svg id="svg1" viewBox="0 0 1200 200">
             <!-- Symbol-->
-            <symbol id="s-text">
-              <text text-anchor="middle" x="50%" y="50%" dy=".35em">tomorrow bang</text>
+            <symbol id="s-text1">
+              <text text-anchor="middle" x="50%" y="50%" dy=".35em">tomorrow</text>
+              <!-- <text text-anchor="middle" x="50%" y="70%" dy=".35em">bang</text> -->
             </symbol>
             <!-- Duplicate symbols-->
-            <use class="text" xlink:href="#s-text"></use>
-            <use class="text" xlink:href="#s-text"></use>
-            <use class="text" xlink:href="#s-text"></use>
-            <use class="text" xlink:href="#s-text"></use>
-            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text1"></use>
+            <use class="text" xlink:href="#s-text1"></use>
+            <use class="text" xlink:href="#s-text1"></use>
+            <use class="text" xlink:href="#s-text1"></use>
+            <use class="text" xlink:href="#s-text1"></use>
+          </svg>
+        <svg id="svg2" viewBox="0 0 1200 150">
+            <!-- Symbol-->
+            <symbol id="s-text2">
+              <text text-anchor="middle" x="50%" y="50%" dy=".35em">bang</text>
+            </symbol>
+            <!-- Duplicate symbols-->
+            <use class="text" xlink:href="#s-text2"></use>
+            <use class="text" xlink:href="#s-text2"></use>
+            <use class="text" xlink:href="#s-text2"></use>
+            <use class="text" xlink:href="#s-text2"></use>
+            <use class="text" xlink:href="#s-text2"></use>
           </svg>
     </div>
     <div id="lienSgInfo" class="btn-shine">
         <a href="https://pumpkin-app.co/" target="_blank">Lien de la billeterie</a><br>
         <a href="/tomorrowBang/infoBang.html" target="_blank">Informations de la soirée</a>
     </div>
+</div>
     <div id = "board"></div>
 </body>
 <script>
