@@ -19,13 +19,27 @@
                 <h1 class="headline"> Nos Events</h1>
 
                 <div class="description_event">
-                <div ><img src="img/plage.png" alt="plage icon"><h2>Nan'all black</h2><img src="img/plage.png" alt="plage icon"></div>
-                    <p>En forme pour une soirée des plus sportives?🏉
+                    <div >
+                        <img src="img/festival.png" alt="festival"><h2>TOMORROW BANG</h2><img src="img/festival.png" alt="festivel">
+                    </div>
+                        <p> Pour terminer l'année de la meilleure des manières, l'AdR CentraleSupélec et le Forum vous convient le vendredi 10 juin de 23h à 5h au TomorrowBang, une soirée électro avec 3 scènes sous les spots de SBCS!🕺
+                            La Soirée aura lieu dans les locaux de CentraleSupélec et sera ouverte aux extés!
 
-                        L'AdR et le C7 s'allient pour vous présenter un nano des plus mythiques, le Nan'All Blacks!🖤
-                        C'est ainsi que nous vous convions sous les spots de SBCS🕺 en Bouygues le jeudi 19 mai de 22h à 3h pour vous ambiancer comme jamais en compagnie des joueurs du C7.🎉 Le lien du shotgun est <a href="/nanallBlack/">ici</a>
-                    <br>Le lien de l'album pics : <a href="https://galerie.pics/galerie/nanall-black">album</a>
-                    </p>
+                            Comme au Forum et à l'AdR on aime faire les choses en grand, nous avons invité en exclusivité des DJs🎧 venus de loin pour vous régaler (line-up à venir...)
+                            Réservez bien votre vendredi 10 juin au soir car la soirée risque d'être mémorable!🎉 Le lien du shotgun est <a href="/tomorrowBang/">ici</a>
+                        <br>Le lien de l'album pics : <a href="https://galerie.pics/galerie/tomorrow-bang">album</a>
+                        </p>
+                </div>
+                <div class="description_event">
+                    <div >
+                        <img src="img/plage.png" alt="plage icon"><h2>Nan'all black</h2><img src="img/plage.png" alt="plage icon">
+                    </div>
+                        <p>En forme pour une soirée des plus sportives?🏉
+
+                            L'AdR et le C7 s'allient pour vous présenter un nano des plus mythiques, le Nan'All Blacks!🖤
+                            C'est ainsi que nous vous convions sous les spots de SBCS🕺 en Bouygues le jeudi 19 mai de 22h à 3h pour vous ambiancer comme jamais en compagnie des joueurs du C7.🎉 Le lien du shotgun est <a href="/nanallBlack/">ici</a>
+                        <br>Le lien de l'album pics : <a href="https://galerie.pics/galerie/nanall-black">album</a>
+                        </p>
                 </div>
                 <div class="description_event">
                 <div ><img src="img/plage.png" alt="plage icon"><h2>Y'a du soleil et des nanos</h2><img src="img/plage.png" alt="plage icon"></div>
