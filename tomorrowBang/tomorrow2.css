@@ -131,7 +131,7 @@ body	{
     stroke-dashoffset: -400;
   }
 }
-#content, #titreBang {
+#titreBang {
   height: 100%;
 }
 
