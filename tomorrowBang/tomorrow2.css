@@ -157,12 +157,11 @@ svg {
 /* partie liens info et sg */
 #lienSgInfo {
   font-family: 'Poppins', sans-serif;
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  text-align: center;
   margin-top: 15vh;
 
 }
@@ -170,6 +169,7 @@ svg {
   border: #4d4d4d solid 2px;
   padding: 8px;
   border-radius: 12px;
+  margin: 10px 0 10px 0;
 }
 .btn-shine {
   padding: 12px 48px;
