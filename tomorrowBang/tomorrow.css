@@ -1,7 +1,4 @@
-body	{
-    background-color : #001126;
-    margin: 0;
-}
+
 @keyframes 			firework-animation {
     0% {background-color : #ff8426;}
     25% {background-color : #fffc84;}
@@ -70,3 +67,46 @@ body	{
 
 
 
+/* info bang */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+body{
+    margin: 0;
+}
+#contentInfo{
+    background-size: 100%;
+    padding: 10px;
+    color: rgb(242, 242, 242);
+    font-family: 'Roboto Mono', monospace;
+}
+#contentInfo:before{
+    content:"";
+    background: center url('/tomorrowBang/img/bckTomorrow.png');
+    left: -25px;
+    top: -50px;
+    height: 115%; width: 115%;
+    filter:blur(5px);
+    background-size: cover;
+    z-index: -1;
+}
+
+#contentInfo h1{
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 0.8rem;
+}
+#contentInfo h1 span{
+    font-size: 2.2rem;
+}
+
+#lieu-date{
+    margin:10vh 6vw 0 6vw ;
+}
+.lieu-date-content h3{
+    font-size: 0.8rem;
+    color: #9DA6B7;
+}
+.lieu-date-content a{
+    color: rgb(242, 242, 242) ;
+}
