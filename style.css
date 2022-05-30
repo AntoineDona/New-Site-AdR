@@ -502,7 +502,7 @@ a.anchor {
 /* Events ------------------------------------------------------------------------------------------------------------ */
 
 .events {
-  background-image: url(/events/img/afficheNanallBlack.png);
+  background-image: url(/events/img/afficheBckground.png);
   position: relative;
   z-index: 0;
   width: 100%;
