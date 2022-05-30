@@ -129,4 +129,6 @@ body{
     font-family: "electric";
     font-weight: normal;
     src: url("font/electric.otf") format("opentype");
+    src: url("font/electric.ttf") format("truetype");
+    src: url("font/electric.woff") format("woff");
   }
