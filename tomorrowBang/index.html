@@ -12,187 +12,196 @@
 
 <body>
     <div id="content">
-    <div id="titreBang">
-        <svg id="svg1" viewBox="0 0 1200 200">
-            <!-- Symbol-->
-            <symbol id="s-text1">
-              <text text-anchor="middle" x="50%" y="50%" dy=".35em">tomorrow</text>
-              <!-- <text text-anchor="middle" x="50%" y="70%" dy=".35em">bang</text> -->
-            </symbol>
-            <!-- Duplicate symbols-->
-            <use class="text" xlink:href="#s-text1"></use>
-            <use class="text" xlink:href="#s-text1"></use>
-            <use class="text" xlink:href="#s-text1"></use>
-            <use class="text" xlink:href="#s-text1"></use>
-            <use class="text" xlink:href="#s-text1"></use>
-          </svg>
-        <svg id="svg2" viewBox="0 0 1200 150">
-            <!-- Symbol-->
-            <symbol id="s-text2">
-              <text text-anchor="middle" x="50%" y="50%" dy=".35em">bang</text>
-            </symbol>
-            <!-- Duplicate symbols-->
-            <use class="text" xlink:href="#s-text2"></use>
-            <use class="text" xlink:href="#s-text2"></use>
-            <use class="text" xlink:href="#s-text2"></use>
-            <use class="text" xlink:href="#s-text2"></use>
-            <use class="text" xlink:href="#s-text2"></use>
-          </svg>
+        <div id="titreBang">
+            <svg id="svg1">
+                <!-- Symbol-->
+                <symbol id="s-text1">
+                  <text text-anchor="middle" x="50%" y="50%" dy=".35em">tomorrow</text>
+                  <!-- <text text-anchor="middle" x="50%" y="70%" dy=".35em">bang</text> -->
+                </symbol>
+                <!-- Duplicate symbols-->
+                <use class="text" xlink:href="#s-text1"></use>
+                <use class="text" xlink:href="#s-text1"></use>
+                <use class="text" xlink:href="#s-text1"></use>
+                <use class="text" xlink:href="#s-text1"></use>
+                <use class="text" xlink:href="#s-text1"></use>
+              </svg>
+            <svg id="svg2">
+                <!-- Symbol-->
+                <symbol id="s-text2">
+                  <text text-anchor="middle" x="50%" y="50%" dy=".35em">bang</text>
+                </symbol>
+                <!-- Duplicate symbols-->
+                <use class="text" xlink:href="#s-text2"></use>
+                <use class="text" xlink:href="#s-text2"></use>
+                <use class="text" xlink:href="#s-text2"></use>
+                <use class="text" xlink:href="#s-text2"></use>
+                <use class="text" xlink:href="#s-text2"></use>
+              </svg>
+        </div> 
+
+        <div id="lienSgInfo" class="btn-shine">
+            <p><a href=" https://billetterie.pumpkin-app.com/tomorrow-bang" target="_blank">Lien de la billeterie</a></p><br>
+            <p><a href="/tomorrowBang/infoBang.html" target="_blank">Informations de la soirée</a></p>
+        </div>
     </div>
-    <div id="lienSgInfo" class="btn-shine">
-        <a href="https://pumpkin-app.co/" target="_blank">Lien de la billeterie</a><br>
-        <a href="/tomorrowBang/infoBang.html" target="_blank">Informations de la soirée</a>
-    </div>
-</div>
-    <div id = "board"></div>
+    
 </body>
-<script>
-    var brd = document.createElement("DIV");
-    document.body.insertBefore(brd, document.getElementById("board"));
+<style>
+    /* general */
 
-    seeds = [];
-    particles = [];
+body{
+    background-color: #001126;
+}
+#content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    const fwkPtcIniV = 0.5;
-    const fwkSedIniV = 0.5;
-    const fwkPtcIniT = 2500;
-    const fwkSedIniT = 1000;
-    const a = 0.0005;
-    const g = 0.0005;
-    const v = 0.3;
-    const cursorXOffset = 5;
-    const cursorYOffset = 0;
+}
 
 
-    function newFireworkParticle(x, y, angle)
-    {
-        var fwkPtc = document.createElement("DIV");
-        fwkPtc.setAttribute('class', 'fireWorkParticle');
-        fwkPtc.time = fwkPtcIniT;
-        while(angle > 360)
-            angle -= 360;
-        while(angle < 0)
-            angle += 360;
-        fwkPtc.velocity = [];
-        if(angle > 270)
-        {
-            fwkPtc.velocity.x = fwkPtcIniV * Math.sin(angle * Math.PI / 180) * (1 - Math.random() * v);
-            fwkPtc.velocity.y = fwkPtcIniV * Math.cos(angle * Math.PI / 180) * (1 - Math.random() * v);
-        }
-        else if(angle > 180)
-        {
-            fwkPtc.velocity.x = fwkPtcIniV * Math.sin(angle * Math.PI / 180) * (1 - Math.random() * v);
-            fwkPtc.velocity.y = fwkPtcIniV * Math.cos(angle * Math.PI / 180) * (1 - Math.random() * v);
-        }
-        else if(angle > 90)
-        {
-            fwkPtc.velocity.x = fwkPtcIniV * Math.sin(angle * Math.PI / 180) * (1 - Math.random() * v);
-            fwkPtc.velocity.y = fwkPtcIniV * Math.cos(angle * Math.PI / 180) * (1 - Math.random() * v);
-        }
-        else
-        {
-            fwkPtc.velocity.x = fwkPtcIniV * Math.sin(angle * Math.PI / 180) * (1 - Math.random() * v);
-            fwkPtc.velocity.y = fwkPtcIniV * Math.cos(angle * Math.PI / 180) * (1 - Math.random() * v);
-        }
-        fwkPtc.position = [];
-        fwkPtc.position.x = x;
-        fwkPtc.position.y = y;
-        fwkPtc.style.left = fwkPtc.position.x + 'px';
-        fwkPtc.style.top = fwkPtc.position.y + 'px';
-        if(particles == null)
-            particles = [];
-        particles.push(fwkPtc);
-        return fwkPtc;
-    }
+/* Titre sg */
 
-    document.addEventListener("click", newFireWorkOnClick);
 
-    function newFireWorkOnClick(event)
-    {
-        newFireworkSeed(event.pageX - brd.offsetLeft + cursorXOffset, event.pageY - brd.offsetTop + cursorYOffset);
-    }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+.text {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+}
+.text:nth-child(5n+1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n+2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.text:nth-child(5n+3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.text:nth-child(5n+4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+.text:nth-child(5n+5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
 
-    function newFireworkSeed(x, y)
-    {
-        var fwkSed = document.createElement("DIV");
-        fwkSed.setAttribute('class', 'fireWorkSeed');
-        brd.appendChild(fwkSed);
-        fwkSed.time = fwkSedIniT;
-        fwkSed.velocity = [];
-        fwkSed.velocity.x = 0;
-        fwkSed.velocity.y = fwkSedIniV;
-        fwkSed.position = [];
-        fwkSed.position.x = x;
-        fwkSed.position.y = y;
-        fwkSed.style.left = fwkSed.position.x + 'px';
-        fwkSed.style.top = fwkSed.position.y + 'px';
-        if(seeds == null)
-            seeds = [];
-        seeds.push(fwkSed);
-        return fwkSed;
-    }
-    
-    function newFireWorkStar(x, y)
-    {
-        var fwkBch = document.createElement("DIV");
-        fwkBch.setAttribute('class', 'fireWorkBatch');
-        var a = 0;
-        while(a < 360)
-        {
-            var fwkPtc = newFireworkParticle(x, y, a);
-            fwkBch.appendChild(fwkPtc);
-            a += 5;
-        }
-        brd.appendChild(fwkBch);
-    }
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+#titreBang {
+  height: 100%;
+}
 
-    var before = Date.now();
-    var id = setInterval(frame, 5);
-    
-    function frame()
-    {
-        var current = Date.now();
-        var deltaTime = current - before;
-        before = current;
-        for(i in seeds)
-        {
-            var fwkSed = seeds[i];
-            fwkSed.time -= deltaTime;
-            if(fwkSed.time > 0)
-            {
-                fwkSed.velocity.x -= fwkSed.velocity.x * a * deltaTime;
-                fwkSed.velocity.y -= g * deltaTime + fwkSed.velocity.y * a * deltaTime;
-                fwkSed.position.x += fwkSed.velocity.x * deltaTime;
-                fwkSed.position.y -= fwkSed.velocity.y * deltaTime;
-                fwkSed.style.left = fwkSed.position.x + 'px';
-                fwkSed.style.top = fwkSed.position.y + 'px';
-            }
-            else
-            {
-                newFireWorkStar(fwkSed.position.x, fwkSed.position.y);
-                fwkSed.parentNode.removeChild(fwkSed);
-                seeds.splice(i, 1);
-            }
-        }
-        for(i in particles)
-        {
-            var fwkPtc = particles[i];
-            fwkPtc.time -= deltaTime;
-            if(fwkPtc.time > 0)
-            {
-                fwkPtc.velocity.x -= fwkPtc.velocity.x * a * deltaTime;
-                fwkPtc.velocity.y -= g * deltaTime + fwkPtc.velocity.y * a * deltaTime;
-                fwkPtc.position.x += fwkPtc.velocity.x * deltaTime;
-                fwkPtc.position.y -= fwkPtc.velocity.y * deltaTime;
-                fwkPtc.style.left = fwkPtc.position.x + 'px';
-                fwkPtc.style.top = fwkPtc.position.y + 'px';
-            }
-            else
-            {
-                fwkPtc.parentNode.removeChild(fwkPtc);
-                particles.splice(i, 1);
-            }
-        }
-    }
-</script>
+#titreBang svg{
+  background-size: 0.2em 100%;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+svg {
+  width: 100%;
+  height: 12vh;
+}
+.text{
+  font-size: 3.2rem;
+}
+#titreBang{
+  margin: 50px 10px 0 10px ;
+}
+
+
+    /* partie liens info et sg */
+#lienSgInfo {
+  font-family: 'Poppins', sans-serif;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  text-align: center;
+  margin-top: 15vh;
+
+}
+#lienSgInfo a{
+  border: #4d4d4d solid 2px;
+  padding: 8px;
+  border-radius: 12px;
+}
+.btn-shine {
+  padding: 12px 48px;
+  background: linear-gradient(to right, #4d4d4d 0, #fff 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2.5s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@-moz-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  
+  100% {
+    background-position: 280px;
+  }
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  
+  100% {
+    background-position: 280px;
+  }
+}
+@-o-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  
+  100% {
+    background-position: 280px;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  
+  100% {
+    background-position: 280px;
+  }
+}
+
+</style>
+
 </html>
