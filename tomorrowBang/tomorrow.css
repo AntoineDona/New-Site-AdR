@@ -70,24 +70,25 @@
 /* info bang */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 body{
     margin: 0;
 }
 #contentInfo{
     background-size: 100%;
+    /* background-color: #001126; */
     padding: 10px;
     color: rgb(242, 242, 242);
     font-family: 'Roboto Mono', monospace;
 }
-#contentInfo:before{
+#contentInfo:before {
     content:"";
-    background: center url('/tomorrowBang/img/bckTomorrow.png');
+    background-size: cover;
+    background:center url('/tomorrowBang/img/bckTomorrow.png');
+    position: absolute;
     left: -25px;
     top: -50px;
     height: 115%; width: 115%;
     filter:blur(5px);
-    background-size: cover;
     z-index: -1;
 }
 
@@ -100,7 +101,7 @@ body{
     font-size: 2.2rem;
 }
 
-#lieu-date{
+.lieu-date{
     margin:10vh 6vw 0 6vw ;
 }
 .lieu-date-content h3{
@@ -109,4 +110,16 @@ body{
 }
 .lieu-date-content a{
     color: rgb(242, 242, 242) ;
+}
+
+
+#program h1{
+    font-size: 1.8rem;
+}
+#program{
+    margin: 18vh 6vw 0 6vw;
+}
+#program img{
+    width :50%;
+    text-align: center;
 }
