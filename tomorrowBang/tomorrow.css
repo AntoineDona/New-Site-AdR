@@ -123,3 +123,10 @@ body{
     width :50%;
     text-align: center;
 }
+
+
+@font-face {
+    font-family: "electric";
+    font-weight: normal;
+    src: url("font/electric.otf") format("opentype");
+  }
