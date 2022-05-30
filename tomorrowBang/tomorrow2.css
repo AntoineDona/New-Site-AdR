@@ -185,10 +185,7 @@ svg {
   text-decoration: none;
   white-space: nowrap;
 }
-.btn-shine a{
-  color: #4d4d4d;
 
-}
 @-moz-keyframes shine {
   0% {
     background-position: 0;
