@@ -20,7 +20,7 @@
 
                 <div class="description_event">
                     <div >
-                        <img src="img/muscle.png" alt="muscle"><h2>TOMORROW BANG</h2><img src="img/muscle.png" alt="muscle">
+                        <img src="img/muscle.png" alt="muscle"><h2>NANO PAIN NANO GAIN</h2><img src="img/muscle.png" alt="muscle">
                     </div>
                         <p>
                             Salut les GPA’s !
