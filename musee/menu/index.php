@@ -51,7 +51,7 @@
 					• 1 soft ou 1/2 de Kro (+0,50€) <strong style="color:#ee0;">•</strong><br>
 				</div>
 				<div>
-					5<small>,20</small> €
+					5<small>,40</small> €
 				</div>
 			</div><br>
 			<h2>&#8764; Menu pizza &#8765;</h2>
@@ -61,7 +61,7 @@
 					• 1 soft ou 1/2 de Kro (+0,50€) <strong style="color:#ee0;">•</strong><br>
 				</div>
 				<div>
-					5<small>,70</small> €
+					5<small>,90</small> €
 				</div>
 			</div><br>
 			<h2>&#8764; Menu p'tit dej &#8765;</h2>

@@ -20,6 +20,26 @@
 
                 <div class="description_event">
                     <div >
+                        <img src="img/muscle.png" alt="muscle"><h2>TOMORROW BANG</h2><img src="img/muscle.png" alt="muscle">
+                    </div>
+                        <p>
+                            Salut les GPA’s !
+
+                            L’AdR, le BDS et la WACS sont ravis de vous accueillir pour la première soirée au Zoo de CS 🦌 : Nano Pain Nano Gain !💪🏼🏋🏽‍♂️
+
+                            SBCS aux platines pour t’exploser le cerveau comme en rave, il est l’heure de découvrir pourquoi les soirées électro-centraliennes ⚡ sont si célèbres… 🎇
+                            Parce que l’été n’a pas suffi, venez tester vos limites avec votre famille de parrainage dans un TU sportif et givré ! ❄️🏋️
+
+                            On vous attend avec impatience pour inaugurer les WeildWeeks de la meilleure des manières ! 🤪🌴
+
+                            La bise festive 🖤❤️🤍
+
+                            PS : le TU est à consommer sans modération 💫
+                            PPS : TU = Turn Up 💃🕺
+                        </p>
+                </div>
+                <div class="description_event">
+                    <div >
                         <img src="img/festival.png" alt="festival"><h2>TOMORROW BANG</h2><img src="img/festival.png" alt="festivel">
                     </div>
                         <p> Pour terminer l'année de la meilleure des manières, l'AdR CentraleSupélec et le Forum vous convient le vendredi 10 juin de 23h à 5h au TomorrowBang, une soirée électro avec 3 scènes sous les spots de SBCS!🕺
