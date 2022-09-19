@@ -13,7 +13,7 @@
 
 html {
   font-size: 10px;
-  font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: electric, Roboto, Verdana, Geneva, Tahoma, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -21,7 +21,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: Retroica, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: electric, Retroica, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -340,7 +340,7 @@ a.nav-link:hover {
 }
 
 #counter {
-  font-family: Retroica, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: electric, Retroica, Verdana, Geneva, Tahoma, sans-serif;
   display: grid;
   grid-template-areas: "d_top h_top m_top s_top" "d_bottom h_bottom m_bottom s_bottom";
   grid-template-columns: 25% 25% 25% 25%;
@@ -443,7 +443,7 @@ p.infos_billeterie {
 
 .billet {
   font-size: 1.5rem;
-  font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: electric, Roboto, Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 
   width: 30rem;
@@ -466,7 +466,7 @@ p.infos_billeterie {
 .prix {
   font-size: 4rem;
   margin: 2rem;
-  font-family: Retroica, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: electric, Retroica, Verdana, Geneva, Tahoma, sans-serif;
   z-index: 1;
 }
 
@@ -529,12 +529,12 @@ p.infos_billeterie {
   letter-spacing: 2.5px;
   color: white;
   background-color: transparent;
-  font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: electric, Roboto, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .billet h4 {
   font-size: 3rem;
-  font-family: Retroica, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: electric, Retroica, Verdana, Geneva, Tahoma, sans-serif;
   z-index: 1;
 }
 
@@ -815,4 +815,11 @@ p.infos_billeterie {
   src: url("fonts/Roboto-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: bolder;
+}
+@font-face {
+  font-family: "electric";
+  font-weight: normal;
+  src: url("font/electric.otf") format("opentype");
+  src: url("font/electric.ttf") format("truetype");
+  src: url("font/electric.woff") format("woff");
 }

@@ -20,6 +20,36 @@
 
                 <div class="description_event">
                     <div >
+                        <img src="img/quadra.png" alt="muscle"><h2>QUADRABANG</h2><img src="img/quadra.png" alt="muscle">
+                    </div>
+                        <p>
+                        Toc Toc Toc... <br>
+
+                        L'AdR CentraleSupélec présente l'édition 2022 du 💥QuadraBang💥, parmi les plus grandes soirées étudiantes de France!🎉
+                        Le QuadraBang, c'est 4 scènes 4 ambiances et des milliers d'étudiants prêts à s’enflammer devant les spots de @sonobarco_sbcs 🔥, l'asso de Sono Barco de CentraleSupélec. <br>
+                        Alors nous vous donnons rendez-vous le vendredi 7 Octobre de 23h à 5h! <br>
+
+                        L'ouverture de la 🔗billetterie🔗 est prévue le lundi 26 Septembre à 13h et ce fera sur <a href="/quadrabang/">ce lien</a> . <br>
+
+
+                        Et bien-sûr, abonnez-vous à notre insta pour connaître tout en avant-première !😍 <br>
+
+                        La Quadra-Bise ❤️🖤
+                        </p>
+                </div>
+                <div class="description_event">
+                    <div >
+                        <img src="img/pirate.png" alt="pirate"><h2>CYBER NANO</h2><img src="img/pirate.png" alt="pirate">
+                    </div>
+                        <p>
+                        Ces deux semaines d'intégration t'en ont mis plein la vue 😍 ?
+                        Pourtant le meilleur reste à venir !
+                        🎆🎇ViaRézo, SBCS et l'AdR s'associent pour la dernière soirée des WW, le Cybernano ! Rejoins nous dans une ambiance futuriste pour la dernière soirée de l’inté ✨!
+                        Ce soir, hacke la sono 🔊 pour choisir l'ambiance musicale mixée par SBCS avec l’application CSevents !
+                        </p>
+                </div>
+                <div class="description_event">
+                    <div >
                         <img src="img/muscle.png" alt="muscle"><h2>NANO PAIN NANO GAIN</h2><img src="img/muscle.png" alt="muscle">
                     </div>
                         <p>
