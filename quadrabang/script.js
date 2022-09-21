@@ -2,14 +2,11 @@ var getFormattedDigits = function getFormattedDigits(num) {
 	return (num < 10 ? '0' : '') + num;
 };
 
-function onLoad() {
-	timer();
-	navSlide();
-};
+
 
 function timer() {
 	var date = new Date();
-	var date_shotgun = new Date(2021, 9, 8, 23, 00);
+	var date_shotgun = new Date(2022, 9, 7, 23, 00);
 	var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
 	var diff_jour = getFormattedDigits(Math.trunc(total_sec / 3600 / 24));
 	var diff_hour = getFormattedDigits(Math.trunc((total_sec - diff_jour * 24 * 3600) / 3600));
@@ -99,3 +96,7 @@ const navSlide = () => {
 		});
 	}
 }
+function onLoad() {
+	timer();
+	navSlide();
+};

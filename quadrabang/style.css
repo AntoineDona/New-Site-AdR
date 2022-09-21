@@ -16,7 +16,7 @@
 
 html {
   font-size: 10px;
-  font-family: 'Roboto Mono', Roboto, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: cream, 'Roboto Mono', Roboto, Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(242, 242, 242);
   scroll-behavior: smooth;
 }
@@ -25,7 +25,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Roboto Mono', Retroica, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: cream, 'Roboto Mono', Retroica, Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(242, 242, 242);
 }
 
@@ -345,7 +345,7 @@ a.nav-link:hover {
 }
 
 #counter {
-  font-family: 'Roboto Mono', Retroica, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: cream, 'Roboto Mono', Retroica, Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(242, 242, 242);
   display: grid;
   grid-template-areas: "d_top h_top m_top s_top" "d_bottom h_bottom m_bottom s_bottom";
@@ -413,9 +413,9 @@ p.desc_quadra {
   border-radius: 20px;
 }
 
-/* Billeterie ----------------------- */
+/* billetterie ----------------------- */
 
-.billeterie {
+.billetterie {
   height: auto;
   min-height: 100vh;
   width: 100vw;
@@ -428,7 +428,7 @@ p.desc_quadra {
   align-items: center;
 }
 
-p.infos_billeterie {
+p.infos_billetterie {
   flex-basis: 1;
   font-size: 1.7rem;
   text-align:justify;
@@ -449,7 +449,7 @@ p.infos_billeterie {
 
 .billet {
   font-size: 1.5rem;
-  font-family: 'Roboto Mono', Roboto, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: cream, 'Roboto Mono', Roboto, Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(242, 242, 242);
   text-align: center;
 
@@ -473,7 +473,7 @@ p.infos_billeterie {
 .prix {
   font-size: 4rem;
   margin: 2rem;
-  font-family: 'Roboto Mono', Retroica, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: cream, 'Roboto Mono', Retroica, Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(242, 242, 242);
   z-index: 1;
 }
@@ -537,13 +537,13 @@ p.infos_billeterie {
   letter-spacing: 2.5px;
   color: white;
   background-color: transparent;
-  font-family: 'Roboto Mono', Roboto, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: cream, 'Roboto Mono', Roboto, Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(242, 242, 242);
 }
 
 .billet h4 {
   font-size: 3rem;
-  font-family: 'Roboto Mono', Retroica, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: cream, 'Roboto Mono', Retroica, Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(242, 242, 242);
   z-index: 1;
 }
@@ -719,7 +719,7 @@ p.infos_billeterie {
     padding: 0 2rem;
   }
 
-  p.infos_billeterie{
+  p.infos_billetterie{
     max-width: 100%;
     width: 80%;
   }
@@ -827,4 +827,17 @@ p.infos_billeterie {
   src: url("fonts/Roboto-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: bolder;
+}
+@font-face {
+  font-family: "cream";
+  src: url("fonts/creamSolid.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "cream";
+  src: url("fonts/cream.ttf") format("truetype");
+  src: url('fonts/cream.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
 }

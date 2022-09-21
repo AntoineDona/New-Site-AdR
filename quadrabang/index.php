@@ -3,7 +3,7 @@ date_default_timezone_set('Europe/Paris');
 $current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
 
-$shotgun_date = mktime(13, 00, 0, 9, 26, 2022);
+$shotgun_date = mktime(13, 0, 0, 9, 26, 2022);
 $shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
 function display_btn($date, $shotgun, $soldout)
@@ -66,7 +66,7 @@ function display_btn($date, $shotgun, $soldout)
           <a href="#quadrabang" class="nav-link">Quadrabang</a>
         </li>
         <li class="nav-item">
-          <a href="#billeterie" class="nav-link">Billeterie</a>
+          <a href="#billetterie" class="nav-link">Billetterie</a>
         </li>
         <li class="nav-item">
           <a href="#navettes" class="nav-link">Navettes</a>
@@ -125,13 +125,13 @@ function display_btn($date, $shotgun, $soldout)
           </div>
         </div>
       </section> -->
-      <section class="billeterie" id="billeterie">
-        <h3>BILLETERIE</h3>
-        <p class="infos_billeterie" style="text-indent: 6rem">La billetterie du QuadraBang 2022 ouvre lundi 26 à 13h pour tout le monde. Le paiement se fera par LYDIA ou par CB. Nous aimerions préciser quatre points: </p>
-        <!-- <p class="infos_billeterie">🎁 Grâce à notre partenariat avec Pumpkin, pour toute ouverture de compte avec le code QUADRA21, gagnez 15€ lors de la première utilisation de votre carte Pumpkin🥳 </p> -->
-        <p class="infos_billeterie">🆔 Pour payer avec Lydia, vous devrez au préalable avoir validé votre identité! Faites le dès maintenant. Un conseil : si vous rencontrez des problèmes à la faire valider, il faut essayer avec une autre pièce d’identité😌</p>
-        <p class="infos_billeterie">⏰ Lors du shotgun, vous serez beaucoup à vous connecter en même temps. Les temps d’attente pourront monter jusqu’à 1h, pas d’inquiétude il y aura de la place pour [presque] tout le monde🤡</p>
-        <p class="infos_billeterie">Une fois que votre place est prise, vous aurez 30min pour payer, passé ce délais elle sera remise en vente. Ainsi, si le site Lydia affiche sold out, restez à l’affût pour récupérer ces places🤙🏼</p>
+      <section class="billetterie" id="billetterie">
+        <h3>BILLETTERIE</h3>
+        <p class="infos_billetterie" style="text-indent: 6rem">La billetterie du QuadraBang 2022 ouvre lundi 26 à 13h pour tout le monde. Le paiement se fera par LYDIA ou par CB. Nous aimerions préciser quatre points: </p>
+        <!-- <p class="infos_billetterie">🎁 Grâce à notre partenariat avec Pumpkin, pour toute ouverture de compte avec le code QUADRA21, gagnez 15€ lors de la première utilisation de votre carte Pumpkin🥳 </p> -->
+        <p class="infos_billetterie">🆔 Pour payer avec Lydia, vous devrez au préalable avoir validé votre identité! Faites le dès maintenant. Un conseil : si vous rencontrez des problèmes à la faire valider, il faut essayer avec une autre pièce d’identité😌</p>
+        <p class="infos_billetterie">⏰ Lors du shotgun, vous serez beaucoup à vous connecter en même temps. Les temps d’attente pourront monter jusqu’à 1h, pas d’inquiétude il y aura de la place pour [presque] tout le monde🤡</p>
+        <p class="infos_billetterie">Une fois que votre place est prise, vous aurez 30min pour payer, passé ce délais elle sera remise en vente. Ainsi, si le site Lydia affiche sold out, restez à l’affût pour récupérer ces places🤙🏼</p>
         <div class="billet_ctnr">
           <div class="billet normal">
             <h4>Normal</h4>
@@ -175,9 +175,9 @@ function display_btn($date, $shotgun, $soldout)
 
         </div> -->
       </section>
-      <section class="billeterie" id="navettes">
+      <section class="billetterie" id="navettes">
         <h3>Navettes</h3>
-        <p class="infos_billeterie" style="text-indent: 6rem; text-align:center">Des navettes gratuites vous sont mises à disposition depuis les grandes écoles et Paris</p>
+        <p class="infos_billetterie" style="text-indent: 6rem; text-align:center">Des navettes gratuites vous sont mises à disposition depuis les grandes écoles et Paris</p>
         <div class="billet_ctnr">
           <div class="billet">
             <h4>Denfert Rochereau</h4>
