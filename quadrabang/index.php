@@ -11,7 +11,7 @@ function display_btn($date, $shotgun, $soldout)
   if (!$soldout) {
     if (true) {
 ?>
-      <a class="achat" href="#" target="_blank">
+      <a class="achat" href="https://collecte.io/quadrabang-2022-1944274/fr" target="_blank">
         <button>SHOTGUN</button>
       </a>
     <?php

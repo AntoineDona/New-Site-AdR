@@ -124,16 +124,16 @@ button {
   transform: translateZ(-1600px) scale(3);
 }
 
-/* .top_layer {
+.top_layer {
   position: absolute;
   height: 350vh;
-  background-image: url("img/diag_rouge.png");
+  background-image: url("img/pierre.png");
   background-attachment: local;
   background-size: min(120rem, 100vw) auto;
   background-repeat: repeat-y;
   background-position: top;
   transform: translateZ(-400px) scale(1.5);
-} */
+}
 
 /* .mid_layer {
   position: absolute;
@@ -700,7 +700,7 @@ p.infos_billetterie {
 
 @media screen and (orientation: portrait), screen and (max-width: 800px) {
   html {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   #counter {
