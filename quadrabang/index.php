@@ -120,7 +120,7 @@ function display_btn($date, $shotgun, $soldout)
           </p>
           <div class="trailer_ctnr">
             <video controls poster="img/poster.jpg" width="100%">
-              <source src="teaser-quadrabang-2021" type="video/mp4" />
+              <source src="teaser_quadrabang_2022" type="video/mp4" />
               Sorry, your browser doesn't support embedded videos.
             </video>
           </div>
