@@ -11,9 +11,12 @@ function display_btn($date, $shotgun, $soldout)
   if (!$soldout) {
     if (true) {
 ?>
-      <a class="achat" href="https://collecte.io/quadrabang-2022-1944274/fr" target="_blank">
+      <a class="achat" href="#" target="_blank">
         <button>SHOTGUN</button>
       </a>
+      <!-- <a class="achat" href="https://collecte.io/quadrabang-2022-1944274/fr" target="_blank">
+        <button>SHOTGUN</button>
+      </a> -->
     <?php
     } else {
     ?>
@@ -74,9 +77,9 @@ function display_btn($date, $shotgun, $soldout)
         <li class="nav-item">
           <a href="#partners" class="nav-link">Partenaires</a>
         </li>
-        <!-- <li class="nav-item">
+        <li class="nav-item">
             <a href="#teaser" class="nav-link">Galerie</a>
-          </li> -->
+          </li>
         <li class="nav-item">
           <a href="#informations" class="nav-link">Infos pratiques</a>
         </li>
@@ -105,15 +108,13 @@ function display_btn($date, $shotgun, $soldout)
           <div style="grid-area: s_bottom; font-size: 20%">seconde(s)</div>
         </div>
       </div>
-      <!-- <section class="quadrabang" id="quadrabang">
+      <section class="quadrabang" id="quadrabang">
         <h3>LE QUADRABANG</h3>
         <div class="ctnr">
           <p class="desc_quadra">
-            Après une édition annulée, le Quadrabang 2k21 revient en force le 8 octobre de 23h à 5h
-            pour une soirée mémorable !
             Le Quadrabang, c'est 4 salles et 4 ambiances avec des scènes
-            incroyables pour vous faire voyager toute la soirée ! RDV le 8
-            Octobre pour enflammer le dance floor avec plus de 2500 étudiants
+            incroyables pour vous faire voyager toute la soirée ! RDV le 7
+            Octobre pour enflammer le dance floor avec plus de 3000 étudiants
             ! 🔥 En attendant voici un petit Teaser pour vous faire
             patienter...
           </p>
@@ -124,7 +125,7 @@ function display_btn($date, $shotgun, $soldout)
             </video>
           </div>
         </div>
-      </section> -->
+      </section>
       <section class="billetterie" id="billetterie">
         <h3>BILLETTERIE</h3>
         <p class="infos_billetterie" style="text-indent: 6rem">La billetterie du QuadraBang 2022 ouvre lundi 26 à 13h pour tout le monde. Le paiement se fera par LYDIA ou par CB. Nous aimerions préciser quatre points: </p>
@@ -235,13 +236,6 @@ function display_btn($date, $shotgun, $soldout)
           </a>
         </div>
       </section>
-      <!-- <section class="recap" id="recap">
-          <h3>GALERIE</h3>
-          <video controls poster="img/poster.jpg" width="800">
-            <source src="recap-quadrabang-2019.mp4" type="video/mp4" />
-            Sorry, your browser doesn't support embedded videos.
-          </video>
-        </section> -->
       <section class="informations" id="informations">
         <h3>Informations</h3>
         <p class="infos">
