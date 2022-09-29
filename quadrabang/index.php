@@ -183,7 +183,7 @@ function display_btn($date, $shotgun, $soldout)
             <p class="horaires">Retour : 3h40 & 5h10</p>
             <p class="ouverture">Disponible à partir du:</p>
             <p class="date_ouverture">Vendredi 30 septembre 13:00</p>
-            <a class="achat" href="#">
+            <a class="achat" href="https://collecte.io/navettes-quadrabang-1977710/fr">
               <button>RESERVER</button>
             </a>
           </div>
@@ -193,7 +193,7 @@ function display_btn($date, $shotgun, $soldout)
             <p class="horaires">Aller : 00h00 </p>
             <p class="ouverture">Disponible à partir du:</p>
             <p class="date_ouverture">Vendredi 30 septembre 13:00</p>
-            <a class="achat" href="#">
+            <a class="achat" href="https://collecte.io/navettes-quadrabang-1977710/fr">
               <button>RESERVER</button>
             </a>
           </div>
@@ -204,7 +204,7 @@ function display_btn($date, $shotgun, $soldout)
             <p class="horaires">Retour : 3h00 & 5h10</p>
             <p class="ouverture">Disponible à partir du:</p>
             <p class="date_ouverture">Vendredi 30 septembre 13:00</p>
-            <a class="achat" href="#">
+            <a class="achat" href="https://collecte.io/navettes-quadrabang-1977710/fr">
               <button>RESERVER</button>
             </a>
           </div>
