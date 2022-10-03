@@ -152,6 +152,7 @@ function display_btn($date, $shotgun, $soldout)
             ?>
           </div>
         </div>
+        <p class="infos_billetterie" style="text-indent: 6rem; text-align:center; margin-top:5px">Les CGV / charte du participant sont consultables <a href="/charteQuadraSignee.pdf" style="color: rgb(242, 242, 242);">ici</a></p>
         <!-- partie pour tester si la personne est cotisante
           <div class="cotisant" id="cotisant">
           <h4>Vérifie ton adresse de cotisant ici:</h4>
