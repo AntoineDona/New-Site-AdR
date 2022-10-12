@@ -10,9 +10,11 @@ include("database.php");
 	<title>SOLD-OUT</title>
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/img/math.png">
 	<link rel="stylesheet" href="styles.css">
+	<script type="text/javascript" src="script.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 </head>
 
-<?php
+<!-- <?php
 function number_place($pdo)
 {
 	$query = $pdo->prepare("SELECT COUNT(*) as c from giganano");
@@ -22,17 +24,17 @@ function number_place($pdo)
 }
 if (number_place($pdo) < $_SESSION["total_places"]) {
 	if ($_SESSION["isConnected"]) {
-		header("Location: /nanallBlack/index.php");
+		header("Location: /giganano/index.php");
 	} else {
-		header("Location: /nanallBlack/connexion.php");
+		header("Location: /giganano/connexion.php");
 	}
 }
 if ($_SESSION['shotgun']) {
-	header("Location: /nanallBlack/index.php");
+	header("Location: /giganano/index.php");
 }
-?>
+?> -->
 
-<body>
+<body id="gradient">
 	<div class="soldout_ctnr">
 		<h1 id="soldout_title">SOLD-OUT</h1>
 		<p> Désolé <?php echo $_SESSION["prenom"]; ?>! <br />

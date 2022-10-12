@@ -20,6 +20,18 @@
 
                 <div class="description_event">
                     <div >
+                        <img src="img/math.png" alt="muscle"><h2>GIGANANO</h2><img src="img/math.png" alt="muscle">
+                    </div>
+                        <p>
+                            L'AdR présente, ce mardi 18 octobre, le tout premier Nano de l'année : Le GigaNano (aka le 1️⃣, sortez vos calculatrices...) 🥳
+                            Venez nous montrer vos capacités cognitives en SD.001 de 23h à 03h 🤖 !
+                            Le Shotgun aura lieu lundi 17 octobre à 13h15.🤫 La soirée est gratuite et réservée aux cotisants AdR.
+                            Le cervo de l'AdR 🍻🍕et le génie de @sonobarco_sbcs 🔊 vous auront organisé de quoi festoyer, tout en préparant assidument vos partiels 😈💃!
+                            <br>Le lien su shotgun est <a href="https://adr.cs-campus.fr/giganano/connexion.php">ici</a>
+                        </p>
+                </div>
+                <div class="description_event">
+                    <div >
                         <img src="img/quadra.png" alt="muscle"><h2>QUADRABANG</h2><img src="img/quadra.png" alt="muscle">
                     </div>
                         <p>
