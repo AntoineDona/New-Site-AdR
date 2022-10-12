@@ -10,5 +10,5 @@ $exempleStatement->execute([
 ]) or die(print_r($pdo->errorInfo()));
 
 // pour modifier le form : https://docs.google.com/forms/d/1wo_GXXkILCGkFXvD8xCGLggwC45lcUuMrlw5jnmTS4w/edit?usp=drivesdk
-header('Location:https://docs.google.com/forms/d/e/1FAIpQLSfdwHUl843xcZ0ZTPjCBaNyFay2UraGh0S_86olN6XfOiy0vw/viewform')
+header('Location:https://docs.google.com/forms/d/e/1FAIpQLSfdwHUl843xcZ0ZTPjCBaNyFay2UraGh0S_86olN6XfOiy0vw/viewform?usp=sf_link')
 ?>

@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-include("auth.php"); 
+// include("auth.php"); 
 include("database.php");
-// //
-// 	//
+//
+	//
 	// $_SESSION["isConnected"] = true;
 	// $_SESSION["is_cotisant"]=true;
-	// // $_SESSION['shotgun']=true;
+	// $_SESSION['shotgun']=true;
 	// $_SESSION['login']='2021goulletba';
 	// $_SESSION["user"]=array(
 	// 	'firstName'=>'Bastien',
@@ -16,8 +16,8 @@ include("database.php");
 	// 	'promo'=>'2024',
 	// );
 
-// 	//
-// 	//
+	//
+	//
 
 function number_place($pdo)
 {
@@ -93,9 +93,11 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	<!-- <meta property="og:image" content="https://adr.cs-campus.fr/giganano/img/fb_banner.jpg" /> -->
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/giganano/img/math.png">
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
+	<script type="text/javascript" src="script.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 </head>
 
-<body onload="onLoad()">
+<body onload="onLoad()" id="gradient">
 <div id="sg_link_ctnr">
 		<?php
 		if (!$_SESSION['shotgun']) {

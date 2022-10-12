@@ -173,7 +173,7 @@ a:active {
   margin: auto;
   text-align: center;
   border-radius: 8px;
-  margin-top:34vh;
+  margin-top:28vh;
 }
 
 
@@ -201,13 +201,6 @@ a:active {
   text-transform: uppercase;
   text-decoration: none;
   box-sizing: border-box;
-  color: #DA251D;
-  text-shadow:  0 0 7px #DA251D, 0 0 10px #DA251D;
-  font-family: "DigitalAB";
-  background: black;
-  border: 3px grey solid;
-  border-radius: 12px;
-  padding: 3px;
 }
 .degraMov{
   cursor: not-allowed;
@@ -372,21 +365,6 @@ form {
   text-shadow: var(--green_text_shadow);
 }
 
-.redcard {
-  background: rgba(92, 92, 92, 0.3);
-  font-family: arial;
-  font-weight: bold;
-  width: 60vw;
-  text-align: center;
-  font-size: 60px;
-  color: white;
-  margin: auto;
-  margin-top: 4vw;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: var(--danger_box_shadow);
-  text-shadow: var(--danger_text_shadow);
-}
 
 .submit {
   font-size: 50px;
@@ -602,15 +580,6 @@ screen and (max-width: 800px) {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #DA251D;
-  text-shadow:  0 0 7px #DA251D, 0 0 10px #DA251D;
-  font-family: "DigitalAB";
-  z-index: 0;
-  position: relative;
-  background: black;
-  border: 3px grey solid;
-  border-radius: 12px;
-  padding: 3px;
 }
 #sg_link {
   padding: 0.5rem 2rem;
@@ -618,14 +587,6 @@ screen and (max-width: 800px) {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  box-sizing: border-box;
-  color: #DA251D;
-  text-shadow:  0 0 7px #DA251D, 0 0 10px #DA251D;
-  font-family: "DigitalAB";
-  background: black;
-  border: 3px grey solid;
-  border-radius: 12px;
-  padding: 3px;
 }
 }
 @media screen and (max-height: 400px){
