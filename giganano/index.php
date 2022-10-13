@@ -60,7 +60,7 @@ $_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 $_SESSION["nom"] = $_SESSION["user"]["lastName"];
 $_SESSION["email"] = $_SESSION["user"]["email"];
 if($_SESSION['user']['login']=='2021goulletba'){
-	$_SESSION['promo']='2024';
+	$_SESSION['promo']='2025';
 }
 else{
 $_SESSION['promo']=$_SESSION['user']['promo'];
