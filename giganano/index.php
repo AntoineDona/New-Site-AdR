@@ -1,22 +1,22 @@
 <?php
 session_start();
 
-include("auth.php"); 
+// include("auth.php"); 
 include("database.php");
 //
-	//
-	// $_SESSION["isConnected"] = true;
-	// $_SESSION["is_cotisant"]=true;
-	// $_SESSION['shotgun']=true;
-	// $_SESSION['login']='2021goulletba';
-	// $_SESSION["user"]=array(
-	// 	'firstName'=>'Bastien',
-	// 	'lastName'=>'de Rugy',
-	// 	'email'=>'bastien.goullet-de-rugy@student-cs.fr',
-	// 	'promo'=>'2024',
-	// );
+	
+	$_SESSION["isConnected"] = true;
+	$_SESSION["is_cotisant"]=true;
+	$_SESSION['shotgun']=false;
+	$_SESSION['login']='2021goulletba';
+	$_SESSION["user"]=array(
+		'firstName'=>'Bastien',
+		'lastName'=>'de Rugy',
+		'email'=>'bastien.goullet-de-rugy@student-cs.fr',
+		'promo'=>'2024',
+	);
 
-	//
+	
 	//
 
 function number_place($pdo)
@@ -55,13 +55,19 @@ function is_cotisant($email, $pdo)
 	}
 }
 
-$_SESSION["prenom"] = $_SESSION["user"]["firstName"];
-$_SESSION["nom"] = $_SESSION["user"]["lastName"];
-$_SESSION["email"] = $_SESSION["user"]["email"];
+// $_SESSION["prenom"] = $_SESSION["user"]["firstName"];
+// $_SESSION["nom"] = $_SESSION["user"]["lastName"];
+// $_SESSION["email"] = $_SESSION["user"]["email"];
+// if($_SESSION['user']['login']=='2021goulletba'){
+// 	$_SESSION['promo']='2024';
+// }
+// else{
+// $_SESSION['promo']=$_SESSION['user']['promo'];
+// }
 
 $_SESSION['total_places'] = 700;
-$_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
-$_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
+// $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
+// $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
 if ($_SESSION["email"] == '???') {
 	header("Location: /giganano/troll.php");
