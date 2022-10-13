@@ -10,6 +10,7 @@ include("database.php");
 	$_SESSION['shotgun']=false;
 	$_SESSION['login']='2021goulletba';
 	$_SESSION["user"]=array(
+		'login'=>'2021goulletba',
 		'firstName'=>'Bastien',
 		'lastName'=>'de Rugy',
 		'email'=>'bastien.goullet-de-rugy@student-cs.fr',
