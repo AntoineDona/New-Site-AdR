@@ -1,21 +1,21 @@
 <?php
 session_start();
 
-// include("auth.php"); 
+include("auth.php"); 
 include("database.php");
 //
 	
-	$_SESSION["isConnected"] = true;
+	// $_SESSION["isConnected"] = true;
 	// $_SESSION["is_cotisant"]=true;
 	// $_SESSION['shotgun']=false;
-	$_SESSION['login']='2021goulletba';
-	$_SESSION["user"]=array(
-		'login'=>'2021goulletba',
-		'firstName'=>'Bastien',
-		'lastName'=>'de Rugy',
-		'email'=>'bastien.goullet-de-rugy@student-cs.fr',
-		'promo'=>'2024',
-	);
+	// $_SESSION['login']='2021goulletba';
+	// $_SESSION["user"]=array(
+	// 	'login'=>'2021goulletba',
+	// 	'firstName'=>'Bastien',
+	// 	'lastName'=>'de Rugy',
+	// 	'email'=>'bastien.goullet-de-rugy@student-cs.fr',
+	// 	'promo'=>'2024',
+	// );
 
 	
 	//
@@ -66,7 +66,7 @@ else{
 $_SESSION['promo']=$_SESSION['user']['promo'];
 }
 
-$_SESSION['total_places'] = 450;
+$_SESSION['total_places'] = 200;
 $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
 $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
