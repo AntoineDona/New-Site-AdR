@@ -162,13 +162,13 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	<?php
 	if (!$_SESSION['shotgun']) {
 		if (!$_SESSION["is_cotisant"]) {
-			echo "<p >ATTENTION !! <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
+			echo "<p id='danger_msg_ctnr'>ATTENTION !! <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
 		} else {
 			if(intval($_SESSION['promo'])==2025){
-				echo "<p > Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant (et 1A), tu vas pouvoir Shotgun! </p>";
+				echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant (et 1A), tu vas pouvoir Shotgun! </p>";
 			}
 			else{
-				echo "<p> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir shotgun.</p>";
+				echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir shotgun.</p>";
 			}
 			// echo "<br><p>".$_SESSION['test']."</p>";
 		}
