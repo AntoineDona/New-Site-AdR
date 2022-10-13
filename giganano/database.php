@@ -2,7 +2,7 @@
 
 $DBhost  = "localhost";
 $DBowner = "root";
-$DBpw    = $_ENV["db_password"];
+$DBpw    = "AdRSousChibre";
 $DBName  = "adr";
 $DBconnect = "mysql:dbname=".$DBName.";host=".$DBhost;
 

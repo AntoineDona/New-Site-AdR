@@ -1,5 +1,5 @@
 <?php session_start();
-include("auth.php"); //on check qu'il soit bien connecté (sinon chibrage avec les variables de session)
+// include("auth.php"); //on check qu'il soit bien connecté (sinon chibrage avec les variables de session)
 include('database.php') ?>
 
 <!DOCTYPE html>
@@ -53,7 +53,7 @@ include('database.php') ?>
 	date_default_timezone_set('Europe/Paris');
 	$current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
-	$shotgun_date = mktime(12, 59, 59, 10, 17, 2022);
+	$shotgun_date = mktime(12, 59, 59, 10, 13, 2022);
 	$shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
 	$end_date = mktime(03, 00, 0, 10, 19, 2022);
