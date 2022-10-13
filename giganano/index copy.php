@@ -1,21 +1,21 @@
 <?php
 session_start();
 
-// include("auth.php"); 
+include("auth.php"); 
 include("database.php");
 //
 	
-	$_SESSION["isConnected"] = true;
+	// $_SESSION["isConnected"] = true;
 	// $_SESSION["is_cotisant"]=true;
 	// $_SESSION['shotgun']=false;
-	$_SESSION['login']='2021goulletba';
-	$_SESSION["user"]=array(
-		'login'=>'2021goulletba',
-		'firstName'=>'Bastien',
-		'lastName'=>'de Rugy',
-		'email'=>'bastien.goullet-de-rugy@student-cs.fr',
-		'promo'=>'2024',
-	);
+	// $_SESSION['login']='2021goulletba';
+	// $_SESSION["user"]=array(
+	// 	'login'=>'2021goulletba',
+	// 	'firstName'=>'Bastien',
+	// 	'lastName'=>'de Rugy',
+	// 	'email'=>'bastien.goullet-de-rugy@student-cs.fr',
+	// 	'promo'=>'2024',
+	// );
 
 	
 	//
@@ -72,11 +72,6 @@ $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
 
 
-// if (isset($_SESSION["preshotgun"]) && $_SESSION["preshotgun"]) {
-// 	// Si dans la liste de préshotgun -> shotgun direct, en vrai pas super utile...
-// 	$url = "https://adr.cs-campus.fr/giganano/action.php";
-// 	header("Location: ".$url);
-//   }
 
 if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	if ($_SESSION["isConnected"]) {
