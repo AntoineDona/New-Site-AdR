@@ -6,8 +6,8 @@ include("database.php");
 //
 	
 	$_SESSION["isConnected"] = true;
-	$_SESSION["is_cotisant"]=true;
-	$_SESSION['shotgun']=false;
+	// $_SESSION["is_cotisant"]=true;
+	// $_SESSION['shotgun']=false;
 	$_SESSION['login']='2021goulletba';
 	$_SESSION["user"]=array(
 		'login'=>'2021goulletba',
@@ -67,8 +67,8 @@ $_SESSION['promo']=$_SESSION['user']['promo'];
 }
 
 $_SESSION['total_places'] = 700;
-// $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
-// $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
+$_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
+$_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
 
 
@@ -136,7 +136,6 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 			<p class="chiffre">00</p>
 			<p class="text">secondes</p>
 		</div>
-		<!-- <img src="img/soclePanneau.png" alt="teneur de panneau" id="panneau"> -->
 	</div>
 	
 
