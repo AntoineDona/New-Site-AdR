@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// include("auth.php"); 
+include("auth.php"); 
 include("database.php");
 //
 	//

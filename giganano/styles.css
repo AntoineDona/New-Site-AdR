@@ -533,6 +533,13 @@ screen and (max-width: 800px) {
     margin-top: 75px;
   }
 
+  #titreGiga #titreGiga1{
+    font-size: 5rem;
+  }
+  #titreGiga #titreGiga2{
+    font-size: 20rem;   
+  }
+
   /* Responsive soldout */
 
   .soldout_ctnr {
