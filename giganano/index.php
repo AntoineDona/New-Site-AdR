@@ -82,7 +82,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	if ($_SESSION["isConnected"]) {
 		header("Location: /giganano/fini.php");
 	} else {
-		// header("Location: /giganano/connexion.php");
+		header("Location: /giganano/connexion.php");
 	}
 }
 
