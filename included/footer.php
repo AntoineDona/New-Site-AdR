@@ -45,7 +45,7 @@
                 </li>
             </ul>
         </nav>
-        <p>&copy;2020 disigned with ❤️🖤 By <a href="https://www.instagram.com/antoine.doo/" target="_blank">Antoine Do</a> 
+        <p>&copy;2020 designed with ❤️🖤 By <a href="https://www.instagram.com/antoine.doo/" target="_blank">Antoine Do</a> 
         <!-- <span>in</span> <a href="https://goo.gl/maps/BUUanjo1udNpVJdK6" target="_blank"> Gif-sur-Yvette</a> -->
     </p>
     </div>
