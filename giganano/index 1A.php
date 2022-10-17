@@ -66,12 +66,17 @@ else{
 $_SESSION['promo']=$_SESSION['user']['promo'];
 }
 
-$_SESSION['total_places'] = 450;
+$_SESSION['total_places'] = 200;
 $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
 $_SESSION["is_cotisant"] = is_cotisant($_SESSION["email"], $pdo);
 
 
 
+// if (isset($_SESSION["preshotgun"]) && $_SESSION["preshotgun"]) {
+// 	// Si dans la liste de préshotgun -> shotgun direct, en vrai pas super utile...
+// 	$url = "https://adr.cs-campus.fr/giganano/action.php";
+// 	header("Location: ".$url);
+//   }
 
 if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	if ($_SESSION["isConnected"]) {
@@ -134,22 +139,6 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	</div>
 	
 
-	<?php
-	
-	if (!$_SESSION['shotgun']) {
-		if (!$_SESSION["is_cotisant"]) {
-			echo "<p id='danger_msg_ctnr'><span style='color:red;'>ATTENTION !!</span> <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
-		} else {
-			echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir Shotgun! </p>";
-		}
-	} else {
-		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place pour le GIGANANO. </p>";
-	}
-	if (!$_SESSION['shotgun']) {
-			echo '<p id="footer">Pas besoin de recharger la page au moment du shotgun!</p>';
-			
-		} 
-	?>
 
 	<?php include("script.php"); 
 	if (!$_SESSION["is_cotisant"] && isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "action.php") {
@@ -169,7 +158,26 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 			}
 		}
 	</script>
-
+	<div id="message">
+	<?php
+	if (!$_SESSION['shotgun']) {
+		if (!$_SESSION["is_cotisant"]) {
+			echo "<p id='danger_msg_ctnr'>ATTENTION !! <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p>";
+		} else {
+			if(intval($_SESSION['promo'])==2025){
+				echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant (et 1A), tu vas pouvoir Shotgun! </p>";
+			}
+			else{
+				echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . "! <br> Tu es bien cotisant, tu vas pouvoir shotgun.</p>";
+			}
+			// echo "<br><p>".$_SESSION['test']."</p>";
+		}
+	}
+	else {
+		echo "<p> Bravo " . $_SESSION["prenom"] . "! <br> Tu as réussi à shotgun ta place au GIGANANO. </p>";
+	}
+	?>
+	</div>
 </body>
 
 </html>
