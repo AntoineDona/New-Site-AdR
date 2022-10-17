@@ -65,7 +65,7 @@ include('database.php') ?>
 		} else {
 			if (!$_SESSION['shotgun']) {
 				if (number_place($pdo) < $_SESSION['total_places']) {
-					$query = $pdo->prepare("INSERT into giganano (prenom,nom, email, heure) VALUES (?,?,?,?,?)");
+					$query = $pdo->prepare("INSERT into giganano (prenom,nom, email, heure, promo) VALUES (?,?,?,?,?)");
 					$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time'],$_SESSION['promo']));
 					$_SESSION['shotgun'] = true;
 					header("refresh:5; url=/giganano/index.php");
