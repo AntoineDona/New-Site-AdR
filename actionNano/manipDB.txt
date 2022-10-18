@@ -1,6 +1,6 @@
 Pour compter les doublons dans une DB
 
-SELECT COUNT(*) AS nbr_doublon, nom 
+SELECT COUNT(*) AS nbr_doublon, nom, 
 FROM papybang 
 GROUP BY nom 
 HAVING COUNT(*) > 1
