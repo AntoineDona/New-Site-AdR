@@ -19,7 +19,7 @@ $scanStatement->execute([
     'id'=>$id,
 ]) or die(print_r($pdo->errorInfo()));
 
-$sqlQuery2='SELECT COUNT(*) FROM '.$_COOKIE['nomNano'].' WHERE entree=0';
+$sqlQuery2='SELECT COUNT(*) FROM '.$_COOKIE['nomNano'].' WHERE entree=NULL';
 $noScannedStatement=$pdo->prepare($sqlQuery2);
 $noScannedStatement->execute();
 $noScanned = $noScannedStatement->fetchAll();
