@@ -56,7 +56,7 @@ include('database.php') ?>
 	$shotgun_date = mktime("0013", "0014", "0059", "0011", "0008", "2022");
 	$shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
-	$end_date = mktime(03, 00, 0, 11, 10, 2022);
+	$end_date = mktime("0003", "0000", "0000", "0011", "0010", "2022");
 	$end_date_sec = (((date('d', $end_date) - 1) * 24 + date('H', $end_date)) * 60 + date('i', $end_date)) * 60 + date('s', $end_date);
 	if ($current_date_sec >= $shotgun_date_sec) {
 		if ($_SESSION["is_cotisant"] == false) {
