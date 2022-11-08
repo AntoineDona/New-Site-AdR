@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<title>NAN'HORREUR</title>
+	<meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
+	<!-- <meta property="og:image" content="https://adr.cs-campus.fr/nanhorreur/img/fb_banner.jpg" /> -->
+	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/nanhorreur/img/iconPumpk.png">
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+
+<body onload="onLoad()">
+<!-- <div id="sg_link_ctnr">
+    
+    
+</div> -->
+<div id="titreNanhorreur">NAN'HORREUR</div>
+<div id="sg_link_ctnr" class="link_ctnr" href="#">
+        <!-- <div id="depaps" ><a class="link degraMov"  href=# onClick="verif();">DEPAPS</a></div><br> -->
+        <a id="sg_link" class="degraMov link" href="action.php" >SHOTGUN</a>
+	</div>
+    <!-- <div id="qrLink"><a  href="/nanhorreur/QRgenerator.php" >Voir mon QR code</a></div>  -->
+	<div id="titre_sg"></div>
+	<div id="counter">
+		<!-- <div class="digit_holder months" id="mois">
+			<p class="chiffre">00</p>
+			<p class="text">mois(s)</p>
+		</div> -->
+		<div class="digit_holder days" id="jours">
+			<p class="chiffre">00</p>
+			<p class="text">jours</p>
+		</div>
+		<div class="digit_holder hours" id="heures">
+			<p class="chiffre">00</p>
+			<p class="text">heures</p>
+		</div>
+		<div class="digit_holder minutes" id="minutes">
+			<p class="chiffre">00</p>
+			<p class="text">minutes</p>
+		</div>
+		<div class="digit_holder seconds" id="secondes">
+			<p class="chiffre">00</p>
+			<p class="text">secondes</p>
+		</div>
+		<!-- <img src="img/soclePanneau.png" alt="teneur de panneau" id="panneau"> -->
+	</div>
+	
+
+	<!-- <p id='danger_msg_ctnr'><span style='color:red;'>ATTENTION !!</span> <br/> Tu n'est pas cotisant, tu NE POURRAS PAS SHOTGUN!!</p> -->
+	<p id='ok_msg_ctnr'> Salut Bastien! <br> Tu es bien cotisant, tu vas pouvoir Shotgun! </p>
+	<!-- <p id='ok_msg_ctnr'> Bravo Bastien! <br> Tu as réussi à shotgun ta place pour le NAN'HORREUR. </p> -->
+	
+	<p id="footer">Pas besoin de recharger la page au moment du shotgun!</p>
+		
+
+
+	<script type="text/javascript">
+		function shotgun() {
+			window.location = 'action.php';
+		}
+
+		function verif() {
+			if (confirm("ATTENTION: En cliquant sur OK, tu annules ta place et la remets en jeu.")) {
+				window.location = 'action.php';
+			}
+		}
+	</script>
+
+</body>
+
+</html>

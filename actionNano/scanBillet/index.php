@@ -4,7 +4,7 @@
 session_start();
 setcookie(
   'nomNano',
-  'giganano',
+  'nanhorreur',
   time() + 24*3600
 );
 
