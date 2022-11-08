@@ -1,20 +1,20 @@
 <?php
 session_start();
 
-// include("auth.php"); 
+include("auth.php"); 
 include("database.php");
 //  //
 // 	//
-	$_SESSION["isConnected"] = true;
-	// $_SESSION["is_cotisant"]=true;
-	// $_SESSION['shotgun']=true;
-	$_SESSION['login']='2021goulletba';
-	$_SESSION["user"]=array(
-		'firstName'=>'Bastien',
-		'lastName'=>'de Rugy',
-		'email'=>'bastien.goullet-de-rugy@student-cs.fr',
-		'promo'=>'2024',
-	);
+	// $_SESSION["isConnected"] = true;
+	// // $_SESSION["is_cotisant"]=true;
+	// // $_SESSION['shotgun']=true;
+	// $_SESSION['login']='2021goulletba';
+	// $_SESSION["user"]=array(
+	// 	'firstName'=>'Bastien',
+	// 	'lastName'=>'de Rugy',
+	// 	'email'=>'bastien.goullet-de-rugy@student-cs.fr',
+	// 	'promo'=>'2024',
+	// );
 
 // 	//
 // 	//
