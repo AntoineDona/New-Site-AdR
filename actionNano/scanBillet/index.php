@@ -7,6 +7,8 @@ setcookie(
   'nanhorreur',
   time() + 24*3600
 );
+$_SESSION['number']=950; // utile pour générer les QR code d'invité sur la page billetGenerator.php
+
 
 ?>
 

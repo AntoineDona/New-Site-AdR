@@ -11,8 +11,6 @@ DELETE t1
 FROM papybang AS t1, papybang AS t2
 WHERE t1.id > t2.id
 AND t1.email = t2.email
-AND t1.column2 = t2.column2
-AND t1.column3 = t2.column3
 
 Afficher que les premières lignes d'une DB
 
