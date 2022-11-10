@@ -32,7 +32,7 @@ $scanned = $scannedStatement->fetchAll();
         <div class="form_field">
             <?php
             $password=$_POST['password'];
-            if($password='secret'){
+            if($password=='secret'){
                 $_SESSION['error']=false;
                 header('Location: billetGenerator.php');
             }
