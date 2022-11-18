@@ -12,11 +12,11 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15vh;
+    margin-top: 8vh;
 
 }
 #content img{
-    height: 45vh;
+    height: 40vh;
 }
 
 
@@ -35,13 +35,17 @@ body{
     font-family: 'IBM Plex Sans JP','Oswald', sans-serif;
   }
   .digit_holder {
-    margin: 0 1rem;
     width: 11rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+  .chiffre {
+    font-size: 3rem;
+    margin: 0;
+  }
+
 #sgLink{
     margin-top: 3vh;
     border: solid 2px #FBE4EA;

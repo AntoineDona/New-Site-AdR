@@ -79,8 +79,8 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	<meta property="og:image" content="https://adr.cs-campus.fr/nanovni/img/fb_banner.jpg" />
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/nanovni/img/ufo.png">
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
-</head>
 
+</head>
 <body onload="onLoad()">
 	<div class="planet-wrapper">
 		<div class="planet">
