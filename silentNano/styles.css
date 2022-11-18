@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap');
 body{
     margin: 0;
     padding: 0;
@@ -16,17 +18,36 @@ body{
 #content img{
     height: 45vh;
 }
-#title{
-    font-size: 2.7rem;
-}
+
+
+#counter {
+    /* délimite le compteur: nécessaire pour la forme logo olympics en relative */
+    width: 300px;
+    max-width: 80vw;
+    margin: auto;
+    margin-top:6vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#FBE4EA;
+    z-index: 0;
+    position: relative;
+    font-family: 'IBM Plex Sans JP','Oswald', sans-serif;
+  }
+  .digit_holder {
+    margin: 0 1rem;
+    width: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 #sgLink{
-    margin-top: 8vh;
+    margin-top: 3vh;
     border: solid 2px #FBE4EA;
     padding:8px 15px;
     border-radius: 12px;
 }
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap');
 
 #sgLink a{
     text-decoration: none;
