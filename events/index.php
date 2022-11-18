@@ -20,6 +20,25 @@
 
                 <div class="description_event">
                     <div >
+                        <img src="img/casque.png" alt="muscle"><h2>SILENT NANO</h2><img src="img/casque.png" alt="muscle">
+                    </div>
+                        <p>
+                        Et si vous viviez un nano pas comme les autres ? Une expérience unique où vous ne dansez pas sur la même piste que les autres et pourtant ne vous êtes jamais autant amusé.e.s ?
+                        Bienvenu.e.s au Silent Nano 🎧, la soirée de clôture d’Apartés le vendredi 25 novembre de 23h à 3h en sd.001 organisée en partenariat avec l'AdR ! Pour 5€ la place vous aurez accès à trois consos gratuites et un open bouffe cuisiné par le PAPS 😋 ! La soirée est réservée aux cotisant.e.s AdR et/ou BdA.
+                            <br>Le lien su shotgun est <a href="https://adr.cs-campus.fr/silentNano">ici</a>
+                        </p>
+                </div>
+                <div class="description_event">
+                    <div >
+                        <img src="img/iconPumpk.png" alt="muscle"><h2>NAN'HORREUR</h2><img src="img/iconPumpk.png" alt="muscle">
+                    </div>
+                        <p>
+                        Quoi de mieux que de reprendre les festivités dès la rentrée?🎃 Pour cela, l'AdR vous invite au Nan'Horreur le jeudi 10 Novembre de 23h à 3h pour une soirée des plus endiablées.😈 Nous vous attendons chauds pour enflammer le dancefloor, sous les spots de @sonobarco_sbcs !🔥
+                            <br>Le lien su shotgun est <a href="https://adr.cs-campus.fr/nanhorreur/connexion.php">ici</a>
+                        </p>
+                </div>
+                <div class="description_event">
+                    <div >
                         <img src="img/math.png" alt="muscle"><h2>GIGANANO</h2><img src="img/math.png" alt="muscle">
                     </div>
                         <p>
