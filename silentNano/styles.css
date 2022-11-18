@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('img/background.jpeg');
+    background-size: 100%;
+    height: 100%;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15vh;
+
+}
+#content img{
+    height: 45vh;
+}
+#title{
+    font-size: 2.7rem;
+}
+#sgLink{
+    margin-top: 8vh;
+    border: solid 2px #FBE4EA;
+    padding:8px 15px;
+    border-radius: 12px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap');
+
+#sgLink a{
+    text-decoration: none;
+    color:#FBE4EA ;
+    font-family: 'IBM Plex Sans JP','Oswald', sans-serif;
+}
+
+@media screen and (orientation: portrait),
+screen and (max-width: 800px) {
+  body {
+    background: url("img/backgroundTel.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    overflow: hidden;
+  }
+}
