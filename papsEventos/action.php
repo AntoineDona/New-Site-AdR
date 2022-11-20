@@ -35,7 +35,7 @@ include('database.php') ?>
 	}
 
 	$_SESSION['sg_time'] = date("Y-m-d H:i:s");
-	$_SESSION['total_places'] = 5;
+	$_SESSION['total_places'] = 12;
 
 	date_default_timezone_set('Europe/Paris');
 	$current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');

@@ -47,7 +47,7 @@ $_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 $_SESSION["nom"] = $_SESSION["user"]["lastName"];
 $_SESSION["email"] = $_SESSION["user"]["email"];
 
-$_SESSION['total_places'] = 5;
+$_SESSION['total_places'] = 12;
 $_SESSION['dateEvent']=' Mercredi 11 Mai de 21h à 00h';
 $_SESSION['shotgun'] = has__already_shotgun($_SESSION["email"], $pdo);
 
