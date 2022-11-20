@@ -23,8 +23,8 @@
 	function timer() {
 		var date = new Date();
 		// console.log(date);
-		var date_shotgun = new Date(2022, 04, 10, 12, 00, 00);
-		var date_soiree = new Date(2022, 04, 11, 20, 00);
+		var date_shotgun = new Date(2022, 10, 21, 13, 00, 00);
+		var date_soiree = new Date(2022, 10, 22, 21, 00, 00);
 		var title = "Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
 		var has_shotgun = <?php echo json_encode(isset($_SESSION['shotgun']))?> && <?php echo json_encode($_SESSION['shotgun']) ?>;
