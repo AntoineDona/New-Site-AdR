@@ -128,7 +128,7 @@ button {
   overflow: hidden;
   overflow-y: visible;
   scroll-behavior: smooth;
-  height: 500vh;
+  height: 580vh;
   width: 100vw;
   /* perspective: 800px; */
   /* transform-style: preserve-3d; */
@@ -764,6 +764,9 @@ p.infos_billetterie {
   .trailer_ctnr{
     width: 70%;
     margin-top: 3rem;
+  }
+  .parallax_group {
+    height: 580vh;
   }
 
 }
