@@ -192,6 +192,14 @@ button {
       clip-path: inset(60% 0 39% 0);
   }
 }
+@keyframes slidein5 {
+  0%   { 
+    clip-path: inset(85% 0 14% 0);
+}
+100% { 
+    clip-path: inset(-1% 0 100% 0);
+}
+}
 
 #first-clip{
   position:absolute;
@@ -202,20 +210,26 @@ button {
 #second-clip{
   position:absolute;
   z-index: -8;
-  left: 20px;
+  left: 10px;
   animation: 7s ease-in 1s infinite slidein2;
 }
 #third-clip{
   position:absolute;
   z-index: -7;
-  left: 20px;
+  left: 10px;
   animation: 6s ease 1s infinite slidein3;
 }
 #fourth-clip{
   position:absolute;
   z-index: -6;
-  left: 20px;
+  left: 10px;
   animation: 10s ease 1s infinite slidein4;
+}
+#fifth-clip{
+  position:absolute;
+  z-index: -5;
+  left: 10px;
+  animation: 10s ease 1s infinite slidein5;
 }
 
 /* Contenu ------------------------------------------------------------------------ */
