@@ -12,12 +12,23 @@
     <?php include "../included/header.php" ?>
     <main>
         <section class="events">
-            <!-- <a href="https://www.cyberpunk.net/fr/fr/" target="_blank">
-                <img src="../images/lien_de_resa.png" alt="resa" id="lien_resa">
-            </a> -->
+
             <div class="container">
                 <h1 class="headline"> Nos Events</h1>
 
+                <div class="description_event">
+                    <div >
+                        <img src="img/panobar.png" alt="muscle"><h2>SILENT NANO</h2><img src="img/panobar.png" alt="muscle">
+                    </div>
+                        <p>
+                        Pour entamer les fêtes de fin d'année et conclure le mandat en beauté, l'AdR CS vous prépare le ❄️Last One PanoBang❄️ qui aura lieu le vendredi 16 décembre de 23h à 5h à CentraleSupélec.
+                        Nous vous préparons une soirée incontournable, alors venez festoyer devant 2 scènes éblouissantes montées par SBCS, l'asso de Sono et Barco de CS.💥
+
+                        💿 [ARTISTE]
+                        En guise de surprise, nous avons spécialement invité un célèbre artiste Techno pour vous satelliser toute la nuit : JAESS🚀.
+                            <br>Le lien su shotgun est <a href="https://adr.cs-campus.fr/panobang/">ici</a>
+                        </p>
+                </div>
                 <div class="description_event">
                     <div >
                         <img src="img/casque.png" alt="muscle"><h2>SILENT NANO</h2><img src="img/casque.png" alt="muscle">
