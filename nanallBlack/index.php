@@ -4,7 +4,7 @@ session_start();
 include("auth.php"); 
 include("database.php");
 // //
-// 	//
+	// //
 	// $_SESSION["isConnected"] = true;
 	// $_SESSION["is_cotisant"]=true;
 	// // $_SESSION['shotgun']=true;
@@ -16,7 +16,7 @@ include("database.php");
 	// 	'promo'=>'2024',
 	// );
 
-// 	//
+	// //
 // 	//
 
 function number_place($pdo)
