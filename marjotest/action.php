@@ -68,9 +68,9 @@ include('database.php') ?>
 					$query = $pdo->prepare("INSERT into astronano (prenom,nom, email, heure) VALUES (?,?,?,?)");
 					$query->execute(array($_SESSION["prenom"], $_SESSION["nom"], $_SESSION["email"], $_SESSION['sg_time']));
 					$_SESSION['shotgun'] = true;
-					header("refresh:5; url=/index.php");
+					header("refresh:5; url=/marjotest/index.php");
 				} else {
-					header("refresh:5; url=/fini.php");
+					header("refresh:5; url=/marjotest/fini.php");
 				}
 			} else {
 				depaps($_SESSION["email"], $pdo);
