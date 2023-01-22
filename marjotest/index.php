@@ -104,7 +104,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		} 
 		else {
 			echo '<div id="depaps" ><a id="sg_link" class="degraMov link"  href=# onClick="verif();">DEPAPS</a></div></div>';
-			echo '<div id="qrLink"><a  href="/QRgenerator.php" >Voir mon QR code</a></div>';
+			echo '<div id="qrLink"><a  href="/marjotest/QRgenerator.php" >Voir mon QR code</a></div>';
 		}
 		?>
 	<div id="titre_sg"></div>

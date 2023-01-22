@@ -72,7 +72,7 @@ function decodeId($id){
         <div>Il faut remplir ce formulaire de sensibilisation contre les VSS en soirée pour obtenir son QR code :</div>  <div><a href="formCheck.php">le formulaire</a></div>
     <?php endif;?>
         <?php echo '<p>'.$_SESSION['prenom'].' '.$_SESSION['nom'];'</p>'?> 
-        <div><a href="/index.php">Revenir à la page d'avant</a></div>
+        <div><a href="/marjotest/index.php">Revenir à la page d'avant</a></div>
     </div>
 
 </body>
