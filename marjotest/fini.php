@@ -8,7 +8,7 @@ include("database.php");
 
 <head>
 	<title>ASTRONANO</title>
-	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/img/icon.png">
+	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/marjotest/img/icon.png">
 	<link rel="stylesheet" href="styles.css">
 </head>
 
