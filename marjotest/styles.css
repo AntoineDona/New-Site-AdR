@@ -57,6 +57,11 @@ body {
   font-family: "BrandonGrotesque";
   overflow-x: hidden;
   font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
 }
 
 a {
@@ -482,7 +487,6 @@ screen and (max-width: 800px) {
     background-repeat: no-repeat;
     background-color: black;
     overflow: hidden;
-    align-items: center;
   }
 
   #titre_sg {
