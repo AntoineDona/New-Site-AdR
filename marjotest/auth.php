@@ -7,7 +7,7 @@ $dotenv->load();
 if (!isset($_SESSION["isConnected"]) || !$_SESSION["isConnected"]) // Si isConnected pas défini ou faux
     
 {
-    header("Location: /connexion.php"); //On redirige vers la page de connexion
+    header("Location: /marjotest/connexion.php"); //On redirige vers la page de connexion
 	$_SESSION["isConnected"] = false; //On set isConnected à False (pour le cas ou pas défini)
 	if (isset($_GET["code"]) && isset($_GET["state"])) {
 	    if (strcmp($_SESSION["state"], $_GET["state"]) == 0) { //si le Get est égal la variable de session, 
