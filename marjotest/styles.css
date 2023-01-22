@@ -481,6 +481,7 @@ screen and (max-width: 800px) {
     background-repeat: no-repeat;
     background-color: black;
     overflow: hidden;
+    align-items: center;
   }
 
   #titre_sg {
