@@ -188,6 +188,11 @@ a:active {
   /* à remettre si il n'y a pas de titre */
 }
 
+#remonter {
+  position: relative;
+  top : -8vw;
+}
+
 
 #sg_link {
   text-transform: uppercase;

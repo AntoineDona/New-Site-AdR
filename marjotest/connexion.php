@@ -31,6 +31,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 		echo "<script>alert(\"Tu as bien été déconnecté \")</script>";
 	}
 	?>
+	<div id="remonter">
 	<div id="titre_sg" style='margin-top: 50vh;' >Le shotgun commence dans:</div>
 	<div id="counter">
 		<!-- <div class="digit_holder months" id="mois">
@@ -63,6 +64,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 		?> -->
 	<div class="link_ctnr" href="#">
 		<a class="link" href='redirect.php?redirect=https://adr.cs-campus.fr/marjotest'>Se connecter</a>
+	</div>
 	</div>
 	<?php include("script.php"); ?>
 </body>
