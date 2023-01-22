@@ -214,7 +214,8 @@ right: 0;
 
 #qrLink{
   margin-top: 65px;
-  font-size: 5rem;
+  font-size: 2rem;
+  text-decoration: underline;
 }
 
 
@@ -544,6 +545,8 @@ right: 0;
   }
   #qrLink{
     margin-top: 75px;
+    font-size: 3rem;
+    text-decoration: underline;
   }
 
   /* Responsive soldout */
@@ -624,6 +627,7 @@ right: 0;
   }
   #qrLink{
     margin-top: 80px;
+    text-decoration: underline;
   }
 
 }
