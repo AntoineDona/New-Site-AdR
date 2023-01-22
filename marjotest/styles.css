@@ -84,7 +84,7 @@ a:active {
   max-width: 90vw;
   margin: auto;
   margin-bottom: 1rem;
-  margin-top:10vh;
+  margin-top:5vh;
   overflow: visible;
   font-size: 2rem;
   color: var(--light_green);
@@ -494,7 +494,7 @@ screen and (max-width: 800px) {
     margin-bottom: 4rem;
     font-size: 6rem;
     border-radius: 1rem;
-    margin-top: 12vh;
+    margin-top: 6vh;
   }
   
 
