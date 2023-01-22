@@ -31,6 +31,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 		echo "<script>alert(\"Tu as bien été déconnecté \")</script>";
 	}
 	?>
+<div id="sg_link_ctnr">
 	<div id="titre_sg" style='margin-top: 50vh;' >Le shotgun commence dans:</div>
 	<div id="counter">
 		<!-- <div class="digit_holder months" id="mois">
@@ -54,6 +55,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 			<p class="text">secondes</p>
 		</div>
 	</div>
+</div>
 		<!-- <?php
 		if (isset($_SESSION["isConnected"])) {
 			if (!$_SESSION["isConnected"]) {
