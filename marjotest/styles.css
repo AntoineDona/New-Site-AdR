@@ -189,8 +189,12 @@ a:active {
 }
 
 #remonter {
-  position: relative;
-  top : -8vw;
+  position: absolute;
+  bottom: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 
