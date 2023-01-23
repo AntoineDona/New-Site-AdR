@@ -467,7 +467,6 @@ form {
 
 #titreNanhorreur{
   margin-top: 10%;
-  margin-bottom: 20%;
   font-size: 12rem ;
   font-family: "XXIX";
   color: white;
@@ -497,6 +496,10 @@ screen and (max-width: 800px) {
     background-repeat: no-repeat;
     background-color: black;
     overflow: hidden;
+  }
+
+  #titreNanhorreur{
+    margin-bottom: 20%;
   }
 
   #titre_sg {
