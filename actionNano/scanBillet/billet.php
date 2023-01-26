@@ -72,7 +72,7 @@ $users = $pdoStatement->fetchAll();
                     </div>
                 </form>
             <?php else:?>
-                <p class='message'>La place a déjà été scanné.</p>
+                <p class='message'>La place a déjà été scannée.</p>
             <?php endif;?>
         <?php endif;?>
     </div>
