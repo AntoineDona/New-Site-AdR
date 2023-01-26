@@ -31,7 +31,7 @@ $_SESSION['number']=950; // utile pour générer les QR code d'invité sur la pa
         <label for="login__password"><svg class="icon">
             <use xlink:href="#icon-lock"></use>
           </svg><span class="hidden">Password</span></label>
-        <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" <?php if(isset($_COOKIE['is_connected']) and $_COOKIE['is_connected']){echo 'value="1969"'; }?> required>
+        <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" <?php if(isset($_COOKIE['is_connected']) and $_COOKIE['is_connected']){echo 'value="unprezchauve"'; }?> required>
       </div>
 
       <div class="form__field">
