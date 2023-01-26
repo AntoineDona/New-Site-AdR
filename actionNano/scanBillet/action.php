@@ -53,7 +53,7 @@ $scanned = $scannedStatement->fetchAll();
         </div>  
         <div class="message">
             <p>Billets scannés : <?php echo $scanned[0][0] ?></p>
-            <p>Billets non scannés : <?php echo $noScanned[0][0] ?></p>
+            <!-- <p>Billets non scannés : <?php echo $noScanned[0][0] ?></p>! -->
         </div>
     </div>
 </body>
