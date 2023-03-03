@@ -29,7 +29,7 @@ function display_buttons($nbr_annees)
     </script>
     <?php include "../included/header.php" ?>
     <main id="swup" class="transition-fade">
-        <section class="hero adr2k22">
+        <section class="hero adr2k23">
             <div class="container">
             <h1 class="headline">Notre équipe</h1>
                 
@@ -109,7 +109,7 @@ function display_buttons($nbr_annees)
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                     <h2 id="eventos">✨ Les Eventos ✨</strong></h2>
-                    <img class="prez" src="img_poles/eventos.jpg" onclick="window.open(this.src,'_self')">
+                    <img class="prez" src="img_poles/eventos_2k23.jpg" onclick="window.open(this.src,'_self')">
                     <p>
                     Entre events de folie 🕺🏻 et apéros gourmands 🧁, le pôle Eventos est vraiment là pour te régaler ! Que ce soit des expos originales ou des classiques revisités, on vous en met plein la vue 🤩. Donc n’hésitez plus, contactez nous pour réaliser des expos de rêve 💃🏻 !
                     </p>
