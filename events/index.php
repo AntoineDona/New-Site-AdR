@@ -15,18 +15,36 @@
 
             <div class="container">
                 <h1 class="headline"> Nos Events</h1>
+                <div class="description_event">
+                    <div >
+                        <img src="img/toutankhabang.png" alt="œil égyptien"><h2>TOUTÂNKHABANG</h2><img src="img/toutankhabang.png" alt="œil égyptien">
+                    </div>
+                        <p>
+                        Pour le premier Bang de son mandat, l'AdR CS 2023 vous prépare un voyage au temps des pharaons 👳🏾‍♀️ avec le 👁️ToutânkhaBang👁️ qui aura lieu le vendredi 17 mars de 23h à 5h à CentraleSupélec. Devant 2 scènes sensationnelles ⚡️ montées par SBCS, l’asso de Sono et Barco de CS, plongez avec nous dans le mystère des pyramides pour une soirée des plus surprenantes 🐪.
+                            <br>Le lien du shotgun est <a href="https://adr.cs-campus.fr/toutankhabang/">ici</a>.
+                        </p>
+                </div>
+                <div class="description_event">
+                    <div >
+                        <img src="img/astronano.png" alt="planète"><h2>ASTRONANO</h2><img src="img/astronano.png" alt="planète">
+                    </div>
+                        <p>
+                        La tête dans les étoiles ✨ après les partiels ? La nouvelle équipe de l’AdR vous convie jeudi 26 janvier à sa première soirée : L’AstroNano 🪐. Embarquez pour un voyage de l'espace 🚀 en sd.001 de 23h à 3h, en compagnie de SBCS 🔊 !
+Alors on vous attend avec votre ecocup pour une soirée qui s'annonce lunaire... 🌕
+                            <br>Le lien du shotgun est <a href="https://adr.cs-campus.fr/astronano/">ici</a>.
+                            <br>Le lien de l'album Pics : <a href="https://galerie.pics/galerie/astronano">album</a>
+                        </p>
+                </div>
 
                 <div class="description_event">
                     <div >
-                        <img src="img/panobar.png" alt="muscle"><h2>SILENT NANO</h2><img src="img/panobar.png" alt="muscle">
+                        <img src="img/panobar.png" alt="muscle"><h2>LAST ONE PANOBANG</h2><img src="img/panobar.png" alt="muscle">
                     </div>
                         <p>
-                        Pour entamer les fêtes de fin d'année et conclure le mandat en beauté, l'AdR CS vous prépare le ❄️Last One PanoBang❄️ qui aura lieu le vendredi 16 décembre de 23h à 5h à CentraleSupélec.
-                        Nous vous préparons une soirée incontournable, alors venez festoyer devant 2 scènes éblouissantes montées par SBCS, l'asso de Sono et Barco de CS.💥
-
-                        💿 [ARTISTE]
-                        En guise de surprise, nous avons spécialement invité un célèbre artiste Techno pour vous satelliser toute la nuit : JAESS🚀.
-                            <br>Le lien su shotgun est <a href="https://adr.cs-campus.fr/panobang/">ici</a>
+                        Pour entamer les fêtes de fin d'année et conclure son mandat en beauté, l'AdR CS vous prépare le ❄️Last One PanoBang❄️ qui aura lieu le vendredi 16 décembre de 23h à 5h à CentraleSupélec.
+                        Nous vous préparons une soirée incontournable, alors venez festoyer devant 2 scènes éblouissantes montées par SBCS, l'asso de Sono et Barco de CS 💥. En guise de surprise, nous avons spécialement invité un célèbre artiste Techno pour vous satelliser 🚀 toute la nuit : JAESS 💿.
+                            <br>Le lien du shotgun est <a href="https://adr.cs-campus.fr/panobang/">ici</a>.
+                            <br>Le lien de l'album Pics : <a href="https://galerie.pics/galerie/last-one-panobang">album</a>
                         </p>
                 </div>
                 <div class="description_event">
@@ -36,7 +54,8 @@
                         <p>
                         Et si vous viviez un nano pas comme les autres ? Une expérience unique où vous ne dansez pas sur la même piste que les autres et pourtant ne vous êtes jamais autant amusé.e.s ?
                         Bienvenu.e.s au Silent Nano 🎧, la soirée de clôture d’Apartés le vendredi 25 novembre de 23h à 3h en sd.001 organisée en partenariat avec l'AdR ! Pour 5€ la place vous aurez accès à trois consos gratuites et un open bouffe cuisiné par le PAPS 😋 ! La soirée est réservée aux cotisant.e.s AdR et/ou BdA.
-                            <br>Le lien su shotgun est <a href="https://adr.cs-campus.fr/silentNano">ici</a>
+                            <br>Le lien du shotgun est <a href="https://adr.cs-campus.fr/silentNano">ici</a>.
+                            <br>Le lien de l'album Pics : <a href="https://galerie.pics/galerie/silent-nano">album</a>
                         </p>
                 </div>
                 <div class="description_event">
@@ -44,8 +63,8 @@
                         <img src="img/iconPumpk.png" alt="muscle"><h2>NAN'HORREUR</h2><img src="img/iconPumpk.png" alt="muscle">
                     </div>
                         <p>
-                        Quoi de mieux que de reprendre les festivités dès la rentrée?🎃 Pour cela, l'AdR vous invite au Nan'Horreur le jeudi 10 Novembre de 23h à 3h pour une soirée des plus endiablées.😈 Nous vous attendons chauds pour enflammer le dancefloor, sous les spots de @sonobarco_sbcs !🔥
-                            <br>Le lien su shotgun est <a href="https://adr.cs-campus.fr/nanhorreur/connexion.php">ici</a>
+                        Quoi de mieux que de reprendre les festivités dès la rentrée 🎃 ? Pour cela, l'AdR vous invite au Nan'Horreur le jeudi 10 Novembre de 23h à 3h pour une soirée des plus endiablées 😈. Nous vous attendons chauds pour enflammer le dancefloor, sous les spots de SBCS 🔥 !
+                            <br>Le lien du shotgun est <a href="https://adr.cs-campus.fr/nanhorreur">ici</a>.
                         </p>
                 </div>
                 <div class="description_event">
@@ -53,11 +72,12 @@
                         <img src="img/math.png" alt="muscle"><h2>GIGANANO</h2><img src="img/math.png" alt="muscle">
                     </div>
                         <p>
-                            L'AdR présente, ce mardi 18 octobre, le tout premier Nano de l'année : Le GigaNano (aka le 1️⃣, sortez vos calculatrices...) 🥳
+                            L'AdR présente, ce mardi 18 octobre, le tout premier Nano de l'année : Le GigaNano (aka le 1️⃣, sortez vos calculatrices...) 🥳.
                             Venez nous montrer vos capacités cognitives en SD.001 de 23h à 03h 🤖 !
-                            Le Shotgun aura lieu lundi 17 octobre à 13h15.🤫 La soirée est gratuite et réservée aux cotisants AdR.
-                            Le cervo de l'AdR 🍻🍕et le génie de @sonobarco_sbcs 🔊 vous auront organisé de quoi festoyer, tout en préparant assidument vos partiels 😈💃!
-                            <br>Le lien su shotgun est <a href="https://adr.cs-campus.fr/giganano/connexion.php">ici</a>
+                            Le Shotgun aura lieu lundi 17 octobre à 13h15 🤫. La soirée est gratuite et réservée aux cotisants AdR.
+                            Le cervo de l'AdR 🍻🍕et le génie de SBCS 🔊 vous auront organisé de quoi festoyer 💃, tout en préparant assidument vos partiels 😈 !
+                            <br>Le lien du shotgun est <a href="https://adr.cs-campus.fr/giganano">ici</a>.
+                            <br>Le lien de l'album Pics : <a href="https://galerie.pics/galerie/giganano">album</a>
                         </p>
                 </div>
                 <div class="description_event">
@@ -67,16 +87,17 @@
                         <p>
                         Toc Toc Toc... <br>
 
-                        L'AdR CentraleSupélec présente l'édition 2022 du 💥QuadraBang💥, parmi les plus grandes soirées étudiantes de France!🎉
-                        Le QuadraBang, c'est 4 scènes 4 ambiances et des milliers d'étudiants prêts à s’enflammer devant les spots de @sonobarco_sbcs 🔥, l'asso de Sono Barco de CentraleSupélec. <br>
-                        Alors nous vous donnons rendez-vous le vendredi 7 Octobre de 23h à 5h! <br>
+                        L'AdR CentraleSupélec présente l'édition 2022 du 💥QuadraBang💥, parmi les plus grandes soirées étudiantes de France 🎉 !
+                        Le QuadraBang, c'est 4 scènes 4 ambiances et des milliers d'étudiants prêts à s’enflammer devant les spots de SBCS 🔥, l'asso de Sono Barco de CentraleSupélec. <br>
+                        Alors nous vous donnons rendez-vous le vendredi 7 Octobre de 23h à 5h ! <br>
 
-                        L'ouverture de la 🔗billetterie🔗 est prévue le lundi 26 Septembre à 13h et ce fera sur <a href="/quadrabang/">ce lien</a> . <br>
+                        L'ouverture de la 🔗billetterie🔗 est prévue le lundi 26 Septembre à 13h et ce fera sur <a href="/quadrabang/">ce lien</a>. <br>
 
 
-                        Et bien-sûr, abonnez-vous à notre insta pour connaître tout en avant-première !😍 <br>
+                        Et bien-sûr, abonnez-vous à notre insta pour tout savoir en avant-première 😍 ! <br>
 
                         La Quadra-Bise ❤️🖤
+                        <br>Le lien de l'album Pics : <a href="https://galerie.pics/galerie/quadrabang-2022-2023">album</a>
                         </p>
                 </div>
                 <div class="description_event">
@@ -88,7 +109,8 @@
                         Pourtant le meilleur reste à venir !
                         🎆🎇ViaRézo, SBCS et l'AdR s'associent pour la dernière soirée des WW, le Cybernano ! Rejoins nous dans une ambiance futuriste pour la dernière soirée de l’inté ✨!
                         Ce soir, hacke la sono 🔊 pour choisir l'ambiance musicale mixée par SBCS avec l’application CSevents !
-                        </p>
+                        <br>Le lien de l'album Pics : <a href="https://galerie.pics/galerie/cyber-nano">album</a>
+                    </p>
                 </div>
                 <div class="description_event">
                     <div >
@@ -108,6 +130,7 @@
 
                             PS : le TU est à consommer sans modération 💫
                             PPS : TU = Turn Up 💃🕺
+                            <br>Le lien de l'album Pics : <a href="https://galerie.pics/galerie/nano-pain-nano-gain">album</a>
                         </p>
                 </div>
                 <div class="description_event">
@@ -119,7 +142,7 @@
 
                             Comme au Forum et à l'AdR on aime faire les choses en grand, nous avons invité en exclusivité des DJs🎧 venus de loin pour vous régaler (line-up à venir...)
                             Réservez bien votre vendredi 10 juin au soir car la soirée risque d'être mémorable!🎉 Le lien du shotgun est <a href="/tomorrowBang/">ici</a>
-                        <br>Le lien de l'album pics : <a href="https://galerie.pics/galerie/tomorrow-bang">album</a>
+                        <br>Le lien de l'album Pics : <a href="https://galerie.pics/galerie/tomorrow-bang">album</a>
                         </p>
                 </div>
                 <div class="description_event">
@@ -130,7 +153,7 @@
 
                             L'AdR et le C7 s'allient pour vous présenter un nano des plus mythiques, le Nan'All Blacks!🖤
                             C'est ainsi que nous vous convions sous les spots de SBCS🕺 en Bouygues le jeudi 19 mai de 22h à 3h pour vous ambiancer comme jamais en compagnie des joueurs du C7.🎉 Le lien du shotgun est <a href="/nanallBlack/">ici</a>
-                        <br>Le lien de l'album pics : <a href="https://galerie.pics/galerie/nanall-black">album</a>
+                        <br>Le lien de l'album Pics : <a href="https://galerie.pics/galerie/nanall-black">album</a>
                         </p>
                 </div>
                 <div class="description_event">
@@ -138,14 +161,14 @@
                     <p>Hâte des beaux jours ensoleillés?☀️
                     En attendant l'été qui se profile, l'AdR vous invite à Y'a du Soleil et des Nanos, en SD001 le jeudi 21 Avril de 23h à 3h.
                     Rien de mieux pour fêter le retour de la belle saison🌴 (désolé la Wacs🥶) que de festoyer sous les spots d'une magnifique scène SBCS!💃. Le lien du shotgun est <a href="/bronzenano/">ici</a>
-                    <br>Le lien de l'album pics : <a href="https://galerie.pics/galerie/ya-du-soleil-et-des-nanos">album</a>
+                    <br>Le lien de l'album Pics : <a href="https://galerie.pics/galerie/ya-du-soleil-et-des-nanos">album</a>
                     </p>
                 </div>
                 <div class="description_event">
                 <div ><img src="img/cassetteIcon.png" alt="icon ball"><h2>Papy Bang</h2><img src="img/iconBall.png" alt="icon ball"></div>
                     <p>Les vieux AdR 👨‍🦳👵 reviennent ce 1er Avril (no joke) pour vous prouver que c'était mieux Abang ! Afin de montrer qu'ils organisent toujours les meilleures soirées du platal, ils vous convient au PapyBang ce vendredi 1er Avril de 23h à 5h en Bouygues ! 😎
                        ⚠️La soirée est réservée aux cotisants AdR ⚠️. Le lien du shotgun est <a href="/papybang/">ici</a>
-                       <br>Le lien de l'album pics : <a href="https://galerie.pics/galerie/cetait-mieux-abang">album</a>
+                       <br>Le lien de l'album Pics : <a href="https://galerie.pics/galerie/cetait-mieux-abang">album</a>
                     </p>
                 </div>
 
@@ -153,7 +176,7 @@
                 <div ><img src="img/iconBall.png" alt="icon ball"><h2>Wrecking Bang</h2><img src="img/iconBall.png" alt="icon ball"></div>
                     <p>Une envie de vous défouler dès le retour des vacances?😮
                         Alors on vous attend très chauds le 11 Mars de 23h à 5h au Wrecking Bang 🏗️ pour un chantier des plus festifs...🎉. Le lien du shotgun est <a href="/wreckingbang/">ici</a>
-                        <br>Le lien de l'album pics : <a href="https://galerie.pics/galerie/wrecking-bang">album</a>
+                        <br>Le lien de l'album Pics : <a href="https://galerie.pics/galerie/wrecking-bang">album</a>
                     </p>
                 </div>
 
@@ -166,7 +189,7 @@
                     Shotgun pour les cotisants AdR le vendredi 11 Février à 13h.
                     N'oublie pas ton pass sanitaire pour festoyer comme il se doit !💃</br>
                     Le lien du shotgun : <a href="/guantanano/">ici</a>
-                    <br>Le lien de l'album pics : <a href="https://galerie.pics/galerie/guantanano">album</a>
+                    <br>Le lien de l'album Pics : <a href="https://galerie.pics/galerie/guantanano">album</a>
                     </p>
                 </div>
                 
