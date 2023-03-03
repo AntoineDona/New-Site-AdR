@@ -17,7 +17,7 @@ function display_buttons($nbr_annees)
 
 <head>
     <?php include "../included/meta.php" ?>
-    <title>Notre Equipe - AdR CentraleSupélec (AdRCS)</title>
+    <title>L'équipe - AdR CentraleSupélec</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@ function display_buttons($nbr_annees)
     <main id="swup" class="transition-fade">
         <section class="hero adr2k22">
             <div class="container">
-            <h1 class="headline"> Notre équipe </h1>
+            <h1 class="headline">Notre équipe</h1>
                 
             </div>
         </section>
@@ -41,18 +41,17 @@ function display_buttons($nbr_annees)
                 <!-- <h1 class="equipe"><strong>!</strong>! Voici l'AdR 2k21 !<strong>!</strong></h1> -->
 
                 <div class="pole buro">
-                    <h2 id="buro">⚙ Le Buro ⚙ </h2>
-                    <img class="prez" src="img_poles/bureau-2k22.jpg" onclick="window.open(this.src,'_self')">
+                    <h2 id="buro">🍈 Le Buro 🍈</h2>
+                    <img class="prez" src="img_poles/buro_2k23.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                    Le bureau : c’est 4 personnes et tout autant de melons. les chevilles gonflées, ils tirent cette bande de chibrons contre vents et marées. Jamais derrière le bar mais prêts pour la bagarre.
-                    </p>
+                    Sous leurs couronnes de rois 👑 se trouvent les cerveaux de l'association 🧠 : le Buro. Heureusement qu'ils la portent pour que leur melon n’explose pas 🍈.
                 </div>
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
-                    <h2 id="ptitdej">🥐 VP P'tit Dej 🥐</strong></h2>
-                    <img class="prez" src="img_poles/ptit-dej-2k22.jpg" onclick="window.open(this.src,'_self')">
+                    <h2 id="ptitdej">🥐 Le P'tit Déj 🥐</strong></h2>
+                    <img class="prez" src="img_poles/ptit_dej_2k23.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                        Levés dès 7h30, les VP P'tit Dej seront là tous les matins sans faute ni retard pour vous proposer viennoiseries, jus, cafés, cookies, mais surtout leur formule à 2 euros jusqu'à 9h ! 🥐🌛 Venez vous rassasier au son d'une douce musique pour bien commencer votre journée ! 🧸
+                    Entre réveil difficile 🕰️ et croissant chaud 🥐, le P'tit Déj c'est l'occasion de réveiller vos papilles avant les cours ou de boire un bon café ☕️. Lève-tôt ou gros fêtard, passes faire le plein de vitamines pour illuminer le reste de ta journée ! 😉
                     </p>
                 </div>
 
@@ -60,44 +59,41 @@ function display_buttons($nbr_annees)
                 <div class="separator"></div>
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
-                    <h2 id="khafet">🍕 VP Khâfet 🍕</strong></h2>
-                    <img class="prez" src="img_poles/Khafet-2k22.jpg">
+                    <h2 id="khafet">🍕 La Khâfet 🍕</strong></h2>
+                    <img class="prez" src="img_poles/khafet_2k23.jpg">
                     <p>
-                    Bienvenue à la Khafiestaaa !! 🎉 Retrouvez notre équipe toute la semaine de 11h45 à 13h45 pour vous régaler de plats frais 🥗 ou de pizzas chaudes 🍕. Sous grosse playlist 🎶 et chorées improvisées 🕺, la khâfet relève le niveau de votre pause dej. À plus au Musée 💙💛💚💜
+                    Le pôle le plus demandé de l’AdR composé des plus gros kiffeurs. Grosse faim ? Les meilleurs pizzas, paninis et wraps du Musée c’est à la Khâfet, le tout servi en musique 🎵 et avec le smile 🙂. On se voit bientôt à la Khâfiesta ! 🎉
                     </p>
                 </div>
 
                 <div class="separator"></div>
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
-                    <h2 id="khoope">🥪 VP Khoôpé 🥪</strong></h2>
-                    <img class="prez" src="img_poles/khoopé-2k22.jpg" onclick="window.open(this.src,'_self')">
+                    <h2 id="khoope">🥪 La Khoôpé 🥪</strong></h2>
+                    <img class="prez" src="img_poles/khoope_2k23.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                    Tous les pôles se battent entre eux pour savoir lequel est le meilleur... Pourtant, il n'y a qu'un superpôle. Celui qui te sert des cookies bien chaud à 17h🍪, te nourrit jusqu’à 20h30🍕 et t'emmène proche de ton bonheur. Viens donc décompresser et chiller un bon coup à la Khoôpé!
+                    Venez vous amuser comme des singes 🦧 à la Khoôpé ! On y sert des cookies 🍪 tout chauds à 17h pour vous réchauffer les mains et des pizzas 🍕 pour réchauffer votre cœur. Et pour éteindre le feu 🔥, rien de tel qu'une bonne bière 🍻 ! L'ambiance y est délire et nul ne doute que la Khoôpé est le meilleur pôle de tout l’AdR 🖤❤️ !
                     </p>
                 </div>
 
                 <div class="separator"></div>
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
-                    <h2 id="bar">🍺 VP Bar 🍺</strong></h2>
-                    <img class="prez" src="img_poles/bar-2k22.jpg" onclick="window.open(this.src,'_self')">
+                    <h2 id="bar">🍺 Le Bar 🍺</strong></h2>
+                    <img class="prez" src="img_poles/bar_2k23.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                        BAAAAAAAAAAAAAAR 🍺
-                        Une petite faim ? Viens au bar.</br>
-                        Une grande soif ? Viens au bar.</br>
-                        Tu te fais chier ? Viens au bar.</br>
-                        Du lundi au jeudi dès 20h30 🕣
+                    Avant ils habitaient en face du baaaaaaar 🍻, maintenant ils habitent en face de chez eux 🏡. Deviens l'ami du baaaaaaar et régale toi avec nos pizzas 🍕 en les arrosant avec nos bières 🍺 du lundi au jeudi de 20h30 à minuit.
+
                     </p>
                 </div>
 
                 <div class="separator"></div>
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
-                    <h2 id="soiree">💃 VP Soirées et VP CQ 🚚</strong></h2>
-                    <img class="prez" src="img_poles/cq-soirée-2k22.jpg" onclick="window.open(this.src,'_self')">
+                    <h2 id="soiree">🚚 Les CQ/Soirées 💃</strong></h2>
+                    <img class="prez" src="img_poles/cq&soirees_2k23.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                    Rencontrez l'équipe qui organisera toutes vos festivités a échelle de CS ! La team imberbe 🧑‍🦲 à la soirée et la team barbue 🧔 à la CQ sauront vous régaler comme jamais. La première régalera vos meilleurs TU🕺, qui seront assurés et CQrisés 🚧 par les seconds. Entre quadra et nano,  crash et coup de Taser, une équipe de choc : t’as peur.
+                    Besoin de vaubans ou de crashs 🚧, des deux paires d’épaules les plus larges 💪 ou des deux cerveaux les mieux formés de l’AdR 🧠, les VP CQ/Soirées seront là toute l’année pour organiser les meilleures soirées et CQriser vos TU 🔊.
                     </p>
                 </div>
 
@@ -112,11 +108,10 @@ function display_buttons($nbr_annees)
                  -->
 
                 <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
-                    <h2 id="eventos">🍣 VP Eventos 🍣</strong></h2>
-                    <img class="prez" src="img_poles/Eventos-2k22.jpg" onclick="window.open(this.src,'_self')">
+                    <h2 id="eventos">✨ Les Eventos ✨</strong></h2>
+                    <img class="prez" src="img_poles/eventos.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                        Voici le pôle Eventos, aka le pôle Camilles (ou Camcams pour les intimes)🥰.Nous nous chargons de réaliser des events, des expos et des apéros au Musée.🥂 N'hésitez pas à nous contacter pour réaliser un de ces événements avec nous!💃 Aucune restriction … on s'occupe de tout!🕺
-                        PS : pour avoir plein d’exclus, follow <a href='https://www.instagram.com/les_camilles_eventos/'>@les_camilles_eventos </a>
+                    Entre events de folie 🕺🏻 et apéros gourmands 🧁, le pôle Eventos est vraiment là pour te régaler ! Que ce soit des expos originales ou des classiques revisités, on vous en met plein la vue 🤩. Donc n’hésitez plus, contactez nous pour réaliser des expos de rêve 💃🏻 !
                     </p>
                 </div>
 
@@ -129,20 +124,20 @@ function display_buttons($nbr_annees)
                 </p></div> -->
 
                 <div class="pole rez" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
-                    <h2 id="rez">🏚 VP Rez 🏚</strong></h2>
-                    <img class="prez" src="img_poles/Rez-2k22.jpg" onclick="window.open(this.src,'_self')">
+                    <h2 id="rez">🏚 La ReZ 🏚</strong></h2>
+                    <img class="prez" src="img_poles/rez_2k23.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                        Chargé de la bonne ambiance sur le campus de Paris Saclay 🎉, le pôle Rez saura répondre à toutes tes questions concernant Césal en te représentant en tant que résident🏡, te proposer des projets sur le campus et dans ta rez 🏖 et te prêter un max de matos à toi et tes assos 🤝
+                    Parce que l’AdR c’est pas que le musée 🍻, le pôle ReZ saura te représenter en tant que résident 🏡, te proposer des projets sur le campus 🎉🏖️, t’aider dans ta relation avec Césal 🛏️ et te prêter du matos à toi et tes assos 🤝.
                     </p>
                 </div>
 
                 <div class="separator"></div>
 
                 <div class="pole qom" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
-                    <h2 id="qom">🧠 VP Qom 🧠</strong></h2>
-                    <img class="prez" src="img_poles/Qom-2k22.jpg" onclick="window.open(this.src,'_self')">
+                    <h2 id="qom">🧠 La Qom 🧠</strong></h2>
+                    <img class="prez" src="img_poles/qom_2k23.jpg" onclick="window.open(this.src,'_self')">
                     <p>
-                        Et finalement les plus beaux Q de cette fine éQuipe ! J'ai nommé le pôle ✨Qom✨ ! Formés et Qualifiés pour vous servir , on régalera aveQ des visuels toujours plus Qualis pour annoncer au Qampus tous les évènements !
+                    Pour finir, les plus beaux Q de cette éQuipe 🍑 ! Plus Qonnus sous le nom du pôle 🖌️Qom✨, agissant dans l'ombre pour vous faire des visus toujours plus Qualis, des tentures inQroyables 🤩 et des shotguns fantastiQues 💻.
                     </p>
                 </div>
 
@@ -171,12 +166,52 @@ function display_buttons($nbr_annees)
                 <?php
                 // display_buttons(3); //POur générer les boutons (fleme de faire à la main)
                 ?>
-                <button onclick="showPanel(0)">2021</button>
-                <button onclick="showPanel(1)">2020</button>
-                <button onclick="showPanel(2)">2019</button>
-                <button onclick="showPanel(3)">2018</button>
-                <button onclick="showPanel(4)">2016</button>
+                <button onclick="showPanel(0)">2022</button>
+                <button onclick="showPanel(1)">2021</button>
+                <button onclick="showPanel(2)">2020</button>
+                <button onclick="showPanel(3)">2019</button>
+                <button onclick="showPanel(4)">2018</button>
             </div>
+
+            <div class="tabPanel" id="2022">
+                <h1>AdR 2022</h1>
+                <div class="vieux">
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2022/bureau-2k22.jpg" onclick="window.open(this.src,'_self')">
+                        <p>Le Buro</p>
+                    </div>
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2022/ptit-dej-2k22.jpg" onclick="window.open(this.src,'_self')">
+                        <p>Le P'tit Déj</p>
+                    </div>
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2022/bar-2k22.jpg" onclick="window.open(this.src,'_self')">
+                        <p>Le Bar</p>
+                    </div>
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2022/cq-soirée-2k22.jpg" onclick="window.open(this.src,'_self')">
+                        <p>Les CQ-Soirées</p>
+                    </div>
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2022/khoopé-2k22.jpg" onclick="window.open(this.src,'_self')">
+                        <p>La Khoôpé</p>
+                    </div>
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2022/Qom-2k22.jpg" onclick="window.open(this.src,'_self')">
+                        <p>La Qom</p>
+                    </div>
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2022/Khafet-2k22.jpg" onclick="window.open(this.src,'_self')">
+                        <p>La Khâfet</p>
+                    </div>
+                    <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
+                        <img src="Vieux/2022/Rez-2k22.jpg" onclick="window.open(this.src,'_self')">
+                        <p>La ReZ</p>
+                    </div>
+                </div>
+
+            </div>
+
             <div class="tabPanel" id="2021">
                 <h1>AdR 2021</h1>
                 <div class="vieux">
@@ -186,7 +221,7 @@ function display_buttons($nbr_annees)
                     </div>
                     <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2021/ptit-dej.jpg" onclick="window.open(this.src,'_self')">
-                        <p>Le P'tit Dej</p>
+                        <p>Le P'tit Déj</p>
                     </div>
                     <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2021/Bar_v2.jpg" onclick="window.open(this.src,'_self')">
@@ -194,7 +229,7 @@ function display_buttons($nbr_annees)
                     </div>
                     <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2021/cq-soirée_v2.jpg" onclick="window.open(this.src,'_self')">
-                        <p>Les CQ-Soirée</p>
+                        <p>Les CQ-Soirées</p>
                     </div>
                     <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2021/Kopé.jpg" onclick="window.open(this.src,'_self')">
@@ -225,7 +260,7 @@ function display_buttons($nbr_annees)
                     </div>
                     <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2020/Ptit Dej.jpg" onclick="window.open(this.src,'_self')">
-                        <p>Le P'tit Dej</p>
+                        <p>Le P'tit Déj</p>
                     </div>
                     <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2020/Bar.jpg" onclick="window.open(this.src,'_self')">
@@ -233,7 +268,7 @@ function display_buttons($nbr_annees)
                     </div>
                     <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2020/CQ Soiree.jpg" onclick="window.open(this.src,'_self')">
-                        <p>Les CQ-Soirée</p>
+                        <p>Les CQ-Soirées</p>
                     </div>
                     <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2020/Copé.jpg" onclick="window.open(this.src,'_self')">
@@ -263,7 +298,7 @@ function display_buttons($nbr_annees)
                     </div>
                     <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2019/Ptit Dej.jpeg" onclick="window.open(this.src,'_self')">
-                        <p>Le P'tit Dej</p>
+                        <p>Le P'tit Déj</p>
                     </div>
                     <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2019/Bar.jpeg" onclick="window.open(this.src,'_self')">
@@ -275,7 +310,7 @@ function display_buttons($nbr_annees)
                     </div>
                     <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2019/Soirée.jpeg" onclick="window.open(this.src,'_self')">
-                        <p>Les Soirée</p>
+                        <p>Les Soirées</p>
                     </div>
                     <div class="pole" onclick="window.open(this.getElementsByTagName('img')[0].src,'_self')">
                         <img src="Vieux/2019/Copé.jpeg" onclick="window.open(this.src,'_self')">
