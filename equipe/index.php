@@ -30,10 +30,7 @@ function display_buttons($nbr_annees)
     <?php include "../included/header.php" ?>
     <main id="swup" class="transition-fade">
         <section class="hero adr2k23">
-            <div class="container">
-            <h1 class="headline">Notre équipe</h1>
-                
-            </div>
+            <h1>Notre équipe</h1>
         </section>
         <section class="poles">
             <div class="container y2021" id="equipe">
