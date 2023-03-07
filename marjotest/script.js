@@ -6,7 +6,7 @@ var getFormattedDigits = function getFormattedDigits(num) {
 
 function timer() {
 	var date = new Date();
-	var date_shotgun = new Date(2023, 2, 17, 13, 00,00);
+	var date_shotgun = new Date(2023, 2, 17, 23, 00,00);
 	var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
 	var diff_jour = getFormattedDigits(Math.trunc(total_sec / 3600 / 24));
 	var diff_hour = getFormattedDigits(Math.trunc((total_sec - diff_jour * 24 * 3600) / 3600));
@@ -101,4 +101,3 @@ function onLoad() {
 	navSlide();
 };
 
-<script src="https://kit.fontawesome.com/6ede126102.js" crossorigin="anonymous"></script>
