@@ -685,6 +685,9 @@ p.infos_billetterie {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.fond {
   background-color: var(--black);
   box-shadow: 0 0 5px 5px var(--black);
 }
@@ -952,4 +955,18 @@ div.glitch:after{
   62%{
     transform: translate(-22px,5px) skew(21deg); 
   }
+}
+
+.réseau {
+  flex-direction: row;
+}
+
+.contact i {
+  margin-right: 1rem;
+}
+
+.contact a {
+  color: #d3c075;
+  font-style: normal;
+  text-decoration: none;
 }
