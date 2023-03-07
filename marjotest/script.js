@@ -101,3 +101,4 @@ function onLoad() {
 	navSlide();
 };
 
+<script src="https://kit.fontawesome.com/6ede126102.js" crossorigin="anonymous"></script>
