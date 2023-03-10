@@ -97,7 +97,7 @@ button {
   overflow: hidden;
   overflow-y: visible;
   scroll-behavior: smooth;
-  height: 440vh;
+  height: 430vh;
   width: 100vw;
   /* perspective: 800px; */
   /* transform-style: preserve-3d; */
