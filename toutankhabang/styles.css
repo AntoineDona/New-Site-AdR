@@ -143,7 +143,7 @@ button {
 
 .mid_layer {
   position: absolute;
-  margin-top: 100vh;
+  margin-top: 80vh;
   background-image: url("img/fond_extend.png");
   background-attachment: local;
   background-size: 100% auto;
