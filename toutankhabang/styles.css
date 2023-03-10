@@ -95,9 +95,9 @@ button {
 .parallax_group {
   position: relative;
   overflow: hidden;
-  overflow-y: visible;
+  /*overflow-y: visible;*/
   scroll-behavior: smooth;
-  height: 430vh;
+  height: 500vh;
   width: 100vw;
   /* perspective: 800px; */
   /* transform-style: preserve-3d; */
