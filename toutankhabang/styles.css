@@ -126,6 +126,7 @@ button {
   background-attachment: local;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  z-index: -3;
   /* transform: translateZ(-1600px) scale(3); */
 }
 
@@ -137,6 +138,7 @@ button {
   background-size: 100% auto;
   background-repeat: no-repeat;
   transform: translateZ(-100px) scale(1);
+  z-index: -1;
 }
 
 .mid_layer {
@@ -146,6 +148,7 @@ button {
   background-attachment: local;
   background-size: 100% auto;
   background-repeat: repeat-y;
+  z-index: -2;
 }
 
 
@@ -883,7 +886,7 @@ p.infos_billetterie {
 .date {
   height: auto;
   position: relative;
-  top: -15vh;
+  top: -25vh;
   width: 100vw;
   padding: 0 1rem;
   background-color: var(--transparent_black);
