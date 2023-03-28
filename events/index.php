@@ -14,7 +14,16 @@
         <section class="events">
 
             <div class="container">
-                <h1 class="headline"> Nos Events</h1>
+                <h1 class="headline">Nos Events</h1>
+                <div class="description_event">
+                    <div >
+                        <img src="img/papybang2023.png" alt="personne agée"><h2>PAPYBANG 2023</h2><img src="img/papybang2023.png" alt="personne agée">
+                    </div>
+                        <p>
+                        Ce 31 Mars, les vieux AdR 👴👵, pourtant portés disparus dans leurs EHPAD respectifs 👀, reviennent pour vous proposer une soirée à la mémoire des belles années 🤩, une dernière fois avant notre ultime voyage (vers le monde du travail et des comptes bancaires solvables).
+                            <br>Le lien du shotgun est <a href="https://adr.cs-campus.fr/papybang2023/">ici</a>.
+                        </p>
+                </div>
                 <div class="description_event">
                     <div >
                         <img src="img/toutankhabang.png" alt="œil égyptien"><h2>TOUTÂNKHABANG</h2><img src="img/toutankhabang.png" alt="œil égyptien">
@@ -22,6 +31,7 @@
                         <p>
                         Pour le premier Bang de son mandat, l'AdR CS 2023 vous prépare un voyage au temps des pharaons 👳🏾‍♀️ avec le 👁️ToutânkhaBang👁️ qui aura lieu le vendredi 17 mars de 23h à 5h à CentraleSupélec. Devant 2 scènes sensationnelles ⚡️ montées par SBCS, l’asso de Sono et Barco de CS, plongez avec nous dans le mystère des pyramides pour une soirée des plus surprenantes 🐪.
                             <br>Le lien du shotgun est <a href="https://adr.cs-campus.fr/toutankhabang/">ici</a>.
+                            <br>Le lien de l'album Pics : <a href="https://galerie.pics/galerie/toutankhabang">album</a>
                         </p>
                 </div>
                 <div class="description_event">
