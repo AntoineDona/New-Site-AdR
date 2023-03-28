@@ -23,6 +23,8 @@ html {
   color: #f2cf8c;
   scroll-behavior: smooth;
   height: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 h1,
@@ -35,14 +37,13 @@ h4 {
 
 body {
   overflow-x: hidden;
-  height: 100%;
+  height: cover;
   font-size: 5rem;
   color: #f2cf8c;
-  background: url(img/fond.png), url(img/billet.jpg);
+  background: url(img/billet.jpg);
   background-size: contain;
   background-position: top;
-  background-repeat: no-repeat, repeat;
-  z-index: 0,-1;
+  background-repeat: repeat;
 }
 
 button {
@@ -50,13 +51,6 @@ button {
   border: unset;
 }
 
-.affiche {
-  background: url(img/fond.png);
-  background-size: contain;
-  position: center fixed;
-  background-repeat: repeat-x;
-  z-index: -3;
-}
 /* Loader -------------------------------------------- */
 
 .loading_page {
@@ -657,10 +651,11 @@ p.infos_billetterie {
   }
 
   body {
-    background: url(img/fond.png);
+    background: url(img/billet.jpg);
     background-position: top;
+    background-repeat: repeat;
     background-size: auto 100%;
-    background-repeat: no-repeat;
+    overflow-x: hidden;
   }
 
   #counter {
@@ -697,10 +692,11 @@ p.infos_billetterie {
   }
 
   body {
-    background: url(img/fond.png);
+    background: url(img/billet.jpg);
     background-position: top;
     background-size: auto 100%;
     background-repeat: no-repeat;
+    overflow-x: hidden;
   }
 
   .quadra {
@@ -769,8 +765,8 @@ p.infos_billetterie {
   }
 
   .contact {
-    position: relative;
-    bottom: 50%;
+    position: fixed;
+    top: 93%;
   }
 }
 
