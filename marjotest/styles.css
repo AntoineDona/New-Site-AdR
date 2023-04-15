@@ -47,7 +47,7 @@ html {
 body {
   width: 100vw;
   height: 100%;
-  background-image: linear-gradient(to right, black, 10%, transparent),linear-gradient(to left, black, 10%,transparent),url("img/bckPaysage.png");
+  background-image: linear-gradient(to right, black, 10%, transparent),linear-gradient(to left, black, 10%,transparent),url("img/fond_ordi.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -61,7 +61,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 a {
@@ -107,14 +106,6 @@ a:active {
   justify-content: center;
   align-items: center;
   padding: 3px;
-}
-#panneau{
-  position: absolute;
-  z-index: -20;
-  filter: brightness(0%);
-  width: 40vw;
-  top: 0.1vh;
-
 }
 
 .digit_holder {
@@ -218,9 +209,9 @@ a:active {
   position: absolute;
   bottom: 10px;
   margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 #qrLink{
@@ -487,7 +478,7 @@ form {
 @media screen and (orientation: portrait),
 screen and (max-width: 800px) {
   body {
-    background: url("img/bckPaysage.png");
+    background: url("img/fond_tel.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -552,12 +543,13 @@ screen and (max-width: 800px) {
     margin-top: 3rem;
     font-size: 2rem;
     position: absolute;
-  bottom: 10px;
-  margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
+    bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
   }
+
   #qrLink{
     margin-top: 75px;
     font-size: 3rem;
@@ -634,12 +626,13 @@ right: 0;
   #footer{
     margin-top: 1rem;
     position: absolute;
-  bottom: 10px;
-  margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
+    bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
   }
+  
   #qrLink{
     margin-top: 80px;
     text-decoration: underline;
