@@ -129,7 +129,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		} 
 		else {
 			echo '<div id="depaps" ><a id="sg_link" class="degraMov link"  href=# onClick="verif();">DEPAPS</a></div></div>';
-			echo '<div id="qrLink"><a  href="/marjotest/QRgenerator.php" >Voir mon QR code</a></div>';
+			echo '<div id="qrLink"><a  href="/marjotest/QRgenerator.php" >Voir mon QR code <i class="fa-solid fa-qrcode fa-beat"></i></a></div>';
 		}
 	?>
 
@@ -138,10 +138,10 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		if (!$_SESSION["is_cotisant"]) {
 			echo "<p id='msg_cotisant'><span style='color:red;'>ATTENTION !</span> <br/> Tu n'est pas cotisant, tu ne pourras pas shotgun...</p>";
 		} else {
-			echo "<p id='msg_cotisant'> Salut " . $_SESSION["prenom"] . ",<br> tu es bien cotisant, tu vas pouvoir shotgun ! </p>";
+			echo "<p id='msg_cotisant'> Salut " . $_SESSION["prenom"] . ",<br> tu es bien cotisant.e, tu vas pouvoir shotgun ! </p>";
 		}
 	} else {
-		echo "<p id='msg_cotisant'> Bravo " . $_SESSION["prenom"] . " ! <br> Tu as réussi à shotgun ta place pour l'AstroNano. </p>";
+		echo "<p id='msg_cotisant'> Bravo " . $_SESSION["prenom"] . " ! <br> Tu as réussi à shotgun ta place pour l'IndiaNanones. </p>";
 	}
 	if (!$_SESSION['shotgun']) {
 			echo '<p id="footer"> <i> Pas besoin de recharger la page au moment du shotgun </i></p>';
