@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-//include("auth.php"); 
+include("auth.php"); 
 include("database.php");
 //  //
 	//
@@ -88,7 +88,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
-	<title>ASTRONANO</title>
+	<title>INDIANANONES</title>
 	<meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/marjotest/img/icon.png">
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
@@ -97,7 +97,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 
 <body onload="onLoad()">
 
-	<div id="titrenano">ASTRONANO</div>
+	<div id="titrenano">INDIANANONES</div>
 
 	<div id="titre_sg"></div>
 

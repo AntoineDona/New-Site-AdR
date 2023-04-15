@@ -31,7 +31,7 @@
 		var has_shotgun = <?php echo json_encode(isset($_SESSION['shotgun']))?> && <?php echo json_encode($_SESSION['shotgun']) ?>;
 		if (has_shotgun){
 			var total_sec = Math.trunc((date_soiree.getTime() - date.getTime()) / 1000);
-			var title = "AstroNano dans :";
+			var title = "IndiaNanones dans :";
 		};
 		var diff_jour = getFormattedDigits(Math.trunc(total_sec / 3600 / 24));
 		var diff_hour = getFormattedDigits(Math.trunc((total_sec - diff_jour * 24 * 3600) / 3600));
