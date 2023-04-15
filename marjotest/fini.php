@@ -10,6 +10,7 @@ include("database.php");
 	<title>ASTRONANO</title>
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/marjotest/img/icon.png">
 	<link rel="stylesheet" href="styles.css">
+	<script src="https://kit.fontawesome.com/6ede126102.js" crossorigin="anonymous"></script>
 </head>
 
 <?php
