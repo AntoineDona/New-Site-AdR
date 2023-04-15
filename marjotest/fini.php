@@ -40,8 +40,8 @@ if ($_SESSION['shotgun']) {
 			Vérifie si tu as shotgun en cliquant sur recharger :
 		</p>
 		<div class="btns_ctnr">
-			<div href="#" onClick="window.location='index.php'" id="reload">&#8635; Recharger</div>
-			<div href="#" onClick="window.location='logout.php'" id="reload">Se déconnecter</div>
+			<div href="#" onClick="window.location='index.php'" id="reload">Recharger <i class="fa-solid fa-arrow-rotate-left fa-spin fa-spin-reverse"></i></div>
+			<div href="#" onClick="window.location='logout.php'" id="reload">Se déconnecter <i class="fa-solid fa-right-from-bracket fa-fade"></i></div>
 		</div>
 	</div>
 
