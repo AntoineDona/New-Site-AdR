@@ -144,7 +144,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		echo "<p id='msg_cotisant'> Bravo " . $_SESSION["prenom"] . " ! <br> Tu as réussi à shotgun ta place pour l'IndiaNanones. </p>";
 	}
 	if (!$_SESSION['shotgun']) {
-			echo '<p id="footer"> <i> Pas besoin de recharger la page au moment du shotgun </i></p>';
+			echo '<p id="footer">Pas besoin de recharger la page au moment du shotgun</p>';
 			
 		} 
 	?>
