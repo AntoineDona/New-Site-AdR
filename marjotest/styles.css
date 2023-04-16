@@ -503,6 +503,10 @@ screen and (max-width: 800px) {
   }
 
   #titreNanhorreur{
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
     margin-top: 30%;
     margin-bottom: 5%;
     max-width: 90%;
