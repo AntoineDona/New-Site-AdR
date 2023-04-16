@@ -25,7 +25,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 </head>
 
 <body onload="onLoad()">
-<div id="titreNanhorreur"><img src="img/titre.png" alt="IndiaNanones"></div>
+<div id="titreNanhorreur"><img src="img/titre.png" alt="IndiaNanones" style="height:100%"></div>
 	<?php
 	if (isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "logout.php") {
 		echo "<script>alert(\"Tu as bien été déconnecté \")</script>";
