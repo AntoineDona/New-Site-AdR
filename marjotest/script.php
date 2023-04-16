@@ -24,7 +24,7 @@
 		var date = new Date();
 		// console.log(date);
 		<?php //$_SESSION['shotgun'] = false; ?>
-		var date_shotgun = new Date(2023, 03, 15, 13, 00, 00);
+		var date_shotgun = new Date(2023, 03, 16, 13, 00, 00);
 		var date_soiree = new Date(2023, 03, 20, 23, 00);
 		var title = "Shotgun dans :";
 		var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
@@ -38,7 +38,7 @@
 		var diff_min = getFormattedDigits(Math.trunc((total_sec - diff_jour * 24 * 3600 - diff_hour * 3600) / 60));
 		var diff_sec = getFormattedDigits(Math.trunc(total_sec - diff_jour * 24 * 3600 - diff_hour * 3600 - diff_min * 60));
 		if (total_sec >= 0) {
-			select_id('titre_sg').innerHTML = '<span>' + title + '</span>';
+			select_id('titre_sg').innerHTML = '<span id="titre_sg_txt">' + title + '</span>';
 			// select_id('mois').innerHTML = '<p class="chiffre"> 00 </p>' + '<p class="text">mois</p>';
 			select_id('jours').innerHTML = '<p class="chiffre">' + diff_jour + '</p>' + '<p class="text">jours</p>';
 			select_id('heures').innerHTML = '<p class="chiffre">' + diff_hour + '</p>' + '<p class="text">heures</p>';

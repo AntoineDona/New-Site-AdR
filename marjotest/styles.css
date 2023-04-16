@@ -47,7 +47,6 @@ html {
 body {
   width: 100vw;
   height: 100%;
-  /*background-image: linear-gradient(to right, black, 10%, transparent),linear-gradient(to left, black, 10%,transparent),url("img/fond_ordi.png");*/
   background-image: url("img/fond_ordi.png");
   background-size: cover;
   background-position: center;
@@ -55,14 +54,15 @@ body {
   color: white;
   position: absolute;
   text-align: center;
-  font-family: "LaBeouf_Bold_Italic";
-  text-shadow: black -5px 5px;
+  font-family: "Labeouf_Bold_Italic";
   overflow-x: hidden;
   font-size: 1.3rem;
+  text-shadow: black -0.13rem 0.13rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 a {
@@ -88,7 +88,7 @@ a:active {
   margin-top:5vh;
   overflow: visible;
   font-size: 2rem;
-  color: var(--light_green);
+  color: white;
   /* border: solid 0.1rem rgb(221, 255, 223); */
   border-radius: 1rem;
   /* box-shadow: var(--green_box_shadow); */
@@ -109,6 +109,14 @@ a:active {
   align-items: center;
   padding: 3px;
 }
+#panneau{
+  position: absolute;
+  z-index: -20;
+  filter: brightness(0%);
+  width: 40vw;
+  top: 0.1vh;
+
+}
 
 .digit_holder {
   margin: 0 1rem;
@@ -121,16 +129,21 @@ a:active {
 
 .chiffre {
   font-size: 4rem;
-  font-family: "LaBeouf_Bold_Italic";
+  font-family: "Labeouf_Bold_Italic";
   color: white;
-  text-shadow: black -5px 5px;
+  text-shadow: black -0.4rem 0.4rem;
 }
 
 .text {
   font-size: 1.3rem;
+  font-family: "Labeouf_Bold_Italic";
+  color: white;
+  text-shadow: black -0.13rem 0.13rem;
 }
 
-#msg_cotisant {
+#co_msg_ctnr,
+#ok_msg_ctnr,
+#danger_msg_ctnr {
   display: inline-block;
   /*inline-block pcq si block, prend nécessairement 100% de la taille du parent */
   margin: auto;
@@ -144,8 +157,9 @@ a:active {
   z-index: 0;
   position: relative;
   line-height: 2rem;
-  font-family: "LaBeouf_Bold_Italic";
-  text-shadow: black -5px 5px;
+  font-family: "Labeouf_Bold_Italic";
+  color: white;
+  text-shadow: black -0.15rem 0.15rem;
 }
 
 
@@ -156,23 +170,23 @@ a:active {
 .link {
   padding: 2rem;
   cursor: pointer;
+  font-size: "IndianaJonas";
   font-size: 2rem;
   margin-top: 1em;
   /*border: solid white 4px;*/
   /*background: transparent;*/
   text-align: center;
   /*border-radius: 24px;*/
-  border: 3px solid white;
-  border-radius: 30px;
-  color: white;
+  border: 3px solid black;
+  background: linear-gradient(0deg, rgba(233,89,35,1) 0%, rgba(238,140,33,1) 35%, rgba(242,233,179,1) 100%);;
+  color: black;
   letter-spacing: 1px;
   outline: none;
 }
 
 #sg_link_ctnr {
   font-size: 5rem;
-  font-family: "LaBeouf_Bold_Italic";
-  text-shadow: black -5px 5px;
+  font-family: "IndianaJonas";
   /* margin-top:34vh; */
   /* à remettre si il n'y a pas de titre */
 }
@@ -209,9 +223,9 @@ a:active {
   position: absolute;
   bottom: 10px;
   margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
+margin-right: auto;
+left: 0;
+right: 0;
 }
 
 #qrLink{
@@ -282,8 +296,7 @@ h1.interface {
   text-align: center;
   font-size: 80px;
   color: "white";
-  font-family: "LaBeouf_Bold_Italic";
-  text-shadow: black -5px 5px;
+  font-family: "Labeouf_Bold_Italic";
   margin-top: 20vh;
 }
 
@@ -341,7 +354,7 @@ form {
 
 .greencard {
   background: rgba(125, 250, 125, 0.3);
-  font-family: "LaBeouf_Bold_Italic";
+  font-family: "Labeouf_Bold_Italic";
   font-weight: bold;
   width: 60vw;
   text-align: center;
@@ -354,12 +367,28 @@ form {
   border-radius: 8px;
   border: white solid 2px;
   box-shadow: var(--green_box_shadow);
-  text-shadow: black -5px 5px;
+  text-shadow: var(--green_text_shadow);
+}
+
+.redcard {
+  background: rgba(92, 92, 92, 0.3);
+  font-family: arial;
+  font-weight: bold;
+  width: 60vw;
+  text-align: center;
+  font-size: 60px;
+  color: white;
+  margin: auto;
+  margin-top: 4vw;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: var(--danger_box_shadow);
+  text-shadow: var(--danger_text_shadow);
 }
 
 .submit {
   font-size: 50px;
-  font-family: "LaBeouf_Bold_Italic";
+  font-family: "Labeouf_Bold_Italic";
   color: white;
   font-weight: bold;
   margin: 8px;
@@ -369,7 +398,7 @@ form {
   background-color: transparent;
   border: white 3px solid;
   box-shadow: var(--green_box_shadow);
-  text-shadow: black -5px 5px;
+  text-shadow: var(--green_text_shadow);
   cursor: pointer;
 }
 
@@ -438,11 +467,10 @@ form {
 
 /* Partie spéciale pour chaque nano */
 
-#titrenano{
+#titreNanhorreur{
   margin-top: 10%;
   font-size: 12rem ;
-  font-family: "LaBeouf_Bold_Italic";
-  text-shadow: black -3rem 3rem;
+  font-family: "Labeouf_Bold_Italic";
   color: white;
 }
 
@@ -472,7 +500,7 @@ screen and (max-width: 800px) {
     overflow: hidden;
   }
 
-  #titrenano{
+  #titreNanhorreur{
     margin-top: 50%;
     margin-bottom: 20%;
   }
@@ -507,9 +535,9 @@ screen and (max-width: 800px) {
 
   .chiffre {
     font-size: 10rem;
-    font-family: "LaBeouf_Bold_Italic";
+    font-family: "Labeouf_Bold_Italic";
     color: white;
-    text-shadow: black -2.5rem 2.5rem;
+    text-shadow: black -1rem 1rem;
   }
 
   .text {
@@ -529,13 +557,12 @@ screen and (max-width: 800px) {
     margin-top: 3rem;
     font-size: 2rem;
     position: absolute;
-    bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
+  bottom: 10px;
+  margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
   }
-
   #qrLink{
     margin-top: 75px;
     font-size: 3rem;
@@ -571,6 +598,15 @@ screen and (max-width: 800px) {
   .loading-animation-box div {
     margin-top: 10vh;
   }
+
+  /* partie nanall black */
+  #panneau{
+    position: absolute;
+    z-index: -20;
+    filter: brightness(0%);
+    width: 40vw;
+    top: 2vh;
+  }
   
 #counter {
   /* délimite le compteur: nécessaire pour la forme logo olympics en relative */
@@ -603,13 +639,12 @@ screen and (max-width: 800px) {
   #footer{
     margin-top: 1rem;
     position: absolute;
-    bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
+  bottom: 10px;
+  margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
   }
-
   #qrLink{
     margin-top: 80px;
     text-decoration: underline;
@@ -761,8 +796,11 @@ screen and (max-width: 800px) {
 /* Fonts ------------------------------------------------------------------------------------------------------------------------------ */
 
 @font-face {
-  font-family: "LaBeouf_Bold_Italic";
-  src: url("fonts/LaBeouf_Bold_Italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "IndianaJonas";
+  src: url("fonts/IndianaJonas.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Labeouf_Bold_Italic";
+  src: url('fonts/LaBeouf_Bold_Italic.ttf') format('truetype');
 }

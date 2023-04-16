@@ -32,7 +32,7 @@ function number_place($pdo)
 function has__already_shotgun($email, $pdo)
 {
 	//  Checks if email already shotgun, return 1 if true and 0 else
-	$query = $pdo->prepare("SELECT COUNT(*) as c from indiananoes where email=?");
+	$query = $pdo->prepare("SELECT COUNT(*) as c from indiananones where email=?");
 	$query->execute(array($email));
 	$result = $query->fetch();
 	if ($result['c'] == 0) {
@@ -88,19 +88,26 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
-	<title>INDIANANONES</title>
+	<title>ASTRONANO</title>
 	<meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
+	<!-- <meta property="og:image" content="https://adr.cs-campus.fr/nanhorreur/img/fb_banner.jpg" /> -->
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/marjotest/img/icon.png">
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
-	<script src="https://kit.fontawesome.com/6ede126102.js" crossorigin="anonymous"></script>
 </head>
 
 <body onload="onLoad()">
-
-	<div id="titrenano"><img src="img/titre.png" alt="IndiaNanones"></div>
-
+<div id="titreNanhorreur">ASTRONANO</div>
+<div id="sg_link_ctnr">
+		<?php
+		if (!$_SESSION['shotgun']) {
+			echo '<a id="sg_link" class="degraMov link" href="action.php" >SHOTGUN</a></div>';
+		} 
+		else {
+			echo '<div id="depaps" ><a id="sg_link" class="degraMov link"  href=# onClick="verif();">DEPAPS</a></div></div>';
+			echo '<div id="qrLink"><a  href="/marjotest/QRgenerator.php" >Voir mon QR code</a></div>';
+		}
+		?>
 	<div id="titre_sg"></div>
-
 	<div id="counter">
 		<!-- <div class="digit_holder months" id="mois">
 			<p class="chiffre">00</p>
@@ -122,30 +129,23 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 			<p class="chiffre">00</p>
 			<p class="text">secondes</p>
 		</div>
+		<!-- <img src="img/soclePanneau.png" alt="teneur de panneau" id="panneau"> -->
 	</div>
+	
 
 	<?php
-		if (!$_SESSION['shotgun']) {
-			echo '<a id="sg_link" class="degraMov link" href="action.php" >SHOTGUN</a></div>';
-		} 
-		else {
-			echo '<div id="depaps" ><a id="sg_link" class="degraMov link"  href=# onClick="verif();">DEPAPS</a></div></div>';
-			echo '<div id="qrLink"><a  href="/marjotest/QRgenerator.php" >Voir mon QR code <i class="fa-solid fa-qrcode fa-beat"></i></a></div>';
-		}
-	?>
-
-	<?php
+	
 	if (!$_SESSION['shotgun']) {
 		if (!$_SESSION["is_cotisant"]) {
-			echo "<p id='msg_cotisant'><span style='color:red;'>ATTENTION !</span> <br/> Tu n'est pas cotisant, tu ne pourras pas shotgun...</p>";
+			echo "<p id='danger_msg_ctnr'><span style='color:red;'>ATTENTION !</span> <br/> Tu n'est pas cotisant, tu ne pourras pas shotgun...</p>";
 		} else {
-			echo "<p id='msg_cotisant'> Salut " . $_SESSION["prenom"] . ",<br> tu es bien cotisant.e, tu vas pouvoir shotgun ! </p>";
+			echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . ",<br> tu es bien cotisant, tu vas pouvoir shotgun ! </p>";
 		}
 	} else {
-		echo "<p id='msg_cotisant'> Bravo " . $_SESSION["prenom"] . " ! <br> Tu as réussi à shotgun ta place pour l'IndiaNanones. </p>";
+		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . " ! <br> Tu as réussi à shotgun ta place pour l'IndiaNanones. </p>";
 	}
 	if (!$_SESSION['shotgun']) {
-			echo '<p id="footer">Pas besoin de recharger la page au moment du shotgun</p>';
+			echo '<p id="footer"> <i> Pas besoin de recharger la page au moment du shotgun </i></p>';
 			
 		} 
 	?>
@@ -157,7 +157,6 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		$_SESSION['prev_page'] = "index.php";
 	}
 	?>
-
 	<script type="text/javascript">
 		function shotgun() {
 			window.location = 'action.php';

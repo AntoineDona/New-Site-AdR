@@ -62,20 +62,20 @@ function decodeId($id){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INDIANANONES</title>
+    <title>ASTRONANO</title>
 </head>
 <body>
     <div id="content" >
     <?php if($formBool): ?>
-        <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&choe=UTF-8&chl=http://adr.cs-campus.fr/actionNano/scanBillet/billet.php?id=<?php echo codeId($id);?>" title="Mon QR code" /> 
+        <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&choe=UTF-8&chl=http://adr.cs-campus.fr/actionNano/scanBillet/billet.php?id=<?php echo codeId($id);?>" title="QR code soirée" /> 
     <?php else:?>
-        <div>Remplis </div>  <div><a href="formCheck.php">ce questionnaire d'information sur les VSS</a> pour obtenir ton QR code.</div>
+        <div>Il faut remplir ce formulaire de sensibilisation contre les VSS en soirée pour obtenir son QR code :</div>  <div><a href="formCheck.php">le formulaire</a></div>
     <?php endif;?>
         <?php echo '<p>'.$_SESSION['prenom'].' '.$_SESSION['nom'];'</p>'?> 
-        <div><a href="/marjotest/index.php">Revenir à la page du shotgun</a></div>
+        <div><a href="/astronano/index.php">Revenir à la page d'avant</a></div>
     </div>
-</body>
 
+</body>
     <style>
         body{
             text-align:center;
