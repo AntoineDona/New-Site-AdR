@@ -88,7 +88,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
-	<title>ASTRONANO</title>
+	<title>INDIANANONES</title>
 	<meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
 	<!-- <meta property="og:image" content="https://adr.cs-campus.fr/nanhorreur/img/fb_banner.jpg" /> -->
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/marjotest/img/icon.png">
@@ -97,7 +97,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 </head>
 
 <body onload="onLoad()">
-<div id="titreNanhorreur">ASTRONANO</div>
+<div id="titreNanhorreur"><img src="img/titre.png" alt="IndiaNanones"></div>
 <div id="sg_link_ctnr">
 
 	<div id="titre_sg"></div>
