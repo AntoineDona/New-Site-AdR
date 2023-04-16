@@ -122,7 +122,7 @@ a:active {
 .chiffre {
   font-size: 4rem;
   font-family: "LaBeouf_Bold_Italic";
-  color: #daf6ff;
+  color: white;
   text-shadow: black -5px 5px;
 }
 
@@ -162,15 +162,11 @@ a:active {
   /*background: transparent;*/
   text-align: center;
   /*border-radius: 24px;*/
-  border: 1px solid rgba(255, 255, 255, .5);
+  border: 3px solid white;
   border-radius: 30px;
-  background-color: rgba(255, 255, 255, .1);
-  color: #fff;
+  color: white;
   letter-spacing: 1px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
   outline: none;
-  box-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
 }
 
 #sg_link_ctnr {
@@ -361,22 +357,6 @@ form {
   text-shadow: black -5px 5px;
 }
 
-.redcard {
-  background: rgba(92, 92, 92, 0.3);
-  font-family: arial;
-  font-weight: bold;
-  width: 60vw;
-  text-align: center;
-  font-size: 60px;
-  color: white;
-  margin: auto;
-  margin-top: 4vw;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: var(--danger_box_shadow);
-  text-shadow: black -5px 5px;
-}
-
 .submit {
   font-size: 50px;
   font-family: "LaBeouf_Bold_Italic";
@@ -462,7 +442,7 @@ form {
   margin-top: 10%;
   font-size: 12rem ;
   font-family: "LaBeouf_Bold_Italic";
-  text-shadow: black -5px 5px;
+  text-shadow: black -3rem 3rem;
   color: white;
 }
 
@@ -528,8 +508,8 @@ screen and (max-width: 800px) {
   .chiffre {
     font-size: 10rem;
     font-family: "LaBeouf_Bold_Italic";
-    color: #daf6ff;
-    text-shadow: black -5px 5px;
+    color: white;
+    text-shadow: black -2.5rem 2.5rem;
   }
 
   .text {
@@ -590,15 +570,6 @@ screen and (max-width: 800px) {
 
   .loading-animation-box div {
     margin-top: 10vh;
-  }
-
-  /* partie nanall black */
-  #panneau{
-    position: absolute;
-    z-index: -20;
-    filter: brightness(0%);
-    width: 40vw;
-    top: 2vh;
   }
   
 #counter {
