@@ -503,8 +503,9 @@ screen and (max-width: 800px) {
   }
 
   #titreNanhorreur{
-    margin-top: 50%;
-    margin-bottom: 20%;
+    margin-top: 30%;
+    margin-bottom: 5%;
+    max-width: 90%;
   }
 
   #titre_sg {
@@ -627,6 +628,8 @@ screen and (max-width: 800px) {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  font-family: "IndianaJonas";
+  text-shadow: none;
 }
 }
 @media screen and (max-height: 400px){
