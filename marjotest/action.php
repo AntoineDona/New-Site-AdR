@@ -53,15 +53,15 @@ include('database.php') ?>
 	date_default_timezone_set('Europe/Paris');
 	$current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
-	$shotgun_date = mktime("0012", "0059", "0059", "0004", "0015", "2023");
+	$shotgun_date = mktime("0012", "0059", "0059", "0004", "0016", "2023");
 	$shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
-	$end_date = mktime("0003", "0000", "0000", "0004", "0020", "2023");
+	$end_date = mktime("0003", "0000", "0000", "0004", "0021", "2023");
 	$end_date_sec = (((date('d', $end_date) - 1) * 24 + date('H', $end_date)) * 60 + date('i', $end_date)) * 60 + date('s', $end_date);
 	if ($current_date_sec >= $shotgun_date_sec) {
 		if ($_SESSION["is_cotisant"] == false) {
 			$_SESSION['prev_page'] = "action.php";
-			header("Location: /majotest/index.php");
+			header("Location: /marjotest/index.php");
 		} else {
 			if (!$_SESSION['shotgun']) {
 				if (number_place($pdo) < $_SESSION['total_places']) {
