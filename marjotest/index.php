@@ -97,7 +97,7 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 </head>
 
 <body onload="onLoad()">
-<div id="titreNanhorreur"><img src="img/titre.png" alt="IndiaNanones" style="max-height:30%"></div>
+<div id="titreNanhorreur"></div>
 <div id="sg_link_ctnr">
 
 	<div id="titre_sg"></div>
