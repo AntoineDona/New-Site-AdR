@@ -93,20 +93,13 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 	<!-- <meta property="og:image" content="https://adr.cs-campus.fr/nanhorreur/img/fb_banner.jpg" /> -->
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/marjotest/img/icon.png">
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
+	<script src="https://kit.fontawesome.com/6ede126102.js" crossorigin="anonymous"></script>
 </head>
 
 <body onload="onLoad()">
 <div id="titreNanhorreur">ASTRONANO</div>
 <div id="sg_link_ctnr">
-		<?php
-		if (!$_SESSION['shotgun']) {
-			echo '<a id="sg_link" class="degraMov link" href="action.php" >SHOTGUN</a></div>';
-		} 
-		else {
-			echo '<div id="depaps" ><a id="sg_link" class="degraMov link"  href=# onClick="verif();">DEPAPS</a></div></div>';
-			echo '<div id="qrLink"><a  href="/marjotest/QRgenerator.php" >Voir mon QR code</a></div>';
-		}
-		?>
+
 	<div id="titre_sg"></div>
 	<div id="counter">
 		<!-- <div class="digit_holder months" id="mois">
@@ -132,14 +125,23 @@ if (number_place($pdo) >= $_SESSION['total_places'] and !$_SESSION['shotgun']) {
 		<!-- <img src="img/soclePanneau.png" alt="teneur de panneau" id="panneau"> -->
 	</div>
 	
+		<?php
+			if (!$_SESSION['shotgun']) {
+				echo '<a id="sg_link" class="degraMov link" href="action.php" >SHOTGUN</a></div>';
+			} 
+			else {
+				echo '<div id="depaps" ><a id="sg_link" class="degraMov link"  href=# onClick="verif();">DEPAPS</a></div></div>';
+				echo '<div id="qrLink"><a  href="/marjotest/QRgenerator.php" >Voir mon QR code <i class="fa-solid fa-qrcode fa-beat"></i></a></div>';
+			}
+			?>
 
 	<?php
 	
 	if (!$_SESSION['shotgun']) {
 		if (!$_SESSION["is_cotisant"]) {
-			echo "<p id='danger_msg_ctnr'><span style='color:red;'>ATTENTION !</span> <br/> Tu n'est pas cotisant, tu ne pourras pas shotgun...</p>";
+			echo "<p id='danger_msg_ctnr'><span style='color:red;'>ATTENTION !</span> <br/> Tu n'est pas cotisant·e, tu ne pourras pas shotgun...</p>";
 		} else {
-			echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . ",<br> tu es bien cotisant, tu vas pouvoir shotgun ! </p>";
+			echo "<p id='ok_msg_ctnr'> Salut " . $_SESSION["prenom"] . ",<br> tu es bien cotisant·e, tu vas pouvoir shotgun ! </p>";
 		}
 	} else {
 		echo "<p id='ok_msg_ctnr'> Bravo " . $_SESSION["prenom"] . " ! <br> Tu as réussi à shotgun ta place pour l'IndiaNanones. </p>";
