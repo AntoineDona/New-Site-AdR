@@ -19,20 +19,20 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
-	<title>ASTRONANO</title>
+	<title>INDIANANONES</title>
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/marjotest/img/icon.png">
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
 <body onload="onLoad()">
-<div id="titreNanhorreur">ASTRONANO</div>
+<div id="titreNanhorreur"></div>
 	<?php
 	if (isset($_SESSION['prev_page']) && $_SESSION['prev_page'] == "logout.php") {
 		echo "<script>alert(\"Tu as bien été déconnecté \")</script>";
 	}
 	?>
 	<div id="remonter">
-	<div id="titre_sg" style='margin-top: 50vh;' >Le shotgun commence dans:</div>
+	<div id="titre_sg" style='margin-top: 50vh;' >Le shotgun commence dans :</div>
 	<div id="counter">
 		<!-- <div class="digit_holder months" id="mois">
 			<p class="chiffre">00</p>
