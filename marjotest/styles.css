@@ -474,6 +474,7 @@ form {
 #titreNanhorreur{
   margin-top: 10%;
   background-image: url("img/titre.png");
+  background-size: contain;
   max-height: 30%;
 }
 
