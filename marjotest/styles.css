@@ -235,7 +235,7 @@ a:active {
   margin-top: 65px;
   font-size: 2rem;
   text-shadow: black -0.2rem 0.2rem;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 
@@ -473,9 +473,8 @@ form {
 
 #titreNanhorreur{
   margin-top: 10%;
-  font-size: 12rem ;
-  font-family: "Labeouf_Bold_Italic";
-  color: white;
+  background-image: url("img/titre.png");
+  max-height: 30%;
 }
 
 /* Responsive ---------------------------------------------------------------------------------------------------- */
@@ -571,7 +570,7 @@ screen and (max-width: 800px) {
   #qrLink{
     margin-top: 75px;
     font-size: 3rem;
-    text-decoration: underline;
+    text-decoration: none;
     text-shadow: black -0.3rem 0.3rem;
   }
 
@@ -654,7 +653,7 @@ screen and (max-width: 800px) {
   }
   #qrLink{
     margin-top: 80px;
-    text-decoration: underline;
+    text-decoration: none;
   }
 
 }
