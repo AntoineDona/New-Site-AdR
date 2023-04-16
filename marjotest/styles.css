@@ -472,7 +472,8 @@ form {
 /* Partie spéciale pour chaque nano */
 
 #titreNanhorreur{
-  max-height: 30%;
+  margin-top: 5%;
+  max-height: 35%;
 }
 
 /* Responsive ---------------------------------------------------------------------------------------------------- */
