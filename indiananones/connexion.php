@@ -63,7 +63,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 		}
 		?> -->
 	<div class="link_ctnr" href="#">
-		<a class="link" href='redirect.php?redirect=https://adr.cs-campus.fr/indiananones'>Se connecter</a>
+		<a class="link" href='redirect.php?redirect=https://adr.cs-campus.fr/indiananones'>SE CONNECTER</a>
 	</div>
 	</div>
 	<?php include("script.php"); ?>
