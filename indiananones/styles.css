@@ -508,8 +508,8 @@ screen and (max-width: 800px) {
     padding-left: 0%;
     padding-right: 0%;
     margin-top: 50%;
-    margin-bottom: 5%;
-    max-width: 70%;
+    margin-bottom: 0%;
+    max-width: 100%;
   }
 
   #titre_sg {
