@@ -2,7 +2,8 @@ name: Auto Deployment
 on:
   push:
     branches:
-      - '*'
+      - master
+      - develop
   workflow_dispatch:
   
 jobs:
@@ -21,6 +22,6 @@ jobs:
     - name: connect and pull
       run: 
         ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}
-        "cd ${{ secrets.WORK_DIR }} && git checkout ${{ github.ref_name }} && git pull && exit"
+        "cd ${{ secrets.WORK_DIR }}-${{ github.ref_name }} && git checkout ${{ github.ref_name }} && git pull && exit"
     - name: cleanup
       run: rm -rf ~/.ssh
