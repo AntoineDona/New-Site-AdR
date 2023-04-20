@@ -4,7 +4,7 @@
 session_start();
 setcookie(
   'nomNano',
-  'astronano',
+  'indiananones',
   time() + 24*3600
 );
 $_SESSION['number']=950; // utile pour générer les QR code d'invité sur la page billetGenerator.php
@@ -31,7 +31,7 @@ $_SESSION['number']=950; // utile pour générer les QR code d'invité sur la pa
         <label for="login__password"><svg class="icon">
             <use xlink:href="#icon-lock"></use>
           </svg><span class="hidden">Password</span></label>
-        <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" <?php if(isset($_COOKIE['is_connected']) and $_COOKIE['is_connected']){echo 'value="unprezchauve"'; }?> required>
+        <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" <?php if(isset($_COOKIE['is_connected']) and $_COOKIE['is_connected']){echo 'value="lesvieuxontunqr"'; }?> required>
       </div>
 
       <div class="form__field">

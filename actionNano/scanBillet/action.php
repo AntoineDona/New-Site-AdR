@@ -36,7 +36,7 @@ $scanned = $scannedStatement->fetchAll();
                 $_SESSION['error']=false;
                 header('Location: billetGenerator.php');
             }
-            elseif($password!='unprezchauve'){
+            elseif($password!='lesvieuxontunqr'){
                 $_SESSION['error']=true;
                 header('Location: index.php');
             }
