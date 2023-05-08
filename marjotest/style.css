@@ -217,10 +217,11 @@ ul {
 .main-title {
   width: 95vw;
   height: auto;
+  object-fit: contain;
 }
 
 .title {
-  width: 95vw;
+  width: 100vw;
 }
 
 }
