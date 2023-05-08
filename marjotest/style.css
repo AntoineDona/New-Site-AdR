@@ -120,13 +120,15 @@ ul {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  width: 30%;
+  width: 30vw;
   min-height: 60vh;
   padding: 5vh;
 }
 
 .artist p {
   color: var(--artist-color);
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .artist img {
@@ -196,6 +198,22 @@ ul {
 
 /* adaptation aux différentes tailles d'écran */
 
+@media screen and (orientation: portrait), screen and (max-width: 800px) {
+.content-divided {
+  flex-direction: column;
+}
+
+.artist {
+  min-width: 90vw;
+}
+.ticket {
+  min-width: 80vw;
+}
+
+.main-title {
+  max-width: 95vw;
+}
+}
 
 /* $$ FONTS */
 
