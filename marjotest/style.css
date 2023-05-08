@@ -199,6 +199,9 @@ ul {
 /* adaptation aux différentes tailles d'écran */
 
 @media screen and (orientation: portrait), screen and (max-width: 800px) {
+.container {
+  width: 100vw;
+}
 .content-divided {
   flex-direction: column;
 }
