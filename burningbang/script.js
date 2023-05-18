@@ -6,9 +6,9 @@ timeline
   .to(".explosion", 10, { y: -200 }, "-=10")
   .fromTo(".background", { y: -50 }, { y: 0, duration: 10 }, "-=10")
   .to(".content", 10, { top: "0%" }, "-=10")
-  .to('.background', {height: '100vh'})
-  .to('.truck', {width: '100vw'})
-  .fromTo(".title", { opacity: 0 }, { opacity: 1, duration: 3 }, "-=5");
+  .to('.background', {height: "100vh"})
+  .to('.truck', {width: "100vw"})
+  .fromTo(".title", { opacity: 0 }, { opacity: 1, duration: 3 }, "-=10");
 
 let scene = new ScrollMagic.Scene({
   triggerElement: "section",
@@ -16,5 +16,4 @@ let scene = new ScrollMagic.Scene({
   triggerHook: 0,
 })
   .setTween(timeline)
-  .setPin("section")
-  .addTo(controller);
+  .addTo(controller)
