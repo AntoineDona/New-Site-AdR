@@ -16,7 +16,7 @@
 	<hr class="socket" style="color:rgba(5, 248, 17, 0.411)">
 	<p class="text-center">AdR CentraleSupélec.</p> -->
     <div class="footer-content">
-        <h3>Suivez nous!</h3>
+        <h3>Suivez-nous :</h3>
         <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti ullam laborum non dolore modi.</p> -->
         <ul class="socials">
             <li><a href="https://www.facebook.com/adr.centralesupelec" target="_blank"><i class="fab fa-facebook"></i></a></li>
@@ -38,14 +38,14 @@
                         <p>Status</p>
                     </a>
                 </li>
-                <li>
+                <!--<li>
                     <a href="/index.php">
                         <p>Ressources</p>
                     </a>
-                </li>
+                </li>-->
             </ul>
         </nav>
-        <p>&copy;2020 designed with ❤️🖤 By <a href="https://www.instagram.com/antoine.doo/" target="_blank">Antoine Do</a> 
+        <p>&copy;2020 designed with ❤️🖤 by <a href="https://www.instagram.com/antoine.doo/" target="_blank">Antoine Do</a> 
         <!-- <span>in</span> <a href="https://goo.gl/maps/BUUanjo1udNpVJdK6" target="_blank"> Gif-sur-Yvette</a> -->
     </p>
     </div>

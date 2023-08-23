@@ -7,7 +7,7 @@
     <meta name="author" content="Antoine Do" />
     <meta name="copyright" content="ADRCS - AdR CentraleSupéléc" />
     <meta name="og:site_name" content="AdR CentraleSupélec" />
-    <meta name="description" content="AdR CentraleSupélec. L'Association des résidents de CentaleSupélec (AdRCS) organise les grandes soirées de l'écoles CentraleSupélec, tient le Musée, bar de l'école et s'occupe des relations avec le gestionnaire de la résidence. AdR Centrale Supélec " />
+    <meta name="description" content="AdR CentraleSupélec. L'Association des résidents de CentaleSupélec (AdRCS) organise les grandes soirées de l'école CentraleSupélec, tient le Musée (bar de l'école) et s'occupe des relations avec le gestionnaire de la résidence. AdR Centrale Supélec " />
     <meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
     <title>Accueil - AdR CentraleSupélec (AdRCS)</title>
     
@@ -70,7 +70,7 @@
                             <div class="line line-right"></div>
                         </div>
                         <p class="evenement-info">
-                            Nous sommes spécialisés dans l'organisation de soirées étudiantes. Ces soirées sont reconnues dans la France entière depuis des décennies. Le Quadrabang en est l'exemple parfait (l'édition 2019 a réuni près de 3000 personnes!).
+                            Nous sommes spécialisés dans l'organisation de soirées étudiantes, reconnues dans la France entière depuis des décennies. Le QuadraBang en est l'exemple parfait (l'édition 2022 a réuni plus de 3500 personnes !).
                         </p>
                         <a href="/events/" class="btn body-btn">Nos prochains évènements</a>
                     </div>
