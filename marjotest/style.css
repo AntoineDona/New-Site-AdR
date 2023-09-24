@@ -471,6 +471,10 @@ p.desc_quadra {
   align-items: center;
 }
 
+.billet_info p {
+  text-align: left;
+}
+
 .billet_prix p {
   font-size: 6rem;
   font-weight: bold;
@@ -577,8 +581,50 @@ p.desc_quadra {
 /* Responsive ------------------------------------------------------------- */
 
 @media screen and (orientation: portrait), screen and (max-width: 800px) {
-  html {
-    font-size: 10px;
+  p, a, ul, li {
+    font-size: 2.5rem;
+  }
+
+  section p,ul,li {
+    margin: 0 5rem;
+  }
+
+  section h2 {
+    font-size: 6rem;
+    padding: 0 0 6rem;
+  }
+
+  section h3 {
+    font-size: 5rem;
+    padding: 4rem 0 2rem;
+  }
+
+  .content-divided {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+  }
+
+  .billet {
+    width: 56rem;
+    margin: 1rem;
+    padding: 0.8rem 0.5rem 0.8rem 0;
+    border: 2px solid white;
+    align-items: center;
+  }
+
+  .billet div p {
+    margin: 0;
+  }
+
+  .billet_nom p {
+    font-size: 2rem;
+  }
+
+  .billet_prix p {
+    font-size: 11rem;
   }
 
   #counter {
@@ -612,6 +658,27 @@ p.desc_quadra {
     flex-direction: column;
   }
 
+  .content-divided.special {
+    min-height: 48rem;
+    justify-content: space-between;
+    margin: 5rem 0;
+  }
+
+  .partner_ctnr img {
+    margin: 2rem 4rem;
+    width: 15rem;
+    height: auto;
+  }
+  
+  .bouton {
+    margin: 3rem;
+    padding: 1.5rem 2rem;
+    font-size: 4rem;
+  }
+
+  .counter_wrapper h3 {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (orientation: portrait), screen and (max-width: 500px) {
@@ -620,7 +687,7 @@ p.desc_quadra {
   }
 
   .quadra {
-    background-image: url("img/quadraPhone.png");
+    background-image: url("img/principal_tel.png");
   }
 
   #counter {
@@ -632,17 +699,8 @@ p.desc_quadra {
     width: 100%;
   }
 
-  .billet {
-    width: 70%;
-    margin: 2rem auto;
-  }
-
   .billet h4 {
     font-size: 4rem;
-  }
-
-  .prix {
-    font-size: 5rem;
   }
   
   #navettes {
@@ -657,6 +715,10 @@ p.desc_quadra {
   .horaires {
     margin-bottom: 1rem;
     font-size: 2rem;
+  }
+
+  .nav {
+    height: 7rem;
   }
 }
 

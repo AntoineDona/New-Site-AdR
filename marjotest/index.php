@@ -45,7 +45,7 @@ function display_btn($date, $shotgun, $soldout)
   <title>QuadraBang</title>
 
   <meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
-  <meta property="og:image" content="https://adr.cs-campus.fr/quadrabang/img/quadrabang.jpg" />
+  <meta property="og:image" content="https://adr.cs-campus.fr/quadrabang/img/reseaux.png" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="img/icon.png" />
 </head>
@@ -124,7 +124,7 @@ function display_btn($date, $shotgun, $soldout)
         <h2>BILLETTERIE</h2>
         <p>La billetterie du QuadraBang ouvre le lundi 2 octobre à 13h pour tout le monde.
           <br />Le paiement se fait via Lydia ou par CB.</p>
-        <div class="content-divided" style="padding:1rem 0;">
+        <div class="content-divided special" style="padding:1rem 0;">
         <div>
           <div class="billet rose">
             <div class="billet_nom"><p>Cotisant</p></div>
@@ -227,7 +227,7 @@ function display_btn($date, $shotgun, $soldout)
             </ul>
             <p>jusqu'à l'arrêt Joliot-Curie ou Moulon <i class="fa-solid fa-location-dot"></i>
             <br />
-            <br />Pour le retour nous mettons en place des <a href="#page_link">navettes gratuites</a>.
+            <br />Pour le retour nous mettons en place des <a href="#navettes">navettes gratuites</a>.
             </p>
         <h3>CONTACT</h3>
         <div class="content-divided">
