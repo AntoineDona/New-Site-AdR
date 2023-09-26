@@ -9,7 +9,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 	//echo $_SESSION["user"]["login"];
 	$_SESSION["prenom"] = $_SESSION["user"]["firstName"];
 	$_SESSION["nom"] = $_SESSION["user"]["lastName"];
-	header("Location: /indiananones/index.php");
+	header("Location: /cotisation/index.php");
 	
 } else {$_SESSION["isConnected"] = false;}
 ?>
@@ -19,7 +19,7 @@ if (isset($_SESSION["isConnected"]) && $_SESSION["isConnected"]) {
 
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type">
-	<title>INDIANANONES</title>
+	<title>COTISATION</title>
 	<link rel="shortcut icon" sizes="96x96" type="image/png" href="/cotisation/img/icon.png">
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
