@@ -6,7 +6,7 @@ var getFormattedDigits = function getFormattedDigits(num) {
 
 function timer() {
 	var date = new Date();
-	var date_shotgun = new Date(2022, 9, 7, 23, 00);
+	var date_shotgun = new Date(2023, 9, 13, 23, 00);
 	var total_sec = Math.trunc((date_shotgun.getTime() - date.getTime()) / 1000);
 	var diff_jour = getFormattedDigits(Math.trunc(total_sec / 3600 / 24));
 	var diff_hour = getFormattedDigits(Math.trunc((total_sec - diff_jour * 24 * 3600) / 3600));
@@ -18,10 +18,10 @@ function timer() {
 			'<div style="grid-area: h_top;">' + diff_hour + '</div>' +
 			'<div style="grid-area: m_top;">' + diff_min + '</div>' +
 			'<div style="grid-area: s_top;">' + diff_sec + '</div>' +
-			'<div style="grid-area: d_bottom; font-size:20%;">jour(s)</div>' +
-			'<div style="grid-area: h_bottom; font-size:20%;">heure(s)</div>' +
-			'<div style="grid-area: m_bottom; font-size:20%;">minute(s)</div>' +
-			'<div style="grid-area: s_bottom; font-size:20%;">seconde(s)</div>';
+			'<div style="grid-area: d_bottom; font-size:1.3rem;">jour(s)</div>' +
+			'<div style="grid-area: h_bottom; font-size:1.3rem;">heure(s)</div>' +
+			'<div style="grid-area: m_bottom; font-size:1.3rem;">minute(s)</div>' +
+			'<div style="grid-area: s_bottom; font-size:1.3rem;">seconde(s)</div>';
 	} else {
 		document.getElementById('counter').innerHTML = '00:00:00:00';
 	}
@@ -35,12 +35,32 @@ function timer() {
 
 	elmnt.onscroll = function () {
 		var currentScrollPos = elmnt.scrollTop;
+		if (
+			window.matchMedia("(orientation: portrait)").matches &&
+			window.matchMedia("(max-width: 800px)").matches
+		  ) {
+			// Set the navbar height to 7rem
+			navbar.style.height = "7rem";
+		  } else {
+			// Set the navbar height to 5rem for other conditions
+			navbar.style.height = "5rem";
+		}
+
 		if (prevScrollpos >= currentScrollPos || nav.classList.contains("nav-active")) {
 			navbar.style.top = "0";
 			// console.log(nav.classList.contains("nav-active"));
 
 		} else {
-			navbar.style.top = "-8rem";
+			if (
+				window.matchMedia("(orientation: portrait)").matches &&
+				window.matchMedia("(max-width: 800px)").matches
+			  ) {
+				// Set the navbar height to 7rem
+				navbar.style.top = "-7rem";
+			  } else {
+				// Set the navbar height to 5rem for other conditions
+				navbar.style.top = "-5rem";
+			}
 			navbar.style.opacity = 0;
 			// console.log(nav.classList.contains("nav-active"));
 		}
@@ -48,11 +68,20 @@ function timer() {
 			navbar.style.backgroundColor = "black";
 			navbar.style.opacity = 1;
 			if (navbar.style.width >= 950) {
-				navbar.style.height = "6rem";
+				navbar.style.height = "4rem";
 			}
 		} else {
 			navbar.style.backgroundColor = "transparent";
-			navbar.style.height = "8rem";
+			if (
+				window.matchMedia("(orientation: portrait)").matches &&
+				window.matchMedia("(max-width: 800px)").matches
+			  ) {
+				// Set the navbar height to 7rem
+				navbar.style.height = "7rem";
+			  } else {
+				// Set the navbar height to 5rem for other conditions
+				navbar.style.height = "5rem";
+			}
 		}
 		prevScrollpos = currentScrollPos;
 	}

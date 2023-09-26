@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 
+body {
+  overflow:hidden;
+}
 
 * {
   margin: 0px;
@@ -8,30 +11,33 @@
 }
 
 :root {
-  --white_glow: 0 0 2px white;
   --transparent_black: transparent;
   --black: rgba(0, 0, 0, 0.6);
-  --red: rgb(253, 108, 89);
+  --red: #FA018B;
 }
 
 html {
-  font-size: 10px;
-  font-family: CenturyGothic, 'Roboto Mono', Roboto, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.9rem;
+  font-family: Montserrat, CenturyGothic, 'Roboto Mono', Roboto, Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(242, 242, 242);
   scroll-behavior: smooth;
+}
+
+p,a,ul,li {
+  font-size: 1.1rem;
+  color: white;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: CenturyGothic, 'Roboto Mono', Retroica, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Montserrat, CenturyGothic, 'Roboto Mono', Retroica, Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(242, 242, 242);
 }
 
 body {
   overflow: hidden;
-  font-size: 5rem;
   color: white;
   background-color: black;
 }
@@ -116,15 +122,14 @@ button {
 
 .base_layer {
   position: absolute;
-  height: 200vh;
-  background-image: url("img/background.jpg");
+  height: 150%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)),url("img/fond.png");
   background-attachment: local;
   background-size: cover;
-  background-repeat: repeat-y;
-  transform: translateZ(-1600px) scale(3);
+  background-repeat: no-repeat;
 }
 
-.top_layer {
+/*.top_layer {
   position: absolute;
   height: 350vh;
   background-image: url("img/pierre.png");
@@ -133,7 +138,7 @@ button {
   background-repeat: repeat-y;
   background-position: top;
   transform: translateZ(-400px) scale(1.5);
-}
+}*/
 
 /* .mid_layer {
   position: absolute;
@@ -151,16 +156,23 @@ button {
 .main {
   position: absolute;
   inset: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 section {
   padding: 4rem 0;
 }
 
+section h2 {
+  font-size: 3rem;
+  padding: 0 0 3rem;
+}
+
 section h3 {
-  margin: 5rem auto;
-  font-size: 5rem;
-  text-shadow: var(--white_glow);
+  font-size: 2.5rem;
+  color: #12D6FF;
+  padding: 2rem 0 1rem;
 }
 
 /* Navigation ----------------------------*/
@@ -173,7 +185,7 @@ nav {
   justify-content: space-between;
   flex-wrap: nowrap;
   width: 100%;
-  height: 8rem;
+  height: 5rem;
   z-index: 10;
   transition: all 0.4s ease;
   transition: top 0.4s ease-in-out;
@@ -186,7 +198,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-width: 500px;
-  width: 70%;
+  width: 60%;
   max-width: 90rem;
   list-style-type: none;
   padding: 0 4rem;
@@ -201,7 +213,7 @@ nav {
 a.nav-link {
   color: white;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.05rem;
   transition: color 0.2s ease;
 }
 
@@ -221,7 +233,7 @@ a.nav-link:hover {
   align-items: center;
 }
 .logo_quadra a img {
-  height: 3rem;
+  height: 2rem;
   width: auto;
 }
 
@@ -315,13 +327,14 @@ a.nav-link:hover {
 /* Hero ---------------------------------- */
 
 .quadra {
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
-  background-image: url("img/quadraLarge.png");
+  background-image: url("img/principal.png");
   background-attachment: local;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  margin-top: 3rem;
 }
 
 /* Compteur ---------------------------- */
@@ -329,7 +342,7 @@ a.nav-link:hover {
 .counter_wrapper {
   height: auto;
   width: 100vw;
-  padding: 6rem 1rem;
+  padding: 4rem 1rem 6rem;
   background-color: var(--transparent_black);
   box-shadow: 0 0 5px 5px var(--transparent_black);
   z-index: 1;
@@ -340,25 +353,24 @@ a.nav-link:hover {
 }
 
 .counter_wrapper h3 {
-  font-size: 3rem;
-  text-shadow: var(--white_glow);
+  font-size: 2.3rem;
+  font-weight: normal;
 }
 
 #counter {
-  font-family: CenturyGothic, 'Roboto Mono', Retroica, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Montserrat, CenturyGothic, 'Roboto Mono', Retroica, Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(242, 242, 242);
   display: grid;
   grid-template-areas: "d_top h_top m_top s_top" "d_bottom h_bottom m_bottom s_bottom";
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 10rem 2rem;
+  grid-template-rows: 7rem 2rem;
   color: white;
   text-align: center;
-  font-size: 9rem;
-  width: min(100%, 60rem);
+  font-size: 5rem;
+  width: min(100%, 50rem);
   height: auto;
   margin: auto;
-  margin-top: 4rem;
-  text-shadow: var(--white_glow);
+  margin-top: 3rem;
 }
 
 #counter div {
@@ -388,13 +400,11 @@ a.nav-link:hover {
 
 p.desc_quadra {
   flex-basis: 1;
-  font-size: 1.7rem;
   text-align:justify;
   width: 40%;
   padding: 0 2rem;
   margin-right: 2rem;
   line-height: 3rem;
-  text-indent: 6rem;
 }
 
 .trailer_ctnr{
@@ -415,9 +425,25 @@ p.desc_quadra {
 
 /* billetterie ----------------------- */
 
+.billet {
+  display: flex;
+  flex-direction: row;
+}
+
+.billet p {
+  text-align: left;
+}
+
+.billet_nom {
+  transform: rotate(270deg);
+}
+
+.billet_nom p {
+  font-size: 1rem;
+}
+
 .billetterie {
   height: auto;
-  min-height: 100vh;
   width: 100vw;
   /* background-color: var(--transparent_black);
   box-shadow: 0 0 5px 5px var(--transparent_black); */
@@ -428,16 +454,8 @@ p.desc_quadra {
   align-items: center;
 }
 
-p.infos_billetterie {
-  flex-basis: 1;
-  font-size: 1.7rem;
-  text-align:justify;
-  width: 70%;
-  padding: 0 2rem;
-  margin-right: 2rem;
-  line-height: 3rem;
-  text-indent: 3rem;
-  margin-bottom: 2rem;
+.billetterie p {
+  text-align: center;
 }
 
 .billet_ctnr {
@@ -448,180 +466,47 @@ p.infos_billetterie {
 }
 
 .billet {
-  font-size: 1.5rem;
-  font-family: CenturyGothic, 'Roboto Mono', Roboto, Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(242, 242, 242);
-  text-align: center;
-
   width: 30rem;
-  padding: 4rem 0.5rem;
   margin: 1rem;
-  border-radius: 2px;
-  /* background-color: rgba(139, 0, 0, 0.616); */
-  box-shadow: 0 0 1px 1px white; 
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  overflow: hidden;
-
-  /* border: 2px solid white; */
-}
-
-.prix {
-  font-size: 4rem;
-  margin: 2rem;
-  font-family: CenturyGothic, 'Roboto Mono', Retroica, Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(242, 242, 242);
-  z-index: 1;
-}
-
-.tarif {
-  height: 6rem;
-}
-
-#navettes h4{
-  min-height: 6rem;
-  margin-bottom: 2rem;
-}
-
-#navettes .ouverture{
-  margin-top: 2rem;
-}
-
-.horaire {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  text-decoration: underline;
-}
-
-.horaires {
-  margin-bottom: 1rem;
-}
-
-.billet a {
-  display: block;
-  height: 6rem;
-  margin-top: 2rem;
-  padding: 2rem 3rem;
-  z-index: 0;
-  border-radius: 10px;
-  box-shadow: 0 0 10rem 100rem var(--black);
-  /* rgba(62, 96, 106, 0.527) */
-  transition: all 0s ease;
-}
-
-.billet a.indisponible {
-  background-color: rgba(196, 82, 66, 0.712);
-  pointer-events: none;
-}
-
-.billet a.achat {
-  background-color: rgba(255, 0, 0, 0.664);
-  /* display: none; */
-}
-
-.billet a.achat:hover {
+  padding: 0.5rem 0.3rem;
   border: 2px solid white;
-  height: 6rem;
-  background-color: rgba(255, 0, 0, 0.829);
-  transition: all 0.1s ease;
+  align-items: center;
 }
 
-.billet button {
-  width: 100%;
-  height: 100%;
-  font-size: 1.5rem;
-  letter-spacing: 2.5px;
-  color: white;
-  background-color: transparent;
-  font-family: CenturyGothic, 'Roboto Mono', Roboto, Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(242, 242, 242);
+.billet_info p {
+  text-align: left;
 }
 
-.billet h4 {
-  font-size: 3rem;
-  font-family: CenturyGothic, 'Roboto Mono', Retroica, Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(242, 242, 242);
-  z-index: 1;
-}
-
-.billet p {
-  z-index: 1;
-}
-
-.ouverture {
-  font-size: 1.3rem;
-}
-
-.date_ouverture {
+.billet_prix p {
+  font-size: 6rem;
   font-weight: bold;
+  padding-right: 2rem;
+}
+
+.rose {
+  background: linear-gradient(45deg, rgba(170,15,101,1) 0%, rgba(255,0,146,1) 100%);
+}
+
+.bleu {
+  background: linear-gradient(135deg, rgba(7,113,134,1) 0%, rgba(13,220,255,1) 100%);
+}
+
+.bouton {
+  border: 2px solid white;
+  margin: 1rem;
+  padding: 1rem 1rem;
+  align-items: center;
   font-size: 1.5rem;
-  margin-top: 1rem;
-  line-height: 25px;
-  width: 26rem;
-  max-width: 100%;
-}
-
-.cotisant {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.cotisant h4{
-  margin: 4rem 0;
-  font-size: 3rem;
-}
-
-.cotisant form{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-}
-
-.cotisant :is(#email, #submit){
-  padding: 1rem;
-}
-
-#email{
-  width: 90%;
-  border-radius: 5px;
-}
-
-#submit{
-  margin-top: 3rem;
-  width: 15rem;
-  cursor: pointer;
-  /* border: 1px solid white; */
-  border: none;
-  box-shadow:  inset -0.5px -0.5px 3px 1px rgb(122, 122, 122);
-  border-radius: 5px;
-  background-color: white;
-  transition: all 0.4s ease;
-}
-
-#submit:hover{
   color: white;
-  background-color: green;
-  box-shadow:  inset -0.5px -0.5px 3px 1px rgb(1, 77, 1);
-  /* border: 2px solid white; */
-  transition: background-color 0.4s ease;
+  font-style: normal;
+  text-decoration: none;
 }
 
-.cotisant #email::placeholder{
-  padding-left: 1rem;
+.bouton:hover {
+  background: white;
+  color: black;
 }
 
-.cotisant p{
-  margin-top: 4rem;
-  font-size: 3.5rem;
-
-}
 
 /* Partenaires ----------------------*/
 
@@ -644,8 +529,8 @@ p.infos_billetterie {
 }
 
 .partner_ctnr img {
-  margin: 2rem 3rem;
-  width: 10rem;
+  margin: 1rem 2rem;
+  width: 7rem;
   height: auto;
   transition: opacity 0.2s ease;
 }
@@ -680,27 +565,77 @@ p.infos_billetterie {
   box-shadow: 0 0 5px 5px var(--black);
 }
 
-.informations p, .informations ul {
-  font-size: 2rem;
-  margin: 4rem 0;
+.content-divided {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
 }
 
-.informations ul{
-  text-align: left;
-}
-.informations a{
-  color: white;
+.content-divided div a {
+  text-decoration: none;
 }
 
-.informations h4{
-  font-size: 4rem;
+.content-divided div a i {
+  margin-right: 0.5rem;
 }
 
 /* Responsive ------------------------------------------------------------- */
 
 @media screen and (orientation: portrait), screen and (max-width: 800px) {
-  html {
-    font-size: 10px;
+  .quadra {
+    background-image: url("img/principal_tel.png");
+  }
+
+  .base_layer {
+    height: 130%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)),url("img/fond_tel.png");
+  }
+  
+  p, a, ul, li {
+    font-size: 2.5rem;
+  }
+
+  section p,ul,li {
+    margin: 0 5rem;
+  }
+
+  section h2 {
+    font-size: 6rem;
+    padding: 0 0 6rem;
+  }
+
+  section h3 {
+    font-size: 5rem;
+    padding: 4rem 0 2rem;
+  }
+
+  .content-divided {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+  }
+
+  .billet {
+    width: 56rem;
+    margin: 1rem;
+    padding: 0.8rem 0.5rem 0.8rem 0;
+    border: 2px solid white;
+    align-items: center;
+  }
+
+  .billet div p {
+    margin: 0;
+  }
+
+  .billet_nom p {
+    font-size: 2rem;
+  }
+
+  .billet_prix p {
+    font-size: 11rem;
   }
 
   #counter {
@@ -729,17 +664,45 @@ p.infos_billetterie {
     margin-top: 3rem;
   }
 
+  .content-divided {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-divided.special {
+    min-height: 48rem;
+    justify-content: space-between;
+    margin: 5rem 0;
+  }
+
+  .partner_ctnr img {
+    margin: 2rem 4rem;
+    width: 15rem;
+    height: auto;
+  }
+  
+  .bouton {
+    margin: 3rem;
+    padding: 1.5rem 2rem;
+    font-size: 4rem;
+  }
+
+  .counter_wrapper h3 {
+    font-size: 3rem;
+  }
+
+  .nav {
+    height: 7rem;
+  }
 }
 
 @media screen and (orientation: portrait), screen and (max-width: 500px) {
   html {
     font-size: 6px;
   }
-
-  .quadra {
-    background-image: url("img/quadraPhone.png");
+  .nav {
+    height: 7rem;
   }
-
   #counter {
     font-size: 8rem;
   }
@@ -749,30 +712,11 @@ p.infos_billetterie {
     width: 100%;
   }
 
-  .billet {
-    width: 70%;
-    margin: 2rem auto;
-  }
-
   .billet h4 {
     font-size: 4rem;
   }
-
-  .prix {
-    font-size: 5rem;
-  }
-
-  .tarif,
-  .ouverture {
-    font-size: 2rem;
-  }
-
-  #navettes h4{
-    min-height: 6rem;
-    margin-bottom: 1rem;
-  }
   
-  #navettes .ouverture{
+  #navettes {
     margin-top: 2rem;
   }
   
@@ -785,22 +729,14 @@ p.infos_billetterie {
     margin-bottom: 1rem;
     font-size: 2rem;
   }
-
-  .ouverture {
-    font-size: 1.5rem;
-  }
-
-  .date_ouverture {
-    font-size: 2rem;
-    margin-top: 1rem;
-    line-height: 25px;
-    width: 40rem;
-  }
 }
 
 /* Fonts ------------------------------------------------------------------------- */
 
-
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat.ttf") format("truetype");
+}
 
 @font-face {
   font-family: "Retroica";

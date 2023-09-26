@@ -45,9 +45,9 @@ function display_btn($date, $shotgun, $soldout)
   <title>QuadraBang</title>
 
   <meta name="google-site-verification" content="cEbrs-eyoHMLzEcQwiEu5sHkC8N61J92Z_fElR1KTMQ" />
-  <meta property="og:image" content="https://adr.cs-campus.fr/quadrabang/img/quadrabang.jpg" />
+  <meta property="og:image" content="https://adr.cs-campus.fr/quadrabang/img/reseaux.png" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="icon" type="image/png" href="img/icon.png" />
 </head>
 
 <script type="text/javascript" src="script.js"></script>
