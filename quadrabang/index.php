@@ -183,25 +183,26 @@ function display_btn($date, $shotgun, $soldout)
             <img src="img/bnp.png" alt="" />
           </a>
           <a href="https://https://www.lydia-app.com/" target="_blank">
-            <img src="img/lydia.png" alt="" />
+            <img src="img/lydia.png" alt="Lydia" />
           </a>
           <a href="https://www.sbcs-events.fr" target="_blank">
-            <img src="img/sbcs.png" alt="" />
+            <img src="img/sbcs.jpg" alt="SBCS" />
           </a>
           <a href="https://www.facebook.com/asso.pascal.cs" target="_blank">
-            <img src="img/pascal.png" alt="" />
+            <img src="img/pascal.png" alt="Asso Pascal" />
           </a>
           <a href="https://capese.cs-campus.fr/" target="_blank">
-            <img src="img/capese.png" alt="" />
+            <img src="img/capese.png" alt="Çapèse" />
           </a>
           <a href="https://galerie.pics/" target="_blank">
-            <img src="img/pics.png" alt="" />
+            <img src="img/pics.jpg" alt="Pics" />
           </a>
           <a href="https://hyris.tv/" target="_target">
-            <img src="img/hyris.png" alt="" />
+            <img src="img/hyris.png" alt="Hyris" />
           </a>
         </div>
       </section>
+      <div class="lignes"></div>
       <section class="informations" id="informations">
         <h2>INFORMATIONS</h2>
         <p>

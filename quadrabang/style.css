@@ -129,27 +129,39 @@ button {
   background-repeat: no-repeat;
 }
 
-/*.top_layer {
+.lignes {
+  height: 45%;
+  background-image: url("img/lignes.png");
+  background-attachment: local;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.top_layer {
   position: absolute;
   height: 350vh;
-  background-image: url("img/pierre.png");
+  top: 300%;
+  background-image: url("img/blocs_1.png");
   background-attachment: local;
   background-size: min(120rem, 100vw) auto;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
   background-position: top;
-  transform: translateZ(-400px) scale(1.5);
-}*/
+  transform: translateZ(-1000px) scale(1.5);
+}
 
-/* .mid_layer {
+/*.mid_layer {
   position: absolute;
-  height: 300vh;
-  background-image: url("img/diag_bleue.png");
+  height: 800%;
+  width: 100%;
+  background-image: url("img/blocs_2.png");
   background-attachment: local;
-  background-size: min(120rem, 100vw) auto;
-  background-repeat: repeat-y;
+  background-size: contain;
+  top: 300%;
+  background-repeat: no-repeat;
   background-position: top;
-  transform: translateZ(-800px) scale(2);
-} */
+  transform: translateZ(-500px) scale(1.6);
+}*/
 
 /* Contenu ------------------------------------------------------------------------ */
 
