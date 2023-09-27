@@ -148,7 +148,7 @@ button {
   background-size: min(120rem, 100vw) auto;
   background-repeat: no-repeat;
   background-position: bottom;
-  transform: translateZ(-1000px) scale(1.5);
+  transform: translateZ(-500px) scale(1.5);
 }
 
 /*.mid_layer {
