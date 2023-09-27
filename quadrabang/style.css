@@ -742,6 +742,10 @@ p.desc_quadra {
     margin-bottom: 1rem;
     font-size: 2rem;
   }
+
+  .top_layer {
+    top: 150%;
+  }
 }
 
 /* Fonts ------------------------------------------------------------------------- */
