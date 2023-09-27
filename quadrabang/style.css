@@ -140,14 +140,15 @@ button {
 
 .top_layer {
   position: absolute;
-  height: 350vh;
-  top: 300%;
+  height: 300vh;
+  top: 250%;
   background-image: url("img/blocs_1.png");
   background-attachment: local;
   background-size: min(120rem, 100vw) auto;
   background-repeat: no-repeat;
   background-position: top;
   transform: translateZ(-1000px) scale(1.5);
+  overflow: hidden;
 }
 
 /*.mid_layer {
