@@ -90,7 +90,7 @@ function display_btn($date, $shotgun, $soldout)
     <div class="main">
       <div class="quadra" id="hero"></div>
       <div class="counter_wrapper">
-        <h3>Le QuadraBang débute dans :</h3>
+        <h3>La billetterie ouvre dans :</h3>
         <div id="counter" style="grid-area: bottom">
           <div style="grid-area: d_top">00</div>
           <div style="grid-area: h_top">00</div>
@@ -114,7 +114,7 @@ function display_btn($date, $shotgun, $soldout)
           </p>
           <div class="trailer_ctnr">
             <video controls poster="img/poster.jpg" width="100%">
-              <source src="teaser_quadrabang_2022" type="video/mp4" />
+              <source src="teaser-quadrabang-2023" type="video/mp4" />
               Sorry, your browser doesn't support embedded videos.
             </video>
           </div>
@@ -145,7 +145,7 @@ function display_btn($date, $shotgun, $soldout)
             </div>
           </div>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;"><div><a class="bouton" href="">ACHETER <i class="fa-solid fa-angles-right" style="margin:0;"></i></a></div></div>
+        <div style="display:flex;align-items:center;justify-content:center;"><div><a class="bouton" href="https://collecte.io/quadrabang-2023-3137005/fr">ACHETER <i class="fa-solid fa-angles-right" style="margin:0;"></i></a></div></div>
         </div>
         <p>Les CGV et la charte du participant sont consultables <a href="cgv_quadrabang.pdf">ici</a>.</p>
         <!-- partie pour tester si la personne est cotisante
@@ -206,10 +206,7 @@ function display_btn($date, $shotgun, $soldout)
       <section class="informations" id="informations">
         <h2>INFORMATIONS</h2>
         <p>
-          Pour être au courant de toutes les mises à jour de la soirée suivez l'
-          <a href="" target="_blank">évènement Facebook</a>.
-          <br />
-          <br />Vestiaire gratuit
+          Vestiaire gratuit
           <br /><i class="fa-solid fa-triangle-exclamation fa-beat"></i> Carte étudiante et ecocup obligatoires <i class="fa-solid fa-id-card"></i>
           <br />
           <br />Les organisateurs se réservent le droit d’entrée. <i class="fa-solid fa-door-open"></i></p>
@@ -228,7 +225,7 @@ function display_btn($date, $shotgun, $soldout)
             </ul>
             <p>jusqu'à l'arrêt Joliot-Curie ou Moulon <i class="fa-solid fa-location-dot"></i>
             <br />
-            <br />Pour le retour nous mettons en place des <a href="#navettes">navettes gratuites</a>.
+            <br />Nous mettons aussi en place des <a href="#navettes">navettes gratuites</a>.
             </p>
         <h3>CONTACT</h3>
         <div class="content-divided">

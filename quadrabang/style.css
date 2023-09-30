@@ -27,6 +27,7 @@ html {
 p,a,ul,li {
   font-size: 1.1rem;
   color: white;
+  list-style-type: square;
 }
 
 h1,
@@ -443,6 +444,14 @@ p.desc_quadra {
   flex-direction: row;
 }
 
+.navettes div {
+  margin: 0 0.5em;
+}
+
+.navettes .billet_prix p {
+  padding: 0;
+}
+
 .billet p {
   text-align: left;
 }
@@ -486,14 +495,23 @@ p.desc_quadra {
   align-items: center;
 }
 
+.navettes {
+  padding: 0.5rem 0.4rem;
+}
+
 .billet_info p {
   text-align: left;
+  flex-wrap: nowrap;
 }
 
 .billet_prix p {
   font-size: 6rem;
   font-weight: bold;
   padding-right: 2rem;
+}
+
+.navettes .billet_prix p {
+  padding: 0;
 }
 
 .rose {
@@ -506,6 +524,7 @@ p.desc_quadra {
 
 .bouton {
   border: 2px solid white;
+  background: black;
   margin: 1rem;
   padding: 1rem 1rem;
   align-items: center;
