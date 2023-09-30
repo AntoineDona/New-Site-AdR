@@ -1,17 +1,5 @@
 <?php
-include("database.php");
-
-function is_cotisant($email, $pdo)
-{
-	$query = $pdo->prepare("SELECT COUNT(*) as c from cotisants_23_24 where email=?");
-	$query->execute(array($email));
-	$result = $query->fetch();
-	if ($result['c'] == 0) {
-		return false;
-	} else {
-		return true;
-	}
-}
+require_once("database.php");
 ?>
 
 <!DOCTYPE html>
