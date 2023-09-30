@@ -1,7 +1,3 @@
-<?php
-require_once("action.php");
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,24 +10,29 @@ require_once("action.php");
 </head>
 <body>
     <h1>Vérification de la cotisation</h1>
-    <form id="cotisationForm">
+    <form id="cotisationForm" method="post">
         <label for="email">Entrez votre e-mail :</label>
         <input type="email" id="email" name="email" required>
         <button type="submit">Vérifier</button>
     </form>
-    <p id="message"></p>
+    <p id="message">
+    <?php
+    require_once("database.php");
 
-    <script>
-        document.getElementById("cotisationForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-            var email = document.getElementById("email").value;
-            
-            if (is_cotisant(email,$pdo)) {
-                document.getElementById("message").textContent = "Tu es bien cotisant·e, tu peux shotgun !";
-            } else {
-                document.getElementById("message").textContent = "Tu n'est pas cotisant·e, tu ne peux pas shotgun...<br/>Contacte nous pour y remédier !";
-            }
-        });
-    </script>
+    if (isset($_POST['email'])) {
+        $email = $_POST['email'];
+        
+        $query = $pdo->prepare("SELECT COUNT(*) as c FROM cotisants_23_24 WHERE email = ?");
+        $query->execute(array($email));
+        $result = $query->fetch();
+        
+        if ($result['c'] > 0) {
+            echo "Tu es bien cotisant·e, tu peux shotgun !";
+        } else {
+            echo "Tu n'es pas cotisant·e, tu ne peux pas shotgun...<br/>Contacte nous pour y remédier !";
+        }
+    }
+    ?>
+    </p>
 </body>
 </html>
