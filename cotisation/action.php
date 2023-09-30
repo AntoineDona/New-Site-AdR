@@ -1,12 +1,11 @@
 <?php
 
-$DBhost  = "localhost";
-$DBowner = "root";
-$DBpw    = "root";
-$DBName  = "adr";
-$DBconnect = "mysql:dbname=".$DBName.";host=".$DBhost;
-
-$pdo = new PDO('mysql:host=localhost;port=3306;dbname=adr;charset=utf8', 'marjolaine', 'marjo');
+try {
+    $pdo = new PDO('mysql:host=localhost;port=3306;dbname=adr;charset=utf8', 'marjolaine', 'marjo');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Database connection failed: " . $e->getMessage());
+}
 
 function is_cotisant($email, $pdo)
 {
