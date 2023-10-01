@@ -17,6 +17,22 @@
                 <h1 class="headline">Nos Events</h1>
                 <div class="description_event">
                     <div >
+                        <img src="img/quadra.png" alt="feu"><h2>QUADRABANG 2023</h2><img src="img/quadra.png" alt="quadra">
+                    </div>
+                        <p>
+                        Toc toc toc...
+                        <br/>L'AdR CentraleSupélec vous présente l'édition 2023 du 💥Quadrabang💥. La plus grande soirée organisée par l'AdR et parmi les plus grandes de France ! Comme chaque année, le Quadrabang c'est :
+<br/>- 4 salles 4 ambiances
+<br/>- 4 scènes montées par l'asso de Sono Barco de CentraleSupélec
+<br/>- Plusieurs milliers d'étudiants
+<br/>🗓️ Nous vous donnons rendez-vous le vendredi 13 octobre de 23h à 5h ! 
+<br/>🔗 Ouverture de la billetterie prévue le lundi 2 octobre à 13h
+<br/>La Quadra-bise ❤️🖤
+                            <br>Le lien du shotgun est <a href="https://adr.cs-campus.fr/quadrabang/">ici</a>.
+                        </p>
+                </div>
+                <div class="description_event">
+                    <div >
                         <img src="img/burningbang.png" alt="feu"><h2>BURNING BANG</h2><img src="img/burningbang.png" alt="feu">
                     </div>
                         <p>
