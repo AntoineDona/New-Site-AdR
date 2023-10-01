@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="principal">
-    <h1>Es-tu cotisant ?</h1>
+    <h1>Es-tu cotisant·e ?</h1>
     <form id="cotisationForm" method="post">
         <input type="email" id="email" name="email" placeholder="Ton mail" required>
         <br/><button type="submit">Vérifier</button>

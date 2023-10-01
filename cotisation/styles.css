@@ -88,6 +88,28 @@ form {
     align-items: center;
 }
 
+@media screen and (orientation: portrait),
+screen and (max-width: 800px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Hide overflow content */
+    }
+    
+    /* Adjust the transformation origin to center the viewport on the content */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: center;
+        width: 50%; /* Adjust this value as needed */
+        height: 50%; /* Adjust this value as needed */
+        z-index: -1;
+    }
+}
+
 @font-face {
     font-family: "Quicksand";
     src: url('fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
