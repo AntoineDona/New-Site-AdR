@@ -9,13 +9,14 @@
 	<script src="https://kit.fontawesome.com/6ede126102.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Vérification de la cotisation</h1>
+	<div class="principal">
+    <h1>Es-tu cotisant ?</h1>
     <form id="cotisationForm" method="post">
-        <label for="email">Entrez votre e-mail :</label>
-        <input type="email" id="email" name="email" required>
-        <button type="submit">Vérifier</button>
+        <input type="email" id="email" name="email" placeholder="Ton mail" required>
+        <br/><button type="submit">Vérifier</button>
     </form>
-    <p id="message">
+	</div>
+    <div class="pop"><p id="message"></div>
     <?php
     require_once("database.php");
 
@@ -27,9 +28,9 @@
         $result = $query->fetch();
         
         if ($result['c'] > 0) {
-            echo "Tu es bien cotisant·e, tu peux shotgun !";
+            echo "<i class='fa-solid fa-user-check'></i> Tu es bien cotisant·e, tu peux shotgun !";
         } else {
-            echo "Tu n'es pas cotisant·e, tu ne peux pas shotgun...<br/>Contacte nous pour y remédier !";
+            echo "<i class='fa-solid fa-user-xmark'></i> Tu n'es pas cotisant·e, tu ne peux pas shotgun...<br/>Contacte nous pour y remédier !";
         }
     }
     ?>

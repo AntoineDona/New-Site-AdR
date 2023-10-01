@@ -1,0 +1,76 @@
+html {
+    background: #e7e5e4;
+}
+
+body {
+    font-family: "Quicksand";
+    background: url(img/logo.png);
+    background-size: 8% auto;
+    background-repeat: repeat;
+    color: #292524;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+p {
+    font-size: medium;
+    text-align: center;
+}
+
+div {
+    background: #fafaf9;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+}
+
+input {
+    width: 15rem;
+    background: none;
+    border: solid #292524 2px;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+}
+
+button {
+    min-width: 5rem;
+    padding: 0.5rem 1rem;
+    background: #292524;
+    border: solid #292524 2px;
+    border-radius: 30px;
+    color: #e7e5e4;
+    text-align: right;
+}
+
+button:hover {
+    background: none;
+    color: #292524;
+}
+
+::placeholder,button,input {
+    font-family: "Quicksand";
+    font-size: medium;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url('fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+  }
