@@ -28,9 +28,9 @@
         $result = $query->fetch();
         
         if ($result['c'] > 0) {
-            echo "<div class='pop'><i class='fa-solid fa-user-check'></i> Tu es bien cotisant·e, tu peux shotgun !</div>";
+            echo "<div class='pop'><i class='fa-solid fa-user-check'></i> Tu es bien cotisant·e, tu peux avoir un tarif réduit !</div>";
         } else {
-            echo "<div class='pop'><i class='fa-solid fa-user-xmark'></i> Tu n'es pas cotisant·e, tu ne peux pas shotgun...<br/>Contacte-nous pour y remédier !</div>";
+            echo "<div class='pop'><i class='fa-solid fa-user-xmark'></i> Tu n'es pas cotisant·e, tu ne peux pas avoir de tarif réduit...<br/>Contacte-nous pour y remédier !</div>";
         }
     }
     ?>
