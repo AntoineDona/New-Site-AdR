@@ -171,7 +171,7 @@ function display_btn($date, $shotgun, $soldout)
       </section>
       <section class="billetterie" id="navettes">
         <h2>NAVETTES</h2>
-        <p>Nous mettons en place des navettes retours gratuites depuis la soirée :
+        <p>Pour votre sécurité nous mettons en place des navettes allers et retours gratuites :
           <br/>
           <br />plus d'informations à venir...
         </p>
