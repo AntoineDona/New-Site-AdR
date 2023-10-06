@@ -570,10 +570,6 @@ p.desc_quadra {
   text-align: center;
 }
 
-#navettes .content-divided {
-  padding: 5rem;
-}
-
 /* Partenaires ----------------------*/
 
 .partenaires {
@@ -775,6 +771,14 @@ p.desc_quadra {
 
   .adresses {
     width: 45rem;
+  }
+
+  #navettes .content-divided {
+    padding: 5rem;
+  }
+
+  #navettes .bouton {
+    margin-top: 5rem;
   }
 }
 

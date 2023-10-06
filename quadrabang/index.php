@@ -224,7 +224,7 @@ function display_btn($date, $shotgun, $soldout)
           </div>
         </div>
         <p style="padding-bottom:3rem;">La réservation des navettes ouvre le vendredi 6 octobre à 13h.</p>
-        <div style="display:flex;align-items:center;justify-content:center;margin-top: 5rem;"><div><a class="bouton" href="https://collecte.io/quadrabang-2023-navettes-3291851/fr">RÉSERVER <i class="fa-solid fa-angles-right" style="margin:0;"></i></a></div></div>
+        <div style="display:flex;align-items:center;justify-content:center;"><div><a class="bouton" href="https://collecte.io/quadrabang-2023-navettes-3291851/fr">RÉSERVER <i class="fa-solid fa-angles-right" style="margin:0;"></i></a></div></div>
       </section>
       <section class="partenaires" id="partners">
         <h2>PARTENAIRES</h2>
