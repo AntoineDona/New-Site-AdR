@@ -445,13 +445,20 @@ p.desc_quadra {
 }
 
 .navettes div {
-  margin: 0 0.5em;
+  margin: 0 1rem;
 }
 
 .navettes .billet_prix p {
   padding: 0;
 }
 
+.navettes .billet_info {
+  width: fit-content;
+}
+
+.fit {
+  width: 5rem;
+}
 .billet p {
   text-align: left;
 }
@@ -460,18 +467,19 @@ p.desc_quadra {
   transform: rotate(270deg);
 }
 
-.billet_nom p {
-  font-size: 1rem;
-}
-
 .billetterie {
   height: auto;
-  width: 100vw;
   /* background-color: var(--transparent_black);
   box-shadow: 0 0 5px 5px var(--transparent_black); */
   z-index: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#navettes .content-divided {
+  width: 100vw;
   justify-content: center;
   align-items: center;
 }
@@ -497,6 +505,10 @@ p.desc_quadra {
 
 .navettes {
   padding: 0.5rem 0.4rem;
+  justify-content: center;
+  width: 28rem;
+  justify-content: space-between;
+  height: 6rem;
 }
 
 .billet_info p {
@@ -508,10 +520,6 @@ p.desc_quadra {
   font-size: 6rem;
   font-weight: bold;
   padding-right: 2rem;
-}
-
-.navettes .billet_prix p {
-  padding: 0;
 }
 
 .rose {
@@ -539,6 +547,32 @@ p.desc_quadra {
   color: black;
 }
 
+.adresses {
+  background: black;
+  width: 22rem;
+}
+
+.adresses div p {
+  text-align: left;
+  padding: 0.8rem 0;
+}
+
+.adresses .billet_nom {
+  width: 5rem;
+}
+
+.navettes .billet_nom {
+  width: 2rem;
+}
+
+.billet_nom p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+#navettes .content-divided {
+  padding: 5rem;
+}
 
 /* Partenaires ----------------------*/
 
@@ -725,6 +759,22 @@ p.desc_quadra {
 
   .nav {
     height: 7rem;
+  }
+
+  .navettes {
+    height: 15rem;
+  }
+
+  .navettes .billet_nom {
+    width: 4rem;
+  }
+
+  .adresses .billet_nom {
+    width: 8rem;
+  }
+
+  .adresses {
+    width: 45rem;
   }
 }
 

@@ -3,7 +3,7 @@ date_default_timezone_set('Europe/Paris');
 $current_date_sec = (((date('d') - 1) * 24 + date('H')) * 60 + date('i')) * 60 + date('s');
 
 
-$shotgun_date = mktime(13, 0, 0, 10, 2, 2023);
+$shotgun_date = mktime(23, 0, 0, 10, 13, 2023);
 $shotgun_date_sec = (((date('d', $shotgun_date) - 1) * 24 + date('H', $shotgun_date)) * 60 + date('i', $shotgun_date)) * 60 + date('s', $shotgun_date);
 
 function display_btn($date, $shotgun, $soldout)
@@ -90,7 +90,7 @@ function display_btn($date, $shotgun, $soldout)
     <div class="main">
       <div class="quadra" id="hero"></div>
       <div class="counter_wrapper">
-        <h3>La billetterie ouvre dans :</h3>
+        <h3>Le QuadraBang débute dans :</h3>
         <div id="counter" style="grid-area: bottom">
           <div style="grid-area: d_top">00</div>
           <div style="grid-area: h_top">00</div>
@@ -171,10 +171,60 @@ function display_btn($date, $shotgun, $soldout)
       </section>
       <section class="billetterie" id="navettes">
         <h2>NAVETTES</h2>
-        <p>Pour votre sécurité nous mettons en place des navettes allers et retours gratuites :
-          <br/>
-          <br />plus d'informations à venir...
-        </p>
+        <p>Pour votre sécurité nous mettons en place des navettes gratuites :</p>
+        <div class="content-divided">
+          <div class="billet adresses">
+          <div class="billet_nom"><p>Adresses desservies</p></div>
+          <div>
+          <p>— Télécom Paris
+            <br/>19 place Marguerite Perey
+            <br/>91120 Palaiseau</p>
+            <p>— Denfert-Rochereau
+            <br/>Place Denfert-Rochereau
+            <br/>75014 Paris</p>
+            <p>— Ponts Paris Tech
+            <br/>Résidence Meunier
+            <br/>9 bis boulevard Copernic
+            <br/>77420 Champs sur Marne</p>
+            <p>— Massy RER B
+            <br/>Avenue Carnot
+            <br/>91300 Massy</p>
+          </div>
+          </div>
+          <div>
+            <div class="billet rose navettes">
+            <div class="billet_nom" style="position:relative;top:0.4rem"><p>Allers</p></div>
+            <div class="billet_info" style="flex-grow:2;">
+              <p>Massy
+              <br/>Télécom
+              </p>
+            </div>
+            <div class="billet_info">
+              <p style="text-align:right;">0h00
+              <br/>0h50
+              </p>
+            </div>
+            </div>
+            <div class="billet bleu navettes">
+            <div class="billet_nom" style="position:relative;top:0.9rem"><p>Retours</p></div>
+            <div class="billet_info" style="flex-grow:2;">
+              <p>Denfert
+              <br/>Télécom
+              <br/>Ponts
+              </p>
+            </div>
+            <div class="billet_info fit">
+               <p style="text-align:right;">2h45 - 5h20
+               <br/>2h45 - 3h40 - 4h30 - 5h20
+               <br/>5h20
+                </p>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+        <p style="padding-bottom:3rem;">La réservation des navettes ouvre le vendredi 6 octobre à 13h.</p>
+        <div style="display:flex;align-items:center;justify-content:center;margin-top: 5rem;"><div><a class="bouton" href="https://collecte.io/quadrabang-2023-navettes-3291851/fr">RÉSERVER <i class="fa-solid fa-angles-right" style="margin:0;"></i></a></div></div>
       </section>
       <section class="partenaires" id="partners">
         <h2>PARTENAIRES</h2>
