@@ -33,6 +33,10 @@ function display_btn($date, $shotgun, $soldout)
   }
 }
 
+require ('../vendor/autoload.php');
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
+$dotenv->load();
+
 //config SQL
 $DBhost  = "localhost";
 $DBowner = "root";
